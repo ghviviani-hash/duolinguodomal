@@ -228,6 +228,7 @@ const Confetti = ({ trigger }: { trigger: number }) => {
 
 // ---------- Main App ----------
 export default function QuizGamificadoApp() {
+  const [availableDecks, setAvailableDecks] = useState<{ id: string; name: string }[]>([]);
   const [deckId, setDeckId] = useState<string | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [queue, setQueue] = useState<number[]>([]); // indices into questions
@@ -250,6 +251,12 @@ export default function QuizGamificadoApp() {
   const [confettiKey, setConfettiKey] = useState(0);
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+  // ---------- carregar deck ----------
+useEffect(() => {
+  const manifest = JSON.parse(localStorage.getItem("quizg-v1-deck-manifest") || "[]");
+  setAvailableDecks(manifest);
+}, []);
+
 
   // ---------- Load stats ----------
   useEffect(() => {
@@ -342,19 +349,35 @@ export default function QuizGamificadoApp() {
 
   // ---------- Handlers ----------
   const handleUpload = async (file: File) => {
-    const text = await file.text();
-    const { questions: qs, errors } = parseTxtDeck(text);
-    setErrors(errors);
-    if (qs.length === 0) return;
-    const id = `${file.name}-${hashString(text)}`;
-    setDeckId(id);
-    const withIds = qs.map((q) => ({ ...q, id: uid() }));
-    const baseOrder = withIds.map((_, i) => i);
-    const order = shuffleOnLoad ? shuffle(baseOrder) : baseOrder;
-    setQuestions(withIds);
-    setQueue(order);
-    setCurrent(order[0]);
-  };
+  const text = await file.text();
+  const { questions: qs, errors } = parseTxtDeck(text);
+  setErrors(errors);
+  if (qs.length === 0) return;
+
+  const deckName = file.name.replace(/\.txt$/, "");
+  const deckId = `${deckName}-${hashString(text)}`;
+
+  // Salva o novo deck no localStorage
+  localStorage.setItem(LS_DECK_KEY(deckId), JSON.stringify({ questions: qs }));
+
+  // Atualiza a lista (manifest) de decks
+  const manifest = JSON.parse(localStorage.getItem("quizg-v1-deck-manifest") || "[]");
+  const alreadyExists = manifest.some((deck: { id: string }) => deck.id === deckId);
+  if (!alreadyExists) {
+    const newManifest = [...manifest, { id: deckId, name: deckName }];
+    localStorage.setItem("quizg-v1-deck-manifest", JSON.stringify(newManifest));
+    setAvailableDecks(newManifest);
+  }
+
+  // Inicia o quiz com o deck carregado (como antes)
+  setDeckId(deckId);
+  const withIds = qs.map((q) => ({ ...q, id: uid() }));
+  const baseOrder = withIds.map((_, i) => i);
+  const order = shuffleOnLoad ? shuffle(baseOrder) : baseOrder;
+  setQuestions(withIds);
+  setQueue(order);
+  setCurrent(order[0]);
+};
 
   const onSelect = (idx: number) => {
     if (current == null) return;
@@ -441,7 +464,7 @@ export default function QuizGamificadoApp() {
     <div className="min-h-screen w-full bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 text-slate-800 dark:text-slate-100">
       <Confetti trigger={confettiKey} />
 
-      <div className="mx-auto max-w-5xl px-4 py-6 md:py-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
         {/* Header */}
         <div className="flex items-start justify-between gap-4">
           <div className="space-y-1">
@@ -512,6 +535,42 @@ export default function QuizGamificadoApp() {
             </Card>
 
             <Card className="backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-800/60">
+                {/* Card de Seleção de Decks Salvos */}
+{availableDecks.length > 0 && (
+  <Card className="backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-800/60">
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2">
+        <BookOpen className="h-5 w-5" /> Decks Salvos
+      </CardTitle>
+      <CardDescription>Selecione um deck para começar.</CardDescription>
+    </CardHeader>
+    <CardContent className="space-y-2">
+      {availableDecks.map((deck) => (
+        <Button
+          key={deck.id}
+          variant="outline"
+          className="w-full justify-start"
+          onClick={() => {
+            const deckData = JSON.parse(localStorage.getItem(LS_DECK_KEY(deck.id)) || "{}");
+            if (deckData.questions) {
+              const qs = deckData.questions;
+              setDeckId(deck.id);
+              const withIds = qs.map((q: Question) => ({ ...q, id: uid() }));
+              const baseOrder = withIds.map((_: any, i: number) => i);
+              const order = shuffleOnLoad ? shuffle(baseOrder) : baseOrder;
+              setQuestions(withIds);
+              setQueue(order);
+              setCurrent(order[0]);
+              setErrors([]);
+            }
+          }}
+        >
+          {deck.name}
+        </Button>
+      ))}
+    </CardContent>
+  </Card>
+)}
               <CardHeader>
                 <CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5"/>Meta diária</CardTitle>
                 <CardDescription>Ganhe XP respondendo corretamente.</CardDescription>
@@ -650,26 +709,6 @@ export default function QuizGamificadoApp() {
           </div>
         </div>
 
-        {/* Help / Instructions */}
-        <div className="mt-8">
-          <Card className="border-dashed">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2"><HelpCircle className="h-5 w-5"/>Como preparar o seu .txt</CardTitle>
-              <CardDescription>Separe cada questão por uma linha em branco ou por &quot;---&quot;.</CardDescription>
-            </CardHeader>
-            <CardContent className="text-sm grid md:grid-cols-2 gap-6">
-              <div>
-                <div className="font-semibold mb-2">Formato 1 — com ANS:</div>
-                <pre className="rounded-xl p-4 bg-slate-950 text-slate-100 text-xs overflow-auto"><code>{`Q: RN com 5 dias está irritado e ictérico até zona IV de Kramer. Qual a conduta inicial?\nA) Alta domiciliar e retorno em 7 dias\nB) Fototerapia\nC) Exsanguíneo-transfusão\nD) Suspender aleitamento\nANS: B\nEXPL: Icterícia até zona IV com clínica -> fototerapia.\nTAG: Pediatria\n---\nQ: Qual a droga de escolha para intoxicação por cianeto?\nA) N-acetilcisteína\nB) Hidroxocobalamina\nC) Flumazenil\nD) Azul de metileno\nANS: B\nEXPL: Hidroxocobalamina é antídoto específico.\nTAG: Toxicol.`}</code></pre>
-              </div>
-              <div>
-                <div className="font-semibold mb-2">Formato 2 — marque a correta com *:</div>
-                <pre className="rounded-xl p-4 bg-slate-950 text-slate-100 text-xs overflow-auto"><code>{`Q: Critérios de peritonite bacteriana espontânea incluem:\n*A) Neurotórax não é critério\nB) Proteinorraquia > 1 g/dL\nC) Polimorfonucleares no líquido ascítico > 250/mm³\nD) Amilase elevada\nEXPL: PMN > 250/mm³ define PBE.\nTAG: Gastro`}</code></pre>
-                <p className="mt-2 text-xs text-slate-500">Obs.: No Formato 2, a linha com * define a alternativa correta e você não precisa incluir ANS.</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </div>
   );

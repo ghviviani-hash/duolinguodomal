@@ -556,7 +556,7 @@ useEffect(() => {
               const qs = deckData.questions;
               setDeckId(deck.id);
               const withIds = qs.map((q: Question) => ({ ...q, id: uid() }));
-              const baseOrder = withIds.map((_: any, i: number) => i);
+              const baseOrder = withIds.map((_: Question, i: number) => i);
               const order = shuffleOnLoad ? shuffle(baseOrder) : baseOrder;
               setQuestions(withIds);
               setQueue(order);

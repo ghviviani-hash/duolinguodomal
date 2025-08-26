@@ -29,48 +29,59 @@ import {
   BookOpen,
   Download,
   X,
+  BrainCircuit,
+  Award,
+  BarChart3
 } from "lucide-react";
 
 // ---------- Types ----------
 interface Question {
   id: string;
   text: string;
-  options: string[]; // length 4
-  answerIndex: number; // 0..3
+  options: string[];
+  answerIndex: number;
   explanation?: string;
   tag?: string;
 }
 
+interface ShuffledQuestion extends Question {
+  shuffledOptions: string[];
+  shuffledAnswerIndex: number;
+}
+
+interface SrsData {
+  [key: string]: {
+    question: Question;
+    deckId: string;
+    deckName: string;
+    correctStreak: number;
+    nextReview: number;
+    wrongCount: number;
+    correctCount: number;
+  };
+}
+
+// ---------- Constants ----------
+const INITIAL_HEARTS = 10;
+const DECK_COMPLETION_BONUS = 50;
+const DAILY_GOAL_BONUS = 100;
+const SRS_INTERVALS = [1, 3, 7, 14, 30];
+
 // ---------- Utilities ----------
 const LS_STATS_KEY = "quizg-v1-stats";
 const LS_DECK_KEY = (deckId: string) => `quizg-v1-deck-${deckId}`;
+const LS_SRS_KEY = "quizg-v1-srs-data";
+const LS_ACHIEVEMENTS_KEY = "quizg-v1-achievements";
 
 const todayKey = () => {
   const d = new Date();
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const dd = String(d.getDate()).padStart(2, "0");
-  return `${y}-${m}-${dd}`;
+  d.setHours(0, 0, 0, 0);
+  return d.getTime();
 };
 
-function daysBetween(a: string, b: string) {
-  const A = new Date(a + "T00:00:00");
-  const B = new Date(b + "T00:00:00");
-  const diff = Math.round((B.getTime() - A.getTime()) / (1000 * 60 * 60 * 24));
+function daysBetween(a: number, b: number) {
+  const diff = Math.round((b - a) / (1000 * 60 * 60 * 24));
   return diff;
-}
-
-function uid() {
-  return Math.random().toString(36).slice(2);
-}
-
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
 }
 
 function hashString(s: string) {
@@ -80,6 +91,15 @@ function hashString(s: string) {
     h |= 0;
   }
   return Math.abs(h).toString(36);
+}
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
 
 // ---------- TXT Parser ----------
@@ -154,7 +174,10 @@ function parseTxtDeck(txt: string): { questions: Question[]; errors: string[] } 
       continue;
     }
 
-    questions.push({ id: uid(), text: q, options: opts as string[], answerIndex: ans, explanation: expl, tag });
+    const questionText = q;
+    const stableId = hashString(questionText);
+
+    questions.push({ id: stableId, text: questionText, options: opts as string[], answerIndex: ans, explanation: expl, tag });
   }
   return { questions, errors };
 }
@@ -212,34 +235,6 @@ const EmojiBurst = ({ trigger }: { trigger: number }) => {
   );
 };
 
-const CelebrationOverlay = ({ show }: { show: boolean }) => (
-  <AnimatePresence>
-    {show && (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.35 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
-      >
-        <motion.div
-          initial={{ scale: 0.8, rotate: -2, opacity: 0 }}
-          animate={{ scale: 1, rotate: 0, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
-          transition={{ type: "spring", stiffness: 220, damping: 18 }}
-          className="rounded-3xl p-8 md:p-10 text-center bg-white/90 dark:bg-slate-900/90 shadow-2xl"
-        >
-          <div className="text-5xl md:text-6xl mb-4">🏆🎉</div>
-          <div className="text-2xl md:text-3xl font-bold mb-2">Conjunto concluído!</div>
-          <div className="text-slate-700 dark:text-slate-200 max-w-md">
-            Mandou bem! Você finalizou todas as questões deste deck.
-          </div>
-        </motion.div>
-      </motion.div>
-    )}
-  </AnimatePresence>
-);
-
 const ReviewModal = ({ question, onClose }: { question: Question | null; onClose: () => void }) => {
   return (
     <AnimatePresence>
@@ -295,6 +290,102 @@ const ReviewModal = ({ question, onClose }: { question: Question | null; onClose
     </AnimatePresence>
   );
 };
+
+const StatsModal = ({ srsData, onClose }: { srsData: SrsData; onClose: () => void }) => {
+    const stats = React.useMemo(() => {
+        const deckStats: { [name: string]: { correct: number; wrong: number } } = {};
+        const tagStats: { [name: string]: { correct: number; wrong: number } } = {};
+
+        Object.values(srsData).forEach(item => {
+            const deckName = item.deckName || 'Desconhecido';
+            const tagName = item.question.tag || 'Sem Categoria';
+
+            if (!deckStats[deckName]) deckStats[deckName] = { correct: 0, wrong: 0 };
+            if (!tagStats[tagName]) tagStats[tagName] = { correct: 0, wrong: 0 };
+
+            deckStats[deckName].correct += item.correctCount || 0;
+            deckStats[deckName].wrong += item.wrongCount || 0;
+            tagStats[tagName].correct += item.correctCount || 0;
+            tagStats[tagName].wrong += item.wrongCount || 0;
+        });
+
+        const calculateErrorRate = (stats: { correct: number; wrong: number }) => {
+            const total = stats.correct + stats.wrong;
+            return total === 0 ? 0 : (stats.wrong / total) * 100;
+        };
+
+        const sortedDeckStats = Object.entries(deckStats)
+            .map(([name, stats]) => ({ name, errorRate: calculateErrorRate(stats) }))
+            .filter(item => item.errorRate > 0)
+            .sort((a, b) => b.errorRate - a.errorRate)
+            .slice(0, 5);
+
+        const sortedTagStats = Object.entries(tagStats)
+            .map(([name, stats]) => ({ name, errorRate: calculateErrorRate(stats) }))
+            .filter(item => item.errorRate > 0)
+            .sort((a, b) => b.errorRate - a.errorRate)
+            .slice(0, 5);
+
+        return { decks: sortedDeckStats, tags: sortedTagStats };
+    }, [srsData]);
+
+    return (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={onClose}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-lg rounded-2xl p-6 bg-white dark:bg-slate-900 shadow-xl"
+          >
+            <Button variant="ghost" size="icon" className="absolute top-4 right-4" onClick={onClose}><X className="h-4 w-4" /></Button>
+            <h3 className="text-lg font-bold mb-4 flex items-center gap-2"><BarChart3 className="h-5 w-5"/>Estatísticas de Desempenho</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 className="font-semibold mb-2">Decks com Mais Erros</h4>
+                    {stats.decks.length > 0 ? (
+                        <ul className="space-y-2">
+                            {stats.decks.map(deck => (
+                                <li key={deck.name} className="text-sm">
+                                    <div className="flex justify-between">
+                                        <span className="truncate pr-2">{deck.name}</span>
+                                        <span className="font-semibold">{deck.errorRate.toFixed(0)}%</span>
+                                    </div>
+                                    <Progress value={deck.errorRate} className="h-2 mt-1" />
+                                </li>
+                            ))}
+                        </ul>
+                    ) : <p className="text-sm text-slate-500">Nenhum erro registado ainda.</p>}
+                </div>
+                <div>
+                    <h4 className="font-semibold mb-2">Categorias com Mais Erros</h4>
+                    {stats.tags.length > 0 ? (
+                        <ul className="space-y-2">
+                            {stats.tags.map(tag => (
+                                <li key={tag.name} className="text-sm">
+                                    <div className="flex justify-between">
+                                        <span className="truncate pr-2">{tag.name}</span>
+                                        <span className="font-semibold">{tag.errorRate.toFixed(0)}%</span>
+                                    </div>
+                                    <Progress value={tag.errorRate} className="h-2 mt-1" />
+                                </li>
+                            ))}
+                        </ul>
+                    ) : <p className="text-sm text-slate-500">Nenhum erro registado ainda.</p>}
+                </div>
+            </div>
+          </motion.div>
+        </motion.div>
+    );
+};
+
 
 // ---------- Audio Hook ----------
 function useAudio() {
@@ -354,7 +445,6 @@ ANS: B
 EXPL: Cálcio estabiliza membrana cardiomiocítica.
 TAG: Clínica
 `;
-
 
 const DEFAULT_DECKS = [
   
@@ -1938,7 +2028,7 @@ export default function QuizGamificadoApp() {
   const [dark, setDark] = useState(true);
   const [xp, setXp] = useState(0);
   const [level, setLevel] = useState(1);
-  const [hearts, setHearts] = useState(50);
+  const [hearts, setHearts] = useState(INITIAL_HEARTS);
   const [streakDays, setStreakDays] = useState(0);
   const [todayXp, setTodayXp] = useState(0);
   const [goal, setGoal] = useState(100);
@@ -1946,26 +2036,88 @@ export default function QuizGamificadoApp() {
   const [confettiKey, setConfettiKey] = useState(0);
   const [lastGain, setLastGain] = useState<number | null>(null);
   const [emojiKey, setEmojiKey] = useState(0);
-  const [celebrating, setCelebrating] = useState(false);
   const [questionStart, setQuestionStart] = useState<number | null>(null);
-  const LS_WRONG_KEY = "quizg-v1-wrong-list";
-  const [wrongList, setWrongList] = useState<Question[]>([]);
   const [lockUntil, setLockUntil] = useState<number | null>(null);
   const [, setNow] = useState(Date.now());
   const [sessionWrongAnswers, setSessionWrongAnswers] = useState<Question[]>([]);
   const [reviewingQuestion, setReviewingQuestion] = useState<Question | null>(null);
+  const [bonusAwarded, setBonusAwarded] = useState(false);
+  const [isSessionComplete, setIsSessionComplete] = useState(false);
+  const [srsData, setSrsData] = useState<SrsData>({});
+  const [displayedQuestion, setDisplayedQuestion] = useState<ShuffledQuestion | null>(null);
+  const [quizMode, setQuizMode] = useState<"deck" | "srs">("deck");
+  const [dailyBonusAwarded, setDailyBonusAwarded] = useState(false);
+  const [showStatsModal, setShowStatsModal] = useState(false);
+  const [decksCompleted, setDecksCompleted] = useState(0);
+  const [unlockedAchievements, setUnlockedAchievements] = useState<string[]>([]);
   const { playCorrect, playWrong, playFanfare } = useAudio();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  const achievements = React.useMemo(() => [
+    { id: 'first_deck', title: 'Iniciante', description: 'Complete o seu primeiro deck.', icon: <Award className="h-6 w-6"/>, isUnlocked: (stats: { decksCompleted: number }) => stats.decksCompleted >= 1 },
+    { id: 'streak_3', title: 'Consistente', description: 'Mantenha uma sequência de 3 dias.', icon: <Flame className="h-6 w-6"/>, isUnlocked: (stats: { streakDays: number }) => stats.streakDays >= 3 },
+    { id: 'level_5', title: 'Dedicado', description: 'Alcance o nível 5.', icon: <Star className="h-6 w-6"/>, isUnlocked: (stats: { level: number }) => stats.level >= 5 },
+    { id: 'xp_1000', title: 'Acumulador', description: 'Acumule 1000 XP no total.', icon: <Sparkles className="h-6 w-6"/>, isUnlocked: (stats: { xp: number }) => stats.xp >= 1000 },
+  ], []);
+
+  useEffect(() => {
+    const rawAchievements = localStorage.getItem(LS_ACHIEVEMENTS_KEY);
+    if (rawAchievements) try { setUnlockedAchievements(JSON.parse(rawAchievements)); } catch {}
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(LS_ACHIEVEMENTS_KEY, JSON.stringify(unlockedAchievements));
+  }, [unlockedAchievements]);
+
+  useEffect(() => {
+    const stats = { decksCompleted, streakDays, level, xp };
+    const newlyUnlocked: string[] = [];
+    achievements.forEach(ach => {
+      if (!unlockedAchievements.includes(ach.id) && ach.isUnlocked(stats)) {
+        newlyUnlocked.push(ach.id);
+      }
+    });
+    if (newlyUnlocked.length > 0) {
+      setUnlockedAchievements(prev => [...prev, ...newlyUnlocked]);
+    }
+  }, [decksCompleted, streakDays, level, xp, achievements, unlockedAchievements]);
+
+  useEffect(() => {
+    const rawSrs = localStorage.getItem(LS_SRS_KEY);
+    if (rawSrs) try { setSrsData(JSON.parse(rawSrs)); } catch {}
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(LS_SRS_KEY, JSON.stringify(srsData));
+  }, [srsData]);
+
+  useEffect(() => {
+    if (todayXp >= goal && !dailyBonusAwarded) {
+      setXp(x => x + DAILY_GOAL_BONUS);
+      setDailyBonusAwarded(true);
+      setConfettiKey(k => k + 1);
+    }
+  }, [todayXp, goal, dailyBonusAwarded]);
 
   useEffect(() => {
     const manifestRaw = localStorage.getItem("quizg-v1-deck-manifest");
     if (!manifestRaw || JSON.parse(manifestRaw).length === 0) {
       if (DEFAULT_DECKS.length > 0) {
-        const defaultManifest = DEFAULT_DECKS.map(deck => ({ id: deck.id, name: deck.name }));
+        const decksWithStableIds = DEFAULT_DECKS.map(deck => ({
+            ...deck,
+            questions: deck.questions.map(q => ({
+                ...q,
+                id: hashString(q.text)
+            }))
+        }));
+
+        const defaultManifest = decksWithStableIds.map(deck => ({ id: deck.id, name: deck.name }));
         localStorage.setItem("quizg-v1-deck-manifest", JSON.stringify(defaultManifest));
-        DEFAULT_DECKS.forEach(deck => {
-          localStorage.setItem(LS_DECK_KEY(deck.id), JSON.stringify({ questions: deck.questions }));
+        
+        decksWithStableIds.forEach(deck => {
+            localStorage.setItem(LS_DECK_KEY(deck.id), JSON.stringify({ questions: deck.questions }));
         });
+
         setAvailableDecks(defaultManifest);
       }
     } else {
@@ -1974,19 +2126,13 @@ export default function QuizGamificadoApp() {
   }, []);
 
   useEffect(() => {
-    const raw = localStorage.getItem(LS_WRONG_KEY);
-    if (raw) try { setWrongList(JSON.parse(raw)); } catch {}
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem(LS_WRONG_KEY, JSON.stringify(wrongList));
-  }, [wrongList]);
-
-  useEffect(() => {
     if (!lockUntil) return;
     const id = setInterval(() => {
       setNow(Date.now());
-      if (Date.now() >= lockUntil) setLockUntil(null);
+      if (Date.now() >= lockUntil) {
+        setLockUntil(null);
+        setHearts(INITIAL_HEARTS);
+      }
     }, 1000);
     return () => clearInterval(id);
   }, [lockUntil]);
@@ -1997,14 +2143,16 @@ export default function QuizGamificadoApp() {
     if (raw) {
       try {
         const s = JSON.parse(raw);
-        const last = s.lastActiveDate as string | undefined;
+        const last = s.lastActiveDate as number | undefined;
         setStreakDays(last ? (daysBetween(last, today) === 1 ? (s.streakDays || 0) + 1 : (daysBetween(last, today) === 0 ? s.streakDays || 0 : 1)) : 1);
         setXp(s.xp || 0);
         setLevel(s.level || 1);
-        setHearts(s.hearts ?? 5);
+        setHearts(s.hearts ?? INITIAL_HEARTS);
         setGoal(s.goal ?? 100);
         setTodayXp(s.lastXPDate === today ? s.todayXp || 0 : 0);
         setLockUntil(s.lockUntil || null);
+        setDailyBonusAwarded(s.dailyBonusAwardedFor === today);
+        setDecksCompleted(s.decksCompleted || 0);
       } catch {}
     } else {
       setStreakDays(1);
@@ -2014,9 +2162,9 @@ export default function QuizGamificadoApp() {
   useEffect(() => {
     const today = todayKey();
     localStorage.setItem(LS_STATS_KEY, JSON.stringify({
-      lastActiveDate: today, streakDays, xp, level, hearts, goal, todayXp, lastXPDate: today, lockUntil
+      lastActiveDate: today, streakDays, xp, level, hearts, goal, todayXp, lastXPDate: today, lockUntil, dailyBonusAwardedFor: dailyBonusAwarded ? today : null, decksCompleted
     }));
-  }, [streakDays, xp, level, hearts, goal, todayXp, lockUntil]);
+  }, [streakDays, xp, level, hearts, goal, todayXp, lockUntil, dailyBonusAwarded, decksCompleted]);
 
   useEffect(() => {
     const newLevel = Math.floor(xp / 250) + 1;
@@ -2033,7 +2181,7 @@ export default function QuizGamificadoApp() {
         setCurrent(null);
         return;
     };
-
+    setQuizMode("deck");
     const raw = localStorage.getItem(LS_DECK_KEY(deckId));
     if (raw) {
       try {
@@ -2047,14 +2195,16 @@ export default function QuizGamificadoApp() {
           setQueue(newQueue);
           setCurrent(newQueue[0] ?? null);
           setSessionWrongAnswers([]);
+          setBonusAwarded(false);
+          setIsSessionComplete(false);
         }
       } catch {}
     }
   }, [deckId, shuffleOnLoad]);
 
   useEffect(() => {
-    if (deckId) localStorage.setItem(LS_DECK_KEY(deckId), JSON.stringify({ questions, queue }));
-  }, [deckId, questions, queue]);
+    if (deckId && quizMode === "deck") localStorage.setItem(LS_DECK_KEY(deckId), JSON.stringify({ questions, queue }));
+  }, [deckId, questions, queue, quizMode]);
 
   useEffect(() => {
     if (current != null) setQuestionStart(performance.now());
@@ -2064,16 +2214,37 @@ export default function QuizGamificadoApp() {
     document.documentElement.classList.toggle("dark", dark);
   }, [dark]);
 
-  const sessionDone = queue.length === 0 && questions.length > 0;
   useEffect(() => {
-    if (sessionDone) {
-      setConfettiKey(k => k + 1);
-      setCelebrating(true);
-      playFanfare();
-      const t = setTimeout(() => setCelebrating(false), 3200);
-      return () => clearTimeout(t);
+    if (queue.length === 0 && questions.length > 0 && !isSessionComplete) {
+      setIsSessionComplete(true);
+      if (!bonusAwarded) {
+        setXp(x => x + DECK_COMPLETION_BONUS);
+        setDecksCompleted(d => d + 1);
+        setBonusAwarded(true);
+        setConfettiKey(k => k + 1);
+        playFanfare();
+      }
     }
-  }, [sessionDone, playFanfare]);
+  }, [queue.length, questions.length, bonusAwarded, playFanfare, isSessionComplete]);
+
+  useEffect(() => {
+    if (current === null) {
+      setDisplayedQuestion(null);
+      return;
+    }
+    const originalQuestion = questions[current];
+    if (!originalQuestion) return;
+
+    if (shuffleOnLoad) {
+      const optionsWithOriginalIndex = originalQuestion.options.map((option, index) => ({ option, index }));
+      const shuffledOptionsWithIndex = shuffle(optionsWithOriginalIndex);
+      const shuffledOptions = shuffledOptionsWithIndex.map(item => item.option);
+      const shuffledAnswerIndex = shuffledOptionsWithIndex.findIndex(item => item.index === originalQuestion.answerIndex);
+      setDisplayedQuestion({ ...originalQuestion, shuffledOptions, shuffledAnswerIndex });
+    } else {
+      setDisplayedQuestion({ ...originalQuestion, shuffledOptions: originalQuestion.options, shuffledAnswerIndex: originalQuestion.answerIndex });
+    }
+  }, [current, questions, shuffleOnLoad]);
 
   const handleUpload = async (file: File) => {
     const text = await file.text();
@@ -2114,12 +2285,107 @@ export default function QuizGamificadoApp() {
     return base + speed + comboBonus;
   };
 
-  const onSelect = (idx: number) => {
-    if (current == null || selected != null) return;
+  const updateSrsData = useCallback((question: Question, correct: boolean) => {
+    setSrsData(prevSrsData => {
+        const now = Date.now();
+        const dayInMillis = 24 * 60 * 60 * 1000;
+        const currentEntry = prevSrsData[question.id] || {
+            question,
+            deckId: deckId || "srs-review",
+            deckName: availableDecks.find(d => d.id === deckId)?.name || "Revisão",
+            correctStreak: 0,
+            nextReview: now,
+            correctCount: 0,
+            wrongCount: 0,
+        };
+
+        let newCorrectStreak = currentEntry.correctStreak;
+        let nextReview;
+
+        if (correct) {
+            newCorrectStreak += 1;
+            let intervalInDays;
+            if (newCorrectStreak <= SRS_INTERVALS.length) {
+                intervalInDays = SRS_INTERVALS[newCorrectStreak - 1];
+            } else {
+                intervalInDays = SRS_INTERVALS[SRS_INTERVALS.length - 1] + (newCorrectStreak - SRS_INTERVALS.length) * 30;
+            }
+            nextReview = now + intervalInDays * dayInMillis;
+        } else {
+            newCorrectStreak = 0;
+            nextReview = now; // CORRIGIDO: Fica disponível imediatamente para a próxima sessão de revisão
+        }
+
+        const newEntry = { 
+            ...currentEntry, 
+            question, 
+            correctStreak: newCorrectStreak, 
+            nextReview,
+            correctCount: currentEntry.correctCount + (correct ? 1 : 0),
+            wrongCount: currentEntry.wrongCount + (correct ? 0 : 1),
+        };
+        
+        return {
+            ...prevSrsData,
+            [question.id]: newEntry
+        };
+    });
+  }, [deckId, availableDecks]);
+
+  const startSrsSession = () => {
+    const now = Date.now();
+    const dueQuestions = Object.values(srsData)
+      .filter(item => item.nextReview <= now)
+      .map(item => item.question);
+
+    if (dueQuestions.length === 0) {
+      alert("Nenhuma questão para revisar hoje!");
+      return;
+    }
+
+    setQuizMode("srs");
+    setDeckId(null);
+    setQuestions(dueQuestions);
+    const order = dueQuestions.map((_, i) => i);
+    const newQueue = shuffle(order);
+    setQueue(newQueue);
+    setCurrent(newQueue[0] ?? null);
+    setIsSessionComplete(false);
+    setSessionWrongAnswers([]);
+  };
+
+  const advanceQueue = useCallback((wasCorrect: boolean) => {
+    if (current === null) return;
+    const newQueue = [...queue];
+    const idxPos = newQueue.indexOf(current);
+    if (idxPos > -1) {
+      if (wasCorrect) newQueue.splice(idxPos, 1);
+      else newQueue.push(newQueue.splice(idxPos, 1)[0]);
+    }
+    setSelected(null);
+    setIsCorrect(null);
+    setShowExpl(false);
+    setQueue(newQueue);
+    setCurrent(newQueue[0] ?? null);
+  }, [current, queue]);
+
+  const onSelect = useCallback((idx: number) => {
+    if (!displayedQuestion || selected != null || current === null) return;
+    
+    const correct = idx === displayedQuestion.shuffledAnswerIndex;
+    const originalQuestion = questions[current];
+    
+    const wasAlreadyWrong = sessionWrongAnswers.find(q => q.id === originalQuestion.id);
+    if (!wasAlreadyWrong) {
+        updateSrsData(originalQuestion, correct);
+    } else if (correct) {
+        // Se já errou e agora acertou, não atualiza o SRS para não "perdoar" o erro.
+    } else {
+        updateSrsData(originalQuestion, false);
+    }
+
     const elapsed = questionStart ? performance.now() - questionStart : 0;
     setSelected(idx);
-    const q = questions[current];
-    const correct = idx === q.answerIndex;
     setIsCorrect(correct);
 
     if (correct) {
@@ -2138,37 +2404,18 @@ export default function QuizGamificadoApp() {
       setShowExpl(true);
       playWrong();
       
-      setSessionWrongAnswers(prev => {
-        if (prev.find(item => item.id === q.id)) {
-          return prev;
-        }
-        return [...prev, q];
-      });
-
-      if (newHearts <= 0) {
-        setLockUntil(Date.now() + 5 * 60 * 1000);
+      if (!wasAlreadyWrong) {
+        setSessionWrongAnswers(prev => [...prev, originalQuestion]);
       }
+
+      if (newHearts <= 0) setLockUntil(Date.now() + 5 * 60 * 1000);
       setTimeout(() => advanceQueue(false), 900);
     }
-  };
-
-  const advanceQueue = (wasCorrect: boolean) => {
-    if (current === null) return;
-    const newQueue = [...queue];
-    const idxPos = newQueue.indexOf(current);
-    if (idxPos > -1) {
-      if (wasCorrect) newQueue.splice(idxPos, 1);
-      else newQueue.push(newQueue.splice(idxPos, 1)[0]);
-    }
-    setSelected(null);
-    setIsCorrect(null);
-    setShowExpl(false);
-    setQueue(newQueue);
-    setCurrent(newQueue[0] ?? null);
-  };
+  }, [displayedQuestion, selected, current, questions, updateSrsData, questionStart, combo, hearts, playCorrect, playWrong, sessionWrongAnswers, advanceQueue]);
 
   const resetSession = () => {
     if (questions.length === 0) return;
+    setIsSessionComplete(false);
     const order = questions.map((_, i) => i);
     const newQueue = shuffleOnLoad ? shuffle(order) : order;
     setQueue(newQueue);
@@ -2178,6 +2425,7 @@ export default function QuizGamificadoApp() {
     setShowExpl(false);
     setCombo(0);
     setSessionWrongAnswers([]);
+    setBonusAwarded(false);
   };
 
   const downloadTemplate = () => {
@@ -2192,19 +2440,18 @@ export default function QuizGamificadoApp() {
 
   const progressPct = questions.length > 0 ? Math.round(((questions.length - queue.length) / questions.length) * 100) : 0;
   const goalPct = Math.min(100, Math.round((todayXp / goal) * 100));
-  const currentQ = current != null ? questions[current] : null;
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 text-slate-800 dark:text-slate-100">
       <ReviewModal question={reviewingQuestion} onClose={() => setReviewingQuestion(null)} />
+      {showStatsModal && <StatsModal srsData={srsData} onClose={() => setShowStatsModal(false)} />}
       <Confetti trigger={confettiKey} />
       <EmojiBurst trigger={emojiKey} />
-      <CelebrationOverlay show={celebrating} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
         <div className="flex flex-col md:flex-row items-start justify-between gap-4">
           <div className="space-y-1">
             <h1 className="text-2xl md:text-3xl font-bold tracking-tight flex items-center gap-2">
-              <Sparkles className="h-6 w-6" /> Quiz Gamificado
+              <Sparkles className="h-6 w-6" /> Duomed
             </h1>
             <p className="text-sm md:text-base text-slate-600 dark:text-slate-300">
               Importe um .txt com suas questões. Se errar, a questão volta para o fim.
@@ -2212,15 +2459,16 @@ export default function QuizGamificadoApp() {
           </div>
           <div className="flex items-center gap-4 flex-wrap justify-start md:justify-end self-start md:self-center w-full md:w-auto">
             <div className="flex items-center gap-2"><Flame className="h-5 w-5 text-orange-500" /><span className="font-semibold">{streakDays} dias</span><Badge variant="secondary">streak</Badge></div>
-            <div className="flex items-center gap-2"><Star className="h-5 w-5" /><span className="font-semibold">Lv {level}</span><Badge variant="secondary">{xp} XP</Badge></div>
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-2"><Star className="h-5 w-5" /><span className="font-semibold">Lv {level}</span><Badge variant="secondary">{xp} XP</Badge></div>
+              <Progress value={(xp % 250) / 2.5} className="h-1 w-full"/>
+            </div>
             <div className="flex items-center gap-2"><Heart className="h-5 w-5 text-rose-500" /><span className="font-semibold">{hearts}</span></div>
             <div className="flex items-center gap-2"><Switch checked={dark} onCheckedChange={setDark} /><span className="text-sm">Tema</span></div>
           </div>
         </div>
 
-        {/* CORRIGIDO: Layout principal agora é mobile-first */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
-          {/* Coluna do Quiz (Vem primeiro no código para aparecer no topo em telas pequenas) */}
           <div className="lg:col-span-2 lg:order-2">
             <Card className="relative overflow-hidden border-0 shadow-xl bg-gradient-to-br from-white/80 to-white/30 dark:from-slate-900/70 dark:to-slate-900/40 backdrop-blur">
               <div className="absolute inset-0 -z-10 opacity-30 pointer-events-none" aria-hidden>
@@ -2230,21 +2478,63 @@ export default function QuizGamificadoApp() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <div>
-                    <CardTitle className="text-xl md:text-2xl">{sessionDone ? "Parabéns!" : currentQ ? (currentQ.tag || "Questão") : "Carregue um deck"}</CardTitle>
-                    <CardDescription>{sessionDone ? "Você finalizou o deck." : currentQ ? "Selecione a alternativa correta." : "Use o painel ao lado."}</CardDescription>
+                    <CardTitle className="text-xl md:text-2xl">{isSessionComplete ? "Parabéns!" : displayedQuestion ? (displayedQuestion.tag || "Questão") : "Carregue um deck"}</CardTitle>
+                    <CardDescription>{isSessionComplete ? "Você finalizou o deck." : displayedQuestion ? "Selecione a alternativa correta." : "Use o painel ao lado."}</CardDescription>
                   </div>
                   <Badge variant="secondary">{questions.length > 0 ? `${questions.length - queue.length}/${questions.length}` : "0/0"}</Badge>
                 </div>
               </CardHeader>
               <CardContent className="min-h-[400px]">
-                {currentQ && !sessionDone && (
-                  <AnimatePresence mode="wait">
-                    <motion.div key={currentQ.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.25 }} className="space-y-5">
-                      <div className="text-lg md:text-xl font-semibold leading-snug">{currentQ.text}</div>
+                <AnimatePresence mode="wait">
+                  {isSessionComplete ? (
+                    <motion.div
+                      key="completion-view"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.25 }}
+                      className="space-y-4"
+                    >
+                      <div className="text-2xl font-bold flex items-center gap-2"><Trophy className="h-6 w-6 text-amber-500" />Conjunto concluído!</div>
+                      <div className="text-slate-600 dark:text-slate-300">Você ganhou um bônus de {DECK_COMPLETION_BONUS} XP por terminar.</div>
+                      <div className="flex gap-3 mt-4">
+                        <Button onClick={resetSession}><RefreshCw className="mr-2 h-4 w-4" />Repetir</Button>
+                        <Button variant="secondary" onClick={() => setShowStatsModal(true)}><BarChart3 className="mr-2 h-4 w-4" />Estatísticas</Button>
+                      </div>
+
+                      {sessionWrongAnswers.length > 0 && (
+                        <div className="pt-6">
+                          <Separator />
+                          <h3 className="text-xl font-semibold mt-4 mb-3">Questões para revisar</h3>
+                          <div className="space-y-2 max-h-48 overflow-y-auto pr-2">
+                            {sessionWrongAnswers.map((q, i) => (
+                              <Button
+                                key={q.id + i}
+                                variant="outline"
+                                className="w-full justify-start text-left h-auto"
+                                onClick={() => setReviewingQuestion(q)}
+                              >
+                                <p className="truncate whitespace-normal">{q.text}</p>
+                              </Button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </motion.div>
+                  ) : displayedQuestion ? (
+                    <motion.div 
+                      key={displayedQuestion.id} 
+                      initial={{ opacity: 0, y: 10 }} 
+                      animate={{ opacity: 1, y: 0 }} 
+                      exit={{ opacity: 0, y: -10 }} 
+                      transition={{ duration: 0.25 }} 
+                      className="space-y-5"
+                    >
+                      <div className="text-lg md:text-xl font-semibold leading-snug">{displayedQuestion.text}</div>
                       <div className="grid gap-3">
-                        {currentQ.options.map((opt, i) => {
+                        {displayedQuestion.shuffledOptions.map((opt, i) => {
                           const isSel = selected === i;
-                          const correct = isCorrect != null && i === currentQ.answerIndex;
+                          const correct = isCorrect != null && i === displayedQuestion.shuffledAnswerIndex;
                           const wrong = isSel && !isCorrect;
                           return (
                             <motion.button key={i} onClick={() => onSelect(i)} disabled={selected != null || (lockUntil != null && lockUntil > Date.now())} whileTap={{ scale: 0.98 }}
@@ -2267,49 +2557,19 @@ export default function QuizGamificadoApp() {
                           {isCorrect ? <><CheckCircle2 className="h-5 w-5" />Correto! {lastGain != null ? `+${lastGain} XP` : ""}</> : <><XCircle className="h-5 w-5" />Incorreto. A questão voltará depois.</>}
                         </div>
                       )}
-                      {showExpl && currentQ.explanation && (
+                      {showExpl && displayedQuestion.explanation && (
                         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="rounded-xl border p-3 text-sm bg-emerald-50/60 dark:bg-emerald-900/20 border-emerald-300/50 dark:border-emerald-700/40">
                           <div className="font-semibold mb-1 flex items-center gap-2"><Info className="h-4 w-4" />Explicação</div>
-                          <div className="text-slate-700 dark:text-slate-200">{currentQ.explanation}</div>
+                          <div className="text-slate-700 dark:text-slate-200">{displayedQuestion.explanation}</div>
                         </motion.div>
                       )}
                     </motion.div>
-                  </AnimatePresence>
-                )}
-                {sessionDone && (
-                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
-                    <div className="text-2xl font-bold flex items-center gap-2"><Trophy className="h-6 w-6 text-amber-500" />Conjunto concluído!</div>
-                    <div className="text-slate-600 dark:text-slate-300">Continue para manter sua streak e acumular XP.</div>
-                    <div className="flex gap-3 mt-4">
-                      <Button onClick={resetSession}><RefreshCw className="mr-2 h-4 w-4" />Repetir</Button>
-                      <Button variant="secondary" onClick={() => fileInputRef.current?.click()}><Upload className="mr-2 h-4 w-4" />Novo deck</Button>
-                    </div>
-
-                    {sessionWrongAnswers.length > 0 && (
-                      <div className="pt-6">
-                        <Separator />
-                        <h3 className="text-xl font-semibold mt-4 mb-3">Questões para revisar</h3>
-                        <div className="space-y-2 max-h-48 overflow-y-auto pr-2">
-                          {sessionWrongAnswers.map((q, i) => (
-                            <Button
-                              key={q.id + i}
-                              variant="outline"
-                              className="w-full justify-start text-left h-auto"
-                              onClick={() => setReviewingQuestion(q)}
-                            >
-                              <p className="truncate whitespace-normal">{q.text}</p>
-                            </Button>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </motion.div>
-                )}
+                  ) : null}
+                </AnimatePresence>
               </CardContent>
             </Card>
           </div>
 
-          {/* Coluna de Controles (Vem depois no código, mas é reordenada para a esquerda em telas grandes) */}
           <div className="lg:col-span-1 lg:order-1 space-y-6">
             <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
               <CardHeader>
@@ -2332,9 +2592,24 @@ export default function QuizGamificadoApp() {
               </CardContent>
             </Card>
 
+            <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle>
+                <CardDescription>Relembre as questões de forma inteligente.</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button className="w-full" onClick={startSrsSession}>
+                  Iniciar Revisão ({Object.values(srsData).filter(item => item.nextReview <= Date.now()).length} para hoje)
+                </Button>
+              </CardContent>
+            </Card>
+            
             {availableDecks.length > 0 && (
               <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-                <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5" />Decks Salvos</CardTitle></CardHeader>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5" />Decks Salvos</CardTitle>
+                  <CardDescription>Escolha um deck abaixo para começar:</CardDescription>
+                </CardHeader>
                 <CardContent className="space-y-2">
                   {availableDecks.map((deck) => (
                     <Button key={deck.id} variant={deckId === deck.id ? "default" : "outline"} className="w-full justify-start" onClick={() => setDeckId(deck.id)}>{deck.name}</Button>
@@ -2353,6 +2628,20 @@ export default function QuizGamificadoApp() {
             </Card>
 
              <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+              <CardHeader><CardTitle className="flex items-center gap-2"><Award className="h-5 w-5"/>Conquistas</CardTitle></CardHeader>
+              <CardContent className="grid grid-cols-4 gap-4">
+                {achievements.map(ach => (
+                  <div key={ach.id} className="flex flex-col items-center text-center" title={`${ach.title}: ${ach.description}`}>
+                    <div className={`p-3 rounded-full ${unlockedAchievements.includes(ach.id) ? 'bg-amber-100 dark:bg-amber-900' : 'bg-slate-100 dark:bg-slate-800'}`}>
+                      {React.cloneElement(ach.icon, { className: `h-6 w-6 ${unlockedAchievements.includes(ach.id) ? 'text-amber-500' : 'text-slate-400'}`})}
+                    </div>
+                    <span className="text-xs mt-1 text-slate-600 dark:text-slate-300">{ach.title}</span>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+             <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
               <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-between text-sm"><span>{questions.length - queue.length} / {questions.length}</span><Badge variant="secondary">{progressPct}%</Badge></div>
@@ -2361,7 +2650,7 @@ export default function QuizGamificadoApp() {
                     <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
                         <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
                         <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(lockUntil - Date.now())}</span></div>
-                        <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => buyLivesWithXp(100, 10)}>Comprar +10 vidas (100 XP)</Button></div>
+                        <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => buyLivesWithXp(100, 10)}>Comprar +10 vidas (-100 XP)</Button></div>
                     </div>
                 ) : (
                     <div className="flex gap-2 flex-wrap">

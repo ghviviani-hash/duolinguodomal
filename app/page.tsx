@@ -446,6 +446,7 @@ EXPL: Cálcio estabiliza membrana cardiomiocítica.
 TAG: Clínica
 `;
 
+
 const DEFAULT_DECKS = [
   
   // NOVO DECK DE NEUROLOGIA
@@ -2176,10 +2177,12 @@ export default function QuizGamificadoApp() {
 
   useEffect(() => {
     if (!deckId) {
+      if (quizMode !== 'srs') {
         setQuestions([]);
         setQueue([]);
         setCurrent(null);
-        return;
+      }
+      return;
     };
     setQuizMode("deck");
     const raw = localStorage.getItem(LS_DECK_KEY(deckId));
@@ -2200,7 +2203,7 @@ export default function QuizGamificadoApp() {
         }
       } catch {}
     }
-  }, [deckId, shuffleOnLoad]);
+  }, [deckId, shuffleOnLoad, quizMode]);
 
   useEffect(() => {
     if (deckId && quizMode === "deck") localStorage.setItem(LS_DECK_KEY(deckId), JSON.stringify({ questions, queue }));
@@ -2313,7 +2316,7 @@ export default function QuizGamificadoApp() {
             nextReview = now + intervalInDays * dayInMillis;
         } else {
             newCorrectStreak = 0;
-            nextReview = now; // CORRIGIDO: Fica disponível imediatamente para a próxima sessão de revisão
+            nextReview = now;
         }
 
         const newEntry = { 
@@ -2650,7 +2653,7 @@ export default function QuizGamificadoApp() {
                     <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
                         <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
                         <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(lockUntil - Date.now())}</span></div>
-                        <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => buyLivesWithXp(100, 10)}>Comprar +10 vidas (-100 XP)</Button></div>
+                        <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => buyLivesWithXp(100, 10)}> +10 vidas (-100 XP)</Button></div>
                     </div>
                 ) : (
                     <div className="flex gap-2 flex-wrap">

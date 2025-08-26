@@ -1963,7 +1963,6 @@ export default function QuizGamificadoApp() {
       if (DEFAULT_DECKS.length > 0) {
         const defaultManifest = DEFAULT_DECKS.map(deck => ({ id: deck.id, name: deck.name }));
         localStorage.setItem("quizg-v1-deck-manifest", JSON.stringify(defaultManifest));
-       
         DEFAULT_DECKS.forEach(deck => {
           localStorage.setItem(LS_DECK_KEY(deck.id), JSON.stringify({ questions: deck.questions }));
         });

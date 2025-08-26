@@ -2201,7 +2201,6 @@ export default function QuizGamificadoApp() {
       <EmojiBurst trigger={emojiKey} />
       <CelebrationOverlay show={celebrating} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
-        {/* CORRIGIDO: Layout do cabeçalho agora é responsivo */}
         <div className="flex flex-col md:flex-row items-start justify-between gap-4">
           <div className="space-y-1">
             <h1 className="text-2xl md:text-3xl font-bold tracking-tight flex items-center gap-2">
@@ -2219,71 +2218,10 @@ export default function QuizGamificadoApp() {
           </div>
         </div>
 
+        {/* CORRIGIDO: Layout principal agora é mobile-first */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
-          <div className="lg:col-span-1 space-y-6">
-            <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle>
-                <CardDescription>Arquivos .txt no modelo indicado.</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <Input ref={fileInputRef} type="file" accept=".txt" className="hidden" onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0])} />
-                <Button className="w-full" onClick={() => fileInputRef.current?.click()}><Upload className="mr-2 h-4 w-4" />Selecionar Arquivo .txt</Button>
-                <div className="flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2 text-sm"><Switch id="shuffle-switch" checked={shuffleOnLoad} onCheckedChange={setShuffleOnLoad} /><label htmlFor="shuffle-switch">Embaralhar</label></div>
-                  <Button variant="outline" size="sm" onClick={downloadTemplate}><Download className="mr-2 h-4 w-4" />Modelo</Button>
-                </div>
-                {errors.length > 0 && (
-                  <div className="rounded-xl border border-amber-300 bg-amber-50 dark:bg-amber-950/40 p-3 text-sm text-amber-700 dark:text-amber-200">
-                    <div className="font-semibold mb-1 flex items-center gap-2"><Info className="h-4 w-4" />Ajustes necessários:</div>
-                    <ul className="list-disc list-inside space-y-1">{errors.map((e, i) => <li key={i}>{e}</li>)}</ul>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-
-            {availableDecks.length > 0 && (
-              <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-                <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5" />Decks Salvos</CardTitle></CardHeader>
-                <CardContent className="space-y-2">
-                  {availableDecks.map((deck) => (
-                    <Button key={deck.id} variant={deckId === deck.id ? "default" : "outline"} className="w-full justify-start" onClick={() => setDeckId(deck.id)}>{deck.name}</Button>
-                  ))}
-                </CardContent>
-              </Card>
-            )}
-
-            <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-              <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center justify-between text-sm"><span>{todayXp} / {goal} XP hoje</span><Badge variant={goalPct === 100 ? "default" : "secondary"}>{goalPct}%</Badge></div>
-                <Progress value={goalPct} />
-                <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{combo}</span></div><Button size="sm" variant="outline" onClick={() => setGoal(g => g + 50)}>+50 meta</Button></div>
-              </CardContent>
-            </Card>
-
-             <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-              <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center justify-between text-sm"><span>{questions.length - queue.length} / {questions.length}</span><Badge variant="secondary">{progressPct}%</Badge></div>
-                <Progress value={progressPct} />
-                {lockUntil && lockUntil > Date.now() ? (
-                    <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
-                        <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
-                        <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(lockUntil - Date.now())}</span></div>
-                        <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => buyLivesWithXp(100, 10)}>Comprar +10 vidas (100 XP)</Button></div>
-                    </div>
-                ) : (
-                    <div className="flex gap-2 flex-wrap">
-                        <Button variant="outline" size="sm" onClick={resetSession} disabled={questions.length === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
-                        <Button variant="ghost" size="sm" onClick={() => { setQuestions([]); setQueue([]); setCurrent(null); setDeckId(null); }}>Limpar</Button>
-                    </div>
-                )}
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="lg:col-span-2">
+          {/* Coluna do Quiz (Vem primeiro no código para aparecer no topo em telas pequenas) */}
+          <div className="lg:col-span-2 lg:order-2">
             <Card className="relative overflow-hidden border-0 shadow-xl bg-gradient-to-br from-white/80 to-white/30 dark:from-slate-900/70 dark:to-slate-900/40 backdrop-blur">
               <div className="absolute inset-0 -z-10 opacity-30 pointer-events-none" aria-hidden>
                 <div className="absolute -right-24 -top-24 h-56 w-56 rounded-full bg-fuchsia-400 blur-3xl mix-blend-multiply dark:bg-fuchsia-700" />
@@ -2366,6 +2304,70 @@ export default function QuizGamificadoApp() {
                       </div>
                     )}
                   </motion.div>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Coluna de Controles (Vem depois no código, mas é reordenada para a esquerda em telas grandes) */}
+          <div className="lg:col-span-1 lg:order-1 space-y-6">
+            <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle>
+                <CardDescription>Arquivos .txt no modelo indicado.</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <Input ref={fileInputRef} type="file" accept=".txt" className="hidden" onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0])} />
+                <Button className="w-full" onClick={() => fileInputRef.current?.click()}><Upload className="mr-2 h-4 w-4" />Selecionar Arquivo .txt</Button>
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 text-sm"><Switch id="shuffle-switch" checked={shuffleOnLoad} onCheckedChange={setShuffleOnLoad} /><label htmlFor="shuffle-switch">Embaralhar</label></div>
+                  <Button variant="outline" size="sm" onClick={downloadTemplate}><Download className="mr-2 h-4 w-4" />Modelo</Button>
+                </div>
+                {errors.length > 0 && (
+                  <div className="rounded-xl border border-amber-300 bg-amber-50 dark:bg-amber-950/40 p-3 text-sm text-amber-700 dark:text-amber-200">
+                    <div className="font-semibold mb-1 flex items-center gap-2"><Info className="h-4 w-4" />Ajustes necessários:</div>
+                    <ul className="list-disc list-inside space-y-1">{errors.map((e, i) => <li key={i}>{e}</li>)}</ul>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+
+            {availableDecks.length > 0 && (
+              <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+                <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5" />Decks Salvos</CardTitle></CardHeader>
+                <CardContent className="space-y-2">
+                  {availableDecks.map((deck) => (
+                    <Button key={deck.id} variant={deckId === deck.id ? "default" : "outline"} className="w-full justify-start" onClick={() => setDeckId(deck.id)}>{deck.name}</Button>
+                  ))}
+                </CardContent>
+              </Card>
+            )}
+
+            <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+              <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center justify-between text-sm"><span>{todayXp} / {goal} XP hoje</span><Badge variant={goalPct === 100 ? "default" : "secondary"}>{goalPct}%</Badge></div>
+                <Progress value={goalPct} />
+                <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{combo}</span></div><Button size="sm" variant="outline" onClick={() => setGoal(g => g + 50)}>+50 meta</Button></div>
+              </CardContent>
+            </Card>
+
+             <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+              <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center justify-between text-sm"><span>{questions.length - queue.length} / {questions.length}</span><Badge variant="secondary">{progressPct}%</Badge></div>
+                <Progress value={progressPct} />
+                {lockUntil && lockUntil > Date.now() ? (
+                    <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
+                        <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
+                        <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(lockUntil - Date.now())}</span></div>
+                        <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => buyLivesWithXp(100, 10)}>Comprar +10 vidas (100 XP)</Button></div>
+                    </div>
+                ) : (
+                    <div className="flex gap-2 flex-wrap">
+                        <Button variant="outline" size="sm" onClick={resetSession} disabled={questions.length === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
+                        <Button variant="ghost" size="sm" onClick={() => { setQuestions([]); setQueue([]); setCurrent(null); setDeckId(null); }}>Limpar</Button>
+                    </div>
                 )}
               </CardContent>
             </Card>

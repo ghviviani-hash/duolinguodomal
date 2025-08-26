@@ -1938,7 +1938,7 @@ export default function QuizGamificadoApp() {
   const [dark, setDark] = useState(true);
   const [xp, setXp] = useState(0);
   const [level, setLevel] = useState(1);
-  const [hearts, setHearts] = useState(5);
+  const [hearts, setHearts] = useState(50);
   const [streakDays, setStreakDays] = useState(0);
   const [todayXp, setTodayXp] = useState(0);
   const [goal, setGoal] = useState(100);

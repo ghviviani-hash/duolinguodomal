@@ -453,7 +453,7 @@ const DEFAULT_DECKS = [
   
   {
     id: "preset-neurologia-1",
-    name: "pr1 Neuro M7",
+    name: "PR1 Neuro M7",
     questions: [
       // Cefaleias
       {
@@ -1252,7 +1252,7 @@ const DEFAULT_DECKS = [
   },
     {
     id: "preset-otorrinolaringologia-1",
-    name: "Deck de Otorrinolaringologia",
+    name: "PR1 otorrino M7",
     questions: [
       {
         id: "otorrino-q1",
@@ -3640,7 +3640,7 @@ const DEFAULT_DECKS = [
   },
     {
     id: "preset-hematologia-1",
-    name: "pr1 hemato M7",
+    name: "PR1 hemato M7",
     questions: [
       // Leucemia Aguda
       {

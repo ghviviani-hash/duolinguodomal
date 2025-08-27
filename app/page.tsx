@@ -2388,7 +2388,7 @@ const DEFAULT_DECKS = [
           "Fratura-luxação de Galeazzi + osteossíntese com placa",
           "Fratura de Smith + gesso axilopalmar incluindo o polegar"
         ],
-        answerIndex: 2,
+        answerIndex: 0,
         explanation: "A lesão descrita é uma fratura-luxação de Galeazzi (fratura do rádio + luxação da radioulnar distal). O gabarito C está incorreto na descrição da lesão, mas correto no nome. A fratura da ulna com luxação da cabeça do rádio é Monteggia.",
         tag: "Fraturas"
       },

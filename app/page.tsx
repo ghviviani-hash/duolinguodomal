@@ -885,11 +885,11 @@ const DEFAULT_DECKS = [
         options: [
           "Ocorrem depósitos de beta amiloides e hipofosforilação da proteína tau",
           "Ocorrem depósitos de alfa sinucleína e beta amiloide",
-          "Ocorrem depósitos de beta amilóide e degeneração da proteína tau",
+          "Ocorrem depósitos de beta amilóide e inibição da proteína tau",
           "Podem ocorrer depósitos de lipídeos intracelulares, de beta-amiloide e hipofosforilação da proteína tau"
         ],
-        answerIndex: 2,
-        explanation: "A fisiopatologia da Doença de Alzheimer é marcada por dois eventos principais: o acúmulo extracelular de placas de peptídeo beta-amiloide e a formação de emaranhados neurofibrilares intracelulares devido à hiperfosforilação da proteína tau. A alternativa C é a que melhor descreve, apesar de usar 'degeneração' em vez de 'hiperfosforilação'.",
+        answerIndex: 0,
+        explanation: "A fisiopatologia da Doença de Alzheimer é marcada por dois eventos principais: o acúmulo extracelular de placas de peptídeo beta-amiloide e a formação de emaranhados neurofibrilares intracelulares devido à hiperfosforilação da proteína tau.",
         tag: "Demências"
       },
       {
@@ -2881,19 +2881,6 @@ const DEFAULT_DECKS = [
         tag: "Retinopatia"
       },
       {
-        id: "oftalmo-q29",
-        text: "Paciente feminina de 38 anos com diabetes mellitus tipo 2, hipertensão, IMC de 32 kg/m2 e HbA1c de 7,5%. Assinale a alternativa com a melhor opção de associação à metformina em uso pela paciente:",
-        options: [
-          "Glicazida (sulfonilureia)",
-          "Alogliptina (inibidor de DPP-4)",
-          "Liraglutida (análogo do GLP-1)",
-          "Pioglitazona (agonista PPAR-y)"
-        ],
-        answerIndex: 2,
-        explanation: "A liraglutida (análogo do GLP-1) é uma excelente opção para pacientes com DM2 e obesidade, pois auxilia na perda de peso e oferece benefícios cardiovasculares.",
-        tag: "Clínica Médica"
-      },
-      {
         id: "oftalmo-q31",
         text: "Paciente 65 anos, três meses após um AVE, apresenta no campo visual perda da metade direita da visão em ambos os olhos. Qual o provável local da lesão na via óptica?",
         options: [
@@ -3113,7 +3100,7 @@ const DEFAULT_DECKS = [
         id: "oftalmo-q80-4",
         text: "Paciente de 30 anos sofreu acidente com água sanitária no olho direito, e sua visão caiu de 20/20 (normal) para 20/200 com correção. Qual a acuidade visual de olho direito que pode-se dizer que o paciente perdeu em função do acidente?",
         options: ["90%", "80%", "10%", "20%"],
-        answerIndex: 1,
+        answerIndex: 0,
         explanation: "Considerando 20/20 como 100% de visão (eficiência de 1.0) e 20/200 como 20% de visão (eficiência de 0.1), a perda foi de 80%.",
         tag: "Trauma"
       },
@@ -3534,7 +3521,7 @@ const DEFAULT_DECKS = [
           "Icterícia do Leite Materno"
         ],
         answerIndex: 3,
-        explanation: "Icterícia precoce (<24h), com aumento significativo de bilirrubina direta (colestase) e incompatibilidade ABO (mãe A, bebê O) são sinais de alerta. A icterícia do leite materno é mais tardia, mas entre as opções, é a menos improvável, embora o quadro seja mais sugestivo de uma icterícia patológica.",
+        explanation: "O quadro descrito sugere hepatite viral, pois a icterícia iniciou precocemente (com apenas 16 horas de vida), a bilirrubina direta está elevada (3,2 mg/dl, indicando padrão colestático), e não há compatibilidade com icterícia fisiológica, que costuma surgir após 24 horas, nem com incompatibilidade Rh, já que a mãe é Rh positivo e o recém-nascido Rh negativo, além de não ser típico de icterícia do leite materno, que se manifesta apenas após os primeiros dias de vida.",
         tag: "Pediatria"
       },
       {
@@ -3773,7 +3760,7 @@ const DEFAULT_DECKS = [
         id: "derm-q2",
         text: "Homem, 18 anos, com máculas hipocrômicas, arredondadas e confluentes no dorso superior e ombros, com descamação fina. I. O sinal de Zileri positivo auxilia no diagnóstico. II. As lesões podem ser hipocrômicas, hipercrômicas ou eritematosas. III. É causada por fungo saprófita e lipofílico. IV. Pode causar nódulos nos pelos. V. Quando acomete as unhas chama-se perleche. Quais estão corretas?",
         options: ["I, II e III", "I, IV e V", "III, IV e V", "II, III e IV"],
-        answerIndex: 3, // O gabarito original é E, mas a afirmativa I também está correta. A melhor opção seria I, II e III. Reavaliando, a opção E (II, III, IV) está incorreta pois IV (piedra) não tem relação. A opção A (I, II, III) é a mais correta.
+        answerIndex: 0, // O gabarito original é E, mas a afirmativa I também está correta. A melhor opção seria I, II e III. Reavaliando, a opção E (II, III, IV) está incorreta pois IV (piedra) não tem relação. A opção A (I, II, III) é a mais correta.
         explanation: "O quadro é de Pitiríase Versicolor. I, II e III estão corretas. O Sinal de Zileri (descamação ao estiramento da pele) é característico. As lesões podem variar de cor. O agente (Malassezia) é um fungo saprófita e lipofílico. IV e V descrevem outras micoses.",
         tag: "Micoses"
       },

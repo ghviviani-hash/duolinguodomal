@@ -11,6 +11,7 @@ import { formatTimeLeft } from "@/lib/utils";
 import { achievements } from "@/lib/achievements";
 import { TEMPLATE_TXT } from "@/lib/constants";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 interface SidebarProps {
   isQuizActive: boolean;
@@ -52,7 +53,8 @@ export function Sidebar({
   questionsCount,
 }: SidebarProps) {
 
-  // A lógica interna do componente (useMemo, downloadTemplate, etc.) permanece a mesma
+  const isMobile = useMediaQuery("(max-width: 1023px)");
+
   const groupedDecks = useMemo(() => {
     const groups: GroupedDecks = {};
     const sortedDecks = [...availableDecks].sort((a, b) => a.name.localeCompare(b.name));
@@ -76,6 +78,14 @@ export function Sidebar({
     });
     return groups;
   }, [availableDecks]);
+  
+  const defaultOpenFolder = useMemo(() => {
+    if (isMobile) {
+      const firstGroupName = Object.keys(groupedDecks).sort()[0];
+      return firstGroupName ? [firstGroupName] : [];
+    }
+    return [];
+  }, [isMobile, groupedDecks]);
 
   const downloadTemplate = () => {
     const blob = new Blob([TEMPLATE_TXT.trim()], { type: "text/plain;charset=utf-8" });
@@ -121,14 +131,11 @@ export function Sidebar({
   };
 
   return (
-    // MUDANÇA: Usamos flex flex-col para que as classes 'order' funcionem
     <div className="flex flex-col space-y-6">
       
-      {/* MUDANÇA: As classes 'order-*' definem a ordem no telemóvel.
-          As classes 'lg:order-none' removem essa ordem no computador,
-          fazendo com que a ordem natural do código (a ordem para desktop) seja usada.
-      */}
-      
+      {/* Ordem no código = Ordem no Desktop */}
+      {/* Classes `order-*` = Ordem no Telemóvel */}
+
       <div className="order-6 lg:order-none">
         <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
           <CardHeader><CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle></CardHeader>
@@ -142,7 +149,7 @@ export function Sidebar({
           </CardContent>
         </Card>
       </div>
-
+      
       <div className="order-5 lg:order-none">
         <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
           <CardHeader><CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle></CardHeader>
@@ -153,7 +160,7 @@ export function Sidebar({
           </CardContent>
         </Card>
       </div>
-
+      
       <div className={`order-1 lg:order-none ${isQuizActive ? 'hidden lg:block' : ''}`}>
         {availableDecks.length > 0 && (
           <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
@@ -162,12 +169,37 @@ export function Sidebar({
               <CardDescription>Escolha um deck para começar:</CardDescription>
             </CardHeader>
             <CardContent>
-              <Accordion type="multiple" className="w-full -mt-4">
+              <Accordion type="multiple" className="w-full -mt-4" defaultValue={defaultOpenFolder}>
                 {renderDecks(groupedDecks)}
               </Accordion>
             </CardContent>
           </Card>
         )}
+      </div>
+
+      <div className={`lg:order-none ${!isQuizActive ? 'hidden' : 'order-1'}`}>
+        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+          <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center justify-between text-sm">
+              <span>Progresso:</span>
+              <Badge variant="secondary">{progressPct}%</Badge>
+            </div>
+            <Progress value={progressPct} />
+            {stats.lockUntil && stats.lockUntil > stats.now ? (
+                <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
+                    <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
+                    <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(stats.lockUntil - stats.now)}</span></div>
+                    <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => actions.buyLivesWithXp(100, 10)}> +10 vidas (-100 XP)</Button></div>
+                </div>
+            ) : (
+                <div className="flex gap-2 flex-wrap">
+                    <Button variant="outline" size="sm" onClick={actions.resetSession} disabled={questionsCount === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
+                    <Button variant="ghost" size="sm" onClick={actions.clearSession}>Limpar</Button>
+                </div>
+            )}
+          </CardContent>
+        </Card>
       </div>
 
       <div className="order-2 lg:order-none">
@@ -197,31 +229,6 @@ export function Sidebar({
                 </div>
               );
             })}
-          </CardContent>
-        </Card>
-      </div>
-      
-      <div className={`order-4 lg:order-none ${!isQuizActive ? 'hidden lg:block' : ''}`}>
-        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-          <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
-          <CardContent className="space-y-4">
-            <div className="flex items-center justify-between text-sm">
-              <span>Progresso:</span>
-              <Badge variant="secondary">{progressPct}%</Badge>
-            </div>
-            <Progress value={progressPct} />
-            {stats.lockUntil && stats.lockUntil > stats.now ? (
-                <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
-                    <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
-                    <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(stats.lockUntil - stats.now)}</span></div>
-                    <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => actions.buyLivesWithXp(100, 10)}> +10 vidas (-100 XP)</Button></div>
-                </div>
-            ) : (
-                <div className="flex gap-2 flex-wrap">
-                    <Button variant="outline" size="sm" onClick={actions.resetSession} disabled={questionsCount === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
-                    <Button variant="ghost" size="sm" onClick={actions.clearSession}>Limpar</Button>
-                </div>
-            )}
           </CardContent>
         </Card>
       </div>

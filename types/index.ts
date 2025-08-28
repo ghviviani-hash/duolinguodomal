@@ -41,7 +41,7 @@ export interface Stats {
   decksCompleted: number;
 }
 
-// CORREÇÃO: Definimos 'icon' como um tipo de componente React que aceita className.
+// MUDANÇA: 'icon' é agora um tipo de componente React que aceita className.
 export interface Achievement {
     id: string;
     title: string;

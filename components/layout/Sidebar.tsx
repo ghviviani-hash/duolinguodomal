@@ -52,6 +52,7 @@ export function Sidebar({
   questionsCount,
 }: SidebarProps) {
 
+  // A lógica interna do componente (useMemo, downloadTemplate, etc.) permanece a mesma
   const groupedDecks = useMemo(() => {
     const groups: GroupedDecks = {};
     const sortedDecks = [...availableDecks].sort((a, b) => a.name.localeCompare(b.name));
@@ -120,8 +121,40 @@ export function Sidebar({
   };
 
   return (
+    // MUDANÇA: Usamos flex flex-col para que as classes 'order' funcionem
     <div className="flex flex-col space-y-6">
-      <div className={`order-2 lg:order-1 ${isQuizActive ? 'hidden lg:block' : ''}`}>
+      
+      {/* MUDANÇA: As classes 'order-*' definem a ordem no telemóvel.
+          As classes 'lg:order-none' removem essa ordem no computador,
+          fazendo com que a ordem natural do código (a ordem para desktop) seja usada.
+      */}
+      
+      <div className="order-6 lg:order-none">
+        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+          <CardHeader><CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle></CardHeader>
+          <CardContent className="space-y-4">
+            <Input ref={fileInputRef} type="file" accept=".txt" className="hidden" onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0])} />
+            <Button className="w-full" onClick={() => fileInputRef.current?.click()}><Upload className="mr-2 h-4 w-4" />Selecionar Ficheiro .txt</Button>
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2 text-sm"><Switch id="shuffle-switch" checked={shuffleOnLoad} onCheckedChange={setShuffleOnLoad} /><label htmlFor="shuffle-switch">Embaralhar</label></div>
+              <Button variant="outline" size="sm" onClick={downloadTemplate}><Download className="mr-2 h-4 w-4" />Modelo</Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="order-5 lg:order-none">
+        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+          <CardHeader><CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle></CardHeader>
+          <CardContent>
+            <Button className="w-full" onClick={startSrsSession}>
+              Iniciar Revisão ({srsCount} para hoje)
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className={`order-1 lg:order-none ${isQuizActive ? 'hidden lg:block' : ''}`}>
         {availableDecks.length > 0 && (
           <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
             <CardHeader>
@@ -137,32 +170,7 @@ export function Sidebar({
         )}
       </div>
 
-      <div className={`order-1 lg:order-2 ${!isQuizActive ? 'hidden lg:block' : ''}`}>
-        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-          <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
-          <CardContent className="space-y-4">
-            <div className="flex items-center justify-between text-sm">
-              <span>Progresso:</span>
-              <Badge variant="secondary">{progressPct}%</Badge>
-            </div>
-            <Progress value={progressPct} />
-            {stats.lockUntil && stats.lockUntil > stats.now ? (
-                <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
-                    <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
-                    <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(stats.lockUntil - stats.now)}</span></div>
-                    <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => actions.buyLivesWithXp(100, 10)}> +10 vidas (-100 XP)</Button></div>
-                </div>
-            ) : (
-                <div className="flex gap-2 flex-wrap">
-                    <Button variant="outline" size="sm" onClick={actions.resetSession} disabled={questionsCount === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
-                    <Button variant="ghost" size="sm" onClick={actions.clearSession}>Limpar</Button>
-                </div>
-            )}
-          </CardContent>
-        </Card>
-      </div>
-
-      <div className="order-3 lg:order-3">
+      <div className="order-2 lg:order-none">
         <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
           <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
           <CardContent className="space-y-4">
@@ -173,7 +181,7 @@ export function Sidebar({
         </Card>
       </div>
 
-      <div className="order-4 lg:order-4">
+      <div className="order-3 lg:order-none">
         <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
           <CardHeader><CardTitle className="flex items-center gap-2"><Award className="h-5 w-5"/>Conquistas</CardTitle></CardHeader>
           <CardContent className="grid grid-cols-4 gap-4">
@@ -193,32 +201,26 @@ export function Sidebar({
         </Card>
       </div>
       
-      <div className="order-5 lg:order-5">
+      <div className={`order-4 lg:order-none ${!isQuizActive ? 'hidden lg:block' : ''}`}>
         <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-          <CardHeader><CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle></CardHeader>
-          <CardContent>
-            <Button className="w-full" onClick={startSrsSession}>
-              Iniciar Revisão ({srsCount} para hoje)
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
-
-      <div className="order-6 lg:order-6">
-        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-          <CardHeader><CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle></CardHeader>
+          <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
           <CardContent className="space-y-4">
-            <Input ref={fileInputRef} type="file" accept=".txt" className="hidden" onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0])} />
-            <Button className="w-full" onClick={() => fileInputRef.current?.click()}><Upload className="mr-2 h-4 w-4" />Selecionar Ficheiro .txt</Button>
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2 text-sm"><Switch id="shuffle-switch" checked={shuffleOnLoad} onCheckedChange={setShuffleOnLoad} /><label htmlFor="shuffle-switch">Embaralhar</label></div>
-              <Button variant="outline" size="sm" onClick={downloadTemplate}><Download className="mr-2 h-4 w-4" />Modelo</Button>
+            <div className="flex items-center justify-between text-sm">
+              <span>Progresso:</span>
+              <Badge variant="secondary">{progressPct}%</Badge>
             </div>
-            {errors.length > 0 && (
-              <div className="rounded-xl border border-amber-300 bg-amber-50 dark:bg-amber-950/40 p-3 text-sm text-amber-700 dark:text-amber-200">
-                <div className="font-semibold mb-1 flex items-center gap-2"><Info className="h-4 w-4" />Ajustes necessários:</div>
-                <ul className="list-disc list-inside space-y-1">{errors.map((e, i) => <li key={i}>{e}</li>)}</ul>
-              </div>
+            <Progress value={progressPct} />
+            {stats.lockUntil && stats.lockUntil > stats.now ? (
+                <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
+                    <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
+                    <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(stats.lockUntil - stats.now)}</span></div>
+                    <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => actions.buyLivesWithXp(100, 10)}> +10 vidas (-100 XP)</Button></div>
+                </div>
+            ) : (
+                <div className="flex gap-2 flex-wrap">
+                    <Button variant="outline" size="sm" onClick={actions.resetSession} disabled={questionsCount === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
+                    <Button variant="ghost" size="sm" onClick={actions.clearSession}>Limpar</Button>
+                </div>
             )}
           </CardContent>
         </Card>

@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { CheckCircle2, XCircle, Info } from "lucide-react";
 import { ShuffledQuestion } from "@/types";
 
+// MUDANÇA: 'combo' foi removido das props
 interface QuestionViewProps {
   question: ShuffledQuestion;
   onSelect: (index: number) => void;
@@ -21,7 +21,7 @@ export function QuestionView({
   isCorrect, 
   showExpl, 
   lastGain, 
-  isLocked 
+  isLocked,
 }: QuestionViewProps) {
   return (
     <motion.div
@@ -32,7 +32,10 @@ export function QuestionView({
       transition={{ duration: 0.25 }}
       className="space-y-5"
     >
+      {/* MUDANÇA: O bloco do combo foi removido daqui */}
+      
       <div className="text-lg md:text-xl font-semibold leading-snug">{question.text}</div>
+      
       <div className="grid gap-3">
         {question.shuffledOptions.map((opt, i) => {
           const isSel = selected === i;
@@ -47,7 +50,7 @@ export function QuestionView({
               className={`text-left rounded-2xl p-4 border transition-all bg-white/70 dark:bg-slate-900/60 
                 ${correct ? "border-emerald-500/70 ring-2 ring-emerald-500/30" : 
                   (isSel && wrong) ? "border-rose-500/70 ring-2 ring-rose-500/30" : 
-                  "border-slate-200/60 dark:border-slate-700/60 hover:bg-white hover:dark:bg-slate-900/80"
+                    "border-slate-200/60 dark:border-slate-700/60 hover:bg-white hover:dark:bg-slate-900/80"
                 }`}
             >
               <div className="flex items-start gap-3">

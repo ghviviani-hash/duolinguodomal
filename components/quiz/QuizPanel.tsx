@@ -3,7 +3,7 @@ import { Question, ShuffledQuestion } from "@/types";
 import { CompletionView } from "./CompletionView";
 import { QuestionView } from "./QuestionView";
 
-// CORREÇÃO: Definimos todas as props explicitamente
+// MUDANÇA: 'combo' foi removido das props
 interface QuizPanelProps {
     isSessionComplete: boolean;
     displayedQuestion: ShuffledQuestion | null;
@@ -26,7 +26,7 @@ export function QuizPanel({
     onReset,
     onShowStats,
     onReviewQuestion,
-    ...questionViewProps // O resto das props vai para a QuestionView
+    ...questionViewProps
 }: QuizPanelProps) {
     return (
         <AnimatePresence mode="wait">

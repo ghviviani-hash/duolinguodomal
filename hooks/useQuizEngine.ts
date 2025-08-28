@@ -1,17 +1,16 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Question, SrsData, ShuffledQuestion, Deck } from '@/types';
-import { 
-    LS_STATS_KEY, 
-    LS_DECK_KEY, 
-    LS_SRS_KEY, 
+import {
+    LS_STATS_KEY,
+    LS_DECK_KEY,
+    LS_SRS_KEY,
     LS_ACHIEVEMENTS_KEY,
-    DECK_COMPLETION_BONUS, 
-    DAILY_GOAL_BONUS, 
+    DECK_COMPLETION_BONUS,
+    DAILY_GOAL_BONUS,
     INITIAL_HEARTS,
     SRS_INTERVALS
 } from '@/lib/constants';
 import { todayKey, daysBetween, shuffle, hashString } from '@/lib/utils';
-// CORREÇÃO: Mudamos o caminho da importação para usar o atalho '@/hooks/'
 import { useAudio } from '@/hooks/useAudio';
 import { parseTxtDeck } from '@/lib/parser';
 import { achievements } from '@/lib/achievements';
@@ -306,8 +305,9 @@ export function useQuizEngine() {
   const computeGain = (elapsedMs: number, comboNow: number) => {
     const base = 8 + Math.floor(Math.random() * 13);
     const speed = elapsedMs < 3000 ? 10 : elapsedMs < 7000 ? 6 : elapsedMs < 12000 ? 3 : 0;
-    const comboBonus = Math.min(15, comboNow * 3);
-    return base + speed + comboBonus;
+    const comboMultiplier = 1 + Math.floor(comboNow / 5) * 0.1;
+    const comboBonus = Math.min(15, comboNow * 2);
+    return Math.round((base + speed + comboBonus) * comboMultiplier);
   };
 
   const onSelect = useCallback((idx: number) => {
@@ -330,11 +330,12 @@ export function useQuizEngine() {
     setIsCorrect(correct);
 
     if (correct) {
-      const gain = computeGain(elapsed, combo);
+      const newCombo = combo + 1;
+      const gain = computeGain(elapsed, newCombo);
       setLastGain(gain);
       setXp(x => x + gain);
       setTodayXp(t => t + gain);
-      setCombo(c => c + 1);
+      setCombo(newCombo);
       setEmojiKey(k => k + 1);
       playCorrect();
       setTimeout(() => advanceQueue(true), 650);

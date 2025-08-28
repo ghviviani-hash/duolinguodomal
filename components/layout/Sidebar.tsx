@@ -59,22 +59,27 @@ export function Sidebar({
   const groupedDecks = useMemo(() => {
     const groups: GroupedDecks = {};
     const sortedDecks = [...availableDecks].sort((a, b) => a.name.localeCompare(b.name));
+
     sortedDecks.forEach(deck => {
       const parts = deck.name.split(/\s*-\s*/).map(p => p.trim());
       let currentLevel: any = groups;
+
       if (parts.length === 1) {
         if (!currentLevel["Outros"]) currentLevel["Outros"] = { decks: [] };
         currentLevel["Outros"].decks.push({ ...deck, name: parts[0] });
         return;
       }
+      
       const path = parts.slice(0, -1);
       const deckName = parts[parts.length - 1];
+
       path.forEach(part => {
         if (!currentLevel[part]) {
           currentLevel[part] = { decks: [] };
         }
         currentLevel = currentLevel[part];
       });
+
       currentLevel.decks.push({ ...deck, name: deckName });
     });
     return groups;
@@ -101,13 +106,19 @@ export function Sidebar({
   const goalPct = Math.min(100, Math.round((stats.todayXp / stats.goal) * 100));
   const srsCount = Object.values(srsData).filter((item: any) => isPast(new Date(item.nextReview))).length;
 
-  const renderDecks = (level: GroupedDecks) => {
+  // CORREÇÃO: Função recursiva ajustada para não criar pastas "decks"
+  const renderDecks = (level: GroupedDecks, levelKeyPrefix = "") => {
     return Object.keys(level).sort().map(key => {
       const group = level[key];
       const decks = group.decks || [];
-      const subGroups = Object.keys(group).filter(k => k !== 'decks');
+      const subGroups: GroupedDecks = Object.keys(group)
+        .filter(k => k !== 'decks')
+        .reduce((acc, k) => ({ ...acc, [k]: group[k] }), {});
+
+      const currentKey = `${levelKeyPrefix}-${key}`;
+
       return (
-        <AccordionItem value={key} key={key}>
+        <AccordionItem value={currentKey} key={currentKey}>
           <AccordionTrigger>{key}</AccordionTrigger>
           <AccordionContent className="pl-2 space-y-2">
             {decks.map((deck: Deck) => (
@@ -120,9 +131,9 @@ export function Sidebar({
                 {deck.name}
               </Button>
             ))}
-            {subGroups.length > 0 && (
+            {Object.keys(subGroups).length > 0 && (
               <Accordion type="multiple" className="w-full">
-                {renderDecks(group as GroupedDecks)}
+                {renderDecks(subGroups, currentKey)}
               </Accordion>
             )}
           </AccordionContent>

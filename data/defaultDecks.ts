@@ -6,7 +6,7 @@ export const DEFAULT_DECKS = [
   
   {
     id: "preset-neurologia-1",
-    name: "PR1 Neuro M7",
+    name: "  Estácio - M7 - PR1 - Neurologia ",
     questions: [
       // Cefaleias
       {
@@ -803,9 +803,450 @@ export const DEFAULT_DECKS = [
       }
     ]
   },
+  {
+  id: "prova suseme 2017 emergencia",
+  name: "SUSEME - Emergência - 2017",
+  questions: [
+    {
+      id: "suseme-2017-q1",
+      text: "A vítima de acidente botrópico apresenta as seguintes manifestações sistêmicas:",
+      options: [
+        "ptose palpebral, oftalmoplegia e turvação visual",
+        "hipotensão, miastenia gravis e sialorreia",
+        "gengivorragia, hematúria e hematêmese",
+        "hematúria, ictericia e oftalmoplegia"
+      ],
+      answerIndex: 2,
+      explanation: "O veneno da jararaca (acidente botrópico) tem ação coagulante, proteolítica e hemorrágica, levando a sangramentos sistêmicos. A opção C descreve manifestações hemorrágicas clássicas. A opção A (ptose, oftalmoplegia) é característica do acidente elapídico (coral). As opções B e D misturam sintomas de diferentes acidentes peçonhentos.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q2",
+      text: "De acordo com o Guia de Vigilância Epidemiológica do Ministério da Saúde brasileiro, ano de 2014, o uso imediato do fosfato de oseltamivir está indicado em pacientes:",
+      options: [
+        "grávidas apenas no primeiro trimestre da gravidez com febre alta, lombalgia e cefaleia",
+        "com dispneia e febre",
+        "maiores de dois anos com febre e dor de garganta",
+        "grávidas em qualquer idade gestacional com febre, prostração, dor de garganta, tosse seca, cefaleia e mialgia"
+      ],
+      answerIndex: 3,
+      explanation: "Gestantes são consideradas grupo de risco para complicações da Influenza. A recomendação é o tratamento com oseltamivir para qualquer gestante com síndrome gripal, independentemente da idade gestacional. As outras opções são incorretas por restringirem a indicação ou descreverem quadros que não necessariamente exigem tratamento imediato em populações de baixo risco.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q3",
+      text: "Para um profissional de saúde, a quimioprofilaxia da doença meningocócica está indicada na seguinte hipótese:",
+      options: [
+        "sempre que o médico atender paciente com suspeita de meningite meningocócica",
+        "se história vacinal for incerta ou houver sorologia negativa para Neisseria meningitidis",
+        "quando executar procedimentos invasivos sem o uso dos equipamentos de proteção individual adequados",
+        "sempre que o paciente atendido apresentar evolução grave"
+      ],
+      answerIndex: 2,
+      explanation: "A quimioprofilaxia é indicada apenas após contato íntimo e prolongado com o paciente ou para profissionais de saúde que tiveram exposição direta a secreções respiratórias sem uso de EPI, como em intubações ou aspiração. Simplesmente atender um paciente não é indicação.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q4",
+      text: "É uma doença crônica e sistêmica que, no homem, pode ter periodo de incubação médio de 2 a 6 meses. É transmitida por mosquitos do gênero Lutzomyia sp que se contaminam a partir do cão ou mesmo raposas em ambientes silvestres. Manifesta-se com febre de longa duração associada a hepatoesplenomegalia, anemia, emagrecimento, adinamia e astenia. Essa descrição se refere à seguinte patologia:",
+      options: [
+        "febre amarela",
+        "leishmaniose visceral",
+        "febre tifoide",
+        "leishmaniose tegumentar americana"
+      ],
+      answerIndex: 1,
+      explanation: "O quadro de febre arrastada, hepatoesplenomegalia e pancitopenia (anemia, astenia) é clássico da Leishmaniose Visceral (Calazar), transmitida pelo Lutzomyia sp. As outras opções têm apresentações clínicas distintas: febre amarela é aguda com icterícia, febre tifoide tem febre em degraus, e a leishmaniose tegumentar causa lesões de pele.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q5",
+      text: "Paciente de 24 anos com febre alta, cefaleia, mialgia intensa, icterícia, insuficiência renal com hipocalemia e hemoptise maciça após enchente. O paciente apresenta a sindrome de Weil, que é caracterizada por:",
+      options: [
+        "insuficiência renal, icterícia e febre alta",
+        "febre alta, hemorragia e icterícia",
+        "ictericia, coma e insuficiência renal hipocalêmica",
+        "insuficiência renal, icterícia e hemorragia pulmonar"
+      ],
+      answerIndex: 3,
+      explanation: "A Síndrome de Weil é a forma grave da leptospirose. A tríade clássica é icterícia, insuficiência renal (tipicamente não oligúrica e com hipocalemia) e fenômenos hemorrágicos. A hemorragia pulmonar é a manifestação hemorrágica mais grave e de maior letalidade. As outras opções são incompletas.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q6",
+      text: "O calendário nacional de vacinação inclui a proteção contra o rotavirus humano para crianças. As idades da primeira e da segunda dose da vacina são, respectivamente:",
+      options: [
+        "2 e 4 meses",
+        "2 e 6 meses",
+        "4 e 6 meses",
+        "12 e 15 meses"
+      ],
+      answerIndex: 0,
+      explanation: "A Vacina Oral de Rotavírus Humano (VORH) é administrada aos 2 e 4 meses de idade. As idades de 2 e 6 meses são para outras vacinas como a Pentavalente (em alguns esquemas) e a VIP. 12 e 15 meses são para reforços e outras vacinas como a Tríplice Viral.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2017-q7",
+      text: "São sinais de alarme na dengue:",
+      options: [
+        "dor abdominal intensa e febre alta",
+        "aumento repentino do hematócrito e cefaleia holocraniana",
+        "aumento repentino do hematócrito e queda abrupta de plaquetas",
+        "hipotermia e dor lombar"
+      ],
+      answerIndex: 2,
+      explanation: "Os sinais de alarme indicam extravasamento de plasma. O aumento do hematócrito (hemoconcentração) e a queda abrupta das plaquetas são os marcadores laboratoriais cardinais desse fenômeno. Dor abdominal intensa é um sinal de alarme, mas febre alta e cefaleia são sintomas comuns da fase febril, não de alarme.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q8",
+      text: "No paciente com diagnóstico de dengue, está indicada a internação se a plaquetometria for inferior a:",
+      options: [
+        "20.000/mm³ independentemente de manifestações hemorrágicas",
+        "50.000/mm³, sem sinais de alarme",
+        "20.000/mm³ somente com sinais de alarme",
+        "100.000/mm³, independentemente de manifestações hemorrágicas"
+      ],
+      answerIndex: 0,
+      explanation: "Plaquetopenia acentuada (< 20.000/mm³) representa um risco intrínseco de sangramento grave e é uma indicação formal de internação hospitalar para monitoramento, mesmo na ausência de sangramentos visíveis ou outros sinais de alarme.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q9",
+      text: "Paciente de 22 anos, militar, sofreu queimaduras de segundo grau no tronco e abdome. Sua vacinação está em dia, inclusive o reforço da vacina antitetânica foi administrado há 12 meses. Nesse caso, a profilaxia de tétano consiste em:",
+      options: [
+        "administrar imunoglobulina antitetânica e vacina dT",
+        "aplicar apenas vacina dT",
+        "administrar imunoglobulina antitetânica e vacina dT em grupamentos musculares diferentes",
+        "manter observação sem fazer profilaxia"
+      ],
+      answerIndex: 3,
+      explanation: "Para um paciente com esquema vacinal completo e atualizado (última dose há menos de 5 anos), nenhuma profilaxia adicional para tétano é necessária, mesmo em ferimentos considerados de alto risco. A conduta é apenas a limpeza do ferimento.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q10",
+      text: "O uso da imunoglobulina humana antivaricela-zóster NÃO está indicada, de acordo com o Guia de Vigilância Epidemiológica, para os seguintes pacientes:",
+      options: [
+        "recém-nascidos de mães nas quais o início da varicela ocorreu nos últimos cinco dias da gestação",
+        "crianças com varicela que não foram vacinadas com a tetra viral",
+        "recém-nascidos de mães nas quais o início da varicela ocorreu em até 48h do puerpério",
+        "adultos com SIDA, CD4 menor que 100 e que tiveram contato com individuo com varicela"
+      ],
+      answerIndex: 1,
+      explanation: "A imunoglobulina é uma profilaxia pós-exposição, para tentar evitar que a doença se desenvolva. Ela não tem efeito terapêutico. Uma criança que já está com a doença (varicela manifestada) não se beneficia da imunoglobulina. As outras opções descrevem corretamente populações de risco que devem receber a profilaxia após a exposição.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q11",
+      text: "A extração a fórcipe é a mais comum das operações obstétricas. Essa extração está indicada na seguinte condição:",
+      options: [
+        "em todas as gestantes com mais de 40 semanas",
+        "em gestantes com doenças gerais, quando o esforço expulsivo for perigoso",
+        "nas gestantes em trabalho de parto prematuro",
+        "quando houver o desejo da gestante de abreviar a expulsão do concepto"
+      ],
+      answerIndex: 1,
+      explanation: "O fórcipe é um instrumento para abreviar o período expulsivo quando sua continuação representa um risco para a mãe (ex: cardiopatia, exaustão) ou para o feto (sofrimento fetal). As outras opções não são indicações formais; o desejo materno isolado não é indicação.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2017-q12",
+      text: "Na abordagem da gestante com hipertensão crônica, é seguro o uso da seguinte droga:",
+      options: ["nifedipina", "enalapril", "losartana", "candesartana"],
+      answerIndex: 0,
+      explanation: "Nifedipina, um bloqueador de canal de cálcio, é uma das drogas seguras e eficazes para o tratamento da hipertensão na gestação. Enalapril (IECA), losartana e candesartana (BRA) são formalmente contraindicados por serem teratogênicos.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2017-q13",
+      text: "São indicações para realização da operação cesariana:",
+      options: [
+        "cesárea prévia e necessidade de marcar data para o parto",
+        "infecção pelo HIV e placenta prévia",
+        "gestação gemelar e a idade materna",
+        "idade materna e apresentações anômalas"
+      ],
+      answerIndex: 1,
+      explanation: "Placenta prévia total e infecção pelo HIV com carga viral detectável são indicações absolutas para cesariana, para evitar hemorragia maciça e transmissão vertical, respectivamente. As outras opções contêm indicações relativas (apresentações anômalas) ou não-indicações (idade materna isolada, cesárea prévia).",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2017-q14",
+      text: "A pré-eclampsia é considerada grave quando se verifica que:",
+      options: [
+        "a proteinúria supera os 3g em uma amostra de urina de 24h",
+        "a pressão arterial aferida ao acaso é superior a 165 x 110 mmHg",
+        "a proteinúria supera os 5g em uma amostra de urina de 24h",
+        "o débito urinário é reduzido abaixo de 1,0L em 24h"
+      ],
+      answerIndex: 2,
+      explanation: "Um dos critérios clássicos de gravidade na pré-eclâmpsia é a proteinúria maciça, definida como ≥ 5g em 24h. Outros critérios incluem PA ≥ 160x110 mmHg e sinais de disfunção de órgãos-alvo, como oligúria < 500ml/24h.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2017-q15",
+      text: "Na abordagem do paciente com cefaleia, o sintoma que sugere doença grave é:",
+      options: [
+        "dor pulsatil",
+        "dor tipo capacete",
+        "dor irradiada a partir da região cervical",
+        "dor induzida pela tosse"
+      ],
+      answerIndex: 3,
+      explanation: "Cefaleia desencadeada ou piorada por tosse, espirro ou manobra de Valsalva é um 'sinal de alerta' (red flag) que sugere hipertensão intracraniana. As outras opções descrevem características de cefaleias primárias benignas (enxaqueca, tensional).",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2017-q16",
+      text: "Paciente na segunda semana pós-parto, com febre alta e mama esquerda ingurgitada, quente, vermelha e dolorosa, sem flutuação. Neste caso deve-se:",
+      options: [
+        "iniciar cefalexina 500 mg 8/8 horas e manter amamentação",
+        "iniciar cefalexina 500 mg 8/8 horas e interromper amamentação na mama afetada",
+        "iniciar cefalexina 500mg 6/6 horas e interromper amamentação na mama afetada",
+        "iniciar cefalexina 500mg 6/6 horas e manter amamentação em ambas as mamas"
+      ],
+      answerIndex: 3,
+      explanation: "O quadro é de mastite puerperal. A conduta é antibioticoterapia (cefalexina 500mg de 6/6h é um regime padrão) e, crucialmente, a manutenção do esvaziamento da mama para prevenir a formação de abscesso, seja por amamentação ou ordenha manual.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2017-q17",
+      text: "A trombólise venosa está contraindicada para paciente com acidente vascular encefálico isquêmico, em caso de:",
+      options: [
+        "tomografia computadorizada de crânio não demonstrar edema em mais de 1/3 do território da artéria cerebral média",
+        "cirurgia de qualquer porte há 4 semanas",
+        "melhora rápida dos sintomas",
+        "uso de varfarina, mesmo com INR normal"
+      ],
+      answerIndex: 2,
+      explanation: "A melhora rápida e substancial dos sintomas neurológicos é uma contraindicação relativa, pois o risco do trombolítico pode superar os benefícios num quadro que já está a resolver espontaneamente (sugerindo um AIT). Cirurgia há 4 semanas não é contraindicação (o limite é 2 semanas para cirurgias grandes) e o uso de varfarina só contraindica se o INR estiver alterado.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2017-q18",
+      text: "Paciente de 50 anos, diabético, hipertenso, com febre, tosse e dor torácica. Exame físico com desidratação e taquicardia. PA 128x87mmHg. Após 2000mL de soro fisiológico, a PA se manteve em 126x92mmHg. O diagnóstico provável para esse paciente é:",
+      options: ["choque séptico refratário", "choque séptico", "sepse precoce", "sepse grave"],
+      answerIndex: 3,
+      explanation: "O paciente tem sepse (infecção + disfunção de órgão, neste caso hipotensão relativa para um hipertenso crônico). Como a pressão se manteve estável após a reposição volêmica e não houve necessidade de vasopressores, o quadro é classificado como Sepse Grave (pelos critérios antigos). Choque séptico exigiria hipotensão persistente apesar da ressuscitação volêmica.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q19",
+      text: "Paciente de 52 anos, tabagista, com ascite. O gradiente de albumina soroascite é de 0,5 g/dL. A doença compatível com este achado é:",
+      options: ["síndrome de Budd-Chiari", "insuficiência cardíaca congestiva", "carcinomatose peritoneal", "hipertensão portal"],
+      answerIndex: 2,
+      explanation: "O Gradiente de Albumina Soro-Ascite (GASA) < 1,1 g/dL indica uma causa de ascite não relacionada à hipertensão portal. Entre as opções, a carcinomatose peritoneal é a causa mais provável. As outras opções (Budd-Chiari, ICC, hipertensão portal) cursam com GASA elevado (≥ 1,1 g/dL).",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2017-q20",
+      text: "Paciente com úlcera duodenal apresenta, no resultado da biópsia, Helicobacter pylori. O tratamento indicado é:",
+      options: [
+        "inibidor de bomba de proton, norfloxacina e amoxacilina",
+        "inibidor de bomba de próton, claritromicina e amoxacilina",
+        "antagonista do receptor H2, claritromicina e amoxacilina",
+        "antagonista do receptor H2, clindamicina e claritromicina"
+      ],
+      answerIndex: 1,
+      explanation: "O tratamento de primeira linha para erradicação do H. pylori é a terapia tripla padrão, consistindo em um Inibidor de Bomba de Prótons (IBP) associado a dois antibióticos, sendo a combinação mais utilizada a de claritromicina e amoxicilina.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2017-q21",
+      text: "Paciente de 30 anos, agredido, comatoso. Abertura ocular à dor (2), sem resposta verbal (1 - intubado), retira membro ao estímulo álgico (4). TC com hematoma epidural. Qual o Glasgow pré-cirurgia e o alvo da PPC?",
+      options: [
+        "Glasgow 5 e PPC ≥ 60 mmHg",
+        "Glasgow 6 e PPC > 65 mmHg",
+        "Glasgow 7 e PPC ≥ 60 mmHg",
+        "Glasgow 7 e PPC > 70 mmHg"
+      ],
+      answerIndex: 2,
+      explanation: "A Escala de Coma de Glasgow é a soma de: Abertura Ocular (2) + Melhor Resposta Verbal (1, pois está intubado) + Melhor Resposta Motora (4) = 7. As diretrizes de neurointensivismo recomendam manter a Pressão de Perfusão Cerebral (PPC) entre 60 e 70 mmHg. A opção C é a que melhor se enquadra.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2017-q22",
+      text: "Para o tratamento de delirium, é preconizado o uso de neuroléptico como:",
+      options: ["prometazina", "nimodipina", "lorazepam", "olanzapina"],
+      answerIndex: 3,
+      explanation: "O tratamento da agitação no delirium é feito com antipsicóticos (neurolépticos). Olanzapina e outros atípicos são frequentemente usados. Benzodiazepínicos (lorazepam) são reservados para delirium por abstinência de álcool/sedativos, pois podem piorar o quadro em outras situações.",
+      tag: "Psiquiatria"
+    },
+    {
+      id: "suseme-2017-q23",
+      text: "É uma causa de hipercalemia:",
+      options: ["hipomagnesemia", "diarreia", "insuficiência renal", "cetoacidose diabética"],
+      answerIndex: 2,
+      explanation: "Os rins são os principais responsáveis pela excreção de potássio. Na insuficiência renal, essa capacidade é reduzida, levando à hipercalemia. Diarreia e hipomagnesemia causam hipocalemia. A cetoacidose diabética causa uma pseudohipercalemia por deslocamento transcelular, mas o potássio corporal total está baixo.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2017-q24",
+      text: "Paciente, em pós operatório de tireoidectomia e retirada de paratireoide, apresenta espasmo carpal após aferição de pressão arterial. O diagnóstico é:",
+      options: ["hipocalcemia", "hipercalcemia", "hiperfosfatemia", "hiponatremia"],
+      answerIndex: 0,
+      explanation: "O espasmo carpal (mão de parteiro) induzido pela isquemia do manguito de pressão é o Sinal de Trousseau, patognomônico de hipocalcemia. A retirada inadvertida das paratireoides durante a tireoidectomia é a principal causa de hipocalcemia pós-operatória.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2017-q25",
+      text: "É uma causa de alteração na adesão plaquetária com aparecimento de sangramento em mucosa:",
+      options: ["doença de von Willebrand", "síndrome de von Hippel Lindau", "deficiência de fator X", "deficiência de fator II"],
+      answerIndex: 0,
+      explanation: "A doença de von Willebrand é o distúrbio hemorrágico hereditário mais comum, caracterizado pela deficiência do fator de von Willebrand, que é essencial para a adesão das plaquetas ao vaso lesado. As outras opções são distúrbios da coagulação (via secundária da hemostasia).",
+      tag: "Hematologia"
+    },
+    {
+      id: "suseme-2017-q26",
+      text: "Em paciente com crise tireotóxica que apresenta fibrilação atrial, o tratamento preconizado é a utilização da seguinte droga:",
+      options: ["amiodarona", "lidocaina", "protamina", "propranolol"],
+      answerIndex: 3,
+      explanation: "O propranolol, um betabloqueador não seletivo, é a droga de escolha na crise tireotóxica. Ele controla a resposta ventricular na fibrilação atrial e bloqueia os efeitos adrenérgicos sistêmicos, além de inibir a conversão periférica de T4 em T3.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2017-q27",
+      text: "O acompanhamento da eficácia do tratamento do diabetes mellitus é realizado pelo seguinte exame:",
+      options: ["glicosúria", "glicemia de jejum", "hemoglobina glicada", "teste de tolerância a glicose"],
+      answerIndex: 2,
+      explanation: "A hemoglobina glicada (HbA1c) reflete a média dos níveis de glicose no sangue nos últimos 2-3 meses, sendo o padrão-ouro para o monitoramento do controle glicêmico a longo prazo. Glicemia de jejum avalia o controle momentâneo.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2017-q28",
+      text: "Paciente com cirrose apresenta suspeita de peritonite bacteriana espontânea. Esse diagnóstico é confirmado com:",
+      options: [
+        "liquido ascítico com 250 hemáceas e proteina maior que 2 g/dL",
+        "líquido ascítico com mais que 250 células de polimorfonucleares e proteína menor que 1g/dL",
+        "a presença de 100 células de polimorfos nucleares",
+        "bilirrubina no liquido ascético >3mg/dL"
+      ],
+      answerIndex: 1,
+      explanation: "O diagnóstico de Peritonite Bacteriana Espontânea (PBE) é confirmado por uma contagem de polimorfonucleares (PMN) no líquido ascítico ≥ 250/mm³. Tipicamente, a proteína é baixa (<1 g/dL) por ser um transudato. As outras opções são incorretas.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2017-q29",
+      text: "Paciente internado com colite infecciosa grave, após uso de amoxacilina/clavulanato, realiza retossigmoidoscopia com visualização de pseudomembrana. Este quadro corresponde ao provocado pelo seguinte agente etiológico:",
+      options: ["Clostridim difficile", "Yersinia enterocolitica", "Escherichia coli", "Salmonella"],
+      answerIndex: 0,
+      explanation: "A colite pseudomembranosa é uma complicação clássica associada ao uso de antibióticos (especialmente clindamicina, cefalosporinas e amoxicilina-clavulanato), causada pela proliferação e produção de toxinas pelo Clostridioides difficile.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q30",
+      text: "A taquicardia ventricular polimórfica, associada ao aumento do intervalo QT, é conhecida como:",
+      options: [
+        "síndrome de Wolff-Parkinson-White",
+        "sindrome Lown Ganong Levine",
+        "torsades de pointes",
+        "doença de Buerger"
+      ],
+      answerIndex: 2,
+      explanation: "Torsades de Pointes é a designação específica para a taquicardia ventricular polimórfica que ocorre em um contexto de QT longo, caracterizada pela torção dos complexos QRS em torno da linha de base no ECG. As outras são síndromes de pré-excitação (A, B) ou uma vasculite (D).",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2017-q31",
+      text: "As drogas preconizadas para a parada cardíaca em atividade elétrica sem pulso são:",
+      options: [
+        "lidocaina, atropina e fosfato",
+        "amiodarona, adrenalina e gluconato de cálcio",
+        "atropina, dobutamina e acetato de sódio",
+        "adrenalina, atropina e bicarbonato de sódio"
+      ],
+      answerIndex: 3,
+      explanation: "No algoritmo de AESP/Assistolia, a droga fundamental é a adrenalina. Atropina foi removida das diretrizes mais recentes para esta indicação. Bicarbonato de sódio pode ser usado em situações específicas (hipercalemia, acidose grave). As outras opções misturam drogas de diferentes algoritmos ou que não são usadas.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2017-q32",
+      text: "A pneumonia comunitária grave provocada pelo agente Staphilococcus aureus meticilina resistente, CA-MRSA, deve ser tratada com:",
+      options: ["cetriaxone", "cefepime", "linezolida", "eritromicina"],
+      answerIndex: 2,
+      explanation: "Para o tratamento de infecções graves por Staphylococcus aureus Meticilina-Resistente adquirido na comunidade (CA-MRSA), é necessário um antibiótico com cobertura específica, como Vancomicina ou Linezolida. As outras opções não são eficazes.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q33",
+      text: "O tratamento preconizado para a endocardite infecciosa que tem como agente etiológico o bacilo gram-negativo do grupo HACEK é:",
+      options: ["ampicilina", "doxiciclina", "amicacina", "ceftriaxone"],
+      answerIndex: 3,
+      explanation: "Os organismos do grupo HACEK (Haemophilus, Aggregatibacter, Cardiobacterium, Eikenella, Kingella) são uma causa de endocardite e são sensíveis a cefalosporinas de terceira geração. Ceftriaxona é o tratamento de escolha.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q34",
+      text: "O paciente com cetoacidose diabética é suscetível à infecção por Rhizopus, causando a mucormicose rinocerebral. O antifúngico preconizado para o tratamento é:",
+      options: ["anfotericina B", "fluconazol", "voriconazol", "flucitosina"],
+      answerIndex: 0,
+      explanation: "A mucormicose é uma infecção fúngica angioinvasiva grave. O tratamento de primeira linha é com Anfotericina B lipossomal em altas doses, associada a debridamento cirúrgico agressivo. Voriconazol é para Aspergilose, Fluconazol para Candida.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q35",
+      text: "A intoxicação por pesticidas causa sintomas muscarinicos, que devem ser tratados com:",
+      options: ["neostigmine", "dopamina", "nicotinamida", "atropina"],
+      answerIndex: 3,
+      explanation: "A intoxicação por organofosforados e carbamatos inibe a acetilcolinesterase, causando uma síndrome colinérgica. A atropina é um antagonista muscarínico que bloqueia esses efeitos (sialorreia, broncorreia, etc.). Neostigmina agravaria o quadro.",
+      tag: "Toxicologia"
+    },
+    {
+      id: "suseme-2017-q36",
+      text: "Ao exame fisico, paciente apresenta dispneia aos esforços, angina e pulso parvus e tardus. Esses sintomas são caracteristicos da seguinte lesão valvar:",
+      options: ["insuficiência aórtica", "estenose aórtica", "insuficiência tricúspide", "estenose mitral"],
+      answerIndex: 1,
+      explanation: "A tríade de dispneia, angina e síncope aos esforços é clássica da estenose aórtica grave. O pulso parvus et tardus (de pequena amplitude e ascensão lenta) é o achado semiológico característico no pulso carotídeo.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2017-q37",
+      text: "Paciente em uso de inibidores de angiotensina apresenta hipercalemia com alterações eletrocardiográficas. O tratamento imediato é:",
+      options: ["furosemida", "tiazidico", "glicoinsulina", "bloqueadores de cálcio"],
+      answerIndex: 2,
+      explanation: "Diante de hipercalemia com alterações no ECG (risco de arritmia fatal), a medida mais eficaz e rápida para reduzir o potássio sérico é deslocá-lo para o interior das células. A solução de glicoinsulina (insulina + glicose) é o tratamento de escolha para este fim. Bloqueadores de cálcio não são usados, e diuréticos demoram mais para agir.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2017-q38",
+      text: "Uma causa de acidose metabólica, com anion gap normal, é a:",
+      options: ["cetoacisode diabética", "intoxicação por metanol", "acidose tubular renal", "intoxicação por salicilato"],
+      answerIndex: 2,
+      explanation: "A acidose metabólica com ânion gap normal (hiperclorêmica) ocorre por perda de bicarbonato (ex: diarreia) ou por incapacidade renal de excretar ácidos ou reabsorver bicarbonato, como nas Acidoses Tubulares Renais (ATRs). As outras opções são causas clássicas de acidose com ânion gap elevado.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2017-q39",
+      text: "Paciente com TVP, em uso de heparina, apresenta queda abrupta de plaquetas e anti-PF4 positivo. O diagnóstico e o tratamento adequados são, respectivamente:",
+      options: [
+        "púrpura trombocitopênica e plasmaferese",
+        "deficiência de vitamina B12 e reposição de vitamina B12",
+        "mielodisplasia e quimioterapia",
+        "trombocitopenia induzida por heparina e inibidores de trombina"
+      ],
+      answerIndex: 3,
+      explanation: "O quadro de trombocitopenia e trombose durante o uso de heparina, confirmado pelo anti-PF4, é diagnóstico de Trombocitopenia Induzida por Heparina (TIH). O tratamento requer a suspensão imediata da heparina e a introdução de um anticoagulante alternativo que não seja a varfarina, como os inibidores diretos da trombina (ex: argatroban).",
+      tag: "Hematologia"
+    },
+    {
+      id: "suseme-2017-q40",
+      text: "Paciente apresenta, após uma semana de um quadro diarreico, fraqueza ascendente flácida e dispneia. Punção liquórica com proteína alta e celularidade baixa. O diagnóstico e o tratamento são, respectivamente:",
+      options: [
+        "miastenia gravis / neostigmine",
+        "sindrome Eaton Lambert/plasmaferese",
+        "neurossífilis/penicilina",
+        "síndrome de Guillain-Barrè / imunoglobulina"
+      ],
+      answerIndex: 3,
+      explanation: "A paralisia ascendente, flácida e arreflexa após um quadro infeccioso (gastrointestinal ou respiratório) é a apresentação clássica da Síndrome de Guillain-Barré. A dissociação proteinocitológica no líquor (muita proteína, poucas células) confirma o diagnóstico. O tratamento de primeira linha é com imunoglobulina intravenosa ou plasmaférese.",
+      tag: "Neurologia"
+    }
+  ]
+},
     {
     id: "preset-otorrinolaringologia-1",
-    name: "PR1 otorrino M7",
+    name: "  Estácio - M7 - PR1 - Otorrinolaringologia",
     questions: [
       {
         id: "otorrino-q1",
@@ -1527,7 +1968,7 @@ export const DEFAULT_DECKS = [
 
   {
     id: "preset-ortopedia-1",
-    name: "PR1 ORTOP M7",
+    name: "  Estácio - M7 - PR1 - Ortopedia",
     questions: [
       {
         id: "orto-q1",
@@ -2376,10 +2817,3084 @@ export const DEFAULT_DECKS = [
       }
     ]
   },
+  // Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
+// Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
+// Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
+// Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
+// Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
+// Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
 
+{
+  id: "prova-suseme-2024-emergencia-cti-obstetricia",
+  name: "SUSEME - Emergência - 2024",
+  questions: [
+    {
+      id: "suseme-2024-q1",
+      text: "As competências do Sistema Único de Saúde (SUS) incluem, entre outras, a:",
+      options: [
+        "colaboração na proteção do meio ambiente",
+        "elaboração centralizada da política de saneamento básico",
+        "exclusividade na formação de recursos humanos na área da saúde",
+        "delegação à iniciativa privada do desenvolvimento científico e tecnológico"
+      ],
+      answerIndex: 0,
+      explanation: "De acordo com o Art. 200 da Constituição, compete ao SUS, entre outras coisas, colaborar na proteção do meio ambiente, nele compreendido o do trabalho. A formação de recursos humanos é ordenada pelo SUS, mas não exclusiva. O desenvolvimento científico é incentivado, não delegado.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2024-q2",
+      text: "Um usuário busca uma UBS para se vacinar. É atendido, vacinado e orientado sobre a sua unidade de referência. As ações de acolhimento e referenciamento retratam, respectivamente, os seguintes princípios do SUS:",
+      options: [
+        "integralidade de assistência e igualdade de assistência",
+        "participação da comunidade e capacidade de resolução dos serviços",
+        "universalidade de acesso e regionalização da rede de serviços de saúde",
+        "utilização da epidemiologia e direito à informação"
+      ],
+      answerIndex: 2,
+      explanation: "O acolhimento em qualquer unidade demonstra a universalidade de acesso. O encaminhamento para a unidade de referência correta, de acordo com o seu local de moradia, exemplifica o princípio da regionalização e hierarquização da rede.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2024-q3",
+      text: "Conforme a Lei nº 8.142/1990, a representação dos usuários nos Conselhos de Saúde e Conferências, em relação ao conjunto dos demais segmentos será:",
+      options: ["paritária", "minoritária", "maioritária", "inexistente"],
+      answerIndex: 0,
+      explanation: "A Lei 8.142/90 estabelece a paridade na composição dos Conselhos de Saúde: 50% dos assentos são destinados aos representantes dos usuários, enquanto os outros 50% são divididos entre trabalhadores da saúde, gestores e prestadores de serviços.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2024-q4",
+      text: "Conforme o artigo 18 da Lei nº 8.080/1990, a execução de serviços de vigilância epidemiológica, vigilância sanitária, alimentação e nutrição, saneamento básico, saúde do trabalhador e saúde bucal, compete:",
+      options: ["à direção estadual do SUS", "à direção nacional do SUS", "à direção municipal do SUS", "ao Conselho Nacional de Saúde"],
+      answerIndex: 2,
+      explanation: "Pelo princípio da descentralização, a execução da maioria das ações de saúde, incluindo as de vigilância, é de competência da direção municipal do SUS, que é a esfera de governo mais próxima do cidadão.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2024-q5",
+      text: "Atividades em uma UBS para prevenção do suicídio e valorização da vida, como parte do 'Setembro Amarelo', expressam:",
+      options: [
+        "uma atividade específica das políticas de saúde do trabalhador",
+        "um dos objetivos do SUS, através da assistência às pessoas por intermédio de atividades preventivas",
+        "a importância das ações de reabilitação no SUS",
+        "um dos campos de atuação do SUS, por meio da assistência social e farmacêutica"
+      ],
+      answerIndex: 1,
+      explanation: "Ações de prevenção e promoção da saúde, como as campanhas de conscientização, são um dos objetivos fundamentais do SUS, conforme a Lei 8.080/90, que prioriza as atividades preventivas sobre as curativas.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2024-q6",
+      text: "A Lei nº 8.080/1990 estabelece que: (I) os municípios poderão constituir consórcios; (II) os recursos financeiros do SUS serão depositados em conta especial. Os itens I e Il se referem, respectivamente:",
+      options: [
+        "às diretrizes do SUS e à gestão financeira do SUS",
+        "à organização nacional do SUS e à gestão administrativa do SUS",
+        "à organização, direção e gestão administrativa do SUS e às diretrizes do SUS",
+        "à organização, direção e gestão administrativa do SUS e à gestão financeira do SUS"
+      ],
+      answerIndex: 3,
+      explanation: "A formação de consórcios entre municípios é uma forma de organização e gestão do sistema, enquanto a determinação de que os recursos sejam depositados em contas especiais (Fundos de Saúde) refere-se à gestão financeira.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2024-q7",
+      text: "É correto afirmar sobre o Sistema Único de Saúde (SUS) que:",
+      options: [
+        "a assistência à saúde no SUS é proibida à iniciativa privada",
+        "o SUS não prevê a admissão de agentes comunitários de saúde",
+        "o SUS tem como uma de suas diretrizes a centralização em cada esfera de governo",
+        "as ações e os serviços públicos de saúde integram uma rede regionalizada e hierarquizada"
+      ],
+      answerIndex: 3,
+      explanation: "A regionalização e a hierarquização são diretrizes organizacionais do SUS, definidas pela Constituição e pela Lei 8.080/90, que visam organizar os serviços de saúde por níveis de complexidade dentro de uma determinada região geográfica.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2024-q8",
+      text: "Modalidade de prestação de serviços de saúde a distância, por meio da utilização das tecnologias da informação e da comunicação. Essa definição refere-se a:",
+      options: ["telessaúde", "interconsulta", "consulta de pré-natal", "atendimento domiciliar"],
+      answerIndex: 0,
+      explanation: "Esta é a definição exata de Telessaúde, que foi formalmente incorporada como um campo de atuação do SUS pela Lei 8.080/90.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2024-q9",
+      text: "Para receberem os recursos, os Municípios, Estados e o Distrito Federal deverão contar, entre outras exigências, com: I: Fundo de Saúde; II: Conselho de Saúde; III: plano de saúde; IV: relatórios de gestão. Estão corretas as sentenças:",
+      options: ["I, II e III", "I, II e IV", "II, III e IV", "I, II, III e IV"],
+      answerIndex: 3,
+      explanation: "A Lei 8.142/90 estabelece que, para receberem os repasses do Fundo Nacional de Saúde, as outras esferas de governo devem ter Fundo de Saúde, Conselho de Saúde, Plano de Saúde e apresentar relatórios de gestão, garantindo a transparência e o controle social.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2024-q10",
+      text: "Sobre o Conselho de Saúde, de acordo com a Lei nº 8.142/1990, é correto afirmar que:",
+      options: [
+        "é um órgão colegiado de caráter permanente e deliberativo",
+        "é composto apenas por representantes do governo e usuários",
+        "reúne-se a cada quatro anos para avaliar a situação de saúde",
+        "atua na execução da política de saúde na instância correspondente"
+      ],
+      answerIndex: 0,
+      explanation: "O Conselho de Saúde é uma instância de controle social de caráter permanente (reuniões regulares) e deliberativo (participa da formulação e fiscalização das políticas de saúde). As Conferências é que se reúnem a cada quatro anos. Sua composição é quadripartite.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2024-q11",
+      text: "A causa mais comumente associada à emergência cardíaca hipertensiva é:",
+      options: ["eclampsia", "traumatismo craniano", "dissecção aórtica aguda", "crise simpática induzida por cocaína"],
+      answerIndex: 2,
+      explanation: "A dissecção aguda de aorta é uma das emergências hipertensivas mais graves e que exigem um controle pressórico imediato e rigoroso para evitar a progressão da dissecção e a ruptura.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2024-q12",
+      text: "Não é considerada como uma característica do estágio A da insuficiência cardíaca:",
+      options: ["diabetes mellitus", "hipertensão arterial", "sindrome metabólica", "doença valvar assintomática"],
+      answerIndex: 3,
+      explanation: "O estágio A da insuficiência cardíaca refere-se a pacientes com ALTO RISCO de desenvolver IC, mas sem doença cardíaca estrutural. Hipertensão, diabetes e síndrome metabólica são fatores de risco. Uma doença valvar, mesmo assintomática, já constitui uma doença estrutural, classificando o paciente no estágio B.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2024-q13",
+      text: "Assinale a afirmativa incorreta, com relação ao uso do trombolítico no infarto agudo do miocárdio, com supra de ST:",
+      options: [
+        "a presença de úlcera péptica ativa pode ser considerada contraindicação relativa",
+        "terapia fibrinolítica é indicada até 12 horas após o início dos sintomas",
+        "a presença de neoplasia intracraniana é considerada contraindicação absoluta",
+        "comparativamente, o trombolítico apresenta taxas de reperfusão inicial mais altas e menor risco de hemorragia"
+      ],
+      answerIndex: 3,
+      explanation: "A angioplastia primária, quando disponível, é superior à trombólise, pois apresenta maiores taxas de reperfusão (sucesso em abrir a artéria) e menor risco de complicações hemorrágicas, como o AVC hemorrágico.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2024-q14",
+      text: "J.V.S., sexo masculino, chega na emergência com quadro de fibrilação atrial de recente começo (8h). O fator que não é considerado de risco no escore de decisão para o uso de anticoagulante (CHA2DS2-VASc) é:",
+      options: ["idade <60 anos", "diabetes mellitus", "hipertensão arterial", "insuficiência cardíaca congestiva"],
+      answerIndex: 0,
+      explanation: "O escore CHA2DS2-VASc pontua a idade ≥ 65 anos (1 ponto) e ≥ 75 anos (2 pontos). Idade abaixo de 65 anos não pontua e, portanto, não é um fator de risco no escore. As outras opções são critérios que pontuam.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2024-q15",
+      text: "A azotemia pré-renal é a causa mais comum de insuficiência renal aguda. O mecanismo fisiopatológico que melhor explica essa condição é:",
+      options: ["hipoperfusão renal", "glomerulonefrite aguda", "nefrite intersticial aguda", "lesão aguda das células tubulares"],
+      answerIndex: 0,
+      explanation: "A insuficiência renal aguda pré-renal é, por definição, funcional, causada pela diminuição do fluxo sanguíneo para os rins (hipoperfusão renal) devido a causas como desidratação, hemorragia ou insuficiência cardíaca.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2024-q16",
+      text: "W.D.S., 51 anos, com dor abdominal, náuseas e vômitos, com aumento de amilase e lipase sérica. Assinale o exame que apresenta maior acurácia para confirmar o diagnóstico de pancreatite aguda:",
+      options: ["colonoscopia", "ultrassonografia abdominal", "radiografia de abdome com contraste", "tomografia computadorizada de abdome"],
+      answerIndex: 3,
+      explanation: "A tomografia computadorizada de abdome com contraste é o exame de imagem com maior acurácia para confirmar o diagnóstico de pancreatite aguda, avaliar a sua extensão e detectar complicações como necrose e coleções líquidas.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2024-q17",
+      text: "O escore de Wells é utilizado em pacientes com suspeita de trombose venosa profunda. Assinale a alternativa que não faz parte do escore de Wells:",
+      options: ["D dimero >500", "presença de câncer em atividade", "repouso recente no leito por mais de três dias", "presença de veias superficiais colaterais (não varicosas)"],
+      answerIndex: 0,
+      explanation: "O D-dímero não faz parte do escore de Wells. Ele é um exame solicitado APÓS a aplicação do escore: se a probabilidade clínica for baixa, um D-dímero negativo pode excluir a TVP. As outras opções são critérios do escore.",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2024-q18",
+      text: "A infecção pelo vírus da dengue pode ser assintomática ou progredir para quadros graves. Assinale a alternativa que contém um sinal de alarme:",
+      options: ["constipação", "cefaleia occipital", "hipertensão arterial", "aumento progressivo do hematócrito"],
+      answerIndex: 3,
+      explanation: "O aumento progressivo do hematócrito é um sinal laboratorial de alarme fundamental na dengue, pois indica hemoconcentração devido ao extravasamento de plasma, que pode levar ao choque.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2024-q19",
+      text: "Assinale a causa mais comum de doença da tireoide em crianças e adolescentes:",
+      options: ["câncer de tireoide", "tireoidite de De Quervain", "tireoidite linfocítica crônica", "hipertireoidismo congênito"],
+      answerIndex: 2,
+      explanation: "A Tireoidite Linfocítica Crônica, ou Tireoidite de Hashimoto, é a causa mais comum de bócio e hipotireoidismo adquirido em crianças e adolescentes em áreas suficientes em iodo.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2024-q20",
+      text: "Assinale o tipo de queimadura que caracteriza uma indicação de internação para tratamento:",
+      options: [
+        "queimaduras químicas",
+        "queimaduras de 2º grau",
+        "queimaduras superiores a 5% da superfície corpórea em adolescente/adulto",
+        "lesão inalatória, somente se associada a mais de 10% da superficie corpórea"
+      ],
+      answerIndex: 0,
+      explanation: "Queimaduras químicas, assim como as elétricas, são sempre consideradas graves e têm indicação de internação para avaliação de lesões profundas e sistêmicas, independentemente da extensão.",
+      tag: "Cirurgia Plástica"
+    },
+    {
+      id: "suseme-2024-q21",
+      text: "Uma criança de 6 meses chega à emergência com suspeita de coqueluche. Assinale o agente antimicrobiano mais indicado para ser utilizado nesse caso:",
+      options: ["azitromicina", "amoxacilina", "moxifloxacina", "sulfametoxazol-trimetoprima"],
+      answerIndex: 0,
+      explanation: "O tratamento da coqueluche é feito com macrolídeos. Em lactentes menores de 1 mês, a azitromicina é a droga de escolha. Para os maiores, como no caso, a azitromicina continua sendo uma excelente opção pela posologia mais cômoda.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2024-q22",
+      text: "Assinale o quadro cirúrgico mais frequentemente observado em crianças:",
+      options: ["colecistite aguda", "apendicite aguda", "intussuscepção intestinal", "hérnia inguinal encarcerada"],
+      answerIndex: 1,
+      explanation: "A apendicite aguda é a emergência cirúrgica abdominal mais comum em crianças e adolescentes.",
+      tag: "Cirurgia Pediátrica"
+    },
+    {
+      id: "suseme-2024-q23",
+      text: "Sobre a atresia esofágica, podemos afirmar:",
+      options: [
+        "70% dos lactentes apresentam quadro sindrômico associado, com múltiplas anomalias",
+        "aproximadamente 90% dos casos se apresentam associados à fistula traqueoesofágica",
+        "essa anomalia apresenta taxas de sobrevivência extremamente baixas",
+        "as anomalias cardíacas e vertebrais estão associadas à deficiência intelectual grave"
+      ],
+      answerIndex: 1,
+      explanation: "A forma mais comum de atresia de esôfago (Tipo C na classificação de Gross) é a atresia proximal com fístula traqueoesofágica distal, correspondendo a cerca de 85-90% dos casos.",
+      tag: "Cirurgia Pediátrica"
+    },
+    {
+      id: "suseme-2024-q24",
+      text: "A síndrome de Wernicke-Korsakoff, que pode ocorrer na hiperêmese gravídica, se deve a deficiência da vitamina:",
+      options: ["B1", "B2", "B6", "B12"],
+      answerIndex: 0,
+      explanation: "A Encefalopatia de Wernicke é uma emergência neurológica causada pela deficiência aguda de Tiamina (Vitamina B1), que pode ocorrer em situações de desnutrição grave como na hiperêmese gravídica e no etilismo crônico.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2024-q25",
+      text: "A alteração que está mais comumente associada à polidramnia é:",
+      options: ["obesidade", "dislipidemia", "hipertensão arterial", "doença hemolítica perinatal"],
+      answerIndex: 3,
+      explanation: "A Doença Hemolítica Perinatal grave leva à anemia fetal, insuficiência cardíaca e hidropsia fetal. A hidropsia cursa com grande produção de líquido e, consequentemente, polidrâmnio. Diabetes materno é a causa mais comum, mas não está entre as opções.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2024-q26",
+      text: "Crianças e gestantes com quadro clínico suspeito de dengue necessitam de vigilância estrita. Assinale a afirmativa correta:",
+      options: [
+        "o início da doença nas crianças menores de 2 anos de idade pode passar despercebido e o quadro grave ser identificado como a primeira manifestação",
+        "não existe risco de transmissão vertical",
+        "não há aumento da incidência de baixo peso ao nascer em mulheres que tiveram dengue durante a gravidez",
+        "a dengue na infância é sempre sintomática"
+      ],
+      answerIndex: 0,
+      explanation: "Em lactentes e crianças pequenas, os sintomas da dengue podem ser inespecíficos e se confundir com outras viroses, fazendo com que a doença só seja diagnosticada quando evolui para formas graves, com sinais de choque.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2024-q27",
+      text: "A arritmia que mais frequentemente acomete mulher com estenose mitral reumática na gestação é:",
+      options: ["flutter atrial", "fibrilação atrial", "taquicardia atrial multifocal", "taquisupra ventricular paroxística"],
+      answerIndex: 1,
+      explanation: "A estenose mitral leva ao aumento crônico do átrio esquerdo, que é o principal substrato anatômico para o desenvolvimento de fibrilação atrial. As alterações hemodinâmicas da gestação (aumento da volemia e do débito cardíaco) frequentemente precipitam o surgimento da arritmia.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2024-q28",
+      text: "Dentre as formas de abortamento, a que se caracteriza por uma presença do colo dilatado, porém com o produto da concepção presente, que ainda não foi eliminado, é:",
+      options: ["abortamento retido", "abortamento inevitável", "ameaça de abortamento", "abortamento incompleto"],
+      answerIndex: 1,
+      explanation: "O abortamento inevitável é caracterizado pela presença de sangramento e dilatação cervical, com o produto da concepção ainda dentro do útero, indicando que a expulsão irá ocorrer em breve. Na ameaça, o colo está fechado. No incompleto, parte já foi expulsa. No retido, o embrião/feto está morto, mas o colo está fechado.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2024-q29",
+      text: "Assinale a alternativa que está mais associada com risco de complicações para síndrome gripal do Covid-19:",
+      options: ["adultos", "grávidas somente no 1º trimestre", "indivíduos que apresentem pneumopatias (incluindo asma)", "indivíduos em uso prolongado de ácido acetilsalicílico"],
+      answerIndex: 2,
+      explanation: "Doenças pulmonares crônicas, como DPOC e asma, são um importante fator de risco para o desenvolvimento de formas graves e complicações da COVID-19.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2024-q30",
+      text: "Sobre a hiperêmese gravídica é correto afirmar que:",
+      options: [
+        "quando a desnutrição está muito avançada, ocorre deficiência de piridoxina (vitamina B6), que conduz ao quadro neurológico",
+        "a encefalopatia de Wernicke, a sindrome de Mallory-Weiss e a ruptura do esôfago são importantes repercussões na gravidez",
+        "quando a paciente experimenta náuseas e vômitos após quarta semana, outras condições devem ser cogitadas",
+        "nas formas graves a perda ponderal é acentuada, 25 a 30%, e o pulso mostra-se lento"
+      ],
+      answerIndex: 1,
+      explanation: "A encefalopatia de Wernicke (por deficiência de tiamina), a laceração de Mallory-Weiss e a ruptura esofágica (Síndrome de Boerhaave) são complicações graves, embora raras, dos vômitos incoercíveis da hiperêmese gravídica. A perda ponderal é >5%.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2024-q31",
+      text: "A oclusão embólica ou trombose do segmento V4 da artéria vertebral causa isquemia do bulbo lateral, provocando a Síndrome de Wallenberg. Assinale a alternativa que apresenta sinais e sintomas desta síndrome:",
+      options: [
+        "hemiplegia ipsilateral, disartria e diplopia",
+        "hemianopsia temporal, diplopia e síndrome de Horner ipsilateral",
+        "vertigem, rouquidão e plegia isolada do membro inferior contralateral",
+        "vertigem, dormência da face ipsilateral e dos membros contralaterais"
+      ],
+      answerIndex: 3,
+      explanation: "A Síndrome de Wallenberg (ou síndrome bulbar lateral) cursa com achados cruzados: perda da sensibilidade termo-dolorosa na face ipsilateral (trato do trigêmeo) e no corpo contralateral (trato espinotalâmico), associada a vertigem (núcleos vestibulares), disfagia e rouquidão (núcleo ambíguo).",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2024-q32",
+      text: "A meningite bacteriana é uma infecção purulenta aguda. Assinale o principal agente causador do quadro em adultos acima de 20 anos:",
+      options: ["Streptococcus bovis", "Staphylococus aureus", "Listeria monocytogenes", "Streptococcus pneumoniae"],
+      answerIndex: 3,
+      explanation: "O Streptococcus pneumoniae (pneumococo) é o principal agente etiológico da meningite bacteriana comunitária em adultos, seguido pela Neisseria meningitidis.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2024-q33",
+      text: "Assinale o achado liquórico compatível com meningite viral aguda:",
+      options: [
+        "pleocitose linfocítica, nível de glicose reduzido e proteína elevada",
+        "leucocitose mononuclear, nível de glicose reduzido e proteína elevada",
+        "leucocitose polimorfonuclear, nível de glicose reduzido e proteína elevada",
+        "pleocitose linfocítica, nível de glicose normal e proteína normal ou levemente aumentada"
+      ],
+      answerIndex: 3,
+      explanation: "O líquor na meningite viral aguda classicamente apresenta uma pleocitose (aumento de células) com predomínio de linfócitos/mononucleares, com glicose normal e proteínas normais ou discretamente elevadas.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2024-q34",
+      text: "Sobre a síndrome nefrótica, é correto afirmar que:",
+      options: [
+        "dismorfismo eritrocitário está sempre presente",
+        "é caracterizada por proteinúria, edema, hipertensão e hiperlipidemia",
+        "é uma apresentação incomum, porém dramática de glomerulonefrite aguda",
+        "não está associada à predisposição a infecções e estado de hipercoagulabilidade"
+      ],
+      answerIndex: 2,
+      explanation: "A síndrome nefrótica é uma das apresentações clássicas das glomerulopatias. É caracterizada por proteinúria maciça (>3,5g/24h), hipoalbuminemia, edema e hiperlipidemia. Hipertensão e dismorfismo eritrocitário são mais comuns na síndrome nefrítica.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2024-q35",
+      text: "Paciente masculino, 38 anos, portador de anemia falciforme, apresenta dor em flanco à esquerda e hematúria de início agudo. Assinale o diagnóstico desse paciente:",
+      options: ["apendicite aguda", "gastroenterite aguda", "necrose aguda de papila renal", "enterocolite necrotizante aguda"],
+      answerIndex: 2,
+      explanation: "A necrose de papila renal é uma complicação conhecida da anemia falciforme, causada pela oclusão microvascular na medula renal, levando a isquemia e necrose, que se manifesta com dor em flanco e hematúria.",
+      tag: "Hematologia"
+    },
+    {
+      id: "suseme-2024-q36",
+      text: "Sobre os padrões de fraturas pediátricas, NÃO se pode afirmar que:",
+      options: [
+        "deformações plásticas ocorrem exclusivamente em crianças",
+        "a maioria das fraturas pediátricas devem ser tratadas através de cirurgias abertas",
+        "a fratura em galho verde ocorre quando o osso está curvado e há falha na face elástica (convexa) do osso",
+        "as fraturas de indentação são inerentemente estáveis e cicatrizam em 3 a 4 semanas"
+      ],
+      answerIndex: 1,
+      explanation: "Ao contrário dos adultos, a grande maioria das fraturas em crianças é tratada de forma conservadora (sem cirurgia), devido ao enorme potencial de remodelação óssea e à consolidação rápida. As outras afirmações estão corretas.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2024-q37",
+      text: "O exame diagnóstico de escolha para detectar uma embolia pulmonar é:",
+      options: ["eletrocardiograma", "radiografia de tórax", "tomografia helicoidal com contraste", "cintilografia de ventilação/perfusão"],
+      answerIndex: 2,
+      explanation: "A Angiotomografia de tórax (ou tomografia helicoidal com contraste) é o padrão-ouro para o diagnóstico de tromboembolismo pulmonar, pois permite a visualização direta do trombo nas artérias pulmonares.",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2024-q38",
+      text: "O tratamento farmacológico recomendado para giardíase é:",
+      options: ["tinidazol", "fluconazol", "amoxicilina", "vancomicina"],
+      answerIndex: 0,
+      explanation: "O tratamento da infecção por Giardia lamblia é feito com antiparasitários, sendo os nitroimidazólicos como o tinidazol ou o metronidazol as drogas de primeira linha. As outras opções são antifúngicos ou antibióticos.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2024-q39",
+      text: "Dentre as indicações de cirurgia de urgência no traumatismo torácico, aquela que NÃO é considerada uma necessidade de toracotomia imediata é:",
+      options: ["lesão da aorta", "lesão esofágica", "quilotórax persistente", "rotura aguda do diafragma"],
+      answerIndex: 2,
+      explanation: "O quilotórax (acúmulo de linfa no tórax) geralmente tem um tratamento inicial conservador. A cirurgia é indicada apenas se houver falha no tratamento clínico (débito persistente), não sendo uma indicação de toracotomia de emergência. As outras opções são lesões graves que exigem abordagem imediata.",
+      tag: "Cirurgia"
+    },
+    {
+      id: "suseme-2024-q40",
+      text: "Os patógenos mais comumente encontrados na cervicite são:",
+      options: [
+        "C. trachomatis e N. gonorrhoeae",
+        "mycoplasma e C. albicans",
+        "G. vaginalis e ureaplasma",
+        "T. vaginalis e lactobacillus"
+      ],
+      answerIndex: 0,
+      explanation: "A cervicite mucopurulenta é uma infecção sexualmente transmissível causada principalmente pela Neisseria gonorrhoeae (gonococo) e pela Chlamydia trachomatis.",
+      tag: "G.O."
+    }
+  ]
+},
+{
+  id: "prova-suseme-2023-emergencia-cti-obstetricia",
+  name: "SUSEME - Emergência - 2023",
+  questions: [
+    {
+      id: "suseme-2023-q1",
+      text: "Conforme a Constituição de 1988, 'A saúde é direito de todos e dever do Estado, garantido mediante políticas...'",
+      options: [
+        "que garantam o acesso às ações e serviços de saúde às parcelas mais pobres da população",
+        "que garantam o acesso parcial, mas igualitário a algumas ações e serviços de saúde",
+        "sociais e econômicas que visem à redução do risco de doença e de outros agravos",
+        "sociais e econômicas que visem à transferência de renda aos mais pobres"
+      ],
+      answerIndex: 2,
+      explanation: "O Art. 196 da Constituição estabelece que a garantia do direito à saúde se dá através de políticas sociais e econômicas que atuem nos determinantes da saúde para reduzir os riscos de doenças, e não apenas pelo acesso aos serviços.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2023-q2",
+      text: "Entre os princípios e diretrizes do SUS, conforme Art. 7º da Lei n° 8.080/1990, pode-se citar a:",
+      options: [
+        "universalidade de acesso aos serviços, exceto no nível da recuperação da saúde",
+        "divisão em nível executivo das ações de saúde, meio ambiente e saneamento",
+        "igualdade da assistência à saúde, sem preconceitos ou privilégios",
+        "ênfase na centralização dos serviços para os Estados"
+      ],
+      answerIndex: 2,
+      explanation: "A igualdade (ou equidade) da assistência à saúde, tratando todos sem preconceitos ou privilégios, é um dos princípios fundamentais do SUS. A universalidade é em todos os níveis, e a diretriz é de descentralização.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2023-q3",
+      text: "Conjunto de ações que proporcionam o conhecimento, a detecção ou prevenção de qualquer mudança nos fatores determinantes de saúde, com a finalidade de recomendar e adotar medidas de prevenção e controle. Este conceito define a:",
+      options: ["vigilância epidemiológica", "saúde do trabalhador", "vigilância sanitária", "gestão financeira"],
+      answerIndex: 0,
+      explanation: "Esta é a definição exata de Vigilância Epidemiológica, conforme a Lei 8.080/90, focada no monitoramento e controle dos padrões de ocorrência de doenças na população.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2023-q4",
+      text: "É competência do Sistema Único de Saúde (SUS), conforme o Art. 200 da Constituição:",
+      options: [
+        "fiscalizar o exercício profissional na área da saúde, exceto para medicina e enfermagem",
+        "participar da formulação da politica e da execução das ações de saneamento básico",
+        "realizar toda a formação de recursos humanos na área da saúde no nível técnico",
+        "delegar as ações de vigilância sanitária e epidemiológica à iniciativa privada"
+      ],
+      answerIndex: 1,
+      explanation: "O Art. 200 da Constituição estabelece que compete ao SUS participar da formulação da política e da execução das ações de saneamento básico, reconhecendo a sua importância como determinante da saúde.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2023-q5",
+      text: "Após ser atendido em uma unidade básica, o usuário recebe encaminhamento para consulta com um cardiologista em uma unidade especializada. O quadro descrito exemplifica o seguinte princípio do SUS:",
+      options: [
+        "descentralização político-administrativa",
+        "participação da comunidade",
+        "preservação da autonomia",
+        "integralidade da assistência"
+      ],
+      answerIndex: 3,
+      explanation: "A integralidade da assistência pressupõe um conjunto articulado e contínuo de ações e serviços preventivos e curativos, individuais e coletivos, nos diferentes níveis de complexidade do sistema. O encaminhamento da atenção básica para a especializada é um exemplo prático disso.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2023-q6",
+      text: "Considerando a participação da iniciativa privada no SUS, conforme Art. 199 da Constituição, é CORRETO afirmar que:",
+      options: [
+        "as instituições privadas poderão participar das ações de promoção da saúde no SUS, sendo vedada a sua atuação nas ações de recuperação da saúde",
+        "a assistência à saúde é livre à iniciativa privada, de forma complementar ao SUS, com preferência às entidades filantrópicas e sem fins lucrativos",
+        "a destinação de recursos públicos é livre a todas as instituições privadas",
+        "as instituições privadas não poderão participar do SUS, exceto no caso de internação ou calamidade pública"
+      ],
+      answerIndex: 1,
+      explanation: "O Art. 199 da Constituição estabelece que a iniciativa privada pode participar do SUS de forma complementar, mediante contrato, com preferência para as entidades filantrópicas e sem fins lucrativos.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2023-q7",
+      text: "A partir do exposto na Lei nº 8.080/1990 é CORRETO afirmar que:",
+      options: [
+        "quando as disponibilidades do SUS forem insuficientes, deverá recorrer a instituições religiosas",
+        "os recursos financeiros do SUS serão depositados em conta especial, sob fiscalização dos gestores",
+        "a direção do SUS é exercida pelo Ministério da Saúde, que executa as políticas após aprovação do Congresso",
+        "saúde do trabalhador é um conjunto de atividades que se destina à promoção, proteção, recuperação e reabilitação da saúde dos trabalhadores"
+      ],
+      answerIndex: 3,
+      explanation: "A opção D traz a definição correta de Saúde do Trabalhador, um dos campos de atuação do SUS, conforme a Lei 8.080/90. A direção do SUS é tripartite. Os recursos são fiscalizados pelos Conselhos de Saúde.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2023-q8",
+      text: "A participação da comunidade na gestão do SUS é regulada pela Lei nº 8.142/1990, que define duas instâncias colegiadas em cada esfera de governo, que são:",
+      options: [
+        "o Conselho de Saúde e a Conferência de Saúde",
+        "a Conferência de Saúde e o Ministério da Saúde",
+        "o Conselho de Saúde e o Fundo Nacional de Saúde",
+        "a Conferência de Saúde e o Fundo Nacional de Saúde"
+      ],
+      answerIndex: 0,
+      explanation: "A Lei 8.142/90 instituiu as duas instâncias oficiais de controle social no SUS: a Conferência de Saúde (que se reúne a cada 4 anos para definir diretrizes) и o Conselho de Saúde (de caráter permanente e deliberativo).",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2023-q9",
+      text: "Sobre o direito à saúde, de acordo com os Art. 2º e 3º da Lei 8.080/90, é CORRETO afirmar que:",
+      options: [
+        "as ações de promoção e proteção da saúde devem ser garantidas a todos e as ações de recuperação aos mais pobres",
+        "são determinantes e condicionantes da saúde, entre outros, a renda, o meio ambiente e o acesso aos bens supérfluos",
+        "o dever do Estado de prover as condições indispensáveis ao pleno exercício da saúde exclui o dever da sociedade",
+        "o dever do Estado inclui assegurar condições de acesso universal e igualitário às ações e serviços de saúde"
+      ],
+      answerIndex: 3,
+      explanation: "O dever do Estado é garantir a saúde através de políticas que assegurem o acesso universal (para todos) e igualitário (atendendo às desigualdades) aos serviços, como definido na Lei 8.080/90.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2023-q10",
+      text: "Reunir-se-á a cada quatro anos com a representação dos vários segmentos sociais, para avaliar a situação de saúde e propor as diretrizes para a formulação da política de saúde. Trata-se:",
+      options: ["do Sistema Nacional de Saúde", "da Conferência de Saúde", "da Secretaria de Saúde", "do Conselho de Saúde"],
+      answerIndex: 1,
+      explanation: "Esta é a definição da Conferência de Saúde, uma instância de controle social que ocorre a cada quatro anos em todas as esferas de governo para avaliar e propor as diretrizes da política de saúde.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2023-q11",
+      text: "Encefalopatia portossistêmica é uma complicação grave da doença hepática crônica, sendo INCORRETO afirmar que:",
+      options: [
+        "pode ocorrer como resultado de hipopotassemia, infecção, sobrecarga de proteínas dietéticas ou distúrbios eletrolíticos",
+        "o diagnóstico de encefalopatia hepática é feito pela realização de tomografia computadorizada de crânio",
+        "a encefalopatia é observada muito mais comumente nos pacientes com doença hepática crônica",
+        "a rifaximina na dose de 550 mg, 2x ao dia, tem sido muito eficaz no tratamento da encefalopatia"
+      ],
+      answerIndex: 1,
+      explanation: "O diagnóstico da encefalopatia hepática é eminentemente clínico, baseado na presença de alterações do estado mental e asterixis em um paciente com insuficiência hepática. A tomografia é usada para excluir outras causas de rebaixamento de consciência, mas não para confirmar a encefalopatia.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2023-q12",
+      text: "Sobre as dores noturnas benignas da infância, também conhecidas como dores de crescimento, podemos afirmar:",
+      options: [
+        "as crianças mais comumente descrevem dores em cólicas ou dor incômoda que ocorre no início do dia",
+        "as dores de crescimento são contínuas e unilaterais",
+        "a dor ocorre durante períodos de crescimento rápido ou em locais de crescimento",
+        "o pico de incidência ocorre entre os 4 e os 12 anos"
+      ],
+      answerIndex: 3,
+      explanation: "As dores de crescimento são um diagnóstico de exclusão, com pico de incidência entre 4 e 12 anos. Caracteristicamente, são dores noturnas, bilaterais, em membros inferiores, que não se localizam nas articulações e o exame físico é normal.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2023-q13",
+      text: "Sobre a hiperêmese gravídica é correto afirmar:",
+      options: [
+        "entre os fatores de risco, podem ser citadas a história de hiperêmese em gestação anterior, a história familiar e a gravidez de feto feminino",
+        "nas formas graves a perda ponderal é maior que 15% do peso corporal, hipertensão arterial está sempre presente",
+        "a hiperêmese gravídica é a principal causa de internação hospitalar em gestantes, independente da idade gestacional",
+        "encefalopatia de Wernicke e Síndrome de Mallory-Weiss nunca estão presentes"
+      ],
+      answerIndex: 0,
+      explanation: "A opção A lista corretamente os principais fatores de risco para hiperêmese gravídica. As outras opções estão incorretas: a perda de peso é >5%, pode ocorrer hipotensão (e não hipertensão), é a principal causa de internação na primeira metade da gestação, e Wernicke e Mallory-Weiss são complicações possíveis.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2023-q14",
+      text: "Acerca da Síndrome HELLP podemos afirmar:",
+      options: [
+        "o quadro clínico típico é o da grávida na segunda metade da gestação com dor epigástrica ou no quadrante superior direito, particularmente se associada a náuseas e vômitos",
+        "a disfunção hepática é avaliada pelo aumento no soro das transaminases hepáticas, 5 vezes a concentração normal",
+        "apesar de ser um quadro grave, a mortalidade materna e gestacional é baixa, menor que 5%",
+        "o nível adotado para caracterizar a trombocitopenia é de < 190.000 plaquetas/mm"
+      ],
+      answerIndex: 0,
+      explanation: "A dor epigástrica ou em hipocôndrio direito, causada pela distensão da cápsula hepática, é o sintoma mais característico da Síndrome HELLP. A trombocitopenia é definida por plaquetas < 100.000/mm³ e a mortalidade é significativa.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2023-q15",
+      text: "Sobre a eclampsia, podemos afirmar:",
+      options: [
+        "o uso de ácido acetilsalicílico, em dose baixa, iniciado antes das 16 semanas em gestantes de alto risco, reduz a incidência de pré-eclampsia leve e grave.",
+        "a pré-eclampsia tardia apresenta mortalidade 20 vezes maior do que a pré-eclampsia precoce",
+        "complicações como amaurose e psicose puerperal são em sua maioria não reversíveis",
+        "a hemorragia cerebral é a principal causa de morte"
+      ],
+      answerIndex: 3,
+      explanation: "As complicações neurológicas, especialmente a hemorragia cerebral, são a principal causa de morte materna na eclâmpsia. A profilaxia com AAS é eficaz. A pré-eclâmpsia precoce é mais grave. As complicações visuais e psiquiátricas são geralmente reversíveis.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2023-q16",
+      text: "Sobre a doença Monkeypox é correto afirmar, EXCETO:",
+      options: [
+        "Monkeypox é uma doença causada pelo Monkeypox virus, do gênero Orthopoxvirus",
+        "a manifestação cutânea típica é do tipo papulovesicular, precedido ou não de febre e de linfadenopatia",
+        "a transmissão entre humanos ocorre principalmente por meio de contato pessoal próximo",
+        "os primatas não humanos são os principais reservatórios do virus"
+      ],
+      answerIndex: 3,
+      explanation: "Apesar do nome, acredita-se que os principais reservatórios do vírus Monkeypox na natureza sejam pequenos roedores e esquilos africanos, e não os primatas não humanos.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2023-q17",
+      text: "Cefaleia de forte intensidade e rápida instalação é um sintoma clássico da Hemorragia Subaracnóidea. Sobre a HSA podemos afirmar:",
+      options: [
+        "risco de vasoespasmo é maior nas primeiras 24h do sangramento",
+        "o principal fator que determina o desfecho é o status neurológico na admissão hospitalar",
+        "ressangramento da má formação aneurismática não altera a morbimortalidade",
+        "principal etiologia é trauma craniano"
+      ],
+      answerIndex: 1,
+      explanation: "O estado neurológico do paciente na admissão, avaliado por escalas como Hunt-Hess, é o preditor mais importante do prognóstico. O vasoespasmo ocorre mais tardiamente (4º ao 14º dia). Ressangramento é catastrófico. A principal causa de HSA espontânea é a ruptura de aneurisma.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2023-q18",
+      text: "Qual das alternativas abaixo é a principal etiologia do hematoma intraparenquimatoso (AVE hemorrágico) com localização talâmica:",
+      options: ["vasculite", "tabagismo", "hipertensão arterial", "fibrilação atrial"],
+      answerIndex: 2,
+      explanation: "A hipertensão arterial crônica é a causa mais comum de AVC hemorrágico intraparenquimatoso, especialmente em localizações profundas como o tálamo, devido à ruptura de pequenas artérias perfurantes (lipohialinose).",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2023-q19",
+      text: "Paciente feminina, 65 anos, apresenta cefaleia temporal esquerda de forte intensidade, de início recente. Refere dor na mandíbula ao mastigar e turvação visual em olho esquerdo. A principal suspeita diagnóstica é:",
+      options: ["migranea com aura", "cefaleia em salvas", "arterite temporal", "nevralgia do trigêmeo"],
+      answerIndex: 2,
+      explanation: "O quadro de cefaleia nova em paciente >50 anos, associada a claudicação de mandíbula e sintomas visuais, é a apresentação clássica da Arterite de Células Gigantes (Arterite Temporal), uma emergência reumatológica.",
+      tag: "Reumatologia"
+    },
+    {
+      id: "suseme-2023-q20",
+      text: "Paciente masculino, 30 anos, com cefaleia holocraniana há 6 meses associada a inapetência e sudorese noturna. Exame de líquor evidenciou pleocitose linfocítica e hipoglicorraquia. O diagnóstico provável é:",
+      options: ["encefalite herpética", "meningite tuberculosa", "meningite meningocócica", "hemorragia subaracnóidea"],
+      answerIndex: 1,
+      explanation: "Meningite de evolução subaguda/crônica com sintomas constitucionais (sudorese noturna, inapetência) e líquor com pleocitose linfocitária e consumo de glicose (hipoglicorraquia) é característico de meningite tuberculosa.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2023-q21",
+      text: "Paciente feminina, 16 anos, com dor abdominal inespecífica há 24 horas. Evoluiu com febre, calafrios, vômitos e dor localizada em quadrante inferior direito. Sinal de McBurney presente. O diagnóstico provável é:",
+      options: ["apendicite aguda", "volvo de sigmoide", "diverticulite aguda", "pielonefrite aguda"],
+      answerIndex: 0,
+      explanation: "A migração da dor periumbilical para a fossa ilíaca direita, associada a náuseas, febre e dor à palpação no ponto de McBurney, é a apresentação clássica da apendicite aguda.",
+      tag: "Cirurgia"
+    },
+    {
+      id: "suseme-2023-q22",
+      text: "Paciente feminina, 65 anos, desperta bem, após almoço apresenta subitamente hemiplegia à esquerda, disartria e desvio da comissura labial. Chega à emergência após 3 horas. Tomografia evidencia área hipodensa em todo território da artéria cerebral média direita. Assinale a opção que CONTRAINDICA a trombólise venosa:",
+      options: [
+        "tomografia de crânio de admissão com evidência de injúria vascular extensa precoce",
+        "tempo do inicio dos sintomas",
+        "escala de NIHSS elevada",
+        "hipertensão arterial"
+      ],
+      answerIndex: 0,
+      explanation: "A presença de uma área hipodensa extensa (envolvendo > 1/3 do território da ACM) na TC inicial é uma contraindicação absoluta à trombólise, pois indica um infarto já estabelecido com alto risco de transformação hemorrágica.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2023-q23",
+      text: "Paciente masculino, 36 anos, queixa-se de cefaleia holocraniana de forte intensidade e dor na nuca. Confirma apresentar herpes genital de repetição. Exame de líquor com aumento da celularidade às custas de linfócitos. A principal hipótese é:",
+      options: ["hemorragia subaracnóidea", "meningite herpética", "meningite bacteriana", "cefaleia tipo tensional"],
+      answerIndex: 1,
+      explanation: "A meningite viral é a causa mais comum de meningite asséptica. O líquor com pleocitose linfocitária e a história de herpes genital recorrente (causada pelo HSV-2) tornam a meningite herpética a principal suspeita.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2023-q24",
+      text: "Sobre o estado de mal epiléptico, podemos afirmar:",
+      options: [
+        "não há indicação de tratamento com anticonvulsivantes",
+        "ocorre em casos de crises convulsivas contínuas por mais de 1 hora",
+        "não está associado a lesão neuronal ou gravidade do status neurológico",
+        "a maior parte dos casos é causado por dano cerebral agudo em pacientes sem história prévia de epilepsia"
+      ],
+      answerIndex: 3,
+      explanation: "O estado de mal epiléptico é mais frequentemente causado por uma lesão cerebral aguda (ex: TCE, AVE, infecção do SNC) em pacientes sem diagnóstico prévio de epilepsia. A definição operacional atual é uma crise contínua por > 5 minutos.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2023-q25",
+      text: "Sobre a morte encefálica podemos afirmar:",
+      options: [
+        "o uso de drogas sedativas não interfere no diagnóstico",
+        "eletroencefalograma não pode ser usado como teste confirmatório",
+        "é necessário a presença de lesão estrutural cerebral compatível com a evidência de morte encefálica",
+        "a avaliação da temperatura corporal não interfere na avaliação do paciente"
+      ],
+      answerIndex: 2,
+      explanation: "Um dos pré-requisitos para o diagnóstico de morte encefálica é a identificação de uma causa conhecida e irreversível de lesão cerebral. Fatores de confusão como hipotermia e uso de drogas sedativas devem ser afastados.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2023-q26",
+      text: "Com relação a toxemia gravídica podemos afirmar, EXCETO:",
+      options: [
+        "geralmente é caracterizada classicamente por hipertensão e proteinúria",
+        "doença multissistémica que costuma ocorrer na primeira metade da gestação",
+        "no Brasil tem incidência em torno de 10% das grávidas (principalmente primíparas)",
+        "nas suas formas graves pode ocorrer convulsão, sendo denominada neste caso como eclampsia"
+      ],
+      answerIndex: 1,
+      explanation: "A pré-eclâmpsia (toxemia gravídica) é, por definição, uma doença que se manifesta APÓS a 20ª semana de gestação. Hipertensão antes de 20 semanas é classificada como hipertensão crônica.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2023-q27",
+      text: "O fator de risco considerado mais importante para a placenta prévia é:",
+      options: ["idade materna avançada", "cesárea anterior", "multiparidade", "tabagismo"],
+      answerIndex: 1,
+      explanation: "A presença de uma cicatriz uterina anterior, principalmente por cesariana, é o fator de risco isolado mais importante para o desenvolvimento de placenta prévia em gestações futuras.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2023-q28",
+      text: "Uma outra definição utilizada para a sindrome de Sheehan é:",
+      options: ["necrose hipofisária pós-parto", "necrose suprarrenal pós-parto", "necrose pancreática pós-parto", "necrose renal pós-parto"],
+      answerIndex: 0,
+      explanation: "A Síndrome de Sheehan é definida como a necrose da glândula hipófise (pituitária) secundária a uma hemorragia pós-parto grave, levando a um quadro de pan-hipopituitarismo.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2023-q29",
+      text: "Com relação a Doença Hemolítica Perinatal (DHPN), podemos afirmar EXCETO:",
+      options: [
+        "são fatores relacionados a DHPN: aloimunização materna, passagem de anticorpos da gestante para o feto, ação desses anticorpos no concepto",
+        "é uma afecção generalizada, acompanhada de anemia, destruição das hemácias e aparecimento de suas formas jovens na circulação",
+        "em 98% dos casos de DHPN, a incompatibilidade entre a mãe e o feto é atribuída aos sistemas Rh e ABO",
+        "a incompatibilidade pelo sistema Rh na maioria das vezes acomete o primeiro filho (95%)"
+      ],
+      answerIndex: 3,
+      explanation: "A sensibilização materna ao antígeno Rh ocorre geralmente no primeiro parto de um feto Rh positivo. Portanto, a Doença Hemolítica Perinatal por incompatibilidade Rh classicamente acomete o SEGUNDO filho em diante.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2023-q30",
+      text: "O agente mais comumente envolvido no impetigo crostoso, que pode ocorrer em adultos e crianças é:",
+      options: ["mycoplasma pneumoniae", "staphylococcus aureus", "sarcoptes scabiei", "proteus mirabilis"],
+      answerIndex: 1,
+      explanation: "Embora classicamente associado ao Streptococcus pyogenes, o Staphylococcus aureus é atualmente o agente mais isolado tanto no impetigo não-bolhoso (crostoso) quanto no bolhoso.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2023-q31",
+      text: "Com relação aos Critérios de Duke, modificados para diagnóstico de endocardite infecciosa (EI), pode ser considerado um critério maior:",
+      options: [
+        "fenômenos vasculares, como lesões de Janeway",
+        "fenômenos imunológicos, como nódulos de Osler",
+        "hemocultura positiva para EI com microrganismos compatíveis em 2 amostras",
+        "condição cardíaca predisponente"
+      ],
+      answerIndex: 2,
+      explanation: "Os critérios maiores de Duke para endocardite são: 1) Hemoculturas positivas para agentes típicos e 2) Evidência de envolvimento endocárdico no ecocardiograma (vegetação, abscesso, nova regurgitação valvar). As outras opções são critérios menores.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2023-q32",
+      text: "Com relação a síndrome hemolítico-urêmica (SHU) pode-se afirmar, EXCETO:",
+      options: [
+        "é definida pela ocorrência simultânea de anemia hemolítica microangiopática, trombocitopenia e insuficiência renal aguda",
+        "a anemia frequentemente ocorre de forma progressiva e leve",
+        "crianças apresentam pródromo característico: dor abdominal, vômitos e diarreia",
+        "a causa mais comum na infância é a infecção por Escherichia coli"
+      ],
+      answerIndex: 1,
+      explanation: "A anemia na SHU é tipicamente aguda e grave, resultante da destruição mecânica das hemácias nos pequenos vasos obstruídos por trombos, e não progressiva e leve.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2023-q33",
+      text: "A Síndrome Respiratória Aguda Grave (SRAG) é definida pela presença de dispneia ou dos seguintes sinais de gravidade, EXCETO:",
+      options: [
+        "saturação de SpO2 < que 95% em ar ambiente",
+        "piora nas condições clinicas de doença de base",
+        "aumento dos níveis pressóricos (hipertensão arterial)",
+        "sinais de desconforto respiratório ou aumento da frequência respiratória"
+      ],
+      answerIndex: 2,
+      explanation: "Hipotensão arterial, e não hipertensão, é um sinal de gravidade e disfunção orgânica que compõe a definição de SRAG. Os outros itens são critérios válidos.",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2023-q34",
+      text: "A doença Monkeypox se caracteriza pelos seguintes achados, EXCETO:",
+      options: [
+        "a transmissão por meio de gotículas geralmente requer contato próximo e prolongado",
+        "a doença geralmente evolui com sinais e sintomas graves, devendo todos os pacientes serem internados na UTI",
+        "é uma doença causada pelo Monkeypox vírus, do gênero Orthopoxvirus",
+        "a incubação dura de 6 a 16 dias, em média"
+      ],
+      answerIndex: 1,
+      explanation: "A grande maioria dos casos de Monkeypox é autolimitada e cursa com sintomas leves. Apenas uma pequena percentagem de pacientes, especialmente imunocomprometidos, desenvolve formas graves que necessitam de internação.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2023-q35",
+      text: "Com relação ao manejo clínico da Síndrome Respiratória causada pelo novo coronavirus (SARS-COV-2), é RECOMENDADA a seguinte estratégia:",
+      options: [
+        "administrar antibiótico dentro de uma hora da avaliação inicial de pacientes com sepse",
+        "administrar de forma rotineira corticosteroides sistêmicos para tratamento de pneumonia viral",
+        "administrar oxigenoterapia suplementar a todos os pacientes, independente da saturação",
+        "administrar fluidos em excesso em pacientes com SRAG mesmo quando não houver evidência de choque"
+      ],
+      answerIndex: 0,
+      explanation: "No paciente com COVID-19 que desenvolve sepse ou choque séptico, a administração de antibióticos de amplo espectro na primeira hora é uma recomendação padrão, pois a co-infecção bacteriana é uma possibilidade.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2023-q36",
+      text: "A mortalidade de pacientes com estenose aórtica grave costuma estar mais elevada quando na presença dos seguintes sintomas, EXCETO:",
+      options: ["sincope", "angina pectoris", "dispneia", "palpitação"],
+      answerIndex: 3,
+      explanation: "A tríade de síncope, angina e dispneia (insuficiência cardíaca) são os sintomas cardinais da estenose aórtica e marcam um ponto de viragem para um prognóstico muito ruim se não tratada. Palpitação é um sintoma inespecífico e não está associado ao mesmo aumento de mortalidade.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2023-q37",
+      text: "Com relação as estratégias utilizadas no manejo clínico dos pacientes com insuficiência cardíaca e fração de ejeção reduzida (ICFER) está CORRETO afirmar que:",
+      options: [
+        "a combinação de hidralazina e nitratos não demonstrou aumentar a sobrevida",
+        "os beta-bloqueadores podem produzir redução dos sintomas e da taxa de hospitalizações, assim como da mortalidade",
+        "todos os beta-bloqueadores estão indicados na ICFER",
+        "o uso de antagonista da aldosterona está associado à redução na mortalidade apenas no estágio avançado"
+      ],
+      answerIndex: 1,
+      explanation: "Os betabloqueadores (especificamente carvedilol, metoprolol e bisoprolol) são uma das classes de medicamentos com maior impacto na ICFEr, comprovadamente reduzindo mortalidade, hospitalizações e melhorando os sintomas.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2023-q38",
+      text: "O escore CHA2DS2-VASc pode ser usado para estimar o risco de AVC nos pacientes com fibrilação atrial. O fator de risco que NÃO é utilizado neste escore é:",
+      options: ["insuficiência cardíaca congestiva", "hipertensão", "dislipidemia", "doença vascular"],
+      answerIndex: 2,
+      explanation: "O escore CHA2DS2-VASc inclui Insuficiência Cardíaca, Hipertensão, Idade (Age), Diabetes, AVC prévio (Stroke), Doença Vascular, e Sexo feminino (Sex category). Dislipidemia não faz parte do escore.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2023-q39",
+      text: "Com relação ao tratamento do Infarto Agudo do Miocárdio com Elevação do Segmento ST (IAMEST), assinale a afirmativa CORRETA:",
+      options: [
+        "história de hemorragia cerebral em qualquer época pode ser uma contraindicação ao uso dos agentes fibrinolíticos",
+        "os beta-bloqueadores utilizados na fase aguda não têm efeito sobre a extensão do infarto",
+        "a adição do clopidogrel ao tratamento com ácido acetilsalicílico não demonstrou reduzir o risco de eventos clinicos",
+        "os bloqueadores dos receptores da angiotensina (BRAs) não devem ser utilizados em pacientes com intolerância aos IECAS"
+      ],
+      answerIndex: 0,
+      explanation: "História de AVC hemorrágico em qualquer momento da vida é uma contraindicação absoluta ao uso de fibrinolíticos. A dupla antiagregação (AAS + Clopidogrel) é fundamental. Betabloqueadores reduzem a área de infarto. BRAs são a alternativa aos IECAs.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2023-q40",
+      text: "Os critérios do escore Wells ajudam a estimar a probabilidade clinica de TVP e EP. A variável clínica que NÃO é utilizada neste escore é:",
+      options: ["edema com cacifo", "edema em toda a perna", "frequência respiratória > 20 irm", "frequência cardiaca > 100 bpm"],
+      answerIndex: 2,
+      explanation: "O escore de Wells para TVP inclui itens como edema, dor, imobilização, etc. O escore para TEP inclui FC > 100, imobilização, sinais de TVP. A frequência respiratória não faz parte de nenhum dos dois escores.",
+      tag: "Pneumologia"
+    }
+  ]
+},
+
+{
+  id: "prova-suseme-2022-emergencia-cti-obstetricia",
+  name: "SUSEME - Emergência - 2022",
+  questions: [
+    {
+      id: "suseme-2022-q1",
+      text: "De acordo com a Constituição de 1988, a seguridade social compreende um conjunto integrado de ações destinadas a assegurar os direitos relativos a:",
+      options: [
+        "à saúde, à previdência e à assistência social",
+        "à saúde, ao bem-estar e à assistência social",
+        "à previdência social, à assistência e à equidade",
+        "à assistência, à universalidade e à previdência social"
+      ],
+      answerIndex: 0,
+      explanation: "O Art. 194 da Constituição Federal define o tripé da seguridade social, que é composto pela Saúde (para todos, independentemente de contribuição), Previdência Social (para contribuintes) e Assistência Social (para quem dela necessitar).",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2022-q2",
+      text: "Com base no Art. 200 da Constituição, compete ao Sistema Único de Saúde (SUS):",
+      options: [
+        "participar da formulação de ações de vigilância sanitária e epidemiológica",
+        "incrementar, em sua área de atuação, o desenvolvimento científico e tecnológico e a inovação",
+        "colaborar na fiscalização e inspeção de alimentos, como bebidas e água para consumo humano",
+        "ordenar e participar da formação de política de recursos humanos nas ações de saúde do trabalhador"
+      ],
+      answerIndex: 1,
+      explanation: "Além das ações assistenciais, o Art. 200 estabelece que compete ao SUS incrementar o desenvolvimento científico e tecnológico na área da saúde. As outras opções estão incorretas ou incompletas em sua formulação.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2022-q3",
+      text: "A Lei nº 8.080/90 atribui a competência de controlar e fiscalizar os procedimentos dos serviços privados de saúde à direção do SUS na esfera de poder:",
+      options: ["regional", "nacional", "estadual", "municipal"],
+      answerIndex: 3,
+      explanation: "Seguindo o princípio da descentralização, a gestão e fiscalização dos serviços de saúde, incluindo os privados contratados, é de competência da direção municipal do SUS, que está mais próxima da realidade local.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2022-q4",
+      text: "No âmbito do SUS, os cargos e funções de chefia, direção e assessoramento só poderão ser exercidos em regime:",
+      options: ["de tempo parcial", "de tempo integral", "de tempo concomitante", "de dedicação exclusiva"],
+      answerIndex: 1,
+      explanation: "O Art. 28 da Lei 8.080/90 estabelece que os cargos de chefia, direção e assessoramento no SUS devem ser exercidos preferencialmente em regime de tempo integral.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2022-q5",
+      text: "As receitas geradas no âmbito do SUS, movimentadas pela sua direção, serão creditadas diretamente em contas:",
+      options: ["públicas", "especiais", "vinculadas", "do tesouro"],
+      answerIndex: 1,
+      explanation: "O § 2º do Art. 32 da Lei 8.080/90 determina que as receitas sejam depositadas em contas especiais, garantindo que os recursos sejam utilizados exclusivamente nas ações de saúde da respectiva esfera de governo.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2022-q6",
+      text: "É vedada a transferência de recursos para o financiamento de ações não previstas nos planos de saúde, EXCETO em situações:",
+      options: [
+        "urgentes ou de emergência",
+        "prioritárias ou de impedimento",
+        "de necessidade ou de atenção",
+        "emergenciais ou de calamidade pública"
+      ],
+      answerIndex: 3,
+      explanation: "A Lei 8.080/90 permite a flexibilização do uso dos recursos para ações não previstas no plano de saúde apenas em situações excepcionais, como emergências ou estado de calamidade pública.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2022-q7",
+      text: "O Conselho Nacional de Secretários de Saúde (Conass) e o Conselho Nacional de Secretários Municipais de Saúde (Conasems) terão representação:",
+      options: [
+        "no Conselho de Ética",
+        "na Secretaria de Saúde",
+        "no Conselho Nacional de Saúde",
+        "no Conselho Estadual de Saúde"
+      ],
+      answerIndex: 2,
+      explanation: "O Conass e o Conasems, que representam os gestores estaduais e municipais, têm assento garantido no Conselho Nacional de Saúde, participando da formulação e fiscalização da política nacional de saúde.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2022-q8",
+      text: "As Conferências de Saúde e os Conselhos de Saúde terão sua organização e suas normas de funcionamento definidas em regimento:",
+      options: ["interno, aprovadas pelo colegiado", "único, aprovadas por cada conselho", "específico, aprovadas pelos conselhos", "próprio, aprovadas pelo respectivo conselho"],
+      answerIndex: 3,
+      explanation: "A Lei 8.142/90 estabelece que cada instância colegiada (Conferência ou Conselho) deve ter seu regimento próprio, aprovado por seus próprios membros, garantindo autonomia de funcionamento.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2022-q9",
+      text: "Os recursos do Fundo Nacional de Saúde serão alocados como investimentos previstos em lei orçamentária, de iniciativa do ___ e aprovados pelo Congresso Nacional.",
+      options: ["Poder Legislativo", "Poder Executivo", "Ministro da Saúde", "Secretário de Saúde"],
+      answerIndex: 1,
+      explanation: "A proposta de lei orçamentária é sempre de iniciativa do Poder Executivo (no caso federal, a Presidência da República), que a submete à aprovação do Poder Legislativo (Congresso Nacional).",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2022-q10",
+      text: "O conjunto de ações e serviços de saúde, prestados por órgãos e instituições públicas federais, estaduais e municipais, da Administração direta e indireta e das fundações mantidas pelo Poder Público, constitui:",
+      options: ["a Secretaria de Saúde", "o Sistema Público de Saúde", "o Sistema Único de Saúde (SUS)", "o Sistema Administrativo de Saúde"],
+      answerIndex: 2,
+      explanation: "Esta é a definição exata do Sistema Único de Saúde (SUS) conforme o Art. 4º da Lei 8.080/90, abrangendo todas as esferas de governo e entidades públicas.",
+      tag: "SUS"
+    },
+    {
+      id: "suseme-2022-q11",
+      text: "Gestante de 28 anos apresenta dor pleurítica e dispneia no segundo trimestre da gestação. Sua avaliação evidencia tromboembolia pulmonar. O tratamento a ser indicado é:",
+      options: ["heparina de baixo peso molecular", "heparina não fracionada", "varfarina", "aspirina"],
+      answerIndex: 0,
+      explanation: "A heparina de baixo peso molecular (HBPM) é o anticoagulante de escolha para o tratamento de TEP na gestação, pois é eficaz e não atravessa a barreira placentária. A varfarina é teratogênica e contraindicada.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2022-q12",
+      text: "Feocromocitomas são tumores secretantes de catecolaminas. O principal sintoma para suspeição destes tumores é:",
+      options: ["cefaleia", "dispneia", "hipertensão de difícil controle", "edema de membros inferiores"],
+      answerIndex: 2,
+      explanation: "Embora a tríade clássica seja cefaleia, palpitações e sudorese, a manifestação mais comum e que levanta a suspeita de feocromocitoma é a hipertensão arterial de difícil controle, muitas vezes paroxística.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2022-q13",
+      text: "Diarreia é um sintoma muito comum em crianças. O principal agente de gastroenterite esporádica nesta faixa etária é o:",
+      options: ["rotavirus", "norovirus", "astrovírus", "herpesvirus"],
+      answerIndex: 1,
+      explanation: "Enquanto o Rotavírus era a principal causa antes da vacinação, atualmente o Norovírus é o principal agente etiológico de surtos de gastroenterite viral aguda em crianças e adultos.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2022-q14",
+      text: "A infecção oportunista mais comum em pacientes HIV+ com contagem de linfócitos T CD4 abaixo de 50 células/mm³ é:",
+      options: ["nocardiose", "meningite por Varicela Zoster", "complexo Mycobacterium avium", "meningite por Listeria monocytogenes"],
+      answerIndex: 2,
+      explanation: "A infecção disseminada pelo Complexo Mycobacterium avium (MAC) é uma doença definidora de AIDS que ocorre tipicamente em pacientes com imunossupressão muito grave, com CD4 < 50 células/mm³.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2022-q15",
+      text: "Paciente feminina, 69 anos, apresenta cefaleia de forte intensidade, holocraniana, de início abrupto, 'a pior que já sentiu'. São fatores que sugerem gravidade no relato acima:",
+      options: [
+        "intensidade da dor e sexo feminino",
+        "hipertensão arterial e sexo feminino",
+        "idade > 55 anos e intensidade da dor",
+        "idade > 55 anos e hipertensão arterial"
+      ],
+      answerIndex: 2,
+      explanation: "Idade acima de 50 anos e uma cefaleia de forte intensidade e início súbito ('thunderclap headache') são importantes 'sinais de alerta' (red flags) que exigem investigação para causas secundárias graves, como hemorragia subaracnóidea.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2022-q16",
+      text: "Paciente masculino, 28 anos, com cefaleia de moderada intensidade há dois meses, associada a inapetência, febre baixa vespertina e sudorese noturna. Punção lombar com pleocitose linfocítica e hipoglicorraquia. O diagnóstico provável é:",
+      options: ["meningite asséptica", "meningite tuberculosa", "meningite meningocócica", "hemorragia subaracnóidea"],
+      answerIndex: 1,
+      explanation: "O quadro de meningite subaguda/crônica com sintomas constitucionais, associado a um líquor com pleocitose linfocítica e consumo de glicose (hipoglicorraquia), é a apresentação clássica da meningite tuberculosa.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2022-q17",
+      text: "Atonia uterina é a causa mais comum de hemorragia no pós-parto imediato. É um fator de risco para esta complicação:",
+      options: ["anemia", "hipotireoidismo", "hiperemese gravidica", "distensão uterina exagerada pela gravidez gemelar"],
+      answerIndex: 3,
+      explanation: "A sobredistensão uterina (por gemelaridade, polidrâmnio ou macrossomia) é um dos principais fatores de risco para atonia uterina, pois dificulta a contração eficaz do miométrio após o parto.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2022-q18",
+      text: "Paciente, 38 anos, branca, com cansaço, ganho de peso, constipação. Ao exame: edema palpebral, FC 60 bpm, PA 130/100 mmHg, pele seca e macroglossia. O exame complementar mais útil nesse caso é:",
+      options: ["TSH", "T4 livre", "T3 livre", "dosagem de antitireoglobulina"],
+      answerIndex: 0,
+      explanation: "O quadro clínico é altamente sugestivo de hipotireoidismo. O TSH (hormônio estimulante da tireoide) é o exame mais sensível para o diagnóstico de hipotireoidismo primário (a causa mais comum), pois ele se eleva precocemente em resposta à falha da glândula.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2022-q19",
+      text: "Paciente masculino, 18 anos, com dor inespecífica periumbilical há 36 horas. Evoluiu com febre, náusea e dor localizada em quadrante inferior direito. O Sinal de McBurney estava presente. O diagnóstico provável é:",
+      options: ["colecistite aguda", "apendicite aguda", "pielonefrite aguda", "gastroenterite aguda"],
+      answerIndex: 1,
+      explanation: "A migração da dor periumbilical para a fossa ilíaca direita, associada a náuseas, febre e dor à palpação no ponto de McBurney, é a apresentação clássica da apendicite aguda.",
+      tag: "Cirurgia"
+    },
+    {
+      id: "suseme-2022-q20",
+      text: "Nas anemias megaloblásticas, as células tendem a ser grandes, com uma proporção aumentada de RNA em relação ao DNA. A principal causa desta condição é a deficiência de:",
+      options: ["ferro e zinco", "zinco e folato", "cobalamina e ferro", "cobalamina e folato"],
+      answerIndex: 3,
+      explanation: "A anemia megaloblástica é causada por um defeito na síntese de DNA, que leva a uma assincronia de maturação núcleo-citoplasmática. As principais causas são a deficiência de cobalamina (vitamina B12) e/ou folato (vitamina B9), que são essenciais para essa síntese.",
+      tag: "Hematologia"
+    },
+    {
+      id: "suseme-2022-q21",
+      text: "Paciente masculino, 18 anos, após acidente de motocicleta, pontuava 8 na Escala de Coma de Glasgow. A sequência correta para este atendimento é:",
+      options: [
+        "administrar anticonvulsivante e realizar tomografia de crânio",
+        "assegurar acesso calibroso e via aérea com entubação orotraqueal",
+        "realizar tomografia de crânio e solicitar avaliação do neurocirurgião",
+        "assegurar acesso venoso e observar já que possui reflexo faríngeo preservado"
+      ],
+      answerIndex: 1,
+      explanation: "Um paciente com Glasgow ≤ 8 tem indicação de intubação orotraqueal para proteção de via aérea. Seguindo o ABCDE do trauma, a garantia da via aérea (A) e a obtenção de um acesso venoso calibroso (C) são prioridades imediatas.",
+      tag: "Trauma"
+    },
+    {
+      id: "suseme-2022-q22",
+      text: "O fator de risco modificável que está relacionado ao aumento de risco no AVE isquêmico é a:",
+      options: ["desnutrição", "idade avançada", "anemia falciforme", "hipertensão arterial"],
+      answerIndex: 3,
+      explanation: "A hipertensão arterial sistêmica é o principal fator de risco modificável para o acidente vascular cerebral, tanto isquêmico quanto hemorrágico. Idade e anemia falciforme são fatores não modificáveis ou de difícil modificação.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2022-q23",
+      text: "A principal etiologia do hematoma intraparenquimatoso (AVE hemorrágico) com localização talâmica é:",
+      options: ["vasculite", "hipertensão", "oclusão de grandes vasos", "oclusão de pequenos vasos"],
+      answerIndex: 1,
+      explanation: "A hipertensão arterial crônica é a principal causa de AVC hemorrágico intraparenquimatoso, especialmente em localizações profundas como tálamo, putâmen, ponte e cerebelo, devido à ruptura de pequenos vasos perfurantes (lipohialinose).",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2022-q24",
+      text: "Sobre a trombólise venosa no AVE isquêmico, é correto afirmar que:",
+      options: [
+        "a profilaxia secundária deve ser administrada logo após o término do trombolítico",
+        "deve-se assegurar acesso venoso profundo, cateter vesical de demora e sonda nasoenteral logo que o trombolítico seja finalizado",
+        "caso o paciente apresente cefaleia e vômitos durante a infusão, deve-se administrar analgésico e aumentar a velocidade de infusão",
+        "caso o paciente apresente cefaleia intensa e rebaixamento do nível de consciência, a medicação deve ser suspensa e tomografia de crânio prontamente realizada"
+      ],
+      answerIndex: 3,
+      explanation: "A piora neurológica durante ou após a infusão do trombolítico levanta a forte suspeita de transformação hemorrágica, a complicação mais temida. A conduta é interromper imediatamente a infusão e realizar uma TC de crânio de emergência.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2022-q25",
+      text: "São critérios de EXCLUSÃO ABSOLUTA para trombólise venosa no AVE isquêmico:",
+      options: [
+        "idade maior que 80 anos",
+        "uso de marevan com INR<1,5",
+        "início dos sintomas há menos de 3 horas da avaliação",
+        "tomografia de admissão evidenciando hipodensidade extensa em território de artéria cerebral média"
+      ],
+      answerIndex: 3,
+      explanation: "A presença de uma área de hipodensidade extensa (envolvendo mais de 1/3 do território da artéria cerebral média) na TC inicial é uma contraindicação absoluta à trombólise, pois indica um infarto já estabelecido com alto risco de sangramento.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2022-q26",
+      text: "Paciente com eletrocardiograma apresentando supradesnivelamento do segmento ST em parede inferior associado à hipotensão. Neste caso, a extensão do infarto agudo está geralmente associada com infarto de:",
+      options: ["parede lateral", "parede anterior", "ventrículo direito", "parede anteroseptal"],
+      answerIndex: 2,
+      explanation: "O infarto agudo do miocárdio de parede inferior, especialmente quando associado a hipotensão e choque, frequentemente se estende para o ventrículo direito, pois a artéria coronária direita irriga ambas as paredes.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2022-q27",
+      text: "A miocardite tem sido mais comumente encontrada nos dias atuais e apresenta várias características, EXCETO:",
+      options: [
+        "podem ser causas de insuficiência cardíaca aguda e crônica",
+        "um dos agentes etiológicos mais frequentes é o Trypanosoma cruzi",
+        "o tratamento com imunossupressores determina melhora da sobrevida em todos os pacientes",
+        "pode resultar de múltiplas causas, mais comumente atribuido a agentes infecciosos"
+      ],
+      answerIndex: 2,
+      explanation: "A miocardite por T. cruzi (Doença de Chagas) é uma causa importante de miocardiopatia crônica, mas não é o agente mais frequente de miocardite aguda. A imunossupressão não melhora a sobrevida em todos os casos e é indicada apenas em cenários específicos, como na miocardite de células gigantes.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2022-q28",
+      text: "Um paciente dá entrada na emergência com hemorragia digestiva alta, história pregressa de hipertensão portal e de varizes esofágicas. O exame diagnóstico a ser solicitado de preferência, neste caso, é:",
+      options: ["tomografia computadorizada", "endoscopia digestiva alta", "ressonância magnética", "ultrassonografia"],
+      answerIndex: 1,
+      explanation: "A endoscopia digestiva alta (EDA) é o exame de escolha na hemorragia digestiva alta, pois permite não apenas confirmar a causa do sangramento (neste caso, provável ruptura de varizes esofágicas), mas também realizar o tratamento hemostático na mesma hora.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2022-q29",
+      text: "São considerados critérios de diagnóstico de diabetes mellitus, EXCETO:",
+      options: [
+        "a presença de sintomas clássicos (poliúria, polidipsia e perda de peso) associados a glicosúria já é considerado diagnóstico",
+        "glicose plasmática em jejum (de pelo menos 8h) ≥ 126 mg/dL",
+        "glicose plasmática em 2h durante o TOTG ≥ 200 mg/dL",
+        "hemoglobina A1c ≥ 6,5%"
+      ],
+      answerIndex: 0,
+      explanation: "A presença de sintomas clássicos associada a uma glicemia casual ≥ 200 mg/dL fecha o diagnóstico. A glicosúria isolada, sem a medida da glicemia, não é um critério diagnóstico formal.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2022-q30",
+      text: "Não é um marcador considerado de gravidade na admissão ou dentro de 24 horas nos casos de pancreatite aguda:",
+      options: [
+        "hemodiluição (hematócrito < 38%)",
+        "contagem de leucócitos > 12.000/µL",
+        "temperatura central < 36°C ou > 38°C",
+        "frequência cardiaca > 90 batimentos/min"
+      ],
+      answerIndex: 0,
+      explanation: "A hemoconcentração (aumento do hematócrito), e não a hemodiluição, é um marcador de gravidade na pancreatite aguda, pois reflete o grande sequestro de líquido para o terceiro espaço. As outras opções são critérios da Síndrome da Resposta Inflamatória Sistêmica (SIRS), que indicam gravidade.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2022-q31",
+      text: "Gastrinomas causam uma superprodução do hormônio gastrina, que produz um aumento na secreção de ácido gástrico, levando a complicações caracterizadas pela Síndrome de:",
+      options: ["Zollinger-Ellison", "Claud Bernard", "Mallory-Weiss", "Horner"],
+      answerIndex: 0,
+      explanation: "A Síndrome de Zollinger-Ellison é caracterizada pela tríade de hipersecreção gástrica ácida, úlceras pépticas graves e recorrentes, e um gastrinoma (tumor produtor de gastrina), geralmente localizado no pâncreas ou duodeno.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2022-q32",
+      text: "Com relação a toxemia gravídica, é correto afirmar que:",
+      options: [
+        "ocorre convulsão nas formas leves",
+        "ocorre principalmente em multiparas",
+        "incide em mais de 70% das grávidas",
+        "costuma a ocorrer na segunda metade da gestação"
+      ],
+      answerIndex: 3,
+      explanation: "A pré-eclâmpsia (toxemia gravídica) é uma doença que se manifesta tipicamente após a 20ª semana de gestação. Convulsão (eclâmpsia) é um sinal de gravidade. É mais comum em primigestas. A incidência é de cerca de 5-10%.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2022-q33",
+      text: "Dentre as características da gravidez tubária pode-se afirmar, EXCETO:",
+      options: [
+        "o quadro clinico mais comum é o subagudo",
+        "na forma aguda da gravidez tubária o tratamento é cirúrgico",
+        "a gravidez ovariana é comum, representando 50% das formas ectópicas",
+        "o diagnóstico costuma a ser feito por ultrassonografia transvaginal e beta HCG"
+      ],
+      answerIndex: 2,
+      explanation: "A gravidez ovariana é uma forma muito rara de gravidez ectópica, correspondendo a menos de 3% dos casos. A localização mais comum é a tubária (>95%).",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2022-q34",
+      text: "A maioria das crianças maiores e adultos infectados com a dengue apresenta aparecimento súbito de febre, com rápida elevação da temperatura, geralmente acompanhada de dor frontal ou retrorbital, sendo, nestes casos, recomendado como tratamento inicial:",
+      options: ["aspirina", "ampicilina", "azatioprina", "suporte somente (hidratação, antitermicos e analgésicos)"],
+      answerIndex: 3,
+      explanation: "O tratamento da dengue não complicada é de suporte, baseado em hidratação oral vigorosa, repouso e uso de sintomáticos como paracetamol ou dipirona para febre e dor. Aspirina e outros AINEs são contraindicados pelo risco de sangramento.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2022-q35",
+      text: "Pode ser considerada como uma causa de insuficiência renal aguda do tipo pré-renal:",
+      options: ["ureterocele", "hemorragia", "rabdomiólise", "necrose tubular aguda"],
+      answerIndex: 1,
+      explanation: "A insuficiência renal pré-renal é causada pela hipoperfusão dos rins. A hemorragia leva à hipovolemia e consequente queda da perfusão renal. Rabdomiólise e NTA são causas renais (intrínsecas). Ureterocele é causa pós-renal.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2022-q36",
+      text: "Com relação aos padrões de fraturas pediátricas, NÃO pode-se afirmar que:",
+      options: [
+        "deformações plásticas ocorrem exclusivamente em crianças",
+        "a maioria das fraturas pediátricas devem ser tratadas através de cirurgias abertas",
+        "a fratura em galho verde ocorre quando o osso está curvado e há falha na face elástica (convexa) do osso",
+        "as fraturas de indentação são inerentemente estáveis e cicatrizam em 3 a 4 semanas com imobilização simples"
+      ],
+      answerIndex: 1,
+      explanation: "Ao contrário dos adultos, a grande maioria das fraturas pediátricas é de tratamento conservador (imobilização com gesso), devido ao grande potencial de remodelação óssea da criança. As outras afirmações estão corretas.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2022-q37",
+      text: "O exame diagnóstico de escolha para detectar uma embolia pulmonar é:",
+      options: [
+        "eletrocardiograma",
+        "radiografia de tórax",
+        "tomografia helicoidal com contraste",
+        "cintilografia de ventilação/perfusão"
+      ],
+      answerIndex: 2,
+      explanation: "A Angiotomografia de tórax (tomografia helicoidal com contraste) é o exame padrão-ouro para o diagnóstico de tromboembolismo pulmonar, pois visualiza diretamente os trombos nas artérias pulmonares.",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2022-q38",
+      text: "O tratamento farmacológico recomendado para giardíase é:",
+      options: ["tinidazol", "fluconazol", "amoxicilina", "vancomicina"],
+      answerIndex: 0,
+      explanation: "O tratamento da giardíase é feito com antiparasitários, sendo os nitroimidazólicos como o tinidazol ou o metronidazol as drogas de primeira escolha. As outras opções são antifúngicos ou antibióticos.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2022-q39",
+      text: "Dentre as indicações de cirurgia de urgência no traumatismo torácico, aquela que NÃO é considerada uma necessidade de toracotomia imediata é:",
+      options: ["lesão da aorta", "lesão esofágica", "quilotórax persistente", "rotura aguda do diafragma"],
+      answerIndex: 2,
+      explanation: "O quilotórax (acúmulo de linfa no tórax) geralmente é tratado inicialmente de forma conservadora. A cirurgia é indicada apenas se houver falha no tratamento clínico e débito persistente, não sendo uma indicação de toracotomia de emergência. As outras opções são lesões graves que exigem abordagem imediata.",
+      tag: "Cirurgia"
+    },
+    {
+      id: "suseme-2022-q40",
+      text: "Os patógenos mais comumente encontrados na cervicite são:",
+      options: [
+        "C. trachomatis e N. gonorrhoeae",
+        "mycoplasma e C. albicans",
+        "G. vaginalis e ureaplasma",
+        "T. vaginalis e lactobacillus"
+      ],
+      answerIndex: 0,
+      explanation: "A cervicite mucopurulenta é uma infecção sexualmente transmissível causada principalmente pela Neisseria gonorrhoeae (gonococo) e pela Chlamydia trachomatis.",
+      tag: "G.O."
+    }
+  ]
+},
+{
+  id: "prova-suseme-2021-emergencia-cti",
+  name: "SUSEME - Emergência - 2021",
+  questions: [
+    {
+      id: "suseme-2021-q1",
+      text: "Paciente com 58 anos de idade dá entrada em unidade de emergência com quadro de tosse, febre 40°C, expectoração amarelada e dor pleurítica. A tomografia computadorizada de tórax mostra condensação alveolar com presença de broncograma aéreo. Os achados clinicos radiológicos sugerem:",
+      options: [
+        "pneumonia bacteriana adquirida na comunidade",
+        "pneumonia viral adquirida na comunidade",
+        "sindrome de derrame pleural",
+        "tromboembolismo pulmonar"
+      ],
+      answerIndex: 0,
+      explanation: "O quadro de febre alta, tosse produtiva, dor pleurítica e, principalmente, a presença de uma consolidação com broncogramas aéreos na imagem, são a apresentação clássica de uma pneumonia bacteriana típica.",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2021-q2",
+      text: "Médico, durante atendimento em emergência, é exposto a material biológico do vírus HIV, em atendimento a paciente sabidamente portador do virus, e deve iniciar de imediato a profilaxia pós-exposição (PEP) de risco. De acordo com o protocolo clinico do Ministério da Saúde, o esquema terapêutico a ser utilizado é:",
+      options: [
+        "tenofovir + lamivudina + dolutegravir duração de 28 dias",
+        "darunavir + dolutegravir + zidovudina duração 30 dias",
+        "lamivudina + efavirenz + atazanavir duração 30 dias",
+        "zidovudina + ritonavir + efavirenz duração 28 dias"
+      ],
+      answerIndex: 0,
+      explanation: "O esquema preferencial de primeira linha para a Profilaxia Pós-Exposição (PEP) ao HIV, recomendado pelo Ministério da Saúde, é a combinação de Tenofovir + Lamivudina (TDF/3TC) com o Dolutegravir (DTG), mantido por 28 dias.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q3",
+      text: "Paciente do sexo masculino, 55 anos, é atendido em emergência com dor em fossa iliaca direita, febre 38°C, dor abdominal após descompressão súbita, sugestiva de apendicite aguda. O exame de imagem que deve ser solicitado, por sua maior acurácia, é:",
+      options: [
+        "radiografia simples do abdome",
+        "ultrassonografia abdominal total e pélvica",
+        "tomografia computadorizada abdominal total e pélvica",
+        "ressonância nuclear magnética abdominal total e pélvica"
+      ],
+      answerIndex: 2,
+      explanation: "Embora a ultrassonografia seja frequentemente o exame inicial, a Tomografia Computadorizada de abdome e pelve com contraste é o exame com maior sensibilidade e especificidade para o diagnóstico de apendicite aguda em adultos, especialmente para avaliar complicações como abscessos ou perfuração.",
+      tag: "Cirurgia"
+    },
+    {
+      id: "suseme-2021-q4",
+      text: "Paciente do sexo masculino, 33 anos, com dor torácica de forte intensidade em região precordial. Exames cardíacos normais. Ao exame físico, atrito pericárdico e febre. O tratamento instituído deve ser:",
+      options: [
+        "colchicina e anti-inflamatório não esteroide via oral",
+        "corticoide via oral associado com antibioticoterapia venosa",
+        "aspirina em baixas doses associada com corticoide via oral",
+        "oseltamivir (tamiflu) oral associado com enoxaparina subcutânea"
+      ],
+      answerIndex: 0,
+      explanation: "O quadro é de pericardite aguda idiopática (provavelmente viral). O tratamento de primeira linha baseia-se na combinação de um anti-inflamatório não esteroidal (AINE) em altas doses com a colchicina, para alívio dos sintomas e prevenção de recorrências.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2021-q5",
+      text: "Paciente do sexo feminino, 58 anos, dá entrada em emergência com cefaleia, febre de 39°C e rigidez de nuca. Na punção lombar é firmado o diagnóstico de meningite meningocócica. O antibiótico de escolha que deve ser iniciado de imediato é:",
+      options: [
+        "meropenem 2,0g endovenoso de 8/8h",
+        "ceftriaxone 2,0g endovenoso de 12/12h",
+        "vancomicina 1,0g endovenoso de 12/12h",
+        "amoxicilina-clavulanato 1,0g endovenoso de 8/8h"
+      ],
+      answerIndex: 1,
+      explanation: "Para o tratamento da meningite meningocócica em adultos, a droga de escolha é uma cefalosporina de terceira geração com boa penetração no sistema nervoso central, como a Ceftriaxona em altas doses (2g de 12/12h).",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q6",
+      text: "Paciente sexo feminino, 34 anos, vítima de inalação de fumaça de incêndio, é levada para a emergência com quadro de confusão mental, náuseas, dispneia, configurando intoxicação por cianeto. O antídoto de escolha que deve ser utilizado é a:",
+      options: ["n-acetilcisteina via oral", "atropina via endovenosa", "vitamina K por via intramuscular", "hidroxicobalamina via endovenosa"],
+      answerIndex: 3,
+      explanation: "A hidroxicobalamina é o antídoto de primeira linha para a intoxicação por cianeto. Ela se liga ao cianeto formando cianocobalamina (vitamina B12), que é atóxica e excretada na urina. N-acetilcisteína é para paracetamol, atropina para organofosforados e vitamina K para antagonizar varfarina.",
+      tag: "Toxicologia"
+    },
+    {
+      id: "suseme-2021-q7",
+      text: "Médico clínico, após diagnóstico de tromboembolismo pulmonar (TEP) em paciente masculino, 59 anos de idade, no sétimo dia de infecção por COVID-19, opta por tratamento com rivaroxabana. A dose que deve ser prescrita é:",
+      options: [
+        "rivoraxabana 10mg de 12/12h por três semanas, seguida de dose de 30mg dia",
+        "rivoraxabana 15 mg de 12/12h por três semanas, seguida de dose de 20mg dia",
+        "rivoraxabana 20mg de 12/12h por três semanas, seguida de dose de 10mg dia",
+        "rivoraxabana 30mg de 12/12h por três semanas, seguida de dose de 15mg dia"
+      ],
+      answerIndex: 1,
+      explanation: "O esquema de tratamento padrão para TEP com rivaroxabana consiste em uma fase de ataque de 15 mg de 12/12h por 21 dias, seguida por uma fase de manutenção de 20 mg uma vez ao dia.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2021-q8",
+      text: "Paciente masculino, 35 anos, soropositivo para infecção por HIV, apresenta-se com dor intensa em região dorsal do tórax e vesículas dispostas em trajeto linear, compatíveis com diagnóstico de herpes-zóster. O tratamento que deve ser iniciado é:",
+      options: [
+        "800 mg de aciclovir via oral, 5 vezes ao dia, durante 7 dias",
+        "aplicar esteroides e opioides por via endovenosa para controle da dor",
+        "10 a 15mg de aciclovir por Kg/peso, endovenoso, 3 vezes ao dia por no minimo 7 dias",
+        "analgesia venosa e amoxicilina-clavulanato venoso"
+      ],
+      answerIndex: 2,
+      explanation: "Herpes zoster em pacientes imunocomprometidos (como HIV) tem maior risco de disseminação e complicações. Por isso, o tratamento de escolha é com aciclovir endovenoso, em doses mais altas.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q9",
+      text: "Paciente apresenta quadro de síndrome de lise tumoral após quimioterapia para leucemia linfoblástica aguda. Nos resultados de exames laboratoriais de emergência, deve-se esperar a presença dos seguintes achados:",
+      options: [
+        "hiperuricemia, hipercalemia, hipocalcemia e hiperfosfatemia",
+        "hipocalemia, hiperglicemia, hipofosfatemia e hipoproteinemia",
+        "hiponatremia, hipomagnesemia, hiperuricemia e hipocalcemia",
+        "hipercalemia, hipercalcemia, hipomagnesemia e hiperglicemia"
+      ],
+      answerIndex: 0,
+      explanation: "A síndrome de lise tumoral é causada pela destruição maciça de células neoplásicas, que liberam seu conteúdo intracelular na corrente sanguínea. Isso resulta em hiperuricemia (pela degradação de ácidos nucleicos), hipercalemia, hiperfosfatemia e, secundariamente, hipocalcemia (pela quelação do cálcio pelo fósforo).",
+      tag: "Oncologia"
+    },
+    {
+      id: "suseme-2021-q10",
+      text: "Paciente masculino, 60 anos, com infarto agudo do miocárdio com supradesnivelamento do segmento ST. Uma condição do paciente que constitui uma contraindicação absoluta para terapia fibrinolítica é:",
+      options: [
+        "encontrar-se hipertenso com pressão sistólica de 170 mmHg",
+        "ser portador de doença ulcerosa péptica sem histórico de sangramento",
+        "fazer uso regular de dupla agregação plaquetária",
+        "ter apresentado no ano anterior quadro de AVE hemorrágico"
+      ],
+      answerIndex: 3,
+      explanation: "Qualquer histórico de acidente vascular cerebral (AVC) hemorrágico, em qualquer época da vida, é uma contraindicação absoluta para o uso de fibrinolíticos devido ao alto risco de ressangramento intracraniano.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2021-q11",
+      text: "Paciente de 57 anos, portador de cirrose hepática alcoólica, apresenta quadro de peritonite bacteriana espontânea. A medida capaz de prevenir o desenvolvimento de sindrome hepatorrenal, que deve ser tomada de imediato é iniciar:",
+      options: [
+        "antibioticoterapia venosa",
+        "terapia com diuréticos de alça",
+        "reposição de albumina venosa",
+        "reposição volêmica com soro fisiológico"
+      ],
+      answerIndex: 2,
+      explanation: "Em pacientes com Peritonite Bacteriana Espontânea (PBE), a reposição de albumina intravenosa, associada à antibioticoterapia, demonstrou reduzir a incidência de disfunção circulatória e da síndrome hepatorrenal, melhorando a sobrevida.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2021-q12",
+      text: "Mulher de 72 anos com dispneia e febre. Radiografia com derrame pleural. Após Toracocentese, a drenagem torácica imediata está indicada se:",
+      options: [
+        "Ldh do liquido pleural < 100 UI/L, proteina do líquido pleural < 2,0 G/L",
+        "pH: 7,15, glicose: 35 mg%, ldh: 5000 UI/L, predomínio de polimorfonucleares",
+        "pH: 7,30, glicose: 80 mg%, ldh: 800 UI/L, predominio de linfócitos e monócitos",
+        "relação entre proteína do liquido pleural e a sérica < 0,5"
+      ],
+      answerIndex: 1,
+      explanation: "Os achados de pH < 7,20, glicose < 40-60 mg/dL e LDH > 1000 UI/L no líquido pleural são indicativos de um derrame parapneumônico complicado ou empiema, que são indicações formais para drenagem torácica imediata.",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2021-q13",
+      text: "Homem de 55 anos, com lombalgia em uso de diclofenaco, é trazido com hematêmese e melena, hipotenso e taquicárdico. Em relação à Endoscopia Digestiva Alta (EDA), é correto afirmar que:",
+      options: [
+        "deve ser realizada somente após reposição volêmica e estabilização hemodinâmica",
+        "deve ser realizada após tomografia computadorizada de abdome",
+        "deve-se realizar EDA, mesmo com a alta instabilidade hemodinâmica",
+        "é dispensável a EDA, pois a avaliação clinica permite excluir sangramento ativo"
+      ],
+      answerIndex: 0,
+      explanation: "Na hemorragia digestiva alta, a prioridade é a estabilização hemodinâmica do paciente com reposição volêmica e, se necessário, hemotransfusão. A endoscopia deve ser realizada precocemente (nas primeiras 24h), mas apenas após o paciente estar minimamente estável.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2021-q14",
+      text: "Paciente do sexo feminino, 46 anos, com febre alta, calafrios, dor no quadrante superior direito do abdome, ictérica e com alteração do estado mental. A principal hipótese diagnóstica é:",
+      options: ["colangite aguda", "colecistite enfisematosa", "abscesso amebiano do figado", "pancreatite aguda necrotizante"],
+      answerIndex: 0,
+      explanation: "O quadro descrito é a Pêntade de Reynolds (Tríade de Charcot: febre, dor em HCD, icterícia + hipotensão e alteração do estado mental), que é a apresentação clássica da Colangite Aguda, uma infecção grave das vias biliares.",
+      tag: "Cirurgia"
+    },
+    {
+      id: "suseme-2021-q15",
+      text: "Homem, 35 anos, sofre acidente automobilístico. Ao exame: turgência jugular, dispneia; taquicardia 135 bpm e pulso paradoxal. A hipótese diagnóstica mais provável é:",
+      options: ["choque cardiogênico", "tamponamento cardiaco", "pneumotórax hipertensivo", "infarto agudo do miocárdio por anemia aguda"],
+      answerIndex: 1,
+      explanation: "Turgência jugular, taquicardia e hipotensão (choque obstrutivo), associados ao pulso paradoxal (queda da pressão sistólica na inspiração), são sinais clássicos de tamponamento cardíaco, uma emergência no contexto do trauma.",
+      tag: "Trauma"
+    },
+    {
+      id: "suseme-2021-q16",
+      text: "Homem, 52 anos, com hematêmese, melena e hipotensão (PA 100/60 mmHg), sem comorbidades. O nível inferior de hemoglobina que justificaria correção da anemia aguda com hemotransfusão é:",
+      options: ["7 g/dL", "6 g/dL", "8 g/dL", "9 g/dL"],
+      answerIndex: 0,
+      explanation: "As diretrizes atuais para hemorragia digestiva recomendam uma estratégia transfusional restritiva, indicando a hemotransfusão quando o nível de hemoglobina cai para 7 g/dL ou menos em pacientes estáveis e sem comorbidades cardíacas.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2021-q17",
+      text: "Um dilema diagnóstico frequente é a distinção entre crise convulsiva e síncope. As características que sugerem, mais fortemente, a hipótese diagnóstica de crise convulsiva são:",
+      options: [
+        "presença de sudorese; náusea e distúrbios da visão",
+        "episódio provocado por dor intensa; estresse emocional ou por mudança de decúbito",
+        "presença de cefaleia; manifestações motoras que duram menos de 15 segundos e palidez",
+        "presença de cianose; inconsciência; manifestações motoras que duram mais de 15 segundos"
+      ],
+      answerIndex: 3,
+      explanation: "Características que apontam para uma crise epiléptica incluem duração mais longa dos abalos (>15s), cianose central, mordedura de língua lateral, confusão pós-ictal prolongada. As outras opções descrevem características típicas de síncope (pródromos vasovagais, gatilhos específicos, recuperação rápida).",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2021-q18",
+      text: "Constitui-se elemento fundamental para diagnóstico de peritonite bacteriana espontânea em paciente cirrótico, com ascite, a presença de:",
+      options: [
+        "deterioração rápida da função renal e hepática",
+        "quadro clinico de dor e tensão de parede abdominal",
+        "proteinas do líquido ascítico em concentração inferior a 1,0 g/dl",
+        "contagem de polimorfonucleares acima de 250/mm³ no líquido ascítico"
+      ],
+      answerIndex: 3,
+      explanation: "O diagnóstico definitivo de Peritonite Bacteriana Espontânea (PBE) é estabelecido pela contagem de polimorfonucleares (PMN) no líquido ascítico ≥ 250 células/mm³, independentemente dos sintomas ou da cultura. As outras opções são sugestivas, mas não diagnósticas.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2021-q19",
+      text: "Paciente de 60 anos, tabagista, com dispneia, cefaleia e náuseas. TC de tórax mostra massa em ápice de lobo superior direito. Exame físico com edema de face, edema de membro superior direito, turgência jugular fixa e circulação colateral. Diante desse quadro a conduta deve ser:",
+      options: [
+        "encaminhar a paciente com urgência para realização de radioterapia",
+        "iniciar corticoide venoso e uso de morfina venosa para alívio dos sintomas",
+        "iniciar imediatamente diuréticos e corticoide venoso para alivio dos sintomas",
+        "iniciar anticoagulação plena com enoxaparina e quimioterapia sistêmica de imediato"
+      ],
+      answerIndex: 2,
+      explanation: "O quadro é de Síndrome da Veia Cava Superior, uma emergência oncológica. O tratamento inicial visa o alívio dos sintomas de compressão, sendo feito com elevação da cabeceira, oxigenoterapia, corticoides (para reduzir edema e inflamação) e diuréticos.",
+      tag: "Oncologia"
+    },
+    {
+      id: "suseme-2021-q20",
+      text: "Paciente do sexo feminino, 62 anos, é levada ao setor de emergência com sangramento via retal. A principal causa etiológica do sangramento nessa faixa de idade é:",
+      options: ["angiodisplasia do cólon", "neoplasia maligna do cólon", "doença diverticular do cólon", "doença inflamatória intestinal"],
+      answerIndex: 2,
+      explanation: "A doença diverticular do cólon é a causa mais comum de hemorragia digestiva baixa maciça em pacientes idosos, ocorrendo pela erosão de arteríolas na parede dos divertículos.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2021-q21",
+      text: "Trabalhador de construção civil sofreu queda de 5 metros. Relatou diminuição da força dos membros inferiores. TC da coluna revelou fratura tipo explosão no corpo vertebral de T12. Sobre esse caso, é correto afirmar que:",
+      options: [
+        "o reflexo bulbocavernoso, estando ausente, denota que a lesão é completa",
+        "lesão incompleta é aquela em que o paciente conserva a capacidade de deambular",
+        "deve ser iniciado o protocolo de corticosteroide após 8 horas do acidente",
+        "a dose inicial de corticosteroide deve ser administrada em 15 minutos e mantida por 24 horas"
+      ],
+      answerIndex: 3,
+      explanation: "Embora o uso de corticoide no trauma raquimedular seja controverso, o protocolo clássico (NASCIS) preconiza um bolus inicial de metilprednisolona (30 mg/kg) em 15 minutos, seguido por uma infusão de manutenção (5,4 mg/kg/h) pelas próximas 23 horas, se iniciado nas primeiras 8 horas do trauma.",
+      tag: "Trauma"
+    },
+    {
+      id: "suseme-2021-q22",
+      text: "Jovem ciclista sofreu fratura exposta nos ossos da perna. No pós-operatório tardio, ao realizar uma radiografia de controle, percebeu-se a presença de gás subcutâneo. Além do Clostridium perfringens, outro microrganismo produtor de gás é:",
+      options: ["Pseudomonas aeruginosa", "Azotobacter vinelandii", "Bacillus anthracis", "Escherichia coli"],
+      answerIndex: 3,
+      explanation: "A Escherichia coli é uma bactéria anaeróbia facultativa que, em certas condições de infecção de tecidos moles, pode fermentar carboidratos e produzir gás, levando a quadros de infecção necrotizante com gás subcutâneo (gangrena gasosa).",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q23",
+      text: "Senhora de 60 anos com dedo polegar direito flexionado, sem trauma, que 'trava' com dor e estalo. Trata-se de:",
+      options: [
+        "uma manifestação comum à síndrome do túnel do carpo",
+        "dedo em gatilho secundário, que é a forma mais comum",
+        "um dedo em gatilho, com caracteristicas comuns ao grupo etário e sexo da paciente",
+        "uma patologia que regride totalmente com massagem e gelo"
+      ],
+      answerIndex: 2,
+      explanation: "O fenômeno de 'travamento' do dedo em flexão, com dor e estalido, é a apresentação clássica do Dedo em Gatilho, uma tenossinovite estenosante do tendão flexor, mais comum em mulheres de meia-idade.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2021-q24",
+      text: "A manifestação clinica mais ordinária na sindrome do túnel do carpo é a:",
+      options: ["dor", "anestesia", "parestesia", "atrofia muscular"],
+      answerIndex: 2,
+      explanation: "O sintoma mais precoce e característico da Síndrome do Túnel do Carpo é a parestesia (formigueiro, dormência) noturna na distribuição do nervo mediano (polegar, indicador, médio e metade do anelar).",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2021-q25",
+      text: "O mal de Pott consiste numa infecção nas vértebras por Mycobacterium tuberculosis. Nessa condição, a região da coluna mais afetada é a:",
+      options: ["cervical", "torácica alta", "lombo-sacral", "transição toracolombar"],
+      answerIndex: 3,
+      explanation: "A espondilodiscite tuberculosa (Mal de Pott) tem uma predileção pela transição toracolombar (T10-L2), uma área de grande mobilidade e carga da coluna vertebral.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q26",
+      text: "Criança com gesso no antebraço há 24h, apresenta dores intensas que impedem de estender os dedos, edema e cianose. O diagnóstico e os músculos mais acometidos são:",
+      options: [
+        "sindrome compartimental; superficial dos dedos e longo do polegar",
+        "osteomielite aguda; superficial dos dedos e radial do carpo",
+        "trombose venosa; profundo dos dedos e radial do carpo",
+        "sindrome compartimental do antebraço; flexor profundo dos dedos e longo do polegar"
+      ],
+      answerIndex: 3,
+      explanation: "O quadro é clássico de Síndrome Compartimental do antebraço. A dor à extensão passiva dos dedos é o sinal mais sensível. Os músculos do compartimento flexor profundo, como o flexor profundo dos dedos e o flexor longo do polegar, são os mais comumente e gravemente afetados.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2021-q27",
+      text: "O percentual de índice de morte é maior no seguinte grupo de pacientes politraumatizados:",
+      options: ["idosos", "adultos", "crianças", "adolescentes"],
+      answerIndex: 0,
+      explanation: "Pacientes idosos têm menor reserva fisiológica para responder ao estresse do trauma e das cirurgias, além de maior prevalência de comorbidades, o que resulta em taxas de mortalidade significativamente maiores em comparação com pacientes mais jovens com o mesmo grau de lesão.",
+      tag: "Trauma"
+    },
+    {
+      id: "suseme-2021-q28",
+      text: "Uma criança no periodo neonatal com dor e limitação articular no membro inferior direito. O agente causador mais comumente encontrado no diagnóstico de osteomielite e artrite séptica e o antibiótico indicado são, respectivamente:",
+      options: [
+        "E coli/ceftriaxone",
+        "S aureus / oxacilina",
+        "H influenza / ciprofloxacino",
+        "K kingae/penicilina cristalina"
+      ],
+      answerIndex: 1,
+      explanation: "No período neonatal, o Staphylococcus aureus é o principal agente etiológico da osteoartrite hematogênica. O tratamento empírico de escolha é com uma penicilina resistente à penicilinase, como a oxacilina, frequentemente associada a um aminoglicosídeo.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2021-q29",
+      text: "Um dos princípios fundamentais para o tratamento de pacientes politraumatizados é o controle de danos. O retardamento da fixação definitiva de uma fratura femoral beneficia a recuperação no seguinte cenário:",
+      options: [
+        "fratura femural bilateral",
+        "fratura femural e trauma torácico",
+        "fratura femural e trauma abdominal",
+        "fratura femural e fratura nos membros superiores"
+      ],
+      answerIndex: 1,
+      explanation: "A cirurgia de controle de danos preconiza uma abordagem inicial rápida para estabilizar o paciente ('paciente borderline'), adiando a correção definitiva. Em um paciente com trauma torácico grave associado, uma cirurgia longa para a fratura do fêmur poderia piorar a lesão pulmonar. A fixação externa provisória é preferível.",
+      tag: "Trauma"
+    },
+    {
+      id: "suseme-2021-q30",
+      text: "Em relação à síndrome do túnel do carpo é correto afirmar que:",
+      options: [
+        "os sintomas são piores durante o dia e melhoram à noite",
+        "alterações metabólicas são comumente observadas nos quadros unilaterais",
+        "o uso de muletas por portadores de necessidade especial predispõe o quadro",
+        "o tratamento conservador com órteses com as mãos em flexão discreta melhoram o quadro"
+      ],
+      answerIndex: 2,
+      explanation: "O uso de muletas pode levar à compressão crônica do nervo mediano no túnel do carpo, sendo um fator de risco para o desenvolvimento da síndrome. Órteses devem ser usadas em posição neutra. Sintomas são piores à noite. Alterações metabólicas (diabetes, hipotireoidismo) causam quadros bilaterais.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2021-q31",
+      text: "A chikungunya é uma doença viral transmitida por mosquitos, com relação à qual é correto afirmar que:",
+      options: [
+        "na região das Américas, até o momento, a letalidade por dengue é menor que a observada por chikungunya",
+        "os casos graves e óbitos ocorrem com maior frequência em pacientes sem comorbidades",
+        "a maioria dos individuos infectados pelo CHIKV desenvolve sintomas, alguns estudos mostram que até 70% apresentam infecção sintomática",
+        "a fase aguda ou febril da doença é caracterizada por febre leve de inicio insidioso"
+      ],
+      answerIndex: 2,
+      explanation: "Ao contrário da dengue, onde a maioria das infecções é assintomática, a Chikungunya tem uma alta taxa de ataque sintomático, com a maioria dos infectados desenvolvendo a doença. A letalidade da dengue grave é maior. Casos graves de Chikungunya ocorrem em extremos de idade e com comorbidades.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q32",
+      text: "A febre chikungunya é uma arbovirose causada pelo virus Chikungunya (CHIKV). Sobre essa doença, pode-se afirmar que:",
+      options: [
+        "a transmissão ocorre pela picada de machos dos mosquitos Ae. Aegypti e Ae. albopictus",
+        "os sinais e os sintomas são clinicamente parecidos com os da dengue: febre de inicio agudo, dores articulares e musculares, cefaleia, náusea, fadiga e exantema. A principal manifestação clínica que as difere são as fortes dores nas articulações",
+        "a ocorrência de epidemia da doença no Brasil ainda é rara",
+        "outro fator que dificulta a propagação da doença é a presença de poucos individuos susceptíveis"
+      ],
+      answerIndex: 1,
+      explanation: "A afirmação B descreve perfeitamente o quadro clínico. A principal característica que distingue a Chikungunya é a intensidade da poliartralgia/artrite. Apenas as fêmeas dos mosquitos picam. Já ocorreram grandes epidemias no Brasil.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q33",
+      text: "Sobre o atendimento ao paciente com dengue pode-se afirmar que:",
+      options: [
+        "somente após a confirmação diagnóstica deve-se notificar",
+        "a primeira manifestação é a febre, geralmente baixa de inicio lento",
+        "os sinais de alarme são irrelevantes tendo em vista a evolução para dengue hemorrágica",
+        "todo paciente com doença febril aguda com duração de até sete dias, acompanhada de pelo menos dois sintomas como cefaleia, dor retro-orbitária, mialgias, deve ser considerado como possivel portador"
+      ],
+      answerIndex: 3,
+      explanation: "A opção D descreve corretamente a definição de caso suspeito de dengue, que é fundamental para a vigilância epidemiológica e manejo inicial. A notificação de casos suspeitos é obrigatória. Os sinais de alarme são cruciais. A febre é alta e de início súbito.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q34",
+      text: "Sobre o quadro clínico da dengue, é correto afirmar que:",
+      options: [
+        "é desnecessária a avaliação do segmento abdominal",
+        "a verificação do tempo do enchimento capilar não é um parâmetro digno de confiança",
+        "normalmente não é necessário ter maiores cuidados com o sistema nervoso",
+        "diferentemente do que ocorre em outras doenças que levam ao choque, na dengue, antes de haver uma queda substancial na pressão arterial sistólica, poderá haver um fenômeno de pinçamento da pressão arterial"
+      ],
+      answerIndex: 3,
+      explanation: "A pressão arterial convergente, ou pinçamento da pressão de pulso (diferença entre sistólica e diastólica ≤ 20 mmHg), é um sinal precoce e importante de choque na dengue, que precede a hipotensão franca.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q35",
+      text: "A hanseníase é uma doença de notificação compulsória. Sobre essa doença, é correto afirmar que:",
+      options: [
+        "considera-se caso de hanseníase a pessoa que apresenta um ou mais dos seguintes sinais: lesão de pele com alteração de sensibilidade, espessamento de nervo periférico e/ou baciloscopia positiva",
+        "a reação tipo 1 ou reação reversa caracteriza-se pelo eritema nodoso hansênico (ENH)",
+        "estima-se que 30% da população possua defesa natural contra o M. leprae",
+        "o tratamento é realizado em regime de internação compulsória"
+      ],
+      answerIndex: 0,
+      explanation: "A opção A descreve perfeitamente os três sinais cardinais utilizados para o diagnóstico da hanseníase. A presença de apenas um deles já é suficiente para confirmar o caso e iniciar o tratamento. O ENH é a reação tipo 2. A maioria da população (cerca de 90%) tem imunidade.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q36",
+      text: "Sobre a tuberculose (TB), é verdadeiro afirmar que:",
+      options: [
+        "as pessoas que têm contatos duradouros com pacientes com TB pulmonar, BAAR positivo, são menos vulneráveis",
+        "a baciloscopia de escarro de controle não serve como parâmetro para a avaliação de risco para os contatos",
+        "qualquer uma das espécies que integram o complexo Mycobacterium tuberculosis pode ocasioná-la. Em saúde pública, a mais importante é a M. tuberculosis, conhecida como bacilo de Koch",
+        "os bacilos que se depositam em roupas, lençóis, copos têm papel crucial na transmissão"
+      ],
+      answerIndex: 2,
+      explanation: "O complexo M. tuberculosis inclui várias espécies capazes de causar doença, mas a M. tuberculosis é, de longe, a mais importante para a saúde pública humana. A transmissão por fômites (objetos) é extremamente rara; a transmissão é aérea.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q37",
+      text: "Sobre os fatores sociais que levam à tuberculose, sabe-se que:",
+      options: [
+        "os progressos nos determinantes sociais da saúde não tiveram nenhum efeito na saúde dos brasileiros",
+        "a transmissão e adoecimento por TB são influenciados por fatores demográficos, sociais e econômicos, como urbanização desordenada, desigualdade de renda e moradias precárias",
+        "as estratégias de controle da TB devem ser desenvolvidas apenas pelas Prefeituras",
+        "A Estratégia pelo Fim da Tuberculose propõe a exclusão de intervenções socioeconômicas"
+      ],
+      answerIndex: 1,
+      explanation: "A tuberculose é uma doença fortemente determinada por fatores sociais. A opção B lista corretamente os principais determinantes que criam um ambiente propício para a transmissão e o adoecimento, como aglomeração, pobreza e dificuldade de acesso à saúde.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q38",
+      text: "Na etiopatogenia da tuberculose observa-se que:",
+      options: [
+        "alguns segmentos populacionais são mais vulneráveis como pescadores",
+        "o principal reservatório é o homem; outros possíveis reservatórios são gado bovino, primatas, aves e outros mamíferos",
+        "a suscetibilidade à infecção é praticamente universal; todos os expostos se infectam",
+        "uma das formas mais comuns de transmissão é por transfusão sanguínea"
+      ],
+      answerIndex: 1,
+      explanation: "O principal reservatório do M. tuberculosis é o ser humano. Outros animais podem ser reservatórios de outras espécies do complexo, como o M. bovis no gado. A infecção não ocorre em todos os expostos e a transmissão não é sanguínea.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q39",
+      text: "Em relação à sindrome da imunodeficiência adquirida (Sida/Aids), é correto afirmar que:",
+      options: [
+        "é impossível afirmar que o tratamento possa ser usado como uma forma de prevenção eficaz",
+        "os medicamentos antirretrovirais transformaram a infecção quase sempre fatal de antes em condição crônica controlável, embora ainda incurável",
+        "é impossivel, no Brasil, serem ainda consideradas como populações-chave gays e HSH, mulheres profissionais do sexo, travestis, transexuais e pessoas que usam drogas",
+        "a boa adesão à TARV não gerou beneficios individuais"
+      ],
+      answerIndex: 1,
+      explanation: "A opção B descreve com precisão o impacto da terapia antirretroviral (TARV), que transformou a AIDS de uma sentença de morte em uma condição crônica manejável. O tratamento como prevenção (TasP) é uma estratégia eficaz. As populações citadas ainda são consideradas chave.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2021-q40",
+      text: "Sobre as manifestações comuns à dengue, pode-se afirmar que:",
+      options: [
+        "a insuficiência renal aguda é muito frequente",
+        "os sinais de alarme são: dor abdominal intensa, vômitos persistentes, acúmulo de liquidos, hipotensão postural, hepatomegalia, sangramento de mucosa, letargia e aumento progressivo do hematócrito",
+        "a primeira manifestação é a febre, geralmente baixa e de início lento",
+        "o exantema está presente em 10% dos casos"
+      ],
+      answerIndex: 1,
+      explanation: "A opção B lista corretamente os principais sinais de alarme da dengue, que devem ser ativamente procurados na fase de defervescência da febre. A febre é alta e de início súbito, o exantema ocorre em cerca de 50% dos casos e a IRA é incomum.",
+      tag: "Infectologia"
+    }
+  ]
+},
+{
+  id: "prova-suseme-2020-emergencia-cti",
+  name: "SUSEME - Emergência - 2020",
+  questions: [
+    {
+      id: "suseme-2020-q1",
+      text: "Paciente, de 19 anos de idade, dá entrada na emergência com história de diarreia liquida sem muco ou sangue, seis episódios/dia, há 72h. Ao exame apresenta-se corado, com mucosas úmidas, saliva fluida e diurese presente. A melhor conduta, nesse caso, é:",
+      options: [
+        "internar para administração de solução de hidratação venosa de soro fisiológico",
+        "deixar em observação na emergência para terapia de reidratação oral com sais de hidratação",
+        "orientar aumento de ingesta hídrica, administrar sais de reidratação oral, orientar sinais de desidratação e fazer zinco por dez dias",
+        "orientar aumento de ingesta hídrica, administrar sais de reidratação oral, orientar sinais de desidratação e fazer antidiarreico por 10 dias"
+      ],
+      answerIndex: 2,
+      explanation: "O paciente apresenta diarreia aguda sem sinais de desidratação (Plano A da OMS). A conduta correta é a terapia de reidratação oral em casa, com aumento da ingesta de líquidos, uso de soro de reidratação oral após cada evacuação, orientação de sinais de alarme e suplementação de zinco. Antidiarreicos são geralmente contraindicados.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2020-q2",
+      text: "Escolar masculino, de 10 anos de idade, é levado por sua mãe à unidade de saúde com história de urina escura há dois dias, acompanhado de cefaleia e edema de face há 24h. Ao exame físico, o escolar apresenta-se hipocorado, edemaciado e hipertenso (PA=140x100mmHg). A conduta, nessa situação, será:",
+      options: [
+        "fazer diálise intermitente",
+        "fazer internação hospitalar para biópsia renal",
+        "fazer restrição hidrica, iniciar diálise e programar biópsia renal",
+        "fazer penicilina benzatina, restrição hidrica e sódica, além de repouso"
+      ],
+      answerIndex: 3,
+      explanation: "O quadro de síndrome nefrítica aguda (hematúria, edema, hipertensão) em uma criança, frequentemente pós-infecciosa, sugere Glomerulonefrite Pós-Estreptocócica (GNPE). A conduta inicial é de suporte: repouso, restrição de sal e água, e tratamento da infecção estreptocócica com penicilina benzatina para erradicar o agente.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2020-q3",
+      text: "Lactente de 18 meses com febre, vômitos, recusa alimentar e redução da diurese. Ao exame, febril, com dor abdominal difusa. A hipótese diagnóstica e a conduta, neste momento, são, respectivamente:",
+      options: [
+        "obstrução intestinal/internação, hidratação venosa, antibiótico e cirurgia",
+        "infecção urinária/internação, hidratação venosa e ceftriaxone venoso",
+        "obstrução intestinal/internação, hidratação venosa e cirurgia",
+        "insuficiência renal aguda / internação e diálise peritoneal"
+      ],
+      answerIndex: 1,
+      explanation: "Em lactentes, a infecção do trato urinário (ITU) pode se manifestar com sintomas inespecíficos como febre, vômitos e irritabilidade. Pela idade e pelo quadro que sugere pielonefrite, a conduta é internação para hidratação e antibioticoterapia endovenosa, como o Ceftriaxone.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2020-q4",
+      text: "Homem, de 55 anos, dá entrada na emergência com queixa de precordialgia, desconforto epigástrico e tonteira. Ao exame: fáscies de dor, sudorese fria, ritmo cardíaco irregular e FC=109bpm. A conduta imediata deve ser:",
+      options: [
+        "oferecer oxigênio, fazer ecocardiograma e preparar cateterismo",
+        "oferecer morfina, fazer eletrocardiograma e preparar cateterismo",
+        "fazer hidratação venosa, fazer eletrocardiograma e administrar nifedipina sublingual",
+        "oferecer oxigênio, fazer hidratação venosa, fazer eletrocardiograma e administrar morfina e clopidogrel"
+      ],
+      answerIndex: 3,
+      explanation: "O quadro é altamente sugestivo de Síndrome Coronariana Aguda. A conduta inicial (MONABCH) inclui: Monitorização, Oxigênio (se SatO2 < 90%), Nitrato (se não houver contraindicação), AAS, Clopidogrel e Heparina. A morfina é para alívio da dor refratária. O ECG é mandatório e imediato. A opção D é a mais completa entre as listadas.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2020-q5",
+      text: "Lactente de 15 meses de idade, três hours após vacinação, iniciou hipotonia, sonolência e recusa alimentar. A resposta à mãe do bebê e a conduta serão, respectivamente:",
+      options: [
+        "tem relação com a vacina DPT, é uma provável complicação da mesma. Chama-se síndrome hipotônica hiporresponsiva/observação rigorosa em unidade de saúde",
+        "tem relação com a vacina contra a pólio oral (VOP) e é uma complicação neurológica, um provável quadro denominado pólio-like / internação hospitalar",
+        "não tem relação com as vacinas e é um quadro de infecção que por coincidência começou após as vacinas / internação hospitalar",
+        "não tem relação com as vacinas e é um provável quadro de meningite / internação hospitalar"
+      ],
+      answerIndex: 0,
+      explanation: "O quadro de palidez ou cianose, hipotonia e hiporresponsividade que ocorre nas primeiras 48h após a vacina DTP (componente pertussis) é conhecido como Episódio Hipotônico-Hiporresponsivo. É um evento adverso benigno e autolimitado, que requer observação, mas não deixa sequelas.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2020-q6",
+      text: "Mulher de 28 anos com astenia, tosse seca, hiperemia conjuntival e febre. Há 12h surgiu rash exantemático difuso em face, que progrediu para o tronco e corpo. Refere não saber sua situação vacinal, mas, é possível saber que há cobertura vacinal, se houver no cartão:",
+      options: [
+        "ao menos duas doses de triplice viral ou uma de sarampo e outra de triplice viral",
+        "ao menos três doses de tetraviral ou uma de sarampo",
+        "ao menos duas de sarampo ou uma de triplice viral",
+        "ao menos uma de sarampo ou uma triplice viral"
+      ],
+      answerIndex: 0,
+      explanation: "O quadro é clássico de sarampo. A proteção adequada contra o sarampo, para a faixa etária da paciente (28 anos), é garantida com duas doses da vacina tríplice viral (SCR) ou uma dose de sarampo isolada e uma de tríplice viral.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q7",
+      text: "Adolescente de 16 anos, vítima de acidente automobilístico, inconsciente, com FC=150bpm, FR=30irpm, saturação de 85%, PA=90x40mmHg, hipofonese de bulhas cardíacas e turgência da jugular. A conduta apropriada é:",
+      options: ["toracotomia", "cardioversão", "pericardiocentese", "intubação orotraqueal"],
+      answerIndex: 2,
+      explanation: "O paciente apresenta a Tríade de Beck (hipotensão, hipofonese de bulhas e turgência jugular), que é clássica do tamponamento cardíaco. Trata-se de uma emergência cirúrgica e a conduta de salvamento imediata é a pericardiocentese para aliviar a pressão sobre o coração.",
+      tag: "Trauma"
+    },
+    {
+      id: "suseme-2020-q8",
+      text: "Homem de 25 anos é trazido à emergência agitado, com alucinações. Sinais vitais: FR=28ipm, FC=140bpm, PA=160x100mmHg e TAX=38,5°C. O plantonista fez o diagnóstico de intoxicação por metilenodioximetanfetamina (MDMA). A abordagem terapêutica visa evitar:",
+      options: ["hipotermia e hiponatremia", "hipertermia e hipoglicemia", "hipertermia e hiponatremia", "hipotermia e hipernatremia"],
+      answerIndex: 2,
+      explanation: "A intoxicação por MDMA (ecstasy) causa uma síndrome simpatomimética e serotoninérgica, levando à hipertermia (que pode ser maligna) e à hiponatremia dilucional (pela polidipsia e secreção inapropriada de ADH). Ambas são complicações graves e potencialmente fatais.",
+      tag: "Toxicologia"
+    },
+    {
+      id: "suseme-2020-q9",
+      text: "Mulher de 65 anos é resgatada de afogamento no mar. Na maca, inconsciente, a paciente apresenta episódio emético. O melhor decúbito para posicionar a paciente é o:",
+      options: ["dorsal", "ventral", "lateral direito", "lateral esquerdo"],
+      answerIndex: 3,
+      explanation: "Em um paciente inconsciente e com risco de vômito (e broncoaspiração), o decúbito lateral de segurança é a posição indicada. O decúbito lateral esquerdo é frequentemente preferido pois a anatomia do estômago e do esôfago nesta posição dificulta o refluxo do conteúdo gástrico.",
+      tag: "Emergência"
+    },
+    {
+      id: "suseme-2020-q10",
+      text: "Idoso de 71 anos com emagrecimento, anorexia, tosse produtiva e febre baixa há um mês. Há 48h, tosse com sangue. Ao exame: estertoração crepitante e roncos difusos em hemitórax direito. A principal hipótese diagnóstica e seu respectivo tratamento são:",
+      options: [
+        "tuberculose pulmonar/esquema de rifampicina, pirazinamida, isoniazida e etambutol",
+        "tuberculose pulmonar/rifampicina, isoniazida e pirazinamida",
+        "pneumonia de comunidade / penicilina",
+        "pneumonia atipica / claritromicina"
+      ],
+      answerIndex: 0,
+      explanation: "O quadro de sintomas constitucionais (emagrecimento, febre baixa) e tosse arrastada, com hemoptise, em um idoso, é altamente sugestivo de Tuberculose Pulmonar. O tratamento padrão inicial (fase intensiva) é o esquema RIPE: Rifampicina, Isoniazida, Pirazinamida e Etambutol.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q11",
+      text: "Mulher 31 anos, na terceira gestação, refere leucorreia amarelada de odor fétido, dispareunia e prurido vaginal. O provável diagnóstico é:",
+      options: ["vaginose inespecífica", "vaginose por Gardnerella", "infecção urinária por E.coli", "infecção urinária inespecifica"],
+      answerIndex: 1,
+      explanation: "Leucorreia com odor fétido ('cheiro de peixe podre') é o sintoma clássico da Vaginose Bacteriana, causada por um desequilíbrio da flora vaginal com proliferação de bactérias como a Gardnerella vaginalis.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2020-q12",
+      text: "Mulher de 38 anos com coriza e tosse há sete dias. Há 48h evoluiu com queda do estado geral, dispneia e febre de 39°C. Exame com tiragem intercostal e murmúrio vesicular reduzido em 1/3 inferior de hemitórax direito. A hipótese diagnóstica é:",
+      options: ["asma", "sinusite", "pneumonia", "rinofaringite aguda"],
+      answerIndex: 2,
+      explanation: "A evolução de um quadro viral para um quadro com sintomas sistêmicos (queda do estado geral, febre alta) e sinais de acometimento do trato respiratório inferior (dispneia, tiragem, alterações na ausculta) é a apresentação típica de uma Pneumonia Adquirida na Comunidade.",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2020-q13",
+      text: "Jovem de 24 anos, asmático, com tosse e dispneia há 12h. Ao exame, sibilos difusos e saturação de 90%. A melhor conduta, no momento, é:",
+      options: ["beta 2 e adrenalina", "oxigênio e adrenalina", "oxigênio e hidrocortisona", "oxigênio e Beta 2 de ação curta"],
+      answerIndex: 3,
+      explanation: "O paciente está em uma crise asmática com hipoxemia (SatO2 < 92%). A conduta imediata é fornecer oxigênio suplementar para corrigir a hipoxemia e administrar um broncodilatador de curta ação (SABA), como salbutamol, para aliviar o broncoespasmo.",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2020-q14",
+      text: "Trabalhador de 42 anos, inconsciente, trazido de um prédio em chamas, com sinais de inalação de fumaça e queimaduras de 2º grau. A conduta imediata deve ser:",
+      options: [
+        "assegurar um acesso venoso calibroso para administração da hidratação, além de hemoderivados",
+        "manter vias aéreas pérvias e administrar oxigênio sob máscara, além de iniciar hidratação venosa",
+        "manter vias aéreas pérvias e administrar oxigênio sob máscara, além de resfriar as lesões com compressas geladas de soro fisiológico",
+        "assegurar um acesso venoso calibroso para administração da hidratação, além de resfriar as lesões com compressas frias de soro fisiológico"
+      ],
+      answerIndex: 1,
+      explanation: "Seguindo o protocolo ABCDE do trauma, a prioridade absoluta é a via aérea (A) e a ventilação (B). Em um paciente com inalação de fumaça, há alto risco de edema de via aérea, sendo crucial garantir sua perviedade e ofertar oxigênio a 100%. A hidratação (C) vem em seguida.",
+      tag: "Trauma"
+    },
+    {
+      id: "suseme-2020-q15",
+      text: "Pré-escolar de três anos em tratamento para otite média aguda, evoluiu com retorno da febre, queda do estado geral, sonolência e sinais de Kernig e Brudzinski positivos. A impressão diagnóstica é:",
+      options: ["mastoidite", "meningoencefalite", "otite média complicada", "distúrbio de coagulação disseminado"],
+      answerIndex: 1,
+      explanation: "A evolução de uma otite média com o surgimento de sinais neurológicos como rebaixamento do nível de consciência e sinais de irritação meníngea (Kernig e Brudzinski) indica uma complicação intracraniana, sendo a meningoencefalite a hipótese mais provável.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2020-q16",
+      text: "Com referência à dengue, pode-se afirmar que são sinais de alarme:",
+      options: [
+        "febre persistente, fotofobia e odinofagia",
+        "rash exantemático, febre alta e hiperemia conjuntival",
+        "vômitos persistentes, dor abdominal continua e letargia",
+        "diarreia, petéquias presentes à prova do laço e cefaleia"
+      ],
+      answerIndex: 2,
+      explanation: "Vômitos persistentes, dor abdominal intensa e contínua, e alteração do estado neurológico (letargia/irritabilidade) são três dos principais sinais de alarme na dengue, indicando possível extravasamento plasmático e necessidade de internação.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q17",
+      text: "Escolar feminina de 11 anos, obesa, com PA aferida em quatro ocasiões entre o percentil 95 e 99 para idade, sexo e altura. Além de orientação sobre dieta e atividades físicas, a conduta, nessa situação, é:",
+      options: [
+        "monitorar a PA por três dias e, se estiver alterada, encaminhar para nutricionista",
+        "monitorar a PA e, se continuar elevada, considerar iniciar tratamento para hipertensão arterial",
+        "iniciar imediatamente o uso de inibidor da ECA, pois a paciente já está hipertensa",
+        "iniciar já o uso de diuréticos, pois a paciente já está hipertensa"
+      ],
+      answerIndex: 1,
+      explanation: "O diagnóstico de hipertensão arterial em crianças requer múltiplas aferições elevadas. A conduta inicial é a mudança de estilo de vida. Se, após um período de monitorização, a pressão se mantiver elevada, o tratamento farmacológico deve ser considerado, especialmente em pacientes sintomáticos ou com lesão de órgão-alvo.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2020-q18",
+      text: "Pré-escolar de quatro anos é levado ao pronto-socorro com febre de 37,7°C há 2 horas, sem outros sinais ou sintomas. Exame físico normal. A mãe solicita receita de antibiótico. A conduta será:",
+      options: [
+        "orientar à mãe que o paciente está com exame físico sem alterações e, se não melhorar ou surgir algum sinal ou sintoma ela poderá retornar",
+        "orientar à mãe que será solicitada internação de seu filho, para que haja esclarecimento e investigação diagnóstica",
+        "orientar à mãe que está sendo liberada a receita com antibiótico, mas que ela só poderá administrar se a febre voltar",
+        "orientar à mãe que serão solicitados vários exames para descobrir o diagnóstico"
+      ],
+      answerIndex: 0,
+      explanation: "Trata-se de uma febre sem sinais de localização em uma criança com bom estado geral. A conduta correta é a observação e a orientação dos pais sobre sinais de alerta, evitando o uso desnecessário de antibióticos e a realização de exames invasivos sem indicação.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2020-q19",
+      text: "Adolescente masculino de 17 anos com 'movimentos agitados' de mãos, cabeça e pernas, fala incompreensível e quedas frequentes. Tia relata que os movimentos cessam durante o sono. A hipótese para esse quadro é:",
+      options: ["coreia de Sydenhan", "epilepsia multifocal", "overdose de cocaina", "intoxicação por crack"],
+      answerIndex: 0,
+      explanation: "Movimentos involuntários, arrítmicos, rápidos e que afetam múltiplos segmentos do corpo, pioram com o estresse e cessam durante o sono, são característicos de coreia. A Coreia de Sydenham é uma manifestação tardia da febre reumática.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2020-q20",
+      text: "Lactente de 9 meses sofre queda da própria altura, bate com a cabeça, chora e para rapidamente. Nega perda de consciência ou vômitos. Exame físico e neurológico normais. A conduta é acalmar o pai e:",
+      options: [
+        "orientar que será necessário ao menos uma radiografia de crânio para afastar fraturas",
+        "fazer uma tomografia de crânio para afastar edema de sistema nervoso central",
+        "orientar que o lactente ficará em observação na emergência por 48h",
+        "orientar sobre observação em casa nas próximas 48h"
+      ],
+      answerIndex: 3,
+      explanation: "Trata-se de um traumatismo cranioencefálico leve, de muito baixo risco (classificação PECARN). A conduta correta é a orientação dos pais sobre sinais de alerta e observação em casa, sem necessidade de exames de imagem ou observação hospitalar.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2020-q21",
+      text: "Jovem motociclista, após queda, apresentava-se lúcido e orientado, com perda da função motora e proprioceptiva no membro superior direito, e perda da sensibilidade dolorosa e da percepção da temperatura do lado contralateral. O diagnóstico é:",
+      options: [
+        "sindrome da medula central",
+        "sindrome da medula anterior",
+        "sindrome de Brown-Séquard",
+        "hérnia de disco cervical traumática"
+      ],
+      answerIndex: 2,
+      explanation: "A dissociação dos achados neurológicos (perda motora e proprioceptiva ipsilateral à lesão e perda da sensibilidade termo-dolorosa contralateral) é a apresentação clássica da Síndrome de Brown-Séquard, causada pela hemissecção da medula espinhal.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2020-q22",
+      text: "Ciclista com 26 anos, após queda, sente dores irradiadas da base do pescoço, até o segmento lateral do cotovelo, face radial do antebraço até o polegar e indicador. O diagnóstico provável é:",
+      options: ["fratura do Atlas", "lesão do manguito rotador", "hérnia de disco entre C3-C4", "radiculopatia pós-trauma de C6"],
+      answerIndex: 3,
+      explanation: "A dor e a parestesia seguindo o trajeto descrito correspondem exatamente ao dermátomo da raiz nervosa de C6. O quadro é, portanto, de uma radiculopatia de C6, provavelmente causada por uma hérnia de disco traumática.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2020-q23",
+      text: "Mulher de 60 anos com dores intensas na região lombar há uma semana, já com episódios prévios. Nesse caso, está correto afirmar que:",
+      options: [
+        "é uma das queixas mais comuns na prática médica diária, comum nas emergências, com diagnóstico etiológico esclarecido secundariamente (estenoses, hérnia discal)",
+        "o tratamento inicial de um paciente com hérnia discal entre L4-L5 com compressão nervosa, comprovado com ressonância magnética, sempre é cirúrgico",
+        "é um dos sintomas raros em ortopedia, devendo a paciente permanecer em repouso absoluto",
+        "tal como a maioria dos casos, é uma lombalgia aguda"
+      ],
+      answerIndex: 0,
+      explanation: "A lombalgia é uma das queixas mais prevalentes na população geral e nos serviços de emergência. Na maioria das vezes é inespecífica (mecânica), e a investigação para causas específicas como hérnia de disco é feita secundariamente se não houver melhora ou na presença de sinais de alerta.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2020-q24",
+      text: "Jovem atleta de alto rendimento apresenta um estiramento muscular crural durante suas atividades. O tratamento indicado diante de tal quadro é:",
+      options: [
+        "colocar compressas de gelo no local",
+        "encaminhar à academia para executar exercícios isométricos",
+        "massagear o local com alguma pomada anti-inflamatória, tipo diclofenaco dietilamônio",
+        "limitar os esforços fisicos por um dia e retomar as atividades normalmente ao final desse período"
+      ],
+      answerIndex: 0,
+      explanation: "No tratamento agudo de lesões musculares (estiramento), a aplicação de gelo (crioterapia) é a medida inicial mais importante para controlar a inflamação, o edema e a dor.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2020-q25",
+      text: "Criança com quatro anos, após ser suspensa pelo braço, para de movimentá-lo, mantendo-o estendido. Radiografias normais. O diagnóstico provável é:",
+      options: ["pronação dolorosa", "luxação do ombro", "artrite pós trauma", "rotura muscular"],
+      answerIndex: 0,
+      explanation: "O mecanismo de tração axial no braço estendido em uma criança pequena é o gatilho clássico para a Pronação Dolorosa, que é a subluxação da cabeça do rádio para fora do ligamento anular. As radiografias são tipicamente normais.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2020-q26",
+      text: "Senhora com 78 anos, lúcida, com dores intensas na região lombar e bacia após queda de própria altura há uma semana. Radiografias da bacia e fêmur normais. A hipótese diagnóstica plausível e o exame complementar são:",
+      options: [
+        "trombo embolia pulmonar e cintilografia",
+        "fratura de acetábulo e tomografia computadorizada",
+        "hérnia discal lombar e ressonância magnética da coluna",
+        "fratura da coluna lombar e radiografia da coluna lombar, com visualização com spot-film na transição com a coluna dorsal"
+      ],
+      answerIndex: 3,
+      explanation: "Em uma idosa com dor lombar significativa após queda, mesmo com radiografias iniciais normais, a principal suspeita a ser afastada é uma fratura de compressão vertebral, comum por osteoporose. A radiografia da coluna com incidências focadas (spot-film) é o próximo passo.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2020-q27",
+      text: "Criança de um ano de idade dá entrada com fratura diafisária femural direita. Esse tipo de fratura ocorre, ordinariamente, na seguinte situação:",
+      options: ["traumatismo em atividades fisico-desportivas", "acidente automobilistico", "defeito congênito", "maus-tratos"],
+      answerIndex: 3,
+      explanation: "Uma fratura de fêmur em uma criança que ainda não anda (1 ano de idade) é altamente suspeita de ter sido causada por trauma não-acidental (maus-tratos), pois requer uma energia de trauma muito alta, incompatível com as atividades normais para a idade.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2020-q28",
+      text: "Paciente com dor no meio do peito que piora quando espirra ou palpa a região. Exames cardíacos normais. Diante de tal quadro, o diagnóstico provável é:",
+      options: ["angina pectoris", "esofagite de refluxo", "síndrome da costela deslizante", "costocondrite ou síndrome de Tietze"],
+      answerIndex: 3,
+      explanation: "A dor torácica que é reproduzível à palpação das articulações costocondrais (entre as costelas e o esterno) é característica da Costocondrite, uma causa comum e benigna de dor torácica.",
+      tag: "Reumatologia"
+    },
+    {
+      id: "suseme-2020-q29",
+      text: "Idoso de 83 anos, viúvo, recluso, com queda há uma semana, chega com cefaleia e sonolência. Diante desse quadro, o diagnóstico e o exame a ser solicitado são, respectivamente:",
+      options: [
+        "hematoma subdural e tomografia computadorizada do crânio",
+        "fratura da coluna cervical e radiografias da coluna cervical",
+        "encefalopatia hepática e exames laboratoriais",
+        "arterite temporal e tomoangiografia cerebral"
+      ],
+      answerIndex: 0,
+      explanation: "Idosos, especialmente após quedas (mesmo de baixo impacto), têm alto risco de desenvolver um Hematoma Subdural Crônico, que se manifesta com sintomas neurológicos insidiosos como cefaleia, sonolência e confusão. O exame de escolha é a Tomografia de Crânio.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2020-q30",
+      text: "Paciente morador de rua, 29 anos, usuário de drogas injetáveis, com dor, inchaço e calor no joelho direito há dez dias. O possível diagnóstico e micro-organismo infectante são, respectivamente:",
+      options: [
+        "gonorreia infecciosa e gonococos",
+        "abscesso no joelho direito e E. coli",
+        "osteomielite crônica do joelho e H. influenzae",
+        "artrite séptica do joelho direito e S. aureus"
+      ],
+      answerIndex: 3,
+      explanation: "O quadro de monoartrite aguda (dor, edema, calor) em um paciente com fatores de risco para bacteremia (usuário de drogas injetáveis, feridas na pele) é altamente sugestivo de Artrite Séptica. O Staphylococcus aureus é o agente etiológico mais comum nesta situação.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q31",
+      text: "Com referência a casos de gripe ocasionados pelo virus influenza, é correto afirmar que:",
+      options: [
+        "normalmente os indivíduos são infectados apenas uma única vez, criando imunidade pelo resto da vida",
+        "o zanamivir é indicado especialmente para menores de 5 anos, como tratamento ou quimioprofilaxia, e para todo paciente com doença respiratória crônica",
+        "o homem, suinos, equinos, focas e aves são os principais reservatórios. As aves migratórias desempenham importante papel na disseminação natural da doença",
+        "quando evolui para sua forma grave, torna-se indicada a internação para administração de antibioticoterapia endovenosa de amplo espectro"
+      ],
+      answerIndex: 2,
+      explanation: "O vírus Influenza tem um importante reservatório em animais, especialmente em aves aquáticas e suínos, onde ocorrem rearranjos genéticos que dão origem a novas cepas com potencial pandêmico. A afirmação sobre a imunidade ser para toda a vida é falsa devido à mutação do vírus.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q32",
+      text: "Em relação aos métodos empregados na prevenção da influenza, pode-se afirmar que:",
+      options: [
+        "deve-se realizar quimioprofilaxia para comunidade escolar, mesmo em não portadores de risco para possíveis complicações",
+        "deve-se realizar quimioprofilaxia individual, em pessoas consideradas com condições e fator de risco para complicações por influenza",
+        "gestantes devem buscar o serviço de saúde, caso apresentem sintomas de sindrome gripal",
+        "ha recomendação para que instituições fechadas e hospitais de longa permanência vacinem todos os residentes e funcionários bianualmente"
+      ],
+      answerIndex: 1,
+      explanation: "A quimioprofilaxia com oseltamivir não é para todos, mas está indicada para indivíduos de alto risco para complicações que tiveram contato próximo com um caso confirmado de influenza e que não podem ser vacinados ou foram vacinados há menos de 2 semanas.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q33",
+      text: "Sobre a doença sarampo, é correto afirmar que:",
+      options: [
+        "são comuns os casos de gastroenterite com náuseas e vômitos",
+        "lactentes, cujas mães já tiveram sarampo, possuem imunidade passiva que os isenta da vacinação",
+        "é viral, infecciosa aguda, extremamente contagiosa. O causador é um Morbillivirus e tem como reservatório o homem",
+        "as manifestações mais comuns são febre baixa, queda de cabelo e unhas em vidro de relógio"
+      ],
+      answerIndex: 2,
+      explanation: "A opção C descreve corretamente as características do sarampo: é uma doença viral extremamente contagiosa, causada por um Morbillivirus, cujo único reservatório é o ser humano, o que torna a sua erradicação através da vacinação teoricamente possível.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q34",
+      text: "As principais características epidemiológicas do sarampo são:",
+      options: [
+        "a incidência, a evolução clínica e a letalidade são influenciadas pelas condições socioeconômicas, nutricionais e imunitárias",
+        "o ressurgimento da doença deveu-se a disseminação das arboviroses pelo mosquito aedes",
+        "é uma doença com distribuição universal, com aumento da incidência nos períodos mais secos nos climas tropicais",
+        "pacientes internados com a doença podem ser mantidos em enfermarias, em contato com outros, sem maiores restrições"
+      ],
+      answerIndex: 2,
+      explanation: "O sarampo é uma doença de distribuição global. Nos climas tropicais, observa-se um padrão sazonal com aumento da transmissão durante os períodos mais secos. É crucial o isolamento respiratório para pacientes internados.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q35",
+      text: "Observando a etiopatogenia do HIV pode-se afirmar que:",
+      options: [
+        "na fase aguda a sorologia para a infecção pelo HIV é geralmente positiva",
+        "a transmissão pode ocorrer mediante relações sexuais desprotegidas; utilização de sangue não testado; compartilhamento de seringas e acidente ocupacional",
+        "no Brasil, gays e outros homens que fazem sexo com homens (HSH), travestis, e pessoas que usam drogas, não podem mais ser considerados populações-chave",
+        "a utilização de polivitamínicos foi um fator determinante para o aumento da sobrevida"
+      ],
+      answerIndex: 1,
+      explanation: "A opção B descreve corretamente as principais vias de transmissão do HIV. A sorologia pode ser negativa na fase aguda (janela imunológica). As populações citadas continuam a ser consideradas populações-chave. Polivitamínicos não impactam a sobrevida como os antirretrovirais.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q36",
+      text: "Sobre a epidemiologia do HIV pode-se afirmar que:",
+      options: [
+        "a elevação dos casos de HIV/AIDS no sexo feminino, decorreu do aumento das práticas homossexuais",
+        "na primeira metade da década de 1980, a epidemia de HIV/AIDS manteve-se basicamente restrita às regiões metropolitanas do Sudeste e Sul do pais",
+        "a transmissão heterossexual nunca foi um fator determinante para transmissão do virus HIV",
+        "o abandono do uso de preservativos pela maior parte da população não contribui para o aumento dos indices das DST"
+      ],
+      answerIndex: 1,
+      explanation: "A opção B descreve corretamente o início da epidemia de HIV/AIDS no Brasil, que foi concentrada nos grandes centros urbanos do Sudeste e Sul, inicialmente acometendo principalmente homens que fazem sexo com homens e usuários de drogas injetáveis.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q37",
+      text: "Sobre etiopatogenia e consequências da hanseníase, pode-se afirmar que:",
+      options: [
+        "embora os nervos sejam atingidos, são incomuns os casos de alterações funcionais",
+        "o Mycobacterium leprae é um parasita extracelular",
+        "a transmissão se dá por meio de uma pessoa com hanseniase, forma infectante da doença MB, sem tratamento, que elimina o bacilo para o meio exterior, infectando outras pessoas suscetíveis",
+        "dura em média de 2 a 4 meses"
+      ],
+      answerIndex: 2,
+      explanation: "A transmissão da hanseníase ocorre principalmente pelas vias aéreas superiores, a partir de um paciente multibacilar (MB) não tratado que elimina grandes quantidades do bacilo. A maioria da população tem imunidade natural.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q38",
+      text: "Sobre a tuberculose (TB), sabe-se que é uma doença infecciosa e transmissivel, causada pelo Mycobacterium tuberculosis. Diante do exposto, pode-se afirmar que:",
+      options: [
+        "alguns segmentos populacionais são mais vulneráveis como pescadores",
+        "o principal reservatório é o homem; outros possíveis reservatórios são gado bovino, primatas, aves",
+        "a suscetibilidade à infecção é praticamente universal; todos os expostos se infectam",
+        "uma das formas mais comuns de transmissão é através da transfusão sanguínea"
+      ],
+      answerIndex: 1,
+      explanation: "O principal reservatório do M. tuberculosis é o ser humano. No entanto, outras espécies do complexo Mycobacterium, como o M. bovis (gado), podem causar tuberculose em humanos (transmissão por leite não pasteurizado, por exemplo).",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q39",
+      text: "Dentre as manifestações comuns à dengue, a assertiva correta é:",
+      options: [
+        "a insuficiência renal aguda é muito frequente e geralmente cursa com pior prognóstico",
+        "o exantema está presente em 10% dos casos",
+        "os sinais de alarme na dengue são: dor abdominal intensa, vômitos persistentes, acúmulo de liquidos, hipotensão postural, hepatomegalia, sangramento de mucosa, letargia e aumento progressivo do hematocrito",
+        "a primeira manifestação é a febre, geralmente baixa (37,5°C a 38°C), de inicio lento"
+      ],
+      answerIndex: 2,
+      explanation: "A opção C lista corretamente os principais sinais de alarme da dengue, que indicam o início do extravasamento plasmático e o risco de evolução para formas graves. A febre na dengue é tipicamente alta e de início abrupto.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2020-q40",
+      text: "Sobre a etiopatogenia da chicungunya é correto afirmar que:",
+      options: [
+        "a transmissão se dá através da picada por machos dos mosquitos Aedes",
+        "os sinais e sintomas são clinicamente parecidos aos da dengue febre de início agudo, dores articulares e musculares, cefaleia, náusea, fadiga e exantema. A principal manifestação clínica que a difere são as fortes dores nas articulações",
+        "quando a duração dos sintomas persiste além dos sete dias a doença passa a ser considerada crônica",
+        "os sinais e sintomas são clinicamente parecidos aos da dengue febre de inicio lento, dores articulares leves, cefaleia, fadiga e ausência de exantema"
+      ],
+      answerIndex: 1,
+      explanation: "Embora compartilhe muitos sintomas com a dengue, a marca registada da Chikungunya é a poliartralgia/artrite, que é tipicamente muito mais intensa, debilitante e com maior potencial de cronificação. Apenas as fêmeas dos mosquitos picam.",
+      tag: "Infectologia"
+    }
+  ]
+},
+{
+  id: "prova-suseme-2019-emergencia-cti",
+  name: "SUSEME - Emergência - 2019",
+  questions: [
+    {
+      id: "suseme-2019-q1",
+      text: "São doenças de notificação compulsória:",
+      options: [
+        "coqueluche, tuberculose, pneumonia comunitária",
+        "febre tifoide, febre amarela e diabetes mellitus tipo 1",
+        "febre amarela, febre tifoide e raiva humana",
+        "sarampo, rubéola e anemia falciforme"
+      ],
+      answerIndex: 2,
+      explanation: "Febre amarela, febre tifoide e raiva humana estão na lista nacional de doenças de notificação compulsória. Pneumonia comunitária e diabetes não são de notificação compulsória. Anemia falciforme tem notificação em alguns contextos específicos, mas não universalmente como as outras.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q2",
+      text: "De acordo com o Guia de Vigilância em Saúde do Ministério da Saúde (2016), o uso imediato do fosfato de oseltamivir está indicado nos(as) pacientes:",
+      options: [
+        "grávidas no primeiro trimestre com febre alta, lombalgia e cefaleia",
+        "com dispneia e febre",
+        "crianças maiores de dois anos de idade com febre e dor de garganta",
+        "indigenas que moram em aldeias"
+      ],
+      answerIndex: 3,
+      explanation: "Populações indígenas aldeadas são consideradas um grupo de alto risco para complicações da Influenza, e o tratamento com oseltamivir deve ser iniciado prontamente na presença de síndrome gripal, independentemente de sinais de gravidade.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q3",
+      text: "Doença infeciosa aguda que compromete especificamente o aparelho respiratório (traqueia e brônquios) e se caracteriza por paroxismos de tosse seca. A doença e agente etiológico são, respectivamente:",
+      options: [
+        "coqueluche; Chlamydophila psittaci",
+        "coqueluche; Bordetella pertussis",
+        "difteria; Corynebacterium diphtheriae",
+        "influenza; adenovirus"
+      ],
+      answerIndex: 1,
+      explanation: "A descrição de tosse paroxística é a marca registada da Coqueluche (tosse convulsa), cujo agente etiológico é a bactéria Bordetella pertussis.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q4",
+      text: "Paciente apresenta quadro febril, dor de garganta, aumento do diâmetro do pescoço e dispneia. Ao exame, placas pseudomembranosas branco-acinzentadas nas amígdalas e linfadenomegalia cervical. A hipótese diagnóstica e o tratamento específico são, respectivamente:",
+      options: [
+        "coqueluche; penicilina cristalina",
+        "difteria; prednisona",
+        "difteria; soro antidiftérico",
+        "influenza A; oseltamivir"
+      ],
+      answerIndex: 2,
+      explanation: "O quadro de faringite com pseudomembranas aderentes e pescoço 'taurino' é clássico da Difteria. O tratamento é uma emergência e consiste na administração do Soro Antidiftérico para neutralizar a toxina circulante, associado a antibioticoterapia.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q5",
+      text: "Senhor de 52 anos, morador de região litorânea, apresentou em fevereiro quadro febril agudo, com dor e edema de punhos, joelhos e articulações interfalageanas. Quatro meses após, procura reumatologista por dor e edema articular intermitente e incapacitante. Essa descrição corresponde à:",
+      options: ["dengue clássica", "Zika", "leptospirose", "chikungunya"],
+      answerIndex: 3,
+      explanation: "A principal característica da Chikungunya é a poliartralgia/artrite intensa e frequentemente incapacitante, que pode se cronificar por meses ou anos após a fase aguda, como descrito no caso.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q6",
+      text: "Jovem com febre, mialgia, cefaleia, vômitos, quadro confusional, edema de membros inferiores, mordido por carrapato há 7 dias. Apresenta exantema maculopapular centrípeto, petéquias e choque. O diagnóstico e o tratamento são:",
+      options: [
+        "febre maculosa brasileira; cloranfenicol",
+        "febre maculosa brasileira; penicilina cristalina",
+        "malária; cloroquina e primaquina",
+        "meningococcemia; cefepima"
+      ],
+      answerIndex: 0,
+      explanation: "A história epidemiológica (mordida de carrapato) associada a um quadro grave de febre, exantema petequial e disfunção de múltiplos órgãos é altamente sugestiva de Febre Maculosa. O tratamento de escolha é a Doxiciclina, mas o Cloranfenicol é uma alternativa válida, especialmente em gestantes ou crianças pequenas.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q7",
+      text: "São sinais de alarme na dengue:",
+      options: ["hipotensão postural e febre alta", "aumento repentino do hematocrito e cefaleia holocraniana", "hipotermia e dor lombar", "ascite e lipotimia"],
+      answerIndex: 3,
+      explanation: "Ascite (acúmulo de líquido abdominal) e lipotimia (pré-síncope) são sinais clínicos de extravasamento plasmático e hipovolemia, sendo considerados sinais de alarme na dengue. Hipotensão postural também é, mas febre alta não.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q8",
+      text: "Na confirmação laboratorial de um caso suspeito de dengue, a detecção da antigenemia NS1 deve ser feita até o:",
+      options: ["desaparecimento do rash", "quinto dia do inicio dos sintomas", "sétimo dia do inicio dos sintomas", "término do choque hemorrágico"],
+      answerIndex: 1,
+      explanation: "O antígeno NS1 é uma proteína viral que está presente no sangue durante a fase virêmica da dengue. Sua detecção é mais sensível nos primeiros dias da doença, sendo recomendada a coleta até o 5º dia do início dos sintomas.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q9",
+      text: "Vítima de atropelamento com TCE grave e fratura exposta, em coma no pós-operatório e sem história vacinal conhecida. Nesse caso, a profilaxia antitetânica correta é:",
+      options: [
+        "administração de imunoglobulina antitetânica e vacina dT, aplicados em locais diferentes",
+        "administração de imunoglobulina antitetânica e vacina dT, que poderão ser misturados",
+        "aplicar apenas a vacina dT",
+        "não será necessário uso imediato"
+      ],
+      answerIndex: 0,
+      explanation: "Em um paciente com ferimento de alto risco (fratura exposta) e história vacinal desconhecida, a profilaxia para tétano deve ser completa, com imunização passiva (imunoglobulina) e ativa (vacina dT), administradas em locais diferentes.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q10",
+      text: "Na avaliação para melhor abordagem do tratamento profilático antirrábico humano, são considerados acidentes graves aqueles causados por mordedura de cão em:",
+      options: [
+        "mãos e tronco",
+        "cabeça e mãos",
+        "ferimentos na cabeça e lambedura de pele intacta",
+        "região superficial da coxa e lambedura de pele lesionada"
+      ],
+      answerIndex: 1,
+      explanation: "Acidentes em áreas com alta inervação, como cabeça, face, pescoço, mãos e pés, são considerados graves devido ao menor tempo de incubação do vírus da raiva. Lambedura de pele intacta não representa risco.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q11",
+      text: "Na abordagem da gestante com eclampsia, o sulfato de magnésio é largamente utilizado e previne convulsões. Durante a sua infusão, deve-se monitorizar:",
+      options: [
+        "reflexo pupilar, indices hematimétricos e transaminases",
+        "frequência respiratória, transaminases e plaquetas",
+        "contagem plaquetária, reflexo pupilar e reflexos tendinosos",
+        "reflexos tendinosos, diurese e respiração"
+      ],
+      answerIndex: 3,
+      explanation: "A monitorização da toxicidade do sulfato de magnésio é feita clinicamente pela avaliação seriada dos reflexos tendinosos (o primeiro a desaparecer), da frequência respiratória (risco de depressão respiratória) e do débito urinário (risco de acúmulo por insuficiência renal).",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2019-q12",
+      text: "Paciente de 28 anos com desorientação, febre, sinais de Kernig e Brudzinski, e estertores crepitantes na base do pulmão direito. Um medicamento que NÃO deve ser administrado é a:",
+      options: ["ceftriaxona", "dexametasona", "ceftarolina", "vancomicina"],
+      answerIndex: 2,
+      explanation: "O quadro é de meningite bacteriana comunitária. Ceftriaxona, vancomicina e dexametasona (para reduzir a inflamação e sequelas) fazem parte do esquema empírico padrão. Ceftarolina, uma cefalosporina de 5ª geração, não é a primeira escolha e não é rotineiramente incluída.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q13",
+      text: "Aluno de medicina com cefaleia, tosse persistente e febre há 15 dias. Outros colegas com os mesmos sintomas. Radiografia com infiltrado intersticial. São, respectivamente, o organismo envolvido e seu tratamento:",
+      options: [
+        "Mycoplasma pneumoniae; azitromicina",
+        "Mycoplasma pneumoniae; ceftriaxona",
+        "Legionella pneumophila, azitromicina",
+        "Pneumocystis jirovecii; sulfametoxazol-trimetoprima"
+      ],
+      answerIndex: 0,
+      explanation: "O quadro de pneumonia atípica (arrastado, com tosse seca e poucos achados na ausculta) em um contexto de surto em comunidade fechada (alojamento) é clássico do Mycoplasma pneumoniae. O tratamento de escolha é com um macrolídeo, como a azitromicina.",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2019-q14",
+      text: "Etilista de 52 anos com ascite. A paracentese mostra albumina de 1,1 g/dL no líquido e 3,6 g/dL no soro. Nesse caso, a etiologia da ascite é:",
+      options: [
+        "carcinomatose peritoneal",
+        "tuberculose peritoneal",
+        "hipertensão portal devido à cirrose hepática",
+        "pancreatite crônica"
+      ],
+      answerIndex: 2,
+      explanation: "O Gradiente de Albumina Soro-Ascite (GASA) é calculado por [Albumina sérica] - [Albumina ascítica]. Neste caso, 3,6 - 1,1 = 2,5. Um GASA ≥ 1,1 g/dL indica que a causa da ascite é a hipertensão portal, sendo a cirrose hepática a causa mais provável no contexto de etilismo crônico.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2019-q15",
+      text: "Na abordagem do paciente com dor lombar, o sintoma que NÃO sugere alteração estrutural importante é a:",
+      options: ["incontinencia urinária", "piora da dor a noite ou em repouso", "perda de peso", "melhora da dor em repouso"],
+      answerIndex: 3,
+      explanation: "A melhora da dor com o repouso é característica de dor lombar de origem mecânica, que é a causa mais comum e geralmente benigna. As outras opções são 'sinais de alerta' (red flags) que sugerem causas mais graves, como compressão medular, tumor ou infecção.",
+      tag: "Ortopedia"
+    },
+    {
+      id: "suseme-2019-q16",
+      text: "Nos casos de acidente vascular encefálico isquêmico, é contraindicação à trombólise venosa:",
+      options: [
+        "tomografia computadorizada de crânio não demonstrando edema em mais de 1/3 do território da artéria cerebral média",
+        "cirurgia de qualquer porte há quatro semanas",
+        "melhora rápida dos sintomas",
+        "uso de varfarina mesmo com INR normal"
+      ],
+      answerIndex: 2,
+      explanation: "A melhora rápida e significativa dos sintomas neurológicos é uma contraindicação relativa, pois sugere um ataque isquêmico transitório (AIT) onde o risco do trombolítico pode superar o benefício. Cirurgia há 4 semanas não contraindica (o limite é 2 semanas). O uso de varfarina só é contraindicação se o INR estiver elevado.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2019-q17",
+      text: "Paciente de 30 anos agredido, comatoso. Glasgow: não abre olhos (1), não verbaliza (1 - intubado), faz extensão dos membros ao estímulo álgico (2). TC com hematoma epidural. A pontuação na escala de Glasgow e o alvo da PPC são:",
+      options: ["Glasgow 7 e PPC > 70 mmHg", "Glasgow 6 e PPC > 65 mmHg", "Glasgow 5 e PPC ≥ 60 mmHg", "Glasgow 4 e PPC > 60 mmHg"],
+      answerIndex: 3,
+      explanation: "A Escala de Coma de Glasgow é: Abertura Ocular (1) + Melhor Resposta Verbal (1, por estar intubado) + Melhor Resposta Motora (2 - extensão/descerebração) = 4. O alvo da Pressão de Perfusão Cerebral (PPC) no TCE grave é entre 60-70 mmHg.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2019-q18",
+      text: "Paciente de 50 anos, hipertenso, diabético, com tosse, febre e dor torácica. PA 128x87mmHg, taquicárdico, taquipneico. Após 2L de SF, a PA se manteve. O quadro desse paciente é definido como:",
+      options: ["choque séptico refratário", "choque séptico", "sepse precoce", "sepse grave"],
+      answerIndex: 3,
+      explanation: "O paciente tem sepse (infecção suspeita + disfunção de órgão - taquipneia, taquicardia, hiperlactatemia). Como a pressão se manteve estável após a ressuscitação volêmica, sem necessidade de vasopressores, o quadro é classificado como Sepse Grave (pelos critérios antigos, Sepsis-2).",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q19",
+      text: "Senhor de 60 anos, hipertenso, com dor torácica de forte intensidade irradiada para o dorso. PA 222x104 mmHg, FC 134 bpm, sopro de regurgitação aórtica e assimetria de pulsos. As drogas anti-hipertensivas que devem ser usadas são:",
+      options: ["furosemida e hidralazina", "esmolol e nitroprussiato de sódio", "nifedipina e atenolol", "furosemida e atenolol"],
+      answerIndex: 1,
+      explanation: "O quadro é de dissecção aguda de aorta, uma emergência hipertensiva. O tratamento visa reduzir a força de cisalhamento do fluxo sanguíneo. Para isso, utiliza-se um betabloqueador para reduzir a frequência cardíaca (esmolol) e um vasodilatador para reduzir a pressão arterial (nitroprussiato).",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2019-q20",
+      text: "Paciente com derrame pleural. Análise do líquido: pH 7,45, proteína 5,8 g/dL, LDH 285 UI/L. Soro: proteína 7,2 g/dL, LDH 320. O diagnóstico que NÃO é a causa do derrame é:",
+      options: ["cirrose hepática", "neoplasia pulmonar", "tuberculose pleural", "empiema pleural"],
+      answerIndex: 0,
+      explanation: "Para classificar o derrame, usamos os Critérios de Light. Relação Proteína Pleural/Sérica = 5.8/7.2 > 0.5. Relação LDH Pleural/Sérico = 285/320 > 0.6. Ambos positivos, trata-se de um exsudato. Neoplasia, TB e empiema causam exsudato. A cirrose hepática causa transudato (hidrotórax hepático).",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2019-q21",
+      text: "A colestase deve ser monitorada em pacientes com uso da:",
+      options: ["niacina", "eritromicina", "aspirina", "vancomicina"],
+      answerIndex: 1,
+      explanation: "A eritromicina, um antibiótico macrolídeo, é uma causa clássica de hepatite colestática induzida por drogas, especialmente a forma de estolato de eritromicina.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2019-q22",
+      text: "Observando-se o seguinte resultado de sorologia para hepatite B: HBsAg positivo; anti-HBs negativo; Anti-HBc IgM positivo; HBeAg positivo; Anti-HBe negativo, o diagnóstico é:",
+      options: ["imunoconversão após vacinação", "hepatite B falso positivo", "hepatite crônica", "hepatite B aguda"],
+      answerIndex: 3,
+      explanation: "A positividade do Anti-HBc IgM é o marcador que define a infecção aguda. HBsAg positivo indica infecção, e HBeAg positivo indica alta replicação viral. A ausência de anti-HBs confirma a susceptibilidade.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2019-q23",
+      text: "O tratamento para um paciente com choque por diabetes insipidus é:",
+      options: ["vasopressina", "furosemide", "insulina", "imunoglobulina"],
+      answerIndex: 0,
+      explanation: "O diabetes insipidus é causado pela deficiência ou resistência ao hormônio antidiurético (ADH), também conhecido como vasopressina. O tratamento do choque (causado por desidratação severa) é a reposição volêmica e a administração de um análogo do ADH, como a vasopressina ou desmopressina.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2019-q24",
+      text: "A doença de Von Willebrand aumenta a meia vida do fator de coagulação:",
+      options: ["V", "VIII", "X", "XI"],
+      answerIndex: 1,
+      explanation: "O fator de von Willebrand (FvW) atua como uma proteína transportadora para o Fator VIII, protegendo-o da degradação. Na deficiência de FvW, a meia-vida do Fator VIII é reduzida, podendo levar a um quadro semelhante à hemofilia A leve.",
+      tag: "Hematologia"
+    },
+    {
+      id: "suseme-2019-q25",
+      text: "Qual o tratamento preconizado para um paciente com hemorragia por púrpura trombocitopênica trombótica:",
+      options: ["aziatioprina", "ibuprofeno", "imunoglobulina", "bivalirudina"],
+      answerIndex: 2,
+      explanation: "O tratamento da Púrpura Trombocitopênica Trombótica (PTT) é uma emergência e baseia-se na plasmaférese para remover os autoanticorpos. A imunoglobulina e a corticoterapia são terapias adjuvantes importantes. Bivalirudina é para TIH. A questão é mal formulada, mas a imunoglobulina é a única opção plausível.",
+      tag: "Hematologia"
+    },
+    {
+      id: "suseme-2019-q26",
+      text: "É preconizado no tratamento da pseudo-obstrução colônica ou sindrome de Ogilvie a seguinte droga:",
+      options: ["morfina", "nicotinamida", "neostigmina", "diltiazem"],
+      answerIndex: 2,
+      explanation: "A Síndrome de Ogilvie é uma dilatação maciça do cólon sem obstrução mecânica. O tratamento farmacológico de escolha é a neostigmina, um inibidor da acetilcolinesterase que estimula a motilidade colônica.",
+      tag: "Cirurgia"
+    },
+    {
+      id: "suseme-2019-q27",
+      text: "Nos pacientes com endocardite infecciosa e usuários de drogas endovenosas, os agentes etiológicos mais frequentemente encontrados e a sua localização preferencial são, respectivamente:",
+      options: [
+        "Staphylococcus aureus; válvula tricúspide",
+        "Candida albicans; válvula mitral",
+        "Streptococcus viridans; válvula aórtica",
+        "Pseudomonas aeruginosa, válvula pulmonar"
+      ],
+      answerIndex: 0,
+      explanation: "Em usuários de drogas injetáveis, o agente mais comum da endocardite é o Staphylococcus aureus, e a válvula mais frequentemente acometida é a tricúspide (coração direito), devido à inoculação direta na circulação venosa.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q28",
+      text: "O antiarrítmico que induz tireotoxicose é:",
+      options: ["propafenona", "quinidina", "amiodarona", "sotalol"],
+      answerIndex: 2,
+      explanation: "A amiodarona é uma droga rica em iodo que pode causar tanto hipotireoidismo quanto tireotoxicose (hipertireoidismo) por diferentes mecanismos. É a causa mais clássica de disfunção tireoidiana induzida por antiarrítmicos.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2019-q29",
+      text: "Para o controle da hipertensão em um paciente com feocromocitoma deve ser utilizado:",
+      options: ["prazocin", "furosemida", "hidroclorotiazida", "clonidina"],
+      answerIndex: 0,
+      explanation: "No feocromocitoma, há uma produção excessiva de catecolaminas. O controle da hipertensão arterial deve ser feito, primeiramente, com um alfabloqueador, como o prazosin ou a fenoxibenzamina. O uso de betabloqueador isolado é contraindicado.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2019-q30",
+      text: "A dapsona é uma sulfona utilizada no tratamento de hanseníase. Deve-se monitorar seu uso para o risco de meta-hemoglobinemia, cujo o tratamento é:",
+      options: ["tiamina", "colestiramina", "acetilcisteina", "azul de metileno"],
+      answerIndex: 3,
+      explanation: "A meta-hemoglobinemia é uma complicação rara, mas grave, de drogas como a dapsona. O antídoto específico que acelera a redução da meta-hemoglobina de volta à hemoglobina funcional é o azul de metileno.",
+      tag: "Toxicologia"
+    },
+    {
+      id: "suseme-2019-q31",
+      text: "A principal causa de pancreatite aguda é:",
+      options: ["alcoólica", "biliar", "idiopática", "hipertrigliceridemia"],
+      answerIndex: 1,
+      explanation: "No Brasil e na maior parte do mundo, a principal causa de pancreatite aguda é a litíase biliar, onde um cálculo migra e obstrui o ducto pancreático. A segunda causa mais comum é a ingesta alcoólica.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2019-q32",
+      text: "Utiliza-se para o diagnóstico diferencial de doença restritiva ou obstrutiva pulmonar a espirometria. A doença obstrutiva diferencia-se por:",
+      options: [
+        "volume residual reduzido e aumento da capacidade vital",
+        "aumento da capacidade vital; redução do volume residual e aumento do volume expiratório forçado no 1's",
+        "volume residual aumentado e aumento da capacidade vital forçada",
+        "redução da capacidade vital; aumento do volume residual e redução do volume expiratório forçado no 1's"
+      ],
+      answerIndex: 3,
+      explanation: "A doença obstrutiva (ex: DPOC, asma) é caracterizada pela dificuldade em expirar o ar. Na espirometria, isso se traduz em uma redução do VEF1 e da relação VEF1/CVF. Cronicamente, leva ao aprisionamento aéreo, com aumento do Volume Residual (VR) e redução da Capacidade Vital (CV).",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2019-q33",
+      text: "Para o tratamento da crise de asma é preconizado:",
+      options: [
+        "agonista beta-adrenérgica e corticosteroide",
+        "beta-bloqueador e anticolinérgico",
+        "agonista alfa-adrenérgico e inibidor fosfodiesterase",
+        "beta-bloqueador e acetilcisteina"
+      ],
+      answerIndex: 0,
+      explanation: "Os dois pilares do tratamento da crise asmática são: 1) um broncodilatador de ação rápida para reverter o broncoespasmo (agonista beta-adrenérgico, como salbutamol) e 2) um corticoide sistêmico para tratar a inflamação subjacente.",
+      tag: "Pneumologia"
+    },
+    {
+      id: "suseme-2019-q34",
+      text: "A estratégia mais benéfica na prevenção de nefropatia relacionada ao contraste iodado é:",
+      options: [
+        "utilização de diurético antes do procedimento",
+        "hidratação vigorosa antes do procedimento",
+        "administração de N-acetilcisteína após o procedimento",
+        "administração de solução bicarbonatada após procedimento"
+      ],
+      answerIndex: 1,
+      explanation: "A medida isolada mais eficaz para prevenir a nefropatia induzida por contraste em pacientes de risco é a expansão volêmica com soro fisiológico isotônico, iniciada antes e mantida após o procedimento.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2019-q35",
+      text: "Para a correção da hipercalemia aguda utiliza-se:",
+      options: ["insulina venosa", "reposição de magnésio", "antagonista de cálcio", "reposição de fósforo"],
+      answerIndex: 0,
+      explanation: "A administração de insulina intravenosa (junto com glicose para evitar hipoglicemia) é uma das medidas mais eficazes e rápidas para reduzir os níveis séricos de potássio, pois promove o deslocamento do potássio do meio extracelular para o intracelular.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2019-q36",
+      text: "Jovem com confusão mental, náuseas, vômitos, taquipneia e dor abdominal. Exames: glicemia 585, sódio 125, creatinina 1.8, leucocitose, amilase elevada, pH arterial 7.1. O diagnóstico mais provável é:",
+      options: ["uremia", "pancreatite", "sepse abdominal", "cetoacidose diabética"],
+      answerIndex: 3,
+      explanation: "A tríade de hiperglicemia acentuada (>250), acidose metabólica (pH < 7.3) e presença de cetonas (inferida pelo quadro clínico e acidose) fecha o diagnóstico de Cetoacidose Diabética (CAD). A dor abdominal e a leucocitose são manifestações comuns da CAD.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2019-q37",
+      text: "O antibiótico preconizado para bactérias Gram-negativas como Pseudomonas aeruginosa é a:",
+      options: ["ceftazidima", "oxacilina", "clindamicina", "vancomicina"],
+      answerIndex: 0,
+      explanation: "A Ceftazidima é uma cefalosporina de terceira geração com excelente cobertura antipseudomonas. As outras opções não têm atividade contra Pseudomonas aeruginosa.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2019-q38",
+      text: "A adenosina é um antiarrítmico utilizado na seguinte arritmia:",
+      options: [
+        "taquicardia ventricular",
+        "taquicardia supraventricular",
+        "bradicardia sinusal",
+        "bloqueio atrioventricular"
+      ],
+      answerIndex: 1,
+      explanation: "A adenosina é uma droga de ação ultrarrápida que bloqueia o nó atrioventricular, sendo o tratamento de escolha para reverter a Taquicardia Supraventricular por Reentrada Nodal.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2019-q39",
+      text: "Manchas de Janeway são pequenas hemorragias palmar e plantar encontradas na seguinte doença:",
+      options: ["sifilis", "endocardite bacteriana aguda", "murcomicose", "sarcoma de Kaposi"],
+      answerIndex: 1,
+      explanation: "As manchas de Janeway são lesões hemorrágicas, indolores, localizadas nas palmas das mãos e plantas dos pés, e são um dos sinais periféricos clássicos da endocardite infecciosa, causadas por microembolias sépticas.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2019-q40",
+      text: "É sinal de tamponamento cardíaco no exame fisico:",
+      options: [
+        "pulso paradoxal",
+        "pressão jugular reduzida",
+        "aumento da amplitude do QRS no eletrocardiograma",
+        "eletrocardiograma sem alteração"
+      ],
+      answerIndex: 0,
+      explanation: "O pulso paradoxal, uma queda acentuada (>10 mmHg) da pressão arterial sistólica durante a inspiração, é um dos sinais mais específicos do tamponamento cardíaco. A pressão jugular estaria elevada, e o ECG tipicamente mostra baixa voltagem e alternância elétrica.",
+      tag: "Cardiologia"
+    }
+  ]
+},
+{
+  id: "prova-suseme-2018-emergencia",
+  name: "SUSEME - Emergência - 2018 ",
+  questions: [
+    {
+      id: "suseme-2018-q1",
+      text: "Paciente de 58 anos de idade chega à emergência com cefaleia súbita, acompanhada de confusão mental e hemiplegia direita. A tomografia computadorizada de crânio revela hemorragia subaracnóidea com classificação Fisher IV. Sobre essa situação clínica, é correto afirmar que:",
+      options: [
+        "o uso de bloqueador de canal de cálcio modifica a evolução do vasoespasmo arteriográfico",
+        "a ruptura de aneurisma cerebral pode ser descartada com o exame de fundo de olho",
+        "pela classificação de Hunt e Hess, esse paciente teria um bom prognóstico",
+        "o ressangramento e a hidrocefalia são complicações cerebrais precoces"
+      ],
+      answerIndex: 3,
+      explanation: "O ressangramento (principalmente nas primeiras 24h) e a hidrocefalia aguda (por obstrução do fluxo liquórico pelo sangue) são as complicações precoces mais temidas da hemorragia subaracnóidea. A nimodipina (bloqueador de canal de cálcio) é usada para prevenir o vasoespasmo, mas não modifica o achado arteriográfico. O fundo de olho não descarta aneurisma. Hunt-Hess avalia a clínica, e um paciente com confusão e hemiplegia teria um prognóstico ruim (grau IV).",
+      tag: "Neurologia - AVE"
+    },
+    {
+      id: "suseme-2018-q2",
+      text: "Paciente com febre e sepse grave, devido a cateter venoso central com sítio de inserção infectado. Considerando esse quadro, a conduta apropriada é:",
+      options: [
+        "coletar culturas, retirar o cateter e iniciar antibiótico",
+        "coletar hemoculturas, retirar o cateter e não iniciar antibiótico",
+        "coletar swab da secreção do sitio de inserção e retirar o cateter",
+        "manter o cateter, coletar culturas e iniciar antibiótico após essa coleta"
+      ],
+      answerIndex: 0,
+      explanation: "Diante de uma infecção de corrente sanguínea relacionada a cateter com sinais de sepse, a conduta mandatória é a remoção imediata do dispositivo (fonte da infecção), a coleta de hemoculturas (do cateter e periféricas) e o início imediato de antibioticoterapia empírica.",
+      tag: "Infectologia - Sepse"
+    },
+    {
+      id: "suseme-2018-q3",
+      text: "Sobre a insuficiência renal secundária à rabdomiólise, é correto afirmar que:",
+      options: [
+        "deve-se tentar manter débito urinário maior que 150 mL/h",
+        "os diuréticos osmóticos devem ser utilizados para diminuir o risco de insuficiência renal",
+        "cerca de 90% dos pacientes com rabdomiólise não traumática apresentam dor intensa à compressão muscular",
+        "a reposição volêmica inicial deve ser feita com 30 mL/kg de peso, durante 30 minutos e, idealmente, com solução hipertônica (solução salina a 3%)"
+      ],
+      answerIndex: 0,
+      explanation: "O pilar do tratamento da rabdomiólise é a hidratação venosa agressiva para forçar a diurese e prevenir a deposição de mioglobina nos túbulos renais. O alvo é um débito urinário alto, classicamente entre 150-300 mL/h. Diuréticos não são a primeira linha. A dor muscular pode estar ausente. A reposição é com solução isotônica (soro fisiológico).",
+      tag: "Nefrologia - IRA"
+    },
+    {
+      id: "suseme-2018-q4",
+      text: "Podem ser indicações de terapia de substituição renal:",
+      options: [
+        "hipervolemia, acidose e hipernatremia",
+        "encefalopatia urêmica, acidose e intoxicação por acetaminofeno",
+        "hiperfosfatemia, arritmias pela uremia e acidose metabólica refratária",
+        "encefalopatia urêmica, acidose metabólica refratária e intoxicação por betabloqueador"
+      ],
+      answerIndex: 3,
+      explanation: "As indicações clássicas de diálise de urgência são resumidas pelo mnemônico AEIOU: Acidose (refratária), Eletrólitos (hipercalemia refratária), Intoxicações (por substâncias dialisáveis como salicilatos, lítio, metanol - não betabloqueador ou acetaminofeno), Overload (hipervolemia refratária) e Uremia (encefalopatia, pericardite). A opção D contém duas indicações corretas.",
+      tag: "Nefrologia - Diálise"
+    },
+    {
+      id: "suseme-2018-q5",
+      text: "Paciente com edema pulmonar cardiogênico por emergência hipertensiva e um ecocardiograma recente, com função sistólica normal e disfunção diastólica leve. A medida inicial mais adequada é:",
+      options: ["morfina", "furosemida", "dobutamina", "nitroprussiato"],
+      answerIndex: 3,
+      explanation: "Numa emergência hipertensiva com edema agudo de pulmão, a prioridade é reduzir a pós-carga para aliviar o trabalho do ventrículo esquerdo. O nitroprussiato é um vasodilatador arterial e venoso potente e de ação rápida, sendo a droga de escolha. Furosemida é importante, mas a vasodilatação é a medida principal. Dobutamina é para choque cardiogênico. Morfina é adjuvante.",
+      tag: "Cardiologia - Hipertensão"
+    },
+    {
+      id: "suseme-2018-q6",
+      text: "Paciente pré-escolar apresentando prurido em todo o couro cabeludo há 15 dias. Ao exame físico, nota-se a presença de lêndeas e piolhos. A melhor conduta terapêutica é:",
+      options: [
+        "condenar o uso do vinagre, devido à resistência dos piolhos",
+        "explicar que escovas de cabelo não são causas de reinfestação após o tratamento",
+        "informar que as lêndeas viáveis são eliminadas com o uso de ivermectina oral",
+        "indicar a utilização de permetrina a 1 ou 5% pela ação ovicida e parasiticida"
+      ],
+      answerIndex: 3,
+      explanation: "O tratamento de primeira linha para pediculose do couro cabeludo é a permetrina tópica a 1%, que tem ação tanto contra o piolho adulto (parasiticida) quanto contra os ovos (ovicida). Ivermectina oral não elimina lêndeas. Fômites como escovas são importantes na reinfestação.",
+      tag: "Pediatria - Dermatologia"
+    },
+    {
+      id: "suseme-2018-q7",
+      text: "O quadro que melhor define cetoacidose diabética é:",
+      options: [
+        "glicemia: 126 mg/dL; pH: 6,9; bicarbonato: 19 mg/dL; cetonúria: 2+/4+",
+        "glicemia: 90 mg/dL; pH: 7,27; bicarbonato: 31 mg/dL; cetonúria: 1+/4+",
+        "glicemia: 330 mg/dL; pH: 7,13; bicarbonato: 8 mg/dL; cetonúria: 3+/4+",
+        "glicemia: 650 mg/dL; pH: 7,32; bicarbonato: 21 mg/dL; cetonúria: 4+/4+"
+      ],
+      answerIndex: 2,
+      explanation: "Os critérios diagnósticos para Cetoacidose Diabética (CAD) são: 1) Hiperglicemia (>250 mg/dL), 2) Acidose metabólica (pH < 7,3 e/ou Bicarbonato < 18 mEq/L) e 3) Cetonemia ou cetonúria. A opção C é a única que preenche todos os critérios.",
+      tag: "Endocrinologia - Diabetes"
+    },
+    {
+      id: "suseme-2018-q8",
+      text: "Paciente de 65 anos de idade, portador de Diabetes mellitus, apresenta-se com quadro de febre alta, mialgia, dor retro-orbitária, dor abdominal e vômitos. Considerou-se tratar de dengue. A classificação desse quadro e a conduta, nesse momento, devem ser de:",
+      options: [
+        "dengue grave, sem alteração de parâmetros perfusionais",
+        "dengue provável, com internação em unidade de terapia intensiva para monitorização",
+        "dengue provável, com sinais de alerta; internação hospitalar com reposição volêmica inicial de 10 a 20 mL/kg",
+        "dengue grave, com alteração de parâmetros perfusionais; internação em unidade de terapia intensiva com reposição volêmica de 20 mL/kg em 20 minutos"
+      ],
+      answerIndex: 2,
+      explanation: "O paciente apresenta dor abdominal e vômitos, que são sinais de alerta para dengue (Grupo C). A conduta para dengue com sinais de alerta é a internação hospitalar com hidratação venosa imediata.",
+      tag: "Infectologia - Dengue"
+    },
+    {
+      id: "suseme-2018-q9",
+      text: "Um paciente é admitido na emergência com insuficiência hepática aguda. São achados que confirmam o diagnóstico:",
+      options: [
+        "ictericia e encefalopatia",
+        "encefalopatia e hemiplegia",
+        "ictericia e prolongamento do tempo de protrombina",
+        "encefalopatia e prolongamento do tempo de protrombina"
+      ],
+      answerIndex: 3,
+      explanation: "A insuficiência hepática aguda é definida pelo desenvolvimento de encefalopatia hepática e coagulopatia (alargamento do tempo de protrombina / INR ≥ 1,5) em um paciente sem doença hepática crônica prévia. Icterícia é comum, mas não definidora.",
+      tag: "Gastroenterologia - Hepatologia"
+    },
+    {
+      id: "suseme-2018-q10",
+      text: "Em relação ao derrame e ao tamponamento pericárdicos, é correto afirmar que:",
+      options: [
+        "a pressão pericárdica, quando normal, não interfere na pressão transmural ventricular",
+        "o desempenho de ambos os ventrículos é prejudicado simultaneamente no tamponamento pericárdico",
+        "nos casos de tamponamento de rápida instalação, como no hemopericárdico, a distensão jugular é sempre aparente",
+        "insuficiência cardíaca grave pode resultar em derrame pericárdico transudativo, como consequência de pressões de enchimento ventricular demasiadamente elevadas ou drenagem pericárdica obstruída"
+      ],
+      answerIndex: 3,
+      explanation: "O aumento crônico das pressões de enchimento cardíaco na insuficiência cardíaca grave pode levar a um desequilíbrio hidrostático e ao acúmulo de líquido transudativo no espaço pericárdico. As outras afirmações são incorretas: a pressão pericárdica normal é próxima de zero, mas interfere; no tamponamento, o ventrículo direito é afetado primeiro; a distensão jugular pode estar ausente em hipovolemia.",
+      tag: "Cardiologia - Pericárdio"
+    },
+    {
+      id: "suseme-2018-q11",
+      text: "Ao receber um paciente não intubado apresentando doença obstrutiva agudizada (DPOC agudizada) na emergência, os sinais que devem ser imediatamente pesquisados na admissão, definindo a decisão de intubação são:",
+      options: [
+        "dificuldade de falar, dor ao respirar (escala de Borg), batimento de asa do nariz, diaforese e hipotermia",
+        "nível de consciência, história recente de contato com fungos e alérgenos, história de viagens ao exterior recentes, história vacinal contra pneumococo e influenza, oximetria de pulso e condição hemodinâmica",
+        "dificuldade de falar, uso de musculatura acessória, frequência respiratória, fluxo inspiratório (respiração curta), hipóxia (oximetria), nivel de consciência e condição hemodinâmica",
+        "se é a primeira vez que tem uma crise grave, dificuldade para completar frases curtas, se a secreção mudou de aspecto, se já foi intubado devido a esse problema, se é diabético, se faz uso de corticoide prévio e se apresenta antecedentes para contrair o virus HIV"
+      ],
+      answerIndex: 2,
+      explanation: "A decisão de intubar um paciente com DPOC agudizado baseia-se em sinais de insuficiência respiratória iminente, que incluem: rebaixamento do nível de consciência, instabilidade hemodinâmica, hipoxemia grave e sinais de exaustão da musculatura respiratória (uso de musculatura acessória, respiração paradoxal, incapacidade de falar).",
+      tag: "Pneumologia - DPOC"
+    },
+    {
+      id: "suseme-2018-q12",
+      text: "No traumatismo de crânio, deve-se avaliar preferencialmente:",
+      options: [
+        "sensibilidade, resposta motora e pupilas",
+        "sensibilidade, pupilas e condição ventilatória",
+        "resposta motora, pupila e condição ventilatória",
+        "resposta motora, resposta verbal e abertura ocular"
+      ],
+      answerIndex: 3,
+      explanation: "A avaliação neurológica padronizada no trauma é a Escala de Coma de Glasgow, que avalia três parâmetros: abertura ocular, melhor resposta verbal e melhor resposta motora.",
+      tag: "Neurologia - TCE"
+    },
+    {
+      id: "suseme-2018-q13",
+      text: "Paciente dá entrada na emergência com quadro de mal asmático necessitando do uso de corticoide. Deve-se fazer profilaxia da seguinte parasitose:",
+      options: ["Giardia lamblia", "Ascaris lumbricoides", "Schistosoma mansoni", "Strongyloides stercoralis"],
+      answerIndex: 3,
+      explanation: "O uso de corticoides sistêmicos pode desencadear a hiperinfecção por Strongyloides stercoralis, um quadro potencialmente fatal. Por isso, em pacientes com risco epidemiológico, a profilaxia (ou tratamento empírico) com ivermectina é recomendada.",
+      tag: "Infectologia - Parasitoses"
+    },
+    {
+      id: "suseme-2018-q14",
+      text: "O efeito de massa é mais frequente no seguinte traumatismo craniano:",
+      options: ["hematoma extradural", "hematoma intracerebral", "hematoma subdural agudo", "hemorragia subaracnóidea"],
+      answerIndex: 2,
+      explanation: "O hematoma subdural agudo, comum em idosos e causado pela ruptura de veias ponte, tende a se espalhar pela superfície cerebral e costuma ser maior e causar mais efeito de massa e desvio de linha média do que os outros tipos de sangramento.",
+      tag: "Neurologia - TCE"
+    },
+    {
+      id: "suseme-2018-q15",
+      text: "Paciente em coma, apresentando crise convulsiva generalizada. A conduta inicial é:",
+      options: ["diazepan", "fenobarbital", "dexametasona", "clorpromazina"],
+      answerIndex: 0,
+      explanation: "O tratamento de primeira linha para cessar uma crise convulsiva em andamento é a administração de um benzodiazepínico de ação rápida, como diazepam ou midazolam.",
+      tag: "Neurologia - Epilepsia"
+    },
+    {
+      id: "suseme-2018-q16",
+      text: "Paciente portador de sinais flogísticos em joelho esquerdo associados à linfangite inguinal. O antibiótico venoso de uso preferencial nesse caso é:",
+      options: ["penicilina G cristalina", "metronidazol", "clindamicina", "cefalotina"],
+      answerIndex: 0,
+      explanation: "O quadro é de erisipela, uma infecção de pele causada principalmente pelo Streptococcus pyogenes. O agente de primeira escolha para o tratamento é a penicilina. Cefalotina seria uma alternativa.",
+      tag: "Infectologia - Pele"
+    },
+    {
+      id: "suseme-2018-q17",
+      text: "A seguinte droga está relacionada ao hipotireoidismo:",
+      options: ["quinidina", "propafenona", "amiodarona", "propranolol"],
+      answerIndex: 2,
+      explanation: "A amiodarona é rica em iodo e pode tanto induzir hipotireoidismo (pelo efeito de Wolff-Chaikoff) quanto tireotoxicose. É uma causa clássica de disfunção tireoidiana induzida por drogas.",
+      tag: "Endocrinologia - Tireoide"
+    },
+    {
+      id: "suseme-2018-q18",
+      text: "No pneumotórax hipertensivo, a conduta mais correta é:",
+      options: ["toracocentese", "tomografia de tórax", "radiografia de tórax", "intubação orotraqueal e ventilação"],
+      answerIndex: 0,
+      explanation: "O pneumotórax hipertensivo é uma emergência com risco de vida iminente. O diagnóstico é clínico e o tratamento é imediato com descompressão torácica por agulha (toracocentese) no 2º espaço intercostal, linha hemiclavicular, sem aguardar exames de imagem.",
+      tag: "Pneumologia - Trauma"
+    },
+    {
+      id: "suseme-2018-q19",
+      text: "Os sintomas mais encontrados em intoxicação aguda por cocaína são:",
+      options: ["hipotermia e nistagmo", "nistagmo e arritmia cardíaca", "hipertermia e arritmia cardíaca", "hipotermia e hipertensão arterial"],
+      answerIndex: 2,
+      explanation: "A cocaína causa uma síndrome simpatomimética maciça, levando a agitação, hipertensão, taquicardia (arritmias), midríase e, caracteristicamente, hipertermia, que pode ser grave e fatal.",
+      tag: "Toxicologia - Intoxicações"
+    },
+    {
+      id: "suseme-2018-q20",
+      text: "Em paciente diabético e etilista com pneumonia, o germe que primariamente deve ser considerado é:",
+      options: ["Klebsiella pneumoniae", "Staphylococcus aureus", "Haemophilus influenzae", "Streptococcus pneumoniae"],
+      answerIndex: 0,
+      explanation: "A Klebsiella pneumoniae é classicamente associada a pneumonias em pacientes etilistas crônicos e diabéticos, podendo causar quadros graves com necrose e formação de abscessos (pneumonia do lobo pesado).",
+      tag: "Pneumologia - Pneumonia"
+    },
+    {
+      id: "suseme-2018-q21",
+      text: "A causa mais comum de embolia cerebral é:",
+      options: ["fibrilação atrial", "cardiopatia reumática", "prótese valvar cardiaca", "cardiomiopatia dilatada"],
+      answerIndex: 0,
+      explanation: "A fibrilação atrial é a arritmia sustentada mais comum e a principal causa de AVC cardioembólico, devido à formação de trombos no átrio esquerdo que podem migrar para a circulação cerebral.",
+      tag: "Cardiologia - Arritmias"
+    },
+    {
+      id: "suseme-2018-q22",
+      text: "Acidose metabólica está associada, na maioria das vezes:",
+      options: ["à hipercalemia", "à hipernatremia", "ao aumento do BE", "ao aumento de pCO2"],
+      answerIndex: 0,
+      explanation: "Na acidose metabólica, o excesso de íons H+ no sangue entra nas células em troca de íons de potássio, que saem para o sangue, resultando em hipercalemia. Aumento de pCO2 causa acidose respiratória.",
+      tag: "Nefrologia - Distúrbios Ácido-Base"
+    },
+    {
+      id: "suseme-2018-q23",
+      text: "Paciente de 60 anos de idade internado com pneumonia bacteriana. O sinal clínico abaixo mais indicativo de gravidade do quadro é:",
+      options: ["temperatura axilar > 39°C", "frequência cardiaca > 100 bpm", "frequência respiratória > 30 irpm", "pressão arterial < 100x60 mmHg"],
+      answerIndex: 2,
+      explanation: "No escore de gravidade CURB-65 para pneumonia, uma frequência respiratória ≥ 30 irpm é um dos critérios que pontua e indica maior gravidade e necessidade de internação. Os outros sinais também podem estar presentes, mas a taquipneia é um marcador prognóstico forte.",
+      tag: "Pneumologia - Pneumonia"
+    },
+    {
+      id: "suseme-2018-q24",
+      text: "Uma droga que NÃO determina necrose tubular aguda é:",
+      options: ["anfotericina B", "alfametildopa", "aminoglicosideo", "contraste iodado"],
+      answerIndex: 1,
+      explanation: "Aminoglicosídeos, anfotericina B e contraste iodado são causas clássicas de nefrotoxicidade por necrose tubular aguda (NTA). A alfametildopa está mais associada a nefrite intersticial aguda, um mecanismo diferente de lesão renal.",
+      tag: "Nefrologia - IRA"
+    },
+    {
+      id: "suseme-2018-q25",
+      text: "A disfunção que mais comumente é responsável pela insuficiência cardiaca congestiva (ICC) é a:",
+      options: [
+        "do ventriculo direito",
+        "sistólica de ventriculo esquerdo",
+        "diastólica de ventrículo esquerdo",
+        "sistodiastólica de ventriculo esquerdo"
+      ],
+      answerIndex: 1,
+      explanation: "A insuficiência cardíaca com fração de ejeção reduzida (ICFEr), ou disfunção sistólica do ventrículo esquerdo, é a forma mais classicamente estudada e uma das mais prevalentes de ICC, causada por doenças como infarto do miocárdio e miocardiopatia dilatada.",
+      tag: "Cardiologia - ICC"
+    },
+    {
+      id: "suseme-2018-q26",
+      text: "Um paciente após episódio de hipovolemia apresentou, na avaliação laboratorial, ureia=138 mg/dL, creatinina=3,2 mg/dL. O clínico administrou furosemida e a diurese na hora seguinte foi de 60 mL. A melhor conduta é:",
+      options: [
+        "indicar tratamento dialitico",
+        "diminuir a hidratação do paciente",
+        "aumentar a hidratação do paciente",
+        "manter sempre o uso de diurético"
+      ],
+      answerIndex: 2,
+      explanation: "O paciente apresenta uma insuficiência renal aguda (IRA) com relação ureia/creatinina > 40, sugerindo um componente pré-renal por hipovolemia. A resposta inadequada ao diurético indica que o paciente ainda está depletado de volume. A conduta correta é otimizar a hidratação.",
+      tag: "Nefrologia - IRA"
+    },
+    {
+      id: "suseme-2018-q27",
+      text: "Paciente diabética em puerpério imediato, apresenta dor súbita em hipocôndrio direito, vômitos e diminuição do peristaltismo. USG abdominal mostra vesicula biliar distendida de paredes espessadas, sem cálculos. A hipótese diagnóstica e a conduta apropriada nesse caso são:",
+      options: [
+        "colecistite aguda com tratamento em regime de internação hospitalar",
+        "gastroenterite aguda com tratamento em regime ambulatorial",
+        "cólica biliar com tratamento em regime de internação hospitalar",
+        "doença péptica duodenal com tratamento em regime de internação hospitalar"
+      ],
+      answerIndex: 0,
+      explanation: "O quadro clínico e ultrassonográfico (vesícula distendida, paredes espessadas) é de colecistite aguda. A ausência de cálculos caracteriza a colecistite alitiásica, uma forma mais grave, comum em pacientes críticos, diabéticos e puérperas. O tratamento é internação, antibioticoterapia e colecistectomia.",
+      tag: "Cirurgia - Vias Biliares"
+    },
+    {
+      id: "suseme-2018-q28",
+      text: "Paciente masculino com 35 anos de idade apresenta quadro agudo caracterizado por febre com calafrio, mialgia intensa e cefaleia. Ao exame fisico, destacam-se febre e intensa dor à palpação de panturrilhas. Há história epidemiológica de limpeza de esgoto domiciliar há cerca de 10 dias. A principal hipótese diagnóstica é:",
+      options: ["dengue", "leptospirose", "febre amarela", "endocardite"],
+      answerIndex: 1,
+      explanation: "A história epidemiológica de contato com esgoto/água de enchente associada ao quadro de febre e mialgia intensa, especialmente com dor em panturrilhas, é altamente sugestiva de leptospirose.",
+      tag: "Infectologia - Leptospirose"
+    },
+    {
+      id: "suseme-2018-q29",
+      text: "Paciente de 36 anos de idade chega à emergência alegando dor insuportável. Queixa-se de dorsalgia há mais ou menos 6 meses. A radiografia da coluna torácica revela colapso parcial de T5 e T6 e erosão de disco intervertebral. O diagnóstico mais provável é:",
+      options: ["osteoporose", "tuberculose", "osteosarcoma", "metástase de carcinoma brônquico"],
+      answerIndex: 1,
+      explanation: "O acometimento de corpos vertebrais adjacentes com destruição do disco intervertebral é a apresentação radiológica clássica da espondilodiscite tuberculosa, também conhecida como Mal de Pott. Metástases e osteoporose geralmente poupam o disco.",
+      tag: "Infectologia - Tuberculose"
+    },
+    {
+      id: "suseme-2018-q30",
+      text: "São elementos essenciais de evidência clínica de morte encefálica:",
+      options: [
+        "sinal de Babinski, coma e bradicardia",
+        "hipotermia, taquicardia e apneia total",
+        "hipotensão arterial, arritmia respiratória e bradicardia",
+        "arreflexia total, apneia total e pupilas não fotorreagentes"
+      ],
+      answerIndex: 3,
+      explanation: "Os pilares do diagnóstico clínico de morte encefálica são: 1) Coma aperceptivo arreativo; 2) Ausência de reflexos de tronco (incluindo pupilas fixas e não fotorreagentes); e 3) Apneia persistente, confirmada pelo teste da apneia.",
+      tag: "Neurologia - Morte Encefálica"
+    },
+    {
+      id: "suseme-2018-q31",
+      text: "Paciente feminino, 30 anos de idade, com história de alcoolismo, apresenta quadro de neuropatia, fraqueza, perda muscular, edema e oftalmoplegia. O diagnóstico mais provável é deficit de:",
+      options: ["niacina", "tiamina", "vitamina C", "vitamina B12"],
+      answerIndex: 1,
+      explanation: "O etilismo crônico leva à deficiência de tiamina (Vitamina B1). A oftalmoplegia é parte da tríade da Encefalopatia de Wernicke. A neuropatia e fraqueza são manifestações do Beribéri. A combinação dos quadros aponta fortemente para a deficiência de tiamina.",
+      tag: "Nutrologia - Vitaminas"
+    },
+    {
+      id: "suseme-2018-q32",
+      text: "Paciente, 73 anos de idade, com história de tosse com secreção, dor torácica e febre há 1 semana. Ao exame fisico: regular estado geral, taquipneia; murmúrio vesicular diminuido em 1/3 inferior de hemitórax direito e macicez à percussão. A radiografia de tórax mostra opacidade em 1/3 inferior de hemitórax direito. O provável diagnóstico é:",
+      options: [
+        "pneumonia com derrame pleural",
+        "enfisema pulmonar",
+        "neoplasia pulmonar",
+        "tuberculose"
+      ],
+      answerIndex: 0,
+      explanation: "A combinação de achados de consolidação (sugestivos de pneumonia) com macicez à percussão e murmúrio vesicular diminuído na base pulmonar é a apresentação clássica de uma pneumonia que evoluiu com derrame pleural parapneumônico.",
+      tag: "Pneumologia - Derrame Pleural"
+    },
+    {
+      id: "suseme-2018-q33",
+      text: "O medicamento de escolha como tratamento de manutenção da constipação intestinal em uma criança com 4 anos de idade é:",
+      options: ["lactulose", "enema fosfatado", "leite de magnésia", "polietilenoglicol (PEG) 3350 ou 4000"],
+      answerIndex: 3,
+      explanation: "O Polietilenoglicol (PEG) sem eletrólitos é considerado o laxante osmótico de primeira linha para o tratamento de manutenção da constipação funcional em crianças, devido à sua eficácia e melhor tolerabilidade (menos flatulência e cólicas) em comparação com a lactulose.",
+      tag: "Pediatria - Gastroenterologia"
+    },
+    {
+      id: "suseme-2018-q34",
+      text: "Para uma criança de 5 anos de idade com crise aguda de asma, no serviço de emergência, o medicamento indicado na primeira linha de tratamento é:",
+      options: [
+        "sulfato de magnésio",
+        "corticosteroide via inalatória",
+        "cromoglicato dissódico via inalatória",
+        "beta-2 agonista de curta duração via inalatória"
+      ],
+      answerIndex: 3,
+      explanation: "O tratamento inicial e mais importante da crise aguda de asma é o alívio rápido do broncoespasmo, obtido com a inalação de um beta-2 agonista de curta duração (SABA), como o salbutamol. Corticoides sistêmicos são usados em conjunto, mas o SABA é a primeira linha.",
+      tag: "Pediatria - Pneumologia"
+    },
+    {
+      id: "suseme-2018-q35",
+      text: "As causas mais comuns de anafilaxia no Brasil entre crianças e adolescentes são:",
+      options: [
+        "vacinas, picadas de insetos e medicamentos",
+        "corantes, picadas de insetos e medicamentos",
+        "alimentos, picadas de insetos e medicamentos",
+        "conservantes, picadas de insetos e medicamentos"
+      ],
+      answerIndex: 2,
+      explanation: "A tríade de alimentos (leite, ovo, amendoim, frutos do mar), picadas de insetos (principalmente himenópteros como abelhas e formigas) e medicamentos (principalmente antibióticos e AINEs) responde pela grande maioria dos casos de anafilaxia em todas as faixas etárias.",
+      tag: "Pediatria - Alergia"
+    },
+    {
+      id: "suseme-2018-q36",
+      text: "Jovem com 20 anos de idade chega ao pronto-socorro, com história de fadiga e tolerância reduzida aos esforços, dor óssea, dor torácica e febricula. Ao exame, apresenta: mucosas hipocoradas, discreta ictericia e pele de cor acinzentada. O diagnóstico mais provável é:",
+      options: [
+        "anemia falciforme",
+        "leucemia linfoide aguda",
+        "leucemia mieloide crônica",
+        "anemia hipoproliferativa da insuficiência renal"
+      ],
+      answerIndex: 0,
+      explanation: "A combinação de anemia crônica (fadiga, palidez), icterícia (pela hemólise) e crises álgicas (dor óssea, dor torácica) em um jovem é a apresentação clássica da Anemia Falciforme. A cor acinzentada pode estar relacionada à cronicidade da doença.",
+      tag: "Hematologia - Anemias"
+    },
+    {
+      id: "suseme-2018-q37",
+      text: "Escolar apresenta quadro febril exantemático sugestivo de dengue com 4 dias de evolução. As alterações no exame fisico e no hemograma que podem indicar o agravamento do caso são:",
+      options: [
+        "taquicardia, dispneia, plaquetopenia e anemia",
+        "sonolência, bradicardia, sangramento e plaquetose",
+        "irritabilidade, sangramento, velocidade de hemossedimentação elevada e plaquetose",
+        "hepatomegalia dolorosa, hipotensão postural, elevação do hematócrito e plaquetopenia"
+      ],
+      answerIndex: 3,
+      explanation: "Estes são todos sinais de alarme e de gravidade na dengue, indicando extravasamento plasmático: hepatomegalia dolorosa, hipotensão postural (indicando hipovolemia), elevação do hematócrito (hemoconcentração) e plaquetopenia.",
+      tag: "Infectologia - Dengue"
+    },
+    {
+      id: "suseme-2018-q38",
+      text: "Menina de 10 anos com febre, hepatoesplenomegalia, adenomegalia cervical, faringoamigdalite e surgimento de um exantema maculopapular após o uso de amoxacilina. Estado geral preservado. O diagnóstico clínico mais provável é:",
+      options: ["rubéola", "escarlatina", "exantema súbito", "mononucleose infecciosa"],
+      answerIndex: 3,
+      explanation: "A tríade de febre, faringite e linfonodomegalia (principalmente cervical posterior) em adolescente ou pré-adolescente é altamente sugestiva de Mononucleose Infecciosa. O surgimento de um rash após o uso de amoxicilina é um achado clássico e quase patognomônico.",
+      tag: "Infectologia - Mononucleose"
+    },
+    {
+      id: "suseme-2018-q39",
+      text: "Na escarlatina, as manifestações clínicas mais evidentes são:",
+      options: [
+        "adenomegalia regional e amigdalite",
+        "boca vermelha, febre alta e dor nas articulações",
+        "rash cutâneo pruriginoso, coriza hialina e dor de garganta",
+        "febre elevada, faringite, palidez peribucal, lingua em morango branca no início do quadro, eritema difuso começando no pescoço e parte superior do tronco"
+      ],
+      answerIndex: 3,
+      explanation: "A opção D descreve com perfeição a sequência clássica de sinais e sintomas da Escarlatina, incluindo a faringite, febre, a língua em morango (inicialmente branca, depois vermelha), a palidez perioral (Sinal de Filatov) e o exantema característico.",
+      tag: "Infectologia - Escarlatina"
+    },
+    {
+      id: "suseme-2018-q40",
+      text: "Em relação ao tratamento recomendado pela Organização Mundial de Saúde (OMS) para a diarreia aguda em crianças, é correto afirmar que:",
+      options: [
+        "deve-se suspender temporariamente o aleitamento materno no início do quadro diarreico",
+        "o aumento da cobertura vacinal contra o sarampo não reduziu a gravidade das doenças diarreicas",
+        "terapia de reidratação oral, administração de zinco e dieta adequada à idade são as opções terapêuticas mais eficazes",
+        "os antibióticos administrados por via oral são contraindicados em todos os casos de doença diarreica"
+      ],
+      answerIndex: 2,
+      explanation: "Os três pilares do tratamento da diarreia aguda, segundo a OMS, são: 1) Terapia de Reidratação Oral para prevenir e tratar a desidratação; 2) Suplementação com Zinco para reduzir a duração e gravidade do episódio; 3) Manutenção da alimentação adequada para a idade, sem suspender o aleitamento materno.",
+      tag: "Pediatria - Gastroenterologia"
+    }
+  ]
+},
   {
     id: "preset-oftalmologia-1",
-    name: "PR1 oftalmo M7",
+    name: "  Estácio - M7 - PR1 - oftalmologia",
     questions: [
       {
         id: "oftalmo-q1-2",
@@ -2739,7 +6254,7 @@ export const DEFAULT_DECKS = [
   },
   {
     id: "preset-pediatria-1",
-    name: "PR1 SCAD M7",
+    name: "  Estácio - M7 - PR1 - Pediatria",
     questions: [
       {
         id: "peds-q1",
@@ -3180,7 +6695,7 @@ export const DEFAULT_DECKS = [
   },
     {
     id: "preset-hematologia-1",
-    name: "PR1 hemato M7",
+    name: "  Estácio - M7 - PR1 - Hematologia",
     questions: [
       // Leucemia Aguda
       {
@@ -3298,7 +6813,7 @@ export const DEFAULT_DECKS = [
   },
   {
     id: "preset-dermatologia-1",
-    name: "PR1 dermato M7",
+    name: "  Estácio - M7 - PR1 - Dermatologia",
     questions: [
       // Micoses Superficiais e Profundas
       {

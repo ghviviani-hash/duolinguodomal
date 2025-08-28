@@ -13,7 +13,7 @@ import { TEMPLATE_TXT } from "@/lib/constants";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface SidebarProps {
-  isQuizActive: boolean; // <-- A PROPRIEDADE QUE FALTAVA FOI ADICIONADA AQUI
+  isQuizActive: boolean;
   fileInputRef: React.RefObject<HTMLInputElement | null>;
   handleUpload: (file: File) => void;
   shuffleOnLoad: boolean;
@@ -31,13 +31,7 @@ interface SidebarProps {
   questionsCount: number;
 }
 
-// Tipo para a estrutura de decks agrupados
-type GroupedDecks = {
-  [key: string]: {
-    decks: Deck[];
-    [subgroup: string]: any;
-  };
-};
+type GroupedDecks = { [key: string]: { decks: Deck[]; [subgroup: string]: any; } };
 
 export function Sidebar({
   isQuizActive,
@@ -127,7 +121,7 @@ export function Sidebar({
 
   return (
     <div className="flex flex-col space-y-6">
-      <div className={`order-4 lg:order-1 ${isQuizActive ? 'hidden lg:block' : ''}`}>
+      <div className={`order-2 lg:order-1 ${isQuizActive ? 'hidden lg:block' : ''}`}>
         {availableDecks.length > 0 && (
           <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
             <CardHeader>
@@ -143,38 +137,7 @@ export function Sidebar({
         )}
       </div>
 
-      <div className="order-5 lg:order-2">
-        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-          <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
-          <CardContent className="space-y-4">
-            <div className="flex items-center justify-between text-sm"><span>{stats.todayXp} / {stats.goal} XP hoje</span><Badge variant={goalPct === 100 ? "default" : "secondary"}>{goalPct}%</Badge></div>
-            <Progress value={goalPct} />
-            <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{stats.combo}</span></div><Button size="sm" variant="outline" onClick={() => actions.setGoal((g: number) => g + 50)}>+50 meta</Button></div>
-          </CardContent>
-        </Card>
-      </div>
-
-      <div className="order-6 lg:order-3">
-        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-          <CardHeader><CardTitle className="flex items-center gap-2"><Award className="h-5 w-5"/>Conquistas</CardTitle></CardHeader>
-          <CardContent className="grid grid-cols-4 gap-4">
-            {achievements.map(ach => {
-              const IconComponent = ach.icon;
-              const isUnlocked = unlockedAchievements.includes(ach.id);
-              return (
-                <div key={ach.id} className="flex flex-col items-center text-center" title={`${ach.title}: ${ach.description}`}>
-                  <div className={`p-3 rounded-full ${isUnlocked ? 'bg-amber-100 dark:bg-amber-900' : 'bg-slate-100 dark:bg-slate-800'}`}>
-                    <IconComponent className={`h-6 w-6 ${isUnlocked ? 'text-amber-500' : 'text-slate-400'}`} />
-                  </div>
-                  <span className="text-xs mt-1 text-slate-600 dark:text-slate-300">{ach.title}</span>
-                </div>
-              );
-            })}
-          </CardContent>
-        </Card>
-      </div>
-
-      <div className={`order-3 lg:order-4 ${!isQuizActive ? 'hidden lg:block' : ''}`}>
+      <div className={`order-1 lg:order-2 ${!isQuizActive ? 'hidden lg:block' : ''}`}>
         <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
           <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
           <CardContent className="space-y-4">
@@ -198,8 +161,39 @@ export function Sidebar({
           </CardContent>
         </Card>
       </div>
+
+      <div className="order-3 lg:order-3">
+        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+          <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center justify-between text-sm"><span>{stats.todayXp} / {stats.goal} XP hoje</span><Badge variant={goalPct === 100 ? "default" : "secondary"}>{goalPct}%</Badge></div>
+            <Progress value={goalPct} />
+            <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{stats.combo}</span></div><Button size="sm" variant="outline" onClick={() => actions.setGoal((g: number) => g + 50)}>+50 meta</Button></div>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="order-4 lg:order-4">
+        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+          <CardHeader><CardTitle className="flex items-center gap-2"><Award className="h-5 w-5"/>Conquistas</CardTitle></CardHeader>
+          <CardContent className="grid grid-cols-4 gap-4">
+            {achievements.map(ach => {
+              const IconComponent = ach.icon;
+              const isUnlocked = unlockedAchievements.includes(ach.id);
+              return (
+                <div key={ach.id} className="flex flex-col items-center text-center" title={`${ach.title}: ${ach.description}`}>
+                  <div className={`p-3 rounded-full ${isUnlocked ? 'bg-amber-100 dark:bg-amber-900' : 'bg-slate-100 dark:bg-slate-800'}`}>
+                    <IconComponent className={`h-6 w-6 ${isUnlocked ? 'text-amber-500' : 'text-slate-400'}`} />
+                  </div>
+                  <span className="text-xs mt-1 text-slate-600 dark:text-slate-300">{ach.title}</span>
+                </div>
+              );
+            })}
+          </CardContent>
+        </Card>
+      </div>
       
-      <div className="order-2 lg:order-5">
+      <div className="order-5 lg:order-5">
         <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
           <CardHeader><CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle></CardHeader>
           <CardContent>
@@ -210,7 +204,7 @@ export function Sidebar({
         </Card>
       </div>
 
-      <div className="order-1 lg:order-6">
+      <div className="order-6 lg:order-6">
         <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
           <CardHeader><CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle></CardHeader>
           <CardContent className="space-y-4">

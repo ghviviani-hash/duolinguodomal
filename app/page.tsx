@@ -43,9 +43,11 @@ export default function QuizGamificadoApp() {
         />
 
         <div className="flex flex-col lg:flex-row gap-6 mt-6">
+          
+          {/* MUDANÇA: A ordem da Sidebar depende se o quiz está ativo (apenas no telemóvel) */}
           <div className={`lg:w-1/3 space-y-6 ${isQuizActive ? 'order-2' : 'order-1'} lg:order-1`}>
             <Sidebar
-              isQuizActive={isQuizActive} // <-- A PROPRIEDADE ESTÁ A SER PASSADA AQUI
+              isQuizActive={isQuizActive}
               fileInputRef={refs.fileInputRef}
               handleUpload={actions.handleUpload}
               shuffleOnLoad={state.shuffleOnLoad}
@@ -77,8 +79,51 @@ export default function QuizGamificadoApp() {
             />
           </div>
 
+          {/* MUDANÇA: A ordem do QuizPanel também depende se o quiz está ativo */}
           <div className={`lg:w-2/3 ${isQuizActive ? 'order-1' : 'order-2'} lg:order-2`}>
-            {/* ... o resto do código do QuizPanel ... */}
+            <Card className="relative overflow-hidden border-0 shadow-xl bg-gradient-to-br from-white/80 to-white/30 dark:from-slate-900/70 dark:to-slate-900/40 backdrop-blur">
+              <div className="absolute inset-0 -z-10 opacity-30 pointer-events-none" aria-hidden>
+                <div className="absolute -right-24 -top-24 h-56 w-56 rounded-full bg-fuchsia-400 blur-3xl mix-blend-multiply dark:bg-fuchsia-700" />
+                <div className="absolute -left-24 -bottom-24 h-56 w-56 rounded-full bg-sky-300 blur-3xl mix-blend-multiply dark:bg-sky-700" />
+              </div>
+              
+              {isQuizActive && (
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <CardTitle className="text-xl md:text-2xl">{state.isSessionComplete ? "Parabéns!" : state.displayedQuestion ? (state.displayedQuestion.tag || "Questão") : "A carregar..."}</CardTitle>
+                      <CardDescription>{state.isSessionComplete ? "Você finalizou o deck." : "Selecione a alternativa correta."}</CardDescription>
+                    </div>
+                    <Badge variant="secondary">{state.questions.length > 0 ? `${state.questions.length - state.queue.length}/${state.questions.length}` : "0/0"}</Badge>
+                  </div>
+                </CardHeader>
+              )}
+
+              <CardContent className="min-h-[400px] flex flex-col justify-center">
+                {isQuizActive ? (
+                  <QuizPanel
+                    isSessionComplete={state.isSessionComplete}
+                    displayedQuestion={state.displayedQuestion}
+                    onSelect={actions.onSelect}
+                    selected={state.selected}
+                    isCorrect={state.isCorrect}
+                    showExpl={state.showExpl}
+                    lastGain={state.lastGain}
+                    isLocked={state.lockUntil != null && state.lockUntil > state.now}
+                    wrongAnswers={state.sessionWrongAnswers}
+                    onReset={actions.resetSession}
+                    onShowStats={() => actions.setShowStatsModal(true)}
+                    onReviewQuestion={actions.setReviewingQuestion}
+                  />
+                ) : (
+                  <div className="text-center text-slate-500">
+                    <BookOpen className="mx-auto h-12 w-12 text-slate-400" />
+                    <h3 className="mt-2 text-lg font-medium">Nenhum deck selecionado</h3>
+                    <p className="mt-1 text-sm">Escolha um deck na lateral para começar a praticar.</p>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

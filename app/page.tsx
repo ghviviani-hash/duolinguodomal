@@ -16,7 +16,6 @@ import { BookOpen } from "lucide-react";
 export default function QuizGamificadoApp() {
   const { state, actions, refs } = useQuizEngine();
 
-  // Variável para saber se um quiz está a decorrer
   const isQuizActive = !!state.deckId || state.quizMode === 'srs';
 
   const progressPct = state.questions.length > 0 
@@ -30,7 +29,8 @@ export default function QuizGamificadoApp() {
       <Confetti trigger={state.confettiKey} />
       <EmojiBurst trigger={state.emojiKey} />
       
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+      {/* MUDANÇA: Ajustamos o padding para ser menor no telemóvel (p-4) e maior no desktop (lg:p-8) */}
+      <div className="mx-auto max-w-7xl w-full p-4 lg:p-8">
         <Header
           stats={{
             streakDays: state.streakDays,
@@ -42,10 +42,10 @@ export default function QuizGamificadoApp() {
           setDark={actions.setDark}
         />
 
-        <div className="flex flex-col lg:flex-row gap-6 mt-6">
+        {/* MUDANÇA: Reduzimos o espaçamento entre colunas no telemóvel e no desktop */}
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 mt-4 lg:mt-6">
           
-          {/* MUDANÇA: A ordem da Sidebar depende se o quiz está ativo (apenas no telemóvel) */}
-          <div className={`lg:w-1/3 space-y-6 ${isQuizActive ? 'order-2' : 'order-1'} lg:order-1`}>
+          <div className={`lg:w-1/3 space-y-4 lg:space-y-6 ${isQuizActive ? 'order-2' : 'order-1'} lg:order-1`}>
             <Sidebar
               isQuizActive={isQuizActive}
               fileInputRef={refs.fileInputRef}
@@ -79,7 +79,6 @@ export default function QuizGamificadoApp() {
             />
           </div>
 
-          {/* MUDANÇA: A ordem do QuizPanel também depende se o quiz está ativo */}
           <div className={`lg:w-2/3 ${isQuizActive ? 'order-1' : 'order-2'} lg:order-2`}>
             <Card className="relative overflow-hidden border-0 shadow-xl bg-gradient-to-br from-white/80 to-white/30 dark:from-slate-900/70 dark:to-slate-900/40 backdrop-blur">
               <div className="absolute inset-0 -z-10 opacity-30 pointer-events-none" aria-hidden>

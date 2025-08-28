@@ -54,6 +54,7 @@ export function useQuizEngine() {
   const [dailyBonusAwarded, setDailyBonusAwarded] = useState(false);
   const [decksCompleted, setDecksCompleted] = useState(0);
   const [unlockedAchievements, setUnlockedAchievements] = useState<string[]>([]);
+  const [comboMilestone, setComboMilestone] = useState(0); // Novo estado para o efeito
 
   // Dados e Refs
   const [srsData, setSrsData] = useState<SrsData>({});
@@ -337,16 +338,23 @@ export function useQuizEngine() {
       setTodayXp(t => t + gain);
       setCombo(newCombo);
       setEmojiKey(k => k + 1);
+      
+      // Verifica se atingimos um marco e ativa o efeito
+      const MILESTONES = [10, 20, 30, 50, 100];
+      if (MILESTONES.includes(newCombo)) {
+        setComboMilestone(newCombo);
+      }
+
       playCorrect();
       setTimeout(() => advanceQueue(true), 650);
     } else {
       const newHearts = hearts - 1;
       setHearts(newHearts);
-      setCombo(0);
+      setCombo(0); // Zera o combo ao errar
       setShowExpl(true);
       playWrong();
       
-      if (!wasAlreadyWrong) {
+      if (!sessionWrongAnswers.some(q => q.id === originalQuestion.id)) {
         setSessionWrongAnswers(prev => [...prev, originalQuestion]);
       }
 
@@ -432,7 +440,7 @@ export function useQuizEngine() {
       shuffleOnLoad, errors, dark, xp, level, hearts, streakDays, todayXp, goal, combo,
       confettiKey, lastGain, emojiKey, lockUntil, now, sessionWrongAnswers, reviewingQuestion,
       isSessionComplete, srsData, quizMode, dailyBonusAwarded, showStatsModal,
-      unlockedAchievements, displayedQuestion
+      unlockedAchievements, displayedQuestion, comboMilestone
     },
     actions: {
       setDeckId, setShuffleOnLoad, setDark, setGoal, setReviewingQuestion, 

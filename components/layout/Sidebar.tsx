@@ -5,13 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { Upload, Download, BookOpen, BrainCircuit, Trophy, Award, RefreshCw, Info } from "lucide-react";
+import { Upload, Download, BookOpen, BrainCircuit, Trophy, Award, RefreshCw, Info, ListEnd } from "lucide-react";
 import { SrsData, Deck } from "@/types";
 import { formatTimeLeft } from "@/lib/utils";
 import { achievements } from "@/lib/achievements";
 import { TEMPLATE_TXT } from "@/lib/constants";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { isPast } from 'date-fns';
 
 interface SidebarProps {
   isQuizActive: boolean;
@@ -24,7 +25,7 @@ interface SidebarProps {
   startSrsSession: () => void;
   availableDecks: Deck[];
   deckId: string | null;
-  setDeckId: (id: string) => void;
+  setDeckId: (id: string | null) => void;
   stats: any;
   actions: any;
   progressPct: number;
@@ -98,7 +99,7 @@ export function Sidebar({
   };
 
   const goalPct = Math.min(100, Math.round((stats.todayXp / stats.goal) * 100));
-  const srsCount = Object.values(srsData).filter((item: any) => item.nextReview <= Date.now()).length;
+  const srsCount = Object.values(srsData).filter((item: any) => isPast(new Date(item.nextReview))).length;
 
   const renderDecks = (level: GroupedDecks) => {
     return Object.keys(level).sort().map(key => {
@@ -132,38 +133,9 @@ export function Sidebar({
 
   return (
     <div className="flex flex-col space-y-6">
-      
-      {/* Ordem no código = Ordem no Desktop */}
-      {/* Classes `order-*` = Ordem no Telemóvel */}
-
-      <div className="order-6 lg:order-none">
-        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-          <CardHeader><CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle></CardHeader>
-          <CardContent className="space-y-4">
-            <Input ref={fileInputRef} type="file" accept=".txt" className="hidden" onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0])} />
-            <Button className="w-full" onClick={() => fileInputRef.current?.click()}><Upload className="mr-2 h-4 w-4" />Selecionar Ficheiro .txt</Button>
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2 text-sm"><Switch id="shuffle-switch" checked={shuffleOnLoad} onCheckedChange={setShuffleOnLoad} /><label htmlFor="shuffle-switch">Embaralhar</label></div>
-              <Button variant="outline" size="sm" onClick={downloadTemplate}><Download className="mr-2 h-4 w-4" />Modelo</Button>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-      
-      <div className="order-5 lg:order-none">
-        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-          <CardHeader><CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle></CardHeader>
-          <CardContent>
-            <Button className="w-full" onClick={startSrsSession}>
-              Iniciar Revisão ({srsCount} para hoje)
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
-      
-      <div className={`order-1 lg:order-none ${isQuizActive ? 'hidden lg:block' : ''}`}>
+      <div className={`order-2 lg:order-1 ${isQuizActive ? 'hidden lg:flex' : 'flex'}`}>
         {availableDecks.length > 0 && (
-          <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+          <Card className="w-full">
             <CardHeader>
               <CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5" />Decks Salvos</CardTitle>
               <CardDescription>Escolha um deck para começar:</CardDescription>
@@ -177,9 +149,12 @@ export function Sidebar({
         )}
       </div>
 
-      <div className={`lg:order-none ${!isQuizActive ? 'hidden' : 'order-1'}`}>
-        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-          <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
+      <div className={`order-1 lg:order-2 ${!isQuizActive ? 'hidden lg:flex' : 'flex'}`}>
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck Ativo</CardTitle>
+            <CardDescription>{availableDecks.find(d => d.id === deckId)?.name || 'Nenhum'}</CardDescription>
+          </CardHeader>
           <CardContent className="space-y-4">
             <div className="flex items-center justify-between text-sm">
               <span>Progresso:</span>
@@ -195,26 +170,26 @@ export function Sidebar({
             ) : (
                 <div className="flex gap-2 flex-wrap">
                     <Button variant="outline" size="sm" onClick={actions.resetSession} disabled={questionsCount === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
-                    <Button variant="ghost" size="sm" onClick={actions.clearSession}>Limpar</Button>
+                    <Button variant="ghost" size="sm" onClick={() => { setDeckId(null); actions.clearSession(); }}>Trocar Deck</Button>
                 </div>
             )}
           </CardContent>
         </Card>
       </div>
 
-      <div className="order-2 lg:order-none">
-        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+      <div className="order-3 lg:order-3">
+        <Card>
           <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
           <CardContent className="space-y-4">
             <div className="flex items-center justify-between text-sm"><span>{stats.todayXp} / {stats.goal} XP hoje</span><Badge variant={goalPct === 100 ? "default" : "secondary"}>{goalPct}%</Badge></div>
             <Progress value={goalPct} />
-            <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{stats.combo}</span></div><Button size="sm" variant="outline" onClick={() => actions.setGoal((g: number) => g + 50)}>+50 meta</Button></div>
+            <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{stats.combo}</span></div><Button size="sm" variant="outline" onClick={() => actions.setGoal(stats.goal + 50)}>+50 meta</Button></div>
           </CardContent>
         </Card>
       </div>
 
-      <div className="order-3 lg:order-none">
-        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+      <div className="order-4 lg:order-4">
+        <Card>
           <CardHeader><CardTitle className="flex items-center gap-2"><Award className="h-5 w-5"/>Conquistas</CardTitle></CardHeader>
           <CardContent className="grid grid-cols-4 gap-4">
             {achievements.map(ach => {
@@ -229,6 +204,31 @@ export function Sidebar({
                 </div>
               );
             })}
+          </CardContent>
+        </Card>
+      </div>
+      
+      <div className="order-5 lg:order-5">
+        <Card>
+          <CardHeader><CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle></CardHeader>
+          <CardContent>
+            <Button className="w-full" onClick={startSrsSession}>
+              Iniciar Revisão ({srsCount} para hoje)
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="order-6 lg:order-6">
+        <Card>
+          <CardHeader><CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle></CardHeader>
+          <CardContent className="space-y-4">
+            <Input ref={fileInputRef} type="file" accept=".txt" className="hidden" onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0])} />
+            <Button className="w-full" onClick={() => fileInputRef.current?.click()}><Upload className="mr-2 h-4 w-4" />Selecionar Ficheiro .txt</Button>
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2 text-sm"><Switch id="shuffle-switch" checked={shuffleOnLoad} onCheckedChange={setShuffleOnLoad} /><label htmlFor="shuffle-switch">Embaralhar</label></div>
+              <Button variant="outline" size="sm" onClick={downloadTemplate}><Download className="mr-2 h-4 w-4" />Modelo</Button>
+            </div>
           </CardContent>
         </Card>
       </div>

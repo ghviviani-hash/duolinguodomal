@@ -30,6 +30,8 @@ export default function QuizGamificadoApp() {
       {state.showStatsModal && <StatsModal srsData={state.srsData} onClose={() => actions.setShowStatsModal(false)} />}
       <Confetti trigger={state.confettiKey} />
       <EmojiBurst trigger={state.emojiKey} />
+      
+      {/* O ComboEffect agora tem um z-index muito alto para garantir que ele aparece na frente */}
       <ComboEffect milestone={state.comboMilestone} />
       
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
@@ -45,7 +47,8 @@ export default function QuizGamificadoApp() {
         />
 
         <div className="flex flex-col lg:flex-row gap-6 mt-6">
-          <div className={`lg:w-1/3 space-y-6 ${isQuizActive ? 'order-2' : 'order-1'} lg:order-1`}>
+          {/* Sidebar - Lógica de ordem para mobile e desktop */}
+          <div className={`lg:w-1/3 space-y-6 ${isQuizActive ? 'order-2 lg:order-1' : 'order-1'}`}>
             <Sidebar
               isQuizActive={isQuizActive}
               fileInputRef={refs.fileInputRef}
@@ -79,20 +82,22 @@ export default function QuizGamificadoApp() {
             />
           </div>
 
-          <div className={`lg:w-2/3 ${isQuizActive ? 'order-1' : 'order-2'} lg:order-2`}>
+          {/* Área Principal do Quiz */}
+          <div className={`lg:w-2/3 ${isQuizActive ? 'order-1 lg:order-2' : 'order-2'}`}>
             <Card className="relative overflow-hidden border-0 shadow-xl bg-gradient-to-br from-white/80 to-white/30 dark:from-slate-900/70 dark:to-slate-900/40 backdrop-blur">
               <div className="absolute inset-0 -z-10 opacity-30 pointer-events-none" aria-hidden>
                 <div className="absolute -right-24 -top-24 h-56 w-56 rounded-full bg-fuchsia-400 blur-3xl mix-blend-multiply dark:bg-fuchsia-700" />
                 <div className="absolute -left-24 -bottom-24 h-56 w-56 rounded-full bg-sky-300 blur-3xl mix-blend-multiply dark:bg-sky-700" />
               </div>
               
+              {/* Indicador de Combo - Visível no mobile e desktop, com z-index alto */}
               <AnimatePresence>
                 {state.combo > 1 && (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.5 }}
-                    className="absolute top-[30px] left-1/2 -translate-x-1/2 flex items-center gap-2 font-bold text-xl md:text-2xl text-orange-500 z-10"
+                    className="absolute top-[30px] left-1/2 -translate-x-1/2 flex items-center gap-2 font-bold text-xl md:text-2xl text-orange-500 z-20" // Z-index aumentado para 20
                   >
                     <Flame className="h-7 w-7" />
                     <span>x{state.combo}</span>

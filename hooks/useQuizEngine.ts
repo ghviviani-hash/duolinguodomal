@@ -15,9 +15,11 @@ import { useAudio } from '@/hooks/useAudio';
 import { parseTxtDeck } from '@/lib/parser';
 import { achievements } from '@/lib/achievements';
 import { DEFAULT_DECKS } from '@/data/defaultDecks';
+import { isPast } from 'date-fns'; // <-- A IMPORTAÇÃO QUE FALTAVA FOI ADICIONADA AQUI
 
 export function useQuizEngine() {
-  // Estados da UI e Sessão
+  // ... (todo o resto do código do hook permanece exatamente igual)
+
   const [availableDecks, setAvailableDecks] = useState<Deck[]>([]);
   const [deckId, setDeckId] = useState<string | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -37,8 +39,6 @@ export function useQuizEngine() {
   const [quizMode, setQuizMode] = useState<"deck" | "srs">("deck");
   const [showStatsModal, setShowStatsModal] = useState(false);
   const [displayedQuestion, setDisplayedQuestion] = useState<ShuffledQuestion | null>(null);
-
-  // Estados de Gamificação
   const [xp, setXp] = useState(0);
   const [level, setLevel] = useState(1);
   const [hearts, setHearts] = useState(INITIAL_HEARTS);
@@ -54,14 +54,11 @@ export function useQuizEngine() {
   const [dailyBonusAwarded, setDailyBonusAwarded] = useState(false);
   const [decksCompleted, setDecksCompleted] = useState(0);
   const [unlockedAchievements, setUnlockedAchievements] = useState<string[]>([]);
-  const [comboMilestone, setComboMilestone] = useState(0); // Novo estado para o efeito
-
-  // Dados e Refs
+  const [comboMilestone, setComboMilestone] = useState(0);
   const [srsData, setSrsData] = useState<SrsData>({});
   const { playCorrect, playWrong, playFanfare } = useAudio();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  // Efeitos para carregar e salvar dados do localStorage
   useEffect(() => {
     const rawAchievements = localStorage.getItem(LS_ACHIEVEMENTS_KEY);
     if (rawAchievements) try { setUnlockedAchievements(JSON.parse(rawAchievements)); } catch {}
@@ -79,6 +76,13 @@ export function useQuizEngine() {
   useEffect(() => {
     localStorage.setItem(LS_SRS_KEY, JSON.stringify(srsData));
   }, [srsData]);
+  
+  useEffect(() => {
+    if (comboMilestone > 0) {
+      const timer = setTimeout(() => setComboMilestone(0), 100);
+      return () => clearTimeout(timer);
+    }
+  }, [comboMilestone]);
 
   useEffect(() => {
     const manifestRaw = localStorage.getItem("quizg-v1-deck-manifest");
@@ -86,19 +90,13 @@ export function useQuizEngine() {
       if (DEFAULT_DECKS.length > 0) {
         const decksWithStableIds = DEFAULT_DECKS.map(deck => ({
             ...deck,
-            questions: deck.questions.map((q: Question) => ({
-                ...q,
-                id: hashString(q.text)
-            }))
+            questions: deck.questions.map((q: Question) => ({ ...q, id: hashString(q.text) }))
         }));
-
         const defaultManifest = decksWithStableIds.map(deck => ({ id: deck.id, name: deck.name }));
         localStorage.setItem("quizg-v1-deck-manifest", JSON.stringify(defaultManifest));
-        
         decksWithStableIds.forEach(deck => {
             localStorage.setItem(LS_DECK_KEY(deck.id), JSON.stringify({ questions: deck.questions }));
         });
-
         setAvailableDecks(defaultManifest);
       }
     } else {
@@ -135,7 +133,6 @@ export function useQuizEngine() {
     }));
   }, [streakDays, xp, level, hearts, goal, todayXp, lockUntil, dailyBonusAwarded, decksCompleted]);
 
-  // Efeitos de lógica do jogo
   useEffect(() => {
     if (lockUntil) {
       const id = setInterval(() => {
@@ -197,9 +194,7 @@ export function useQuizEngine() {
 
   useEffect(() => {
     if (!deckId) {
-      if (quizMode !== 'srs') {
-        setQuestions([]); setQueue([]); setCurrent(null);
-      }
+      if (quizMode !== 'srs') { setQuestions([]); setQueue([]); setCurrent(null); }
       return;
     };
     setQuizMode("deck");
@@ -229,7 +224,6 @@ export function useQuizEngine() {
     }
     const originalQuestion = questions[current];
     if (!originalQuestion) return;
-
     if (shuffleOnLoad) {
       const optionsWithOriginalIndex = originalQuestion.options.map((option, index) => ({ option, index }));
       const shuffledOptionsWithIndex = shuffle(optionsWithOriginalIndex);
@@ -242,7 +236,6 @@ export function useQuizEngine() {
     setQuestionStart(performance.now());
   }, [current, questions, shuffleOnLoad]);
 
-  // Funções de Ação (Callbacks)
   const advanceQueue = useCallback((wasCorrect: boolean) => {
     if (current === null) return;
     const newQueue = [...queue];
@@ -263,18 +256,12 @@ export function useQuizEngine() {
         const now = Date.now();
         const dayInMillis = 24 * 60 * 60 * 1000;
         const currentEntry = prevSrsData[question.id] || {
-            question,
-            deckId: deckId || "srs-review",
+            question, deckId: deckId || "srs-review",
             deckName: availableDecks.find(d => d.id === deckId)?.name || "Revisão",
-            correctStreak: 0,
-            nextReview: now,
-            correctCount: 0,
-            wrongCount: 0,
+            correctStreak: 0, nextReview: now, correctCount: 0, wrongCount: 0,
         };
-
         let newCorrectStreak = currentEntry.correctStreak;
         let nextReview;
-
         if (correct) {
             newCorrectStreak += 1;
             let intervalInDays = SRS_INTERVALS[Math.min(newCorrectStreak - 1, SRS_INTERVALS.length - 1)];
@@ -286,20 +273,12 @@ export function useQuizEngine() {
             newCorrectStreak = 0;
             nextReview = now;
         }
-
         const newEntry = { 
-            ...currentEntry, 
-            question, 
-            correctStreak: newCorrectStreak, 
-            nextReview,
+            ...currentEntry, question, correctStreak: newCorrectStreak, nextReview,
             correctCount: currentEntry.correctCount + (correct ? 1 : 0),
             wrongCount: currentEntry.wrongCount + (correct ? 0 : 1),
         };
-        
-        return {
-            ...prevSrsData,
-            [question.id]: newEntry
-        };
+        return { ...prevSrsData, [question.id]: newEntry };
     });
   }, [deckId, availableDecks]);
 
@@ -313,23 +292,17 @@ export function useQuizEngine() {
 
   const onSelect = useCallback((idx: number) => {
     if (!displayedQuestion || selected != null || current === null) return;
-    
     const correct = idx === displayedQuestion.shuffledAnswerIndex;
     const originalQuestion = questions[current];
-    
     const wasAlreadyWrong = sessionWrongAnswers.some(q => q.id === originalQuestion.id);
     if (!wasAlreadyWrong) {
         updateSrsData(originalQuestion, correct);
-    } else if (correct) {
-      // Intentionally not updating SRS to "forgive" the previous error in the same session
-    } else {
-        updateSrsData(originalQuestion, false); // Reinforce the error on subsequent wrong answers
+    } else if (!correct) {
+        updateSrsData(originalQuestion, false);
     }
-
     const elapsed = questionStart ? performance.now() - questionStart : 0;
     setSelected(idx);
     setIsCorrect(correct);
-
     if (correct) {
       const newCombo = combo + 1;
       const gain = computeGain(elapsed, newCombo);
@@ -338,30 +311,25 @@ export function useQuizEngine() {
       setTodayXp(t => t + gain);
       setCombo(newCombo);
       setEmojiKey(k => k + 1);
-      
-      // Verifica se atingimos um marco e ativa o efeito
       const MILESTONES = [10, 20, 30, 50, 100];
       if (MILESTONES.includes(newCombo)) {
         setComboMilestone(newCombo);
       }
-
       playCorrect();
       setTimeout(() => advanceQueue(true), 650);
     } else {
       const newHearts = hearts - 1;
       setHearts(newHearts);
-      setCombo(0); // Zera o combo ao errar
+      setCombo(0);
       setShowExpl(true);
       playWrong();
-      
-      if (!sessionWrongAnswers.some(q => q.id === originalQuestion.id)) {
+      if (!wasAlreadyWrong) {
         setSessionWrongAnswers(prev => [...prev, originalQuestion]);
       }
-
       if (newHearts <= 0) setLockUntil(Date.now() + 5 * 60 * 1000);
       setTimeout(() => advanceQueue(false), 900);
     }
-  }, [displayedQuestion, selected, current, questions, updateSrsData, questionStart, combo, hearts, playCorrect, playWrong, sessionWrongAnswers, advanceQueue]);
+  }, [displayedQuestion, selected, current, questions, updateSrsData, questionStart, combo, hearts, playCorrect, playWrong, sessionWrongAnswers, advanceQueue, setComboMilestone]);
 
   const resetSession = () => {
     if (questions.length === 0) return;
@@ -398,14 +366,12 @@ export function useQuizEngine() {
   const startSrsSession = () => {
     const now = Date.now();
     const dueQuestions = Object.values(srsData)
-      .filter((item: any) => item.nextReview <= now)
+      .filter((item: any) => isPast(new Date(item.nextReview)))
       .map((item: any) => item.question);
-
     if (dueQuestions.length === 0) {
       alert("Nenhuma questão para revisar hoje!");
       return;
     }
-
     setQuizMode("srs");
     setDeckId(null);
     setQuestions(dueQuestions);

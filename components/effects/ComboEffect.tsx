@@ -4,41 +4,48 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface ComboEffectProps {
-  milestone: number; // Recebe o marco atingido (10, 20, 30, etc.)
+  milestone: number;
 }
 
 export function ComboEffect({ milestone }: ComboEffectProps) {
-  const [key, setKey] = useState(0);
+  const [activeMilestones, setActiveMilestones] = useState<number[]>([]);
 
-  // Usamos useEffect para detetar quando um novo marco é atingido
   useEffect(() => {
-    if (milestone > 0) {
-      // Mudamos a 'key' para forçar a AnimatePresence a re-renderizar o efeito
-      setKey(milestone); 
+    if (milestone > 0 && !activeMilestones.includes(milestone)) {
+      setActiveMilestones(prev => [...prev, milestone]);
+      const timer = setTimeout(() => {
+        setActiveMilestones(prev => prev.filter(m => m !== milestone));
+      }, 3000);
+      return () => clearTimeout(timer);
     }
-  }, [milestone]);
+  }, [milestone, activeMilestones]);
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
+    <div className="pointer-events-none fixed inset-0 z-[9999] overflow-hidden">
       <AnimatePresence>
-        {key > 0 && (
-          // O número de emojis é igual ao marco atingido
-          Array.from({ length: key }).map((_, i) => (
+        {activeMilestones.map((m) =>
+          Array.from({ length: Math.min(m, 100) }).map((_, i) => ( // Limite de 100 emojis para performance
             <motion.div
-              key={`${key}-${i}`} // A key única garante que a animação reinicie
-              initial={{ opacity: 1, scale: 0.5, y: 0, x: 0 }}
-              animate={{
+              key={`${m}-${i}`}
+              initial={{
                 opacity: 0,
-                scale: [1, 1.5, 2],
-                y: (Math.random() - 0.5) * window.innerHeight * 1.2,
-                x: (Math.random() - 0.5) * window.innerWidth * 1.2,
-                rotate: (Math.random() - 0.5) * 540,
+                scale: 0.5,
+                y: 0,
+                x: (Math.random() - 0.5) * window.innerWidth * 0.5,
               }}
+              animate={{
+                opacity: [0, 1, 1, 0],
+                scale: [0.5, 1.2, 1, 0.8],
+                y: window.innerHeight + 50,
+                rotate: (Math.random() - 0.5) * 720,
+              }}
+              exit={{ opacity: 0, scale: 0.2 }}
               transition={{
-                duration: 1.5 + Math.random() * 1.5,
-                ease: "easeOut",
+                duration: 2 + Math.random() * 1,
+                delay: Math.random() * 0.5,
+                ease: "easeIn",
               }}
-              className="absolute left-1/2 top-1/2 text-2xl"
+              className="absolute left-1/2 top-[-50px] text-3xl md:text-4xl"
             >
               🔥
             </motion.div>

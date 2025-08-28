@@ -13,6 +13,7 @@ import { TEMPLATE_TXT } from "@/lib/constants";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface SidebarProps {
+  isQuizActive: boolean; // <-- A PROPRIEDADE QUE FALTAVA FOI ADICIONADA AQUI
   fileInputRef: React.RefObject<HTMLInputElement | null>;
   handleUpload: (file: File) => void;
   shuffleOnLoad: boolean;
@@ -34,11 +35,12 @@ interface SidebarProps {
 type GroupedDecks = {
   [key: string]: {
     decks: Deck[];
-    [subgroup: string]: any; // Permite subgrupos aninhados
+    [subgroup: string]: any;
   };
 };
 
 export function Sidebar({
+  isQuizActive,
   fileInputRef,
   handleUpload,
   shuffleOnLoad,
@@ -59,27 +61,22 @@ export function Sidebar({
   const groupedDecks = useMemo(() => {
     const groups: GroupedDecks = {};
     const sortedDecks = [...availableDecks].sort((a, b) => a.name.localeCompare(b.name));
-
     sortedDecks.forEach(deck => {
       const parts = deck.name.split(/\s*-\s*/).map(p => p.trim());
       let currentLevel: any = groups;
-
       if (parts.length === 1) {
         if (!currentLevel["Outros"]) currentLevel["Outros"] = { decks: [] };
         currentLevel["Outros"].decks.push({ ...deck, name: parts[0] });
         return;
       }
-      
       const path = parts.slice(0, -1);
       const deckName = parts[parts.length - 1];
-
       path.forEach(part => {
         if (!currentLevel[part]) {
           currentLevel[part] = { decks: [] };
         }
         currentLevel = currentLevel[part];
       });
-
       currentLevel.decks.push({ ...deck, name: deckName });
     });
     return groups;
@@ -103,7 +100,6 @@ export function Sidebar({
       const group = level[key];
       const decks = group.decks || [];
       const subGroups = Object.keys(group).filter(k => k !== 'decks');
-
       return (
         <AccordionItem value={key} key={key}>
           <AccordionTrigger>{key}</AccordionTrigger>
@@ -130,104 +126,109 @@ export function Sidebar({
   };
 
   return (
-    <div className="space-y-6">
-      {/* CÓDIGO RESTAURADO ABAIXO */}
-      <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle>
-          <CardDescription>Ficheiros .txt no modelo indicado.</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <Input ref={fileInputRef} type="file" accept=".txt" className="hidden" onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0])} />
-          <Button className="w-full" onClick={() => fileInputRef.current?.click()}><Upload className="mr-2 h-4 w-4" />Selecionar Ficheiro .txt</Button>
-          <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2 text-sm"><Switch id="shuffle-switch" checked={shuffleOnLoad} onCheckedChange={setShuffleOnLoad} /><label htmlFor="shuffle-switch">Embaralhar</label></div>
-            <Button variant="outline" size="sm" onClick={downloadTemplate}><Download className="mr-2 h-4 w-4" />Modelo</Button>
-          </div>
-          {errors.length > 0 && (
-            <div className="rounded-xl border border-amber-300 bg-amber-50 dark:bg-amber-950/40 p-3 text-sm text-amber-700 dark:text-amber-200">
-              <div className="font-semibold mb-1 flex items-center gap-2"><Info className="h-4 w-4" />Ajustes necessários:</div>
-              <ul className="list-disc list-inside space-y-1">{errors.map((e, i) => <li key={i}>{e}</li>)}</ul>
-            </div>
-          )}
-        </CardContent>
-      </Card>
+    <div className="flex flex-col space-y-6">
+      <div className={`order-4 lg:order-1 ${isQuizActive ? 'hidden lg:block' : ''}`}>
+        {availableDecks.length > 0 && (
+          <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5" />Decks Salvos</CardTitle>
+              <CardDescription>Escolha um deck para começar:</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Accordion type="multiple" className="w-full -mt-4">
+                {renderDecks(groupedDecks)}
+              </Accordion>
+            </CardContent>
+          </Card>
+        )}
+      </div>
 
-      <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle>
-          <CardDescription>Relembre as questões de forma inteligente.</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Button className="w-full" onClick={startSrsSession}>
-            Iniciar Revisão ({srsCount} para hoje)
-          </Button>
-        </CardContent>
-      </Card>
-      
-      {availableDecks.length > 0 && (
+      <div className="order-5 lg:order-2">
         <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5" />Decks Salvos</CardTitle>
-            <CardDescription>Escolha um deck para começar:</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Accordion type="multiple" className="w-full -mt-4">
-              {renderDecks(groupedDecks)}
-            </Accordion>
+          <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center justify-between text-sm"><span>{stats.todayXp} / {stats.goal} XP hoje</span><Badge variant={goalPct === 100 ? "default" : "secondary"}>{goalPct}%</Badge></div>
+            <Progress value={goalPct} />
+            <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{stats.combo}</span></div><Button size="sm" variant="outline" onClick={() => actions.setGoal((g: number) => g + 50)}>+50 meta</Button></div>
           </CardContent>
         </Card>
-      )}
+      </div>
 
-      <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-        <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
-        <CardContent className="space-y-4">
-          <div className="flex items-center justify-between text-sm"><span>{stats.todayXp} / {stats.goal} XP hoje</span><Badge variant={goalPct === 100 ? "default" : "secondary"}>{goalPct}%</Badge></div>
-          <Progress value={goalPct} />
-          <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{stats.combo}</span></div><Button size="sm" variant="outline" onClick={() => actions.setGoal((g: number) => g + 50)}>+50 meta</Button></div>
-        </CardContent>
-      </Card>
-
-       <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-        <CardHeader><CardTitle className="flex items-center gap-2"><Award className="h-5 w-5"/>Conquistas</CardTitle></CardHeader>
-        <CardContent className="grid grid-cols-4 gap-4">
-          {achievements.map(ach => {
-            const IconComponent = ach.icon;
-            const isUnlocked = unlockedAchievements.includes(ach.id);
-            return (
-              <div key={ach.id} className="flex flex-col items-center text-center" title={`${ach.title}: ${ach.description}`}>
-                <div className={`p-3 rounded-full ${isUnlocked ? 'bg-amber-100 dark:bg-amber-900' : 'bg-slate-100 dark:bg-slate-800'}`}>
-                  <IconComponent className={`h-6 w-6 ${isUnlocked ? 'text-amber-500' : 'text-slate-400'}`} />
+      <div className="order-6 lg:order-3">
+        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+          <CardHeader><CardTitle className="flex items-center gap-2"><Award className="h-5 w-5"/>Conquistas</CardTitle></CardHeader>
+          <CardContent className="grid grid-cols-4 gap-4">
+            {achievements.map(ach => {
+              const IconComponent = ach.icon;
+              const isUnlocked = unlockedAchievements.includes(ach.id);
+              return (
+                <div key={ach.id} className="flex flex-col items-center text-center" title={`${ach.title}: ${ach.description}`}>
+                  <div className={`p-3 rounded-full ${isUnlocked ? 'bg-amber-100 dark:bg-amber-900' : 'bg-slate-100 dark:bg-slate-800'}`}>
+                    <IconComponent className={`h-6 w-6 ${isUnlocked ? 'text-amber-500' : 'text-slate-400'}`} />
+                  </div>
+                  <span className="text-xs mt-1 text-slate-600 dark:text-slate-300">{ach.title}</span>
                 </div>
-                <span className="text-xs mt-1 text-slate-600 dark:text-slate-300">{ach.title}</span>
-              </div>
-            );
-          })}
-        </CardContent>
-      </Card>
+              );
+            })}
+          </CardContent>
+        </Card>
+      </div>
 
-       <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
-        <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
-        <CardContent className="space-y-4">
-          <div className="flex items-center justify-between text-sm">
-            <span>Progresso:</span>
-            <Badge variant="secondary">{progressPct}%</Badge>
-          </div>
-          <Progress value={progressPct} />
-          {stats.lockUntil && stats.lockUntil > stats.now ? (
-              <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
-                  <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
-                  <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(stats.lockUntil - stats.now)}</span></div>
-                  <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => actions.buyLivesWithXp(100, 10)}> +10 vidas (-100 XP)</Button></div>
+      <div className={`order-3 lg:order-4 ${!isQuizActive ? 'hidden lg:block' : ''}`}>
+        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+          <CardHeader><CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck</CardTitle><CardDescription>Progresso e ações.</CardDescription></CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center justify-between text-sm">
+              <span>Progresso:</span>
+              <Badge variant="secondary">{progressPct}%</Badge>
+            </div>
+            <Progress value={progressPct} />
+            {stats.lockUntil && stats.lockUntil > stats.now ? (
+                <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
+                    <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
+                    <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(stats.lockUntil - stats.now)}</span></div>
+                    <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => actions.buyLivesWithXp(100, 10)}> +10 vidas (-100 XP)</Button></div>
+                </div>
+            ) : (
+                <div className="flex gap-2 flex-wrap">
+                    <Button variant="outline" size="sm" onClick={actions.resetSession} disabled={questionsCount === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
+                    <Button variant="ghost" size="sm" onClick={actions.clearSession}>Limpar</Button>
+                </div>
+            )}
+          </CardContent>
+        </Card>
+      </div>
+      
+      <div className="order-2 lg:order-5">
+        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+          <CardHeader><CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle></CardHeader>
+          <CardContent>
+            <Button className="w-full" onClick={startSrsSession}>
+              Iniciar Revisão ({srsCount} para hoje)
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="order-1 lg:order-6">
+        <Card className="backdrop-blur bg-white/60 dark:bg-slate-800/60">
+          <CardHeader><CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle></CardHeader>
+          <CardContent className="space-y-4">
+            <Input ref={fileInputRef} type="file" accept=".txt" className="hidden" onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0])} />
+            <Button className="w-full" onClick={() => fileInputRef.current?.click()}><Upload className="mr-2 h-4 w-4" />Selecionar Ficheiro .txt</Button>
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2 text-sm"><Switch id="shuffle-switch" checked={shuffleOnLoad} onCheckedChange={setShuffleOnLoad} /><label htmlFor="shuffle-switch">Embaralhar</label></div>
+              <Button variant="outline" size="sm" onClick={downloadTemplate}><Download className="mr-2 h-4 w-4" />Modelo</Button>
+            </div>
+            {errors.length > 0 && (
+              <div className="rounded-xl border border-amber-300 bg-amber-50 dark:bg-amber-950/40 p-3 text-sm text-amber-700 dark:text-amber-200">
+                <div className="font-semibold mb-1 flex items-center gap-2"><Info className="h-4 w-4" />Ajustes necessários:</div>
+                <ul className="list-disc list-inside space-y-1">{errors.map((e, i) => <li key={i}>{e}</li>)}</ul>
               </div>
-          ) : (
-              <div className="flex gap-2 flex-wrap">
-                  <Button variant="outline" size="sm" onClick={actions.resetSession} disabled={questionsCount === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
-                  <Button variant="ghost" size="sm" onClick={actions.clearSession}>Limpar</Button>
-              </div>
-          )}
-        </CardContent>
-      </Card>
+            )}
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }

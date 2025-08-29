@@ -1,3 +1,5 @@
+// components/layout/Sidebar.tsx
+
 import React, { useMemo } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -5,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { Upload, Download, BookOpen, BrainCircuit, Trophy, Award, RefreshCw, Info, ListEnd } from "lucide-react";
+import { Upload, Download, BookOpen, BrainCircuit, Trophy, Award, RefreshCw, Info } from "lucide-react";
 import { SrsData, Deck } from "@/types";
 import { formatTimeLeft } from "@/lib/utils";
 import { achievements } from "@/lib/achievements";
@@ -33,7 +35,10 @@ interface SidebarProps {
   questionsCount: number;
 }
 
-type GroupedDecks = { [key: string]: { decks: Deck[]; [subgroup: string]: any; } };
+interface DeckNode {
+  decks: Deck[];
+  children: { [key: string]: DeckNode };
+}
 
 export function Sidebar({
   isQuizActive,
@@ -56,42 +61,49 @@ export function Sidebar({
 
   const isMobile = useMediaQuery("(max-width: 1023px)");
 
-  const groupedDecks = useMemo(() => {
-    const groups: GroupedDecks = {};
-    const sortedDecks = [...availableDecks].sort((a, b) => a.name.localeCompare(b.name));
+  const { root, orderedGroups } = useMemo(() => {
+    const rootNode: DeckNode = { decks: [], children: {} };
+    const topLevelOrder: string[] = [];
 
-    sortedDecks.forEach(deck => {
+    availableDecks.forEach(deck => {
       const parts = deck.name.split(/\s*-\s*/).map(p => p.trim());
-      let currentLevel: any = groups;
-
+      
       if (parts.length === 1) {
-        if (!currentLevel["Outros"]) currentLevel["Outros"] = { decks: [] };
-        currentLevel["Outros"].decks.push({ ...deck, name: parts[0] });
+        if (!rootNode.children["Outros"]) {
+          rootNode.children["Outros"] = { decks: [], children: {} };
+          topLevelOrder.push("Outros");
+        }
+        rootNode.children["Outros"].decks.push({ ...deck, name: parts[0] });
         return;
       }
       
-      const path = parts.slice(0, -1);
-      const deckName = parts[parts.length - 1];
+      const deckName = parts.pop()!;
+      const path = parts;
+      
+      if (path.length > 0 && !rootNode.children[path[0]]) {
+        topLevelOrder.push(path[0]);
+      }
 
-      path.forEach(part => {
-        if (!currentLevel[part]) {
-          currentLevel[part] = { decks: [] };
+      let currentNode = rootNode;
+      for (const part of path) {
+        if (!currentNode.children[part]) {
+          currentNode.children[part] = { decks: [], children: {} };
         }
-        currentLevel = currentLevel[part];
-      });
-
-      currentLevel.decks.push({ ...deck, name: deckName });
+        currentNode = currentNode.children[part];
+      }
+      
+      currentNode.decks.push({ ...deck, name: deckName });
     });
-    return groups;
+
+    return { root: rootNode, orderedGroups: topLevelOrder };
   }, [availableDecks]);
   
   const defaultOpenFolder = useMemo(() => {
-    if (isMobile) {
-      const firstGroupName = Object.keys(groupedDecks).sort()[0];
-      return firstGroupName ? [firstGroupName] : [];
+    if (isMobile && orderedGroups.length > 0) {
+      return [orderedGroups[0]];
     }
     return [];
-  }, [isMobile, groupedDecks]);
+  }, [isMobile, orderedGroups]);
 
   const downloadTemplate = () => {
     const blob = new Blob([TEMPLATE_TXT.trim()], { type: "text/plain;charset=utf-8" });
@@ -106,44 +118,37 @@ export function Sidebar({
   const goalPct = Math.min(100, Math.round((stats.todayXp / stats.goal) * 100));
   const srsCount = Object.values(srsData).filter((item: any) => isPast(new Date(item.nextReview))).length;
 
-  // CORREÇÃO: Função recursiva ajustada para não criar pastas "decks"
-  const renderDecks = (level: GroupedDecks, levelKeyPrefix = "") => {
-    return Object.keys(level).sort().map(key => {
-      const group = level[key];
-      const decks = group.decks || [];
-      const subGroups: GroupedDecks = Object.keys(group)
-        .filter(k => k !== 'decks')
-        .reduce((acc, k) => ({ ...acc, [k]: group[k] }), {});
+  const renderDeckTree = (node: DeckNode, nodeKey: string) => {
+    const sortedChildrenKeys = Object.keys(node.children).sort();
+    const sortedDecks = [...node.decks].sort((a, b) => a.name.localeCompare(b.name));
 
-      const currentKey = `${levelKeyPrefix}-${key}`;
-
-      return (
-        <AccordionItem value={currentKey} key={currentKey}>
-          <AccordionTrigger>{key}</AccordionTrigger>
-          <AccordionContent className="pl-2 space-y-2">
-            {decks.map((deck: Deck) => (
-              <Button 
-                key={deck.id} 
-                variant={deckId === deck.id ? "default" : "outline"} 
-                className="w-full justify-start text-left h-auto whitespace-normal" 
-                onClick={() => setDeckId(deck.id)}
-              >
-                {deck.name}
-              </Button>
-            ))}
-            {Object.keys(subGroups).length > 0 && (
-              <Accordion type="multiple" className="w-full">
-                {renderDecks(subGroups, currentKey)}
-              </Accordion>
-            )}
-          </AccordionContent>
-        </AccordionItem>
-      );
-    });
+    return (
+      <AccordionItem value={nodeKey} key={nodeKey}>
+        <AccordionTrigger>{nodeKey}</AccordionTrigger>
+        <AccordionContent className="pl-2 space-y-2">
+          {sortedDecks.map((deck) => (
+            <Button 
+              key={deck.id} 
+              variant={deckId === deck.id ? "default" : "outline"} 
+              className="w-full justify-start text-left h-auto whitespace-normal" 
+              onClick={() => setDeckId(deck.id)}
+            >
+              {deck.name}
+            </Button>
+          ))}
+          {sortedChildrenKeys.length > 0 && (
+            <Accordion type="multiple" className="w-full">
+              {sortedChildrenKeys.map(key => renderDeckTree(node.children[key], key))}
+            </Accordion>
+          )}
+        </AccordionContent>
+      </AccordionItem>
+    );
   };
 
   return (
     <div className="flex flex-col space-y-6">
+
       <div className={`order-2 lg:order-1 ${isQuizActive ? 'hidden lg:flex' : 'flex'}`}>
         {availableDecks.length > 0 && (
           <Card className="w-full">
@@ -152,8 +157,9 @@ export function Sidebar({
               <CardDescription>Escolha um deck para começar:</CardDescription>
             </CardHeader>
             <CardContent>
-              <Accordion type="multiple" className="w-full -mt-4" defaultValue={defaultOpenFolder}>
-                {renderDecks(groupedDecks)}
+              {/* CORREÇÃO: Removida a classe "-mt-4" que causava o problema de padding */}
+              <Accordion type="multiple" className="w-full" defaultValue={defaultOpenFolder}>
+                {orderedGroups.map(key => renderDeckTree(root.children[key], key))}
               </Accordion>
             </CardContent>
           </Card>
@@ -188,18 +194,18 @@ export function Sidebar({
         </Card>
       </div>
 
-      <div className="order-3 lg:order-3">
+      <div className="order-3">
         <Card>
           <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
           <CardContent className="space-y-4">
             <div className="flex items-center justify-between text-sm"><span>{stats.todayXp} / {stats.goal} XP hoje</span><Badge variant={goalPct === 100 ? "default" : "secondary"}>{goalPct}%</Badge></div>
             <Progress value={goalPct} />
-            <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{stats.combo}</span></div><Button size="sm" variant="outline" onClick={() => actions.setGoal(stats.goal + 50)}>+50 meta</Button></div>
+            <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{stats.combo}</span></div><Button size="sm" variant="outline" onClick={() => actions.setGoal((g: number) => g + 50)}>+50 meta</Button></div>
           </CardContent>
         </Card>
       </div>
 
-      <div className="order-4 lg:order-4">
+      <div className="order-4">
         <Card>
           <CardHeader><CardTitle className="flex items-center gap-2"><Award className="h-5 w-5"/>Conquistas</CardTitle></CardHeader>
           <CardContent className="grid grid-cols-4 gap-4">
@@ -219,7 +225,7 @@ export function Sidebar({
         </Card>
       </div>
       
-      <div className="order-5 lg:order-5">
+      <div className="order-5">
         <Card>
           <CardHeader><CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle></CardHeader>
           <CardContent>
@@ -230,7 +236,7 @@ export function Sidebar({
         </Card>
       </div>
 
-      <div className="order-6 lg:order-6">
+      <div className="order-6">
         <Card>
           <CardHeader><CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle></CardHeader>
           <CardContent className="space-y-4">
@@ -240,6 +246,12 @@ export function Sidebar({
               <div className="flex items-center gap-2 text-sm"><Switch id="shuffle-switch" checked={shuffleOnLoad} onCheckedChange={setShuffleOnLoad} /><label htmlFor="shuffle-switch">Embaralhar</label></div>
               <Button variant="outline" size="sm" onClick={downloadTemplate}><Download className="mr-2 h-4 w-4" />Modelo</Button>
             </div>
+            {errors.length > 0 && (
+              <div className="rounded-xl border border-amber-300 bg-amber-50 dark:bg-amber-950/40 p-3 text-sm text-amber-700 dark:text-amber-200">
+                <div className="font-semibold mb-1 flex items-center gap-2"><Info className="h-4 w-4" />Ajustes necessários:</div>
+                <ul className="list-disc list-inside space-y-1">{errors.map((e, i) => <li key={i}>{e}</li>)}</ul>
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>

@@ -1,3 +1,5 @@
+// hooks/useQuizEngine.ts
+
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Question, SrsData, ShuffledQuestion, Deck } from '@/types';
 import {
@@ -15,11 +17,9 @@ import { useAudio } from '@/hooks/useAudio';
 import { parseTxtDeck } from '@/lib/parser';
 import { achievements } from '@/lib/achievements';
 import { DEFAULT_DECKS } from '@/data/defaultDecks';
-import { isPast } from 'date-fns'; // <-- A IMPORTAÇÃO QUE FALTAVA FOI ADICIONADA AQUI
+import { isPast } from 'date-fns';
 
 export function useQuizEngine() {
-  // ... (todo o resto do código do hook permanece exatamente igual)
-
   const [availableDecks, setAvailableDecks] = useState<Deck[]>([]);
   const [deckId, setDeckId] = useState<string | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -60,6 +60,25 @@ export function useQuizEngine() {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
+    // Carrega os decks a partir do ficheiro de dados, já na ordem correta
+    const decksWithStableIds = DEFAULT_DECKS.map(deck => ({
+      ...deck,
+      questions: deck.questions.map((q: Question) => ({ ...q, id: hashString(q.text) }))
+    }));
+
+    // CORREÇÃO: Usa a lista completa de decks para o estado
+    setAvailableDecks(decksWithStableIds);
+
+    // Guarda os decks no localStorage para uso offline e carregamento rápido.
+    const manifestForStorage = decksWithStableIds.map(deck => ({ id: deck.id, name: deck.name }));
+    localStorage.setItem("quizg-v1-deck-manifest", JSON.stringify(manifestForStorage));
+    
+    decksWithStableIds.forEach(deck => {
+        localStorage.setItem(LS_DECK_KEY(deck.id), JSON.stringify({ questions: deck.questions }));
+    });
+  }, []);
+
+  useEffect(() => {
     const rawAchievements = localStorage.getItem(LS_ACHIEVEMENTS_KEY);
     if (rawAchievements) try { setUnlockedAchievements(JSON.parse(rawAchievements)); } catch {}
   }, []);
@@ -83,26 +102,6 @@ export function useQuizEngine() {
       return () => clearTimeout(timer);
     }
   }, [comboMilestone]);
-
-  useEffect(() => {
-    const manifestRaw = localStorage.getItem("quizg-v1-deck-manifest");
-    if (!manifestRaw || JSON.parse(manifestRaw).length === 0) {
-      if (DEFAULT_DECKS.length > 0) {
-        const decksWithStableIds = DEFAULT_DECKS.map(deck => ({
-            ...deck,
-            questions: deck.questions.map((q: Question) => ({ ...q, id: hashString(q.text) }))
-        }));
-        const defaultManifest = decksWithStableIds.map(deck => ({ id: deck.id, name: deck.name }));
-        localStorage.setItem("quizg-v1-deck-manifest", JSON.stringify(defaultManifest));
-        decksWithStableIds.forEach(deck => {
-            localStorage.setItem(LS_DECK_KEY(deck.id), JSON.stringify({ questions: deck.questions }));
-        });
-        setAvailableDecks(defaultManifest);
-      }
-    } else {
-      setAvailableDecks(JSON.parse(manifestRaw));
-    }
-  }, []);
 
   useEffect(() => {
     const raw = localStorage.getItem(LS_STATS_KEY);
@@ -358,7 +357,7 @@ export function useQuizEngine() {
     if (!manifest.some((d: { id: string }) => d.id === newDeckId)) {
       const newManifest = [...manifest, { id: newDeckId, name: deckName }];
       localStorage.setItem("quizg-v1-deck-manifest", JSON.stringify(newManifest));
-      setAvailableDecks(newManifest);
+      setAvailableDecks(prev => [...prev, { id: newDeckId, name: deckName, questions: qs }]);
     }
     setDeckId(newDeckId);
   };

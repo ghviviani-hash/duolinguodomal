@@ -1,2828 +1,12 @@
+import { Deck } from '@/types';
 
+// ------------------------------------------------------------------
+// PARA ORDENAR AS PASTAS, BASTA REORDENAR OS DECKS ABAIXO.
+// A ordem das pastas será a mesma ordem em que aparecem aqui.
+// Use o formato "Nome da Pasta - Nome do Baralho" no campo 'name'.
+// ------------------------------------------------------------------
 
-export const DEFAULT_DECKS = [
-  
-  // NOVO DECK DE NEUROLOGIA
-  
-  {
-    id: "preset-neurologia-1",
-    name: "  Estácio - M7 - PR1 - Neurologia ",
-    questions: [
-      // Cefaleias
-      {
-        id: "neuro-q1",
-        text: "Uma paciente de 18 anos, sem comorbidades, procurou a emergência com queixa de cefaleia. Ela referia uma cefaleia de forte intensidade (\"a pior dor da vida\"), súbita, associada a fotofobia, náuseas e vômitos. Nega outros sintomas associados. Ao exame: acordada, interagindo. Força normal em membros. Coordenação normal. Sensibilidade superficial e profunda preservada. Pupilas isofotorreagentes. Rigidez de nuca. Qual a alternativa correta em relação ao provável diagnóstico e conduta?",
-        options: [
-          "Enxaqueca: analgésicos ou sumatriptano subcutâneo",
-          "Cefaleia em salvas: oxigênio ou sumatriptano subcutâneo",
-          "Hemorragia subaracnóidea: angiotomografia computadorizada do crânio",
-          "Hemicrania paroxística: Indometacina"
-        ],
-        answerIndex: 2,
-        explanation: "Cefaleia súbita de forte intensidade (\"thunderclap headache\") com rigidez de nuca é o quadro clássico de Hemorragia Subaracnóidea, exigindo neuroimagem de emergência.",
-        tag: "Cefaleias"
-      },
-      {
-        id: "neuro-q2",
-        text: "Um homem de 30 anos, hipertenso leve, apresenta há 8 anos episódios mensais de cefaléia pulsátil. de forte intensidade, acompanhada de vômitos e precedida de alteração visual (fortificações). Sua mãe e irmã tem quadro semelhante e seu exame físico/neurológico é normal. O provável diagnóstico é:",
-        options: [
-          "Ruptura de aneurisma",
-          "Enxaqueca",
-          "Cefaleia tipo tensional",
-          "Cefaléia em salvas"
-        ],
-        answerIndex: 1,
-        explanation: "Cefaleia pulsátil, unilateral, com sintomas associados (vômitos), aura visual (fortificações) e história familiar positiva são características marcantes da enxaqueca com aura.",
-        tag: "Cefaleias"
-      },
-      {
-        id: "neuro-q3",
-        text: "Mulher, 25 anos, apresenta há 6 anos episódios ocasionais de cefaléia em pressão, em capacete, de moderada intensidade, com 3 dias de duração em média, sem náuseas, vômitos e/ou alteração visual. Nega história familiar. O provável diagnóstico é:",
-        options: [
-          "Cefaléia hípnica",
-          "Enxaqueca",
-          "Cefaleia tipo tensional",
-          "Cefaléia em salvas"
-        ],
-        answerIndex: 2,
-        explanation: "A descrição de uma dor em pressão ou \"capacete\", bilateral, de intensidade leve a moderada e sem os sintomas associados (náuseas, fotofobia) é a apresentação típica da Cefaleia do Tipo Tensional.",
-        tag: "Cefaleias"
-      },
-      {
-        id: "neuro-q4",
-        text: "São utilizadas para profilaxia de enxaqueca as substâncias abaixo EXCETO:",
-        options: ["Topiramato", "Flunarizina", "Clonazepam", "Amitriptilina"],
-        answerIndex: 2,
-        explanation: "Topiramato, flunarizina e amitriptilina são fármacos de primeira linha para a profilaxia da enxaqueca. Clonazepam, um benzodiazepínico, não é uma escolha padrão para este fim.",
-        tag: "Cefaleias"
-      },
-      {
-        id: "neuro-q5",
-        text: "As cefaleias podem ser primarias ou secundarias. Na suspeita de cefaleia secundária, exames de imagem devem ser realizados para a investigação adequada. Assinale a alternativa em que todas as situações são justificativas para exames de neuroimagem em pacientes com cefaleia.",
-        options: [
-          "Paciente imunossuprimido/ dor latejante",
-          "Náuseas/fotofobia",
-          "Fonofobia/ refratariedade ao tratamento",
-          "Instalação súbita/ alterações visuais"
-        ],
-        answerIndex: 3,
-        explanation: "A instalação súbita (\"thunderclap\") e a presença de alterações neurológicas focais (como alterações visuais) são sinais de alerta (\"red flags\") que exigem investigação com neuroimagem para descartar causas secundárias graves.",
-        tag: "Cefaleias"
-      },
-      {
-        id: "neuro-q6",
-        text: "Em uma paciente com diagnóstico de enxaqueca com aura, qual das medicações abaixo deve ser evitada?",
-        options: [
-          "Pílula anticoncepcional com progestágeno",
-          "Levotiroxina",
-          "Ácido valpróico",
-          "Terapia de reposição hormonal com estrogênio"
-        ],
-        answerIndex: 3,
-        explanation: "O uso de contraceptivos ou terapia de reposição hormonal contendo estrogênio aumenta o risco de eventos isquêmicos (AVC) em pacientes com enxaqueca com aura e, portanto, deve ser evitado.",
-        tag: "Cefaleias"
-      },
-      {
-        id: "neuro-q7",
-        text: "Na cefaleia em salvas, o tratamento profilático e agudo são, respectively:",
-        options: [
-          "Oxigênio e verapamil",
-          "Verapamil e indometacina",
-          "Verapamil e oxigênio",
-          "Oxigênio e lamotrigina"
-        ],
-        answerIndex: 2,
-        explanation: "O tratamento agudo da crise de cefaleia em salvas é feito com oxigênio a 100% ou sumatriptano. A profilaxia (tratamento para evitar as crises) é feita principalmente com verapamil.",
-        tag: "Cefaleias"
-      },
-      {
-        id: "neuro-q8",
-        text: "Paciente idosa, 70 anos, procura a emergência com queixa de cefaleia em região temporal direita há 1 mês, pior há 1 dia. Nega irradiação da dor. Foram solicitados exames laboratoriais e de imagem. Marque a alternativa correta quanto ao possível diagnóstico.",
-        options: [
-          "VHS é um exame desnecessário nesse caso, pois seu valor não altera nesse caso",
-          "O exame de imagem solicitado e o doppler de artéria temporal, porém não há sinais característicos que sugiram o diagnóstico",
-          "O tratamento deve ser iniciado com corticoide e a resposta esperada é excelente",
-          "Os jovens também são acometidos com frequência"
-        ],
-        answerIndex: 2,
-        explanation: "O quadro de cefaleia temporal em paciente idosa levanta a forte suspeita de Arterite Temporal (ou de Células Gigantes). Esta é uma emergência reumatológica, e o tratamento com altas doses de corticoide deve ser iniciado imediatamente para prevenir a perda visual, com excelente resposta da dor.",
-        tag: "Cefaleias"
-      },
-      // Doença de Parkinson e Parkinsonismo
-      {
-        id: "neuro-q9",
-        text: "Paciente masculino, advogado, 66 anos, refere que há 2 anos recebeu diagnóstico de doença de Parkinson. Fez uso de múltiplos esquemas medicamentosos, incluindo levodopa, porém com pouco resultado. O quadro se iniciou há cerca de 4 anos com quedas frequentes. Ao exame: Rigidez em roda denteada (axial maior que em membros) e bradicinesia bilaterais, sem tremor, retrocólis e paralisia ao olhar vertical para baixo. Considerando a evolução e o quadro clínico acima, o diagnóstico mais provável deste paciente é:",
-        options: [
-          "Degeneração cortico-basal",
-          "Doença de Alzheimer",
-          "Paralisia supranuclear progressiva",
-          "Atrofia de múltiplos sistemas"
-        ],
-        answerIndex: 2,
-        explanation: "Um quadro de parkinsonismo com quedas precoces, pouca resposta à levodopa e, principalmente, a paralisia do olhar vertical para baixo, são sinais clássicos da Paralisia Supranuclear Progressiva (PSP), uma forma de parkinsonismo atípico.",
-        tag: "Parkinsonismo"
-      },
-      {
-        id: "neuro-q10",
-        text: "Assinale a alternativa correta referente a doença de Parkinson:",
-        options: [
-          "Os sinais são assimétricos no início da fase motora",
-          "A bradicinesia aparece após 10 anos do início da fase motora",
-          "O sinal da cauda da andorinha está presente na ressonância magnética de crânio de 3T",
-          "O tratamento medicamentoso deve ser suspenso imediatamente após o tratamento cirúrgico com Deep Brain Stimulation (DBS)"
-        ],
-        answerIndex: 0,
-        explanation: "Uma das características cardinais da Doença de Parkinson é o início assimétrico dos sintomas motores (tremor, rigidez e/ou bradicinesia), geralmente começando em um membro de um lado do corpo.",
-        tag: "Parkinsonismo"
-      },
-      {
-        id: "neuro-q11",
-        text: "Paciente feminino, 54 anos, com diagnóstico de doença de Parkinson há 7 anos, em uso de levodopa, pramipexol e escitalopram. Queixa-se de movimentos involuntários intensos e exaustivos cerca de 1h e 30min após a tomada da 3a e 4a doses de levodopa. Ao exame físico observa-se movimentos generalizados coreiformes. Qual a provável causa da intercorrência apresentada pela paciente?",
-        options: [
-          "Efeito adverso do escitalopram",
-          "Transtorno somatoforme",
-          "Discinesias",
-          "Crises epilépticas mioclônicas"
-        ],
-        answerIndex: 2,
-        explanation: "Os movimentos involuntários (coreiformes) que ocorrem no pico da dose da levodopa são uma complicação motora clássica do tratamento crônico da Doença de Parkinson, conhecidos como discinesias de pico de dose.",
-        tag: "Parkinsonismo"
-      },
-      {
-        id: "neuro-q12",
-        text: "É a principal causa de demência:",
-        options: [
-          "Doença de Parkinson",
-          "Doença de Huntington",
-          "Doença de Alzheimer",
-          "Demência vascular"
-        ],
-        answerIndex: 2,
-        explanation: "A Doença de Alzheimer é a causa mais comum de demência em todo o mundo, respondendo pela maioria dos casos em idosos.",
-        tag: "Demências"
-      },
-      {
-        id: "neuro-q13",
-        text: "Homem, 29 anos, diagnosticado com depressão, notou há 10 meses lentidão, tremor bilateral em mãos e alteração na fala. Exame neurológico: Hipomimia facial, disartria, bradicinesia e rigidez em roda denteada simétricas, tremor de repouso bilateral. Exame laboratorial revelou leve aumento de transaminases séricas. Considerando o diagnóstico mais provável, assinale a alternativa correta:",
-        options: [
-          "Trata-se de um quadro de parkinsonismo medicamentoso",
-          "O nível sérico de ceruloplasmina costuma ser baixo",
-          "Na ressonância magnética de crânio teremos o sinal do beija-flor (atrofia mesencefálica)",
-          "A hipotensão postural é um achado frequente"
-        ],
-        answerIndex: 1,
-        explanation: "Parkinsonismo em paciente jovem (<40-50 anos) associado a alterações hepáticas (aumento de transaminases) levanta forte suspeita da Doença de Wilson. Nesta doença, há um distúrbio no metabolismo do cobre, e o nível sérico de ceruloplasmina (a proteína que transporta o cobre) é caracteristicamente baixo.",
-        tag: "Parkinsonismo"
-      },
-      {
-        id: "neuro-q14",
-        text: "Paciente masculino, 63 anos, com queixa de dificuldade de movimentar o braço D há 3 meses (dificuldade de abotoar camisa, fazer a barba e escrever). Ao exame nota-se diminuição do piscar dos olhos, lentificação dos movimentos do MSD e leve hipertonia em dimídio direito. Qual o diagnóstico mais provável?",
-        options: [
-          "Síndrome parkinsoniana",
-          "AVC isquêmico em território de artéria cerebral média esquerda",
-          "Processo expansivo intracraniano no hemisfério cerebral esquerdo",
-          "AVC isquêmico de tronco cerebral"
-        ],
-        answerIndex: 0,
-        explanation: "A presença de lentificação de movimentos (bradicinesia) e hipertonia (rigidez), com início assimétrico (dimídio direito), são os achados clínicos essenciais para o diagnóstico de uma síndrome parkinsoniana.",
-        tag: "Parkinsonismo"
-      },
-      // AVE
-      {
-        id: "neuro-q15",
-        text: "Na trombose de origem da cerebral média:",
-        options: [
-          "Pode não ocorrer na afasia motora",
-          "Pode ocorrer afasia motora e sensorial acompanhada de hemianopsia, hemihiopoestesia e hemiparesia",
-          "Não ocorre hemianopsia",
-          "Pode não ocorrer afasia sensorial"
-        ],
-        answerIndex: 1,
-        explanation: "A artéria cerebral média (ACM) irriga uma vasta área do cérebro. Sua oclusão no hemisfério dominante pode causar um déficit completo, incluindo afasia (motora e sensorial), hemiparesia, hemi-hipoestesia e hemianopsia contralateral.",
-        tag: "AVE"
-      },
-      {
-        id: "neuro-q16",
-        text: "Paciente de 68 anos, hipertenso e diabético, é admitido às 6h45 com disfasia, disartria e hemiparesia à direita. Última vez visto bem foi à 1h15. TC de crânio sem contraste mostrou hiperdensidade em topografia de artéria cerebral média à esquerda e angio-TC mostrou falha de opacificação proximal. Em relação ao caso, assinale a alternativa CORRETA:",
-        options: [
-          "Trata-se de um acidente vascular hemorrágico.",
-          "Trata-se de um acidente vascular isquêmico, deve ser submetido à trombólise venosa.",
-          "Trata-se de um acidente vascular isquêmico, deve ser submetido a trombectomia mecânica.",
-          "Trata-se de uma hemorragia subaracnóide."
-        ],
-        answerIndex: 2,
-        explanation: "O sinal da artéria cerebral média hiperdensa na TC sem contraste e a falha de enchimento na angio-TC confirmam um AVC isquêmico por oclusão de grande vaso. Pela janela terapêutica e gravidade, a trombectomia mecânica é o tratamento de escolha.",
-        tag: "AVE"
-      },
-      {
-        id: "neuro-q17",
-        text: "Paciente de 72 anos, hipertenso e dislipidêmico, admitido com hemiplegia esquerda, heminegligência e desvio do olhar para direita. TC de crânio mostrou área hipodensa extensa e hiperdensidade em artéria cerebral média direita. Angio-TC evidenciou oclusão proximal da mesma artéria. Qual a conduta CORRETA?",
-        options: [
-          "Manter a pressão arterial sistólica abaixo de 140mmHg.",
-          "Submeter à trombólise venosa com alteplase.",
-          "Contactar a neurocirurgia para realização de trombectomia mecânica.",
-          "Iniciar anticoagulação com heparina."
-        ],
-        answerIndex: 2,
-        explanation: "Assim como no caso anterior, trata-se de um AVC isquêmico com oclusão de grande vaso, fora da janela de trombólise venosa. A conduta indicada é a trombectomia mecânica.",
-        tag: "AVE"
-      },
-      {
-        id: "neuro-q18",
-        text: "Paciente de 68 anos, hipertenso e diabético, é admitido com disartria e hemiparesia à esquerda. TC de crânio sem contraste mostrou hiperdensidade em núcleos da base e cápsula interna à direita. Em relação ao caso, assinale a alternativa CORRETA:",
-        options: [
-          "Manter o paciente hipertenso, com PAS acima de 160mmHg.",
-          "Controlar a pressão arterial (PAS em torno de 140mmHg) e contactar a neurocirurgia.",
-          "Submeter à trombólise venosa com alteplase.",
-          "Submeter à trombectomia mecânica."
-        ],
-        answerIndex: 1,
-        explanation: "A hiperdensidade na TC sem contraste indica um Acidente Vascular Cerebral Hemorrágico (AVCH). O tratamento agudo consiste no controle rigoroso da pressão arterial para evitar a expansão do hematoma e na avaliação neurocirúrgica.",
-        tag: "AVE"
-      },
-      {
-        id: "neuro-q19",
-        text: "Paciente de 69 anos, hipertenso e diabético, é admitido com disfasia, disartria e hemiparesia à direita, acompanhados de cefaleia súbita e intensa. TC sem contraste mostrou hiperdensidade em cisternas basais e ventrículos. Em relação ao caso, assinale a alternativa CORRETA:",
-        options: [
-          "Contactar neurocirurgia e realizar angio-TC ou angiografia para investigar aneurisma.",
-          "Submeter à trombólise venosa com alteplase.",
-          "Submeter à terapia combinada de trombectomia e trombólise.",
-          "Iniciar AAS 300mg e estatina."
-        ],
-        answerIndex: 0,
-        explanation: "A presença de sangue (hiperdensidade) nas cisternas basais é característica de Hemorragia Subaracnóidea (HSA), cuja principal causa é a ruptura de um aneurisma cerebral. A investigação vascular com angio-TC ou angiografia e a avaliação neurocirúrgica são urgentes.",
-        tag: "AVE"
-      },
-      {
-        id: "neuro-q20",
-        text: "Paciente de 60 anos, diabético e hipertenso, apresentou cefaleia, vômitos e torpor, sendo diagnosticado com AVC. Sobre os AVCs é correto afirmar:",
-        options: [
-          "Os AVCs hemorrágicos são mais frequentes que os isquêmicos.",
-          "Não existe uma janela terapêutica para o uso de trombolíticos nos AVC Isquêmicos.",
-          "É contra-indicado o uso de trombolíticos nos acidentes vasculares hemorrágicos.",
-          "A hipertensão arterial representa o menor fator de risco para os AVC isquêmicos."
-        ],
-        answerIndex: 2,
-        explanation: "A afirmação correta é que o uso de trombolíticos (que dissolvem coágulos) é absolutamente contraindicado em AVCs hemorrágicos, pois agravaria o sangramento. Os AVCs isquêmicos são os mais frequentes.",
-        tag: "AVE"
-      },
-      {
-        id: "neuro-q21",
-        text: "A principal causa de AVC isquêmico é:",
-        options: [
-          "Embolia",
-          "Trombose associada à crise hipertensiva",
-          "Diabetes, dislipidemia e hipertensão arterial",
-          "Trombose associada à crise hipertensiva, dislipidemia e diabetes"
-        ],
-        answerIndex: 2,
-        explanation: "A principal causa subjacente do AVC isquêmico é a aterosclerose, cujo desenvolvimento é impulsionado pelos principais fatores de risco vasculares: diabetes, dislipidemia e hipertensão arterial.",
-        tag: "AVE"
-      },
-      {
-        id: "neuro-q22",
-        text: "O envolvimento do III nervo craniano de modo isolado sugere:",
-        options: [
-          "Angioma no território cerebral do nervo",
-          "Aneurisma do sistema vértebro-basilar",
-          "Aneurisma da artéria carótida ou da comunicante posterior",
-          "AVC isquêmico no território cerebral do nervo"
-        ],
-        answerIndex: 2,
-        explanation: "A paralisia isolada do III nervo craniano (oculomotor), especialmente quando envolve a pupila (midríase), é frequentemente causada pela compressão do nervo por um aneurisma da artéria comunicante posterior ou da carótida interna.",
-        tag: "AVE"
-      },
-      // Epilepsia e Crises Convulsivas
-      {
-        id: "neuro-q23",
-        text: "Paciente feminino 65 anos com hipotireoidismo e depressão, refere episódios de perda de consciência precedidos por ouvir uma música em sua cabeça. Recupera-se lentamente, com confusão e dor de cabeça. Testemunhas referem abalos musculares. Qual o provável diagnóstico?",
-        options: [
-          "Doença psiquiátrica- pseudocrise",
-          "Demências por corpúsculos de Lewy",
-          "Crise epiléptica focal para bilateral tônico-clônica",
-          "Ataques isquêmicos transitórios"
-        ],
-        answerIndex: 2,
-        explanation: "A experiência sensorial (ouvir música) antes da perda de consciência é uma aura, característica de uma crise epiléptica focal. A evolução com abalos e confusão pós-evento (período pós-ictal) indica uma generalização para tônico-clônica bilateral.",
-        tag: "Epilepsia"
-      },
-      {
-        id: "neuro-q24",
-        text: "Paciente masculino de 68 anos com atrofia de múltiplos sistemas, apresentou perda de consciência enquanto almoçava, precedida por mal-estar e palpitações. Recuperou a consciência em poucos segundos após ser colocado em decúbito. Durante o evento ocorreram breves abalos musculares e perda de urina. Qual o provável diagnóstico?",
-        options: [
-          "Crise epiléptica disautonômica",
-          "Síncope",
-          "Ataque isquêmico transitório",
-          "Crise epiléptica focal para bilateral tônico-clônica"
-        ],
-        answerIndex: 1,
-        explanation: "O gatilho postural, os pródromos (mal-estar, palpitações) e a recuperação rápida após o decúbito são características de síncope. Abalos musculares (mioclonias da síncope) e liberação esfincteriana podem ocorrer devido à hipoperfusão cerebral e não indicam necessariamente uma crise epiléptica.",
-        tag: "Epilepsia"
-      },
-      {
-        id: "neuro-q25",
-        text: "Paciente de 49 anos com epilepsia e Parkinson, refere que à noite apresenta episódios de movimentação intensa durante o sono (lutas, fugas, gritos), sem se lembrar no dia seguinte. Qual a melhor conduta?",
-        options: [
-          "Solicitar RM de crânio e EEG para definir melhor o quadro epiléptico",
-          "Suspender pramipexol, pois distúrbios de comportamento são efeitos adversos da droga",
-          "Solicitar nivel sérico de levetiracetam",
-          "Solicitar polissonografia devido suspeita de distúrbio comportamental do sono REM"
-        ],
-        answerIndex: 3,
-        explanation: "A descrição de sonhos vívidos atuados com movimentação vigorosa é a apresentação clássica do Distúrbio Comportamental do Sono REM, uma parassonia frequentemente associada a doenças neurodegenerativas como a Doença de Parkinson. O diagnóstico é confirmado pela polissonografia.",
-        tag: "Epilepsia"
-      },
-      {
-        id: "neuro-q26",
-        text: "Marcia, 26 anos, apresentou sua segunda crise convulsiva tônico-clônica generalizada no último ano. Não faz uso de medicação. Qual a conduta correta:",
-        options: [
-          "Acompanhar, pois trata-se de crise isolada.",
-          "Solicitar exames (RM, EEG, laboratório) e iniciar medicação adequada.",
-          "Solicitar EEG e iniciar fenobarbital.",
-          "Solicitar EEG, TC de crânio e iniciar fenitoína."
-        ],
-        answerIndex: 1,
-        explanation: "Ocorrência de duas ou mais crises epilépticas não provocadas estabelece o diagnóstico de epilepsia. A conduta adequada é realizar uma investigação etiológica completa e iniciar terapia antiepiléptica apropriada.",
-        tag: "Epilepsia"
-      },
-      {
-        id: "neuro-q27",
-        text: "Jonas, 3 anos, com febre de 39°C devido a faringotonsilite, apresentou crise tônico-clônica generalizada de 3 minutos de duração. Ao chegar à emergência, já estava com comportamento normal. Qual a conduta correta:",
-        options: [
-          "Solicitar EEG, TC de crânio e punção lombar.",
-          "Afirmar que se trata de epilepsia e iniciar fenobarbital.",
-          "Tranquilizar o pai, afirmando que se trata de uma crise convulsiva febril simples.",
-          "Internar a criança para investigação completa."
-        ],
-        answerIndex: 2,
-        explanation: "O quadro é de uma crise febril simples: idade típica (6m-5a), generalizada, curta (<15min), sem recorrência em 24h e com recuperação completa. A conduta é expectante, com antitérmicos e orientação aos pais.",
-        tag: "Epilepsia"
-      },
-      {
-        id: "neuro-q28",
-        text: "Camila, 26 anos, grávida de 20 semanas, apresenta sua segunda crise tônico-clônica generalizada, recebendo o diagnóstico de epilepsia. Qual medicação deve ser evitada ao máximo para essa paciente?",
-        options: [
-          "Carbamazepina",
-          "Lamotrigina",
-          "Levetiracetam",
-          "Acido valproico"
-        ],
-        answerIndex: 3,
-        explanation: "O Ácido Valproico é o antiepiléptico com o maior risco conhecido de teratogenicidade, associado a malformações graves como defeitos do tubo neural. Seu uso deve ser evitado ao máximo durante a gestação.",
-        tag: "Epilepsia"
-      },
-      {
-        id: "neuro-q29",
-        text: "Marque falso (F) ou verdadeiro (V): (1) Crises convulsivas únicas como as febris são consideradas epilepsia. (2) Crises em vigência de doenças agudas não são consideradas epilepsia. (3) A crise epiléptica é um distúrbio recorrente e transitório. (4) A maioria das crises epilépticas é idiopática.",
-        options: ["FVVV", "VVFV", "FFFF", "FVFF"],
-        answerIndex: 0,
-        explanation: "(F) Crises únicas ou provocadas (como as febris) não definem epilepsia. (V) Crises agudas sintomáticas não são epilepsia. (V) A definição de crise epiléptica envolve transitoriedade e recorrência (no caso da epilepsia). (V) Mesmo com investigação, muitas epilepsias permanecem sem causa definida (idiopáticas).",
-        tag: "Epilepsia"
-      },
-      {
-        id: "neuro-q30",
-        text: "Com relação às crises epilépticas é CORRETO afirmar:",
-        options: [
-          "A investigação etiológica não é importante",
-          "Toda crise convulsiva deve ser tratada com antiepilépticos",
-          "Crises epilépticas com mais de 30 minutos de duração, subentrantes, caracterizam o status epilepticus",
-          "A caracterização da síndrome epiléptica não ajuda na conduta terapêutica"
-        ],
-        answerIndex: 2,
-        explanation: "O status epilepticus é uma emergência neurológica definida classicamente como uma crise contínua por mais de 30 minutos, ou crises recorrentes sem recuperação da consciência entre elas. Atualmente, a definição operacional considera 5 minutos para iniciar o tratamento.",
-        tag: "Epilepsia"
-      },
-      // Demências e Comprometimento Cognitivo
-      {
-        id: "neuro-q31",
-        text: "Na doença de corpo de Lewy inicia-se principalmente com:",
-        options: [
-          "Alucinações e confabulação",
-          "Perda de memória 2 anos após o parkinsonismo",
-          "Parkinsonismo e alucinações visuais",
-          "Alucinações auditivas e demência associada ao parkinsonismo"
-        ],
-        answerIndex: 2,
-        explanation: "A tríade clássica da Demência com Corpos de Lewy é composta por flutuação cognitiva, alucinações visuais bem formadas e parkinsonismo. Frequentemente, o parkinsonismo e as alucinações são os sintomas de abertura do quadro.",
-        tag: "Demências"
-      },
-      {
-        id: "neuro-q32",
-        text: "Dentre as classes de drogas abaixo, quais provocam comprometimento cognitivo?",
-        options: [
-          "Anticolinérgicos e benzodiazepínicos",
-          "Antihipertensivos",
-          "Antiagregantes plaquetários",
-          "Anticoagulantes"
-        ],
-        answerIndex: 0,
-        explanation: "Fármacos com forte ação anticolinérgica e os benzodiazepínicos são conhecidos por causar ou agravar o comprometimento cognitivo, especialmente em idosos, podendo mimetizar ou piorar um quadro demencial.",
-        tag: "Demências"
-      },
-      {
-        id: "neuro-q33",
-        text: "É uma das causas, potencialmente, reversíveis de demência:",
-        options: [
-          "Doença de Alzheimer",
-          "Carência de vitamina B12",
-          "Demência fronto-temporal",
-          "Vascular"
-        ],
-        answerIndex: 1,
-        explanation: "A deficiência de vitamina B12 pode causar um quadro de declínio cognitivo significativo que, se diagnosticado e tratado a tempo com reposição da vitamina, pode ser parcial ou totalmente revertido.",
-        tag: "Demências"
-      },
-      {
-        id: "neuro-q34",
-        text: "Assinale a resposta correta sobre a doença de Alzheimer:",
-        options: [
-          "Ocorrem depósitos de beta amiloides e hipofosforilação da proteína tau",
-          "Ocorrem depósitos de alfa sinucleína e beta amiloide",
-          "Ocorrem depósitos de beta amilóide e inibição da proteína tau",
-          "Podem ocorrer depósitos de lipídeos intracelulares, de beta-amiloide e hipofosforilação da proteína tau"
-        ],
-        answerIndex: 0,
-        explanation: "A fisiopatologia da Doença de Alzheimer é marcada por dois eventos principais: o acúmulo extracelular de placas de peptídeo beta-amiloide e a formação de emaranhados neurofibrilares intracelulares devido à hiperfosforilação da proteína tau.",
-        tag: "Demências"
-      },
-      {
-        id: "neuro-q35",
-        text: "Adonias, 48 anos, com histórico de cirurgia bariátrica, apresenta dormência nos pés e esquecimento. Relata sentir estar \"pisando em nuvens\". Ao exame: marcha atáxica, Romberg positivo, hipoparestesia em membros inferiores e dismetria. Mini mental de 20/30. Assinale a alternativa correta:",
-        options: [
-          "O quadro pode ser um quadro inicial de doença de Alzheimer.",
-          "O quadro pode ser causado por condições reversíveis, como a deficiência de vitamina B12 e sífilis.",
-          "O quadro é de clara hidrocefalia de pressão normal.",
-          "O quadro do paciente é de franco hipotireoidismo."
-        ],
-        answerIndex: 1,
-        explanation: "Cirurgia bariátrica é um fator de risco para deficiências nutricionais, principalmente de vitamina B12. A deficiência de B12 causa um quadro de degeneração combinada subaguda da medula (afetando propriocepção - \"pisando em nuvens\", Romberg) e declínio cognitivo, que é uma causa reversível de demência.",
-        tag: "Demências"
-      },
-      // Neuropatias Periféricas e Doenças Neuromusculares
-      {
-        id: "neuro-q36",
-        text: "Paciente de 40 anos, após cirurgia bariátrica há 3 anos, queixa-se de \"andar esquisito\". Ao exame: marcha talonante, sinal de Romberg presente, redução de sensibilidade vibratória e de posição segmentar nos membros inferiores. Qual o provável local da lesão?",
-        options: [
-          "Trato piramidal",
-          "Cerebelo",
-          "Cordão posterior da medula",
-          "Núcleos da base"
-        ],
-        answerIndex: 2,
-        explanation: "A marcha talonante (pisar com força para sentir o chão), a perda de propriocepção (Romberg positivo) e a perda da sensibilidade vibratória são sinais clássicos de lesão no cordão posterior da medula espinhal, frequentemente causado por deficiência de vitamina B12.",
-        tag: "Neuropatias Periféricas"
-      },
-      {
-        id: "neuro-q37",
-        text: "Paciente de 48 anos queixa-se de dificuldade de fechar a mão direita há 6 meses. Ao exame: Força grau 1 nos 4º e 5º dedos, hipoestesia na região hipotênar e nos mesmos dedos. Mão em garra. Qual padrão de neuropatia e qual o provável nervo acometido?",
-        options: [
-          "Síndrome do Túnel do Carpo - nervo mediano",
-          "Mononeuropatia do nervo ulnar",
-          "Mononeuropatia do nervo radial",
-          "Polineuropatia distal de membros superiores"
-        ],
-        answerIndex: 1,
-        explanation: "A fraqueza e a perda de sensibilidade no 4º (metade ulnar) e 5º dedos, juntamente com a atrofia da musculatura intrínseca da mão resultando na \"mão em garra\", são a apresentação clássica de uma mononeuropatia do nervo ulnar.",
-        tag: "Neuropatias Periféricas"
-      },
-      {
-        id: "neuro-q38",
-        text: "Paciente de 70 anos relata \"ver tudo duplicado\" há 1 ano. Ao exame: queda da pálpebra esquerda e dificuldade em quase todos os movimentos oculares com o olho esquerdo, exceto olhar medial para baixo e olhar horizontal lateral. Qual é o provável nervo craniano envolvido?",
-        options: [
-          "Nervo oculomotor",
-          "Nervo troclear",
-          "Nervo abducente",
-          "Nervo trigêmeo"
-        ],
-        answerIndex: 0,
-        explanation: "O Nervo Oculomotor (III par craniano) é responsável pela maioria dos movimentos do olho, elevação da pálpebra e contração da pupila. Sua paralisia causa ptose (queda da pálpebra) e o olho fica desviado \"para baixo e para fora\", com preservação da abdução (N. Abducente - VI par) e da inciclotorção (N. Troclear - IV par).",
-        tag: "Neuropatias Periféricas"
-      },
-      {
-        id: "neuro-q39",
-        text: "Paciente de 60 anos com artrite reumatoide queixa-se de dificuldade para pentear os cabelos, levantar-se da cadeira e subir escadas. Ao exame: Fraqueza simétrica de músculos proximais (deltoides, quadríceps, etc.). Em uso de prednisona, D-penicilamina e azatioprina. Qual o provável diagnóstico sindrômico e etiológico?",
-        options: [
-          "Síndrome de poliartrite - artrite reumatóide",
-          "Síndrome miopática - uso de prednisona",
-          "Síndrome miastênica/placa motora - uso de D penicilamina",
-          "Síndrome de polineuropatia - diabetes"
-        ],
-        answerIndex: 1,
-        explanation: "A fraqueza muscular proximal e simétrica, sem alterações sensitivas ou de reflexos, é a definição de uma síndrome miopática. O uso crônico de corticoides (prednisona) é uma causa bem conhecida de miopatia.",
-        tag: "Neuropatias Periféricas"
-      },
-      {
-        id: "neuro-q40",
-        text: "Sabemos que existem inúmeras etiologias e tipos de neuropatias periféricas. Em relação ao tema assinale a alternativa CORRETA:",
-        options: [
-          "Nas mononeuropatias múltiplas ocorre o envolvimento distal e simétrico dos 4 membros",
-          "O sinal de Tinel e manobra de Phalen são utilizados na avaliação do nervo Ulnar",
-          "A Neuropatia Diabética pode cursar com disautonomia",
-          "As radiculopatias em geral não apresentam componente doloroso"
-        ],
-        answerIndex: 2,
-        explanation: "A Neuropatia Diabética é uma das principais causas de disautonomia, manifestando-se com sintomas como hipotensão postural, gastroparesia, disfunção erétil e alterações da sudorese.",
-        tag: "Neuropatias Periféricas"
-      },
-      {
-        id: "neuro-q41",
-        text: "Dentre as doenças neuromusculares, destaca-se a Miastenia Gravis. Tal doença caracteriza se por:",
-        options: [
-          "Parestesia, fraqueza muscular flutuante, hiporreflexia e dor",
-          "Diplopia, ptose, fraqueza muscular flutuante e disfonia",
-          "Rigidez, bradicinesia, fraqueza muscular flutuante e ptose",
-          "Diplopia, parestesia, rigidez e hiporreflexia"
-        ],
-        answerIndex: 1,
-        explanation: "A Miastenia Gravis é marcada pela fraqueza muscular flutuante (que piora com o uso e melhora com o repouso). Atinge caracteristicamente a musculatura ocular (causando ptose e diplopia) e bulbar (causando disfonia e disfagia).",
-        tag: "Doenças Neuromusculares"
-      },
-      {
-        id: "neuro-q42",
-        text: "Paciente de 65 anos com queixa de queda da pálpebra bilateral e fadiga aos esforços que piora no fim do dia. Ao exame: ptose bilateral, tetraparesia grau 4 e \"ice pack test\" positivo. Qual é o diagnóstico mais provável e o exame complementar recomendado?",
-        options: [
-          "Neuropatia nervo abducente bilateral - eletroneuromiografia",
-          "AVC de tronco encefálico - ressonância magnética",
-          "Blefaroespasmo - teste com toxina botulínica",
-          "Miastenia Gravis - dosagem anticorpo anti acetilcolina"
-        ],
-        answerIndex: 3,
-        explanation: "A fraqueza flutuante com predomínio ocular (ptose) e proximal, que piora ao longo do dia, é altamente sugestiva de Miastenia Gravis. O \"ice pack test\" positivo corrobora a suspeita, e o diagnóstico é confirmado pela dosagem de anticorpos anti-receptor de acetilcolina.",
-        tag: "Doenças Neuromusculares"
-      },
-      {
-        id: "neuro-q43",
-        text: "Paciente com suspeita de Síndrome de Guillain Barré. Dentre os achados abaixo, qual é considerado como sinal de alerta (red flag) para considerar um diagnóstico alternativo?",
-        options: [
-          "Comprometimento de nervos cranianos",
-          "História de infecção gastrointestinal 4 semanas antes",
-          "Exame de Líquor com 42 proteínas e 2 células",
-          "Progressão do quadro nas últimas 8 semanas"
-        ],
-        answerIndex: 3,
-        explanation: "A Síndrome de Guillain-Barré (SGB) é uma polirradiculoneuropatia aguda, com progressão dos sintomas que atinge o pico em até 4 semanas. Uma progressão por mais de 8 semanas é característica de uma polirradiculoneuropatia crônica (PDIC), um diagnóstico diferencial.",
-        tag: "Neuropatias Periféricas"
-      },
-      {
-        id: "neuro-q44",
-        text: "Paciente 25 anos, com ptose palpebral bilateral e diplopia há 6 meses, piores ao final do dia. Ao considerar Miastenia Gravis, qual o resultado dos testes do gelo e do Edrofônio confirmaria o diagnóstico?",
-        options: [
-          "Melhora da ptose com teste do gelo e teste do Edrofônio",
-          "Melhora da ptose com teste do gelo e piora com teste do Edrofônio",
-          "Piora da ptose com teste do gelo e com teste do Edrofônio",
-          "Piora da ptose com teste do gelo e melhora com teste do Edrofônio"
-        ],
-        answerIndex: 0,
-        explanation: "Na Miastenia Gravis, a transmissão neuromuscular é prejudicada. O frio (teste do gelo) e os inibidores da acetilcolinesterase (Edrofônio/Tensilon) melhoram essa transmissão, resultando em uma melhora transitória e visível da força muscular, como a ptose.",
-        tag: "Doenças Neuromusculares"
-      },
-      {
-        id: "neuro-q45",
-        text: "Paciente apresenta ao exame neurológico tremor de intenção, hipotonia, dismetria e nistagmo. Considerando o diagnóstico sindrômico, qual das alterações a seguir deve estar presente no exame físico?",
-        options: [
-          "Disdiadococinesia",
-          "Teste de Romberg positivo",
-          "Sinal de Chaddock",
-          "Bradicinesia"
-        ],
-        answerIndex: 0,
-        explanation: "Tremor de intenção, hipotonia, dismetria e nistagmo são todos sinais de uma síndrome cerebelar. A disdiadococinesia (dificuldade em realizar movimentos rápidos e alternados) é outro sinal clássico do mesmo acometimento.",
-        tag: "Neurologia"
-      },
-      {
-        id: "neuro-q46",
-        text: "Paciente de 67 anos com diabetes apresenta quadro agudo de diplopia. Ao exame: ptose e déficit na adução do olho esquerdo, parestesia em luvas e botas. Qual o nervo craniano acometido?",
-        options: ["Abducente", "Óptico", "Troclear", "Oculomotor"],
-        answerIndex: 3,
-        explanation: "A ptose (queda da pálpebra) e o déficit de adução (olhar para dentro) são funções do III nervo craniano, o Oculomotor. A mononeuropatia do III par é uma complicação comum do diabetes.",
-        tag: "Neuropatias Periféricas"
-      },
-      {
-        id: "neuro-q47",
-        text: "Paciente com piora de lombalgia, com dor que irradia para a coxa esquerda e parestesia no pé esquerdo. Como podemos classificar o dano neurológico?",
-        options: [
-          "Radiculopatia L5-S1",
-          "Polineuropatia distal simétrica",
-          "Plexopatia braquial",
-          "Mononeuropatia múltipla"
-        ],
-        answerIndex: 0,
-        explanation: "A dor que segue um trajeto específico (dermátomo) de uma raiz nervosa, como da lombar para a perna e pé, é a definição de uma radiculopatia. O território descrito é compatível com as raízes de L5 e/ou S1.",
-        tag: "Neuropatias Periféricas"
-      },
-      {
-        id: "neuro-q48",
-        text: "Paciente de 68 anos queixa-se de \"andar esquisito\". Ao exame: marcha com base alargada, Romberg ausente, dismetria e disdiadococinesia. Qual o provável local da lesão?",
-        options: [
-          "Trato piramidal",
-          "Cerebelo",
-          "Cordão posterior da medula",
-          "Núcleos da base"
-        ],
-        answerIndex: 1,
-        explanation: "Marcha de base alargada (atáxica), dismetria (errar o alvo) e disdiadococinesia (dificuldade com movimentos alternados) são a tríade clássica de uma lesão no cerebelo.",
-        tag: "Neurologia"
-      },
-      {
-        id: "neuro-q49",
-        text: "Paciente de 48 anos com dificuldade de fechar a mão direita há 6 meses, e há 1 mês começou a tropeçar e cair. Ao exame: Marcha escarvante à esquerda; fraqueza nos 4° e 5° dedos da mão direita e na dorsiflexão do pé esquerdo. Qual padrão de neuropatia periférica apresentado?",
-        options: [
-          "Polineuropatia distal",
-          "Mononeuropatia múltipla",
-          "Mononeuropatia do nervo ulnar",
-          "Radiculopatia de L3-L4"
-        ],
-        answerIndex: 1,
-        explanation: "O paciente apresenta o acometimento de múltiplos nervos periféricos individuais (nervo ulnar à direita e nervo fibular à esquerda), de forma assimétrica. Esta condição é chamada de mononeuropatia múltipla.",
-        tag: "Neuropatias Periféricas"
-      },
-      {
-        id: "neuro-q50",
-        text: "Paciente com diagnóstico prévio de Doença de Crohn, apresenta-se com fraqueza em membros inferiores ha 2 semanas. Pensando no diagnóstico de Mielite Transversa, quais outros sinais semiológicos poderiam confirmar essa hipótese?",
-        options: [
-          "Paresia dimidiada em face, braço e perna esquerda, associada à sinal de Babinski",
-          "Paresia, hipotonia, hiporreflexia e atrofia em membros inferiores",
-          "Paresia em membros inferiores e roda denteada",
-          "Paresia, espasticidade e hiperreflexia em membros inferiores e nível sensitivo"
-        ],
-        answerIndex: 3,
-        explanation: "A Mielite Transversa é uma lesão do neurônio motor superior na medula. O quadro clássico é de paraparesia (fraqueza nos membros inferiores) com sinais de liberação piramidal (espasticidade, hiperreflexia) e um nível sensitivo bem definido, abaixo do qual a sensibilidade está alterada.",
-        tag: "Neuropatias Periféricas"
-      },
-      {
-        id: "neuro-q51",
-        text: "Quanto a síndrome miastênica de Lambert-Eaton, marque a alternativa correta:",
-        options: [
-          "Sintomas bulbares são proeminentes",
-          "É uma doença da junção neuromuscular pós sináptica",
-          "A eletroneuromiografia revela um padrão decremental após a contração muscular voluntária",
-          "É comum a associação com neoplasia pulmonar"
-        ],
-        answerIndex: 3,
-        explanation: "A Síndrome de Lambert-Eaton é uma síndrome paraneoplásica, fortemente associada ao carcinoma de pequenas células do pulmão. A fraqueza muscular é causada por anticorpos contra canais de cálcio pré-sinápticos.",
-        tag: "Doenças Neuromusculares"
-      },
-      {
-        id: "neuro-q52",
-        text: "Paciente com cifoescoliose, panturrilhas aumentadas, sinal de Gowers e CK 20 vezes o valor de referência. Qual o diagnóstico mais provável?",
-        options: [
-          "Distrofia muscular de Duchenne",
-          "Distrofia de Emery-Dreifuss",
-          "Distrofia oculofaríngea",
-          "Distrofia muscular de Becker"
-        ],
-        answerIndex: 3,
-        explanation: "A pseudo-hipertrofia de panturrilhas, o sinal de Gowers e a elevação acentuada de CK são comuns tanto em Duchenne quanto em Becker. No entanto, a deambulação preservada (o paciente consegue andar) aponta para a forma de Becker, que é mais branda e de progressão mais lenta que a de Duchenne.",
-        tag: "Doenças Neuromusculares"
-      },
-      {
-        id: "neuro-q53",
-        text: "Paciente de 35 anos com Miastenia Gravis chega ao pronto socorro com \"muita falta de ar\". Está dispneica e com esforço respiratório. Qual seria a proposta terapêutica mais adequada?",
-        options: [
-          "Iniciar Piridostigmina e encaminhar ao neurologista",
-          "Internar, suporte ventilatório, investigar infecção e iniciar Piridostigmina",
-          "Internar, suporte ventilatório, investigar infecção e iniciar Imunoglobulina IV",
-          "Iniciar Imunoglobulina IV junto com Plasmaférese"
-        ],
-        answerIndex: 2,
-        explanation: "A paciente está em Crise Miastênica, uma emergência médica com risco de insuficiência respiratória. A prioridade é garantir a via aérea (suporte ventilatório), procurar e tratar o fator desencadeante (geralmente infecção) e iniciar tratamento imunomodulador de ação rápida, como Imunoglobulina Intravenosa ou Plasmaférese.",
-        tag: "Doenças Neuromusculares"
-      },
-      {
-        id: "neuro-q54",
-        text: "Paciente de 70 anos com fraqueza variável. Quais resultados confirmariam a hipótese de Miastenia Gravis?",
-        options: [
-          "Anticorpo anti-canal de cálcio positivo e aumento de potencial de ação na ENMG",
-          "Detecção de neurotoxina no sangue",
-          "Anticorpo anti-canal de cálcio positivo e decremento na ENMG",
-          "Anticorpo anti-receptor de acetilcolina positivo e eletroneuromiografia com padrão decremental à estimulação repetitiva"
-        ],
-        answerIndex: 3,
-        explanation: "O diagnóstico de Miastenia Gravis é confirmado pela positividade do anticorpo contra o receptor de acetilcolina (AChR) e/ou por um padrão decremental na eletroneuromiografia de estimulação repetitiva, que demonstra a \"fadiga\" da junção neuromuscular.",
-        tag: "Doenças Neuromusculares"
-      },
-      {
-        id: "neuro-q55",
-        text: "Paciente de 55 anos com visão dupla no final da tarde, cansaço nos braços e dificuldade para subir escadas, que melhoram com o repouso. Desenvolve tosse produtiva e febre e, dias depois, procura a emergência rouco, dispneico e com sialorreia. Qual o diagnóstico e exames confirmatórios?",
-        options: [
-          "Esclerose lateral amiotrófica, dosagem de CPK. eletroneuromiografia",
-          "Síndrome de Guillain Barré, dosagem de anti-GM1, exame do líquor e eletroneuromiografia",
-          "Miastenia gravis, dosagem de anti-ACth, eletroneuromiografia",
-          "Meningoencefalite, leucograma, exame do, ressonância cerebral"
-        ],
-        answerIndex: 2,
-        explanation: "O histórico de fraqueza flutuante que piora com o esforço e ao final do dia é clássico de Miastenia Gravis. O quadro agudo de insuficiência respiratória foi desencadeado por uma infecção. A confirmação diagnóstica é feita com a dosagem de anticorpos anti-receptor de acetilcolina e eletroneuromiografia.",
-        tag: "Doenças Neuromusculares"
-      },
-      {
-        id: "neuro-q56",
-        text: "Considerando o diagnóstico da questão anterior (Miastenia Gravis com agudização por infecção), escolha a melhor alternativa para a condição e tratamento.",
-        options: [
-          "Pseudoautonomia, pulsoterapia com corticoide",
-          "Insuficiência respiratória aguda, pulsoterapia com corticoide",
-          "Crise miastênica, admissão em terapia intensiva, imunoglobulina humana ou plasmaférese",
-          "Empiema subdural, antibioticoterapia guiada"
-        ],
-        answerIndex: 2,
-        explanation: "O quadro de agudização da fraqueza em um paciente com Miastenia Gravis, especialmente com comprometimento respiratório, é chamado de Crise Miastênica. O tratamento requer internação em UTI para suporte (ventilatório, se necessário) e imunoterapia de ação rápida, como imunoglobulina ou plasmaférese.",
-        tag: "Doenças Neuromusculares"
-      },
-      // Meningites e Encefalites
-      {
-        id: "neuro-q57",
-        text: "É contraindicação formal ao exame de punção lombar na suspeita de meningites, EXCETO:",
-        options: [
-          "Crises convulsivas focais",
-          "Bradicardia, arritmia respiratória e hipertensão arterial",
-          "Papiledema e oftalmoparesias",
-          "Sinais de irritação meníngea"
-        ],
-        answerIndex: 3,
-        explanation: "Os sinais de irritação meníngea (como rigidez de nuca, Kernig, Brudzinski) são a própria indicação para a punção lombar. As outras opções são sinais de hipertensão intracraniana, que contraindicam a punção antes de uma neuroimagem devido ao risco de herniação cerebral.",
-        tag: "Meningites"
-      },
-      {
-        id: "neuro-q58",
-        text: "Sobre as meningites bacterianas, pode-se afirmar:",
-        options: [
-          "Anisocoria não contra-indica a punção lombar",
-          "O tratamento não deve ser postergado caso a punção lombar esteja contra-indicada ou inacessível",
-          "Haemophilus influenzae tipo b é bactéria incapaz de causar meningite",
-          "Crises convulsivas focais não contra-indicam a punção lombar"
-        ],
-        answerIndex: 1,
-        explanation: "A meningite bacteriana é uma emergência médica. Se a punção lombar precisar ser adiada (por exemplo, para realizar uma TC de crânio antes), a antibioticoterapia empírica deve ser iniciada imediatamente para não atrasar o tratamento.",
-        tag: "Meningites"
-      },
-      {
-        id: "neuro-q59",
-        text: "Paciente com rigidez de nuca, febre, fotofobia e cefaleia tem diagnóstico provável de:",
-        options: [
-          "Acidente vascular cerebral",
-          "Ataque isquêmico transitório",
-          "Meningite",
-          "Epilepsia"
-        ],
-        answerIndex: 2,
-        explanation: "A tétrade de febre, cefaleia, rigidez de nuca e fotofobia compõe a síndrome meníngea clássica, cujo principal diagnóstico é a meningite.",
-        tag: "Meningites"
-      },
-      {
-        id: "neuro-q60",
-        text: "Em indivíduos maiores de 5 anos, o tratamento empírico das meningites é feito com:",
-        options: ["Ciprofloxacina", "Ceftriaxona", "Amoxicilina", "Levofloxacina"],
-        answerIndex: 1,
-        explanation: "O tratamento empírico da meningite bacteriana comunitária em adultos e crianças maiores visa cobrir os patógenos mais comuns (S. pneumoniae, N. meningitidis). Uma cefalosporina de terceira geração, como a Ceftriaxona, é a base do tratamento, frequentemente associada à vancomicina.",
-        tag: "Meningites"
-      },
-      {
-        id: "neuro-q61",
-        text: "Paciente de 47 anos apresenta cefaleia intensa, vômitos em jato, febre e diplopia. Ao exame: febril (39ºC), sinais de Kernig e Brudzinski presentes. Qual antibioticoterapia empírica deverá ser iniciada para essa paciente?",
-        options: [
-          "Ampicilina e Ceftriaxona",
-          "Ampicilina e Cefotaxima",
-          "Ceftriaxona e Vancomicina",
-          "Ampicilina, Ceftriaxona e Vancomicina"
-        ],
-        answerIndex: 2,
-        explanation: "Para uma meningite bacteriana comunitária em um adulto (18-50 anos), o esquema empírico padrão visa cobrir S. pneumoniae e N. meningitidis. A combinação de Ceftriaxona (cefalosporina de 3ª geração) e Vancomicina (para cobrir pneumococo resistente) é a escolha recomendada.",
-        tag: "Meningites"
-      },
-      {
-        id: "neuro-q62",
-        text: "Paciente de 35 anos apresenta confusão mental progressiva e febre de 40ºC. Irmã relata que a paciente é contra vacinas. Com base na hipótese de meningoencefalite bacteriana aguda, quais patógenos principais devem ser considerados neste caso?",
-        options: [
-          "Neisseria meningitidis e Haemophilus influenzae",
-          "Neisseria meningitidis, Streptococcus pneumoniae e Pseudomonas aeruginosa",
-          "Neisseria meningitidis, Streptococcus pneumoniae e Haemophilus influenzae",
-          "Streptococcus pneumoniae e Haemophilus influenzae"
-        ],
-        answerIndex: 2,
-        explanation: "Em um adulto não vacinado, os três principais agentes etiológicos da meningite bacteriana comunitária são Streptococcus pneumoniae, Neisseria meningitidis e Haemophilus influenzae tipo b (que é coberto pela vacinação infantil de rotina).",
-        tag: "Meningites"
-      }
-    ]
-  },
-  {
-  id: "prova suseme 2017 emergencia",
-  name: "SUSEME - Emergência - 2017",
-  questions: [
-    {
-      id: "suseme-2017-q1",
-      text: "A vítima de acidente botrópico apresenta as seguintes manifestações sistêmicas:",
-      options: [
-        "ptose palpebral, oftalmoplegia e turvação visual",
-        "hipotensão, miastenia gravis e sialorreia",
-        "gengivorragia, hematúria e hematêmese",
-        "hematúria, ictericia e oftalmoplegia"
-      ],
-      answerIndex: 2,
-      explanation: "O veneno da jararaca (acidente botrópico) tem ação coagulante, proteolítica e hemorrágica, levando a sangramentos sistêmicos. A opção C descreve manifestações hemorrágicas clássicas. A opção A (ptose, oftalmoplegia) é característica do acidente elapídico (coral). As opções B e D misturam sintomas de diferentes acidentes peçonhentos.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q2",
-      text: "De acordo com o Guia de Vigilância Epidemiológica do Ministério da Saúde brasileiro, ano de 2014, o uso imediato do fosfato de oseltamivir está indicado em pacientes:",
-      options: [
-        "grávidas apenas no primeiro trimestre da gravidez com febre alta, lombalgia e cefaleia",
-        "com dispneia e febre",
-        "maiores de dois anos com febre e dor de garganta",
-        "grávidas em qualquer idade gestacional com febre, prostração, dor de garganta, tosse seca, cefaleia e mialgia"
-      ],
-      answerIndex: 3,
-      explanation: "Gestantes são consideradas grupo de risco para complicações da Influenza. A recomendação é o tratamento com oseltamivir para qualquer gestante com síndrome gripal, independentemente da idade gestacional. As outras opções são incorretas por restringirem a indicação ou descreverem quadros que não necessariamente exigem tratamento imediato em populações de baixo risco.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q3",
-      text: "Para um profissional de saúde, a quimioprofilaxia da doença meningocócica está indicada na seguinte hipótese:",
-      options: [
-        "sempre que o médico atender paciente com suspeita de meningite meningocócica",
-        "se história vacinal for incerta ou houver sorologia negativa para Neisseria meningitidis",
-        "quando executar procedimentos invasivos sem o uso dos equipamentos de proteção individual adequados",
-        "sempre que o paciente atendido apresentar evolução grave"
-      ],
-      answerIndex: 2,
-      explanation: "A quimioprofilaxia é indicada apenas após contato íntimo e prolongado com o paciente ou para profissionais de saúde que tiveram exposição direta a secreções respiratórias sem uso de EPI, como em intubações ou aspiração. Simplesmente atender um paciente não é indicação.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q4",
-      text: "É uma doença crônica e sistêmica que, no homem, pode ter periodo de incubação médio de 2 a 6 meses. É transmitida por mosquitos do gênero Lutzomyia sp que se contaminam a partir do cão ou mesmo raposas em ambientes silvestres. Manifesta-se com febre de longa duração associada a hepatoesplenomegalia, anemia, emagrecimento, adinamia e astenia. Essa descrição se refere à seguinte patologia:",
-      options: [
-        "febre amarela",
-        "leishmaniose visceral",
-        "febre tifoide",
-        "leishmaniose tegumentar americana"
-      ],
-      answerIndex: 1,
-      explanation: "O quadro de febre arrastada, hepatoesplenomegalia e pancitopenia (anemia, astenia) é clássico da Leishmaniose Visceral (Calazar), transmitida pelo Lutzomyia sp. As outras opções têm apresentações clínicas distintas: febre amarela é aguda com icterícia, febre tifoide tem febre em degraus, e a leishmaniose tegumentar causa lesões de pele.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q5",
-      text: "Paciente de 24 anos com febre alta, cefaleia, mialgia intensa, icterícia, insuficiência renal com hipocalemia e hemoptise maciça após enchente. O paciente apresenta a sindrome de Weil, que é caracterizada por:",
-      options: [
-        "insuficiência renal, icterícia e febre alta",
-        "febre alta, hemorragia e icterícia",
-        "ictericia, coma e insuficiência renal hipocalêmica",
-        "insuficiência renal, icterícia e hemorragia pulmonar"
-      ],
-      answerIndex: 3,
-      explanation: "A Síndrome de Weil é a forma grave da leptospirose. A tríade clássica é icterícia, insuficiência renal (tipicamente não oligúrica e com hipocalemia) e fenômenos hemorrágicos. A hemorragia pulmonar é a manifestação hemorrágica mais grave e de maior letalidade. As outras opções são incompletas.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q6",
-      text: "O calendário nacional de vacinação inclui a proteção contra o rotavirus humano para crianças. As idades da primeira e da segunda dose da vacina são, respectivamente:",
-      options: [
-        "2 e 4 meses",
-        "2 e 6 meses",
-        "4 e 6 meses",
-        "12 e 15 meses"
-      ],
-      answerIndex: 0,
-      explanation: "A Vacina Oral de Rotavírus Humano (VORH) é administrada aos 2 e 4 meses de idade. As idades de 2 e 6 meses são para outras vacinas como a Pentavalente (em alguns esquemas) e a VIP. 12 e 15 meses são para reforços e outras vacinas como a Tríplice Viral.",
-      tag: "Pediatria"
-    },
-    {
-      id: "suseme-2017-q7",
-      text: "São sinais de alarme na dengue:",
-      options: [
-        "dor abdominal intensa e febre alta",
-        "aumento repentino do hematócrito e cefaleia holocraniana",
-        "aumento repentino do hematócrito e queda abrupta de plaquetas",
-        "hipotermia e dor lombar"
-      ],
-      answerIndex: 2,
-      explanation: "Os sinais de alarme indicam extravasamento de plasma. O aumento do hematócrito (hemoconcentração) e a queda abrupta das plaquetas são os marcadores laboratoriais cardinais desse fenômeno. Dor abdominal intensa é um sinal de alarme, mas febre alta e cefaleia são sintomas comuns da fase febril, não de alarme.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q8",
-      text: "No paciente com diagnóstico de dengue, está indicada a internação se a plaquetometria for inferior a:",
-      options: [
-        "20.000/mm³ independentemente de manifestações hemorrágicas",
-        "50.000/mm³, sem sinais de alarme",
-        "20.000/mm³ somente com sinais de alarme",
-        "100.000/mm³, independentemente de manifestações hemorrágicas"
-      ],
-      answerIndex: 0,
-      explanation: "Plaquetopenia acentuada (< 20.000/mm³) representa um risco intrínseco de sangramento grave e é uma indicação formal de internação hospitalar para monitoramento, mesmo na ausência de sangramentos visíveis ou outros sinais de alarme.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q9",
-      text: "Paciente de 22 anos, militar, sofreu queimaduras de segundo grau no tronco e abdome. Sua vacinação está em dia, inclusive o reforço da vacina antitetânica foi administrado há 12 meses. Nesse caso, a profilaxia de tétano consiste em:",
-      options: [
-        "administrar imunoglobulina antitetânica e vacina dT",
-        "aplicar apenas vacina dT",
-        "administrar imunoglobulina antitetânica e vacina dT em grupamentos musculares diferentes",
-        "manter observação sem fazer profilaxia"
-      ],
-      answerIndex: 3,
-      explanation: "Para um paciente com esquema vacinal completo e atualizado (última dose há menos de 5 anos), nenhuma profilaxia adicional para tétano é necessária, mesmo em ferimentos considerados de alto risco. A conduta é apenas a limpeza do ferimento.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q10",
-      text: "O uso da imunoglobulina humana antivaricela-zóster NÃO está indicada, de acordo com o Guia de Vigilância Epidemiológica, para os seguintes pacientes:",
-      options: [
-        "recém-nascidos de mães nas quais o início da varicela ocorreu nos últimos cinco dias da gestação",
-        "crianças com varicela que não foram vacinadas com a tetra viral",
-        "recém-nascidos de mães nas quais o início da varicela ocorreu em até 48h do puerpério",
-        "adultos com SIDA, CD4 menor que 100 e que tiveram contato com individuo com varicela"
-      ],
-      answerIndex: 1,
-      explanation: "A imunoglobulina é uma profilaxia pós-exposição, para tentar evitar que a doença se desenvolva. Ela não tem efeito terapêutico. Uma criança que já está com a doença (varicela manifestada) não se beneficia da imunoglobulina. As outras opções descrevem corretamente populações de risco que devem receber a profilaxia após a exposição.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q11",
-      text: "A extração a fórcipe é a mais comum das operações obstétricas. Essa extração está indicada na seguinte condição:",
-      options: [
-        "em todas as gestantes com mais de 40 semanas",
-        "em gestantes com doenças gerais, quando o esforço expulsivo for perigoso",
-        "nas gestantes em trabalho de parto prematuro",
-        "quando houver o desejo da gestante de abreviar a expulsão do concepto"
-      ],
-      answerIndex: 1,
-      explanation: "O fórcipe é um instrumento para abreviar o período expulsivo quando sua continuação representa um risco para a mãe (ex: cardiopatia, exaustão) ou para o feto (sofrimento fetal). As outras opções não são indicações formais; o desejo materno isolado não é indicação.",
-      tag: "G.O."
-    },
-    {
-      id: "suseme-2017-q12",
-      text: "Na abordagem da gestante com hipertensão crônica, é seguro o uso da seguinte droga:",
-      options: ["nifedipina", "enalapril", "losartana", "candesartana"],
-      answerIndex: 0,
-      explanation: "Nifedipina, um bloqueador de canal de cálcio, é uma das drogas seguras e eficazes para o tratamento da hipertensão na gestação. Enalapril (IECA), losartana e candesartana (BRA) são formalmente contraindicados por serem teratogênicos.",
-      tag: "G.O."
-    },
-    {
-      id: "suseme-2017-q13",
-      text: "São indicações para realização da operação cesariana:",
-      options: [
-        "cesárea prévia e necessidade de marcar data para o parto",
-        "infecção pelo HIV e placenta prévia",
-        "gestação gemelar e a idade materna",
-        "idade materna e apresentações anômalas"
-      ],
-      answerIndex: 1,
-      explanation: "Placenta prévia total e infecção pelo HIV com carga viral detectável são indicações absolutas para cesariana, para evitar hemorragia maciça e transmissão vertical, respectivamente. As outras opções contêm indicações relativas (apresentações anômalas) ou não-indicações (idade materna isolada, cesárea prévia).",
-      tag: "G.O."
-    },
-    {
-      id: "suseme-2017-q14",
-      text: "A pré-eclampsia é considerada grave quando se verifica que:",
-      options: [
-        "a proteinúria supera os 3g em uma amostra de urina de 24h",
-        "a pressão arterial aferida ao acaso é superior a 165 x 110 mmHg",
-        "a proteinúria supera os 5g em uma amostra de urina de 24h",
-        "o débito urinário é reduzido abaixo de 1,0L em 24h"
-      ],
-      answerIndex: 2,
-      explanation: "Um dos critérios clássicos de gravidade na pré-eclâmpsia é a proteinúria maciça, definida como ≥ 5g em 24h. Outros critérios incluem PA ≥ 160x110 mmHg e sinais de disfunção de órgãos-alvo, como oligúria < 500ml/24h.",
-      tag: "G.O."
-    },
-    {
-      id: "suseme-2017-q15",
-      text: "Na abordagem do paciente com cefaleia, o sintoma que sugere doença grave é:",
-      options: [
-        "dor pulsatil",
-        "dor tipo capacete",
-        "dor irradiada a partir da região cervical",
-        "dor induzida pela tosse"
-      ],
-      answerIndex: 3,
-      explanation: "Cefaleia desencadeada ou piorada por tosse, espirro ou manobra de Valsalva é um 'sinal de alerta' (red flag) que sugere hipertensão intracraniana. As outras opções descrevem características de cefaleias primárias benignas (enxaqueca, tensional).",
-      tag: "Neurologia"
-    },
-    {
-      id: "suseme-2017-q16",
-      text: "Paciente na segunda semana pós-parto, com febre alta e mama esquerda ingurgitada, quente, vermelha e dolorosa, sem flutuação. Neste caso deve-se:",
-      options: [
-        "iniciar cefalexina 500 mg 8/8 horas e manter amamentação",
-        "iniciar cefalexina 500 mg 8/8 horas e interromper amamentação na mama afetada",
-        "iniciar cefalexina 500mg 6/6 horas e interromper amamentação na mama afetada",
-        "iniciar cefalexina 500mg 6/6 horas e manter amamentação em ambas as mamas"
-      ],
-      answerIndex: 3,
-      explanation: "O quadro é de mastite puerperal. A conduta é antibioticoterapia (cefalexina 500mg de 6/6h é um regime padrão) e, crucialmente, a manutenção do esvaziamento da mama para prevenir a formação de abscesso, seja por amamentação ou ordenha manual.",
-      tag: "G.O."
-    },
-    {
-      id: "suseme-2017-q17",
-      text: "A trombólise venosa está contraindicada para paciente com acidente vascular encefálico isquêmico, em caso de:",
-      options: [
-        "tomografia computadorizada de crânio não demonstrar edema em mais de 1/3 do território da artéria cerebral média",
-        "cirurgia de qualquer porte há 4 semanas",
-        "melhora rápida dos sintomas",
-        "uso de varfarina, mesmo com INR normal"
-      ],
-      answerIndex: 2,
-      explanation: "A melhora rápida e substancial dos sintomas neurológicos é uma contraindicação relativa, pois o risco do trombolítico pode superar os benefícios num quadro que já está a resolver espontaneamente (sugerindo um AIT). Cirurgia há 4 semanas não é contraindicação (o limite é 2 semanas para cirurgias grandes) e o uso de varfarina só contraindica se o INR estiver alterado.",
-      tag: "Neurologia"
-    },
-    {
-      id: "suseme-2017-q18",
-      text: "Paciente de 50 anos, diabético, hipertenso, com febre, tosse e dor torácica. Exame físico com desidratação e taquicardia. PA 128x87mmHg. Após 2000mL de soro fisiológico, a PA se manteve em 126x92mmHg. O diagnóstico provável para esse paciente é:",
-      options: ["choque séptico refratário", "choque séptico", "sepse precoce", "sepse grave"],
-      answerIndex: 3,
-      explanation: "O paciente tem sepse (infecção + disfunção de órgão, neste caso hipotensão relativa para um hipertenso crônico). Como a pressão se manteve estável após a reposição volêmica e não houve necessidade de vasopressores, o quadro é classificado como Sepse Grave (pelos critérios antigos). Choque séptico exigiria hipotensão persistente apesar da ressuscitação volêmica.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q19",
-      text: "Paciente de 52 anos, tabagista, com ascite. O gradiente de albumina soroascite é de 0,5 g/dL. A doença compatível com este achado é:",
-      options: ["síndrome de Budd-Chiari", "insuficiência cardíaca congestiva", "carcinomatose peritoneal", "hipertensão portal"],
-      answerIndex: 2,
-      explanation: "O Gradiente de Albumina Soro-Ascite (GASA) < 1,1 g/dL indica uma causa de ascite não relacionada à hipertensão portal. Entre as opções, a carcinomatose peritoneal é a causa mais provável. As outras opções (Budd-Chiari, ICC, hipertensão portal) cursam com GASA elevado (≥ 1,1 g/dL).",
-      tag: "Gastroenterologia"
-    },
-    {
-      id: "suseme-2017-q20",
-      text: "Paciente com úlcera duodenal apresenta, no resultado da biópsia, Helicobacter pylori. O tratamento indicado é:",
-      options: [
-        "inibidor de bomba de proton, norfloxacina e amoxacilina",
-        "inibidor de bomba de próton, claritromicina e amoxacilina",
-        "antagonista do receptor H2, claritromicina e amoxacilina",
-        "antagonista do receptor H2, clindamicina e claritromicina"
-      ],
-      answerIndex: 1,
-      explanation: "O tratamento de primeira linha para erradicação do H. pylori é a terapia tripla padrão, consistindo em um Inibidor de Bomba de Prótons (IBP) associado a dois antibióticos, sendo a combinação mais utilizada a de claritromicina e amoxicilina.",
-      tag: "Gastroenterologia"
-    },
-    {
-      id: "suseme-2017-q21",
-      text: "Paciente de 30 anos, agredido, comatoso. Abertura ocular à dor (2), sem resposta verbal (1 - intubado), retira membro ao estímulo álgico (4). TC com hematoma epidural. Qual o Glasgow pré-cirurgia e o alvo da PPC?",
-      options: [
-        "Glasgow 5 e PPC ≥ 60 mmHg",
-        "Glasgow 6 e PPC > 65 mmHg",
-        "Glasgow 7 e PPC ≥ 60 mmHg",
-        "Glasgow 7 e PPC > 70 mmHg"
-      ],
-      answerIndex: 2,
-      explanation: "A Escala de Coma de Glasgow é a soma de: Abertura Ocular (2) + Melhor Resposta Verbal (1, pois está intubado) + Melhor Resposta Motora (4) = 7. As diretrizes de neurointensivismo recomendam manter a Pressão de Perfusão Cerebral (PPC) entre 60 e 70 mmHg. A opção C é a que melhor se enquadra.",
-      tag: "Neurologia"
-    },
-    {
-      id: "suseme-2017-q22",
-      text: "Para o tratamento de delirium, é preconizado o uso de neuroléptico como:",
-      options: ["prometazina", "nimodipina", "lorazepam", "olanzapina"],
-      answerIndex: 3,
-      explanation: "O tratamento da agitação no delirium é feito com antipsicóticos (neurolépticos). Olanzapina e outros atípicos são frequentemente usados. Benzodiazepínicos (lorazepam) são reservados para delirium por abstinência de álcool/sedativos, pois podem piorar o quadro em outras situações.",
-      tag: "Psiquiatria"
-    },
-    {
-      id: "suseme-2017-q23",
-      text: "É uma causa de hipercalemia:",
-      options: ["hipomagnesemia", "diarreia", "insuficiência renal", "cetoacidose diabética"],
-      answerIndex: 2,
-      explanation: "Os rins são os principais responsáveis pela excreção de potássio. Na insuficiência renal, essa capacidade é reduzida, levando à hipercalemia. Diarreia e hipomagnesemia causam hipocalemia. A cetoacidose diabética causa uma pseudohipercalemia por deslocamento transcelular, mas o potássio corporal total está baixo.",
-      tag: "Nefrologia"
-    },
-    {
-      id: "suseme-2017-q24",
-      text: "Paciente, em pós operatório de tireoidectomia e retirada de paratireoide, apresenta espasmo carpal após aferição de pressão arterial. O diagnóstico é:",
-      options: ["hipocalcemia", "hipercalcemia", "hiperfosfatemia", "hiponatremia"],
-      answerIndex: 0,
-      explanation: "O espasmo carpal (mão de parteiro) induzido pela isquemia do manguito de pressão é o Sinal de Trousseau, patognomônico de hipocalcemia. A retirada inadvertida das paratireoides durante a tireoidectomia é a principal causa de hipocalcemia pós-operatória.",
-      tag: "Endocrinologia"
-    },
-    {
-      id: "suseme-2017-q25",
-      text: "É uma causa de alteração na adesão plaquetária com aparecimento de sangramento em mucosa:",
-      options: ["doença de von Willebrand", "síndrome de von Hippel Lindau", "deficiência de fator X", "deficiência de fator II"],
-      answerIndex: 0,
-      explanation: "A doença de von Willebrand é o distúrbio hemorrágico hereditário mais comum, caracterizado pela deficiência do fator de von Willebrand, que é essencial para a adesão das plaquetas ao vaso lesado. As outras opções são distúrbios da coagulação (via secundária da hemostasia).",
-      tag: "Hematologia"
-    },
-    {
-      id: "suseme-2017-q26",
-      text: "Em paciente com crise tireotóxica que apresenta fibrilação atrial, o tratamento preconizado é a utilização da seguinte droga:",
-      options: ["amiodarona", "lidocaina", "protamina", "propranolol"],
-      answerIndex: 3,
-      explanation: "O propranolol, um betabloqueador não seletivo, é a droga de escolha na crise tireotóxica. Ele controla a resposta ventricular na fibrilação atrial e bloqueia os efeitos adrenérgicos sistêmicos, além de inibir a conversão periférica de T4 em T3.",
-      tag: "Endocrinologia"
-    },
-    {
-      id: "suseme-2017-q27",
-      text: "O acompanhamento da eficácia do tratamento do diabetes mellitus é realizado pelo seguinte exame:",
-      options: ["glicosúria", "glicemia de jejum", "hemoglobina glicada", "teste de tolerância a glicose"],
-      answerIndex: 2,
-      explanation: "A hemoglobina glicada (HbA1c) reflete a média dos níveis de glicose no sangue nos últimos 2-3 meses, sendo o padrão-ouro para o monitoramento do controle glicêmico a longo prazo. Glicemia de jejum avalia o controle momentâneo.",
-      tag: "Endocrinologia"
-    },
-    {
-      id: "suseme-2017-q28",
-      text: "Paciente com cirrose apresenta suspeita de peritonite bacteriana espontânea. Esse diagnóstico é confirmado com:",
-      options: [
-        "liquido ascítico com 250 hemáceas e proteina maior que 2 g/dL",
-        "líquido ascítico com mais que 250 células de polimorfonucleares e proteína menor que 1g/dL",
-        "a presença de 100 células de polimorfos nucleares",
-        "bilirrubina no liquido ascético >3mg/dL"
-      ],
-      answerIndex: 1,
-      explanation: "O diagnóstico de Peritonite Bacteriana Espontânea (PBE) é confirmado por uma contagem de polimorfonucleares (PMN) no líquido ascítico ≥ 250/mm³. Tipicamente, a proteína é baixa (<1 g/dL) por ser um transudato. As outras opções são incorretas.",
-      tag: "Gastroenterologia"
-    },
-    {
-      id: "suseme-2017-q29",
-      text: "Paciente internado com colite infecciosa grave, após uso de amoxacilina/clavulanato, realiza retossigmoidoscopia com visualização de pseudomembrana. Este quadro corresponde ao provocado pelo seguinte agente etiológico:",
-      options: ["Clostridim difficile", "Yersinia enterocolitica", "Escherichia coli", "Salmonella"],
-      answerIndex: 0,
-      explanation: "A colite pseudomembranosa é uma complicação clássica associada ao uso de antibióticos (especialmente clindamicina, cefalosporinas e amoxicilina-clavulanato), causada pela proliferação e produção de toxinas pelo Clostridioides difficile.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q30",
-      text: "A taquicardia ventricular polimórfica, associada ao aumento do intervalo QT, é conhecida como:",
-      options: [
-        "síndrome de Wolff-Parkinson-White",
-        "sindrome Lown Ganong Levine",
-        "torsades de pointes",
-        "doença de Buerger"
-      ],
-      answerIndex: 2,
-      explanation: "Torsades de Pointes é a designação específica para a taquicardia ventricular polimórfica que ocorre em um contexto de QT longo, caracterizada pela torção dos complexos QRS em torno da linha de base no ECG. As outras são síndromes de pré-excitação (A, B) ou uma vasculite (D).",
-      tag: "Cardiologia"
-    },
-    {
-      id: "suseme-2017-q31",
-      text: "As drogas preconizadas para a parada cardíaca em atividade elétrica sem pulso são:",
-      options: [
-        "lidocaina, atropina e fosfato",
-        "amiodarona, adrenalina e gluconato de cálcio",
-        "atropina, dobutamina e acetato de sódio",
-        "adrenalina, atropina e bicarbonato de sódio"
-      ],
-      answerIndex: 3,
-      explanation: "No algoritmo de AESP/Assistolia, a droga fundamental é a adrenalina. Atropina foi removida das diretrizes mais recentes para esta indicação. Bicarbonato de sódio pode ser usado em situações específicas (hipercalemia, acidose grave). As outras opções misturam drogas de diferentes algoritmos ou que não são usadas.",
-      tag: "Cardiologia"
-    },
-    {
-      id: "suseme-2017-q32",
-      text: "A pneumonia comunitária grave provocada pelo agente Staphilococcus aureus meticilina resistente, CA-MRSA, deve ser tratada com:",
-      options: ["cetriaxone", "cefepime", "linezolida", "eritromicina"],
-      answerIndex: 2,
-      explanation: "Para o tratamento de infecções graves por Staphylococcus aureus Meticilina-Resistente adquirido na comunidade (CA-MRSA), é necessário um antibiótico com cobertura específica, como Vancomicina ou Linezolida. As outras opções não são eficazes.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q33",
-      text: "O tratamento preconizado para a endocardite infecciosa que tem como agente etiológico o bacilo gram-negativo do grupo HACEK é:",
-      options: ["ampicilina", "doxiciclina", "amicacina", "ceftriaxone"],
-      answerIndex: 3,
-      explanation: "Os organismos do grupo HACEK (Haemophilus, Aggregatibacter, Cardiobacterium, Eikenella, Kingella) são uma causa de endocardite e são sensíveis a cefalosporinas de terceira geração. Ceftriaxona é o tratamento de escolha.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q34",
-      text: "O paciente com cetoacidose diabética é suscetível à infecção por Rhizopus, causando a mucormicose rinocerebral. O antifúngico preconizado para o tratamento é:",
-      options: ["anfotericina B", "fluconazol", "voriconazol", "flucitosina"],
-      answerIndex: 0,
-      explanation: "A mucormicose é uma infecção fúngica angioinvasiva grave. O tratamento de primeira linha é com Anfotericina B lipossomal em altas doses, associada a debridamento cirúrgico agressivo. Voriconazol é para Aspergilose, Fluconazol para Candida.",
-      tag: "Infectologia"
-    },
-    {
-      id: "suseme-2017-q35",
-      text: "A intoxicação por pesticidas causa sintomas muscarinicos, que devem ser tratados com:",
-      options: ["neostigmine", "dopamina", "nicotinamida", "atropina"],
-      answerIndex: 3,
-      explanation: "A intoxicação por organofosforados e carbamatos inibe a acetilcolinesterase, causando uma síndrome colinérgica. A atropina é um antagonista muscarínico que bloqueia esses efeitos (sialorreia, broncorreia, etc.). Neostigmina agravaria o quadro.",
-      tag: "Toxicologia"
-    },
-    {
-      id: "suseme-2017-q36",
-      text: "Ao exame fisico, paciente apresenta dispneia aos esforços, angina e pulso parvus e tardus. Esses sintomas são caracteristicos da seguinte lesão valvar:",
-      options: ["insuficiência aórtica", "estenose aórtica", "insuficiência tricúspide", "estenose mitral"],
-      answerIndex: 1,
-      explanation: "A tríade de dispneia, angina e síncope aos esforços é clássica da estenose aórtica grave. O pulso parvus et tardus (de pequena amplitude e ascensão lenta) é o achado semiológico característico no pulso carotídeo.",
-      tag: "Cardiologia"
-    },
-    {
-      id: "suseme-2017-q37",
-      text: "Paciente em uso de inibidores de angiotensina apresenta hipercalemia com alterações eletrocardiográficas. O tratamento imediato é:",
-      options: ["furosemida", "tiazidico", "glicoinsulina", "bloqueadores de cálcio"],
-      answerIndex: 2,
-      explanation: "Diante de hipercalemia com alterações no ECG (risco de arritmia fatal), a medida mais eficaz e rápida para reduzir o potássio sérico é deslocá-lo para o interior das células. A solução de glicoinsulina (insulina + glicose) é o tratamento de escolha para este fim. Bloqueadores de cálcio não são usados, e diuréticos demoram mais para agir.",
-      tag: "Nefrologia"
-    },
-    {
-      id: "suseme-2017-q38",
-      text: "Uma causa de acidose metabólica, com anion gap normal, é a:",
-      options: ["cetoacisode diabética", "intoxicação por metanol", "acidose tubular renal", "intoxicação por salicilato"],
-      answerIndex: 2,
-      explanation: "A acidose metabólica com ânion gap normal (hiperclorêmica) ocorre por perda de bicarbonato (ex: diarreia) ou por incapacidade renal de excretar ácidos ou reabsorver bicarbonato, como nas Acidoses Tubulares Renais (ATRs). As outras opções são causas clássicas de acidose com ânion gap elevado.",
-      tag: "Nefrologia"
-    },
-    {
-      id: "suseme-2017-q39",
-      text: "Paciente com TVP, em uso de heparina, apresenta queda abrupta de plaquetas e anti-PF4 positivo. O diagnóstico e o tratamento adequados são, respectivamente:",
-      options: [
-        "púrpura trombocitopênica e plasmaferese",
-        "deficiência de vitamina B12 e reposição de vitamina B12",
-        "mielodisplasia e quimioterapia",
-        "trombocitopenia induzida por heparina e inibidores de trombina"
-      ],
-      answerIndex: 3,
-      explanation: "O quadro de trombocitopenia e trombose durante o uso de heparina, confirmado pelo anti-PF4, é diagnóstico de Trombocitopenia Induzida por Heparina (TIH). O tratamento requer a suspensão imediata da heparina e a introdução de um anticoagulante alternativo que não seja a varfarina, como os inibidores diretos da trombina (ex: argatroban).",
-      tag: "Hematologia"
-    },
-    {
-      id: "suseme-2017-q40",
-      text: "Paciente apresenta, após uma semana de um quadro diarreico, fraqueza ascendente flácida e dispneia. Punção liquórica com proteína alta e celularidade baixa. O diagnóstico e o tratamento são, respectivamente:",
-      options: [
-        "miastenia gravis / neostigmine",
-        "sindrome Eaton Lambert/plasmaferese",
-        "neurossífilis/penicilina",
-        "síndrome de Guillain-Barrè / imunoglobulina"
-      ],
-      answerIndex: 3,
-      explanation: "A paralisia ascendente, flácida e arreflexa após um quadro infeccioso (gastrointestinal ou respiratório) é a apresentação clássica da Síndrome de Guillain-Barré. A dissociação proteinocitológica no líquor (muita proteína, poucas células) confirma o diagnóstico. O tratamento de primeira linha é com imunoglobulina intravenosa ou plasmaférese.",
-      tag: "Neurologia"
-    }
-  ]
-},
-    {
-    id: "preset-otorrinolaringologia-1",
-    name: "  Estácio - M7 - PR1 - Otorrinolaringologia",
-    questions: [
-      {
-        id: "otorrino-q1",
-        text: "Qual das seguintes características NÃO faz parte da fácies adenoideana (respirador oral crónico)?",
-        options: [
-          "Face alongada e boca entreaberta",
-          "Palato ogival (céu da boca fundo)",
-          "Prognatismo (queixo proeminente)",
-          "Má oclusão dentária com mordida cruzada"
-        ],
-        answerIndex: 2,
-        explanation: "A fácies do respirador oral crónico é caracterizada por face alongada, boca entreaberta, palato ogival e má oclusão, mas não por prognatismo. Pelo contrário, a mandíbula tende a ser retruída.",
-        tag: "Anatomia"
-      },
-      {
-        id: "otorrino-q2",
-        text: "Adolescente de 14 anos com dor de garganta, febre, linfonodomegalia difusa (incluindo cervical posterior) e hepatomegalia. O médico prescreveu amoxicilina. Qual o diagnóstico mais provável?",
-        options: [
-          "Faringoamigdalite Estreptocócica",
-          "Herpangina",
-          "Mononucleose Infecciosa",
-          "Difteria"
-        ],
-        answerIndex: 2,
-        explanation: "A tríade de faringite, febre e linfonodomegalia generalizada (especialmente posterior) num adolescente é altamente sugestiva de Mononucleose Infecciosa. O uso de amoxicilina pode causar um rash cutâneo característico nesta doença.",
-        tag: "Faringe"
-      },
-      {
-        id: "otorrino-q3",
-        text: "Qual é a forma de apresentação mais comum da candidíase oral?",
-        options: [
-          "Eritematosa atrófica",
-          "Hiperplásica crónica (leucoplasia)",
-          "Queilite angular",
-          "Pseudomembranosa (sapinho)"
-        ],
-        answerIndex: 3,
-        explanation: "A forma pseudomembranosa, caracterizada por placas brancas removíveis que deixam um leito eritematoso, é a apresentação mais clássica e comum da candidíase oral.",
-        tag: "Boca"
-      },
-      {
-        id: "otorrino-q4",
-        text: "Paciente de 55 anos com epistaxe moderada em narina direita e PA de 190x110 mmHg. Qual a primeira conduta a ser adotada na emergência?",
-        options: [
-          "Realizar tamponamento nasal anterior imediato.",
-          "Iniciar controlo da pressão arterial e realizar compressão digital.",
-          "Cauterizar o ponto de sangramento com nitrato de prata.",
-          "Solicitar exames de coagulação."
-        ],
-        answerIndex: 1,
-        explanation: "A prioridade no manejo da epistaxe em um paciente hipertenso é o controlo da pressão arterial. Medidas locais como a compressão digital podem ser tentadas em simultâneo, mas a causa de base deve ser abordada.",
-        tag: "Nariz"
-      },
-      {
-        id: "otorrino-q5",
-        text: "Paciente de 5 anos com obstrução nasal e rinorreia purulenta unilateral e fétida. Qual a principal hipótese diagnóstica?",
-        options: [
-          "Rinossinusite bacteriana aguda",
-          "Pólipo nasal",
-          "Corpo estranho nasal",
-          "Atresia de coana unilateral"
-        ],
-        answerIndex: 2,
-        explanation: "A rinorreia purulenta, fétida e estritamente unilateral numa criança é o sinal mais característico da presença de um corpo estranho na fossa nasal.",
-        tag: "Nariz"
-      },
-      {
-        id: "otorrino-q6",
-        text: "Paciente de 27 anos com pressão facial, congestão nasal e anosmia há 11 dias, sem melhora. A rinoscopia mostra secreção purulenta no meato médio. Qual o diagnóstico e conduta?",
-        options: [
-          "Rinossinusite aguda viral, não necessita de exames.",
-          "Rinossinusite aguda bacteriana, solicitar TC de seios paranasais.",
-          "Rinossinusite aguda viral, solicitar radiografia de face.",
-          "Rinossinusite aguda bacteriana, não necessita de exames de imagem."
-        ],
-        answerIndex: 3,
-        explanation: "A persistência ou piora dos sintomas por mais de 10 dias, associada a achados como secreção purulenta, caracteriza a rinossinusite aguda bacteriana. O diagnóstico é clínico e não requer exames de imagem em casos não complicados.",
-        tag: "Nariz"
-      },
-      {
-        id: "otorrino-q7",
-        text: "Criança de 7 anos com edema periorbitário à esquerda, febre de 38°C, dor de cabeça e congestão nasal. A TC mostra velamento dos seios etmoidais e coleção de pus na órbita. Qual é a complicação e o tratamento?",
-        options: [
-          "Celulite pré-septal / Antibiótico oral",
-          "Celulite orbitária (pós-septal) / Internação e antibiótico intravenoso",
-          "Dacriocistite aguda / Massagem e antibiótico tópico",
-          "Abscesso palpebral / Drenagem ambulatorial"
-        ],
-        answerIndex: 1,
-        explanation: "O edema periorbitário associado a sinais de envolvimento da órbita (comprometimento da motilidade ocular, proptose, baixa visual) e sinusite na TC caracteriza a celulite orbitária, uma emergência que requer internação e antibioticoterapia venosa.",
-        tag: "Complicações"
-      },
-      {
-        id: "otorrino-q8",
-        text: "Paciente de 55 anos, atópico, com pressão facial e anosmia há 15 semanas. Qual a principal hipótese diagnóstica e o exame a ser solicitado?",
-        options: [
-          "Rinossinusite aguda bacteriana / Radiografia de face",
-          "Rinossinusite crónica / Tomografia computadorizada de seios paranasais",
-          "Rinite alérgica / Teste cutâneo",
-          "Pólipose nasossinusal / Endoscopia nasal"
-        ],
-        answerIndex: 1,
-        explanation: "Sintomas de rinossinusite que persistem por mais de 12 semanas definem o quadro como crónico. A Tomografia Computadorizada é o exame de imagem de eleição para avaliar a extensão da doença e a anatomia dos seios paranasais.",
-        tag: "Nariz"
-      },
-      {
-        id: "otorrino-q9",
-        text: "Paciente de 14 anos, asmática, refere que, sempre que usa corticoide intranasal para a rinite, tem epistaxe. Qual seria uma boa alternativa terapêutica para esta paciente?",
-        options: [
-          "Aumentar a dose do corticoide nasal",
-          "Trocar por um descongestionante tópico de uso contínuo",
-          "Associar um anti-histamínico de primeira geração",
-          "Iniciar um antileucotrieno (ex: montelucaste)"
-        ],
-        answerIndex: 3,
-        explanation: "Os antileucotrienos são uma boa opção de tratamento para a rinite alérgica, especialmente em pacientes asmáticos, e não causam os efeitos adversos locais dos corticoides, como a epistaxe.",
-        tag: "Rinite Alérgica"
-      },
-      {
-        id: "otorrino-q10",
-        text: "Recém-nascido de 2 semanas com ruídos durante a respiração que pioram ao amamentar e quando está agitado, apresentando estridor inspiratório. Qual o diagnóstico mais provável?",
-        options: [
-          "Atresia de coanas",
-          "Estenose subglótica",
-          "Laringomalácia",
-          "Paralisia de prega vocal"
-        ],
-        answerIndex: 2,
-        explanation: "O estridor inspiratório que piora com o choro, agitação e alimentação, presente desde as primeiras semanas de vida, é a apresentação clássica da laringomalácia, a anomalia congénita mais comum da laringe.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q11",
-        text: "Professora de 51 anos, tabagista de longa data, com disfonia progressiva há 3 anos e voz mais grave. A videolaringoscopia mostra lesões bilaterais, gelatinosas e flácidas nas pregas vocais. Qual o diagnóstico?",
-        options: [
-          "Nódulos vocais",
-          "Pólipo de prega vocal",
-          "Edema de Reinke",
-          "Carcinoma de laringe"
-        ],
-        answerIndex: 2,
-        explanation: "O Edema de Reinke é uma lesão benigna caracterizada por um edema gelatinoso no espaço de Reinke das pregas vocais, fortemente associado ao tabagismo e ao abuso vocal, resultando numa voz mais grave.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q12",
-        text: "Criança de 5 anos com dor intensa ao deglutir, dispneia, febre alta e que assume uma postura com hiperextensão do pescoço e boca entreaberta ('posição de tripé'). Qual o diagnóstico mais provável?",
-        options: [
-          "Laringotraqueobronquite (Crupe Viral)",
-          "Abscesso periamigdaliano",
-          "Epiglotite aguda",
-          "Mononucleose Infecciosa"
-        ],
-        answerIndex: 2,
-        explanation: "A tríade de disfagia, dispneia e salivação, associada à febre alta e à 'posição de tripé', é a apresentação clássica da epiglotite aguda, uma emergência médica causada principalmente pelo Haemophilus influenzae tipo B.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q13",
-        text: "Criança de 5 anos com tosse intensa, febre, rinorreia e estridor inspiratório. A radiografia cervical em AP mostra o 'sinal da ponta de lápis' ou 'torre de igreja'. Qual o diagnóstico?",
-        options: [
-          "Epiglotite aguda",
-          "Laringotraqueobronquite (Crupe Viral)",
-          "Corpo estranho laríngeo",
-          "Laringomalácia"
-        ],
-        answerIndex: 1,
-        explanation: "A tosse 'de cão' ou 'metálica', associada a estridor e desconforto respiratório, é típica do Crupe Viral. O 'sinal da ponta de lápis' na radiografia corresponde ao estreitamento da região subglótica devido ao edema.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q14",
-        text: "Criança de 6 anos com dor de garganta intensa, febre de 39°C e dificuldade para engolir. A oroscopia revela amígdalas hiperemiadas com exsudato purulento. Qual o agente etiológico mais provável?",
-        options: [
-          "Vírus Epstein-Barr",
-          "Adenovírus",
-          "Streptococcus pyogenes (Estreptococo Beta-Hemolítico do Grupo A)",
-          "Vírus Coxsackie"
-        ],
-        answerIndex: 2,
-        explanation: "A faringoamigdalite com febre alta, exsudato purulento e ausência de sintomas virais (como coriza e tosse) em crianças em idade escolar é mais provavelmente causada pelo Streptococcus pyogenes.",
-        tag: "Faringe"
-      },
-      {
-        id: "otorrino-q15",
-        text: "Paciente de 22 anos com disfagia, dor de garganta unilateral e mau hálito. A oroscopia mostra uma úlcera necrótica unilateral na amígdala. Qual o diagnóstico?",
-        options: [
-          "Herpangina",
-          "Difteria",
-          "Angina de Plaut-Vincent",
-          "Carcinoma de amígdala"
-        ],
-        answerIndex: 2,
-        explanation: "A Angina de Plaut-Vincent é uma amigdalite úlcero-necrótica, geralmente unilateral, causada por uma simbiose de bactérias fusoespiralares, comum em pacientes com má higiene oral.",
-        tag: "Faringe"
-      },
-      {
-        id: "otorrino-q16",
-        text: "Criança de 5 anos, não vacinada, com febre, dor de garganta e queda do estado geral. Ao exame, observam-se placas branco-acinzentadas e aderentes nas amígdalas. Qual a principal hipótese?",
-        options: [
-          "Mononucleose infecciosa",
-          "Amigdalite bacteriana",
-          "Candidíase oral",
-          "Difteria"
-        ],
-        answerIndex: 3,
-        explanation: "A presença de pseudomembranas branco-acinzentadas, firmemente aderentes, que sangram à tentativa de remoção, em um paciente não vacinado, é o sinal clássico da Difteria, uma doença grave causada pelo Corynebacterium diphtheriae.",
-        tag: "Faringe"
-      },
-      {
-        id: "otorrino-q17",
-        text: "Criança de 3 anos com crises noturnas súbitas de tosse rouca e dispneia, que melhoram rapidamente, mas recorrem. Entre as crises, a criança está bem, apenas com sintomas de resfriado. Qual o diagnóstico?",
-        options: [
-          "Epiglotite aguda",
-          "Laringotraqueobronquite (Crupe Viral)",
-          "Laringite Estridulosa (Crupe Espasmódico)",
-          "Coqueluche"
-        ],
-        answerIndex: 2,
-        explanation: "A Laringite Estridulosa é caracterizada por episódios súbitos e recorrentes de crupe, geralmente noturnos, sem febre alta ou pródromos virais significativos, associados a um componente alérgico ou de hiper-reatividade.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q18",
-        text: "Paciente de 53 anos, obeso (IMC=35), hipertenso de difícil controlo, com queixa de cansaço diurno intenso e roncos. Qual o exame padrão-ouro para confirmar a suspeita de SAHOS?",
-        options: [
-          "Endoscopia nasal com manobra de Muller",
-          "Radiografia de cavum",
-          "Tomografia de seios paranasais",
-          "Polissonografia de noite inteira"
-        ],
-        answerIndex: 3,
-        explanation: "A Polissonografia é o exame padrão-ouro para o diagnóstico da Síndrome da Apneia Obstrutiva do Sono (SAHOS), pois monitoriza diversas variáveis fisiológicas durante o sono e quantifica os eventos de apneia e hipopneia.",
-        tag: "Ronco e Apneia"
-      },
-      {
-        id: "otorrino-q19",
-        text: "Qual das seguintes afirmações sobre a leucoplasia oral é INCORRETA?",
-        options: [
-          "Lesões com áreas vermelhas (eritroplásicas) ou verrucosas têm maior risco de malignização.",
-          "O tratamento pode incluir o uso de retinoides e betacaroteno em casos de baixo risco.",
-          "Algumas leucoplasias são facilmente destacadas da mucosa com uma gaze.",
-          "A localização no assoalho da boca e na face ventral da língua aumenta o risco de malignização."
-        ],
-        answerIndex: 2,
-        explanation: "A leucoplasia é, por definição, uma placa branca que NÃO pode ser removida por raspagem, diferenciando-a de outras lesões como a candidíase pseudomembranosa.",
-        tag: "Boca"
-      },
-      {
-        id: "otorrino-q20",
-        text: "Paciente de 6 anos com febre alta, odinofagia, língua em framboesa, exantema torácico e palidez perioral (Sinal de Filatov). Qual o diagnóstico mais provável?",
-        options: [
-          "Mononucleose infecciosa",
-          "Herpangina",
-          "Doença de Kawasaki",
-          "Escarlatina"
-        ],
-        answerIndex: 3,
-        explanation: "A combinação de faringite, febre, exantema micropapular (pele em lixa), língua em framboesa e sinais como Filatov e Pastia é a apresentação clássica da Escarlatina, causada por uma toxina do Streptococcus pyogenes.",
-        tag: "Faringe"
-      },
-      {
-        id: "otorrino-q21",
-        text: "Paciente de 25 anos com odinofagia, febre e linfonodomegalia, sem melhora com amoxicilina. Exame mostra linfocitose atípica. Qual a conduta?",
-        options: [
-          "Trocar o antibiótico por Amoxicilina com clavulanato.",
-          "Internação e cirurgia para drenagem de abscesso.",
-          "Tratamento com sintomáticos e repouso.",
-          "Internação e antibiótico venoso."
-        ],
-        answerIndex: 2,
-        explanation: "O quadro é altamente sugestivo de Mononucleose Infecciosa. O tratamento é de suporte, com analgésicos, antitérmicos e repouso. Antibióticos não são indicados e podem causar rash.",
-        tag: "Faringe"
-      },
-      {
-        id: "otorrino-q22",
-        text: "Qual das seguintes afirmações sobre faringoamigdalites é correta?",
-        options: [
-          "A cultura de orofaringe é o exame padrão-ouro para o diagnóstico da faringoamigdalite estreptocócica.",
-          "As complicações não supurativas incluem Escarlatina e Abscesso periamigdaliano.",
-          "O Monoteste está positivo desde o início do quadro de Mononucleose.",
-          "As vesículas da herpangina são observadas em qualquer região da cavidade oral."
-        ],
-        answerIndex: 0,
-        explanation: "Apesar de o diagnóstico ser frequentemente clínico, a cultura de orofaringe é o padrão-ouro para a confirmação da infeção por Streptococcus pyogenes.",
-        tag: "Faringe"
-      },
-      {
-        id: "otorrino-q23",
-        text: "Criança de 4 anos com tosse paroxística seguida de vômitos e um ruído semelhante a um 'guincho' inspiratório. A mãe relata não vacinar a criança. Qual a principal hipótese?",
-        options: [
-          "Epiglotite",
-          "Coqueluche",
-          "Laringite estridulosa",
-          "Laringotraqueobronquite"
-        ],
-        answerIndex: 1,
-        explanation: "A tosse paroxística (em acessos), seguida de um guincho inspiratório e frequentemente de vómitos, é a apresentação clássica da Coqueluche (tosse convulsa), causada pela Bordetella pertussis.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q24",
-        text: "Paciente de 19 anos com trismo, odinofagia intensa, febre e desvio da úvula, com abaulamento do palato mole à esquerda. Qual o diagnóstico mais provável?",
-        options: [
-          "Angina de Plaut-Vincent",
-          "Mononucleose Infecciosa",
-          "Abscesso periamigdaliano",
-          "Difteria"
-        ],
-        answerIndex: 2,
-        explanation: "O trismo (dificuldade de abrir a boca), o desvio da úvula e o abaulamento do palato mole são os sinais cardinais do abscesso periamigdaliano, uma complicação supurativa da faringoamigdalite.",
-        tag: "Complicações"
-      },
-      {
-        id: "otorrino-q25",
-        text: "Bebé de 30 dias de vida com diagnóstico de laringomalácia, apresentando quadro de estridor inspira cianose e dificuldade em ganhar peso. Baseado no quadro descrito e na patologia citada, marque a alter correta:",
-        options: [
-          "Cianose e dificuldade em ganhar peso são sinais de gravidade e o tratamento é cirúrgico.",
-          "O diagnóstico da patologia é confirmado por raio-x de região cervical.",
-          "O tratamento do bebé do caso acima deve ser clínico com acompanhamento periódico.",
-          "Edema de epiglote é a principal alteração anatómica encontrada."
-        ],
-        answerIndex: 0,
-        explanation: "Embora a maioria dos casos de laringomalácia seja leve e se resolva espontaneamente, a presença de sinais de gravidade como cianose, dificuldade alimentar e baixo ganho de peso indica a necessidade de intervenção cirúrgica (supraglotoplastia).",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q26",
-        text: "Paciente de 60 anos, género feminino, procura atendimento especializado por apresentar disfonia após cirurgia de tireoidectomia. Foi então solicitado exame videolaringoscópico que evidenciou paralisia de prega vocal esquerda. Qual o nervo que mais frequentemente estaria atingido neste caso?",
-        options: [
-          "Laríngeo recorrente",
-          "Laríngeo superior",
-          "Nervo acessório",
-          "Nervo glossofaríngeo"
-        ],
-        answerIndex: 0,
-        explanation: "O nervo laríngeo recorrente tem um trajeto muito próximo à glândula tiroide, sendo a estrutura nervosa mais vulnerável a lesões durante uma tireoidectomia, o que resulta em paralisia da prega vocal.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q27",
-        text: "Paciente procura atendimento otorrinolaringológico por apresentar quadro de globus faríngeo e pigarro sem epigastralgia. Alega ainda consumo de energéticos com frequência e ser etilista social com má alimentação. Qual exame deveria ser realizado inicialmente para auxiliar o diagnóstico acima.",
-        options: [
-          "Endoscopia nasal",
-          "Videolaringoscopia",
-          "Esofagografia",
-          "Endoscopia digestiva"
-        ],
-        answerIndex: 1,
-        explanation: "A videolaringoscopia é o exame inicial de escolha para avaliar a laringe e a faringe em busca de sinais inflamatórios sugestivos de Refluxo Laringofaríngeo, como edema e hiperemia da região interaritenoideia.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q28",
-        text: "Sobre o respirador oral, responda a alternativa errada:",
-        options: [
-          "Face alongada, palato ogival, má oclusão dentária são sinais que sugerem a respiração oral somente quando a causa for por hipertrofia de amígdalas palatinas e faríngea.",
-          "O diagnóstico da Atresia de coana é suspeitado em sala de parto.",
-          "Para investigação da Síndrome do respirador oral, os exames para diagnóstico são: endoscopia nasal ou Rx de cavum e polissonografia.",
-          "A Síndrome do respirador oral poderá levar a alterações na liberação hormonal, como exemplos teremos a alteração no hormônio do crescimento e do hormônio antidiurético."
-        ],
-        answerIndex: 0,
-        explanation: "As alterações faciais do respirador oral ocorrem independentemente da causa da obstrução (hipertrofia de adenoide, rinite, etc.), pois são uma consequência da alteração do fluxo aéreo e do padrão de crescimento craniofacial.",
-        tag: "Anatomia"
-      },
-      {
-        id: "otorrino-q29",
-        text: "Criança de 3 anos, com coriza e febre baixa há 3 dias. Evoluindo com quadro de tosse rouca, estridor inspiratório e retração supraesternal. Sem sialorreia ou disfagia. O diagnóstico e agente etiológico mais prováveis são:",
-        options: [
-          "Laringotraqueobronquite - Parainfluenza 1 e 2",
-          "Epiglotite - Haemophilus influenza",
-          "Coqueluche - Bordetella pertussis",
-          "Laringite catarral aguda - Streptococcus"
-        ],
-        answerIndex: 0,
-        explanation: "A combinação de pródromos virais, tosse rouca ('de cão'), estridor inspiratório e desconforto respiratório é a apresentação clássica da Laringotraqueobronquite, ou Crupe Viral, causada principalmente pelo vírus Parainfluenza.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q30",
-        text: "Qual das seguintes estruturas forma a região glótica da laringe?",
-        options: [
-          "Pregas vocais, aritenoides e epiglote",
-          "Pregas vocais, processos vocais e epiglote",
-          "Pregas vocais, base da língua e aritenoides",
-          "Pregas vocais, processos vocais das aritenoides e a rima da glote"
-        ],
-        answerIndex: 3,
-        explanation: "A glote é o aparelho fonador da laringe e é composta estritamente pelas pregas vocais (cordas vocais), os processos vocais das cartilagens aritenoides e o espaço entre elas (rima da glote).",
-        tag: "Anatomia"
-      },
-      {
-        id: "otorrino-q31",
-        text: "Sobre a drenagem linfática da laringe, responda a alternativa correta:",
-        options: [
-          "Entre todas as regiões laríngeas, a drenagem da região glótica é a mais escassa.",
-          "A drenagem linfática é mais escassa na região subglótica do que na região glótica.",
-          "A drenagem linfática é mais escassa na região supraglótica do que na região glótica.",
-          "A drenagem linfática de todas as regiões laríngeas, possuem o mesmo padrão de drenagem."
-        ],
-        answerIndex: 0,
-        explanation: "A região glótica (pregas vocais) possui uma drenagem linfática muito pobre. Este facto anatómico explica por que os tumores restritos a esta área têm um baixo índice de metástases linfonodais e, consequentemente, um melhor prognóstico.",
-        tag: "Anatomia"
-      },
-      {
-        id: "otorrino-q32",
-        text: "Professora de 35 anos, com carga horária de 40 horas semanais, refere disfonia frequente que piora ao final do dia, com piora do quadro nos últimos 6 meses. Qual o achado esperado na videolaringoscopia?",
-        options: [
-          "Paquidermia interaritenoidea",
-          "Edema de região interaritenóidea e de pregas vocais",
-          "Presença de pólipo em terço médio de prega vocal direita",
-          "Espessamento simétrico em terço médio de pregas vocais"
-        ],
-        answerIndex: 3,
-        explanation: "Os nódulos vocais, ou 'calos', são lesões bilaterais e simétricas que ocorrem no ponto de maior atrito das pregas vocais, sendo típicos de profissionais da voz e resultantes do fonotrauma crónico.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q33",
-        text: "Criança de 1 ano com tosse há 15 dias, que começou com um resfriado e evoluiu para acessos intensos de tosse (paroxística) seguidos de vômitos e um 'guincho' inspiratório. A mãe não vacina a criança. Qual a principal hipótese?",
-        options: [
-          "Epiglotite",
-          "Coqueluche",
-          "Laringite estridulosa",
-          "Laringotraqueobronquite"
-        ],
-        answerIndex: 1,
-        explanation: "A tosse paroxística, emetizante (causa vómitos) e com guincho inspiratório é a descrição clássica da fase paroxística da Coqueluche (tosse convulsa), uma doença prevenível por vacina.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q34",
-        text: "Em relação ao tratamento da rinite alérgica, assinale a alternativa incorreta:",
-        options: [
-          "Os anti-histamínicos apresentam rápido início de ação e são indicados para aliviar prurido, espirros e rinorreia.",
-          "O uso de corticosteroides por injeções de depósito é recomendado, pois não acarreta efeitos colaterais.",
-          "Os anti-histamínicos de primeira geração causam fadiga e sonolência.",
-          "Descongestionantes de uso tópico não devem ser utilizados por mais de sete a dez dias."
-        ],
-        answerIndex: 1,
-        explanation: "O uso de corticoides de depósito é proscrito no tratamento da rinite alérgica devido ao alto risco de efeitos colaterais sistémicos graves e imprevisíveis.",
-        tag: "Rinite Alérgica"
-      },
-      {
-        id: "otorrino-q35",
-        text: "Paciente de 45 anos com dor em região maxilar esquerda há 5 meses, que começou após remover um dente. Refere cacosmia e congestão nasal. Não melhorou com amoxicilina. Qual a conduta correta?",
-        options: [
-          "Trata-se de uma rinossinusite crónica. Solicitar Rx de seios paranasais.",
-          "Trata-se de uma rinossinusite crónica, sendo necessário o uso de azitromicina por 10 dias.",
-          "Trata-se de uma rinossinusite aguda. Tratar com antibiótico de amplo espectro.",
-          "Trata-se de uma rinossinusite crónica, devendo ser solicitada tomografia e avaliação cirúrgica."
-        ],
-        answerIndex: 3,
-        explanation: "O quadro é de uma rinossinusite crónica, provavelmente de origem odontogénica. A conduta correta envolve a realização de uma tomografia para avaliar a extensão da doença e a necessidade de abordagem cirúrgica para tratar a causa de base.",
-        tag: "Nariz"
-      },
-      {
-        id: "otorrino-q36",
-        text: "Sobre o diagnóstico da rinossinusite aguda, assinale a alternativa correta:",
-        options: [
-          "Para confirmação diagnóstica é mandatório realizar Rx de seios da face.",
-          "O uso de antimicrobianos pode ser prorrogado em casos leves a moderados, pois muitos se resolvem espontaneamente.",
-          "O quadro de rinite alérgica aguda dificilmente leva ao quadro de rinossinusite aguda.",
-          "A obstrução dos óstios de drenagem não ocorre nos casos de rinossinusite crônica."
-        ],
-        answerIndex: 1,
-        explanation: "Muitos casos de rinossinusite aguda, mesmo com características bacterianas, são autolimitados. A estratégia de 'esperar para ver' (watchful waiting) por 48-72h antes de iniciar antibióticos é recomendada em casos não graves.",
-        tag: "Nariz"
-      },
-      {
-        id: "otorrino-q37",
-        text: "KTB, 42 anos, hipertenso e diabético. Relata congestão e prurido nasal frequente, que piora à noite. Queixa-se de cefaleia constante e sonolência diurna. Qual a alternativa correta?",
-        options: [
-          "O quadro sugere rinite alérgica, e o diagnóstico é baseado na clínica.",
-          "A indicação da realização do prick test é obrigatória para o diagnóstico.",
-          "O quadro sugere rinossinusite crônica, devendo ser solicitada tomografia.",
-          "O quadro sugere rinite alérgica, sendo contraindicado o uso de corticoide nasal."
-        ],
-        answerIndex: 0,
-        explanation: "Os sintomas de congestão, prurido e rinorreia são a base para o diagnóstico clínico da rinite alérgica. A sonolência e cefaleia são consequências da má qualidade do sono causada pela obstrução nasal.",
-        tag: "Rinite Alérgica"
-      },
-      {
-        id: "otorrino-q38",
-        text: "Considerando as lesões benignas da laringe, assinale a afirmativa correta:",
-        options: [
-          "Os pólipos de pregas vocais são causados, ocasionalmente, por IVAS.",
-          "O Edema de Reinke normalmente acomete uma única prega vocal.",
-          "Os nódulos são mais comuns em mulheres, devido a uma maior quantidade de ácido hialurónico.",
-          "Parar o tabagismo é uma medida essencial para o controle do edema de Reinke."
-        ],
-        answerIndex: 3,
-        explanation: "O Edema de Reinke é uma condição fortemente associada ao tabagismo. A cessação do fumo é o passo mais importante e indispensável no tratamento, podendo levar à regressão da lesão em casos iniciais.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q39",
-        text: "Bebé de 15 dias de vida é levado à consulta por sua mãe, que relata que a criança faz um ruído toda vez que respira e este se torna mais intenso quando o bebé está chorando. Baseado no quadro, marque a alternativa incorreta:",
-        options: [
-          "A descrição clássica de laringomalácia consiste em estridor inspiratório que piora com agitação e choro.",
-          "A laringoscopia direta é essencial para firmar o diagnóstico.",
-          "O tratamento raramente é cirúrgico.",
-          "Crises de cianose ocorrem em mais de 80% dos quadros."
-        ],
-        answerIndex: 3,
-        explanation: "A grande maioria (mais de 90%) dos casos de laringomalácia é leve e autolimitada. Crises de cianose são um sinal de gravidade e ocorrem numa pequena minoria dos casos, indicando a necessidade de intervenção.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q40",
-        text: "Paciente de 19 anos procura emergência com trismo, odinofagia e febre há mais de 6 dias, sem melhora com penicilina. Ao exame, apresenta desvio da úvula e abaulamento de tonsila esquerda. Qual o diagnóstico mais provável?",
-        options: [
-          "Mononucleose Infecciosa",
-          "Faringite Viral",
-          "Abscesso Periamigdaliano",
-          "Difteria"
-        ],
-        answerIndex: 2,
-        explanation: "O trismo (dificuldade de abrir a boca), o desvio da úvula e o abaulamento do palato mole são os sinais cardinais do abscesso periamigdaliano, uma complicação supurativa da faringoamigdalite.",
-        tag: "Complicações"
-      },
-      {
-        id: "otorrino-q41",
-        text: "Em relação à rinite, qual a sequência correta para as afirmativas (Certo/Errado): (1) Pessoas com rinite alérgica têm risco aumentado para asma. (2) Diagnósticos diferenciais incluem atresia de coanas e corpo estranho. (3) A prometazina é um anti-histamínico de segunda geração.",
-        options: [
-          "C - C - E",
-          "E - C - C",
-          "C - E - E",
-          "E - C - E"
-        ],
-        answerIndex: 0,
-        explanation: "(C) A rinite alérgica é um fator de risco importante para o desenvolvimento de asma. (C) É crucial descartar causas obstrutivas como atresia e corpo estranho. (E) A prometazina (Fenergan) é um anti-histamínico de primeira geração, conhecido por causar sonolência.",
-        tag: "Rinite Alérgica"
-      },
-      {
-        id: "otorrino-q42",
-        text: "Criança de 1 ano com tosse há 15 dias, que começou com resfriado e evoluiu para acessos de tosse paroxística, com vômitos e um 'guincho' inspiratório. A mãe não vacina a criança. Qual exame pode confirmar o diagnóstico?",
-        options: [
-          "Hemocultura",
-          "Videolaringoscopia",
-          "Rx de tórax em PA e perfil",
-          "Cultura de material colhido de rinofaringe ou PCR"
-        ],
-        answerIndex: 3,
-        explanation: "O quadro é clássico de Coqueluche. O diagnóstico laboratorial é confirmado pela cultura ou, mais comumente hoje em dia, pela Reação em Cadeia da Polimerase (PCR) de uma amostra de secreção da nasofaringe.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q43",
-        text: "Paciente de 54 anos, obesa, hipertensa e diabética, com queixa de roncos, engasgos e irritabilidade. O exame mostra Mallampati 4. Qual o tratamento mais indicado para o quadro de SAHOS?",
-        options: [
-          "Aparelho intraoral",
-          "Cirurgia bariátrica e CPAP",
-          "Uvulopalatofaringoplastia isolada",
-          "Fonoterapia"
-        ],
-        answerIndex: 1,
-        explanation: "Numa paciente com SAHOS grave e obesidade mórbida, a abordagem mais eficaz envolve o tratamento da causa de base (perda de peso, que pode ser auxiliada pela cirurgia bariátrica) e o uso de CPAP para garantir a permeabilidade da via aérea durante o sono.",
-        tag: "Ronco e Apneia"
-      },
-      {
-        id: "otorrino-q44",
-        text: "Qual das seguintes afirmações sobre o tratamento da faringotonsilite estreptocócica é VERDADEIRA?",
-        options: [
-          "O tratamento visa apenas melhorar os sintomas agudos.",
-          "A penicilina é o antibiótico de eleição.",
-          "Macrolídeos não podem ser indicados para pessoas com alergia a penicilinas.",
-          "Em caso de recaída, deve-se indicar amoxicilina associada a macrolídeos."
-        ],
-        answerIndex: 1,
-        explanation: "A penicilina (especialmente a Benzatina em dose única) continua a ser o antibiótico de primeira escolha para a faringotonsilite estreptocócica devido à sua eficácia, baixo custo e espectro de ação focado.",
-        tag: "Faringe"
-      },
-      {
-        id: "otorrino-q45",
-        text: "Qual das seguintes malformações congénitas da laringe é a mais frequente?",
-        options: [
-          "Laringomalácia",
-          "Estenose subglótica",
-          "Paralisia de pregas vocais",
-          "Atresia laríngea"
-        ],
-        answerIndex: 0,
-        explanation: "A laringomalácia, caracterizada pela flacidez das estruturas supraglóticas, é de longe a anomalia congénita mais comum da laringe e a principal causa de estridor em lactentes.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q46",
-        text: "Qual das seguintes afirmações sobre a queilite actínica é CORRETA?",
-        options: [
-          "As principais etiologias são o etilismo e o tabagismo.",
-          "A presença de ulceração é um sinal de alerta para possível malignização.",
-          "O tratamento deve ser realizado com antifúngico tópico e sistémico.",
-          "A vermelhectomia só deve ser indicada em casos leves."
-        ],
-        answerIndex: 1,
-        explanation: "A queilite actínica é uma lesão pré-maligna do lábio inferior causada pela exposição solar crónica. O surgimento de áreas de ulceração, endurecimento ou crescimento rápido são sinais de transformação para um carcinoma espinocelular.",
-        tag: "Boca"
-      },
-      {
-        id: "otorrino-q47",
-        text: "Qual das seguintes afirmações sobre a respiração oral é CORRETA?",
-        options: [
-          "Hipertrofia de tonsilas palatinas e faríngea é a principal causa na infância.",
-          "Atresia coanal bilateral é frequentemente diagnosticada na fase adulta.",
-          "Quando há apnéia obstrutiva do sono ocorre aumento da libertação do hormônio do crescimento.",
-          "A síndrome de apnéia obstrutiva do sono não interfere no aprendizado da criança."
-        ],
-        answerIndex: 0,
-        explanation: "A hipertrofia adenoamigdaliana é a principal causa de obstrução nasal e respiração oral em crianças, podendo levar a alterações craniofaciais e distúrbios do sono.",
-        tag: "Anatomia"
-      },
-      {
-        id: "otorrino-q48",
-        text: "Lactente com febre, tosse rouca, estridor inspiratório, salivação intensa e dispneia grave. Qual o diagnóstico mais provável?",
-        options: [
-          "Laringite aguda",
-          "Epiglotite",
-          "Abscesso periamigdaliano",
-          "Laringite diftérica"
-        ],
-        answerIndex: 1,
-        explanation: "A combinação de início agudo, febre alta, estridor, dispneia e, principalmente, salivação intensa (devido à dor para engolir) é altamente sugestiva de Epiglotite, uma emergência médica.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q49",
-        text: "Qual das seguintes opções NÃO é um achado laríngeo comum no Refluxo Laringofaríngeo (RLF)?",
-        options: [
-          "Hiperemia do espaço interaritenoideia",
-          "Hiperemia de pregas vocais",
-          "Estenose subglótica",
-          "Estase salivar na região retrocricoaritenóide"
-        ],
-        answerIndex: 2,
-        explanation: "Os achados mais comuns do RLF são inflamatórios, como hiperemia e edema na região posterior da laringe. A estenose subglótica é uma complicação rara e grave, não um achado comum.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q50",
-        text: "Qual dos seguintes exames de diagnóstico da rinite alérgica é pouco sensível, mas bastante específico?",
-        options: [
-          "Dosagem de IgE sérica total",
-          "Testes cutâneos de puntura (prick-test)",
-          "Teste intracutâneo (intradérmico)",
-          "Dosagem de IgE sérica específica"
-        ],
-        answerIndex: 0,
-        explanation: "A IgE sérica total pode estar elevada em várias condições além da alergia (baixa especificidade) e pode estar normal em muitos alérgicos (baixa sensibilidade). Não é um bom teste de rastreio.",
-        tag: "Rinite Alérgica"
-      },
-      {
-        id: "otorrino-q51",
-        text: "Considerando o cancro da laringe, qual afirmativa é FALSA?",
-        options: [
-          "Os principais fatores de risco são tabagismo, etilismo, idade e género masculino.",
-          "Disfonia por mais de 3 semanas deve ser investigada, principalmente em pacientes de risco.",
-          "O principal tipo histológico é o carcinoma espinocelular.",
-          "A disseminação linfática dos tumores glóticos é mais rápida do que dos tumores supraglóticos."
-        ],
-        answerIndex: 3,
-        explanation: "A região glótica (pregas vocais) tem uma drenagem linfática muito escassa. Por isso, tumores restritos a esta área têm um baixo índice de metástases linfonodais, ao contrário dos tumores supraglóticos, que têm uma drenagem rica.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q52",
-        text: "Qual das seguintes afirmações sobre as anomalias congénitas da laringe é ERRADA?",
-        options: [
-          "O estridor inspiratório, que piora com a amamentação, é um sintoma comum na laringomalácia.",
-          "Paciente com laringomalácia, com cianose e déficit de crescimento, tem tratamento expectante.",
-          "O diagnóstico de laringomalácia é confirmado através da laringoscopia direta.",
-          "A laringomalácia é a anomalia congénita de laringe mais comum."
-        ],
-        answerIndex: 1,
-        explanation: "Cianose e déficit de crescimento são sinais de gravidade na laringomalácia e indicam a necessidade de tratamento cirúrgico (supraglotoplastia), não de uma conduta expectante.",
-        tag: "Laringe"
-      },
-      {
-        id: "otorrino-q53",
-        text: "Qual das seguintes afirmações sobre faringoamigdalites é VERDADEIRA?",
-        options: [
-          "O tratamento da tonsilite crónica caseosa é feito com corticoides.",
-          "A herpangina é um exemplo de faringoamigdalite aguda ulcero-necrótica.",
-          "O tratamento da angina de Plaut-Vincent envolve antibioticoterapia e gargarejos com antissépticos.",
-          "A angina de Plaut-Vincent é um exemplo de faringoamigdalite aguda vesiculosa."
-        ],
-        answerIndex: 2,
-        explanation: "A angina de Plaut-Vincent é uma infeção bacteriana (fusoespiralar) e o seu tratamento baseia-se em antibióticos que cobrem anaeróbios (como penicilina + metronidazol) e na melhoria da higiene oral.",
-        tag: "Faringe"
-      },
-      {
-        id: "otorrino-q54",
-        text: "Em relação à rinite alérgica, qual alternativa é CORRETA?",
-        options: [
-          "Pacientes com suspeita de rinite alérgica que já tiveram reação anafilática, não poderão realizar prick-test.",
-          "O uso de corticoide nasal somente é indicado para pacientes com rinite alérgica persistente.",
-          "Prurido nasal e espirros são os sintomas com menor impacto na qualidade de vida.",
-          "O uso de corticosteróide nasal associado ao uso de antileucotrienos deve ser evitado."
-        ],
-        answerIndex: 0,
-        explanation: "O teste cutâneo (prick-test) é contraindicado em pacientes com história de anafilaxia, pois há risco de desencadear uma reação grave.",
-        tag: "Rinite Alérgica"
-      },
-      {
-        id: "otorrino-q55",
-        text: "Paciente de 19 anos com trismo, odinofagia e febre há mais de 6 dias, sem melhora com penicilina. Ao exame, desvio da úvula e abaulamento de tonsila esquerda. Qual a melhor conduta?",
-        options: [
-          "Trocar o antibiótico para Amoxicilina-Clavulanato.",
-          "Suspender antibiótico por suspeita de Mononucleose.",
-          "Drenagem do abscesso e antibioticoterapia.",
-          "Internação e uso de Soro Antidiftérico."
-        ],
-        answerIndex: 2,
-        explanation: "O quadro é de abscesso periamigdaliano. O tratamento consiste na drenagem cirúrgica da coleção purulenta, associada a antibioticoterapia que cubra anaeróbios.",
-        tag: "Complicações"
-      }
-    ]
-  },
-
-  {
-    id: "preset-ortopedia-1",
-    name: "  Estácio - M7 - PR1 - Ortopedia",
-    questions: [
-      {
-        id: "orto-q1",
-        text: "Sobre as pseudoartroses, assinale a alternativa INCORRETA:",
-        options: [
-          "Na Hipertrófica, há calo ósseo exuberante na tentativa de conter a mobilidade.",
-          "Na Atrófica, há presença abundante de células osteogénicas no foco.",
-          "Fatores de risco para a Atrófica incluem fratura exposta e diabetes.",
-          "Na Hipertrófica, a causa principal é a instabilidade mecânica da fratura."
-        ],
-        answerIndex: 1,
-        explanation: "Na pseudoartrose atrófica, a principal característica é a falha biológica, com pouca vascularização e ausência ou escassez de células osteogénicas viáveis no foco da fratura.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q2",
-        text: "Paciente de 58 anos, com gesso axilopalmar há 24 horas, chega com dor intensa, edema acentuado, cianose e deformidade em contratura no membro. Qual o diagnóstico mais provável?",
-        options: [
-          "Osteomielite aguda",
-          "Trombose venosa profunda",
-          "Artrite séptica de punho",
-          "Síndrome compartimental com isquemia de Volkmann"
-        ],
-        answerIndex: 3,
-        explanation: "A dor desproporcional à lesão, edema intenso, alterações neurovasculares e contratura (sinal tardio) num membro engessado são sinais clássicos de Síndrome Compartimental, uma emergência ortopédica.",
-        tag: "Trauma"
-      },
-      {
-        id: "orto-q3",
-        text: "Criança de 7 anos com fratura de antebraço tratada com gesso. Após duas semanas, a radiografia não mostra desvios, mas também não há formação de calo ósseo visível. Qual a conduta?",
-        options: [
-          "Manter a conduta expectante e solicitar novas radiografias no retorno.",
-          "Indicar tratamento cirúrgico pela falha do tratamento conservador.",
-          "Solicitar uma Tomografia Computadorizada para estudar o calo.",
-          "Solicitar exames de sangue (VHS, PCR) por suspeita de infeção."
-        ],
-        answerIndex: 0,
-        explanation: "Em crianças, a consolidação óssea é rápida, mas o calo radiográfico pode não ser visível com apenas duas semanas. Na ausência de desvios, a conduta correta é aguardar e reavaliar posteriormente.",
-        tag: "Ortopedia Pediátrica"
-      },
-      {
-        id: "orto-q4",
-        text: "Qual é a principal complicação da Síndrome Compartimental não tratada?",
-        options: [
-          "Pseudoartrose atrófica",
-          "Osteomielite crónica",
-          "Contratura isquémica de Volkmann",
-          "Trombose venosa profunda"
-        ],
-        answerIndex: 2,
-        explanation: "A Contratura de Volkmann é a sequela clássica da Síndrome Compartimental não tratada, resultando em necrose muscular e nervosa com fibrose e contratura permanente do membro.",
-        tag: "Complicações"
-      },
-      {
-        id: "orto-q5",
-        text: "Qual é a classificação de Salter-Harris mais comum em fraturas fisárias?",
-        options: [
-          "Tipo I (atravessa a fise)",
-          "Tipo II (fise e metáfise)",
-          "Tipo III (fise e epífise)",
-          "Tipo IV (fise, metáfise e epífise)"
-        ],
-        answerIndex: 1,
-        explanation: "A fratura de Salter-Harris tipo II, que envolve a placa de crescimento e um fragmento triangular da metáfise (fragmento de Thurston-Holland), é a mais frequente.",
-        tag: "Ortopedia Pediátrica"
-      },
-      {
-        id: "orto-q6",
-        text: "Criança de 4 anos apresenta claudicação e limitação da rotação interna do quadril, uma semana após uma infeção de garganta. Qual a hipótese diagnóstica mais provável?",
-        options: [
-          "Artrite séptica do quadril",
-          "Doença de Legg-Calvé-Perthes",
-          "Sinovite transitória do quadril",
-          "Epifisiólise"
-        ],
-        answerIndex: 2,
-        explanation: "A história de claudicação aguda em criança pequena, com limitação de movimento e história prévia de infeção de vias aéreas superiores, é a apresentação clássica da Sinovite Transitória do Quadril, uma condição benigna e autolimitada.",
-        tag: "Ortopedia Pediátrica"
-      },
-      {
-        id: "orto-q7",
-        text: "Qual é a principal diferença entre a manobra de Ortolani e a manobra de Barlow no exame do quadril de um recém-nascido?",
-        options: [
-          "Ortolani testa a luxação e Barlow a adução.",
-          "Ortolani é uma manobra de redução e Barlow é uma manobra provocativa de luxação.",
-          "Ortolani é para quadris estáveis e Barlow para quadris instáveis.",
-          "Ortolani avalia o fémur e Barlow o acetábulo."
-        ],
-        answerIndex: 1,
-        explanation: "A manobra de Ortolani tenta reduzir um quadril já luxado (sente-se um 'clique' de entrada), enquanto a manobra de Barlow tenta luxar um quadril instável, mas reduzido (sente-se um 'clique' de saída).",
-        tag: "Ortopedia Pediátrica"
-      },
-      {
-        id: "orto-q8",
-        text: "Paciente com dor no ombro. A manobra de Patte, que testa a rotação externa contra resistência com o ombro abduzido, avalia a integridade de qual músculo?",
-        options: [
-          "Supraespinhoso",
-          "Subescapular",
-          "Infraespinhoso",
-          "Deltoide"
-        ],
-        answerIndex: 2,
-        explanation: "A manobra de Patte é um teste específico para avaliar a força e a integridade do músculo infraespinhoso, um dos principais rotadores externos do ombro.",
-        tag: "Ombro"
-      },
-      {
-        id: "orto-q9",
-        text: "Criança pequena é puxada pelo braço e para de o mover, mantendo-o junto ao corpo com o antebraço pronado. Qual é o diagnóstico mais provável?",
-        options: [
-          "Fratura da clavícula",
-          "Luxação do ombro",
-          "Fratura supracondiliana do úmero",
-          "Pronação dolorosa (subluxação da cabeça do rádio)"
-        ],
-        answerIndex: 3,
-        explanation: "Este é o mecanismo e a apresentação clássica da pronação dolorosa, onde a cabeça do rádio subluxa do ligamento anular. O tratamento é uma manobra de redução simples (supinação com flexão).",
-        tag: "Ortopedia Pediátrica"
-      },
-      {
-        id: "orto-q10",
-        text: "Qual é a principal característica clínica que diferencia uma luxação de uma entorse?",
-        options: [
-          "A presença de edema.",
-          "A intensidade da dor.",
-          "A perda completa e permanente do contacto articular.",
-          "A presença de equimose (hematoma)."
-        ],
-        answerIndex: 2,
-        explanation: "Enquanto a entorse é uma lesão ligamentar sem perda de contacto articular, a luxação é definida pela perda total e mantida da congruência entre as superfícies de uma articulação.",
-        tag: "Trauma"
-      },
-      {
-        id: "orto-q11",
-        text: "Paciente com fratura exposta Gustilo-Anderson tipo I (ferida limpa < 1 cm). Qual a conduta antibiótica inicial?",
-        options: [
-          "Cefalosporina de 1ª geração (ex: Cefazolina)",
-          "Cefalosporina + Aminoglicosídeo",
-          "Cefalosporina + Penicilina",
-          "Não é necessário antibiótico"
-        ],
-        answerIndex: 0,
-        explanation: "Para fraturas expostas de baixa contaminação (Gustilo I e II), a profilaxia padrão é com uma cefalosporina de primeira geração para cobrir os germes da pele.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q12",
-        text: "Paciente com dor lombar que irradia pela face posterior da coxa e face lateral da perna, com parestesia no maléolo lateral. Qual teste clínico é mais indicado para confirmar a suspeita de hérnia discal?",
-        options: [
-          "Teste de Thompson",
-          "Teste de Lasègue",
-          "Manobra de Patte",
-          "Teste de Phalen"
-        ],
-        answerIndex: 1,
-        explanation: "O Teste de Lasègue (elevação da perna estendida) é o teste clássico para avaliar a irritação do nervo ciático, comum em casos de hérnia de disco lombar.",
-        tag: "Coluna"
-      },
-      {
-        id: "orto-q13",
-        text: "Paciente com parestesia e dor nos três primeiros dedos da mão, que piora com atividades manuais como tricot. Os testes de Phalen e Tinel são positivos. Qual o diagnóstico mais provável?",
-        options: [
-          "Síndrome do túnel cubital",
-          "Radiculopatia C6",
-          "Síndrome do túnel do carpo",
-          "Tenossinovite de De Quervain"
-        ],
-        answerIndex: 2,
-        explanation: "A sintomatologia nos três primeiros dedos e os testes de Phalen (flexão do punho) e Tinel (percussão do nervo) positivos são característicos da Síndrome do Túnel do Carpo, causada pela compressão do nervo mediano.",
-        tag: "Mão e Punho"
-      },
-      {
-        id: "orto-q14",
-        text: "No exame físico do ombro, a manobra de Jobe (teste da lata vazia) e a manobra de Gerber (lift-off test) positivas indicam lesão de quais músculos, respetivamente?",
-        options: [
-          "Infraespinhoso e Supraespinhoso",
-          "Supraespinhoso e Subescapular",
-          "Subescapular e Redondo menor",
-          "Deltoide e Peitoral maior"
-        ],
-        answerIndex: 1,
-        explanation: "O teste de Jobe avalia o músculo supraespinhoso (principal abdutor inicial do ombro), enquanto o teste de Gerber avalia o músculo subescapular (principal rotador interno).",
-        tag: "Ombro"
-      },
-      {
-        id: "orto-q15",
-        text: "Qual é o principal fator de risco para fratura do colo do fémur numa idosa de 87 anos que sofreu uma queda da própria altura?",
-        options: [
-          "Hipertensão arterial",
-          "Diabetes Mellitus",
-          "Osteoporose",
-          "Uso de AAS"
-        ],
-        answerIndex: 2,
-        explanation: "A osteoporose é a principal causa de fragilidade óssea em idosos, tornando-os suscetíveis a fraturas de baixo impacto, como a fratura do colo do fémur após uma simples queda.",
-        tag: "Trauma"
-      },
-      {
-        id: "orto-q16",
-        text: "Paciente jovem sofreu queda sobre o ombro. Ao exame, a extremidade distal da clavícula está saliente e pode ser reduzida ao ser pressionada (sinal da tecla). Qual o diagnóstico?",
-        options: [
-          "Fratura da clavícula",
-          "Luxação do ombro (glenoumeral)",
-          "Luxação acromioclavicular",
-          "Lesão do manguito rotador"
-        ],
-        answerIndex: 2,
-        explanation: "A proeminência da clavícula distal e o 'sinal da tecla' são os achados clássicos da luxação da articulação acromioclavicular, indicando a rutura dos ligamentos que a estabilizam.",
-        tag: "Ombro"
-      },
-      {
-        id: "orto-q17",
-        text: "Qual é a principal diferença entre consolidação óssea primária e secundária?",
-        options: [
-          "A primária ocorre em crianças e a secundária em adultos.",
-          "A primária não forma calo ósseo visível, enquanto a secundária sim.",
-          "A primária é mais rápida que a secundária.",
-          "A primária só ocorre com tratamento conservador."
-        ],
-        answerIndex: 1,
-        explanation: "A consolidação primária ocorre em fraturas com estabilidade absoluta (ex: fixação com placa e parafusos), onde o osso se remodela diretamente sem formar calo. A secundária ocorre com estabilidade relativa (ex: gesso, hastes) e depende da formação de calo ósseo.",
-        tag: "Fisiologia Óssea"
-      },
-      {
-        id: "orto-q18",
-        text: "Qual das seguintes opções descreve corretamente a fratura do 'boxer'?",
-        options: [
-          "Fratura da base do primeiro metacarpo.",
-          "Fratura da diáfise do quinto metacarpo.",
-          "Fratura do colo do quinto metacarpo.",
-          "Fratura da falange proximal do polegar."
-        ],
-        answerIndex: 2,
-        explanation: "A fratura do 'boxer' é a fratura do colo (a região logo abaixo da 'cabeça') do quinto metacarpo, tipicamente causada por um soco mal dado com a mão fechada.",
-        tag: "Mão e Punho"
-      },
-      {
-        id: "orto-q19",
-        text: "Num trauma raquimedular, o que indica o fim da fase de choque medular?",
-        options: [
-          "O retorno da sensibilidade nos membros inferiores.",
-          "A normalização da pressão arterial e frequência cardíaca.",
-          "O retorno do reflexo bulbocavernoso.",
-          "A capacidade de mover os dedos dos pés."
-        ],
-        answerIndex: 2,
-        explanation: "O reflexo bulbocavernoso (contração do esfíncter anal ao apertar a glande/clitóris) é o primeiro reflexo a retornar após o choque medular. A sua presença indica o fim desta fase e permite uma avaliação mais precisa do prognóstico da lesão.",
-        tag: "Coluna"
-      },
-      {
-        id: "orto-q20",
-        text: "Paciente de 48 anos com dor e parestesia nos três dedos laterais da mão direita, que piora com o trabalho (tricot). Qual o diagnóstico mais provável?",
-        options: [
-          "Cervicobraquialgia",
-          "Síndrome do túnel do carpo",
-          "Epicondilite lateral",
-          "Tenossinovite de De Quervain"
-        ],
-        answerIndex: 1,
-        explanation: "A dor e parestesia na distribuição do nervo mediano (polegar, indicador, médio e metade do anelar) são características da Síndrome do Túnel do Carpo, uma neuropatia compressiva comum no punho.",
-        tag: "Mão e Punho"
-      },
-      {
-        id: "orto-q21",
-        text: "Paciente de 32 anos, vítima de acidente de automóvel, chocou na sala de emergência. A radiografia da bacia e TC mostram instabilidade pélvica posterior. Qual a conduta correta?",
-        options: [
-          "Estabilização imediata da pelve com lençol amarrado na altura dos trocânteres femorais.",
-          "Cirurgia imediata para a sínfise púbica, pois esta estrutura sofre grave sangramento.",
-          "Compressão com lençol na altura dos ilíacos e laparotomia exploradora imediata.",
-          "Reposição de cristaloide e sangue, pois pode evoluir com óbito devido ao choque."
-        ],
-        answerIndex: 0,
-        explanation: "Em fraturas pélvicas instáveis com choque hemodinâmico, a prioridade é a estabilização mecânica da pelve para diminuir o volume pélvico e conter o sangramento. A compressão circunferencial com lençol é uma medida de emergência eficaz.",
-        tag: "Politrauma"
-      },
-      {
-        id: "orto-q22",
-        text: "Um paciente internado com fratura fechada da tíbia direita, aguardando osteossíntese, apresenta em 48h dor, edema e hiperemia difusa no membro. A conduta nesse caso é:",
-        options: [
-          "Remove a imobilização e solicita ecocolor doppler de membros inferiores.",
-          "Iniciar antibiótico imediatamente por provável osteomielite.",
-          "Remove a imobilização pois trata-se de síndrome do compartimento.",
-          "Aciona o cirurgião vascular por suspeita de lesão arterial."
-        ],
-        answerIndex: 0,
-        explanation: "O quadro de dor, edema e hiperemia em membro inferior imobilizado após fratura é altamente sugestivo de Trombose Venosa Profunda (TVP). A primeira conduta é remover a imobilização compressiva e confirmar o diagnóstico com ecodoppler.",
-        tag: "Complicações"
-      },
-      {
-        id: "orto-q23",
-        text: "Paciente masculino, 18 anos, sofreu um trauma na coxa direita. Relata quadro álgico leve, edema leve, claudicando e impotência funcional. Qual a hipótese diagnóstica e o tratamento indicado?",
-        options: [
-          "Fratura do fêmur. Cirurgia com osteossíntese.",
-          "Tendinite do semimembranoso. Gelo + repouso.",
-          "Contusão da coxa. Crioterapia + repouso + ultrassom.",
-          "Luxação do joelho. Cirurgia com redução incruenta."
-        ],
-        answerIndex: 2,
-        explanation: "O quadro de dor e edema localizado após trauma direto, sem deformidade grosseira ou instabilidade, é compatível com uma contusão muscular. O tratamento inicial é conservador.",
-        tag: "Trauma"
-      },
-      {
-        id: "orto-q24",
-        text: "São afirmações verdadeiras sobre fraturas expostas: I. Mecanismos de dentro para fora geralmente levam à baixa contaminação. II. O ambiente não interfere na profilaxia antibiótica. III. A exteriorização do hematoma fraturário caracteriza a lesão como exposta. IV. A estabilização provisória com fixadores externos é útil.",
-        options: [
-          "I, III e IV são verdadeiras",
-          "II e III são falsas",
-          "II,III e IV são falsas",
-          "I e II são verdadeiras"
-        ],
-        answerIndex: 0,
-        explanation: "A afirmativa II é falsa, pois o ambiente (ex: rural) influencia na escolha do antibiótico. As demais são verdadeiras: o mecanismo de trauma, a exposição do hematoma e a utilidade dos fixadores externos estão corretos.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q25",
-        text: "Paciente com quadro de dor em joelho direito, sem trauma, com rubor, edema, calor e bloqueio articular. Qual resultado laboratorial da análise do líquido sinovial você espera encontrar?",
-        options: [
-          "Proteína diminuída com grumos",
-          "Líquido claro com proteína elevada",
-          "Leucocitose com diminuição da glicose",
-          "Líquido turvo com um teste de mucina firme"
-        ],
-        answerIndex: 2,
-        explanation: "Num quadro de artrite séptica, a análise do líquido sinovial tipicamente revela um grande aumento de leucócitos (leucocitose) e consumo de glicose pelas bactérias, resultando em níveis de glicose mais baixos que os do soro.",
-        tag: "Infecção Ortopédica"
-      },
-      {
-        id: "orto-q26",
-        text: "Paciente jovem, 22 anos, com fratura da clavícula esquerda tratada de forma conservadora. Após 2 meses, a radiografia de controle mostra calo ósseo. Assinale a alternativa correta:",
-        options: [
-          "A consolidação foi primária.",
-          "A única imobilização correta seria a tipóia americana.",
-          "A consolidação foi secundária, por estabilidade relativa.",
-          "As opções de imobilização seriam a tipóia americana e o gesso pendente."
-        ],
-        answerIndex: 2,
-        explanation: "O tratamento conservador de fraturas da clavícula (com tipóia ou imobilização em 8) promove uma estabilidade relativa, que leva à consolidação secundária, caracterizada pela formação de calo ósseo visível na radiografia.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q27",
-        text: "Paciente de 22 anos sofreu entorse do tornozelo direito. A radiografia mostra desvio importante do maléolo medial. Qual a conduta correta?",
-        options: [
-          "Indicar cirurgia, realizar perfil e imobilizar com tala.",
-          "Tratar com gesso cruro-podálico por ser estável.",
-          "Indicar cirurgia imediata, podendo complementar com perfil do pé.",
-          "Diagnóstico de fratura bimaleolar, tratar com tala."
-        ],
-        answerIndex: 0,
-        explanation: "Uma fratura do maléolo medial com desvio indica instabilidade articular e é de tratamento cirúrgico. No entanto, é fundamental completar o estudo radiográfico com a incidência em perfil e imobilizar provisoriamente para analgesia e controle do edema.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q28",
-        text: "Criança de 6 anos cai com o cotovelo em hiperextensão. A radiografia mostra uma fratura supracondiliana do úmero sem desvio (Tipo I de Gartland). Qual o tratamento?",
-        options: [
-          "Tala gessada",
-          "Gesso axilopalmar",
-          "Tipóia americana",
-          "AINES e observação"
-        ],
-        answerIndex: 1,
-        explanation: "Fraturas supracondilianas do úmero sem desvio (Gartland I) em crianças são estáveis e o tratamento de escolha é a imobilização com gesso axilopalmar com o cotovelo em flexão.",
-        tag: "Ortopedia Pediátrica"
-      },
-      {
-        id: "orto-q29",
-        text: "Paciente de 86 anos sofreu queda da própria altura, com dor e impotência funcional no quadril direito. O membro está encurtado e em rotação externa. A radiografia mostra fratura transtrocanteriana. Assinale a correta:",
-        options: [
-          "É uma fratura transtrocanteriana, por osteoporose, e deve ser submetido a tratamento cirúrgico de urgência.",
-          "É uma fratura do colo do fémur, devendo ser tratada com fixação cirúrgica de urgência.",
-          "É uma fratura da extremidade proximal do fémur, e o membro apresenta-se em rotação interna.",
-          "É uma fratura subtrocanteriana, possivelmente por uso de alendronato."
-        ],
-        answerIndex: 0,
-        explanation: "O quadro clínico (encurtamento e rotação externa) e radiográfico em uma idosa após queda de baixa energia é clássico de fratura transtrocanteriana por osteoporose. O tratamento é cirúrgico e deve ser realizado o mais breve possível.",
-        tag: "Trauma"
-      },
-      {
-        id: "orto-q30",
-        text: "Num paciente politraumatizado, qual é a conduta correta no atendimento inicial?",
-        options: [
-          "Verificar lesões cutâneas acima dos ombros para suspeitar de lesão cervical",
-          "Remover a prancha na chegada e manter o colar cervical",
-          "Realizar apenas TC de crânio se houver história de TCE",
-          "Solicitar a série trauma radiológica (coluna cervical, tórax e bacia)"
-        ],
-        answerIndex: 3,
-        explanation: "No atendimento secundário (após o ABCDE) de um politraumatizado, a série trauma radiológica, composta por radiografias da coluna cervical (AP e perfil), tórax (AP) e bacia (AP), é fundamental para detetar lesões potencialmente fatais.",
-        tag: "Politrauma"
-      },
-      {
-        id: "orto-q31",
-        text: "Paciente com fratura fechada da diáfise tibial aguarda cirurgia. As condições de pele e partes moles estão ruins e não há fixadores externos disponíveis. Para evitar complicações, você corretamente:",
-        options: [
-          "Imobiliza com calha para permitir expansão do edema e prescreve anticoagulação profilática",
-          "Imobiliza com gesso circular para controlar desvios",
-          "Realiza fasciotomia de urgência",
-          "Inicia antibiótico e leva para lavagem cirúrgica"
-        ],
-        answerIndex: 0,
-        explanation: "A conduta correta é a imobilização provisória com uma calha gessada (que é aberta e permite o inchaço), associada à profilaxia de trombose venosa profunda, enquanto se aguarda a melhoria das condições locais para a cirurgia definitiva.",
-        tag: "Trauma"
-      },
-      {
-        id: "orto-q32",
-        text: "Paciente de 60 anos sofreu queda com trauma no membro superior direito. Radiografia mostra fratura da diáfise da ulna e luxação da cabeça do rádio. Qual o seu diagnóstico e tratamento?",
-        options: [
-          "Fratura-luxação de Monteggia + gesso axilopalmar",
-          "Fratura de Colles + osteossíntese com fios de kirschner",
-          "Fratura-luxação de Galeazzi + osteossíntese com placa",
-          "Fratura de Smith + gesso axilopalmar incluindo o polegar"
-        ],
-        answerIndex: 0,
-        explanation: "A lesão descrita é uma fratura-luxação de Galeazzi (fratura do rádio + luxação da radioulnar distal). O gabarito C está incorreto na descrição da lesão, mas correto no nome. A fratura da ulna com luxação da cabeça do rádio é Monteggia.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q33",
-        text: "Paciente de 6 meses com febre alta, dor intensa no ombro e impotência funcional, sem história de trauma. Exames de sangue com VHS e PCR elevados. Qual a hipótese e quais fatores de risco no caso?",
-        options: [
-          "Sarcoma de Ewing / Febre e ausência de trauma",
-          "Sarcoma de Ewing / Elevação do VHS e impotência funcional",
-          "Osteomielite aguda / Criança de 6 meses e região do ombro",
-          "Osteomielite aguda / Elevação da PCR e febre alta"
-        ],
-        answerIndex: 2,
-        explanation: "O quadro é altamente sugestivo de osteomielite hematogénica aguda. A idade (lactente < 1 ano) e a localização (metáfise proximal do úmero, que é intra-articular) são fatores de risco para artrite séptica secundária.",
-        tag: "Infecção Ortopédica"
-      },
-      {
-        id: "orto-q34",
-        text: "Quanto às fraturas do rádio distal, assinale a opção correta.",
-        options: [
-          "As incidências radiográficas solicitadas são o AP e a oblíqua do punho.",
-          "O tratamento conservador desta fratura é um gesso incluindo o polegar.",
-          "A fratura de Smith ocorre através de uma queda com o punho em hiperflexão.",
-          "A deformidade em dorso de garfo é encontrada na fratura de Galeazzi."
-        ],
-        answerIndex: 2,
-        explanation: "A fratura de Smith, ou 'Colles invertida', é caracterizada por um desvio volar do fragmento distal do rádio e ocorre tipicamente por uma queda sobre o dorso da mão fletida.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q35",
-        text: "Paciente de 78 anos, com trauma na cabeça, dor cervical alta e paresia nos quatro membros, mais proeminente nos superiores. Qual o exame inicial e provável déficit neurológico?",
-        options: [
-          "Radiografia em perfil e transoral; lesão medular completa.",
-          "Radiografia em AP e perfil da coluna cervical; paciente em choque medular.",
-          "Radiografia em perfil e oblíqua; síndrome medular anterior.",
-          "Radiografia em perfil e transoral; síndrome medular central."
-        ],
-        answerIndex: 3,
-        explanation: "A paresia predominante nos membros superiores em relação aos inferiores após um trauma cervical é a apresentação clássica da Síndrome Medular Central. A avaliação inicial para suspeita de fratura do áxis (C2) inclui as incidências em perfil e transoral.",
-        tag: "Coluna"
-      },
-      {
-        id: "orto-q36",
-        text: "A imagem de um menino de 7 anos, assintomático, encontrada de forma acidental durante exame radiológico, fala a favor de:",
-        options: [
-          "Cisto ósseo simples",
-          "Mieloma múltiplo",
-          "Osteoblastoma",
-          "Tumor de Células Gigantes"
-        ],
-        answerIndex: 0,
-        explanation: "A imagem de uma lesão lítica, bem delimitada, central, na região metafisária proximal do fémur em uma criança é a apresentação típica de um Cisto Ósseo Simples, uma lesão benigna frequentemente assintomática.",
-        tag: "Tumores Ósseos"
-      },
-      {
-        id: "orto-q37",
-        text: "Sobre os Processos de Consolidação óssea, é correto afirmar:",
-        options: [
-          "Consolidação Óssea Direta ocorre com formação de Calo Ósseo.",
-          "Consolidação Indireta somente ocorre com Cirurgia.",
-          "Ósteon é uma unidade histológica própria da Consolidação Secundária.",
-          "A Primeira Fase da Consolidação Óssea Indireta é a de Hematoma Fraturário."
-        ],
-        answerIndex: 3,
-        explanation: "O processo de consolidação indireta (com formação de calo ósseo) inicia-se com a fase inflamatória, na qual se forma o hematoma fraturário, que é essencial para o início da cascata de cicatrização.",
-        tag: "Fisiologia Óssea"
-      },
-      {
-        id: "orto-q38",
-        text: "Sobre a abordagem das fraturas expostas é CORRETO:",
-        options: [
-          "A classificação de Gustilo-Anderson é imutável.",
-          "O potencial de contaminação está relacionado à extensão da lesão das partes moles.",
-          "O ambiente onde ocorrem as lesões não deve ser considerado.",
-          "Para caracterizar uma fratura como aberta deve haver visualização do osso."
-        ],
-        answerIndex: 1,
-        explanation: "A gravidade de uma fratura exposta e o seu risco de infeção estão diretamente ligados à energia do trauma e à extensão do dano às partes moles (pele, músculo), que servem de barreira protetora.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q39",
-        text: "Menor de 7 anos sofreu trauma no cotovelo. Radiografia mostra fratura supracondiliana do úmero com desvio posterior completo, sem contato entre os fragmentos (Gartland III). Qual o diagnóstico e conduta?",
-        options: [
-          "Fratura supracondiliana do úmero Gartland II - redução e gesso.",
-          "Fratura de Monteggia - tratamento cirúrgico de urgência.",
-          "Fratura supracondiliana do úmero Gartland I - gesso.",
-          "Fratura supracondiliana do úmero Gartland III - tratamento cirúrgico de urgência."
-        ],
-        answerIndex: 3,
-        explanation: "Uma fratura supracondiliana do úmero com desvio completo (Gartland III) é uma lesão grave e instável, com alto risco de complicações neurovasculares, sendo o tratamento cirúrgico de urgência (redução e fixação com fios) a conduta padrão.",
-        tag: "Ortopedia Pediátrica"
-      },
-      {
-        id: "orto-q40",
-        text: "Homem, 45 anos, sofreu atropelamento e chega com PA 90x50mmHg, FC 118bpm. A radiografia mostra fratura da pelve. Qual seu diagnóstico e conduta imediata?",
-        options: [
-          "Fratura do acetábulo / hemotransfusão e cirurgia imediata.",
-          "Fratura do acetábulo / cirurgia imediata.",
-          "Fratura da pelve / compressão com dispositivo pneumático ou lençol.",
-          "Fratura da pelve / hemotransfusão."
-        ],
-        answerIndex: 2,
-        explanation: "Diante de uma fratura pélvica com instabilidade hemodinâmica (choque), a medida mais importante e imediata é a estabilização mecânica da pelve para fechar o anel pélvico e diminuir o sangramento. A compressão com lençol ou binder pélvico é a primeira linha.",
-        tag: "Politrauma"
-      },
-      {
-        id: "orto-q41",
-        text: "Qual exame deve ser realizado na suspeita de Artrite Séptica?",
-        options: [
-          "Ressonância Magnética",
-          "Cultura de LCR e Hemograma Completo",
-          "Hemocultura e Hemograma Completo",
-          "Cintilografia Óssea"
-        ],
-        answerIndex: 2,
-        explanation: "Na suspeita de artrite séptica, é fundamental colher hemoculturas (pois a bactéria pode estar no sangue) e um hemograma completo para avaliar os sinais sistémicos de infeção, como a leucocitose.",
-        tag: "Infecção Ortopédica"
-      },
-      {
-        id: "orto-q42",
-        text: "Quanto às fraturas do 'boxer', assinale a(s) alternativa(s) FALSA(S):",
-        options: [
-          "Desvios menores que 45° são tratados de forma conservadora com gesso.",
-          "São fraturas que acometem o colo do V metacarpo.",
-          "O mecanismo da fratura ocorre por impacto com a mão fechada (soco).",
-          "Em geral são fraturas muito desviadas e exigem tratamento cirúrgico."
-        ],
-        answerIndex: 3,
-        explanation: "A maioria das fraturas do boxer tem pouco desvio ou desvios aceitáveis, sendo de tratamento conservador. A cirurgia é reservada para casos com grande angulação ou desvio rotacional.",
-        tag: "Mão e Punho"
-      },
-      {
-        id: "orto-q43",
-        text: "Em relação às lesões medulares é correto, EXCETO:",
-        options: [
-          "São indicações do uso do corticoide intravenoso lesões medulares sem déficit neurológico e traumas ocorridos a mais de 8 horas.",
-          "Não ocorre lesão medular nas fraturas lombares baixas.",
-          "O sistema inflamatório de reparação é danoso e causa da lesão medular secundária.",
-          "Em crianças menores de 8 anos, a lesão medular pode ocorrer sem fraturas."
-        ],
-        answerIndex: 0,
-        explanation: "O uso de corticoide em altas doses (pulsoterapia) é controverso, mas quando indicado, deve ser feito nas primeiras 8 horas do trauma em pacientes COM déficit neurológico. Não há indicação sem déficit ou após 8 horas.",
-        tag: "Coluna"
-      },
-      {
-        id: "orto-q44",
-        text: "Paciente com fratura de fêmur tratada com osteossíntese rígida (placa e parafusos). Após 8 semanas, a radiografia não apresenta calo ósseo visível, mas o paciente não tem queixas. É correto afirmar que:",
-        options: [
-          "O calo ósseo torna-se visível após o remodelamento ósseo.",
-          "A ausência de calo ósseo pode ser devida a infeção ativa.",
-          "Provavelmente ele está com pseudartrose.",
-          "Ocorreu processo de consolidação óssea direta (primária)."
-        ],
-        answerIndex: 3,
-        explanation: "A fixação rígida com compressão interfragmentária promove a consolidação óssea direta (primária), onde o osso se remodela através dos canais de Havers sem a formação de um calo ósseo externo visível na radiografia.",
-        tag: "Fisiologia Óssea"
-      },
-      {
-        id: "orto-q45",
-        text: "A fase de choque medular pode dificultar a avaliação do trauma raquimedular. Para termos certeza de que o paciente não se encontra em choque, devemos:",
-        options: [
-          "Observar a contração reflexa do esfíncter anal ao tracionar a sonda de Foley (reflexo bulbocavernoso).",
-          "Observar a cada 30 minutos a sensibilidade dos braços e pernas.",
-          "Observar os sinais vitais, pois hipotensão e bradicardia confirmam o choque.",
-          "Avaliar dermátomos e miótomos para procurar o nível da lesão."
-        ],
-        answerIndex: 0,
-        explanation: "O retorno do reflexo bulbocavernoso é o sinal que marca o fim da fase de choque medular. A sua presença indica que a medula recuperou a sua atividade reflexa abaixo do nível da lesão.",
-        tag: "Coluna"
-      },
-      {
-        id: "orto-q46",
-        text: "Para ocorrer a consolidação das fraturas, é necessário:",
-        options: [
-          "Vascularização dos Fragmentos e Tratamento Cirúrgico.",
-          "Tratamento cirúrgico e Redução Precoce.",
-          "Estabilidade Mecânica e Vascularização dos Fragmentos.",
-          "Redução precoce e Estabilidade Mecânica."
-        ],
-        answerIndex: 2,
-        explanation: "Os dois pilares fundamentais para a consolidação de qualquer fratura são um ambiente mecânico estável (seja por gesso ou cirurgia) e um suprimento sanguíneo adequado (biologia) para levar as células e nutrientes necessários.",
-        tag: "Fisiologia Óssea"
-      },
-      {
-        id: "orto-q47",
-        text: "A plegia flácida arreflexa que ocorre imediatamente após o trauma raquimedular pode indicar a presença do choque medular. Sobre essa condição podemos AFIRMAR:",
-        options: [
-          "Decorre de lesão das cadeias simpáticas cervicais.",
-          "Cursa com extremidades quentes e hiperemiadas.",
-          "O retorno precoce do reflexo bulbocavernoso indica bom prognóstico.",
-          "Pode ocorrer, inclusive, em secções completas da medula espinhal."
-        ],
-        answerIndex: 3,
-        explanation: "O choque medular é um fenómeno fisiológico de 'desligamento' temporário da medula abaixo da lesão, e ocorre tanto em lesões completas como incompletas. Não tem relação direta com o prognóstico final.",
-        tag: "Coluna"
-      },
-      {
-        id: "orto-q48",
-        text: "Criança de 6 anos foi puxada pelo braço e agora o mantém junto ao corpo, pronado e sem o mover. A radiografia é normal. Qual a estrutura anatómica acometida?",
-        options: [
-          "Ligamento colateral radial",
-          "Ligamento anular da cabeça do rádio",
-          "Cápsula articular do cotovelo",
-          "Placa de crescimento do úmero distal"
-        ],
-        answerIndex: 1,
-        explanation: "Este é o quadro clássico da pronação dolorosa, onde uma tração súbita no braço da criança causa a subluxação da cabeça do rádio, que desliza para fora do ligamento anular que a deveria conter.",
-        tag: "Ortopedia Pediátrica"
-      },
-      {
-        id: "orto-q49",
-        text: "Na luxação do joelho, qual a lesão associada potencialmente grave e qual exame pedir para o seu diagnóstico precoce?",
-        options: [
-          "Trombose venosa profunda / ecodoppler venoso.",
-          "Lesão meniscal / tomografia computadorizada.",
-          "Lesão da artéria poplítea / arteriografia ou angio-TC.",
-          "Lesão do ligamento cruzado anterior / ressonância magnética."
-        ],
-        answerIndex: 2,
-        explanation: "A luxação do joelho é uma lesão de altíssima energia com alto risco de lesão da artéria poplítea, que passa posteriormente à articulação. A avaliação vascular com arteriografia ou angio-TC é mandatória para descartar uma lesão que pode levar à amputação.",
-        tag: "Trauma"
-      },
-      {
-        id: "orto-q50",
-        text: "Numa radiografia da coluna lombar observa-se uma lesão óssea que acomete as três colunas de Dennis em L1. Qual a melhor conduta?",
-        options: [
-          "Colete anatómico e carga parcial com muletas.",
-          "Permanecer com prancha até consolidação óssea.",
-          "Tratamento cirúrgico com instrumentação e estabilização.",
-          "Fisioterapia motora com treino de marcha."
-        ],
-        answerIndex: 2,
-        explanation: "Uma fratura que acomete as três colunas de Dennis é, por definição, instável. O tratamento para fraturas instáveis da coluna vertebral é cirúrgico, visando a estabilização do segmento para proteger as estruturas neurais e permitir a mobilização precoce.",
-        tag: "Coluna"
-      },
-      {
-        id: "orto-q51",
-        text: "Artrite Séptica pode ser uma complicação de Osteomielite em quais sítios anatómicos?",
-        options: [
-          "Cotovelo, Quadril e Joelho",
-          "Ombro, Quadril e Tornozelo",
-          "Ombro, Cotovelo e Joelho",
-          "Cotovelo, Joelho e Tornozelo"
-        ],
-        answerIndex: 1,
-        explanation: "A infeção pode passar do osso para a articulação (artrite séptica) quando a metáfise óssea (local mais comum da osteomielite em crianças) é intra-articular. Isto ocorre no ombro, quadril, cotovelo e tornozelo.",
-        tag: "Infecção Ortopédica"
-      },
-      {
-        id: "orto-q52",
-        text: "Paciente de 5 anos com febre de 39 graus, dor puntiforme na coxa direita próxima ao joelho, com piora aos movimentos. Qual o provável diagnóstico?",
-        options: [
-          "Artrite Séptica",
-          "Osteomielite Hematogénica Aguda",
-          "Tumor Ósseo primário",
-          "Osteomielite Crónica"
-        ],
-        answerIndex: 1,
-        explanation: "A dor óssea localizada e intensa, associada a febre e sinais sistémicos numa criança, é a apresentação clássica da osteomielite hematogénica aguda, que afeta preferencialmente a metáfise dos ossos longos.",
-        tag: "Infecção Ortopédica"
-      },
-      {
-        id: "orto-q53",
-        text: "Na traumatologia, qual termo define corretamente uma lesão ligamentar sem perda da congruência articular?",
-        options: [
-          "Contusão",
-          "Luxação",
-          "Estiramento muscular",
-          "Entorse"
-        ],
-        answerIndex: 3,
-        explanation: "A entorse é, por definição, uma lesão dos ligamentos de uma articulação causada por um movimento brusco, sem que ocorra a perda de contacto entre as superfícies articulares.",
-        tag: "Trauma"
-      },
-      {
-        id: "orto-q54",
-        text: "Paciente de 29 anos sofreu trauma no tornozelo. A radiografia mostra fratura da base do V metatarso. Qual o diagnóstico e tratamento?",
-        options: [
-          "Fratura-luxação de Lisfranc / Cirurgia imediata",
-          "Fratura da tuberosidade do V metatarso / Gesso ou Robofoot",
-          "Fratura de Jones / Cirurgia para fixação",
-          "Fratura por stress / Repouso e carga parcial"
-        ],
-        answerIndex: 1,
-        explanation: "A fratura por avulsão da tuberosidade do V metatarso é comum após entorses de tornozelo e geralmente é tratada de forma conservadora com imobilização (gesso ou bota robofoot) e carga conforme a dor.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q55",
-        text: "Paciente de 32 anos com fratura-luxação posterior do quadril/acetábulo. Qual afirmação é correta?",
-        options: [
-          "O paciente apresenta déficit do nervo femoral.",
-          "A tomografia é fundamental para avaliar fragmentos intra-articulares.",
-          "Todas as fraturas do acetábulo devem ser tratadas com cirurgia.",
-          "A luxação posterior do quadril é a mais rara."
-        ],
-        answerIndex: 1,
-        explanation: "Após a redução de uma luxação do quadril associada a uma fratura do acetábulo, a tomografia computadorizada é essencial para avaliar a congruência articular, a presença de fragmentos soltos e planear o tratamento cirúrgico definitivo.",
-        tag: "Trauma"
-      },
-      {
-        id: "orto-q56",
-        text: "Paciente de 40 anos com fratura do 1/3 distal do rádio sem desvio, tratada com gesso. No terceiro dia, retorna com dor desproporcional e palidez nos dedos. Qual a hipótese?",
-        options: [
-          "Trombose venosa profunda",
-          "Osteomielite aguda",
-          "Síndrome compartimental",
-          "Pseudoartrose hipertrófica"
-        ],
-        answerIndex: 2,
-        explanation: "A dor desproporcional à lesão, especialmente em um membro imobilizado com gesso circular, é o sinal mais precoce e importante da Síndrome Compartimental, uma emergência que ameaça a viabilidade do membro.",
-        tag: "Complicações"
-      },
-      {
-        id: "orto-q57",
-        text: "Homem de 27 anos, vítima de acidente, chega à emergência com Glasgow 15, PA 70x30mmHg e fratura exposta da tíbia. Seguindo o ATLS, qual a sua primeira ação?",
-        options: [
-          "Reduzir a fratura exposta.",
-          "Mandar para a radiografia da bacia.",
-          "Verificar se as vias aéreas estão livres e se o colar cervical está colocado.",
-          "Fazer avaliação neurológica completa."
-        ],
-        answerIndex: 2,
-        explanation: "O protocolo ATLS (Advanced Trauma Life Support) preconiza a abordagem ABCDE. A prioridade máxima é sempre garantir a via aérea (A - Airway) e a estabilização da coluna cervical.",
-        tag: "Politrauma"
-      },
-      {
-        id: "orto-q58",
-        text: "Paciente de 38 anos com fratura cominutiva de alta energia da diáfise do úmero por projétil de arma de fogo. Qual a melhor afirmação sobre o caso?",
-        options: [
-          "Deve ser tratada com fixação externa de urgência e pode ter problemas de consolidação.",
-          "Deve ser tratada com placa e parafusos e tem bom potencial de consolidação.",
-          "É uma fratura segmentar e não deve ser operada imediatamente.",
-          "É uma fratura de baixa energia e deve ser tratada por estabilidade relativa."
-        ],
-        answerIndex: 0,
-        explanation: "Fraturas por projétil de arma de fogo são de alta energia, com grande dano às partes moles e cominuição óssea. A fixação externa é uma excelente opção para estabilização inicial (controlo de danos), e o alto grau de lesão biológica aumenta o risco de complicações na consolidação.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q59",
-        text: "Paciente de 22 anos com trauma cervical, paraplegia flácida e nível neurológico em C6. O exame neurológico desta raiz envolve:",
-        options: [
-          "Flexão do punho e sensibilidade do dedo mínimo.",
-          "Extensão do cotovelo e sensibilidade do dedo médio.",
-          "Extensão do punho e sensibilidade do polegar.",
-          "Flexão dos dedos e sensibilidade da face medial do antebraço."
-        ],
-        answerIndex: 2,
-        explanation: "A raiz nervosa C6 é responsável pela motricidade da extensão do punho e pela sensibilidade do dermátomo que inclui a face lateral do antebraço e o polegar.",
-        tag: "Coluna"
-      },
-      {
-        id: "orto-q60",
-        text: "Lutador de Judô sofre queda sobre o ombro. Ao exame, equimose, edema e sinal da 'tecla de piano' positivo. Qual afirmação é VERDADEIRA?",
-        options: [
-          "A lesão causou ruptura dos ligamentos acromioclaviculares e coracoclaviculares.",
-          "O paciente necessita de redução incruenta de urgência com a manobra de Stimson.",
-          "O diagnóstico é clínico, dispensando exames complementares.",
-          "O tratamento cirúrgico é essencial para um bom resultado funcional."
-        ],
-        answerIndex: 0,
-        explanation: "A luxação acromioclavicular com deformidade significativa (sinal da tecla) indica a rutura tanto dos ligamentos acromioclaviculares quanto dos ligamentos coracoclaviculares (conoide e trapezoide), que são os principais estabilizadores verticais da clavícula.",
-        tag: "Ombro"
-      },
-      {
-        id: "orto-q61",
-        text: "Paciente de 25 anos com fratura do terço médio do escafóide sem desvio. Qual a conduta mais recomendável para este paciente, que é dentista e atleta?",
-        options: [
-          "Imobilização gessada sem incluir o polegar.",
-          "Fixação por parafuso percutâneo para facilitar o retorno às atividades.",
-          "Imobilização com tala gessada incluindo o polegar.",
-          "Fixação aberta com parafuso interfragmentário."
-        ],
-        answerIndex: 1,
-        explanation: "Em pacientes jovens e ativos ('alta demanda'), mesmo em fraturas sem desvio do escafóide, o tratamento cirúrgico com parafuso percutâneo é uma excelente opção, pois permite uma reabilitação mais rápida e um retorno precoce às atividades, além de diminuir o risco de pseudartrose.",
-        tag: "Mão e Punho"
-      },
-      {
-        id: "orto-q62",
-        text: "Paciente de 32 anos com fratura diafisária do úmero e incapacidade de realizar extensão do punho. Qual a conduta mais apropriada?",
-        options: [
-          "Tratamento cirúrgico absoluto devido à lesão nervosa.",
-          "Tratamento conservador, pois a lesão do nervo ulnar costuma recuperar.",
-          "Tratamento conservador inicial, pois a lesão do nervo radial costuma ser uma neuropraxia e recupera espontaneamente.",
-          "Tratamento cirúrgico devido à alta energia do trauma."
-        ],
-        answerIndex: 2,
-        explanation: "A lesão do nervo radial é a mais comum nas fraturas da diáfise do úmero. Na maioria dos casos, trata-se de uma neuropraxia (lesão funcional sem dano estrutural) com alta taxa de recuperação espontânea. Por isso, a conduta inicial é geralmente conservadora, com observação da função nervosa.",
-        tag: "Fraturas"
-      },
-      {
-        id: "orto-q63",
-        text: "Paciente de 2 anos com dor súbita no braço esquerdo após ser puxada pela mãe. Mantém o membro junto ao corpo, com antebraço pronado. A radiografia é normal. Qual o diagnóstico?",
-        options: [
-          "Fratura em galho verde",
-          "Pronação Dolorosa",
-          "Ruptura do ligamento anular",
-          "Sinovite transitória de cotovelo"
-        ],
-        answerIndex: 1,
-        explanation: "Este é o quadro clínico e mecanismo de trauma clássico da Pronação Dolorosa, ou subluxação da cabeça do rádio, comum em crianças pequenas após tração do membro superior.",
-        tag: "Ortopedia Pediátrica"
-      },
-      {
-        id: "orto-q64",
-        text: "Em relação às características da osteomielite crónica, qual das seguintes afirmações está correta?",
-        options: [
-          "É uma emergência com alto risco de sepse e morte.",
-          "O VHS é o melhor exame para acompanhamento da resposta ao tratamento.",
-          "É caracterizada por necrose, sequestro ósseo e formação de fístulas.",
-          "As alterações radiográficas são precoces e incluem apenas rarefação óssea."
-        ],
-        answerIndex: 2,
-        explanation: "A osteomielite crónica é um processo de longa duração caracterizado pela presença de osso necrótico (sequestro ósseo) que atua como um corpo estranho, perpetuando a infeção e podendo drenar para a pele através de fístulas.",
-        tag: "Infecção Ortopédica"
-      },
-      {
-        id: "orto-q65",
-        text: "Qual das seguintes afirmações descreve corretamente a fratura em 'galho verde', típica em crianças?",
-        options: [
-          "Desvio da cortical óssea sem nenhuma linha visível de fratura.",
-          "Fratura que atravessa a placa de crescimento.",
-          "Fratura de uma cortical, mantendo a outra cortical íntegra, mas angulada.",
-          "Fratura cominutiva devido ao periósteo menos espesso."
-        ],
-        answerIndex: 2,
-        explanation: "A fratura em 'galho verde' ocorre devido à maior flexibilidade do osso infantil. Uma cortical fratura enquanto a oposta apenas se deforma plasticamente (dobra), semelhante a um galho verde a ser quebrado.",
-        tag: "Ortopedia Pediátrica"
-      }
-    ]
-  },
-  // Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
-// Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
-// Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
-// Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
-// Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
-// Cole este objeto dentro do array DEFAULT_DECKS em data/defaultDecks.ts
+export const DEFAULT_DECKS: Deck[] = [
 
 {
   id: "prova-suseme-2024-emergencia-cti-obstetricia",
@@ -7008,9 +4192,2823 @@ export const DEFAULT_DECKS = [
         answerIndex: 2,
         explanation: "A descrição é clássica de Tungíase (bicho-de-pé), causada pela penetração da fêmea da pulga Tunga penetrans. O tratamento consiste na remoção cuidadosa e asséptica do parasita.",
         tag: "Dermatozoonoses"
+         }
+    ]
+  },
+  {
+        id: "preset-neurologia-1",
+        name: "  Estácio - M7 - PR1 - Neurologia",
+        questions: [
+  
+    // Cefaleias
+      {
+        id: "neuro-q1",
+        text: "Uma paciente de 18 anos, sem comorbidades, procurou a emergência com queixa de cefaleia. Ela referia uma cefaleia de forte intensidade (\"a pior dor da vida\"), súbita, associada a fotofobia, náuseas e vômitos. Nega outros sintomas associados. Ao exame: acordada, interagindo. Força normal em membros. Coordenação normal. Sensibilidade superficial e profunda preservada. Pupilas isofotorreagentes. Rigidez de nuca. Qual a alternativa correta em relação ao provável diagnóstico e conduta?",
+        options: [
+          "Enxaqueca: analgésicos ou sumatriptano subcutâneo",
+          "Cefaleia em salvas: oxigênio ou sumatriptano subcutâneo",
+          "Hemorragia subaracnóidea: angiotomografia computadorizada do crânio",
+          "Hemicrania paroxística: Indometacina"
+        ],
+        answerIndex: 2,
+        explanation: "Cefaleia súbita de forte intensidade (\"thunderclap headache\") com rigidez de nuca é o quadro clássico de Hemorragia Subaracnóidea, exigindo neuroimagem de emergência.",
+        tag: "Cefaleias"
       },
+      {
+        id: "neuro-q2",
+        text: "Um homem de 30 anos, hipertenso leve, apresenta há 8 anos episódios mensais de cefaléia pulsátil. de forte intensidade, acompanhada de vômitos e precedida de alteração visual (fortificações). Sua mãe e irmã tem quadro semelhante e seu exame físico/neurológico é normal. O provável diagnóstico é:",
+        options: [
+          "Ruptura de aneurisma",
+          "Enxaqueca",
+          "Cefaleia tipo tensional",
+          "Cefaléia em salvas"
+        ],
+        answerIndex: 1,
+        explanation: "Cefaleia pulsátil, unilateral, com sintomas associados (vômitos), aura visual (fortificações) e história familiar positiva são características marcantes da enxaqueca com aura.",
+        tag: "Cefaleias"
+      },
+      {
+        id: "neuro-q3",
+        text: "Mulher, 25 anos, apresenta há 6 anos episódios ocasionais de cefaléia em pressão, em capacete, de moderada intensidade, com 3 dias de duração em média, sem náuseas, vômitos e/ou alteração visual. Nega história familiar. O provável diagnóstico é:",
+        options: [
+          "Cefaléia hípnica",
+          "Enxaqueca",
+          "Cefaleia tipo tensional",
+          "Cefaléia em salvas"
+        ],
+        answerIndex: 2,
+        explanation: "A descrição de uma dor em pressão ou \"capacete\", bilateral, de intensidade leve a moderada e sem os sintomas associados (náuseas, fotofobia) é a apresentação típica da Cefaleia do Tipo Tensional.",
+        tag: "Cefaleias"
+      },
+      {
+        id: "neuro-q4",
+        text: "São utilizadas para profilaxia de enxaqueca as substâncias abaixo EXCETO:",
+        options: ["Topiramato", "Flunarizina", "Clonazepam", "Amitriptilina"],
+        answerIndex: 2,
+        explanation: "Topiramato, flunarizina e amitriptilina são fármacos de primeira linha para a profilaxia da enxaqueca. Clonazepam, um benzodiazepínico, não é uma escolha padrão para este fim.",
+        tag: "Cefaleias"
+      },
+      {
+        id: "neuro-q5",
+        text: "As cefaleias podem ser primarias ou secundarias. Na suspeita de cefaleia secundária, exames de imagem devem ser realizados para a investigação adequada. Assinale a alternativa em que todas as situações são justificativas para exames de neuroimagem em pacientes com cefaleia.",
+        options: [
+          "Paciente imunossuprimido/ dor latejante",
+          "Náuseas/fotofobia",
+          "Fonofobia/ refratariedade ao tratamento",
+          "Instalação súbita/ alterações visuais"
+        ],
+        answerIndex: 3,
+        explanation: "A instalação súbita (\"thunderclap\") e a presença de alterações neurológicas focais (como alterações visuais) são sinais de alerta (\"red flags\") que exigem investigação com neuroimagem para descartar causas secundárias graves.",
+        tag: "Cefaleias"
+      },
+      {
+        id: "neuro-q6",
+        text: "Em uma paciente com diagnóstico de enxaqueca com aura, qual das medicações abaixo deve ser evitada?",
+        options: [
+          "Pílula anticoncepcional com progestágeno",
+          "Levotiroxina",
+          "Ácido valpróico",
+          "Terapia de reposição hormonal com estrogênio"
+        ],
+        answerIndex: 3,
+        explanation: "O uso de contraceptivos ou terapia de reposição hormonal contendo estrogênio aumenta o risco de eventos isquêmicos (AVC) em pacientes com enxaqueca com aura e, portanto, deve ser evitado.",
+        tag: "Cefaleias"
+      },
+      {
+        id: "neuro-q7",
+        text: "Na cefaleia em salvas, o tratamento profilático e agudo são, respectively:",
+        options: [
+          "Oxigênio e verapamil",
+          "Verapamil e indometacina",
+          "Verapamil e oxigênio",
+          "Oxigênio e lamotrigina"
+        ],
+        answerIndex: 2,
+        explanation: "O tratamento agudo da crise de cefaleia em salvas é feito com oxigênio a 100% ou sumatriptano. A profilaxia (tratamento para evitar as crises) é feita principalmente com verapamil.",
+        tag: "Cefaleias"
+      },
+      {
+        id: "neuro-q8",
+        text: "Paciente idosa, 70 anos, procura a emergência com queixa de cefaleia em região temporal direita há 1 mês, pior há 1 dia. Nega irradiação da dor. Foram solicitados exames laboratoriais e de imagem. Marque a alternativa correta quanto ao possível diagnóstico.",
+        options: [
+          "VHS é um exame desnecessário nesse caso, pois seu valor não altera nesse caso",
+          "O exame de imagem solicitado e o doppler de artéria temporal, porém não há sinais característicos que sugiram o diagnóstico",
+          "O tratamento deve ser iniciado com corticoide e a resposta esperada é excelente",
+          "Os jovens também são acometidos com frequência"
+        ],
+        answerIndex: 2,
+        explanation: "O quadro de cefaleia temporal em paciente idosa levanta a forte suspeita de Arterite Temporal (ou de Células Gigantes). Esta é uma emergência reumatológica, e o tratamento com altas doses de corticoide deve ser iniciado imediatamente para prevenir a perda visual, com excelente resposta da dor.",
+        tag: "Cefaleias"
+      },
+      // Doença de Parkinson e Parkinsonismo
+      {
+        id: "neuro-q9",
+        text: "Paciente masculino, advogado, 66 anos, refere que há 2 anos recebeu diagnóstico de doença de Parkinson. Fez uso de múltiplos esquemas medicamentosos, incluindo levodopa, porém com pouco resultado. O quadro se iniciou há cerca de 4 anos com quedas frequentes. Ao exame: Rigidez em roda denteada (axial maior que em membros) e bradicinesia bilaterais, sem tremor, retrocólis e paralisia ao olhar vertical para baixo. Considerando a evolução e o quadro clínico acima, o diagnóstico mais provável deste paciente é:",
+        options: [
+          "Degeneração cortico-basal",
+          "Doença de Alzheimer",
+          "Paralisia supranuclear progressiva",
+          "Atrofia de múltiplos sistemas"
+        ],
+        answerIndex: 2,
+        explanation: "Um quadro de parkinsonismo com quedas precoces, pouca resposta à levodopa e, principalmente, a paralisia do olhar vertical para baixo, são sinais clássicos da Paralisia Supranuclear Progressiva (PSP), uma forma de parkinsonismo atípico.",
+        tag: "Parkinsonismo"
+      },
+      {
+        id: "neuro-q10",
+        text: "Assinale a alternativa correta referente a doença de Parkinson:",
+        options: [
+          "Os sinais são assimétricos no início da fase motora",
+          "A bradicinesia aparece após 10 anos do início da fase motora",
+          "O sinal da cauda da andorinha está presente na ressonância magnética de crânio de 3T",
+          "O tratamento medicamentoso deve ser suspenso imediatamente após o tratamento cirúrgico com Deep Brain Stimulation (DBS)"
+        ],
+        answerIndex: 0,
+        explanation: "Uma das características cardinais da Doença de Parkinson é o início assimétrico dos sintomas motores (tremor, rigidez e/ou bradicinesia), geralmente começando em um membro de um lado do corpo.",
+        tag: "Parkinsonismo"
+      },
+      {
+        id: "neuro-q11",
+        text: "Paciente feminino, 54 anos, com diagnóstico de doença de Parkinson há 7 anos, em uso de levodopa, pramipexol e escitalopram. Queixa-se de movimentos involuntários intensos e exaustivos cerca de 1h e 30min após a tomada da 3a e 4a doses de levodopa. Ao exame físico observa-se movimentos generalizados coreiformes. Qual a provável causa da intercorrência apresentada pela paciente?",
+        options: [
+          "Efeito adverso do escitalopram",
+          "Transtorno somatoforme",
+          "Discinesias",
+          "Crises epilépticas mioclônicas"
+        ],
+        answerIndex: 2,
+        explanation: "Os movimentos involuntários (coreiformes) que ocorrem no pico da dose da levodopa são uma complicação motora clássica do tratamento crônico da Doença de Parkinson, conhecidos como discinesias de pico de dose.",
+        tag: "Parkinsonismo"
+      },
+      {
+        id: "neuro-q12",
+        text: "É a principal causa de demência:",
+        options: [
+          "Doença de Parkinson",
+          "Doença de Huntington",
+          "Doença de Alzheimer",
+          "Demência vascular"
+        ],
+        answerIndex: 2,
+        explanation: "A Doença de Alzheimer é a causa mais comum de demência em todo o mundo, respondendo pela maioria dos casos em idosos.",
+        tag: "Demências"
+      },
+      {
+        id: "neuro-q13",
+        text: "Homem, 29 anos, diagnosticado com depressão, notou há 10 meses lentidão, tremor bilateral em mãos e alteração na fala. Exame neurológico: Hipomimia facial, disartria, bradicinesia e rigidez em roda denteada simétricas, tremor de repouso bilateral. Exame laboratorial revelou leve aumento de transaminases séricas. Considerando o diagnóstico mais provável, assinale a alternativa correta:",
+        options: [
+          "Trata-se de um quadro de parkinsonismo medicamentoso",
+          "O nível sérico de ceruloplasmina costuma ser baixo",
+          "Na ressonância magnética de crânio teremos o sinal do beija-flor (atrofia mesencefálica)",
+          "A hipotensão postural é um achado frequente"
+        ],
+        answerIndex: 1,
+        explanation: "Parkinsonismo em paciente jovem (<40-50 anos) associado a alterações hepáticas (aumento de transaminases) levanta forte suspeita da Doença de Wilson. Nesta doença, há um distúrbio no metabolismo do cobre, e o nível sérico de ceruloplasmina (a proteína que transporta o cobre) é caracteristicamente baixo.",
+        tag: "Parkinsonismo"
+      },
+      {
+        id: "neuro-q14",
+        text: "Paciente masculino, 63 anos, com queixa de dificuldade de movimentar o braço D há 3 meses (dificuldade de abotoar camisa, fazer a barba e escrever). Ao exame nota-se diminuição do piscar dos olhos, lentificação dos movimentos do MSD e leve hipertonia em dimídio direito. Qual o diagnóstico mais provável?",
+        options: [
+          "Síndrome parkinsoniana",
+          "AVC isquêmico em território de artéria cerebral média esquerda",
+          "Processo expansivo intracraniano no hemisfério cerebral esquerdo",
+          "AVC isquêmico de tronco cerebral"
+        ],
+        answerIndex: 0,
+        explanation: "A presença de lentificação de movimentos (bradicinesia) e hipertonia (rigidez), com início assimétrico (dimídio direito), são os achados clínicos essenciais para o diagnóstico de uma síndrome parkinsoniana.",
+        tag: "Parkinsonismo"
+      },
+      // AVE
+      {
+        id: "neuro-q15",
+        text: "Na trombose de origem da cerebral média:",
+        options: [
+          "Pode não ocorrer na afasia motora",
+          "Pode ocorrer afasia motora e sensorial acompanhada de hemianopsia, hemihiopoestesia e hemiparesia",
+          "Não ocorre hemianopsia",
+          "Pode não ocorrer afasia sensorial"
+        ],
+        answerIndex: 1,
+        explanation: "A artéria cerebral média (ACM) irriga uma vasta área do cérebro. Sua oclusão no hemisfério dominante pode causar um déficit completo, incluindo afasia (motora e sensorial), hemiparesia, hemi-hipoestesia e hemianopsia contralateral.",
+        tag: "AVE"
+      },
+      {
+        id: "neuro-q16",
+        text: "Paciente de 68 anos, hipertenso e diabético, é admitido às 6h45 com disfasia, disartria e hemiparesia à direita. Última vez visto bem foi à 1h15. TC de crânio sem contraste mostrou hiperdensidade em topografia de artéria cerebral média à esquerda e angio-TC mostrou falha de opacificação proximal. Em relação ao caso, assinale a alternativa CORRETA:",
+        options: [
+          "Trata-se de um acidente vascular hemorrágico.",
+          "Trata-se de um acidente vascular isquêmico, deve ser submetido à trombólise venosa.",
+          "Trata-se de um acidente vascular isquêmico, deve ser submetido a trombectomia mecânica.",
+          "Trata-se de uma hemorragia subaracnóide."
+        ],
+        answerIndex: 2,
+        explanation: "O sinal da artéria cerebral média hiperdensa na TC sem contraste e a falha de enchimento na angio-TC confirmam um AVC isquêmico por oclusão de grande vaso. Pela janela terapêutica e gravidade, a trombectomia mecânica é o tratamento de escolha.",
+        tag: "AVE"
+      },
+      {
+        id: "neuro-q17",
+        text: "Paciente de 72 anos, hipertenso e dislipidêmico, admitido com hemiplegia esquerda, heminegligência e desvio do olhar para direita. TC de crânio mostrou área hipodensa extensa e hiperdensidade em artéria cerebral média direita. Angio-TC evidenciou oclusão proximal da mesma artéria. Qual a conduta CORRETA?",
+        options: [
+          "Manter a pressão arterial sistólica abaixo de 140mmHg.",
+          "Submeter à trombólise venosa com alteplase.",
+          "Contactar a neurocirurgia para realização de trombectomia mecânica.",
+          "Iniciar anticoagulação com heparina."
+        ],
+        answerIndex: 2,
+        explanation: "Assim como no caso anterior, trata-se de um AVC isquêmico com oclusão de grande vaso, fora da janela de trombólise venosa. A conduta indicada é a trombectomia mecânica.",
+        tag: "AVE"
+      },
+      {
+        id: "neuro-q18",
+        text: "Paciente de 68 anos, hipertenso e diabético, é admitido com disartria e hemiparesia à esquerda. TC de crânio sem contraste mostrou hiperdensidade em núcleos da base e cápsula interna à direita. Em relação ao caso, assinale a alternativa CORRETA:",
+        options: [
+          "Manter o paciente hipertenso, com PAS acima de 160mmHg.",
+          "Controlar a pressão arterial (PAS em torno de 140mmHg) e contactar a neurocirurgia.",
+          "Submeter à trombólise venosa com alteplase.",
+          "Submeter à trombectomia mecânica."
+        ],
+        answerIndex: 1,
+        explanation: "A hiperdensidade na TC sem contraste indica um Acidente Vascular Cerebral Hemorrágico (AVCH). O tratamento agudo consiste no controle rigoroso da pressão arterial para evitar a expansão do hematoma e na avaliação neurocirúrgica.",
+        tag: "AVE"
+      },
+      {
+        id: "neuro-q19",
+        text: "Paciente de 69 anos, hipertenso e diabético, é admitido com disfasia, disartria e hemiparesia à direita, acompanhados de cefaleia súbita e intensa. TC sem contraste mostrou hiperdensidade em cisternas basais e ventrículos. Em relação ao caso, assinale a alternativa CORRETA:",
+        options: [
+          "Contactar neurocirurgia e realizar angio-TC ou angiografia para investigar aneurisma.",
+          "Submeter à trombólise venosa com alteplase.",
+          "Submeter à terapia combinada de trombectomia e trombólise.",
+          "Iniciar AAS 300mg e estatina."
+        ],
+        answerIndex: 0,
+        explanation: "A presença de sangue (hiperdensidade) nas cisternas basais é característica de Hemorragia Subaracnóidea (HSA), cuja principal causa é a ruptura de um aneurisma cerebral. A investigação vascular com angio-TC ou angiografia e a avaliação neurocirúrgica são urgentes.",
+        tag: "AVE"
+      },
+      {
+        id: "neuro-q20",
+        text: "Paciente de 60 anos, diabético e hipertenso, apresentou cefaleia, vômitos e torpor, sendo diagnosticado com AVC. Sobre os AVCs é correto afirmar:",
+        options: [
+          "Os AVCs hemorrágicos são mais frequentes que os isquêmicos.",
+          "Não existe uma janela terapêutica para o uso de trombolíticos nos AVC Isquêmicos.",
+          "É contra-indicado o uso de trombolíticos nos acidentes vasculares hemorrágicos.",
+          "A hipertensão arterial representa o menor fator de risco para os AVC isquêmicos."
+        ],
+        answerIndex: 2,
+        explanation: "A afirmação correta é que o uso de trombolíticos (que dissolvem coágulos) é absolutamente contraindicado em AVCs hemorrágicos, pois agravaria o sangramento. Os AVCs isquêmicos são os mais frequentes.",
+        tag: "AVE"
+      },
+      {
+        id: "neuro-q21",
+        text: "A principal causa de AVC isquêmico é:",
+        options: [
+          "Embolia",
+          "Trombose associada à crise hipertensiva",
+          "Diabetes, dislipidemia e hipertensão arterial",
+          "Trombose associada à crise hipertensiva, dislipidemia e diabetes"
+        ],
+        answerIndex: 2,
+        explanation: "A principal causa subjacente do AVC isquêmico é a aterosclerose, cujo desenvolvimento é impulsionado pelos principais fatores de risco vasculares: diabetes, dislipidemia e hipertensão arterial.",
+        tag: "AVE"
+      },
+      {
+        id: "neuro-q22",
+        text: "O envolvimento do III nervo craniano de modo isolado sugere:",
+        options: [
+          "Angioma no território cerebral do nervo",
+          "Aneurisma do sistema vértebro-basilar",
+          "Aneurisma da artéria carótida ou da comunicante posterior",
+          "AVC isquêmico no território cerebral do nervo"
+        ],
+        answerIndex: 2,
+        explanation: "A paralisia isolada do III nervo craniano (oculomotor), especialmente quando envolve a pupila (midríase), é frequentemente causada pela compressão do nervo por um aneurisma da artéria comunicante posterior ou da carótida interna.",
+        tag: "AVE"
+      },
+      // Epilepsia e Crises Convulsivas
+      {
+        id: "neuro-q23",
+        text: "Paciente feminino 65 anos com hipotireoidismo e depressão, refere episódios de perda de consciência precedidos por ouvir uma música em sua cabeça. Recupera-se lentamente, com confusão e dor de cabeça. Testemunhas referem abalos musculares. Qual o provável diagnóstico?",
+        options: [
+          "Doença psiquiátrica- pseudocrise",
+          "Demências por corpúsculos de Lewy",
+          "Crise epiléptica focal para bilateral tônico-clônica",
+          "Ataques isquêmicos transitórios"
+        ],
+        answerIndex: 2,
+        explanation: "A experiência sensorial (ouvir música) antes da perda de consciência é uma aura, característica de uma crise epiléptica focal. A evolução com abalos e confusão pós-evento (período pós-ictal) indica uma generalização para tônico-clônica bilateral.",
+        tag: "Epilepsia"
+      },
+      {
+        id: "neuro-q24",
+        text: "Paciente masculino de 68 anos com atrofia de múltiplos sistemas, apresentou perda de consciência enquanto almoçava, precedida por mal-estar e palpitações. Recuperou a consciência em poucos segundos após ser colocado em decúbito. Durante o evento ocorreram breves abalos musculares e perda de urina. Qual o provável diagnóstico?",
+        options: [
+          "Crise epiléptica disautonômica",
+          "Síncope",
+          "Ataque isquêmico transitório",
+          "Crise epiléptica focal para bilateral tônico-clônica"
+        ],
+        answerIndex: 1,
+        explanation: "O gatilho postural, os pródromos (mal-estar, palpitações) e a recuperação rápida após o decúbito são características de síncope. Abalos musculares (mioclonias da síncope) e liberação esfincteriana podem ocorrer devido à hipoperfusão cerebral e não indicam necessariamente uma crise epiléptica.",
+        tag: "Epilepsia"
+      },
+      {
+        id: "neuro-q25",
+        text: "Paciente de 49 anos com epilepsia e Parkinson, refere que à noite apresenta episódios de movimentação intensa durante o sono (lutas, fugas, gritos), sem se lembrar no dia seguinte. Qual a melhor conduta?",
+        options: [
+          "Solicitar RM de crânio e EEG para definir melhor o quadro epiléptico",
+          "Suspender pramipexol, pois distúrbios de comportamento são efeitos adversos da droga",
+          "Solicitar nivel sérico de levetiracetam",
+          "Solicitar polissonografia devido suspeita de distúrbio comportamental do sono REM"
+        ],
+        answerIndex: 3,
+        explanation: "A descrição de sonhos vívidos atuados com movimentação vigorosa é a apresentação clássica do Distúrbio Comportamental do Sono REM, uma parassonia frequentemente associada a doenças neurodegenerativas como a Doença de Parkinson. O diagnóstico é confirmado pela polissonografia.",
+        tag: "Epilepsia"
+      },
+      {
+        id: "neuro-q26",
+        text: "Marcia, 26 anos, apresentou sua segunda crise convulsiva tônico-clônica generalizada no último ano. Não faz uso de medicação. Qual a conduta correta:",
+        options: [
+          "Acompanhar, pois trata-se de crise isolada.",
+          "Solicitar exames (RM, EEG, laboratório) e iniciar medicação adequada.",
+          "Solicitar EEG e iniciar fenobarbital.",
+          "Solicitar EEG, TC de crânio e iniciar fenitoína."
+        ],
+        answerIndex: 1,
+        explanation: "Ocorrência de duas ou mais crises epilépticas não provocadas estabelece o diagnóstico de epilepsia. A conduta adequada é realizar uma investigação etiológica completa e iniciar terapia antiepiléptica apropriada.",
+        tag: "Epilepsia"
+      },
+      {
+        id: "neuro-q27",
+        text: "Jonas, 3 anos, com febre de 39°C devido a faringotonsilite, apresentou crise tônico-clônica generalizada de 3 minutos de duração. Ao chegar à emergência, já estava com comportamento normal. Qual a conduta correta:",
+        options: [
+          "Solicitar EEG, TC de crânio e punção lombar.",
+          "Afirmar que se trata de epilepsia e iniciar fenobarbital.",
+          "Tranquilizar o pai, afirmando que se trata de uma crise convulsiva febril simples.",
+          "Internar a criança para investigação completa."
+        ],
+        answerIndex: 2,
+        explanation: "O quadro é de uma crise febril simples: idade típica (6m-5a), generalizada, curta (<15min), sem recorrência em 24h e com recuperação completa. A conduta é expectante, com antitérmicos e orientação aos pais.",
+        tag: "Epilepsia"
+      },
+      {
+        id: "neuro-q28",
+        text: "Camila, 26 anos, grávida de 20 semanas, apresenta sua segunda crise tônico-clônica generalizada, recebendo o diagnóstico de epilepsia. Qual medicação deve ser evitada ao máximo para essa paciente?",
+        options: [
+          "Carbamazepina",
+          "Lamotrigina",
+          "Levetiracetam",
+          "Acido valproico"
+        ],
+        answerIndex: 3,
+        explanation: "O Ácido Valproico é o antiepiléptico com o maior risco conhecido de teratogenicidade, associado a malformações graves como defeitos do tubo neural. Seu uso deve ser evitado ao máximo durante a gestação.",
+        tag: "Epilepsia"
+      },
+      {
+        id: "neuro-q29",
+        text: "Marque falso (F) ou verdadeiro (V): (1) Crises convulsivas únicas como as febris são consideradas epilepsia. (2) Crises em vigência de doenças agudas não são consideradas epilepsia. (3) A crise epiléptica é um distúrbio recorrente e transitório. (4) A maioria das crises epilépticas é idiopática.",
+        options: ["FVVV", "VVFV", "FFFF", "FVFF"],
+        answerIndex: 0,
+        explanation: "(F) Crises únicas ou provocadas (como as febris) não definem epilepsia. (V) Crises agudas sintomáticas não são epilepsia. (V) A definição de crise epiléptica envolve transitoriedade e recorrência (no caso da epilepsia). (V) Mesmo com investigação, muitas epilepsias permanecem sem causa definida (idiopáticas).",
+        tag: "Epilepsia"
+      },
+      {
+        id: "neuro-q30",
+        text: "Com relação às crises epilépticas é CORRETO afirmar:",
+        options: [
+          "A investigação etiológica não é importante",
+          "Toda crise convulsiva deve ser tratada com antiepilépticos",
+          "Crises epilépticas com mais de 30 minutos de duração, subentrantes, caracterizam o status epilepticus",
+          "A caracterização da síndrome epiléptica não ajuda na conduta terapêutica"
+        ],
+        answerIndex: 2,
+        explanation: "O status epilepticus é uma emergência neurológica definida classicamente como uma crise contínua por mais de 30 minutos, ou crises recorrentes sem recuperação da consciência entre elas. Atualmente, a definição operacional considera 5 minutos para iniciar o tratamento.",
+        tag: "Epilepsia"
+      },
+      // Demências e Comprometimento Cognitivo
+      {
+        id: "neuro-q31",
+        text: "Na doença de corpo de Lewy inicia-se principalmente com:",
+        options: [
+          "Alucinações e confabulação",
+          "Perda de memória 2 anos após o parkinsonismo",
+          "Parkinsonismo e alucinações visuais",
+          "Alucinações auditivas e demência associada ao parkinsonismo"
+        ],
+        answerIndex: 2,
+        explanation: "A tríade clássica da Demência com Corpos de Lewy é composta por flutuação cognitiva, alucinações visuais bem formadas e parkinsonismo. Frequentemente, o parkinsonismo e as alucinações são os sintomas de abertura do quadro.",
+        tag: "Demências"
+      },
+      {
+        id: "neuro-q32",
+        text: "Dentre as classes de drogas abaixo, quais provocam comprometimento cognitivo?",
+        options: [
+          "Anticolinérgicos e benzodiazepínicos",
+          "Antihipertensivos",
+          "Antiagregantes plaquetários",
+          "Anticoagulantes"
+        ],
+        answerIndex: 0,
+        explanation: "Fármacos com forte ação anticolinérgica e os benzodiazepínicos são conhecidos por causar ou agravar o comprometimento cognitivo, especialmente em idosos, podendo mimetizar ou piorar um quadro demencial.",
+        tag: "Demências"
+      },
+      {
+        id: "neuro-q33",
+        text: "É uma das causas, potencialmente, reversíveis de demência:",
+        options: [
+          "Doença de Alzheimer",
+          "Carência de vitamina B12",
+          "Demência fronto-temporal",
+          "Vascular"
+        ],
+        answerIndex: 1,
+        explanation: "A deficiência de vitamina B12 pode causar um quadro de declínio cognitivo significativo que, se diagnosticado e tratado a tempo com reposição da vitamina, pode ser parcial ou totalmente revertido.",
+        tag: "Demências"
+      },
+      {
+        id: "neuro-q34",
+        text: "Assinale a resposta correta sobre a doença de Alzheimer:",
+        options: [
+          "Ocorrem depósitos de beta amiloides e hipofosforilação da proteína tau",
+          "Ocorrem depósitos de alfa sinucleína e beta amiloide",
+          "Ocorrem depósitos de beta amilóide e inibição da proteína tau",
+          "Podem ocorrer depósitos de lipídeos intracelulares, de beta-amiloide e hipofosforilação da proteína tau"
+        ],
+        answerIndex: 0,
+        explanation: "A fisiopatologia da Doença de Alzheimer é marcada por dois eventos principais: o acúmulo extracelular de placas de peptídeo beta-amiloide e a formação de emaranhados neurofibrilares intracelulares devido à hiperfosforilação da proteína tau.",
+        tag: "Demências"
+      },
+      {
+        id: "neuro-q35",
+        text: "Adonias, 48 anos, com histórico de cirurgia bariátrica, apresenta dormência nos pés e esquecimento. Relata sentir estar \"pisando em nuvens\". Ao exame: marcha atáxica, Romberg positivo, hipoparestesia em membros inferiores e dismetria. Mini mental de 20/30. Assinale a alternativa correta:",
+        options: [
+          "O quadro pode ser um quadro inicial de doença de Alzheimer.",
+          "O quadro pode ser causado por condições reversíveis, como a deficiência de vitamina B12 e sífilis.",
+          "O quadro é de clara hidrocefalia de pressão normal.",
+          "O quadro do paciente é de franco hipotireoidismo."
+        ],
+        answerIndex: 1,
+        explanation: "Cirurgia bariátrica é um fator de risco para deficiências nutricionais, principalmente de vitamina B12. A deficiência de B12 causa um quadro de degeneração combinada subaguda da medula (afetando propriocepção - \"pisando em nuvens\", Romberg) e declínio cognitivo, que é uma causa reversível de demência.",
+        tag: "Demências"
+      },
+      // Neuropatias Periféricas e Doenças Neuromusculares
+      {
+        id: "neuro-q36",
+        text: "Paciente de 40 anos, após cirurgia bariátrica há 3 anos, queixa-se de \"andar esquisito\". Ao exame: marcha talonante, sinal de Romberg presente, redução de sensibilidade vibratória e de posição segmentar nos membros inferiores. Qual o provável local da lesão?",
+        options: [
+          "Trato piramidal",
+          "Cerebelo",
+          "Cordão posterior da medula",
+          "Núcleos da base"
+        ],
+        answerIndex: 2,
+        explanation: "A marcha talonante (pisar com força para sentir o chão), a perda de propriocepção (Romberg positivo) e a perda da sensibilidade vibratória são sinais clássicos de lesão no cordão posterior da medula espinhal, frequentemente causado por deficiência de vitamina B12.",
+        tag: "Neuropatias Periféricas"
+      },
+      {
+        id: "neuro-q37",
+        text: "Paciente de 48 anos queixa-se de dificuldade de fechar a mão direita há 6 meses. Ao exame: Força grau 1 nos 4º e 5º dedos, hipoestesia na região hipotênar e nos mesmos dedos. Mão em garra. Qual padrão de neuropatia e qual o provável nervo acometido?",
+        options: [
+          "Síndrome do Túnel do Carpo - nervo mediano",
+          "Mononeuropatia do nervo ulnar",
+          "Mononeuropatia do nervo radial",
+          "Polineuropatia distal de membros superiores"
+        ],
+        answerIndex: 1,
+        explanation: "A fraqueza e a perda de sensibilidade no 4º (metade ulnar) e 5º dedos, juntamente com a atrofia da musculatura intrínseca da mão resultando na \"mão em garra\", são a apresentação clássica de uma mononeuropatia do nervo ulnar.",
+        tag: "Neuropatias Periféricas"
+      },
+      {
+        id: "neuro-q38",
+        text: "Paciente de 70 anos relata \"ver tudo duplicado\" há 1 ano. Ao exame: queda da pálpebra esquerda e dificuldade em quase todos os movimentos oculares com o olho esquerdo, exceto olhar medial para baixo e olhar horizontal lateral. Qual é o provável nervo craniano envolvido?",
+        options: [
+          "Nervo oculomotor",
+          "Nervo troclear",
+          "Nervo abducente",
+          "Nervo trigêmeo"
+        ],
+        answerIndex: 0,
+        explanation: "O Nervo Oculomotor (III par craniano) é responsável pela maioria dos movimentos do olho, elevação da pálpebra e contração da pupila. Sua paralisia causa ptose (queda da pálpebra) e o olho fica desviado \"para baixo e para fora\", com preservação da abdução (N. Abducente - VI par) e da inciclotorção (N. Troclear - IV par).",
+        tag: "Neuropatias Periféricas"
+      },
+      {
+        id: "neuro-q39",
+        text: "Paciente de 60 anos com artrite reumatoide queixa-se de dificuldade para pentear os cabelos, levantar-se da cadeira e subir escadas. Ao exame: Fraqueza simétrica de músculos proximais (deltoides, quadríceps, etc.). Em uso de prednisona, D-penicilamina e azatioprina. Qual o provável diagnóstico sindrômico e etiológico?",
+        options: [
+          "Síndrome de poliartrite - artrite reumatóide",
+          "Síndrome miopática - uso de prednisona",
+          "Síndrome miastênica/placa motora - uso de D penicilamina",
+          "Síndrome de polineuropatia - diabetes"
+        ],
+        answerIndex: 1,
+        explanation: "A fraqueza muscular proximal e simétrica, sem alterações sensitivas ou de reflexos, é a definição de uma síndrome miopática. O uso crônico de corticoides (prednisona) é uma causa bem conhecida de miopatia.",
+        tag: "Neuropatias Periféricas"
+      },
+      {
+        id: "neuro-q40",
+        text: "Sabemos que existem inúmeras etiologias e tipos de neuropatias periféricas. Em relação ao tema assinale a alternativa CORRETA:",
+        options: [
+          "Nas mononeuropatias múltiplas ocorre o envolvimento distal e simétrico dos 4 membros",
+          "O sinal de Tinel e manobra de Phalen são utilizados na avaliação do nervo Ulnar",
+          "A Neuropatia Diabética pode cursar com disautonomia",
+          "As radiculopatias em geral não apresentam componente doloroso"
+        ],
+        answerIndex: 2,
+        explanation: "A Neuropatia Diabética é uma das principais causas de disautonomia, manifestando-se com sintomas como hipotensão postural, gastroparesia, disfunção erétil e alterações da sudorese.",
+        tag: "Neuropatias Periféricas"
+      },
+      {
+        id: "neuro-q41",
+        text: "Dentre as doenças neuromusculares, destaca-se a Miastenia Gravis. Tal doença caracteriza se por:",
+        options: [
+          "Parestesia, fraqueza muscular flutuante, hiporreflexia e dor",
+          "Diplopia, ptose, fraqueza muscular flutuante e disfonia",
+          "Rigidez, bradicinesia, fraqueza muscular flutuante e ptose",
+          "Diplopia, parestesia, rigidez e hiporreflexia"
+        ],
+        answerIndex: 1,
+        explanation: "A Miastenia Gravis é marcada pela fraqueza muscular flutuante (que piora com o uso e melhora com o repouso). Atinge caracteristicamente a musculatura ocular (causando ptose e diplopia) e bulbar (causando disfonia e disfagia).",
+        tag: "Doenças Neuromusculares"
+      },
+      {
+        id: "neuro-q42",
+        text: "Paciente de 65 anos com queixa de queda da pálpebra bilateral e fadiga aos esforços que piora no fim do dia. Ao exame: ptose bilateral, tetraparesia grau 4 e \"ice pack test\" positivo. Qual é o diagnóstico mais provável e o exame complementar recomendado?",
+        options: [
+          "Neuropatia nervo abducente bilateral - eletroneuromiografia",
+          "AVC de tronco encefálico - ressonância magnética",
+          "Blefaroespasmo - teste com toxina botulínica",
+          "Miastenia Gravis - dosagem anticorpo anti acetilcolina"
+        ],
+        answerIndex: 3,
+        explanation: "A fraqueza flutuante com predomínio ocular (ptose) e proximal, que piora ao longo do dia, é altamente sugestiva de Miastenia Gravis. O \"ice pack test\" positivo corrobora a suspeita, e o diagnóstico é confirmado pela dosagem de anticorpos anti-receptor de acetilcolina.",
+        tag: "Doenças Neuromusculares"
+      },
+      {
+        id: "neuro-q43",
+        text: "Paciente com suspeita de Síndrome de Guillain Barré. Dentre os achados abaixo, qual é considerado como sinal de alerta (red flag) para considerar um diagnóstico alternativo?",
+        options: [
+          "Comprometimento de nervos cranianos",
+          "História de infecção gastrointestinal 4 semanas antes",
+          "Exame de Líquor com 42 proteínas e 2 células",
+          "Progressão do quadro nas últimas 8 semanas"
+        ],
+        answerIndex: 3,
+        explanation: "A Síndrome de Guillain-Barré (SGB) é uma polirradiculoneuropatia aguda, com progressão dos sintomas que atinge o pico em até 4 semanas. Uma progressão por mais de 8 semanas é característica de uma polirradiculoneuropatia crônica (PDIC), um diagnóstico diferencial.",
+        tag: "Neuropatias Periféricas"
+      },
+      {
+        id: "neuro-q44",
+        text: "Paciente 25 anos, com ptose palpebral bilateral e diplopia há 6 meses, piores ao final do dia. Ao considerar Miastenia Gravis, qual o resultado dos testes do gelo e do Edrofônio confirmaria o diagnóstico?",
+        options: [
+          "Melhora da ptose com teste do gelo e teste do Edrofônio",
+          "Melhora da ptose com teste do gelo e piora com teste do Edrofônio",
+          "Piora da ptose com teste do gelo e com teste do Edrofônio",
+          "Piora da ptose com teste do gelo e melhora com teste do Edrofônio"
+        ],
+        answerIndex: 0,
+        explanation: "Na Miastenia Gravis, a transmissão neuromuscular é prejudicada. O frio (teste do gelo) e os inibidores da acetilcolinesterase (Edrofônio/Tensilon) melhoram essa transmissão, resultando em uma melhora transitória e visível da força muscular, como a ptose.",
+        tag: "Doenças Neuromusculares"
+      },
+      {
+        id: "neuro-q45",
+        text: "Paciente apresenta ao exame neurológico tremor de intenção, hipotonia, dismetria e nistagmo. Considerando o diagnóstico sindrômico, qual das alterações a seguir deve estar presente no exame físico?",
+        options: [
+          "Disdiadococinesia",
+          "Teste de Romberg positivo",
+          "Sinal de Chaddock",
+          "Bradicinesia"
+        ],
+        answerIndex: 0,
+        explanation: "Tremor de intenção, hipotonia, dismetria e nistagmo são todos sinais de uma síndrome cerebelar. A disdiadococinesia (dificuldade em realizar movimentos rápidos e alternados) é outro sinal clássico do mesmo acometimento.",
+        tag: "Neurologia"
+      },
+      {
+        id: "neuro-q46",
+        text: "Paciente de 67 anos com diabetes apresenta quadro agudo de diplopia. Ao exame: ptose e déficit na adução do olho esquerdo, parestesia em luvas e botas. Qual o nervo craniano acometido?",
+        options: ["Abducente", "Óptico", "Troclear", "Oculomotor"],
+        answerIndex: 3,
+        explanation: "A ptose (queda da pálpebra) e o déficit de adução (olhar para dentro) são funções do III nervo craniano, o Oculomotor. A mononeuropatia do III par é uma complicação comum do diabetes.",
+        tag: "Neuropatias Periféricas"
+      },
+      {
+        id: "neuro-q47",
+        text: "Paciente com piora de lombalgia, com dor que irradia para a coxa esquerda e parestesia no pé esquerdo. Como podemos classificar o dano neurológico?",
+        options: [
+          "Radiculopatia L5-S1",
+          "Polineuropatia distal simétrica",
+          "Plexopatia braquial",
+          "Mononeuropatia múltipla"
+        ],
+        answerIndex: 0,
+        explanation: "A dor que segue um trajeto específico (dermátomo) de uma raiz nervosa, como da lombar para a perna e pé, é a definição de uma radiculopatia. O território descrito é compatível com as raízes de L5 e/ou S1.",
+        tag: "Neuropatias Periféricas"
+      },
+      {
+        id: "neuro-q48",
+        text: "Paciente de 68 anos queixa-se de \"andar esquisito\". Ao exame: marcha com base alargada, Romberg ausente, dismetria e disdiadococinesia. Qual o provável local da lesão?",
+        options: [
+          "Trato piramidal",
+          "Cerebelo",
+          "Cordão posterior da medula",
+          "Núcleos da base"
+        ],
+        answerIndex: 1,
+        explanation: "Marcha de base alargada (atáxica), dismetria (errar o alvo) e disdiadococinesia (dificuldade com movimentos alternados) são a tríade clássica de uma lesão no cerebelo.",
+        tag: "Neurologia"
+      },
+      {
+        id: "neuro-q49",
+        text: "Paciente de 48 anos com dificuldade de fechar a mão direita há 6 meses, e há 1 mês começou a tropeçar e cair. Ao exame: Marcha escarvante à esquerda; fraqueza nos 4° e 5° dedos da mão direita e na dorsiflexão do pé esquerdo. Qual padrão de neuropatia periférica apresentado?",
+        options: [
+          "Polineuropatia distal",
+          "Mononeuropatia múltipla",
+          "Mononeuropatia do nervo ulnar",
+          "Radiculopatia de L3-L4"
+        ],
+        answerIndex: 1,
+        explanation: "O paciente apresenta o acometimento de múltiplos nervos periféricos individuais (nervo ulnar à direita e nervo fibular à esquerda), de forma assimétrica. Esta condição é chamada de mononeuropatia múltipla.",
+        tag: "Neuropatias Periféricas"
+      },
+      {
+        id: "neuro-q50",
+        text: "Paciente com diagnóstico prévio de Doença de Crohn, apresenta-se com fraqueza em membros inferiores ha 2 semanas. Pensando no diagnóstico de Mielite Transversa, quais outros sinais semiológicos poderiam confirmar essa hipótese?",
+        options: [
+          "Paresia dimidiada em face, braço e perna esquerda, associada à sinal de Babinski",
+          "Paresia, hipotonia, hiporreflexia e atrofia em membros inferiores",
+          "Paresia em membros inferiores e roda denteada",
+          "Paresia, espasticidade e hiperreflexia em membros inferiores e nível sensitivo"
+        ],
+        answerIndex: 3,
+        explanation: "A Mielite Transversa é uma lesão do neurônio motor superior na medula. O quadro clássico é de paraparesia (fraqueza nos membros inferiores) com sinais de liberação piramidal (espasticidade, hiperreflexia) e um nível sensitivo bem definido, abaixo do qual a sensibilidade está alterada.",
+        tag: "Neuropatias Periféricas"
+      },
+      {
+        id: "neuro-q51",
+        text: "Quanto a síndrome miastênica de Lambert-Eaton, marque a alternativa correta:",
+        options: [
+          "Sintomas bulbares são proeminentes",
+          "É uma doença da junção neuromuscular pós sináptica",
+          "A eletroneuromiografia revela um padrão decremental após a contração muscular voluntária",
+          "É comum a associação com neoplasia pulmonar"
+        ],
+        answerIndex: 3,
+        explanation: "A Síndrome de Lambert-Eaton é uma síndrome paraneoplásica, fortemente associada ao carcinoma de pequenas células do pulmão. A fraqueza muscular é causada por anticorpos contra canais de cálcio pré-sinápticos.",
+        tag: "Doenças Neuromusculares"
+      },
+      {
+        id: "neuro-q52",
+        text: "Paciente com cifoescoliose, panturrilhas aumentadas, sinal de Gowers e CK 20 vezes o valor de referência. Qual o diagnóstico mais provável?",
+        options: [
+          "Distrofia muscular de Duchenne",
+          "Distrofia de Emery-Dreifuss",
+          "Distrofia oculofaríngea",
+          "Distrofia muscular de Becker"
+        ],
+        answerIndex: 3,
+        explanation: "A pseudo-hipertrofia de panturrilhas, o sinal de Gowers e a elevação acentuada de CK são comuns tanto em Duchenne quanto em Becker. No entanto, a deambulação preservada (o paciente consegue andar) aponta para a forma de Becker, que é mais branda e de progressão mais lenta que a de Duchenne.",
+        tag: "Doenças Neuromusculares"
+      },
+      {
+        id: "neuro-q53",
+        text: "Paciente de 35 anos com Miastenia Gravis chega ao pronto socorro com \"muita falta de ar\". Está dispneica e com esforço respiratório. Qual seria a proposta terapêutica mais adequada?",
+        options: [
+          "Iniciar Piridostigmina e encaminhar ao neurologista",
+          "Internar, suporte ventilatório, investigar infecção e iniciar Piridostigmina",
+          "Internar, suporte ventilatório, investigar infecção e iniciar Imunoglobulina IV",
+          "Iniciar Imunoglobulina IV junto com Plasmaférese"
+        ],
+        answerIndex: 2,
+        explanation: "A paciente está em Crise Miastênica, uma emergência médica com risco de insuficiência respiratória. A prioridade é garantir a via aérea (suporte ventilatório), procurar e tratar o fator desencadeante (geralmente infecção) e iniciar tratamento imunomodulador de ação rápida, como Imunoglobulina Intravenosa ou Plasmaférese.",
+        tag: "Doenças Neuromusculares"
+      },
+      {
+        id: "neuro-q54",
+        text: "Paciente de 70 anos com fraqueza variável. Quais resultados confirmariam a hipótese de Miastenia Gravis?",
+        options: [
+          "Anticorpo anti-canal de cálcio positivo e aumento de potencial de ação na ENMG",
+          "Detecção de neurotoxina no sangue",
+          "Anticorpo anti-canal de cálcio positivo e decremento na ENMG",
+          "Anticorpo anti-receptor de acetilcolina positivo e eletroneuromiografia com padrão decremental à estimulação repetitiva"
+        ],
+        answerIndex: 3,
+        explanation: "O diagnóstico de Miastenia Gravis é confirmado pela positividade do anticorpo contra o receptor de acetilcolina (AChR) e/ou por um padrão decremental na eletroneuromiografia de estimulação repetitiva, que demonstra a \"fadiga\" da junção neuromuscular.",
+        tag: "Doenças Neuromusculares"
+      },
+      {
+        id: "neuro-q55",
+        text: "Paciente de 55 anos com visão dupla no final da tarde, cansaço nos braços e dificuldade para subir escadas, que melhoram com o repouso. Desenvolve tosse produtiva e febre e, dias depois, procura a emergência rouco, dispneico e com sialorreia. Qual o diagnóstico e exames confirmatórios?",
+        options: [
+          "Esclerose lateral amiotrófica, dosagem de CPK. eletroneuromiografia",
+          "Síndrome de Guillain Barré, dosagem de anti-GM1, exame do líquor e eletroneuromiografia",
+          "Miastenia gravis, dosagem de anti-ACth, eletroneuromiografia",
+          "Meningoencefalite, leucograma, exame do, ressonância cerebral"
+        ],
+        answerIndex: 2,
+        explanation: "O histórico de fraqueza flutuante que piora com o esforço e ao final do dia é clássico de Miastenia Gravis. O quadro agudo de insuficiência respiratória foi desencadeado por uma infecção. A confirmação diagnóstica é feita com a dosagem de anticorpos anti-receptor de acetilcolina e eletroneuromiografia.",
+        tag: "Doenças Neuromusculares"
+      },
+      {
+        id: "neuro-q56",
+        text: "Considerando o diagnóstico da questão anterior (Miastenia Gravis com agudização por infecção), escolha a melhor alternativa para a condição e tratamento.",
+        options: [
+          "Pseudoautonomia, pulsoterapia com corticoide",
+          "Insuficiência respiratória aguda, pulsoterapia com corticoide",
+          "Crise miastênica, admissão em terapia intensiva, imunoglobulina humana ou plasmaférese",
+          "Empiema subdural, antibioticoterapia guiada"
+        ],
+        answerIndex: 2,
+        explanation: "O quadro de agudização da fraqueza em um paciente com Miastenia Gravis, especialmente com comprometimento respiratório, é chamado de Crise Miastênica. O tratamento requer internação em UTI para suporte (ventilatório, se necessário) e imunoterapia de ação rápida, como imunoglobulina ou plasmaférese.",
+        tag: "Doenças Neuromusculares"
+      },
+      // Meningites e Encefalites
+      {
+        id: "neuro-q57",
+        text: "É contraindicação formal ao exame de punção lombar na suspeita de meningites, EXCETO:",
+        options: [
+          "Crises convulsivas focais",
+          "Bradicardia, arritmia respiratória e hipertensão arterial",
+          "Papiledema e oftalmoparesias",
+          "Sinais de irritação meníngea"
+        ],
+        answerIndex: 3,
+        explanation: "Os sinais de irritação meníngea (como rigidez de nuca, Kernig, Brudzinski) são a própria indicação para a punção lombar. As outras opções são sinais de hipertensão intracraniana, que contraindicam a punção antes de uma neuroimagem devido ao risco de herniação cerebral.",
+        tag: "Meningites"
+      },
+      {
+        id: "neuro-q58",
+        text: "Sobre as meningites bacterianas, pode-se afirmar:",
+        options: [
+          "Anisocoria não contra-indica a punção lombar",
+          "O tratamento não deve ser postergado caso a punção lombar esteja contra-indicada ou inacessível",
+          "Haemophilus influenzae tipo b é bactéria incapaz de causar meningite",
+          "Crises convulsivas focais não contra-indicam a punção lombar"
+        ],
+        answerIndex: 1,
+        explanation: "A meningite bacteriana é uma emergência médica. Se a punção lombar precisar ser adiada (por exemplo, para realizar uma TC de crânio antes), a antibioticoterapia empírica deve ser iniciada imediatamente para não atrasar o tratamento.",
+        tag: "Meningites"
+      },
+      {
+        id: "neuro-q59",
+        text: "Paciente com rigidez de nuca, febre, fotofobia e cefaleia tem diagnóstico provável de:",
+        options: [
+          "Acidente vascular cerebral",
+          "Ataque isquêmico transitório",
+          "Meningite",
+          "Epilepsia"
+        ],
+        answerIndex: 2,
+        explanation: "A tétrade de febre, cefaleia, rigidez de nuca e fotofobia compõe a síndrome meníngea clássica, cujo principal diagnóstico é a meningite.",
+        tag: "Meningites"
+      },
+      {
+        id: "neuro-q60",
+        text: "Em indivíduos maiores de 5 anos, o tratamento empírico das meningites é feito com:",
+        options: ["Ciprofloxacina", "Ceftriaxona", "Amoxicilina", "Levofloxacina"],
+        answerIndex: 1,
+        explanation: "O tratamento empírico da meningite bacteriana comunitária em adultos e crianças maiores visa cobrir os patógenos mais comuns (S. pneumoniae, N. meningitidis). Uma cefalosporina de terceira geração, como a Ceftriaxona, é a base do tratamento, frequentemente associada à vancomicina.",
+        tag: "Meningites"
+      },
+      {
+        id: "neuro-q61",
+        text: "Paciente de 47 anos apresenta cefaleia intensa, vômitos em jato, febre e diplopia. Ao exame: febril (39ºC), sinais de Kernig e Brudzinski presentes. Qual antibioticoterapia empírica deverá ser iniciada para essa paciente?",
+        options: [
+          "Ampicilina e Ceftriaxona",
+          "Ampicilina e Cefotaxima",
+          "Ceftriaxona e Vancomicina",
+          "Ampicilina, Ceftriaxona e Vancomicina"
+        ],
+        answerIndex: 2,
+        explanation: "Para uma meningite bacteriana comunitária em um adulto (18-50 anos), o esquema empírico padrão visa cobrir S. pneumoniae e N. meningitidis. A combinação de Ceftriaxona (cefalosporina de 3ª geração) e Vancomicina (para cobrir pneumococo resistente) é a escolha recomendada.",
+        tag: "Meningites"
+      },
+      {
+        id: "neuro-q62",
+        text: "Paciente de 35 anos apresenta confusão mental progressiva e febre de 40ºC. Irmã relata que a paciente é contra vacinas. Com base na hipótese de meningoencefalite bacteriana aguda, quais patógenos principais devem ser considerados neste caso?",
+        options: [
+          "Neisseria meningitidis e Haemophilus influenzae",
+          "Neisseria meningitidis, Streptococcus pneumoniae e Pseudomonas aeruginosa",
+          "Neisseria meningitidis, Streptococcus pneumoniae e Haemophilus influenzae",
+          "Streptococcus pneumoniae e Haemophilus influenzae"
+        ],
+        answerIndex: 2,
+        explanation: "Em um adulto não vacinado, os três principais agentes etiológicos da meningite bacteriana comunitária são Streptococcus pneumoniae, Neisseria meningitidis e Haemophilus influenzae tipo b (que é coberto pela vacinação infantil de rotina).",
+        tag: "Meningites"
+      }
+    ]
+  },
+  {
+  id: "prova suseme 2017 emergencia",
+  name: "SUSEME - Emergência - 2017",
+  questions: [
+    {
+      id: "suseme-2017-q1",
+      text: "A vítima de acidente botrópico apresenta as seguintes manifestações sistêmicas:",
+      options: [
+        "ptose palpebral, oftalmoplegia e turvação visual",
+        "hipotensão, miastenia gravis e sialorreia",
+        "gengivorragia, hematúria e hematêmese",
+        "hematúria, ictericia e oftalmoplegia"
+      ],
+      answerIndex: 2,
+      explanation: "O veneno da jararaca (acidente botrópico) tem ação coagulante, proteolítica e hemorrágica, levando a sangramentos sistêmicos. A opção C descreve manifestações hemorrágicas clássicas. A opção A (ptose, oftalmoplegia) é característica do acidente elapídico (coral). As opções B e D misturam sintomas de diferentes acidentes peçonhentos.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q2",
+      text: "De acordo com o Guia de Vigilância Epidemiológica do Ministério da Saúde brasileiro, ano de 2014, o uso imediato do fosfato de oseltamivir está indicado em pacientes:",
+      options: [
+        "grávidas apenas no primeiro trimestre da gravidez com febre alta, lombalgia e cefaleia",
+        "com dispneia e febre",
+        "maiores de dois anos com febre e dor de garganta",
+        "grávidas em qualquer idade gestacional com febre, prostração, dor de garganta, tosse seca, cefaleia e mialgia"
+      ],
+      answerIndex: 3,
+      explanation: "Gestantes são consideradas grupo de risco para complicações da Influenza. A recomendação é o tratamento com oseltamivir para qualquer gestante com síndrome gripal, independentemente da idade gestacional. As outras opções são incorretas por restringirem a indicação ou descreverem quadros que não necessariamente exigem tratamento imediato em populações de baixo risco.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q3",
+      text: "Para um profissional de saúde, a quimioprofilaxia da doença meningocócica está indicada na seguinte hipótese:",
+      options: [
+        "sempre que o médico atender paciente com suspeita de meningite meningocócica",
+        "se história vacinal for incerta ou houver sorologia negativa para Neisseria meningitidis",
+        "quando executar procedimentos invasivos sem o uso dos equipamentos de proteção individual adequados",
+        "sempre que o paciente atendido apresentar evolução grave"
+      ],
+      answerIndex: 2,
+      explanation: "A quimioprofilaxia é indicada apenas após contato íntimo e prolongado com o paciente ou para profissionais de saúde que tiveram exposição direta a secreções respiratórias sem uso de EPI, como em intubações ou aspiração. Simplesmente atender um paciente não é indicação.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q4",
+      text: "É uma doença crônica e sistêmica que, no homem, pode ter periodo de incubação médio de 2 a 6 meses. É transmitida por mosquitos do gênero Lutzomyia sp que se contaminam a partir do cão ou mesmo raposas em ambientes silvestres. Manifesta-se com febre de longa duração associada a hepatoesplenomegalia, anemia, emagrecimento, adinamia e astenia. Essa descrição se refere à seguinte patologia:",
+      options: [
+        "febre amarela",
+        "leishmaniose visceral",
+        "febre tifoide",
+        "leishmaniose tegumentar americana"
+      ],
+      answerIndex: 1,
+      explanation: "O quadro de febre arrastada, hepatoesplenomegalia e pancitopenia (anemia, astenia) é clássico da Leishmaniose Visceral (Calazar), transmitida pelo Lutzomyia sp. As outras opções têm apresentações clínicas distintas: febre amarela é aguda com icterícia, febre tifoide tem febre em degraus, e a leishmaniose tegumentar causa lesões de pele.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q5",
+      text: "Paciente de 24 anos com febre alta, cefaleia, mialgia intensa, icterícia, insuficiência renal com hipocalemia e hemoptise maciça após enchente. O paciente apresenta a sindrome de Weil, que é caracterizada por:",
+      options: [
+        "insuficiência renal, icterícia e febre alta",
+        "febre alta, hemorragia e icterícia",
+        "ictericia, coma e insuficiência renal hipocalêmica",
+        "insuficiência renal, icterícia e hemorragia pulmonar"
+      ],
+      answerIndex: 3,
+      explanation: "A Síndrome de Weil é a forma grave da leptospirose. A tríade clássica é icterícia, insuficiência renal (tipicamente não oligúrica e com hipocalemia) e fenômenos hemorrágicos. A hemorragia pulmonar é a manifestação hemorrágica mais grave e de maior letalidade. As outras opções são incompletas.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q6",
+      text: "O calendário nacional de vacinação inclui a proteção contra o rotavirus humano para crianças. As idades da primeira e da segunda dose da vacina são, respectivamente:",
+      options: [
+        "2 e 4 meses",
+        "2 e 6 meses",
+        "4 e 6 meses",
+        "12 e 15 meses"
+      ],
+      answerIndex: 0,
+      explanation: "A Vacina Oral de Rotavírus Humano (VORH) é administrada aos 2 e 4 meses de idade. As idades de 2 e 6 meses são para outras vacinas como a Pentavalente (em alguns esquemas) e a VIP. 12 e 15 meses são para reforços e outras vacinas como a Tríplice Viral.",
+      tag: "Pediatria"
+    },
+    {
+      id: "suseme-2017-q7",
+      text: "São sinais de alarme na dengue:",
+      options: [
+        "dor abdominal intensa e febre alta",
+        "aumento repentino do hematócrito e cefaleia holocraniana",
+        "aumento repentino do hematócrito e queda abrupta de plaquetas",
+        "hipotermia e dor lombar"
+      ],
+      answerIndex: 2,
+      explanation: "Os sinais de alarme indicam extravasamento de plasma. O aumento do hematócrito (hemoconcentração) e a queda abrupta das plaquetas são os marcadores laboratoriais cardinais desse fenômeno. Dor abdominal intensa é um sinal de alarme, mas febre alta e cefaleia são sintomas comuns da fase febril, não de alarme.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q8",
+      text: "No paciente com diagnóstico de dengue, está indicada a internação se a plaquetometria for inferior a:",
+      options: [
+        "20.000/mm³ independentemente de manifestações hemorrágicas",
+        "50.000/mm³, sem sinais de alarme",
+        "20.000/mm³ somente com sinais de alarme",
+        "100.000/mm³, independentemente de manifestações hemorrágicas"
+      ],
+      answerIndex: 0,
+      explanation: "Plaquetopenia acentuada (< 20.000/mm³) representa um risco intrínseco de sangramento grave e é uma indicação formal de internação hospitalar para monitoramento, mesmo na ausência de sangramentos visíveis ou outros sinais de alarme.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q9",
+      text: "Paciente de 22 anos, militar, sofreu queimaduras de segundo grau no tronco e abdome. Sua vacinação está em dia, inclusive o reforço da vacina antitetânica foi administrado há 12 meses. Nesse caso, a profilaxia de tétano consiste em:",
+      options: [
+        "administrar imunoglobulina antitetânica e vacina dT",
+        "aplicar apenas vacina dT",
+        "administrar imunoglobulina antitetânica e vacina dT em grupamentos musculares diferentes",
+        "manter observação sem fazer profilaxia"
+      ],
+      answerIndex: 3,
+      explanation: "Para um paciente com esquema vacinal completo e atualizado (última dose há menos de 5 anos), nenhuma profilaxia adicional para tétano é necessária, mesmo em ferimentos considerados de alto risco. A conduta é apenas a limpeza do ferimento.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q10",
+      text: "O uso da imunoglobulina humana antivaricela-zóster NÃO está indicada, de acordo com o Guia de Vigilância Epidemiológica, para os seguintes pacientes:",
+      options: [
+        "recém-nascidos de mães nas quais o início da varicela ocorreu nos últimos cinco dias da gestação",
+        "crianças com varicela que não foram vacinadas com a tetra viral",
+        "recém-nascidos de mães nas quais o início da varicela ocorreu em até 48h do puerpério",
+        "adultos com SIDA, CD4 menor que 100 e que tiveram contato com individuo com varicela"
+      ],
+      answerIndex: 1,
+      explanation: "A imunoglobulina é uma profilaxia pós-exposição, para tentar evitar que a doença se desenvolva. Ela não tem efeito terapêutico. Uma criança que já está com a doença (varicela manifestada) não se beneficia da imunoglobulina. As outras opções descrevem corretamente populações de risco que devem receber a profilaxia após a exposição.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q11",
+      text: "A extração a fórcipe é a mais comum das operações obstétricas. Essa extração está indicada na seguinte condição:",
+      options: [
+        "em todas as gestantes com mais de 40 semanas",
+        "em gestantes com doenças gerais, quando o esforço expulsivo for perigoso",
+        "nas gestantes em trabalho de parto prematuro",
+        "quando houver o desejo da gestante de abreviar a expulsão do concepto"
+      ],
+      answerIndex: 1,
+      explanation: "O fórcipe é um instrumento para abreviar o período expulsivo quando sua continuação representa um risco para a mãe (ex: cardiopatia, exaustão) ou para o feto (sofrimento fetal). As outras opções não são indicações formais; o desejo materno isolado não é indicação.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2017-q12",
+      text: "Na abordagem da gestante com hipertensão crônica, é seguro o uso da seguinte droga:",
+      options: ["nifedipina", "enalapril", "losartana", "candesartana"],
+      answerIndex: 0,
+      explanation: "Nifedipina, um bloqueador de canal de cálcio, é uma das drogas seguras e eficazes para o tratamento da hipertensão na gestação. Enalapril (IECA), losartana e candesartana (BRA) são formalmente contraindicados por serem teratogênicos.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2017-q13",
+      text: "São indicações para realização da operação cesariana:",
+      options: [
+        "cesárea prévia e necessidade de marcar data para o parto",
+        "infecção pelo HIV e placenta prévia",
+        "gestação gemelar e a idade materna",
+        "idade materna e apresentações anômalas"
+      ],
+      answerIndex: 1,
+      explanation: "Placenta prévia total e infecção pelo HIV com carga viral detectável são indicações absolutas para cesariana, para evitar hemorragia maciça e transmissão vertical, respectivamente. As outras opções contêm indicações relativas (apresentações anômalas) ou não-indicações (idade materna isolada, cesárea prévia).",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2017-q14",
+      text: "A pré-eclampsia é considerada grave quando se verifica que:",
+      options: [
+        "a proteinúria supera os 3g em uma amostra de urina de 24h",
+        "a pressão arterial aferida ao acaso é superior a 165 x 110 mmHg",
+        "a proteinúria supera os 5g em uma amostra de urina de 24h",
+        "o débito urinário é reduzido abaixo de 1,0L em 24h"
+      ],
+      answerIndex: 2,
+      explanation: "Um dos critérios clássicos de gravidade na pré-eclâmpsia é a proteinúria maciça, definida como ≥ 5g em 24h. Outros critérios incluem PA ≥ 160x110 mmHg e sinais de disfunção de órgãos-alvo, como oligúria < 500ml/24h.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2017-q15",
+      text: "Na abordagem do paciente com cefaleia, o sintoma que sugere doença grave é:",
+      options: [
+        "dor pulsatil",
+        "dor tipo capacete",
+        "dor irradiada a partir da região cervical",
+        "dor induzida pela tosse"
+      ],
+      answerIndex: 3,
+      explanation: "Cefaleia desencadeada ou piorada por tosse, espirro ou manobra de Valsalva é um 'sinal de alerta' (red flag) que sugere hipertensão intracraniana. As outras opções descrevem características de cefaleias primárias benignas (enxaqueca, tensional).",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2017-q16",
+      text: "Paciente na segunda semana pós-parto, com febre alta e mama esquerda ingurgitada, quente, vermelha e dolorosa, sem flutuação. Neste caso deve-se:",
+      options: [
+        "iniciar cefalexina 500 mg 8/8 horas e manter amamentação",
+        "iniciar cefalexina 500 mg 8/8 horas e interromper amamentação na mama afetada",
+        "iniciar cefalexina 500mg 6/6 horas e interromper amamentação na mama afetada",
+        "iniciar cefalexina 500mg 6/6 horas e manter amamentação em ambas as mamas"
+      ],
+      answerIndex: 3,
+      explanation: "O quadro é de mastite puerperal. A conduta é antibioticoterapia (cefalexina 500mg de 6/6h é um regime padrão) e, crucialmente, a manutenção do esvaziamento da mama para prevenir a formação de abscesso, seja por amamentação ou ordenha manual.",
+      tag: "G.O."
+    },
+    {
+      id: "suseme-2017-q17",
+      text: "A trombólise venosa está contraindicada para paciente com acidente vascular encefálico isquêmico, em caso de:",
+      options: [
+        "tomografia computadorizada de crânio não demonstrar edema em mais de 1/3 do território da artéria cerebral média",
+        "cirurgia de qualquer porte há 4 semanas",
+        "melhora rápida dos sintomas",
+        "uso de varfarina, mesmo com INR normal"
+      ],
+      answerIndex: 2,
+      explanation: "A melhora rápida e substancial dos sintomas neurológicos é uma contraindicação relativa, pois o risco do trombolítico pode superar os benefícios num quadro que já está a resolver espontaneamente (sugerindo um AIT). Cirurgia há 4 semanas não é contraindicação (o limite é 2 semanas para cirurgias grandes) e o uso de varfarina só contraindica se o INR estiver alterado.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2017-q18",
+      text: "Paciente de 50 anos, diabético, hipertenso, com febre, tosse e dor torácica. Exame físico com desidratação e taquicardia. PA 128x87mmHg. Após 2000mL de soro fisiológico, a PA se manteve em 126x92mmHg. O diagnóstico provável para esse paciente é:",
+      options: ["choque séptico refratário", "choque séptico", "sepse precoce", "sepse grave"],
+      answerIndex: 3,
+      explanation: "O paciente tem sepse (infecção + disfunção de órgão, neste caso hipotensão relativa para um hipertenso crônico). Como a pressão se manteve estável após a reposição volêmica e não houve necessidade de vasopressores, o quadro é classificado como Sepse Grave (pelos critérios antigos). Choque séptico exigiria hipotensão persistente apesar da ressuscitação volêmica.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q19",
+      text: "Paciente de 52 anos, tabagista, com ascite. O gradiente de albumina soroascite é de 0,5 g/dL. A doença compatível com este achado é:",
+      options: ["síndrome de Budd-Chiari", "insuficiência cardíaca congestiva", "carcinomatose peritoneal", "hipertensão portal"],
+      answerIndex: 2,
+      explanation: "O Gradiente de Albumina Soro-Ascite (GASA) < 1,1 g/dL indica uma causa de ascite não relacionada à hipertensão portal. Entre as opções, a carcinomatose peritoneal é a causa mais provável. As outras opções (Budd-Chiari, ICC, hipertensão portal) cursam com GASA elevado (≥ 1,1 g/dL).",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2017-q20",
+      text: "Paciente com úlcera duodenal apresenta, no resultado da biópsia, Helicobacter pylori. O tratamento indicado é:",
+      options: [
+        "inibidor de bomba de proton, norfloxacina e amoxacilina",
+        "inibidor de bomba de próton, claritromicina e amoxacilina",
+        "antagonista do receptor H2, claritromicina e amoxacilina",
+        "antagonista do receptor H2, clindamicina e claritromicina"
+      ],
+      answerIndex: 1,
+      explanation: "O tratamento de primeira linha para erradicação do H. pylori é a terapia tripla padrão, consistindo em um Inibidor de Bomba de Prótons (IBP) associado a dois antibióticos, sendo a combinação mais utilizada a de claritromicina e amoxicilina.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2017-q21",
+      text: "Paciente de 30 anos, agredido, comatoso. Abertura ocular à dor (2), sem resposta verbal (1 - intubado), retira membro ao estímulo álgico (4). TC com hematoma epidural. Qual o Glasgow pré-cirurgia e o alvo da PPC?",
+      options: [
+        "Glasgow 5 e PPC ≥ 60 mmHg",
+        "Glasgow 6 e PPC > 65 mmHg",
+        "Glasgow 7 e PPC ≥ 60 mmHg",
+        "Glasgow 7 e PPC > 70 mmHg"
+      ],
+      answerIndex: 2,
+      explanation: "A Escala de Coma de Glasgow é a soma de: Abertura Ocular (2) + Melhor Resposta Verbal (1, pois está intubado) + Melhor Resposta Motora (4) = 7. As diretrizes de neurointensivismo recomendam manter a Pressão de Perfusão Cerebral (PPC) entre 60 e 70 mmHg. A opção C é a que melhor se enquadra.",
+      tag: "Neurologia"
+    },
+    {
+      id: "suseme-2017-q22",
+      text: "Para o tratamento de delirium, é preconizado o uso de neuroléptico como:",
+      options: ["prometazina", "nimodipina", "lorazepam", "olanzapina"],
+      answerIndex: 3,
+      explanation: "O tratamento da agitação no delirium é feito com antipsicóticos (neurolépticos). Olanzapina e outros atípicos são frequentemente usados. Benzodiazepínicos (lorazepam) são reservados para delirium por abstinência de álcool/sedativos, pois podem piorar o quadro em outras situações.",
+      tag: "Psiquiatria"
+    },
+    {
+      id: "suseme-2017-q23",
+      text: "É uma causa de hipercalemia:",
+      options: ["hipomagnesemia", "diarreia", "insuficiência renal", "cetoacidose diabética"],
+      answerIndex: 2,
+      explanation: "Os rins são os principais responsáveis pela excreção de potássio. Na insuficiência renal, essa capacidade é reduzida, levando à hipercalemia. Diarreia e hipomagnesemia causam hipocalemia. A cetoacidose diabética causa uma pseudohipercalemia por deslocamento transcelular, mas o potássio corporal total está baixo.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2017-q24",
+      text: "Paciente, em pós operatório de tireoidectomia e retirada de paratireoide, apresenta espasmo carpal após aferição de pressão arterial. O diagnóstico é:",
+      options: ["hipocalcemia", "hipercalcemia", "hiperfosfatemia", "hiponatremia"],
+      answerIndex: 0,
+      explanation: "O espasmo carpal (mão de parteiro) induzido pela isquemia do manguito de pressão é o Sinal de Trousseau, patognomônico de hipocalcemia. A retirada inadvertida das paratireoides durante a tireoidectomia é a principal causa de hipocalcemia pós-operatória.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2017-q25",
+      text: "É uma causa de alteração na adesão plaquetária com aparecimento de sangramento em mucosa:",
+      options: ["doença de von Willebrand", "síndrome de von Hippel Lindau", "deficiência de fator X", "deficiência de fator II"],
+      answerIndex: 0,
+      explanation: "A doença de von Willebrand é o distúrbio hemorrágico hereditário mais comum, caracterizado pela deficiência do fator de von Willebrand, que é essencial para a adesão das plaquetas ao vaso lesado. As outras opções são distúrbios da coagulação (via secundária da hemostasia).",
+      tag: "Hematologia"
+    },
+    {
+      id: "suseme-2017-q26",
+      text: "Em paciente com crise tireotóxica que apresenta fibrilação atrial, o tratamento preconizado é a utilização da seguinte droga:",
+      options: ["amiodarona", "lidocaina", "protamina", "propranolol"],
+      answerIndex: 3,
+      explanation: "O propranolol, um betabloqueador não seletivo, é a droga de escolha na crise tireotóxica. Ele controla a resposta ventricular na fibrilação atrial e bloqueia os efeitos adrenérgicos sistêmicos, além de inibir a conversão periférica de T4 em T3.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2017-q27",
+      text: "O acompanhamento da eficácia do tratamento do diabetes mellitus é realizado pelo seguinte exame:",
+      options: ["glicosúria", "glicemia de jejum", "hemoglobina glicada", "teste de tolerância a glicose"],
+      answerIndex: 2,
+      explanation: "A hemoglobina glicada (HbA1c) reflete a média dos níveis de glicose no sangue nos últimos 2-3 meses, sendo o padrão-ouro para o monitoramento do controle glicêmico a longo prazo. Glicemia de jejum avalia o controle momentâneo.",
+      tag: "Endocrinologia"
+    },
+    {
+      id: "suseme-2017-q28",
+      text: "Paciente com cirrose apresenta suspeita de peritonite bacteriana espontânea. Esse diagnóstico é confirmado com:",
+      options: [
+        "liquido ascítico com 250 hemáceas e proteina maior que 2 g/dL",
+        "líquido ascítico com mais que 250 células de polimorfonucleares e proteína menor que 1g/dL",
+        "a presença de 100 células de polimorfos nucleares",
+        "bilirrubina no liquido ascético >3mg/dL"
+      ],
+      answerIndex: 1,
+      explanation: "O diagnóstico de Peritonite Bacteriana Espontânea (PBE) é confirmado por uma contagem de polimorfonucleares (PMN) no líquido ascítico ≥ 250/mm³. Tipicamente, a proteína é baixa (<1 g/dL) por ser um transudato. As outras opções são incorretas.",
+      tag: "Gastroenterologia"
+    },
+    {
+      id: "suseme-2017-q29",
+      text: "Paciente internado com colite infecciosa grave, após uso de amoxacilina/clavulanato, realiza retossigmoidoscopia com visualização de pseudomembrana. Este quadro corresponde ao provocado pelo seguinte agente etiológico:",
+      options: ["Clostridim difficile", "Yersinia enterocolitica", "Escherichia coli", "Salmonella"],
+      answerIndex: 0,
+      explanation: "A colite pseudomembranosa é uma complicação clássica associada ao uso de antibióticos (especialmente clindamicina, cefalosporinas e amoxicilina-clavulanato), causada pela proliferação e produção de toxinas pelo Clostridioides difficile.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q30",
+      text: "A taquicardia ventricular polimórfica, associada ao aumento do intervalo QT, é conhecida como:",
+      options: [
+        "síndrome de Wolff-Parkinson-White",
+        "sindrome Lown Ganong Levine",
+        "torsades de pointes",
+        "doença de Buerger"
+      ],
+      answerIndex: 2,
+      explanation: "Torsades de Pointes é a designação específica para a taquicardia ventricular polimórfica que ocorre em um contexto de QT longo, caracterizada pela torção dos complexos QRS em torno da linha de base no ECG. As outras são síndromes de pré-excitação (A, B) ou uma vasculite (D).",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2017-q31",
+      text: "As drogas preconizadas para a parada cardíaca em atividade elétrica sem pulso são:",
+      options: [
+        "lidocaina, atropina e fosfato",
+        "amiodarona, adrenalina e gluconato de cálcio",
+        "atropina, dobutamina e acetato de sódio",
+        "adrenalina, atropina e bicarbonato de sódio"
+      ],
+      answerIndex: 3,
+      explanation: "No algoritmo de AESP/Assistolia, a droga fundamental é a adrenalina. Atropina foi removida das diretrizes mais recentes para esta indicação. Bicarbonato de sódio pode ser usado em situações específicas (hipercalemia, acidose grave). As outras opções misturam drogas de diferentes algoritmos ou que não são usadas.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2017-q32",
+      text: "A pneumonia comunitária grave provocada pelo agente Staphilococcus aureus meticilina resistente, CA-MRSA, deve ser tratada com:",
+      options: ["cetriaxone", "cefepime", "linezolida", "eritromicina"],
+      answerIndex: 2,
+      explanation: "Para o tratamento de infecções graves por Staphylococcus aureus Meticilina-Resistente adquirido na comunidade (CA-MRSA), é necessário um antibiótico com cobertura específica, como Vancomicina ou Linezolida. As outras opções não são eficazes.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q33",
+      text: "O tratamento preconizado para a endocardite infecciosa que tem como agente etiológico o bacilo gram-negativo do grupo HACEK é:",
+      options: ["ampicilina", "doxiciclina", "amicacina", "ceftriaxone"],
+      answerIndex: 3,
+      explanation: "Os organismos do grupo HACEK (Haemophilus, Aggregatibacter, Cardiobacterium, Eikenella, Kingella) são uma causa de endocardite e são sensíveis a cefalosporinas de terceira geração. Ceftriaxona é o tratamento de escolha.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q34",
+      text: "O paciente com cetoacidose diabética é suscetível à infecção por Rhizopus, causando a mucormicose rinocerebral. O antifúngico preconizado para o tratamento é:",
+      options: ["anfotericina B", "fluconazol", "voriconazol", "flucitosina"],
+      answerIndex: 0,
+      explanation: "A mucormicose é uma infecção fúngica angioinvasiva grave. O tratamento de primeira linha é com Anfotericina B lipossomal em altas doses, associada a debridamento cirúrgico agressivo. Voriconazol é para Aspergilose, Fluconazol para Candida.",
+      tag: "Infectologia"
+    },
+    {
+      id: "suseme-2017-q35",
+      text: "A intoxicação por pesticidas causa sintomas muscarinicos, que devem ser tratados com:",
+      options: ["neostigmine", "dopamina", "nicotinamida", "atropina"],
+      answerIndex: 3,
+      explanation: "A intoxicação por organofosforados e carbamatos inibe a acetilcolinesterase, causando uma síndrome colinérgica. A atropina é um antagonista muscarínico que bloqueia esses efeitos (sialorreia, broncorreia, etc.). Neostigmina agravaria o quadro.",
+      tag: "Toxicologia"
+    },
+    {
+      id: "suseme-2017-q36",
+      text: "Ao exame fisico, paciente apresenta dispneia aos esforços, angina e pulso parvus e tardus. Esses sintomas são caracteristicos da seguinte lesão valvar:",
+      options: ["insuficiência aórtica", "estenose aórtica", "insuficiência tricúspide", "estenose mitral"],
+      answerIndex: 1,
+      explanation: "A tríade de dispneia, angina e síncope aos esforços é clássica da estenose aórtica grave. O pulso parvus et tardus (de pequena amplitude e ascensão lenta) é o achado semiológico característico no pulso carotídeo.",
+      tag: "Cardiologia"
+    },
+    {
+      id: "suseme-2017-q37",
+      text: "Paciente em uso de inibidores de angiotensina apresenta hipercalemia com alterações eletrocardiográficas. O tratamento imediato é:",
+      options: ["furosemida", "tiazidico", "glicoinsulina", "bloqueadores de cálcio"],
+      answerIndex: 2,
+      explanation: "Diante de hipercalemia com alterações no ECG (risco de arritmia fatal), a medida mais eficaz e rápida para reduzir o potássio sérico é deslocá-lo para o interior das células. A solução de glicoinsulina (insulina + glicose) é o tratamento de escolha para este fim. Bloqueadores de cálcio não são usados, e diuréticos demoram mais para agir.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2017-q38",
+      text: "Uma causa de acidose metabólica, com anion gap normal, é a:",
+      options: ["cetoacisode diabética", "intoxicação por metanol", "acidose tubular renal", "intoxicação por salicilato"],
+      answerIndex: 2,
+      explanation: "A acidose metabólica com ânion gap normal (hiperclorêmica) ocorre por perda de bicarbonato (ex: diarreia) ou por incapacidade renal de excretar ácidos ou reabsorver bicarbonato, como nas Acidoses Tubulares Renais (ATRs). As outras opções são causas clássicas de acidose com ânion gap elevado.",
+      tag: "Nefrologia"
+    },
+    {
+      id: "suseme-2017-q39",
+      text: "Paciente com TVP, em uso de heparina, apresenta queda abrupta de plaquetas e anti-PF4 positivo. O diagnóstico e o tratamento adequados são, respectivamente:",
+      options: [
+        "púrpura trombocitopênica e plasmaferese",
+        "deficiência de vitamina B12 e reposição de vitamina B12",
+        "mielodisplasia e quimioterapia",
+        "trombocitopenia induzida por heparina e inibidores de trombina"
+      ],
+      answerIndex: 3,
+      explanation: "O quadro de trombocitopenia e trombose durante o uso de heparina, confirmado pelo anti-PF4, é diagnóstico de Trombocitopenia Induzida por Heparina (TIH). O tratamento requer a suspensão imediata da heparina e a introdução de um anticoagulante alternativo que não seja a varfarina, como os inibidores diretos da trombina (ex: argatroban).",
+      tag: "Hematologia"
+    },
+    {
+      id: "suseme-2017-q40",
+      text: "Paciente apresenta, após uma semana de um quadro diarreico, fraqueza ascendente flácida e dispneia. Punção liquórica com proteína alta e celularidade baixa. O diagnóstico e o tratamento são, respectivamente:",
+      options: [
+        "miastenia gravis / neostigmine",
+        "sindrome Eaton Lambert/plasmaferese",
+        "neurossífilis/penicilina",
+        "síndrome de Guillain-Barrè / imunoglobulina"
+      ],
+      answerIndex: 3,
+      explanation: "A paralisia ascendente, flácida e arreflexa após um quadro infeccioso (gastrointestinal ou respiratório) é a apresentação clássica da Síndrome de Guillain-Barré. A dissociação proteinocitológica no líquor (muita proteína, poucas células) confirma o diagnóstico. O tratamento de primeira linha é com imunoglobulina intravenosa ou plasmaférese.",
+      tag: "Neurologia"
+    }
+  ]
+},
+    {
+    id: "preset-otorrinolaringologia-1",
+    name: "  Estácio - M7 - PR1 - Otorrinolaringologia",
+    questions: [
+      {
+        id: "otorrino-q1",
+        text: "Qual das seguintes características NÃO faz parte da fácies adenoideana (respirador oral crónico)?",
+        options: [
+          "Face alongada e boca entreaberta",
+          "Palato ogival (céu da boca fundo)",
+          "Prognatismo (queixo proeminente)",
+          "Má oclusão dentária com mordida cruzada"
+        ],
+        answerIndex: 2,
+        explanation: "A fácies do respirador oral crónico é caracterizada por face alongada, boca entreaberta, palato ogival e má oclusão, mas não por prognatismo. Pelo contrário, a mandíbula tende a ser retruída.",
+        tag: "Anatomia"
+      },
+      {
+        id: "otorrino-q2",
+        text: "Adolescente de 14 anos com dor de garganta, febre, linfonodomegalia difusa (incluindo cervical posterior) e hepatomegalia. O médico prescreveu amoxicilina. Qual o diagnóstico mais provável?",
+        options: [
+          "Faringoamigdalite Estreptocócica",
+          "Herpangina",
+          "Mononucleose Infecciosa",
+          "Difteria"
+        ],
+        answerIndex: 2,
+        explanation: "A tríade de faringite, febre e linfonodomegalia generalizada (especialmente posterior) num adolescente é altamente sugestiva de Mononucleose Infecciosa. O uso de amoxicilina pode causar um rash cutâneo característico nesta doença.",
+        tag: "Faringe"
+      },
+      {
+        id: "otorrino-q3",
+        text: "Qual é a forma de apresentação mais comum da candidíase oral?",
+        options: [
+          "Eritematosa atrófica",
+          "Hiperplásica crónica (leucoplasia)",
+          "Queilite angular",
+          "Pseudomembranosa (sapinho)"
+        ],
+        answerIndex: 3,
+        explanation: "A forma pseudomembranosa, caracterizada por placas brancas removíveis que deixam um leito eritematoso, é a apresentação mais clássica e comum da candidíase oral.",
+        tag: "Boca"
+      },
+      {
+        id: "otorrino-q4",
+        text: "Paciente de 55 anos com epistaxe moderada em narina direita e PA de 190x110 mmHg. Qual a primeira conduta a ser adotada na emergência?",
+        options: [
+          "Realizar tamponamento nasal anterior imediato.",
+          "Iniciar controlo da pressão arterial e realizar compressão digital.",
+          "Cauterizar o ponto de sangramento com nitrato de prata.",
+          "Solicitar exames de coagulação."
+        ],
+        answerIndex: 1,
+        explanation: "A prioridade no manejo da epistaxe em um paciente hipertenso é o controlo da pressão arterial. Medidas locais como a compressão digital podem ser tentadas em simultâneo, mas a causa de base deve ser abordada.",
+        tag: "Nariz"
+      },
+      {
+        id: "otorrino-q5",
+        text: "Paciente de 5 anos com obstrução nasal e rinorreia purulenta unilateral e fétida. Qual a principal hipótese diagnóstica?",
+        options: [
+          "Rinossinusite bacteriana aguda",
+          "Pólipo nasal",
+          "Corpo estranho nasal",
+          "Atresia de coana unilateral"
+        ],
+        answerIndex: 2,
+        explanation: "A rinorreia purulenta, fétida e estritamente unilateral numa criança é o sinal mais característico da presença de um corpo estranho na fossa nasal.",
+        tag: "Nariz"
+      },
+      {
+        id: "otorrino-q6",
+        text: "Paciente de 27 anos com pressão facial, congestão nasal e anosmia há 11 dias, sem melhora. A rinoscopia mostra secreção purulenta no meato médio. Qual o diagnóstico e conduta?",
+        options: [
+          "Rinossinusite aguda viral, não necessita de exames.",
+          "Rinossinusite aguda bacteriana, solicitar TC de seios paranasais.",
+          "Rinossinusite aguda viral, solicitar radiografia de face.",
+          "Rinossinusite aguda bacteriana, não necessita de exames de imagem."
+        ],
+        answerIndex: 3,
+        explanation: "A persistência ou piora dos sintomas por mais de 10 dias, associada a achados como secreção purulenta, caracteriza a rinossinusite aguda bacteriana. O diagnóstico é clínico e não requer exames de imagem em casos não complicados.",
+        tag: "Nariz"
+      },
+      {
+        id: "otorrino-q7",
+        text: "Criança de 7 anos com edema periorbitário à esquerda, febre de 38°C, dor de cabeça e congestão nasal. A TC mostra velamento dos seios etmoidais e coleção de pus na órbita. Qual é a complicação e o tratamento?",
+        options: [
+          "Celulite pré-septal / Antibiótico oral",
+          "Celulite orbitária (pós-septal) / Internação e antibiótico intravenoso",
+          "Dacriocistite aguda / Massagem e antibiótico tópico",
+          "Abscesso palpebral / Drenagem ambulatorial"
+        ],
+        answerIndex: 1,
+        explanation: "O edema periorbitário associado a sinais de envolvimento da órbita (comprometimento da motilidade ocular, proptose, baixa visual) e sinusite na TC caracteriza a celulite orbitária, uma emergência que requer internação e antibioticoterapia venosa.",
+        tag: "Complicações"
+      },
+      {
+        id: "otorrino-q8",
+        text: "Paciente de 55 anos, atópico, com pressão facial e anosmia há 15 semanas. Qual a principal hipótese diagnóstica e o exame a ser solicitado?",
+        options: [
+          "Rinossinusite aguda bacteriana / Radiografia de face",
+          "Rinossinusite crónica / Tomografia computadorizada de seios paranasais",
+          "Rinite alérgica / Teste cutâneo",
+          "Pólipose nasossinusal / Endoscopia nasal"
+        ],
+        answerIndex: 1,
+        explanation: "Sintomas de rinossinusite que persistem por mais de 12 semanas definem o quadro como crónico. A Tomografia Computadorizada é o exame de imagem de eleição para avaliar a extensão da doença e a anatomia dos seios paranasais.",
+        tag: "Nariz"
+      },
+      {
+        id: "otorrino-q9",
+        text: "Paciente de 14 anos, asmática, refere que, sempre que usa corticoide intranasal para a rinite, tem epistaxe. Qual seria uma boa alternativa terapêutica para esta paciente?",
+        options: [
+          "Aumentar a dose do corticoide nasal",
+          "Trocar por um descongestionante tópico de uso contínuo",
+          "Associar um anti-histamínico de primeira geração",
+          "Iniciar um antileucotrieno (ex: montelucaste)"
+        ],
+        answerIndex: 3,
+        explanation: "Os antileucotrienos são uma boa opção de tratamento para a rinite alérgica, especialmente em pacientes asmáticos, e não causam os efeitos adversos locais dos corticoides, como a epistaxe.",
+        tag: "Rinite Alérgica"
+      },
+      {
+        id: "otorrino-q10",
+        text: "Recém-nascido de 2 semanas com ruídos durante a respiração que pioram ao amamentar e quando está agitado, apresentando estridor inspiratório. Qual o diagnóstico mais provável?",
+        options: [
+          "Atresia de coanas",
+          "Estenose subglótica",
+          "Laringomalácia",
+          "Paralisia de prega vocal"
+        ],
+        answerIndex: 2,
+        explanation: "O estridor inspiratório que piora com o choro, agitação e alimentação, presente desde as primeiras semanas de vida, é a apresentação clássica da laringomalácia, a anomalia congénita mais comum da laringe.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q11",
+        text: "Professora de 51 anos, tabagista de longa data, com disfonia progressiva há 3 anos e voz mais grave. A videolaringoscopia mostra lesões bilaterais, gelatinosas e flácidas nas pregas vocais. Qual o diagnóstico?",
+        options: [
+          "Nódulos vocais",
+          "Pólipo de prega vocal",
+          "Edema de Reinke",
+          "Carcinoma de laringe"
+        ],
+        answerIndex: 2,
+        explanation: "O Edema de Reinke é uma lesão benigna caracterizada por um edema gelatinoso no espaço de Reinke das pregas vocais, fortemente associado ao tabagismo e ao abuso vocal, resultando numa voz mais grave.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q12",
+        text: "Criança de 5 anos com dor intensa ao deglutir, dispneia, febre alta e que assume uma postura com hiperextensão do pescoço e boca entreaberta ('posição de tripé'). Qual o diagnóstico mais provável?",
+        options: [
+          "Laringotraqueobronquite (Crupe Viral)",
+          "Abscesso periamigdaliano",
+          "Epiglotite aguda",
+          "Mononucleose Infecciosa"
+        ],
+        answerIndex: 2,
+        explanation: "A tríade de disfagia, dispneia e salivação, associada à febre alta e à 'posição de tripé', é a apresentação clássica da epiglotite aguda, uma emergência médica causada principalmente pelo Haemophilus influenzae tipo B.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q13",
+        text: "Criança de 5 anos com tosse intensa, febre, rinorreia e estridor inspiratório. A radiografia cervical em AP mostra o 'sinal da ponta de lápis' ou 'torre de igreja'. Qual o diagnóstico?",
+        options: [
+          "Epiglotite aguda",
+          "Laringotraqueobronquite (Crupe Viral)",
+          "Corpo estranho laríngeo",
+          "Laringomalácia"
+        ],
+        answerIndex: 1,
+        explanation: "A tosse 'de cão' ou 'metálica', associada a estridor e desconforto respiratório, é típica do Crupe Viral. O 'sinal da ponta de lápis' na radiografia corresponde ao estreitamento da região subglótica devido ao edema.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q14",
+        text: "Criança de 6 anos com dor de garganta intensa, febre de 39°C e dificuldade para engolir. A oroscopia revela amígdalas hiperemiadas com exsudato purulento. Qual o agente etiológico mais provável?",
+        options: [
+          "Vírus Epstein-Barr",
+          "Adenovírus",
+          "Streptococcus pyogenes (Estreptococo Beta-Hemolítico do Grupo A)",
+          "Vírus Coxsackie"
+        ],
+        answerIndex: 2,
+        explanation: "A faringoamigdalite com febre alta, exsudato purulento e ausência de sintomas virais (como coriza e tosse) em crianças em idade escolar é mais provavelmente causada pelo Streptococcus pyogenes.",
+        tag: "Faringe"
+      },
+      {
+        id: "otorrino-q15",
+        text: "Paciente de 22 anos com disfagia, dor de garganta unilateral e mau hálito. A oroscopia mostra uma úlcera necrótica unilateral na amígdala. Qual o diagnóstico?",
+        options: [
+          "Herpangina",
+          "Difteria",
+          "Angina de Plaut-Vincent",
+          "Carcinoma de amígdala"
+        ],
+        answerIndex: 2,
+        explanation: "A Angina de Plaut-Vincent é uma amigdalite úlcero-necrótica, geralmente unilateral, causada por uma simbiose de bactérias fusoespiralares, comum em pacientes com má higiene oral.",
+        tag: "Faringe"
+      },
+      {
+        id: "otorrino-q16",
+        text: "Criança de 5 anos, não vacinada, com febre, dor de garganta e queda do estado geral. Ao exame, observam-se placas branco-acinzentadas e aderentes nas amígdalas. Qual a principal hipótese?",
+        options: [
+          "Mononucleose infecciosa",
+          "Amigdalite bacteriana",
+          "Candidíase oral",
+          "Difteria"
+        ],
+        answerIndex: 3,
+        explanation: "A presença de pseudomembranas branco-acinzentadas, firmemente aderentes, que sangram à tentativa de remoção, em um paciente não vacinado, é o sinal clássico da Difteria, uma doença grave causada pelo Corynebacterium diphtheriae.",
+        tag: "Faringe"
+      },
+      {
+        id: "otorrino-q17",
+        text: "Criança de 3 anos com crises noturnas súbitas de tosse rouca e dispneia, que melhoram rapidamente, mas recorrem. Entre as crises, a criança está bem, apenas com sintomas de resfriado. Qual o diagnóstico?",
+        options: [
+          "Epiglotite aguda",
+          "Laringotraqueobronquite (Crupe Viral)",
+          "Laringite Estridulosa (Crupe Espasmódico)",
+          "Coqueluche"
+        ],
+        answerIndex: 2,
+        explanation: "A Laringite Estridulosa é caracterizada por episódios súbitos e recorrentes de crupe, geralmente noturnos, sem febre alta ou pródromos virais significativos, associados a um componente alérgico ou de hiper-reatividade.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q18",
+        text: "Paciente de 53 anos, obeso (IMC=35), hipertenso de difícil controlo, com queixa de cansaço diurno intenso e roncos. Qual o exame padrão-ouro para confirmar a suspeita de SAHOS?",
+        options: [
+          "Endoscopia nasal com manobra de Muller",
+          "Radiografia de cavum",
+          "Tomografia de seios paranasais",
+          "Polissonografia de noite inteira"
+        ],
+        answerIndex: 3,
+        explanation: "A Polissonografia é o exame padrão-ouro para o diagnóstico da Síndrome da Apneia Obstrutiva do Sono (SAHOS), pois monitoriza diversas variáveis fisiológicas durante o sono e quantifica os eventos de apneia e hipopneia.",
+        tag: "Ronco e Apneia"
+      },
+      {
+        id: "otorrino-q19",
+        text: "Qual das seguintes afirmações sobre a leucoplasia oral é INCORRETA?",
+        options: [
+          "Lesões com áreas vermelhas (eritroplásicas) ou verrucosas têm maior risco de malignização.",
+          "O tratamento pode incluir o uso de retinoides e betacaroteno em casos de baixo risco.",
+          "Algumas leucoplasias são facilmente destacadas da mucosa com uma gaze.",
+          "A localização no assoalho da boca e na face ventral da língua aumenta o risco de malignização."
+        ],
+        answerIndex: 2,
+        explanation: "A leucoplasia é, por definição, uma placa branca que NÃO pode ser removida por raspagem, diferenciando-a de outras lesões como a candidíase pseudomembranosa.",
+        tag: "Boca"
+      },
+      {
+        id: "otorrino-q20",
+        text: "Paciente de 6 anos com febre alta, odinofagia, língua em framboesa, exantema torácico e palidez perioral (Sinal de Filatov). Qual o diagnóstico mais provável?",
+        options: [
+          "Mononucleose infecciosa",
+          "Herpangina",
+          "Doença de Kawasaki",
+          "Escarlatina"
+        ],
+        answerIndex: 3,
+        explanation: "A combinação de faringite, febre, exantema micropapular (pele em lixa), língua em framboesa e sinais como Filatov e Pastia é a apresentação clássica da Escarlatina, causada por uma toxina do Streptococcus pyogenes.",
+        tag: "Faringe"
+      },
+      {
+        id: "otorrino-q21",
+        text: "Paciente de 25 anos com odinofagia, febre e linfonodomegalia, sem melhora com amoxicilina. Exame mostra linfocitose atípica. Qual a conduta?",
+        options: [
+          "Trocar o antibiótico por Amoxicilina com clavulanato.",
+          "Internação e cirurgia para drenagem de abscesso.",
+          "Tratamento com sintomáticos e repouso.",
+          "Internação e antibiótico venoso."
+        ],
+        answerIndex: 2,
+        explanation: "O quadro é altamente sugestivo de Mononucleose Infecciosa. O tratamento é de suporte, com analgésicos, antitérmicos e repouso. Antibióticos não são indicados e podem causar rash.",
+        tag: "Faringe"
+      },
+      {
+        id: "otorrino-q22",
+        text: "Qual das seguintes afirmações sobre faringoamigdalites é correta?",
+        options: [
+          "A cultura de orofaringe é o exame padrão-ouro para o diagnóstico da faringoamigdalite estreptocócica.",
+          "As complicações não supurativas incluem Escarlatina e Abscesso periamigdaliano.",
+          "O Monoteste está positivo desde o início do quadro de Mononucleose.",
+          "As vesículas da herpangina são observadas em qualquer região da cavidade oral."
+        ],
+        answerIndex: 0,
+        explanation: "Apesar de o diagnóstico ser frequentemente clínico, a cultura de orofaringe é o padrão-ouro para a confirmação da infeção por Streptococcus pyogenes.",
+        tag: "Faringe"
+      },
+      {
+        id: "otorrino-q23",
+        text: "Criança de 4 anos com tosse paroxística seguida de vômitos e um ruído semelhante a um 'guincho' inspiratório. A mãe relata não vacinar a criança. Qual a principal hipótese?",
+        options: [
+          "Epiglotite",
+          "Coqueluche",
+          "Laringite estridulosa",
+          "Laringotraqueobronquite"
+        ],
+        answerIndex: 1,
+        explanation: "A tosse paroxística (em acessos), seguida de um guincho inspiratório e frequentemente de vómitos, é a apresentação clássica da Coqueluche (tosse convulsa), causada pela Bordetella pertussis.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q24",
+        text: "Paciente de 19 anos com trismo, odinofagia intensa, febre e desvio da úvula, com abaulamento do palato mole à esquerda. Qual o diagnóstico mais provável?",
+        options: [
+          "Angina de Plaut-Vincent",
+          "Mononucleose Infecciosa",
+          "Abscesso periamigdaliano",
+          "Difteria"
+        ],
+        answerIndex: 2,
+        explanation: "O trismo (dificuldade de abrir a boca), o desvio da úvula e o abaulamento do palato mole são os sinais cardinais do abscesso periamigdaliano, uma complicação supurativa da faringoamigdalite.",
+        tag: "Complicações"
+      },
+      {
+        id: "otorrino-q25",
+        text: "Bebé de 30 dias de vida com diagnóstico de laringomalácia, apresentando quadro de estridor inspira cianose e dificuldade em ganhar peso. Baseado no quadro descrito e na patologia citada, marque a alter correta:",
+        options: [
+          "Cianose e dificuldade em ganhar peso são sinais de gravidade e o tratamento é cirúrgico.",
+          "O diagnóstico da patologia é confirmado por raio-x de região cervical.",
+          "O tratamento do bebé do caso acima deve ser clínico com acompanhamento periódico.",
+          "Edema de epiglote é a principal alteração anatómica encontrada."
+        ],
+        answerIndex: 0,
+        explanation: "Embora a maioria dos casos de laringomalácia seja leve e se resolva espontaneamente, a presença de sinais de gravidade como cianose, dificuldade alimentar e baixo ganho de peso indica a necessidade de intervenção cirúrgica (supraglotoplastia).",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q26",
+        text: "Paciente de 60 anos, género feminino, procura atendimento especializado por apresentar disfonia após cirurgia de tireoidectomia. Foi então solicitado exame videolaringoscópico que evidenciou paralisia de prega vocal esquerda. Qual o nervo que mais frequentemente estaria atingido neste caso?",
+        options: [
+          "Laríngeo recorrente",
+          "Laríngeo superior",
+          "Nervo acessório",
+          "Nervo glossofaríngeo"
+        ],
+        answerIndex: 0,
+        explanation: "O nervo laríngeo recorrente tem um trajeto muito próximo à glândula tiroide, sendo a estrutura nervosa mais vulnerável a lesões durante uma tireoidectomia, o que resulta em paralisia da prega vocal.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q27",
+        text: "Paciente procura atendimento otorrinolaringológico por apresentar quadro de globus faríngeo e pigarro sem epigastralgia. Alega ainda consumo de energéticos com frequência e ser etilista social com má alimentação. Qual exame deveria ser realizado inicialmente para auxiliar o diagnóstico acima.",
+        options: [
+          "Endoscopia nasal",
+          "Videolaringoscopia",
+          "Esofagografia",
+          "Endoscopia digestiva"
+        ],
+        answerIndex: 1,
+        explanation: "A videolaringoscopia é o exame inicial de escolha para avaliar a laringe e a faringe em busca de sinais inflamatórios sugestivos de Refluxo Laringofaríngeo, como edema e hiperemia da região interaritenoideia.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q28",
+        text: "Sobre o respirador oral, responda a alternativa errada:",
+        options: [
+          "Face alongada, palato ogival, má oclusão dentária são sinais que sugerem a respiração oral somente quando a causa for por hipertrofia de amígdalas palatinas e faríngea.",
+          "O diagnóstico da Atresia de coana é suspeitado em sala de parto.",
+          "Para investigação da Síndrome do respirador oral, os exames para diagnóstico são: endoscopia nasal ou Rx de cavum e polissonografia.",
+          "A Síndrome do respirador oral poderá levar a alterações na liberação hormonal, como exemplos teremos a alteração no hormônio do crescimento e do hormônio antidiurético."
+        ],
+        answerIndex: 0,
+        explanation: "As alterações faciais do respirador oral ocorrem independentemente da causa da obstrução (hipertrofia de adenoide, rinite, etc.), pois são uma consequência da alteração do fluxo aéreo e do padrão de crescimento craniofacial.",
+        tag: "Anatomia"
+      },
+      {
+        id: "otorrino-q29",
+        text: "Criança de 3 anos, com coriza e febre baixa há 3 dias. Evoluindo com quadro de tosse rouca, estridor inspiratório e retração supraesternal. Sem sialorreia ou disfagia. O diagnóstico e agente etiológico mais prováveis são:",
+        options: [
+          "Laringotraqueobronquite - Parainfluenza 1 e 2",
+          "Epiglotite - Haemophilus influenza",
+          "Coqueluche - Bordetella pertussis",
+          "Laringite catarral aguda - Streptococcus"
+        ],
+        answerIndex: 0,
+        explanation: "A combinação de pródromos virais, tosse rouca ('de cão'), estridor inspiratório e desconforto respiratório é a apresentação clássica da Laringotraqueobronquite, ou Crupe Viral, causada principalmente pelo vírus Parainfluenza.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q30",
+        text: "Qual das seguintes estruturas forma a região glótica da laringe?",
+        options: [
+          "Pregas vocais, aritenoides e epiglote",
+          "Pregas vocais, processos vocais e epiglote",
+          "Pregas vocais, base da língua e aritenoides",
+          "Pregas vocais, processos vocais das aritenoides e a rima da glote"
+        ],
+        answerIndex: 3,
+        explanation: "A glote é o aparelho fonador da laringe e é composta estritamente pelas pregas vocais (cordas vocais), os processos vocais das cartilagens aritenoides e o espaço entre elas (rima da glote).",
+        tag: "Anatomia"
+      },
+      {
+        id: "otorrino-q31",
+        text: "Sobre a drenagem linfática da laringe, responda a alternativa correta:",
+        options: [
+          "Entre todas as regiões laríngeas, a drenagem da região glótica é a mais escassa.",
+          "A drenagem linfática é mais escassa na região subglótica do que na região glótica.",
+          "A drenagem linfática é mais escassa na região supraglótica do que na região glótica.",
+          "A drenagem linfática de todas as regiões laríngeas, possuem o mesmo padrão de drenagem."
+        ],
+        answerIndex: 0,
+        explanation: "A região glótica (pregas vocais) possui uma drenagem linfática muito pobre. Este facto anatómico explica por que os tumores restritos a esta área têm um baixo índice de metástases linfonodais e, consequentemente, um melhor prognóstico.",
+        tag: "Anatomia"
+      },
+      {
+        id: "otorrino-q32",
+        text: "Professora de 35 anos, com carga horária de 40 horas semanais, refere disfonia frequente que piora ao final do dia, com piora do quadro nos últimos 6 meses. Qual o achado esperado na videolaringoscopia?",
+        options: [
+          "Paquidermia interaritenoidea",
+          "Edema de região interaritenóidea e de pregas vocais",
+          "Presença de pólipo em terço médio de prega vocal direita",
+          "Espessamento simétrico em terço médio de pregas vocais"
+        ],
+        answerIndex: 3,
+        explanation: "Os nódulos vocais, ou 'calos', são lesões bilaterais e simétricas que ocorrem no ponto de maior atrito das pregas vocais, sendo típicos de profissionais da voz e resultantes do fonotrauma crónico.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q33",
+        text: "Criança de 1 ano com tosse há 15 dias, que começou com um resfriado e evoluiu para acessos intensos de tosse (paroxística) seguidos de vômitos e um 'guincho' inspiratório. A mãe não vacina a criança. Qual a principal hipótese?",
+        options: [
+          "Epiglotite",
+          "Coqueluche",
+          "Laringite estridulosa",
+          "Laringotraqueobronquite"
+        ],
+        answerIndex: 1,
+        explanation: "A tosse paroxística, emetizante (causa vómitos) e com guincho inspiratório é a descrição clássica da fase paroxística da Coqueluche (tosse convulsa), uma doença prevenível por vacina.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q34",
+        text: "Em relação ao tratamento da rinite alérgica, assinale a alternativa incorreta:",
+        options: [
+          "Os anti-histamínicos apresentam rápido início de ação e são indicados para aliviar prurido, espirros e rinorreia.",
+          "O uso de corticosteroides por injeções de depósito é recomendado, pois não acarreta efeitos colaterais.",
+          "Os anti-histamínicos de primeira geração causam fadiga e sonolência.",
+          "Descongestionantes de uso tópico não devem ser utilizados por mais de sete a dez dias."
+        ],
+        answerIndex: 1,
+        explanation: "O uso de corticoides de depósito é proscrito no tratamento da rinite alérgica devido ao alto risco de efeitos colaterais sistémicos graves e imprevisíveis.",
+        tag: "Rinite Alérgica"
+      },
+      {
+        id: "otorrino-q35",
+        text: "Paciente de 45 anos com dor em região maxilar esquerda há 5 meses, que começou após remover um dente. Refere cacosmia e congestão nasal. Não melhorou com amoxicilina. Qual a conduta correta?",
+        options: [
+          "Trata-se de uma rinossinusite crónica. Solicitar Rx de seios paranasais.",
+          "Trata-se de uma rinossinusite crónica, sendo necessário o uso de azitromicina por 10 dias.",
+          "Trata-se de uma rinossinusite aguda. Tratar com antibiótico de amplo espectro.",
+          "Trata-se de uma rinossinusite crónica, devendo ser solicitada tomografia e avaliação cirúrgica."
+        ],
+        answerIndex: 3,
+        explanation: "O quadro é de uma rinossinusite crónica, provavelmente de origem odontogénica. A conduta correta envolve a realização de uma tomografia para avaliar a extensão da doença e a necessidade de abordagem cirúrgica para tratar a causa de base.",
+        tag: "Nariz"
+      },
+      {
+        id: "otorrino-q36",
+        text: "Sobre o diagnóstico da rinossinusite aguda, assinale a alternativa correta:",
+        options: [
+          "Para confirmação diagnóstica é mandatório realizar Rx de seios da face.",
+          "O uso de antimicrobianos pode ser prorrogado em casos leves a moderados, pois muitos se resolvem espontaneamente.",
+          "O quadro de rinite alérgica aguda dificilmente leva ao quadro de rinossinusite aguda.",
+          "A obstrução dos óstios de drenagem não ocorre nos casos de rinossinusite crônica."
+        ],
+        answerIndex: 1,
+        explanation: "Muitos casos de rinossinusite aguda, mesmo com características bacterianas, são autolimitados. A estratégia de 'esperar para ver' (watchful waiting) por 48-72h antes de iniciar antibióticos é recomendada em casos não graves.",
+        tag: "Nariz"
+      },
+      {
+        id: "otorrino-q37",
+        text: "KTB, 42 anos, hipertenso e diabético. Relata congestão e prurido nasal frequente, que piora à noite. Queixa-se de cefaleia constante e sonolência diurna. Qual a alternativa correta?",
+        options: [
+          "O quadro sugere rinite alérgica, e o diagnóstico é baseado na clínica.",
+          "A indicação da realização do prick test é obrigatória para o diagnóstico.",
+          "O quadro sugere rinossinusite crônica, devendo ser solicitada tomografia.",
+          "O quadro sugere rinite alérgica, sendo contraindicado o uso de corticoide nasal."
+        ],
+        answerIndex: 0,
+        explanation: "Os sintomas de congestão, prurido e rinorreia são a base para o diagnóstico clínico da rinite alérgica. A sonolência e cefaleia são consequências da má qualidade do sono causada pela obstrução nasal.",
+        tag: "Rinite Alérgica"
+      },
+      {
+        id: "otorrino-q38",
+        text: "Considerando as lesões benignas da laringe, assinale a afirmativa correta:",
+        options: [
+          "Os pólipos de pregas vocais são causados, ocasionalmente, por IVAS.",
+          "O Edema de Reinke normalmente acomete uma única prega vocal.",
+          "Os nódulos são mais comuns em mulheres, devido a uma maior quantidade de ácido hialurónico.",
+          "Parar o tabagismo é uma medida essencial para o controle do edema de Reinke."
+        ],
+        answerIndex: 3,
+        explanation: "O Edema de Reinke é uma condição fortemente associada ao tabagismo. A cessação do fumo é o passo mais importante e indispensável no tratamento, podendo levar à regressão da lesão em casos iniciais.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q39",
+        text: "Bebé de 15 dias de vida é levado à consulta por sua mãe, que relata que a criança faz um ruído toda vez que respira e este se torna mais intenso quando o bebé está chorando. Baseado no quadro, marque a alternativa incorreta:",
+        options: [
+          "A descrição clássica de laringomalácia consiste em estridor inspiratório que piora com agitação e choro.",
+          "A laringoscopia direta é essencial para firmar o diagnóstico.",
+          "O tratamento raramente é cirúrgico.",
+          "Crises de cianose ocorrem em mais de 80% dos quadros."
+        ],
+        answerIndex: 3,
+        explanation: "A grande maioria (mais de 90%) dos casos de laringomalácia é leve e autolimitada. Crises de cianose são um sinal de gravidade e ocorrem numa pequena minoria dos casos, indicando a necessidade de intervenção.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q40",
+        text: "Paciente de 19 anos procura emergência com trismo, odinofagia e febre há mais de 6 dias, sem melhora com penicilina. Ao exame, apresenta desvio da úvula e abaulamento de tonsila esquerda. Qual o diagnóstico mais provável?",
+        options: [
+          "Mononucleose Infecciosa",
+          "Faringite Viral",
+          "Abscesso Periamigdaliano",
+          "Difteria"
+        ],
+        answerIndex: 2,
+        explanation: "O trismo (dificuldade de abrir a boca), o desvio da úvula e o abaulamento do palato mole são os sinais cardinais do abscesso periamigdaliano, uma complicação supurativa da faringoamigdalite.",
+        tag: "Complicações"
+      },
+      {
+        id: "otorrino-q41",
+        text: "Em relação à rinite, qual a sequência correta para as afirmativas (Certo/Errado): (1) Pessoas com rinite alérgica têm risco aumentado para asma. (2) Diagnósticos diferenciais incluem atresia de coanas e corpo estranho. (3) A prometazina é um anti-histamínico de segunda geração.",
+        options: [
+          "C - C - E",
+          "E - C - C",
+          "C - E - E",
+          "E - C - E"
+        ],
+        answerIndex: 0,
+        explanation: "(C) A rinite alérgica é um fator de risco importante para o desenvolvimento de asma. (C) É crucial descartar causas obstrutivas como atresia e corpo estranho. (E) A prometazina (Fenergan) é um anti-histamínico de primeira geração, conhecido por causar sonolência.",
+        tag: "Rinite Alérgica"
+      },
+      {
+        id: "otorrino-q42",
+        text: "Criança de 1 ano com tosse há 15 dias, que começou com resfriado e evoluiu para acessos de tosse paroxística, com vômitos e um 'guincho' inspiratório. A mãe não vacina a criança. Qual exame pode confirmar o diagnóstico?",
+        options: [
+          "Hemocultura",
+          "Videolaringoscopia",
+          "Rx de tórax em PA e perfil",
+          "Cultura de material colhido de rinofaringe ou PCR"
+        ],
+        answerIndex: 3,
+        explanation: "O quadro é clássico de Coqueluche. O diagnóstico laboratorial é confirmado pela cultura ou, mais comumente hoje em dia, pela Reação em Cadeia da Polimerase (PCR) de uma amostra de secreção da nasofaringe.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q43",
+        text: "Paciente de 54 anos, obesa, hipertensa e diabética, com queixa de roncos, engasgos e irritabilidade. O exame mostra Mallampati 4. Qual o tratamento mais indicado para o quadro de SAHOS?",
+        options: [
+          "Aparelho intraoral",
+          "Cirurgia bariátrica e CPAP",
+          "Uvulopalatofaringoplastia isolada",
+          "Fonoterapia"
+        ],
+        answerIndex: 1,
+        explanation: "Numa paciente com SAHOS grave e obesidade mórbida, a abordagem mais eficaz envolve o tratamento da causa de base (perda de peso, que pode ser auxiliada pela cirurgia bariátrica) e o uso de CPAP para garantir a permeabilidade da via aérea durante o sono.",
+        tag: "Ronco e Apneia"
+      },
+      {
+        id: "otorrino-q44",
+        text: "Qual das seguintes afirmações sobre o tratamento da faringotonsilite estreptocócica é VERDADEIRA?",
+        options: [
+          "O tratamento visa apenas melhorar os sintomas agudos.",
+          "A penicilina é o antibiótico de eleição.",
+          "Macrolídeos não podem ser indicados para pessoas com alergia a penicilinas.",
+          "Em caso de recaída, deve-se indicar amoxicilina associada a macrolídeos."
+        ],
+        answerIndex: 1,
+        explanation: "A penicilina (especialmente a Benzatina em dose única) continua a ser o antibiótico de primeira escolha para a faringotonsilite estreptocócica devido à sua eficácia, baixo custo e espectro de ação focado.",
+        tag: "Faringe"
+      },
+      {
+        id: "otorrino-q45",
+        text: "Qual das seguintes malformações congénitas da laringe é a mais frequente?",
+        options: [
+          "Laringomalácia",
+          "Estenose subglótica",
+          "Paralisia de pregas vocais",
+          "Atresia laríngea"
+        ],
+        answerIndex: 0,
+        explanation: "A laringomalácia, caracterizada pela flacidez das estruturas supraglóticas, é de longe a anomalia congénita mais comum da laringe e a principal causa de estridor em lactentes.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q46",
+        text: "Qual das seguintes afirmações sobre a queilite actínica é CORRETA?",
+        options: [
+          "As principais etiologias são o etilismo e o tabagismo.",
+          "A presença de ulceração é um sinal de alerta para possível malignização.",
+          "O tratamento deve ser realizado com antifúngico tópico e sistémico.",
+          "A vermelhectomia só deve ser indicada em casos leves."
+        ],
+        answerIndex: 1,
+        explanation: "A queilite actínica é uma lesão pré-maligna do lábio inferior causada pela exposição solar crónica. O surgimento de áreas de ulceração, endurecimento ou crescimento rápido são sinais de transformação para um carcinoma espinocelular.",
+        tag: "Boca"
+      },
+      {
+        id: "otorrino-q47",
+        text: "Qual das seguintes afirmações sobre a respiração oral é CORRETA?",
+        options: [
+          "Hipertrofia de tonsilas palatinas e faríngea é a principal causa na infância.",
+          "Atresia coanal bilateral é frequentemente diagnosticada na fase adulta.",
+          "Quando há apnéia obstrutiva do sono ocorre aumento da libertação do hormônio do crescimento.",
+          "A síndrome de apnéia obstrutiva do sono não interfere no aprendizado da criança."
+        ],
+        answerIndex: 0,
+        explanation: "A hipertrofia adenoamigdaliana é a principal causa de obstrução nasal e respiração oral em crianças, podendo levar a alterações craniofaciais e distúrbios do sono.",
+        tag: "Anatomia"
+      },
+      {
+        id: "otorrino-q48",
+        text: "Lactente com febre, tosse rouca, estridor inspiratório, salivação intensa e dispneia grave. Qual o diagnóstico mais provável?",
+        options: [
+          "Laringite aguda",
+          "Epiglotite",
+          "Abscesso periamigdaliano",
+          "Laringite diftérica"
+        ],
+        answerIndex: 1,
+        explanation: "A combinação de início agudo, febre alta, estridor, dispneia e, principalmente, salivação intensa (devido à dor para engolir) é altamente sugestiva de Epiglotite, uma emergência médica.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q49",
+        text: "Qual das seguintes opções NÃO é um achado laríngeo comum no Refluxo Laringofaríngeo (RLF)?",
+        options: [
+          "Hiperemia do espaço interaritenoideia",
+          "Hiperemia de pregas vocais",
+          "Estenose subglótica",
+          "Estase salivar na região retrocricoaritenóide"
+        ],
+        answerIndex: 2,
+        explanation: "Os achados mais comuns do RLF são inflamatórios, como hiperemia e edema na região posterior da laringe. A estenose subglótica é uma complicação rara e grave, não um achado comum.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q50",
+        text: "Qual dos seguintes exames de diagnóstico da rinite alérgica é pouco sensível, mas bastante específico?",
+        options: [
+          "Dosagem de IgE sérica total",
+          "Testes cutâneos de puntura (prick-test)",
+          "Teste intracutâneo (intradérmico)",
+          "Dosagem de IgE sérica específica"
+        ],
+        answerIndex: 0,
+        explanation: "A IgE sérica total pode estar elevada em várias condições além da alergia (baixa especificidade) e pode estar normal em muitos alérgicos (baixa sensibilidade). Não é um bom teste de rastreio.",
+        tag: "Rinite Alérgica"
+      },
+      {
+        id: "otorrino-q51",
+        text: "Considerando o cancro da laringe, qual afirmativa é FALSA?",
+        options: [
+          "Os principais fatores de risco são tabagismo, etilismo, idade e género masculino.",
+          "Disfonia por mais de 3 semanas deve ser investigada, principalmente em pacientes de risco.",
+          "O principal tipo histológico é o carcinoma espinocelular.",
+          "A disseminação linfática dos tumores glóticos é mais rápida do que dos tumores supraglóticos."
+        ],
+        answerIndex: 3,
+        explanation: "A região glótica (pregas vocais) tem uma drenagem linfática muito escassa. Por isso, tumores restritos a esta área têm um baixo índice de metástases linfonodais, ao contrário dos tumores supraglóticos, que têm uma drenagem rica.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q52",
+        text: "Qual das seguintes afirmações sobre as anomalias congénitas da laringe é ERRADA?",
+        options: [
+          "O estridor inspiratório, que piora com a amamentação, é um sintoma comum na laringomalácia.",
+          "Paciente com laringomalácia, com cianose e déficit de crescimento, tem tratamento expectante.",
+          "O diagnóstico de laringomalácia é confirmado através da laringoscopia direta.",
+          "A laringomalácia é a anomalia congénita de laringe mais comum."
+        ],
+        answerIndex: 1,
+        explanation: "Cianose e déficit de crescimento são sinais de gravidade na laringomalácia e indicam a necessidade de tratamento cirúrgico (supraglotoplastia), não de uma conduta expectante.",
+        tag: "Laringe"
+      },
+      {
+        id: "otorrino-q53",
+        text: "Qual das seguintes afirmações sobre faringoamigdalites é VERDADEIRA?",
+        options: [
+          "O tratamento da tonsilite crónica caseosa é feito com corticoides.",
+          "A herpangina é um exemplo de faringoamigdalite aguda ulcero-necrótica.",
+          "O tratamento da angina de Plaut-Vincent envolve antibioticoterapia e gargarejos com antissépticos.",
+          "A angina de Plaut-Vincent é um exemplo de faringoamigdalite aguda vesiculosa."
+        ],
+        answerIndex: 2,
+        explanation: "A angina de Plaut-Vincent é uma infeção bacteriana (fusoespiralar) e o seu tratamento baseia-se em antibióticos que cobrem anaeróbios (como penicilina + metronidazol) e na melhoria da higiene oral.",
+        tag: "Faringe"
+      },
+      {
+        id: "otorrino-q54",
+        text: "Em relação à rinite alérgica, qual alternativa é CORRETA?",
+        options: [
+          "Pacientes com suspeita de rinite alérgica que já tiveram reação anafilática, não poderão realizar prick-test.",
+          "O uso de corticoide nasal somente é indicado para pacientes com rinite alérgica persistente.",
+          "Prurido nasal e espirros são os sintomas com menor impacto na qualidade de vida.",
+          "O uso de corticosteróide nasal associado ao uso de antileucotrienos deve ser evitado."
+        ],
+        answerIndex: 0,
+        explanation: "O teste cutâneo (prick-test) é contraindicado em pacientes com história de anafilaxia, pois há risco de desencadear uma reação grave.",
+        tag: "Rinite Alérgica"
+      },
+      {
+        id: "otorrino-q55",
+        text: "Paciente de 19 anos com trismo, odinofagia e febre há mais de 6 dias, sem melhora com penicilina. Ao exame, desvio da úvula e abaulamento de tonsila esquerda. Qual a melhor conduta?",
+        options: [
+          "Trocar o antibiótico para Amoxicilina-Clavulanato.",
+          "Suspender antibiótico por suspeita de Mononucleose.",
+          "Drenagem do abscesso e antibioticoterapia.",
+          "Internação e uso de Soro Antidiftérico."
+        ],
+        answerIndex: 2,
+        explanation: "O quadro é de abscesso periamigdaliano. O tratamento consiste na drenagem cirúrgica da coleção purulenta, associada a antibioticoterapia que cubra anaeróbios.",
+        tag: "Complicações"
+      }
+    ]
+  },
+
+  {
+    id: "preset-ortopedia-1",
+    name: "  Estácio - M7 - PR1 - Ortopedia",
+    questions: [
+      {
+        id: "orto-q1",
+        text: "Sobre as pseudoartroses, assinale a alternativa INCORRETA:",
+        options: [
+          "Na Hipertrófica, há calo ósseo exuberante na tentativa de conter a mobilidade.",
+          "Na Atrófica, há presença abundante de células osteogénicas no foco.",
+          "Fatores de risco para a Atrófica incluem fratura exposta e diabetes.",
+          "Na Hipertrófica, a causa principal é a instabilidade mecânica da fratura."
+        ],
+        answerIndex: 1,
+        explanation: "Na pseudoartrose atrófica, a principal característica é a falha biológica, com pouca vascularização e ausência ou escassez de células osteogénicas viáveis no foco da fratura.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q2",
+        text: "Paciente de 58 anos, com gesso axilopalmar há 24 horas, chega com dor intensa, edema acentuado, cianose e deformidade em contratura no membro. Qual o diagnóstico mais provável?",
+        options: [
+          "Osteomielite aguda",
+          "Trombose venosa profunda",
+          "Artrite séptica de punho",
+          "Síndrome compartimental com isquemia de Volkmann"
+        ],
+        answerIndex: 3,
+        explanation: "A dor desproporcional à lesão, edema intenso, alterações neurovasculares e contratura (sinal tardio) num membro engessado são sinais clássicos de Síndrome Compartimental, uma emergência ortopédica.",
+        tag: "Trauma"
+      },
+      {
+        id: "orto-q3",
+        text: "Criança de 7 anos com fratura de antebraço tratada com gesso. Após duas semanas, a radiografia não mostra desvios, mas também não há formação de calo ósseo visível. Qual a conduta?",
+        options: [
+          "Manter a conduta expectante e solicitar novas radiografias no retorno.",
+          "Indicar tratamento cirúrgico pela falha do tratamento conservador.",
+          "Solicitar uma Tomografia Computadorizada para estudar o calo.",
+          "Solicitar exames de sangue (VHS, PCR) por suspeita de infeção."
+        ],
+        answerIndex: 0,
+        explanation: "Em crianças, a consolidação óssea é rápida, mas o calo radiográfico pode não ser visível com apenas duas semanas. Na ausência de desvios, a conduta correta é aguardar e reavaliar posteriormente.",
+        tag: "Ortopedia Pediátrica"
+      },
+      {
+        id: "orto-q4",
+        text: "Qual é a principal complicação da Síndrome Compartimental não tratada?",
+        options: [
+          "Pseudoartrose atrófica",
+          "Osteomielite crónica",
+          "Contratura isquémica de Volkmann",
+          "Trombose venosa profunda"
+        ],
+        answerIndex: 2,
+        explanation: "A Contratura de Volkmann é a sequela clássica da Síndrome Compartimental não tratada, resultando em necrose muscular e nervosa com fibrose e contratura permanente do membro.",
+        tag: "Complicações"
+      },
+      {
+        id: "orto-q5",
+        text: "Qual é a classificação de Salter-Harris mais comum em fraturas fisárias?",
+        options: [
+          "Tipo I (atravessa a fise)",
+          "Tipo II (fise e metáfise)",
+          "Tipo III (fise e epífise)",
+          "Tipo IV (fise, metáfise e epífise)"
+        ],
+        answerIndex: 1,
+        explanation: "A fratura de Salter-Harris tipo II, que envolve a placa de crescimento e um fragmento triangular da metáfise (fragmento de Thurston-Holland), é a mais frequente.",
+        tag: "Ortopedia Pediátrica"
+      },
+      {
+        id: "orto-q6",
+        text: "Criança de 4 anos apresenta claudicação e limitação da rotação interna do quadril, uma semana após uma infeção de garganta. Qual a hipótese diagnóstica mais provável?",
+        options: [
+          "Artrite séptica do quadril",
+          "Doença de Legg-Calvé-Perthes",
+          "Sinovite transitória do quadril",
+          "Epifisiólise"
+        ],
+        answerIndex: 2,
+        explanation: "A história de claudicação aguda em criança pequena, com limitação de movimento e história prévia de infeção de vias aéreas superiores, é a apresentação clássica da Sinovite Transitória do Quadril, uma condição benigna e autolimitada.",
+        tag: "Ortopedia Pediátrica"
+      },
+      {
+        id: "orto-q7",
+        text: "Qual é a principal diferença entre a manobra de Ortolani e a manobra de Barlow no exame do quadril de um recém-nascido?",
+        options: [
+          "Ortolani testa a luxação e Barlow a adução.",
+          "Ortolani é uma manobra de redução e Barlow é uma manobra provocativa de luxação.",
+          "Ortolani é para quadris estáveis e Barlow para quadris instáveis.",
+          "Ortolani avalia o fémur e Barlow o acetábulo."
+        ],
+        answerIndex: 1,
+        explanation: "A manobra de Ortolani tenta reduzir um quadril já luxado (sente-se um 'clique' de entrada), enquanto a manobra de Barlow tenta luxar um quadril instável, mas reduzido (sente-se um 'clique' de saída).",
+        tag: "Ortopedia Pediátrica"
+      },
+      {
+        id: "orto-q8",
+        text: "Paciente com dor no ombro. A manobra de Patte, que testa a rotação externa contra resistência com o ombro abduzido, avalia a integridade de qual músculo?",
+        options: [
+          "Supraespinhoso",
+          "Subescapular",
+          "Infraespinhoso",
+          "Deltoide"
+        ],
+        answerIndex: 2,
+        explanation: "A manobra de Patte é um teste específico para avaliar a força e a integridade do músculo infraespinhoso, um dos principais rotadores externos do ombro.",
+        tag: "Ombro"
+      },
+      {
+        id: "orto-q9",
+        text: "Criança pequena é puxada pelo braço e para de o mover, mantendo-o junto ao corpo com o antebraço pronado. Qual é o diagnóstico mais provável?",
+        options: [
+          "Fratura da clavícula",
+          "Luxação do ombro",
+          "Fratura supracondiliana do úmero",
+          "Pronação dolorosa (subluxação da cabeça do rádio)"
+        ],
+        answerIndex: 3,
+        explanation: "Este é o mecanismo e a apresentação clássica da pronação dolorosa, onde a cabeça do rádio subluxa do ligamento anular. O tratamento é uma manobra de redução simples (supinação com flexão).",
+        tag: "Ortopedia Pediátrica"
+      },
+      {
+        id: "orto-q10",
+        text: "Qual é a principal característica clínica que diferencia uma luxação de uma entorse?",
+        options: [
+          "A presença de edema.",
+          "A intensidade da dor.",
+          "A perda completa e permanente do contacto articular.",
+          "A presença de equimose (hematoma)."
+        ],
+        answerIndex: 2,
+        explanation: "Enquanto a entorse é uma lesão ligamentar sem perda de contacto articular, a luxação é definida pela perda total e mantida da congruência entre as superfícies de uma articulação.",
+        tag: "Trauma"
+      },
+      {
+        id: "orto-q11",
+        text: "Paciente com fratura exposta Gustilo-Anderson tipo I (ferida limpa < 1 cm). Qual a conduta antibiótica inicial?",
+        options: [
+          "Cefalosporina de 1ª geração (ex: Cefazolina)",
+          "Cefalosporina + Aminoglicosídeo",
+          "Cefalosporina + Penicilina",
+          "Não é necessário antibiótico"
+        ],
+        answerIndex: 0,
+        explanation: "Para fraturas expostas de baixa contaminação (Gustilo I e II), a profilaxia padrão é com uma cefalosporina de primeira geração para cobrir os germes da pele.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q12",
+        text: "Paciente com dor lombar que irradia pela face posterior da coxa e face lateral da perna, com parestesia no maléolo lateral. Qual teste clínico é mais indicado para confirmar a suspeita de hérnia discal?",
+        options: [
+          "Teste de Thompson",
+          "Teste de Lasègue",
+          "Manobra de Patte",
+          "Teste de Phalen"
+        ],
+        answerIndex: 1,
+        explanation: "O Teste de Lasègue (elevação da perna estendida) é o teste clássico para avaliar a irritação do nervo ciático, comum em casos de hérnia de disco lombar.",
+        tag: "Coluna"
+      },
+      {
+        id: "orto-q13",
+        text: "Paciente com parestesia e dor nos três primeiros dedos da mão, que piora com atividades manuais como tricot. Os testes de Phalen e Tinel são positivos. Qual o diagnóstico mais provável?",
+        options: [
+          "Síndrome do túnel cubital",
+          "Radiculopatia C6",
+          "Síndrome do túnel do carpo",
+          "Tenossinovite de De Quervain"
+        ],
+        answerIndex: 2,
+        explanation: "A sintomatologia nos três primeiros dedos e os testes de Phalen (flexão do punho) e Tinel (percussão do nervo) positivos são característicos da Síndrome do Túnel do Carpo, causada pela compressão do nervo mediano.",
+        tag: "Mão e Punho"
+      },
+      {
+        id: "orto-q14",
+        text: "No exame físico do ombro, a manobra de Jobe (teste da lata vazia) e a manobra de Gerber (lift-off test) positivas indicam lesão de quais músculos, respetivamente?",
+        options: [
+          "Infraespinhoso e Supraespinhoso",
+          "Supraespinhoso e Subescapular",
+          "Subescapular e Redondo menor",
+          "Deltoide e Peitoral maior"
+        ],
+        answerIndex: 1,
+        explanation: "O teste de Jobe avalia o músculo supraespinhoso (principal abdutor inicial do ombro), enquanto o teste de Gerber avalia o músculo subescapular (principal rotador interno).",
+        tag: "Ombro"
+      },
+      {
+        id: "orto-q15",
+        text: "Qual é o principal fator de risco para fratura do colo do fémur numa idosa de 87 anos que sofreu uma queda da própria altura?",
+        options: [
+          "Hipertensão arterial",
+          "Diabetes Mellitus",
+          "Osteoporose",
+          "Uso de AAS"
+        ],
+        answerIndex: 2,
+        explanation: "A osteoporose é a principal causa de fragilidade óssea em idosos, tornando-os suscetíveis a fraturas de baixo impacto, como a fratura do colo do fémur após uma simples queda.",
+        tag: "Trauma"
+      },
+      {
+        id: "orto-q16",
+        text: "Paciente jovem sofreu queda sobre o ombro. Ao exame, a extremidade distal da clavícula está saliente e pode ser reduzida ao ser pressionada (sinal da tecla). Qual o diagnóstico?",
+        options: [
+          "Fratura da clavícula",
+          "Luxação do ombro (glenoumeral)",
+          "Luxação acromioclavicular",
+          "Lesão do manguito rotador"
+        ],
+        answerIndex: 2,
+        explanation: "A proeminência da clavícula distal e o 'sinal da tecla' são os achados clássicos da luxação da articulação acromioclavicular, indicando a rutura dos ligamentos que a estabilizam.",
+        tag: "Ombro"
+      },
+      {
+        id: "orto-q17",
+        text: "Qual é a principal diferença entre consolidação óssea primária e secundária?",
+        options: [
+          "A primária ocorre em crianças e a secundária em adultos.",
+          "A primária não forma calo ósseo visível, enquanto a secundária sim.",
+          "A primária é mais rápida que a secundária.",
+          "A primária só ocorre com tratamento conservador."
+        ],
+        answerIndex: 1,
+        explanation: "A consolidação primária ocorre em fraturas com estabilidade absoluta (ex: fixação com placa e parafusos), onde o osso se remodela diretamente sem formar calo. A secundária ocorre com estabilidade relativa (ex: gesso, hastes) e depende da formação de calo ósseo.",
+        tag: "Fisiologia Óssea"
+      },
+      {
+        id: "orto-q18",
+        text: "Qual das seguintes opções descreve corretamente a fratura do 'boxer'?",
+        options: [
+          "Fratura da base do primeiro metacarpo.",
+          "Fratura da diáfise do quinto metacarpo.",
+          "Fratura do colo do quinto metacarpo.",
+          "Fratura da falange proximal do polegar."
+        ],
+        answerIndex: 2,
+        explanation: "A fratura do 'boxer' é a fratura do colo (a região logo abaixo da 'cabeça') do quinto metacarpo, tipicamente causada por um soco mal dado com a mão fechada.",
+        tag: "Mão e Punho"
+      },
+      {
+        id: "orto-q19",
+        text: "Num trauma raquimedular, o que indica o fim da fase de choque medular?",
+        options: [
+          "O retorno da sensibilidade nos membros inferiores.",
+          "A normalização da pressão arterial e frequência cardíaca.",
+          "O retorno do reflexo bulbocavernoso.",
+          "A capacidade de mover os dedos dos pés."
+        ],
+        answerIndex: 2,
+        explanation: "O reflexo bulbocavernoso (contração do esfíncter anal ao apertar a glande/clitóris) é o primeiro reflexo a retornar após o choque medular. A sua presença indica o fim desta fase e permite uma avaliação mais precisa do prognóstico da lesão.",
+        tag: "Coluna"
+      },
+      {
+        id: "orto-q20",
+        text: "Paciente de 48 anos com dor e parestesia nos três dedos laterais da mão direita, que piora com o trabalho (tricot). Qual o diagnóstico mais provável?",
+        options: [
+          "Cervicobraquialgia",
+          "Síndrome do túnel do carpo",
+          "Epicondilite lateral",
+          "Tenossinovite de De Quervain"
+        ],
+        answerIndex: 1,
+        explanation: "A dor e parestesia na distribuição do nervo mediano (polegar, indicador, médio e metade do anelar) são características da Síndrome do Túnel do Carpo, uma neuropatia compressiva comum no punho.",
+        tag: "Mão e Punho"
+      },
+      {
+        id: "orto-q21",
+        text: "Paciente de 32 anos, vítima de acidente de automóvel, chocou na sala de emergência. A radiografia da bacia e TC mostram instabilidade pélvica posterior. Qual a conduta correta?",
+        options: [
+          "Estabilização imediata da pelve com lençol amarrado na altura dos trocânteres femorais.",
+          "Cirurgia imediata para a sínfise púbica, pois esta estrutura sofre grave sangramento.",
+          "Compressão com lençol na altura dos ilíacos e laparotomia exploradora imediata.",
+          "Reposição de cristaloide e sangue, pois pode evoluir com óbito devido ao choque."
+        ],
+        answerIndex: 0,
+        explanation: "Em fraturas pélvicas instáveis com choque hemodinâmico, a prioridade é a estabilização mecânica da pelve para diminuir o volume pélvico e conter o sangramento. A compressão circunferencial com lençol é uma medida de emergência eficaz.",
+        tag: "Politrauma"
+      },
+      {
+        id: "orto-q22",
+        text: "Um paciente internado com fratura fechada da tíbia direita, aguardando osteossíntese, apresenta em 48h dor, edema e hiperemia difusa no membro. A conduta nesse caso é:",
+        options: [
+          "Remove a imobilização e solicita ecocolor doppler de membros inferiores.",
+          "Iniciar antibiótico imediatamente por provável osteomielite.",
+          "Remove a imobilização pois trata-se de síndrome do compartimento.",
+          "Aciona o cirurgião vascular por suspeita de lesão arterial."
+        ],
+        answerIndex: 0,
+        explanation: "O quadro de dor, edema e hiperemia em membro inferior imobilizado após fratura é altamente sugestivo de Trombose Venosa Profunda (TVP). A primeira conduta é remover a imobilização compressiva e confirmar o diagnóstico com ecodoppler.",
+        tag: "Complicações"
+      },
+      {
+        id: "orto-q23",
+        text: "Paciente masculino, 18 anos, sofreu um trauma na coxa direita. Relata quadro álgico leve, edema leve, claudicando e impotência funcional. Qual a hipótese diagnóstica e o tratamento indicado?",
+        options: [
+          "Fratura do fêmur. Cirurgia com osteossíntese.",
+          "Tendinite do semimembranoso. Gelo + repouso.",
+          "Contusão da coxa. Crioterapia + repouso + ultrassom.",
+          "Luxação do joelho. Cirurgia com redução incruenta."
+        ],
+        answerIndex: 2,
+        explanation: "O quadro de dor e edema localizado após trauma direto, sem deformidade grosseira ou instabilidade, é compatível com uma contusão muscular. O tratamento inicial é conservador.",
+        tag: "Trauma"
+      },
+      {
+        id: "orto-q24",
+        text: "São afirmações verdadeiras sobre fraturas expostas: I. Mecanismos de dentro para fora geralmente levam à baixa contaminação. II. O ambiente não interfere na profilaxia antibiótica. III. A exteriorização do hematoma fraturário caracteriza a lesão como exposta. IV. A estabilização provisória com fixadores externos é útil.",
+        options: [
+          "I, III e IV são verdadeiras",
+          "II e III são falsas",
+          "II,III e IV são falsas",
+          "I e II são verdadeiras"
+        ],
+        answerIndex: 0,
+        explanation: "A afirmativa II é falsa, pois o ambiente (ex: rural) influencia na escolha do antibiótico. As demais são verdadeiras: o mecanismo de trauma, a exposição do hematoma e a utilidade dos fixadores externos estão corretos.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q25",
+        text: "Paciente com quadro de dor em joelho direito, sem trauma, com rubor, edema, calor e bloqueio articular. Qual resultado laboratorial da análise do líquido sinovial você espera encontrar?",
+        options: [
+          "Proteína diminuída com grumos",
+          "Líquido claro com proteína elevada",
+          "Leucocitose com diminuição da glicose",
+          "Líquido turvo com um teste de mucina firme"
+        ],
+        answerIndex: 2,
+        explanation: "Num quadro de artrite séptica, a análise do líquido sinovial tipicamente revela um grande aumento de leucócitos (leucocitose) e consumo de glicose pelas bactérias, resultando em níveis de glicose mais baixos que os do soro.",
+        tag: "Infecção Ortopédica"
+      },
+      {
+        id: "orto-q26",
+        text: "Paciente jovem, 22 anos, com fratura da clavícula esquerda tratada de forma conservadora. Após 2 meses, a radiografia de controle mostra calo ósseo. Assinale a alternativa correta:",
+        options: [
+          "A consolidação foi primária.",
+          "A única imobilização correta seria a tipóia americana.",
+          "A consolidação foi secundária, por estabilidade relativa.",
+          "As opções de imobilização seriam a tipóia americana e o gesso pendente."
+        ],
+        answerIndex: 2,
+        explanation: "O tratamento conservador de fraturas da clavícula (com tipóia ou imobilização em 8) promove uma estabilidade relativa, que leva à consolidação secundária, caracterizada pela formação de calo ósseo visível na radiografia.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q27",
+        text: "Paciente de 22 anos sofreu entorse do tornozelo direito. A radiografia mostra desvio importante do maléolo medial. Qual a conduta correta?",
+        options: [
+          "Indicar cirurgia, realizar perfil e imobilizar com tala.",
+          "Tratar com gesso cruro-podálico por ser estável.",
+          "Indicar cirurgia imediata, podendo complementar com perfil do pé.",
+          "Diagnóstico de fratura bimaleolar, tratar com tala."
+        ],
+        answerIndex: 0,
+        explanation: "Uma fratura do maléolo medial com desvio indica instabilidade articular e é de tratamento cirúrgico. No entanto, é fundamental completar o estudo radiográfico com a incidência em perfil e imobilizar provisoriamente para analgesia e controle do edema.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q28",
+        text: "Criança de 6 anos cai com o cotovelo em hiperextensão. A radiografia mostra uma fratura supracondiliana do úmero sem desvio (Tipo I de Gartland). Qual o tratamento?",
+        options: [
+          "Tala gessada",
+          "Gesso axilopalmar",
+          "Tipóia americana",
+          "AINES e observação"
+        ],
+        answerIndex: 1,
+        explanation: "Fraturas supracondilianas do úmero sem desvio (Gartland I) em crianças são estáveis e o tratamento de escolha é a imobilização com gesso axilopalmar com o cotovelo em flexão.",
+        tag: "Ortopedia Pediátrica"
+      },
+      {
+        id: "orto-q29",
+        text: "Paciente de 86 anos sofreu queda da própria altura, com dor e impotência funcional no quadril direito. O membro está encurtado e em rotação externa. A radiografia mostra fratura transtrocanteriana. Assinale a correta:",
+        options: [
+          "É uma fratura transtrocanteriana, por osteoporose, e deve ser submetido a tratamento cirúrgico de urgência.",
+          "É uma fratura do colo do fémur, devendo ser tratada com fixação cirúrgica de urgência.",
+          "É uma fratura da extremidade proximal do fémur, e o membro apresenta-se em rotação interna.",
+          "É uma fratura subtrocanteriana, possivelmente por uso de alendronato."
+        ],
+        answerIndex: 0,
+        explanation: "O quadro clínico (encurtamento e rotação externa) e radiográfico em uma idosa após queda de baixa energia é clássico de fratura transtrocanteriana por osteoporose. O tratamento é cirúrgico e deve ser realizado o mais breve possível.",
+        tag: "Trauma"
+      },
+      {
+        id: "orto-q30",
+        text: "Num paciente politraumatizado, qual é a conduta correta no atendimento inicial?",
+        options: [
+          "Verificar lesões cutâneas acima dos ombros para suspeitar de lesão cervical",
+          "Remover a prancha na chegada e manter o colar cervical",
+          "Realizar apenas TC de crânio se houver história de TCE",
+          "Solicitar a série trauma radiológica (coluna cervical, tórax e bacia)"
+        ],
+        answerIndex: 3,
+        explanation: "No atendimento secundário (após o ABCDE) de um politraumatizado, a série trauma radiológica, composta por radiografias da coluna cervical (AP e perfil), tórax (AP) e bacia (AP), é fundamental para detetar lesões potencialmente fatais.",
+        tag: "Politrauma"
+      },
+      {
+        id: "orto-q31",
+        text: "Paciente com fratura fechada da diáfise tibial aguarda cirurgia. As condições de pele e partes moles estão ruins e não há fixadores externos disponíveis. Para evitar complicações, você corretamente:",
+        options: [
+          "Imobiliza com calha para permitir expansão do edema e prescreve anticoagulação profilática",
+          "Imobiliza com gesso circular para controlar desvios",
+          "Realiza fasciotomia de urgência",
+          "Inicia antibiótico e leva para lavagem cirúrgica"
+        ],
+        answerIndex: 0,
+        explanation: "A conduta correta é a imobilização provisória com uma calha gessada (que é aberta e permite o inchaço), associada à profilaxia de trombose venosa profunda, enquanto se aguarda a melhoria das condições locais para a cirurgia definitiva.",
+        tag: "Trauma"
+      },
+      {
+        id: "orto-q32",
+        text: "Paciente de 60 anos sofreu queda com trauma no membro superior direito. Radiografia mostra fratura da diáfise da ulna e luxação da cabeça do rádio. Qual o seu diagnóstico e tratamento?",
+        options: [
+          "Fratura-luxação de Monteggia + gesso axilopalmar",
+          "Fratura de Colles + osteossíntese com fios de kirschner",
+          "Fratura-luxação de Galeazzi + osteossíntese com placa",
+          "Fratura de Smith + gesso axilopalmar incluindo o polegar"
+        ],
+        answerIndex: 0,
+        explanation: "A lesão descrita é uma fratura-luxação de Galeazzi (fratura do rádio + luxação da radioulnar distal). O gabarito C está incorreto na descrição da lesão, mas correto no nome. A fratura da ulna com luxação da cabeça do rádio é Monteggia.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q33",
+        text: "Paciente de 6 meses com febre alta, dor intensa no ombro e impotência funcional, sem história de trauma. Exames de sangue com VHS e PCR elevados. Qual a hipótese e quais fatores de risco no caso?",
+        options: [
+          "Sarcoma de Ewing / Febre e ausência de trauma",
+          "Sarcoma de Ewing / Elevação do VHS e impotência funcional",
+          "Osteomielite aguda / Criança de 6 meses e região do ombro",
+          "Osteomielite aguda / Elevação da PCR e febre alta"
+        ],
+        answerIndex: 2,
+        explanation: "O quadro é altamente sugestivo de osteomielite hematogénica aguda. A idade (lactente < 1 ano) e a localização (metáfise proximal do úmero, que é intra-articular) são fatores de risco para artrite séptica secundária.",
+        tag: "Infecção Ortopédica"
+      },
+      {
+        id: "orto-q34",
+        text: "Quanto às fraturas do rádio distal, assinale a opção correta.",
+        options: [
+          "As incidências radiográficas solicitadas são o AP e a oblíqua do punho.",
+          "O tratamento conservador desta fratura é um gesso incluindo o polegar.",
+          "A fratura de Smith ocorre através de uma queda com o punho em hiperflexão.",
+          "A deformidade em dorso de garfo é encontrada na fratura de Galeazzi."
+        ],
+        answerIndex: 2,
+        explanation: "A fratura de Smith, ou 'Colles invertida', é caracterizada por um desvio volar do fragmento distal do rádio e ocorre tipicamente por uma queda sobre o dorso da mão fletida.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q35",
+        text: "Paciente de 78 anos, com trauma na cabeça, dor cervical alta e paresia nos quatro membros, mais proeminente nos superiores. Qual o exame inicial e provável déficit neurológico?",
+        options: [
+          "Radiografia em perfil e transoral; lesão medular completa.",
+          "Radiografia em AP e perfil da coluna cervical; paciente em choque medular.",
+          "Radiografia em perfil e oblíqua; síndrome medular anterior.",
+          "Radiografia em perfil e transoral; síndrome medular central."
+        ],
+        answerIndex: 3,
+        explanation: "A paresia predominante nos membros superiores em relação aos inferiores após um trauma cervical é a apresentação clássica da Síndrome Medular Central. A avaliação inicial para suspeita de fratura do áxis (C2) inclui as incidências em perfil e transoral.",
+        tag: "Coluna"
+      },
+      {
+        id: "orto-q36",
+        text: "A imagem de um menino de 7 anos, assintomático, encontrada de forma acidental durante exame radiológico, fala a favor de:",
+        options: [
+          "Cisto ósseo simples",
+          "Mieloma múltiplo",
+          "Osteoblastoma",
+          "Tumor de Células Gigantes"
+        ],
+        answerIndex: 0,
+        explanation: "A imagem de uma lesão lítica, bem delimitada, central, na região metafisária proximal do fémur em uma criança é a apresentação típica de um Cisto Ósseo Simples, uma lesão benigna frequentemente assintomática.",
+        tag: "Tumores Ósseos"
+      },
+      {
+        id: "orto-q37",
+        text: "Sobre os Processos de Consolidação óssea, é correto afirmar:",
+        options: [
+          "Consolidação Óssea Direta ocorre com formação de Calo Ósseo.",
+          "Consolidação Indireta somente ocorre com Cirurgia.",
+          "Ósteon é uma unidade histológica própria da Consolidação Secundária.",
+          "A Primeira Fase da Consolidação Óssea Indireta é a de Hematoma Fraturário."
+        ],
+        answerIndex: 3,
+        explanation: "O processo de consolidação indireta (com formação de calo ósseo) inicia-se com a fase inflamatória, na qual se forma o hematoma fraturário, que é essencial para o início da cascata de cicatrização.",
+        tag: "Fisiologia Óssea"
+      },
+      {
+        id: "orto-q38",
+        text: "Sobre a abordagem das fraturas expostas é CORRETO:",
+        options: [
+          "A classificação de Gustilo-Anderson é imutável.",
+          "O potencial de contaminação está relacionado à extensão da lesão das partes moles.",
+          "O ambiente onde ocorrem as lesões não deve ser considerado.",
+          "Para caracterizar uma fratura como aberta deve haver visualização do osso."
+        ],
+        answerIndex: 1,
+        explanation: "A gravidade de uma fratura exposta e o seu risco de infeção estão diretamente ligados à energia do trauma e à extensão do dano às partes moles (pele, músculo), que servem de barreira protetora.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q39",
+        text: "Menor de 7 anos sofreu trauma no cotovelo. Radiografia mostra fratura supracondiliana do úmero com desvio posterior completo, sem contato entre os fragmentos (Gartland III). Qual o diagnóstico e conduta?",
+        options: [
+          "Fratura supracondiliana do úmero Gartland II - redução e gesso.",
+          "Fratura de Monteggia - tratamento cirúrgico de urgência.",
+          "Fratura supracondiliana do úmero Gartland I - gesso.",
+          "Fratura supracondiliana do úmero Gartland III - tratamento cirúrgico de urgência."
+        ],
+        answerIndex: 3,
+        explanation: "Uma fratura supracondiliana do úmero com desvio completo (Gartland III) é uma lesão grave e instável, com alto risco de complicações neurovasculares, sendo o tratamento cirúrgico de urgência (redução e fixação com fios) a conduta padrão.",
+        tag: "Ortopedia Pediátrica"
+      },
+      {
+        id: "orto-q40",
+        text: "Homem, 45 anos, sofreu atropelamento e chega com PA 90x50mmHg, FC 118bpm. A radiografia mostra fratura da pelve. Qual seu diagnóstico e conduta imediata?",
+        options: [
+          "Fratura do acetábulo / hemotransfusão e cirurgia imediata.",
+          "Fratura do acetábulo / cirurgia imediata.",
+          "Fratura da pelve / compressão com dispositivo pneumático ou lençol.",
+          "Fratura da pelve / hemotransfusão."
+        ],
+        answerIndex: 2,
+        explanation: "Diante de uma fratura pélvica com instabilidade hemodinâmica (choque), a medida mais importante e imediata é a estabilização mecânica da pelve para fechar o anel pélvico e diminuir o sangramento. A compressão com lençol ou binder pélvico é a primeira linha.",
+        tag: "Politrauma"
+      },
+      {
+        id: "orto-q41",
+        text: "Qual exame deve ser realizado na suspeita de Artrite Séptica?",
+        options: [
+          "Ressonância Magnética",
+          "Cultura de LCR e Hemograma Completo",
+          "Hemocultura e Hemograma Completo",
+          "Cintilografia Óssea"
+        ],
+        answerIndex: 2,
+        explanation: "Na suspeita de artrite séptica, é fundamental colher hemoculturas (pois a bactéria pode estar no sangue) e um hemograma completo para avaliar os sinais sistémicos de infeção, como a leucocitose.",
+        tag: "Infecção Ortopédica"
+      },
+      {
+        id: "orto-q42",
+        text: "Quanto às fraturas do 'boxer', assinale a(s) alternativa(s) FALSA(S):",
+        options: [
+          "Desvios menores que 45° são tratados de forma conservadora com gesso.",
+          "São fraturas que acometem o colo do V metacarpo.",
+          "O mecanismo da fratura ocorre por impacto com a mão fechada (soco).",
+          "Em geral são fraturas muito desviadas e exigem tratamento cirúrgico."
+        ],
+        answerIndex: 3,
+        explanation: "A maioria das fraturas do boxer tem pouco desvio ou desvios aceitáveis, sendo de tratamento conservador. A cirurgia é reservada para casos com grande angulação ou desvio rotacional.",
+        tag: "Mão e Punho"
+      },
+      {
+        id: "orto-q43",
+        text: "Em relação às lesões medulares é correto, EXCETO:",
+        options: [
+          "São indicações do uso do corticoide intravenoso lesões medulares sem déficit neurológico e traumas ocorridos a mais de 8 horas.",
+          "Não ocorre lesão medular nas fraturas lombares baixas.",
+          "O sistema inflamatório de reparação é danoso e causa da lesão medular secundária.",
+          "Em crianças menores de 8 anos, a lesão medular pode ocorrer sem fraturas."
+        ],
+        answerIndex: 0,
+        explanation: "O uso de corticoide em altas doses (pulsoterapia) é controverso, mas quando indicado, deve ser feito nas primeiras 8 horas do trauma em pacientes COM déficit neurológico. Não há indicação sem déficit ou após 8 horas.",
+        tag: "Coluna"
+      },
+      {
+        id: "orto-q44",
+        text: "Paciente com fratura de fêmur tratada com osteossíntese rígida (placa e parafusos). Após 8 semanas, a radiografia não apresenta calo ósseo visível, mas o paciente não tem queixas. É correto afirmar que:",
+        options: [
+          "O calo ósseo torna-se visível após o remodelamento ósseo.",
+          "A ausência de calo ósseo pode ser devida a infeção ativa.",
+          "Provavelmente ele está com pseudartrose.",
+          "Ocorreu processo de consolidação óssea direta (primária)."
+        ],
+        answerIndex: 3,
+        explanation: "A fixação rígida com compressão interfragmentária promove a consolidação óssea direta (primária), onde o osso se remodela através dos canais de Havers sem a formação de um calo ósseo externo visível na radiografia.",
+        tag: "Fisiologia Óssea"
+      },
+      {
+        id: "orto-q45",
+        text: "A fase de choque medular pode dificultar a avaliação do trauma raquimedular. Para termos certeza de que o paciente não se encontra em choque, devemos:",
+        options: [
+          "Observar a contração reflexa do esfíncter anal ao tracionar a sonda de Foley (reflexo bulbocavernoso).",
+          "Observar a cada 30 minutos a sensibilidade dos braços e pernas.",
+          "Observar os sinais vitais, pois hipotensão e bradicardia confirmam o choque.",
+          "Avaliar dermátomos e miótomos para procurar o nível da lesão."
+        ],
+        answerIndex: 0,
+        explanation: "O retorno do reflexo bulbocavernoso é o sinal que marca o fim da fase de choque medular. A sua presença indica que a medula recuperou a sua atividade reflexa abaixo do nível da lesão.",
+        tag: "Coluna"
+      },
+      {
+        id: "orto-q46",
+        text: "Para ocorrer a consolidação das fraturas, é necessário:",
+        options: [
+          "Vascularização dos Fragmentos e Tratamento Cirúrgico.",
+          "Tratamento cirúrgico e Redução Precoce.",
+          "Estabilidade Mecânica e Vascularização dos Fragmentos.",
+          "Redução precoce e Estabilidade Mecânica."
+        ],
+        answerIndex: 2,
+        explanation: "Os dois pilares fundamentais para a consolidação de qualquer fratura são um ambiente mecânico estável (seja por gesso ou cirurgia) e um suprimento sanguíneo adequado (biologia) para levar as células e nutrientes necessários.",
+        tag: "Fisiologia Óssea"
+      },
+      {
+        id: "orto-q47",
+        text: "A plegia flácida arreflexa que ocorre imediatamente após o trauma raquimedular pode indicar a presença do choque medular. Sobre essa condição podemos AFIRMAR:",
+        options: [
+          "Decorre de lesão das cadeias simpáticas cervicais.",
+          "Cursa com extremidades quentes e hiperemiadas.",
+          "O retorno precoce do reflexo bulbocavernoso indica bom prognóstico.",
+          "Pode ocorrer, inclusive, em secções completas da medula espinhal."
+        ],
+        answerIndex: 3,
+        explanation: "O choque medular é um fenómeno fisiológico de 'desligamento' temporário da medula abaixo da lesão, e ocorre tanto em lesões completas como incompletas. Não tem relação direta com o prognóstico final.",
+        tag: "Coluna"
+      },
+      {
+        id: "orto-q48",
+        text: "Criança de 6 anos foi puxada pelo braço e agora o mantém junto ao corpo, pronado e sem o mover. A radiografia é normal. Qual a estrutura anatómica acometida?",
+        options: [
+          "Ligamento colateral radial",
+          "Ligamento anular da cabeça do rádio",
+          "Cápsula articular do cotovelo",
+          "Placa de crescimento do úmero distal"
+        ],
+        answerIndex: 1,
+        explanation: "Este é o quadro clássico da pronação dolorosa, onde uma tração súbita no braço da criança causa a subluxação da cabeça do rádio, que desliza para fora do ligamento anular que a deveria conter.",
+        tag: "Ortopedia Pediátrica"
+      },
+      {
+        id: "orto-q49",
+        text: "Na luxação do joelho, qual a lesão associada potencialmente grave e qual exame pedir para o seu diagnóstico precoce?",
+        options: [
+          "Trombose venosa profunda / ecodoppler venoso.",
+          "Lesão meniscal / tomografia computadorizada.",
+          "Lesão da artéria poplítea / arteriografia ou angio-TC.",
+          "Lesão do ligamento cruzado anterior / ressonância magnética."
+        ],
+        answerIndex: 2,
+        explanation: "A luxação do joelho é uma lesão de altíssima energia com alto risco de lesão da artéria poplítea, que passa posteriormente à articulação. A avaliação vascular com arteriografia ou angio-TC é mandatória para descartar uma lesão que pode levar à amputação.",
+        tag: "Trauma"
+      },
+      {
+        id: "orto-q50",
+        text: "Numa radiografia da coluna lombar observa-se uma lesão óssea que acomete as três colunas de Dennis em L1. Qual a melhor conduta?",
+        options: [
+          "Colete anatómico e carga parcial com muletas.",
+          "Permanecer com prancha até consolidação óssea.",
+          "Tratamento cirúrgico com instrumentação e estabilização.",
+          "Fisioterapia motora com treino de marcha."
+        ],
+        answerIndex: 2,
+        explanation: "Uma fratura que acomete as três colunas de Dennis é, por definição, instável. O tratamento para fraturas instáveis da coluna vertebral é cirúrgico, visando a estabilização do segmento para proteger as estruturas neurais e permitir a mobilização precoce.",
+        tag: "Coluna"
+      },
+      {
+        id: "orto-q51",
+        text: "Artrite Séptica pode ser uma complicação de Osteomielite em quais sítios anatómicos?",
+        options: [
+          "Cotovelo, Quadril e Joelho",
+          "Ombro, Quadril e Tornozelo",
+          "Ombro, Cotovelo e Joelho",
+          "Cotovelo, Joelho e Tornozelo"
+        ],
+        answerIndex: 1,
+        explanation: "A infeção pode passar do osso para a articulação (artrite séptica) quando a metáfise óssea (local mais comum da osteomielite em crianças) é intra-articular. Isto ocorre no ombro, quadril, cotovelo e tornozelo.",
+        tag: "Infecção Ortopédica"
+      },
+      {
+        id: "orto-q52",
+        text: "Paciente de 5 anos com febre de 39 graus, dor puntiforme na coxa direita próxima ao joelho, com piora aos movimentos. Qual o provável diagnóstico?",
+        options: [
+          "Artrite Séptica",
+          "Osteomielite Hematogénica Aguda",
+          "Tumor Ósseo primário",
+          "Osteomielite Crónica"
+        ],
+        answerIndex: 1,
+        explanation: "A dor óssea localizada e intensa, associada a febre e sinais sistémicos numa criança, é a apresentação clássica da osteomielite hematogénica aguda, que afeta preferencialmente a metáfise dos ossos longos.",
+        tag: "Infecção Ortopédica"
+      },
+      {
+        id: "orto-q53",
+        text: "Na traumatologia, qual termo define corretamente uma lesão ligamentar sem perda da congruência articular?",
+        options: [
+          "Contusão",
+          "Luxação",
+          "Estiramento muscular",
+          "Entorse"
+        ],
+        answerIndex: 3,
+        explanation: "A entorse é, por definição, uma lesão dos ligamentos de uma articulação causada por um movimento brusco, sem que ocorra a perda de contacto entre as superfícies articulares.",
+        tag: "Trauma"
+      },
+      {
+        id: "orto-q54",
+        text: "Paciente de 29 anos sofreu trauma no tornozelo. A radiografia mostra fratura da base do V metatarso. Qual o diagnóstico e tratamento?",
+        options: [
+          "Fratura-luxação de Lisfranc / Cirurgia imediata",
+          "Fratura da tuberosidade do V metatarso / Gesso ou Robofoot",
+          "Fratura de Jones / Cirurgia para fixação",
+          "Fratura por stress / Repouso e carga parcial"
+        ],
+        answerIndex: 1,
+        explanation: "A fratura por avulsão da tuberosidade do V metatarso é comum após entorses de tornozelo e geralmente é tratada de forma conservadora com imobilização (gesso ou bota robofoot) e carga conforme a dor.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q55",
+        text: "Paciente de 32 anos com fratura-luxação posterior do quadril/acetábulo. Qual afirmação é correta?",
+        options: [
+          "O paciente apresenta déficit do nervo femoral.",
+          "A tomografia é fundamental para avaliar fragmentos intra-articulares.",
+          "Todas as fraturas do acetábulo devem ser tratadas com cirurgia.",
+          "A luxação posterior do quadril é a mais rara."
+        ],
+        answerIndex: 1,
+        explanation: "Após a redução de uma luxação do quadril associada a uma fratura do acetábulo, a tomografia computadorizada é essencial para avaliar a congruência articular, a presença de fragmentos soltos e planear o tratamento cirúrgico definitivo.",
+        tag: "Trauma"
+      },
+      {
+        id: "orto-q56",
+        text: "Paciente de 40 anos com fratura do 1/3 distal do rádio sem desvio, tratada com gesso. No terceiro dia, retorna com dor desproporcional e palidez nos dedos. Qual a hipótese?",
+        options: [
+          "Trombose venosa profunda",
+          "Osteomielite aguda",
+          "Síndrome compartimental",
+          "Pseudoartrose hipertrófica"
+        ],
+        answerIndex: 2,
+        explanation: "A dor desproporcional à lesão, especialmente em um membro imobilizado com gesso circular, é o sinal mais precoce e importante da Síndrome Compartimental, uma emergência que ameaça a viabilidade do membro.",
+        tag: "Complicações"
+      },
+      {
+        id: "orto-q57",
+        text: "Homem de 27 anos, vítima de acidente, chega à emergência com Glasgow 15, PA 70x30mmHg e fratura exposta da tíbia. Seguindo o ATLS, qual a sua primeira ação?",
+        options: [
+          "Reduzir a fratura exposta.",
+          "Mandar para a radiografia da bacia.",
+          "Verificar se as vias aéreas estão livres e se o colar cervical está colocado.",
+          "Fazer avaliação neurológica completa."
+        ],
+        answerIndex: 2,
+        explanation: "O protocolo ATLS (Advanced Trauma Life Support) preconiza a abordagem ABCDE. A prioridade máxima é sempre garantir a via aérea (A - Airway) e a estabilização da coluna cervical.",
+        tag: "Politrauma"
+      },
+      {
+        id: "orto-q58",
+        text: "Paciente de 38 anos com fratura cominutiva de alta energia da diáfise do úmero por projétil de arma de fogo. Qual a melhor afirmação sobre o caso?",
+        options: [
+          "Deve ser tratada com fixação externa de urgência e pode ter problemas de consolidação.",
+          "Deve ser tratada com placa e parafusos e tem bom potencial de consolidação.",
+          "É uma fratura segmentar e não deve ser operada imediatamente.",
+          "É uma fratura de baixa energia e deve ser tratada por estabilidade relativa."
+        ],
+        answerIndex: 0,
+        explanation: "Fraturas por projétil de arma de fogo são de alta energia, com grande dano às partes moles e cominuição óssea. A fixação externa é uma excelente opção para estabilização inicial (controlo de danos), e o alto grau de lesão biológica aumenta o risco de complicações na consolidação.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q59",
+        text: "Paciente de 22 anos com trauma cervical, paraplegia flácida e nível neurológico em C6. O exame neurológico desta raiz envolve:",
+        options: [
+          "Flexão do punho e sensibilidade do dedo mínimo.",
+          "Extensão do cotovelo e sensibilidade do dedo médio.",
+          "Extensão do punho e sensibilidade do polegar.",
+          "Flexão dos dedos e sensibilidade da face medial do antebraço."
+        ],
+        answerIndex: 2,
+        explanation: "A raiz nervosa C6 é responsável pela motricidade da extensão do punho e pela sensibilidade do dermátomo que inclui a face lateral do antebraço e o polegar.",
+        tag: "Coluna"
+      },
+      {
+        id: "orto-q60",
+        text: "Lutador de Judô sofre queda sobre o ombro. Ao exame, equimose, edema e sinal da 'tecla de piano' positivo. Qual afirmação é VERDADEIRA?",
+        options: [
+          "A lesão causou ruptura dos ligamentos acromioclaviculares e coracoclaviculares.",
+          "O paciente necessita de redução incruenta de urgência com a manobra de Stimson.",
+          "O diagnóstico é clínico, dispensando exames complementares.",
+          "O tratamento cirúrgico é essencial para um bom resultado funcional."
+        ],
+        answerIndex: 0,
+        explanation: "A luxação acromioclavicular com deformidade significativa (sinal da tecla) indica a rutura tanto dos ligamentos acromioclaviculares quanto dos ligamentos coracoclaviculares (conoide e trapezoide), que são os principais estabilizadores verticais da clavícula.",
+        tag: "Ombro"
+      },
+      {
+        id: "orto-q61",
+        text: "Paciente de 25 anos com fratura do terço médio do escafóide sem desvio. Qual a conduta mais recomendável para este paciente, que é dentista e atleta?",
+        options: [
+          "Imobilização gessada sem incluir o polegar.",
+          "Fixação por parafuso percutâneo para facilitar o retorno às atividades.",
+          "Imobilização com tala gessada incluindo o polegar.",
+          "Fixação aberta com parafuso interfragmentário."
+        ],
+        answerIndex: 1,
+        explanation: "Em pacientes jovens e ativos ('alta demanda'), mesmo em fraturas sem desvio do escafóide, o tratamento cirúrgico com parafuso percutâneo é uma excelente opção, pois permite uma reabilitação mais rápida e um retorno precoce às atividades, além de diminuir o risco de pseudartrose.",
+        tag: "Mão e Punho"
+      },
+      {
+        id: "orto-q62",
+        text: "Paciente de 32 anos com fratura diafisária do úmero e incapacidade de realizar extensão do punho. Qual a conduta mais apropriada?",
+        options: [
+          "Tratamento cirúrgico absoluto devido à lesão nervosa.",
+          "Tratamento conservador, pois a lesão do nervo ulnar costuma recuperar.",
+          "Tratamento conservador inicial, pois a lesão do nervo radial costuma ser uma neuropraxia e recupera espontaneamente.",
+          "Tratamento cirúrgico devido à alta energia do trauma."
+        ],
+        answerIndex: 2,
+        explanation: "A lesão do nervo radial é a mais comum nas fraturas da diáfise do úmero. Na maioria dos casos, trata-se de uma neuropraxia (lesão funcional sem dano estrutural) com alta taxa de recuperação espontânea. Por isso, a conduta inicial é geralmente conservadora, com observação da função nervosa.",
+        tag: "Fraturas"
+      },
+      {
+        id: "orto-q63",
+        text: "Paciente de 2 anos com dor súbita no braço esquerdo após ser puxada pela mãe. Mantém o membro junto ao corpo, com antebraço pronado. A radiografia é normal. Qual o diagnóstico?",
+        options: [
+          "Fratura em galho verde",
+          "Pronação Dolorosa",
+          "Ruptura do ligamento anular",
+          "Sinovite transitória de cotovelo"
+        ],
+        answerIndex: 1,
+        explanation: "Este é o quadro clínico e mecanismo de trauma clássico da Pronação Dolorosa, ou subluxação da cabeça do rádio, comum em crianças pequenas após tração do membro superior.",
+        tag: "Ortopedia Pediátrica"
+      },
+      {
+        id: "orto-q64",
+        text: "Em relação às características da osteomielite crónica, qual das seguintes afirmações está correta?",
+        options: [
+          "É uma emergência com alto risco de sepse e morte.",
+          "O VHS é o melhor exame para acompanhamento da resposta ao tratamento.",
+          "É caracterizada por necrose, sequestro ósseo e formação de fístulas.",
+          "As alterações radiográficas são precoces e incluem apenas rarefação óssea."
+        ],
+        answerIndex: 2,
+        explanation: "A osteomielite crónica é um processo de longa duração caracterizado pela presença de osso necrótico (sequestro ósseo) que atua como um corpo estranho, perpetuando a infeção e podendo drenar para a pele através de fístulas.",
+        tag: "Infecção Ortopédica"
+      },
+      {
+        id: "orto-q65",
+        text: "Qual das seguintes afirmações descreve corretamente a fratura em 'galho verde', típica em crianças?",
+        options: [
+          "Desvio da cortical óssea sem nenhuma linha visível de fratura.",
+          "Fratura que atravessa a placa de crescimento.",
+          "Fratura de uma cortical, mantendo a outra cortical íntegra, mas angulada.",
+          "Fratura cominutiva devido ao periósteo menos espesso."
+        ],
+        answerIndex: 2,
+        explanation: "A fratura em 'galho verde' ocorre devido à maior flexibilidade do osso infantil. Uma cortical fratura enquanto a oposta apenas se deforma plasticamente (dobra), semelhante a um galho verde a ser quebrado.",
+        tag: "Ortopedia Pediátrica"
+      }
+    ]
+  },
 
       
     ]
-  }
-];

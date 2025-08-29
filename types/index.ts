@@ -1,3 +1,5 @@
+// types/index.ts
+
 import React from 'react';
 
 export interface Question {
@@ -26,9 +28,11 @@ export interface SrsData {
   };
 }
 
+// CORREÇÃO: A interface Deck agora inclui 'questions'
 export interface Deck {
   id: string;
   name: string;
+  questions: Question[];
 }
 
 export interface Stats {

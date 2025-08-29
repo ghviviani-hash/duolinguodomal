@@ -28,7 +28,7 @@ export interface SrsData {
   };
 }
 
-// CORREÇÃO: A interface Deck agora inclui 'questions'
+// Definição correta do tipo Deck
 export interface Deck {
   id: string;
   name: string;

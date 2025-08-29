@@ -7008,7 +7008,8177 @@ export const DEFAULT_DECKS: Deck[] = [
         tag: "Ortopedia Pediátrica"
       }
     ]
-  },
+  },{
+    id: "preset-m7-pr2-neuro",
+    name: "Estácio - M7 - PR2 - Neurologia",
+    questions: [
+        {
+            "id": "PR2-Neuro-Q2",
+            "text": "Paciente feminino 65 anos com diagnóstico de hipotireoidismo, depressão e ansiedade comparece ao consultório com queixa de perda de consciência. Refere que episódios sempre ocorrem da mesma maneira: começa a ouvir uma música na sua cabeça por alguns segundos até que perda a consciência. Recupera-se lenta e gradualmente. Nos minutos que seguem apresenta dificuldade para raciocinar e leve dor de cabeça. Testemunhas referem que durante o evento tem abalos musculares. Qual o provável diagnóstico?",
+            "options": [
+                "Doença psiquiátrica - pseudocrise",
+                "Demência por corpúsculos de Lewy",
+                "Crise epiléptica focal para bilateral tônico-clônica",
+                "Ataques isquêmicos transitórios"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro é clássico de uma crise epiléptica focal que evolui para tônico-clônica bilateral. A aura auditiva (ouvir música) indica o início focal, provavelmente no lobo temporal. A subsequente perda de consciência, abalos musculares e o período de confusão pós-ictal (recuperação lenta, dificuldade de raciocinar) confirmam a generalização. Pseudocrise (A) não costuma ter um padrão tão estereotipado nem período pós-ictal claro. Demência com corpos de Lewy (B) cursa com alucinações visuais e parkinsonismo. AIT (D) causaria déficits neurológicos (perda de força, fala), não fenômenos positivos como alucinações auditivas.",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q3",
+            "text": "Paciente masculino de 68 anos com múltiplas comorbidades e polifarmácia (incluindo anti-hipertensivos e levodopa) apresentou perda de consciência enquanto almoçava. Refere pródromos de mal-estar, palpitações e 'cabeça leve'. Familiares relatam que ficou pálido e frio, recuperando a consciência em segundos após ser deitado. Ocorreram breves abalos musculares durante o evento. Qual o provável diagnóstico?",
+            "options": [
+                "Crise epiléptica disautonômica",
+                "Síncope",
+                "Ataque isquêmico transitório",
+                "Crise epiléptica focal para bilateral tônico-clônica"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro é típico de síncope vasovagal/hipotensão ortostática, precipitada pelas comorbidades (disautonomia pela Atrofia de Múltiplos Sistemas) e medicações. Os pródromos (mal-estar, palpitações), a palidez e a recuperação extremamente rápida (<1 minuto) ao deitar são característicos. Abalos musculares (mioclonias da síncope) podem ocorrer por hipoperfusão cerebral e não definem uma crise epiléptica (A, D). AIT (C) não se manifesta com perda de consciência transitória desta forma.",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q4",
+            "text": "Na doença de corpo de Lewy, o quadro clínico inicia-se principalmente com:",
+            "options": [
+                "Alucinações e confabulação",
+                "Perda de memória 2 anos após o parkinsonismo",
+                "Parkinsonismo e alucinações visuais",
+                "Alucinações auditivas e demência associada ao parkinsonismo"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A tríade clássica da Demência com Corpos de Lewy (DCL) é composta por: 1) flutuação do estado cognitivo, 2) alucinações visuais bem formadas e 3) parkinsonismo. O quadro demencial e o parkinsonismo devem iniciar próximos (menos de 1 ano de diferença). Se a demência surge muito tempo após o parkinsonismo (B), o diagnóstico é de Demência da Doença de Parkinson. Alucinações auditivas (D) e confabulação (A) não são as características de abertura típicas da DCL.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q5",
+            "text": "Paciente de 49 anos com Doença de Parkinson refere que, durante o sono, apresenta movimentação intensa, como se estivesse lutando, além de gritar, sem se lembrar do ocorrido no dia seguinte. Qual a melhor conduta?",
+            "options": [
+                "Solicitar RM de crânio e EEG para investigar epilepsia",
+                "Suspender pramipexol por suspeita de efeito adverso",
+                "Solicitar nível sérico de levetiracetam por suspeita de crise noturna",
+                "Solicitar polissonografia por suspeita de distúrbio comportamental do sono REM"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O quadro é altamente sugestivo de Distúrbio Comportamental do Sono REM (DCSREM), uma parassonia caracterizada pela perda da atonia muscular fisiológica do sono REM, fazendo com que o paciente 'atue' seus sonhos. É fortemente associado a sinucleinopatias, como a Doença de Parkinson. O exame padrão-ouro para o diagnóstico é a polissonografia. As outras opções são menos prováveis, pois o quadro não tem características de crise epiléptica (A, C) nem é um efeito adverso típico do pramipexol (B).",
+            "tag": "distúrbios do sono"
+        },
+        {
+            "id": "PR2-Neuro-Q8",
+            "text": "Marcia, 26 anos, apresentou sua terceira crise convulsiva tônico-clônica generalizada no último ano, sem fator provocador. Nunca fez tratamento. Qual a conduta correta?",
+            "options": [
+                "Apenas observar, pois foram poucas crises em um ano.",
+                "Solicitar investigação completa (RM, EEG, laboratório) e iniciar medicação antiepiléptica.",
+                "Iniciar fenobarbital e solicitar apenas EEG.",
+                "Aguardar uma quarta crise para iniciar a investigação."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O diagnóstico de epilepsia é firmado após duas ou mais crises não provocadas. A paciente já teve três, portanto, tem indicação de tratamento. A conduta correta envolve uma investigação etiológica completa para classificar a síndrome epiléptica e escolher a melhor droga, além de iniciar o tratamento para prevenir novas crises. As outras opções (A, C, D) são incorretas por subestimarem a condição ou indicarem uma investigação/tratamento inadequado.",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q9",
+            "text": "Jonas, 3 anos, em tratamento para faringotonsilite, apresentou crise tônico-clônica generalizada de 3 minutos durante febre de 39°C. Na emergência, já estava em seu estado habitual, sem sinais de alarme no exame físico. Qual a conduta correta?",
+            "options": [
+                "Realizar investigação completa com EEG, TC de crânio e punção lombar.",
+                "Diagnosticar epilepsia e iniciar fenobarbital.",
+                "Tranquilizar o pai, explicar que se trata de uma crise febril simples e orientar sobre como agir em caso de recorrência.",
+                "Internar a criança para investigar meningite, pois sempre é uma possibilidade."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O cenário descreve perfeitamente uma crise febril simples: generalizada, com duração menor que 15 minutos, única no período de 24 horas, em uma criança na faixa etária típica (6 meses a 5 anos) e com recuperação completa. Nestes casos, a conduta é expectante e educativa, sem necessidade de exames complementares (A) ou tratamento contínuo (B). A investigação para meningite (D) só é indicada se houver sinais meníngeos ou se a criança não tiver se recuperado completamente.",
+            "tag": "epilepsia"
+        },
+        {
+            "id": "PR2-Neuro-Q12",
+            "text": "Camila, 26 anos, grávida de 20 semanas, acaba de receber o diagnóstico de epilepsia após sua segunda crise tônico-clônica. Qual medicação deve ser evitada ao máximo para essa paciente?",
+            "options": [
+                "Carbamazepina",
+                "Lamotrigina",
+                "Levetiracetam",
+                "Ácido valproico"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O Ácido Valproico (Valproato) é a droga antiepiléptica com o maior potencial teratogênico conhecido, associado a um risco significativo de malformações do tubo neural (espinha bífida) e a desfechos neurocognitivos adversos na criança. Portanto, deve ser evitado ao máximo durante a gestação. Lamotrigina (B) e Levetiracetam (C) são considerados os mais seguros na gravidez. Carbamazepina (A) também possui riscos, mas são menores que os do valproato.",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q17",
+            "text": "Sobre epilepsia, julgue as afirmativas como verdadeiras (V) ou falsas (F):\n( ) Crises convulsivas febris são consideradas epilepsia.\n( ) Crises convulsivas em vigência de doenças agudas (ex: meningite) não são consideradas epilepsia.\n( ) A crise epiléptica é um distúrbio recorrente, paroxístico e transitório.\n( ) A maioria das epilepsias é idiopática.",
+            "options": [
+                "F, V, V, V",
+                "V, V, F, V",
+                "F, F, F, F",
+                "F, V, F, F"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A primeira afirmativa é falsa; crises febris são provocadas e não definem epilepsia. A segunda é verdadeira; crises sintomáticas agudas são uma reação a uma agressão cerebral e não epilepsia. A terceira é verdadeira, descrevendo a natureza da crise. A quarta é verdadeira; em muitos casos, não se encontra uma causa específica para a epilepsia.",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q18",
+            "text": "Dentre as classes de drogas abaixo, qual delas provoca mais comumente comprometimento cognitivo?",
+            "options": [
+                "Anticolinérgicos e benzodiazepínicos",
+                "Anti-hipertensivos",
+                "Antiagregantes plaquetários",
+                "Anticoagulantes"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Anticolinérgicos e benzodiazepínicos são classicamente associados a efeitos adversos cognitivos, como confusão, amnésia e dificuldade de concentração, especialmente em idosos. As outras classes de medicamentos (B, C, D) não têm o comprometimento cognitivo como efeito adverso principal ou comum.",
+            "tag": "farmacologia"
+        },
+        {
+            "id": "PR2-Neuro-Q25",
+            "text": "Mulher de 48 anos queixa-se de dificuldade de fechar a mão direita há 6 meses. Ao exame, apresenta fraqueza nos 4º e 5º dedos, hipoestesia na região hipotênar e 'mão em garra'. Qual o provável nervo acometido?",
+            "options": [
+                "Nervo Mediano",
+                "Nervo Ulnar",
+                "Nervo Radial",
+                "Raízes C8-T1"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro clínico descrito (fraqueza e hipoestesia no 4º e 5º dedos, atrofia da região hipotênar e a deformidade de 'mão em garra') é patognomônico de uma lesão do nervo ulnar. A lesão do nervo mediano (A) causaria a Síndrome do Túnel do Carpo, com sintomas nos três primeiros dedos. A lesão do nervo radial (C) causaria 'mão caída'. Uma radiculopatia de C8-T1 (D) teria uma distribuição mais ampla dos déficits.",
+            "tag": "neuropatia periférica"
+        },
+        {
+            "id": "PR2-Neuro-Q35",
+            "text": "Paciente epiléptico em tratamento com fenobarbital dá entrada na emergência com crises epilépticas seguidas e intermitentes, sem recuperação da consciência entre elas. O quadro é compatível com:",
+            "options": [
+                "Efeito colateral do fenobarbital",
+                "“Sudden unexpected death in epilepsy” (SUDEP)",
+                "“Status epilepticus” (Estado de mal epiléptico)",
+                "Crise de ausência"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A definição de Status Epilepticus é uma crise com duração maior que 5 minutos ou duas ou more crises sem recuperação completa da consciência entre elas, que é exatamente o quadro descrito. Efeitos colaterais do fenobarbital (A) geralmente envolvem sedação. SUDEP (B) é a morte súbita, não um estado de crises contínuas. Crise de ausência (D) é um tipo de crise breve, sem os componentes motores contínuos descritos.",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q36",
+            "text": "Em pacientes com lesão do primeiro neurônio motor (síndrome piramidal), o sinal de Babinski é representado pela:",
+            "options": [
+                "Flexão dos pododáctilos sem movimento do hálux",
+                "Flexão do hálux com ausência de movimento dos pododáctilos",
+                "Abertura em leque dos pododáctilos sem movimento do hálux",
+                "Extensão (dorsiflexão) do hálux com abertura em leque dos outros dedos"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O sinal de Babinski, um reflexo patológico indicativo de lesão no trato corticoespinhal (primeiro neurônio motor), é caracterizado pela extensão do hálux (dedão do pé) e, frequentemente, pela abertura em leque dos outros dedos em resposta a um estímulo na região plantar. As outras opções descrevem a resposta normal (flexão) ou respostas incompletas.",
+            "tag": "semiologia"
+        },
+        {
+            "id": "PR2-Neuro-Q37",
+            "text": "Com relação às crises epilépticas é CORRETO afirmar:",
+            "options": [
+                "A investigação etiológica é secundária, o mais importante é tratar a crise.",
+                "Toda crise convulsiva deve ser tratada com antiepilépticos de uso contínuo.",
+                "Crises epilépticas subentrantes que duram mais de 5-10 minutos caracterizam o estado de mal epiléptico.",
+                "A caracterização da síndrome epiléptica não ajuda na escolha do medicamento."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A definição moderna de estado de mal epiléptico (status epilepticus) considera uma crise contínua por mais de 5 minutos ou crises recorrentes sem recuperação da consciência. A investigação etiológica é fundamental (A). Nem toda crise convulsiva (ex: crise febril, crise sintomática aguda) requer tratamento contínuo (B). A correta caracterização da síndrome epiléptica é crucial para a escolha da droga mais eficaz e segura (D).",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q38",
+            "text": "Sabemos que existem inúmeras etiologias e tipos de neuropatias periféricas. Em relação ao tema assinale a alternativa CORRETA:",
+            "options": [
+                "Nas mononeuropatias múltiplas ocorre o envolvimento distal e simétrico dos 4 membros.",
+                "O sinal de Tinel e a manobra de Phalen são utilizados na avaliação do nervo ulnar.",
+                "A Neuropatia Diabética pode cursar com disautonomia.",
+                "Na neuropatia do mediano observamos a 'mão caída'."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A neuropatia diabética é uma das principais causas de disautonomia, manifestando-se com hipotensão postural, gastroparesia, etc. Mononeuropatias múltiplas (A) são assimétricas por definição. O sinal de Tinel e Phalen (B) testam o nervo mediano na síndrome do túnel do carpo. A 'mão caída' (D) é característica da lesão do nervo radial.",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q39",
+            "text": "Paciente de 44 anos chega à emergência com suspeita de Síndrome de Guillain Barré. Dentre os achados abaixo, qual é considerado como um sinal de alerta (red flag) para considerar um diagnóstico alternativo?",
+            "options": [
+                "Comprometimento de nervos cranianos",
+                "História de infecção gastrointestinal 4 semanas antes",
+                "Líquor com 42 de proteína e 2 células",
+                "Progressão do quadro por 8 semanas"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Síndrome de Guillain-Barré (SGB) é uma polirradiculoneuropatia aguda, com a progressão dos sintomas ocorrendo tipicamente até 4 semanas. Uma progressão que continua por 8 semanas sugere uma forma crônica, como a Polirradiculoneuropatia Inflamatória Desmielinizante Crônica (PIDC), e não a forma aguda clássica. Os outros achados (A, B, C) são todos compatíveis com o diagnóstico de SGB.",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q40",
+            "text": "Qual é a principal causa de demência?",
+            "options": [
+                "Doença de Parkinson",
+                "Doença de Huntington",
+                "Doença de Alzheimer",
+                "Demência vascular"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Doença de Alzheimer é a causa mais comum de demência em todo o mundo, respondendo por 60-80% dos casos. A demência vascular (D) é a segunda causa mais comum. A Doença de Parkinson (A) pode levar à demência, mas é menos frequente. A Doença de Huntington (B) é uma causa rara de demência.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q48",
+            "text": "Mulher de 65 anos, previamente hígida, apresenta há 2 anos mudança de comportamento com acumulação de objetos, isolamento social, desinibição (urinou na sala com visitas) e hipersexualidade na fala. Testes cognitivos mostram comprometimento da função executiva com memória relativamente preservada. A etiologia mais provável é:",
+            "options": [
+                "Esquizofrenia de início tardio",
+                "Demência frontotemporal",
+                "Doença de Alzheimer",
+                "Transtorno bipolar"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro clínico é altamente sugestivo da variante comportamental da Demência Frontotemporal (DFTvc). É caracterizada por alterações proeminentes de personalidade e comportamento (desinibição, apatia, comportamentos compulsivos) com relativa preservação da memória no início do quadro. Doença de Alzheimer (C) inicia tipicamente com amnésia. Esquizofrenia (A) e transtorno bipolar (E) são menos prováveis de iniciar nesta idade com este perfil.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q49",
+            "text": "É uma das causas, potencialmente, reversíveis de demência:",
+            "options": [
+                "Doença de Alzheimer",
+                "Carência de vitamina B12",
+                "Demência frontotemporal",
+                "Demência Vascular"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A deficiência de Vitamina B12 é uma causa clássica de declínio cognitivo e demência que pode ser, em muitos casos, revertida com a reposição da vitamina. As outras opções listadas (A, C, D) são causas de demências degenerativas ou vasculares, consideradas irreversíveis.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q51",
+            "text": "Paciente de 50 anos, pedreiro, com lombalgia crônica que piorou e agora irradia para a coxa esquerda, associada a parestesia no pé esquerdo. Como podemos classificar o dano neurológico?",
+            "options": [
+                "Radiculopatia L5-S1",
+                "Polineuropatia distal simétrica",
+                "Plexopatia braquial",
+                "Mononeuropatia múltipla"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A dor lombar que irradia para o membro inferior seguindo o trajeto de uma raiz nervosa (dor ciática) é a definição de uma radiculopatia. O território descrito (coxa posterior e pé) é compatível com o dermátomo das raízes L5 ou S1. Polineuropatia (B) seria simétrica, 'em bota'. Plexopatia braquial (C) afeta o membro superior. Mononeuropatia múltipla (D) seria o acometimento de múltiplos nervos periféricos de forma assimétrica.",
+            "tag": "neuropatia periférica"
+        },
+        {
+            "id": "PR2-Neuro-Q52",
+            "text": "Mulher de 48 anos com fraqueza na mão direita (4º e 5º dedos) e, há 1 mês, começou a tropeçar por fraqueza na dorsiflexão do pé esquerdo. Ao exame: Marcha escarvante à esquerda; fraqueza e hipoestesia no território ulnar direito e no território do nervo fibular esquerdo. Qual padrão de neuropatia periférica apresentado?",
+            "options": [
+                "Polineuropatia distal",
+                "Mononeuropatia múltipla",
+                "Mononeuropatia do nervo ulnar isolada",
+                "Radiculopatia de L5"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro descrito é o de acometimento de múltiplos nervos periféricos (nervo ulnar à direita e nervo fibular à esquerda) de forma assimétrica e sequencial. Esta é a definição clássica de mononeuropatia múltipla, frequentemente associada a vasculites. Polineuropatia (A) seria simétrica e distal. As opções C e D descrevem apenas parte do quadro.",
+            "tag": "neuropatia periférica"
+        },
+        {
+            "id": "PR2-Neuro-Q53",
+            "text": "Paciente de 39 anos com Doença de Crohn refere fraqueza em membros inferiores há 2 semanas. Pensando no diagnóstico de Mielite Transversa, quais sinais semiológicos poderiam confirmar essa hipótese?",
+            "options": [
+                "Paresia dimidiada em face, braço e perna esquerda, com sinal de Babinski.",
+                "Paresia, hipotonia, hiporreflexia e atrofia em membros inferiores.",
+                "Paresia em membros inferiores e sinal da roda denteada.",
+                "Paresia, espasticidade e hiperreflexia em membros inferiores e nível sensitivo."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A mielite transversa é uma lesão medular que causa uma síndrome do neurônio motor superior abaixo do nível da lesão. Isso se manifesta como paresia (fraqueza), espasticidade (aumento do tônus) e hiperreflexia. A presença de um 'nível sensitivo', onde a sensibilidade muda abruptamente, é um sinal cardinal de lesão medular. As outras opções descrevem lesões em outras partes do sistema nervoso (A: AVC; B: neurônio motor inferior; C: parkinsonismo).",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q55",
+            "text": "Assinale a resposta correta sobre a fisiopatologia da doença de Alzheimer:",
+            "options": [
+                "Ocorrem depósitos de beta-amiloides e hipofosforilação da proteína tau.",
+                "Ocorrem depósitos de alfa-sinucleína e beta-amiloide.",
+                "Ocorrem depósitos de beta-amiloide e hiperfosforilação da proteína tau.",
+                "Ocorrem depósitos de lipídeos, beta-amiloide e hipofosforilação da proteína tau."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Os dois marcos patológicos da Doença de Alzheimer são: 1) o depósito extracelular de placas do peptídeo beta-amiloide e 2) a formação de emaranhados neurofibrilares intracelulares, que são compostos pela proteína tau anormalmente hiperfosforilada. A hipofosforilação (A, D) não ocorre. A alfa-sinucleína (B) está associada a doenças como Parkinson e Demência com Corpos de Lewy.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q56",
+            "text": "Na doença de corpo de Lewy, o quadro clínico inicia-se principalmente com:",
+            "options": [
+                "Alucinações e confabulação.",
+                "Perda de memória 2 anos após o parkinsonismo.",
+                "Parkinsonismo e alucinações visuais.",
+                "Alucinações auditivas e demência."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Esta questão é uma repetição da questão 4. A tríade clássica da Demência com Corpos de Lewy (DCL) é composta por flutuação cognitiva, alucinações visuais e parkinsonismo, com início próximo entre os sintomas demenciais e motores.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q74",
+            "text": "Homem de 29 anos, em tratamento para depressão, desenvolveu há 10 meses lentidão, tremor bilateral em mãos e alteração na fala, com piora progressiva. Ao exame: hipomimia facial, disartria, bradicinesia e rigidez simétricas, tremor de repouso bilateral. Exames laboratoriais com leve aumento de transaminases. Qual o diagnóstico mais provável?",
+            "options": [
+                "Parkinsonismo medicamentoso.",
+                "Doença de Wilson.",
+                "Paralisia Supranuclear Progressiva (sinal do beija-flor).",
+                "Atrofia de Múltiplos Sistemas (hipotensão postural)."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro de parkinsonismo simétrico em um paciente jovem, associado a sintomas psiquiátricos (depressão) e alteração hepática (aumento de transaminases) é altamente sugestivo de Doença de Wilson, um distúrbio do metabolismo do cobre. O diagnóstico é confirmado pela dosagem de ceruloplasmina sérica, que costuma estar baixa. Parkinsonismo medicamentoso (A) é uma possibilidade, mas não explica a alteração hepática. As outras opções (C, D) são parkinsonismos atípicos que ocorrem em faixa etária mais avançada e com outras características.",
+            "tag": "parkinsonismo"
+        },
+        {
+            "id": "PR2-Neuro-Q85",
+            "text": "Paciente V.Q.M., 67 anos, com hipotireoidismo, refere dormência nas duas mãos. Ao exame, os testes de Tinel e Phalen são positivos. Qual a principal hipótese diagnóstica e o respectivo nervo acometido?",
+            "options": [
+                "Síndrome do túnel do carpo - nervo radial",
+                "Neuropatia do ulnar - nervo ulnar",
+                "Neuropatia do fibular - nervo fibular",
+                "Síndrome do túnel do carpo - nervo mediano"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Os sinais de Tinel (percussão do nervo) e Phalen (flexão do punho) positivos são manobras provocativas clássicas para a Síndrome do Túnel do Carpo, que é uma compressão do nervo mediano no punho. O hipotireoidismo é um fator de risco conhecido para esta condição. As outras opções envolvem nervos ou localizações incorretas.",
+            "tag": "neuropatia periférica"
+        },
+        {
+            "id": "PR2-Neuro-Q87",
+            "text": "Paciente A.J. S., sexo masculino, 50 anos, pedreiro, queixa-se de piora da lombalgia, com dor que irradia para o lado da coxa esquerda e parestesia no pé esquerdo. Como podemos classificar o dano neurológico?",
+            "options": [
+                "Radiculopatia L5-S1",
+                "Polineuropatia distal simétrica",
+                "Plexopatia braquial",
+                "Mononeuropatia múltipla"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Esta questão é uma repetição da questão 51. A dor lombar que irradia para o membro inferior seguindo o trajeto de uma raiz nervosa (dor ciática) é a definição de uma radiculopatia. O território descrito (coxa posterior e pé) é compatível com o dermátomo das raízes L5 ou S1.",
+            "tag": "neuropatia periférica"
+        },
+        {
+            "id": "PR2-Neuro-Q88",
+            "text": "Paciente A.C.N., 48 anos, apresenta fraqueza na mão direita (4º e 5º dedos) e, há 1 mês, fraqueza na dorsiflexão do pé esquerdo. Ao exame: Marcha escarvante à esquerda; fraqueza e hipoestesia no território ulnar direito e no território do nervo fibular esquerdo. Qual padrão de neuropatia periférica apresentado?",
+            "options": [
+                "Polineuropatia distal",
+                "Mononeuropatia múltipla",
+                "Mononeuropatia do nervo ulnar",
+                "Plexopatia braquial"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Esta questão é uma repetição da questão 52. O quadro descrito é o de acometimento de múltiplos nervos periféricos (nervo ulnar à direita e nervo fibular à esquerda) de forma assimétrica e sequencial. Esta é a definição clássica de mononeuropatia múltipla.",
+            "tag": "neuropatia periférica"
+        },
+        {
+            "id": "PR2-Neuro-Q92",
+            "text": "Paciente masculino, 70 anos, com quedas frequentes há 1 ano e dificuldade de marcha e equilíbrio. Ao exame: diminuição da mímica facial, incapacidade de realizar movimentos oculares verticais, rigidez e hipocinesia simétricas e instabilidade postural. Sobre o provável diagnóstico, podemos afirmar:",
+            "options": [
+                "Podem ser encontrados sinais piramidais e cerebelares.",
+                "Há excelente resposta ao tratamento com levodopa.",
+                "O 'sinal da cruz de malta' (hot cross bun sign) pode ser visto na RM de crânio.",
+                "O sinal do aplauso pode estar presente."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O quadro de quedas precoces, paralisia do olhar vertical e parkinsonismo simétrico é altamente sugestivo de Paralisia Supranuclear Progressiva (PSP). O 'sinal do aplauso' (incapacidade de parar de aplaudir após ser instruído a bater palmas três vezes) é um sinal de disfunção frontal comum na PSP. Sinais piramidais/cerebelares (A) e o 'hot cross bun sign' (C) são mais característicos da Atrofia de Múltiplos Sistemas (AMS). A resposta à levodopa (B) na PSP é tipicamente pobre.",
+            "tag": "parkinsonismo"
+        },
+        {
+            "id": "PR2-Neuro-Q112",
+            "text": "Paciente de 25 anos, HIV+, em uso de TARV, apresentou subitamente movimentos tônico-clônicos no membro superior direito que evoluíram para a hemiface direita, para o dimídio oposto e perda de consciência. A principal hipótese diagnóstica é:",
+            "options": [
+                "Efeito colateral ao TARV",
+                "Lesão focal cerebral",
+                "Encefalomielite do HIV",
+                "Meningite criptocócica"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O início súbito com uma crise focal que generaliza (marcha jacksoniana) aponta fortemente para uma lesão estrutural no cérebro (ex: abscesso, tumor, tuberculoma). Em um paciente com HIV, a principal suspeita seria uma neuroinfecção focal, como a neurotoxoplasmose. Efeitos colaterais de TARV (A) e encefalomielite do HIV (C) geralmente causam quadros mais difusos. Meningite (D) cursaria com cefaleia, febre e sinais meníngeos.",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q113",
+            "text": "Com relação às crises epilépticas é CORRETO afirmar:",
+            "options": [
+                "A investigação etiológica não é importante.",
+                "Toda crise convulsiva deve ser tratada com antiepilépticos.",
+                "Crises epilépticas com mais de 5 minutos de duração, subentrantes, caracterizam o status epilepticus.",
+                "A caracterização da síndrome epiléptica não ajuda na conduta terapêutica."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Esta questão é uma repetição da questão 37, com a duração do status epilepticus atualizada para a definição moderna de 5 minutos. A investigação etiológica é fundamental (A). Nem toda crise convulsiva requer tratamento contínuo (B). A caracterização da síndrome epiléptica é crucial para a escolha da droga (D).",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q114",
+            "text": "Em relação à epilepsia, é correto afirmar:",
+            "options": [
+                "Todos os pacientes com crises febris na infância evoluem para epilepsia.",
+                "A epilepsia do lobo temporal pode apresentar automatismos oroalimentares e postura distônica.",
+                "O risco de recidiva de crises após a retirada de uma droga anticonvulsivante não é considerado.",
+                "Nas crises de ausência não há o complexo ponta-onda no EEG."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. As manifestações descritas (automatismos oroalimentares, como mastigação e estalar de lábios, e postura distônica de um membro) são características clássicas das crises focais com origem no lobo temporal. Apenas uma pequena porcentagem de crianças com crises febris desenvolve epilepsia (A). O risco de recidiva é um fator crucial na decisão de retirar a medicação (C). O complexo ponta-onda a 3Hz no EEG é o achado patognomônico da crise de ausência (D).",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q115",
+            "text": "Julgue as assertivas abaixo sobre epilepsia como verdadeiras (V) ou falsas (F):\n( ) Crise convulsiva única, febril, não é considerada como epilepsia.\n( ) Crises convulsivas em vigência de meningite são consideradas epilepsia.\n( ) A crise epiléptica é um distúrbio que não cessa espontaneamente.\n( ) A maioria das epilepsias é considerada idiopática.",
+            "options": [
+                "V, F, F, V",
+                "V, V, F, V",
+                "F, F, V, F",
+                "V, F, V, V"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A primeira é verdadeira (crise provocada não é epilepsia). A segunda é falsa (crise sintomática aguda não é epilepsia). A terceira é falsa (a maioria das crises cessa espontaneamente). A quarta é verdadeira (muitas não têm causa identificável).",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q116",
+            "text": "Carmen, 62 anos, comparece à consulta pois está esquecendo fatos recentes, já se perdeu perto de casa e esqueceu compromissos importantes. Qual a conduta correta?",
+            "options": [
+                "Realizar avaliação cognitiva, solicitar exames (RM, laboratório completo) para excluir causas reversíveis antes de assumir Doença de Alzheimer.",
+                "Realizar avaliação cognitiva, solicitar RM e EEG, pois o diagnóstico de Doença de Alzheimer é certo.",
+                "Solicitar TC de crânio, pois a causa mais comum de esquecimento nessa faixa etária é AVC.",
+                "Iniciar galantamina o quanto antes, pois o tratamento para Doença de Alzheimer não deve ser adiado."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Diante de um quadro de declínio cognitivo, a abordagem correta é realizar uma avaliação funcional (como o Mini-Exame do Estado Mental) e solicitar uma série de exames para descartar causas secundárias e potencialmente reversíveis de demência, como hipotireoidismo, deficiência de vitamina B12, neurossífilis, HIV, além de exames de neuroimagem. As outras opções são incorretas por assumirem um diagnóstico (B, D) ou uma etiologia (C) sem a devida investigação.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q117",
+            "text": "Homem de 63 anos refere dificuldade para andar e manusear objetos com a mão esquerda, apresentando tremor de repouso 'em contar de moedas'. Refere também sonhos vívidos, constipação e alucinações visuais ('vê baratas'). A esposa confirma que o braço esquerdo não balança ao andar e que ele está esquecendo fatos recentes. Mini-Exame do Estado Mental: 15/30. Qual o diagnóstico mais provável?",
+            "options": [
+                "Mielopatia cervical",
+                "Lesão do manguito rotador",
+                "Doença de Parkinson associada à Doença de Alzheimer",
+                "Demência por corpúsculos de Lewy"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O paciente apresenta a tríade clássica da Demência com Corpos de Lewy: parkinsonismo (tremor, bradicinesia), alucinações visuais bem formadas ('baratas') e flutuação/declínio cognitivo precoce. A presença de distúrbio comportamental do sono REM ('sonhos vívidos') também é muito sugestiva. Na Doença de Alzheimer (C), o declínio cognitivo precede em anos os sintomas motores.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q118",
+            "text": "Mulher de 65 anos, que mora só, apresenta há 2 anos comportamento de acumulação, isolamento social, desinibição (urinou na sala) e fala hipersexualizada. Testes cognitivos mostram comprometimento da função executiva com memória relativamente preservada. A etiologia mais provável é:",
+            "options": [
+                "Esquizofrenia",
+                "Demência frontotemporal",
+                "Doença de Alzheimer",
+                "Transtorno bipolar"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Esta questão é uma repetição da questão 48. O quadro clínico de alterações proeminentes de personalidade e comportamento (desinibição, apatia, comportamentos compulsivos) com relativa preservação da memória no início é altamente sugestivo da variante comportamental da Demência Frontotemporal (DFTvc).",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q119",
+            "text": "Jaime, 68 anos, diabético tipo 1, apresenta piora da memória. A esposa relata que ele está mais depressivo desde que teve dois AVCs há 3 anos. Ao exame físico, apresenta hiperreflexia e sinal de Babinski à direita. Qual a etiologia mais provável da demência?",
+            "options": [
+                "Doença de Alzheimer",
+                "Demência frontotemporal",
+                "Demência vascular",
+                "Demência por corpúsculos de Lewy"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A história de declínio cognitivo com uma relação temporal clara com a ocorrência de AVCs, associada a achados de déficits neurológicos focais no exame físico (hiperreflexia e Babinski à direita), define o diagnóstico de Demência Vascular. O diabetes é um fator de risco importante para AVC. As outras formas de demência não se encaixam tão bem no histórico e nos achados.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q120",
+            "text": "Sobre a neuromielite óptica (NMO) e a esclerose múltipla (EM), é correto afirmar que:",
+            "options": [
+                "A RM pode ser semelhante, sendo o diagnóstico definido pelo anticorpo Anti-AQP4.",
+                "Os surtos são os fenômenos iniciais na NMO, diferentemente da EM, que pode ter curso inicial progressivo.",
+                "Bandas oligoclonais no líquor são mais comuns na NMO.",
+                "A NMO é ligeiramente mais comum em homens."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A NMO se apresenta quase que exclusivamente na forma de surtos (neurite óptica, mielite), não existindo uma forma primariamente progressiva como na Esclerose Múltipla. A RM na NMO é frequentemente normal ou com lesões atípicas para EM, e o Anti-AQP4 é específico, mas não define sozinho o diagnóstico (A). Bandas oligoclonais são muito mais comuns na EM (C). Ambas as doenças são mais prevalentes em mulheres (D).",
+            "tag": "doenças desmielinizantes"
+        },
+        {
+            "id": "PR2-Neuro-Q121",
+            "text": "Estudante de 22 anos apresenta neurite óptica. RM de crânio evidencia múltiplas lesões hiperintensas em T2/FLAIR em localizações típicas de EM (periventriculares, justa-corticais, infratentoriais), sem captação de contraste. RM de medula normal. Para confirmação do diagnóstico de esclerose múltipla neste momento (Critérios de McDonald 2017), é necessário:",
+            "options": [
+                "Nada mais é necessário, os critérios já foram preenchidos.",
+                "Exame de líquor (LCR) com presença de bandas oligoclonais.",
+                "Um novo surto clínico para evidenciar disseminação no tempo.",
+                "Evidência de lesão ao exame neurológico além da neurite."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A paciente tem um primeiro surto clínico (neurite óptica) e evidência de disseminação no espaço na RM. Para fechar o diagnóstico, falta o critério de disseminação no tempo. Como não há lesões captantes de contraste na RM (que indicariam atividade em tempos diferentes), a presença de bandas oligoclonais no líquor pode ser usada como um substituto para a disseminação no tempo, fechando o diagnóstico.",
+            "tag": "doenças desmielinizantes"
+        },
+        {
+            "id": "PR2-Neuro-Q122",
+            "text": "Estudante de 23 anos apresenta parestesia em membro inferior direito. RM de crânio evidencia múltiplas lesões em T2/FLAIR em topografias periventricular e infratentorial (apenas 2 das 4 áreas típicas). RM de medula normal. Não há captação de contraste. Para confirmação do diagnóstico de esclerose múltipla (McDonald, 2017), é necessário:",
+            "options": [
+                "Nada mais é necessário, pois há disseminação no tempo e espaço por RM.",
+                "Exame de líquor com bandas oligoclonais, devido à ausência de lesões na medula.",
+                "Exame de líquor com bandas oligoclonais para demonstrar disseminação no tempo.",
+                "Um novo surto clínico ou nova lesão em RM de controle para evidenciar disseminação no tempo e espaço."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A paciente tem um evento clínico e disseminação no espaço (acomete 2 áreas). No entanto, como não há lesões captantes de contraste, não há evidência de disseminação no tempo. A presença de bandas oligoclonais no líquor poderia suprir a disseminação no tempo, mas como a paciente não preenche o critério de disseminação no espaço por RM (precisaria de mais uma área acometida), a única forma de fechar o diagnóstico é com um novo surto clínico ou o aparecimento de uma nova lesão em RM de controle.",
+            "tag": "doenças desmielinizantes"
+        },
+        {
+            "id": "PR2-Neuro-Q123",
+            "text": "Estudante de 23 anos apresenta parestesia em membro inferior direito. RM de crânio evidencia múltiplas lesões em topografias cortical, periventricular e infratentorial. Havia impregnação por gadolínio em duas das lesões descritas. Para confirmação do diagnóstico de esclerose múltipla (McDonald, 2017), é necessário:",
+            "options": [
+                "Exame de líquor com bandas oligoclonais.",
+                "Apesar de apenas um evento clínico, a paciente preenche critérios de disseminação no tempo e espaço por RM.",
+                "Um novo surto clínico para confirmar o diagnóstico.",
+                "Nada mais é necessário, mas a biópsia cerebral confirmaria."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A paciente tem um primeiro evento clínico. A RM mostra lesões em 3 locais diferentes, satisfazendo o critério de disseminação no espaço. A presença de lesões que captam gadolínio (ativas) e outras que não captam (antigas) simultaneamente satisfaz o critério de disseminação no tempo. Portanto, com apenas um surto e uma RM, o diagnóstico de esclerose múltipla pode ser fechado. As outras opções são desnecessárias.",
+            "tag": "doenças desmielinizantes"
+        },
+        {
+            "id": "PR2-Neuro-Q124",
+            "text": "Carlos Eduardo, 58 anos, iniciou quadro de miofasciculações e incontinência urinária há 2 meses, com atrofia e redução de força no membro superior direito. Ao exame: atrofia, miofasciculações, hiperreflexia generalizada e sinais de Babinski e Hoffman positivos. Qual seria a conduta correta no momento?",
+            "options": [
+                "Solicitar ENMG, RM de coluna cervical e exames laboratoriais para excluir outras causas antes de dar o diagnóstico.",
+                "Iniciar riluzol e confirmar o diagnóstico de ELA, aguardando os exames complementares.",
+                "Solicitar apenas eletroneuromiografia, pois é o único exame necessário para o diagnóstico de ELA.",
+                "Tranquilizar o paciente, pois se trata de síndrome de miofasciculação benigna."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O quadro clínico com sinais de neurônio motor superior (hiperreflexia, Babinski) e inferior (atrofia, miofasciculações) é altamente sugestivo de Esclerose Lateral Amiotrófica (ELA). No entanto, o diagnóstico de ELA é de exclusão. É mandatório realizar exames como a eletroneuromiografia (ENMG) para confirmar o acometimento difuso do neurônio motor inferior e uma RM de coluna cervical para descartar compressão medular (mielopatia cervical), que é um grande mimetizador da ELA. Iniciar tratamento (B) ou fechar diagnóstico (C) sem excluir outras causas seria imprudente. O quadro não é benigno (D).",
+            "tag": "doenças do neurônio motor"
+        },
+        {
+            "id": "PR2-Neuro-Q125",
+            "text": "Sobre as formas clínicas da Esclerose Lateral Amiotrófica (ELA). Qual afirmativa é a ERRADA?",
+            "options": [
+                "A forma bulbar tem menor sobrevida.",
+                "Sinais piramidais (lesão do 1º neurônio motor) podem ocorrer ao longo da evolução.",
+                "A forma clássica (espinhal) é mais comum que a forma bulbar.",
+                "Disfunção cognitiva ocorre na maioria dos pacientes."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta (a errada) é a D. Embora a ELA possa estar associada a um espectro de disfunção cognitiva, chegando até à Demência Frontotemporal em uma minoria dos casos, a disfunção cognitiva grave não ocorre na maioria dos pacientes. As outras afirmativas estão corretas: a forma bulbar (A) tem pior prognóstico; sinais piramidais (B) fazem parte da doença; e a forma espinhal (C) é a mais prevalente.",
+            "tag": "doenças do neurônio motor"
+        },
+        {
+            "id": "PR2-Neuro-Q126",
+            "text": "O nome 'esclerose lateral amiotrófica' se deve ao fato de que ocorre:",
+            "options": [
+                "Degeneração do córtex sensitivo lateral à área motora.",
+                "Degeneração da parte lateral da medula, acometendo o trato espinotalâmico.",
+                "Degeneração do trato corticobulbar lateral, causando sintomas unilaterais.",
+                "Degeneração da parte lateral da medula, acometendo o trato corticoespinal lateral, que ao estudo patológico apresenta aspecto esclerótico."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O nome da doença descreve seus achados patológicos: 'Amiotrófica' refere-se à atrofia muscular por degeneração do neurônio motor inferior. 'Esclerose Lateral' refere-se ao endurecimento (esclerose) da porção lateral da medula espinhal, onde se localiza o trato corticoespinal, devido à degeneração do neurônio motor superior. As outras opções descrevem tratos ou mecanismos incorretos.",
+            "tag": "doenças do neurônio motor"
+        },
+        {
+            "id": "PR2-Neuro-Q127",
+            "text": "Assinale a assertiva correta sobre as doenças do neurônio motor:",
+            "options": [
+                "Na esclerose lateral amiotrófica há envolvimento sensitivo e motor.",
+                "Na mielose funicular há envolvimento do segundo neurônio motor e do cordão posterior.",
+                "Na esclerose lateral amiotrófica há envolvimento do primeiro e segundo neurônios motores.",
+                "Na mielopatia tropical há envolvimento quase exclusivo do segundo neurônio motor."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Esclerose Lateral Amiotrófica (ELA) é definida pela combinação de achados de lesão do primeiro neurônio motor (ex: hiperreflexia, Babinski) e do segundo neurônio motor (ex: atrofia, fasciculações), com a sensibilidade classicamente preservada (A está incorreta). Mielose funicular (B) afeta o cordão posterior e o trato corticoespinal. Mielopatia tropical (E) afeta quase exclusivamente o primeiro neurônio motor.",
+            "tag": "doenças do neurônio motor"
+        },
+        {
+            "id": "PR2-Neuro-Q128",
+            "text": "Sobre a neuromielite óptica (NMO) e a esclerose múltipla (EM), é correto afirmar que:",
+            "options": [
+                "O exame de RM de crânio pode ser semelhante entre as duas patologias.",
+                "Bandas oligoclonais no líquor são sensivelmente mais comuns nos pacientes de esclerose múltipla.",
+                "A NMO é ligeiramente mais comum em homens.",
+                "Um exame de RM de crânio alterado exclui o diagnóstico de NMO."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A presença de bandas oligoclonais no líquor é um achado muito característico da Esclerose Múltipla (presente em >90% dos casos), enquanto é incomum na Neuromielite Óptica (<30%). A RM de crânio na NMO pode até ser normal ou mostrar lesões atípicas para EM (A, D). Ambas as doenças são mais comuns em mulheres (C).",
+            "tag": "doenças desmielinizantes"
+        },
+        {
+            "id": "PR2-Neuro-Q129",
+            "text": "Estudante de 25 anos com neurite óptica. Ao exame, além da alteração visual, apresenta sinal de Babinski à esquerda. RM de crânio evidencia múltiplas lesões em T2/FLAIR em localizações típicas, sem captação de contraste. Para confirmação do diagnóstico de esclerose múltipla (McDonald, 2017), é necessário:",
+            "options": [
+                "Nada mais é necessário, pois há evidência clínica de duas lesões.",
+                "Disseminação no tempo, demonstrada por nova lesão em RM de controle ou bandas oligoclonais no líquor.",
+                "Exame de líquor, devido à ausência de lesões na medula.",
+                "Um novo surto clínico."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A paciente tem evidência clínica de duas lesões (neurite óptica e sinal de Babinski), o que satisfaz a disseminação no espaço. No entanto, ainda falta demonstrar a disseminação no tempo. Como a RM atual não mostra lesões com e sem contraste simultaneamente, a disseminação no tempo pode ser confirmada pelo aparecimento de uma nova lesão em uma RM futura ou pela presença de bandas oligoclonais no líquor.",
+            "tag": "doenças desmielinizantes"
+        },
+        {
+            "id": "PR2-Neuro-Q130",
+            "text": "Sobre a neuromielite óptica (NMO) e a esclerose múltipla (EM), é correto afirmar que:",
+            "options": [
+                "A RM de crânio é sempre normal na NMO.",
+                "Os surtos são os fenômenos clínicos iniciais da NMO, enquanto a EM pode ter curso inicial progressivo.",
+                "Bandas oligoclonais são mais comuns na NMO.",
+                "A NMO é mais comum em homens."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Esta questão é uma repetição da questão 120. A NMO se apresenta quase exclusivamente na forma de surtos, não existindo uma forma primariamente progressiva como na Esclerose Múltipla. A RM de crânio pode ser alterada na NMO, mas com lesões atípicas (A). Bandas oligoclonais são raras na NMO (C). Ambas são mais comuns em mulheres (D).",
+            "tag": "doenças desmielinizantes"
+        },
+        {
+            "id": "PR2-Neuro-Q131",
+            "text": "Na doença desmielinizante tipo esclerose múltipla é correto afirmar, EXCETO:",
+            "options": [
+                "O diagnóstico é clínico com apoio dos exames complementares.",
+                "Sempre ocorre a degeneração axonal no processo inflamatório agudo.",
+                "Afeta a bainha de mielina da substância branca periventricular.",
+                "A neurite óptica pode ser o sinal inicial da esclerose múltipla."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta (a exceção) é a B. Embora a degeneração axonal seja um componente importante da patologia da Esclerose Múltipla e contribua para a incapacidade permanente, ela não ocorre 'sempre' em todo processo inflamatório agudo. A desmielinização é o evento primário. As outras afirmativas estão corretas: o diagnóstico é clínico-radiológico (A), a localização periventricular é típica (C), e a neurite óptica é uma forma de apresentação comum (D).",
+            "tag": "doenças desmielinizantes"
+        },
+        {
+            "id": "PR2-Neuro-Q132",
+            "text": "Sobre a avaliação de neuropatias periféricas, assinale a correta combinação de afirmativas:\nI. A caracterização clínica (tipo de fibra, distribuição) é a principal ferramenta diagnóstica.\nII. As polineuropatias apresentam acometimento simétrico, distal com progressão ascendente.\nIII. Neuropatias de fibras finas cursam com perda de sensibilidade térmica e dolorosa.\nIV. Plexopatias são o comprometimento isolado de um único nervo.",
+            "options": [
+                "Apenas I, II e III estão corretas.",
+                "Apenas II e IV estão corretas.",
+                "Apenas IV está correta.",
+                "Todas estão corretas."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A afirmativa I está correta, a clínica é soberana. A afirmativa II descreve corretamente o padrão clássico das polineuropatias ('em bota e luva'). A afirmativa III descreve corretamente os sintomas das neuropatias de fibras finas. A afirmativa IV está incorreta; a descrição se refere a uma mononeuropatia, enquanto plexopatias afetam um plexo nervoso (braquial ou lombossacral).",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q133",
+            "text": "Sobre a Polineuropatia Inflamatória Desmielinizante Crônica (PIDC), assinale a assertiva correta:",
+            "options": [
+                "O tratamento pode ser feito com corticoide.",
+                "O líquor cursa com aumento de polimorfonucleares.",
+                "A lesão patológica pode ser somente axonal.",
+                "É uma doença monofásica e autolimitada."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Diferentemente da forma aguda (Guillain-Barré), a PIDC responde bem a tratamentos imunossupressores de longo prazo, como corticoides, imunoglobulina e plasmaférese. O líquor (B) tipicamente mostra dissociação proteinocitológica, com aumento de proteínas, mas poucas ou nenhumas células. A lesão é primariamente desmielinizante (C). É uma doença crônica, com curso progressivo ou com surtos e remissões, não monofásica (D).",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q134",
+            "text": "A polineuropatia diferencia-se da mononeuropatia múltipla pelo acometimento:",
+            "options": [
+                "De vários nervos periféricos, de forma simétrica.",
+                "De vários nervos aleatoriamente e de forma assimétrica.",
+                "Apenas de nervos sensitivos.",
+                "Distal e assimétrico."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A principal característica que diferencia a polineuropatia da mononeuropatia múltipla é a simetria. A polineuropatia afeta os nervos de forma difusa e simétrica, tipicamente com um gradiente distal-proximal ('em bota e luva'). A mononeuropatia múltipla (B) é o acometimento de múltiplos nervos periféricos de forma assimétrica e sequencial.",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q135",
+            "text": "A principal causa de paralisia do nervo radial é:",
+            "options": [
+                "Neurinoma",
+                "Hanseníase",
+                "Síndrome do túnel do carpo",
+                "Compressão"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A compressão do nervo radial no sulco espiral do úmero é a causa mais comum de sua paralisia, classicamente conhecida como 'paralisia do sábado à noite' (quando o indivíduo dorme com o braço pendurado sobre uma cadeira). As outras opções são causas menos comuns de neuropatia radial.",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q136",
+            "text": "Em relação à síndrome de Guillain-Barré, pode-se afirmar que:",
+            "options": [
+                "Há uma paralisia flácida ascendente rapidamente progressiva.",
+                "A lesão afeta exclusivamente a função motora.",
+                "A dissociação proteino-citológica encontrada no LCR afasta o diagnóstico.",
+                "O tratamento precoce não interfere na evolução clínica da paralisia."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A Síndrome de Guillain-Barré (SGB) é classicamente uma paralisia flácida, arreflexa, com progressão ascendente (começa nos membros inferiores e sobe) e rápida (atinge o pico em até 4 semanas). Frequentemente há sintomas sensitivos e disautonomia (B está incorreta). A dissociação proteino-citológica (aumento de proteínas com celularidade normal) no líquor é o achado característico que apoia o diagnóstico (C está incorreta). O tratamento precoce com imunoglobulina ou plasmaférese é crucial para abreviar a doença e reduzir a morbidade (D está incorreta).",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q137",
+            "text": "Paciente A.C.N., 48 anos, apresenta fraqueza na mão direita (4º e 5º dedos) e, há 1 mês, fraqueza na dorsiflexão do pé esquerdo. Ao exame: Marcha escarvante à esquerda; fraqueza e hipoestesia no território ulnar direito e no território do nervo fibular esquerdo. Qual padrão de neuropatia periférica apresentado?",
+            "options": [
+                "Polineuropatia distal",
+                "Mononeuropatia múltipla",
+                "Plexopatia braquial",
+                "Radiculopatia de L5"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Esta questão é uma repetição das questões 52 e 88. O acometimento sequencial e assimétrico de múltiplos nervos periféricos (ulnar e fibular) define a mononeuropatia múltipla.",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q138",
+            "text": "Paciente C.L.S., 32 anos, grávida de 30 semanas, refere dormência nas duas mãos há 1 mês, com piora evolutiva, chegando a derrubar copos. Pensando no diagnóstico de Síndrome do Túnel do Carpo, quais achados no exame neurológico são compatíveis com esta hipótese?",
+            "options": [
+                "Hipoestesia no 5º quirodáctilo.",
+                "Mão em garra ulnar.",
+                "Sinal de Tinel e Sinal de Phalen positivo.",
+                "Queda do punho."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O sinal de Tinel (percussão do punho) e o sinal de Phalen (flexão forçada do punho) são manobras provocativas que, quando positivas, são altamente sugestivas de Síndrome do Túnel do Carpo, uma compressão do nervo mediano. A gravidez é um fator de risco conhecido. Hipoestesia no 5º dedo (A) e mão em garra (B) são do nervo ulnar. Queda do punho (D) é do nervo radial.",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q139",
+            "text": "Paciente A.J. S., 50 anos, pedreiro, queixa-se de piora da lombalgia, com dor que irradia para o lado da coxa esquerda e parestesia no pé esquerdo. Como podemos classificar o dano neurológico?",
+            "options": [
+                "Radiculopatia L5-S1",
+                "Polineuropatia distal simétrica",
+                "Plexopatia braquial",
+                "Mononeuropatia múltipla"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Esta questão é uma repetição das questões 51 e 87. A dor lombar com irradiação para o membro inferior no trajeto de uma raiz nervosa define a radiculopatia.",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q148",
+            "text": "Sobre a AURA EPILÉPTICA, está ERRADO afirmar que:",
+            "options": [
+                "A nova classificação não utiliza mais este termo, preferindo 'início focal consciente'.",
+                "Ela já é o início da crise epiléptica.",
+                "Sua ocorrência indica tratar-se de uma crise de início generalizado.",
+                "Tem grande valor localizatório, indicando a área de início da crise."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta (a errada) é a C. A presença de uma aura, por definição, indica que a crise tem um início focal em uma área específica do cérebro. Uma crise de início generalizado começa em ambos os hemisférios simultaneamente e não possui aura. As outras afirmativas estão corretas: o termo 'aura' foi substituído (A), ela é a própria crise (B), e ajuda a localizar a origem da crise (D).",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q154",
+            "text": "Stephany, 24 anos, estudante, apresentou quadro de fraqueza ascendente nas pernas, evoluindo para paraplegia e incontinência urinária em 3 dias. Relata faringotonsilite há 21 dias. Ao exame, arreflexia de aquileus e hiporreflexia patelar. Dada a principal hipótese, marque a alternativa adequada.",
+            "options": [
+                "Iniciar metilprednisolona após confirmação com líquor e ENMG.",
+                "O diagnóstico é clínico; iniciar plasmaférese ou imunoglobulina o quanto antes.",
+                "Solicitar FAN e fator reumatoide para investigar vasculite.",
+                "Realizar TC de tórax e RM de neuroeixo para investigar síndrome paraneoplásica."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro é altamente sugestivo de Síndrome de Guillain-Barré (paralisia flácida ascendente aguda após infecção). O diagnóstico é primariamente clínico e o tratamento (plasmaférese ou imunoglobulina) é uma urgência neurológica, não devendo ser atrasado para aguardar resultados de exames confirmatórios como líquor e ENMG, que podem ser normais no início. Corticoide (A) não é eficaz na SGB. As outras investigações (C, D) não são prioritárias.",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q162",
+            "text": "Paciente de 75 anos apresenta há 8 anos comprometimento da memória, disfunção executiva, apraxia e agnosia, com exames de imagem e laboratoriais normais. O diagnóstico é de uma provável síndrome:",
+            "options": [
+                "Depressiva com sintomas cognitivos",
+                "Demencial - provável Doença de Alzheimer",
+                "Confusional aguda (delirium)",
+                "De declínio cognitivo leve"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A descrição de um declínio cognitivo insidioso e progressivo ao longo de 8 anos, afetando múltiplos domínios (memória, função executiva, praxias, gnosias) e causando impacto funcional, com exames normais que excluem outras causas, é a definição clássica de uma síndrome demencial, sendo a Doença de Alzheimer a causa mais provável nesta faixa etária.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q163",
+            "text": "Paciente masculino, 70 anos, parkinsoniano há 1 ano, apresenta declínio cognitivo associado a alucinações visuais. Exames de imagem e laboratório sem alterações. O provável diagnóstico é:",
+            "options": [
+                "Demência por corpúsculos de Lewy",
+                "Doença de Alzheimer",
+                "Demência na doença de Huntington",
+                "Demência Vascular"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A regra de '1 ano' é usada para diferenciar Demência com Corpos de Lewy (DCL) da Demência da Doença de Parkinson (DDP). Se o declínio cognitivo (demência) começa antes ou até 1 ano após o início dos sintomas motores (parkinsonismo), o diagnóstico é DCL. Se a demência começa muitos anos após o parkinsonismo, é DDP. Neste caso, com início simultâneo, o diagnóstico mais provável é DCL.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q164",
+            "text": "Criança de 5 anos com prejuízo do rendimento escolar. A mãe presencia rápidos episódios em que a criança fica parada com 'olhar perdido'. Exame neurológico normal. Eletroencefalograma apresentou alteração característica. O principal diagnóstico é:",
+            "options": [
+                "Transtorno de déficit de atenção e hiperatividade (TDAH)",
+                "Crises de ausência",
+                "Atraso de desenvolvimento",
+                "Transtorno de conduta"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Os episódios de parada comportamental súbita com 'olhar perdido', com duração de poucos segundos e sem período pós-ictal, são a manifestação clássica da crise de ausência, um tipo de epilepsia generalizada comum na infância. O prejuízo escolar ocorre porque a criança perde fragmentos de informação durante as crises. O EEG com complexos ponta-onda a 3Hz confirma o diagnóstico.",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q165",
+            "text": "Marque falso (F) ou verdadeiro (V):\n( ) Crises convulsivas únicas como as crises febris são consideradas como epilepsia.\n( ) Crises convulsivas em vigência de doenças agudas não são consideradas epilepsia.\n( ) A crise epiléptica é um distúrbio recorrente, paroxístico e transitório das funções cerebrais.\n( ) Apesar do grande arsenal para investigação das crises epilépticas, a maioria delas é idiopática.",
+            "options": [
+                "F, V, V, V",
+                "V, V, F, V",
+                "F, F, F, F",
+                "F, V, F, F"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Esta questão é uma repetição da questão 17, com uma pequena variação na terceira afirmativa, mas a lógica e as respostas são as mesmas. 1ª é Falsa. 2ª é Verdadeira. 3ª é Verdadeira. 4ª é Verdadeira.",
+            "tag": "epilepsias"
+        },
+        {
+            "id": "PR2-Neuro-Q166",
+            "text": "Cite três causas de demência irreversível além da doença de Alzheimer.",
+            "options": [
+                "Demência Vascular, Demência Frontotemporal, Demência por Corpúsculos de Lewy.",
+                "Hipotireoidismo, Deficiência de B12, Hidrocefalia de Pressão Normal.",
+                "Depressão (pseudodemência), Encefalopatia Hepática, Neurolues.",
+                "Demência por Corpúsculos de Lewy, Encefalite Herpética, Tumor cerebral."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Demência Vascular, Demência Frontotemporal e Demência com Corpúsculos de Lewy são, junto com Alzheimer, as principais causas de demência degenerativa e irreversível. As opções B e C listam majoritariamente causas de demência potencialmente reversíveis. A opção D mistura causas reversíveis e irreversíveis.",
+            "tag": "demências"
+        },
+        {
+            "id": "PR2-Neuro-Q177",
+            "text": "Em relação à Esclerose Múltipla (EM), assinale a alternativa correta.",
+            "options": [
+                "Agentes virais não podem ser gatilho para a doença.",
+                "É a doença inflamatória menos frequente do SNC em adultos jovens.",
+                "Mesmo com o passar do tempo, os sintomas não causam incapacidade locomotora.",
+                "O alvo da agressão imune é a bainha de mielina e os oligodendrócitos do SNC."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Esclerose Múltipla é uma doença autoimune na qual o sistema imunológico ataca a bainha de mielina (a 'capa' dos axônios) e as células que a produzem, os oligodendrócitos, no sistema nervoso central. Fatores ambientais como infecções virais (ex: EBV) são considerados gatilhos importantes (A está incorreta). É a doença inflamatória mais comum do SNC em adultos jovens (B está incorreta). A doença é progressiva e leva a incapacidade acumulada na maioria dos pacientes (C está incorreta).",
+            "tag": "doenças desmielinizantes"
+        },
+        {
+            "id": "PR2-Neuro-Q179",
+            "text": "Sendo a forma mais comum da Esclerose Múltipla a do tipo remitente-recorrente, qual o tratamento recomendado para os surtos com maior nível de evidência?",
+            "options": [
+                "Plasmaférese",
+                "Pulsoterapia com corticoide",
+                "Imunoglobulina humana",
+                "Pulsoterapia com ciclofosfamida"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O tratamento de primeira linha para os surtos agudos de Esclerose Múltipla é a pulsoterapia com altas doses de corticosteroide endovenoso (geralmente metilprednisolona). O objetivo é acelerar a recuperação do surto, diminuindo a inflamação na barreira hematoencefálica. A plasmaférese (A) é uma opção de segunda linha para surtos graves que não respondem ao corticoide. Imunoglobulina (C) e ciclofosfamida (D) não são tratamentos padrão para surtos.",
+            "tag": "doenças desmielinizantes"
+        },
+        {
+            "id": "PR2-Neuro-Q182",
+            "text": "Em relação às polineuropatias diabéticas, assinale a alternativa FALSA:",
+            "options": [
+                "Geralmente apresentam padrão desmielinizante na eletroneuromiografia.",
+                "Podem cursar com sintomas disautonômicos.",
+                "Costumam ter padrão 'em botas' e 'em luvas'.",
+                "São a causa mais comum de polineuropatia no mundo."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta (a falsa) é a A. A forma mais comum de polineuropatia diabética, a polineuropatia sensitivo-motora distal simétrica, classicamente apresenta um padrão axonal ou misto (axonal e desmielinizante secundário) na eletroneuromiografia, e não puramente desmielinizante. As outras afirmativas estão corretas: pode causar disautonomia (B), tem o padrão clássico 'em botas e luvas' (C) e é a causa mais prevalente de polineuropatia (D).",
+            "tag": "neuropatias periféricas"
+        },
+        {
+            "id": "PR2-Neuro-Q186",
+            "text": "Carmello Falabella, após TCE com perda de consciência, passou a apresentar distúrbios do pensamento, ouvindo vozes de comando, visualizando animais, afirmando categoricamente que sua situação financeira havia entrado em ruína e apresentando um comportamento repetitivo de jogo compulsivo. Na ordem apresentada, assinale a correta:",
+            "options": [
+                "Delírio, alucinação e transtorno obsessivo e compulsivo",
+                "Alucinação, delírio e pensamento obsessivo",
+                "Alucinação, configuração e TOC",
+                "Alucinação, delírio e transtorno obsessivo e compulsivo"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. 'Ouvir vozes' e 'visualizar animais' são alterações da sensopercepção, ou seja, Alucinações (auditivas e visuais). A crença irremovível e falsa sobre a ruína financeira é uma alteração do juízo, ou seja, um Delírio. O comportamento de jogo repetitivo e irresistível é característico de um Transtorno Obsessivo e Compulsivo (TOC) ou um transtorno do controle de impulsos. A ordem corresponde à opção D.",
+            "tag": "psiquiatria"
+        }
+    ]
+},
+{
+    id: "preset-m7-pr2-derma",
+    name: "Estácio - M7 - PR2 - Dermatologia",
+    questions: [
+        {
+            "id": "PR2-Derma-Q10",
+            "text": "Mulher, 52 anos, obesa e diabética, queixa-se de 'coceira embaixo das mamas'. Ao exame: Área eritematosa na região inframamária, bilateral, de aspecto úmido com maceração esbranquiçada e lesões eritematosas arredondadas satélites. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Tinea cruris",
+                "Pitiríase versicolor",
+                "Candidíase",
+                "Dermatite de contato"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro clínico é clássico de Candidíase intertriginosa (intertrigo). A localização em área de dobra (inframamária), o aspecto úmido e macerado, e a presença de lesões eritematosas satélites (pápulas e pústulas periféricas) são muito característicos. Os fatores de risco da paciente (obesidade e diabetes) também corroboram o diagnóstico. Tinea cruris (A) acomete a região inguinal. Pitiríase versicolor (B) se manifesta como máculas. Dermatite de contato (D) não costuma ter lesões satélites.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q11",
+            "text": "Homem de 18 anos apresenta múltiplas máculas hipocrômicas, arredondadas e confluentes no dorso superior e ombros, com descamação fina. Baseado na principal hipótese (Pitiríase Versicolor), julgue as afirmativas:\nI. O sinal de Zileri positivo auxilia no diagnóstico.\nII. As lesões podem ser hipocrômicas, hipercrômicas ou eritematosas.\nIII. É causada por um fungo saprófita e lipofílico.\nIV. Causa nódulos nos pelos axilares e pubianos.",
+            "options": [
+                "Apenas I, II e III estão corretas.",
+                "Apenas I e IV estão corretas.",
+                "Apenas III e IV estão corretas.",
+                "Apenas II, III e IV estão corretas."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A afirmativa I está correta; o sinal de Zileri (descamação furfurácea ao estirar a pele) é característico. A afirmativa II está correta; a variação de cor dá o nome 'versicolor' à doença. A afirmativa III está correta; o agente é a Malassezia spp., um fungo lipofílico que faz parte da flora normal. A afirmativa IV está incorreta, pois descreve a Piedra Branca, uma infecção fúngica da haste do pelo.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q13",
+            "text": "Mulher de 47 anos, relata surgimento de um nódulo eritematoso no dorso da mão direita que ulcerou, seguido do surgimento de outros nódulos eritematosos em trajeto ascendente pelo antebraço e braço. Baseado na principal hipótese diagnóstica (Esporotricose), assinale a alternativa correta:",
+            "options": [
+                "A forma clínica descrita (linfocutânea) é a apresentação mais comum da doença.",
+                "O tratamento com antifúngico tópico é geralmente suficiente.",
+                "O agente etiológico tem como reservatório natural a pele humana.",
+                "O exame micológico direto do exsudato é o padrão-ouro para o diagnóstico."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O quadro descrito é a forma linfocutânea da Esporotricose, que é, de fato, a apresentação clínica mais comum. Caracteriza-se por uma lesão inicial no local da inoculação que ulcera (cancro esporotricótico) e a disseminação de nódulos ao longo do trajeto linfático. O tratamento deve ser sistêmico (com itraconazol, por exemplo), tornando a opção B incorreta. O agente (Sporothrix spp.) vive em matéria orgânica (solo, plantas), não na pele (C está incorreta). A cultura fúngica do material é o padrão-ouro para o diagnóstico, não o exame direto (D está incorreta).",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q14",
+            "text": "Mulher de 45 anos, relata surgimento de lesão pruriginosa há 1 mês. Ao exame: placas eritematodescamativas confluentes, de bordas circinadas bem delimitadas no abdome, com centro mais claro (cura central). Qual a afirmativa correta sobre a principal hipótese (Tinea Corporis)?",
+            "options": [
+                "A lâmpada de Wood revela fluorescência amarelo-ouro.",
+                "O exame micológico direto evidencia hifas curtas e blastosporos.",
+                "A principal hipótese é Piedra Branca, que afeta pele e unhas.",
+                "Os agentes etiológicos dessa dermatose podem ser antropofílicos, geofílicos e zoofílicos."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A lesão é característica de Tinea corporis, uma dermatofitose. Os fungos dermatófitos são classificados de acordo com seu hábitat natural em antropofílicos (homem), geofílicos (solo) e zoofílicos (animais). A fluorescência amarelo-ouro na lâmpada de Wood (A) é da Pitiríase Versicolor. O exame micológico descrito em (B) com 'hifas curtas e blastosporos' (spaghetti and meatballs) também é da Pitiríase Versicolor. Piedra branca (C) é uma infecção dos pelos.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q15",
+            "text": "JC, 22 anos, sexo feminino, apresenta lesão hipercrômica, heterogênea, com bordas irregulares e assimétrica, de 1 cm, na região plantar esquerda, com 2 anos de evolução. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Melanoma lentiginoso acral",
+                "Melanoma do lentigo maligno",
+                "Melanoma nodular",
+                "Carcinoma basocelular pigmentado"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Uma lesão pigmentada na região acral (palmar, plantar ou ungueal) com as características do ABCDE do melanoma (Assimetria, Bordas irregulares, Cores variadas, Diâmetro > 6mm, Evolução) deve sempre levantar a suspeita de Melanoma Lentiginoso Acral. O melanoma do lentigo maligno (B) ocorre em áreas de fotoexposição crônica em idosos. O melanoma nodular (C) se apresenta como um nódulo de crescimento rápido. O CBC pigmentado (D) é raro nesta localização.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q16",
+            "text": "MSS, 70 anos, com psoríase crônica em placas (joelhos, cotovelos, couro cabeludo), iniciou uso de betabloqueadores e há 2 dias apresenta eritema e descamação em quase toda superfície corporal. Sobre este quadro (psoríase eritrodérmica), é correto afirmar:",
+            "options": [
+                "Cursa sem comprometimento sistêmico e tem bom prognóstico.",
+                "A infiltração das lesões é a característica predominante.",
+                "A interrupção aguda de corticoide sistêmico pode ser uma causa.",
+                "O comprometimento ungueal está presente em mais de 80% dos casos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A psoríase eritrodérmica é uma forma grave e generalizada da doença. A suspensão abrupta de corticoides sistêmicos é uma das causas mais conhecidas para o seu desenvolvimento, assim como o uso de certas drogas (como betabloqueadores). É uma condição grave com importante comprometimento sistêmico (desequilíbrio hidroeletrolítico, perda de proteína, instabilidade hemodinâmica), portanto A está errada. A característica predominante é o eritema difuso, não a infiltração (B). O comprometimento ungueal (D) é comum na psoríase, mas não necessariamente em >80% dos casos de eritrodermia.",
+            "tag": "farmacodermias"
+        },
+        {
+            "id": "PR2-Derma-Q19",
+            "text": "Em relação à candidíase é correto afirmar, EXCETO:",
+            "options": [
+                "Pode ser desencadeada pelo uso prévio de antibioticoterapia de largo espectro.",
+                "Responde bem ao uso de fluconazol sistêmico.",
+                "Manifesta-se principalmente nas áreas extensoras dos membros superiores.",
+                "Frequentemente pode comprometer a mucosa oral."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta (a exceção) é a C. A candidíase manifesta-se preferencialmente em áreas de dobras e mucosas (áreas intertriginosas, oral, genital), onde há calor e umidade, e não em áreas extensoras. As outras afirmativas estão corretas: o uso de antibióticos (A) altera a flora e favorece a proliferação de Candida; o fluconazol (B) é um tratamento eficaz; e o acometimento da mucosa oral (D) é muito comum (sapinho).",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q20",
+            "text": "A dermatofitose no couro cabeludo (Tinea Capitis) se manifesta clinicamente com:",
+            "options": [
+                "Placas de alopecia com pelos tonsurados (cortados) na superfície.",
+                "Placa de alopecia cicatricial definitiva.",
+                "Bolhas no couro cabeludo.",
+                "Vesículas no couro cabeludo."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A Tinea Capitis é caracterizada por placas de alopecia (perda de cabelo) onde os pelos se quebram rente à superfície do couro cabeludo, dando o aspecto de 'pontos pretos' ou pelos tonsurados. Pode haver descamação e, em casos inflamatórios (Kerion Celsi), pústulas. A alopecia geralmente não é cicatricial (B), a menos que haja uma infecção secundária grave. Bolhas e vesículas (C, D) não são a apresentação típica.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q21",
+            "text": "A dermatofitose nos pés (Tinea Pedis) pode se manifestar clinicamente de todas as formas, EXCETO:",
+            "options": [
+                "Descamação e fissura interdigital ('pé de atleta').",
+                "Descamação plantar crônica ('em mocassim').",
+                "Placas anulares com bordas ativas no dorso dos pés.",
+                "Lesões nodulares nas regiões plantares."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta (a exceção) é a D. A Tinea Pedis não se manifesta com lesões nodulares. Suas formas clássicas são a interdigital (A), a hiperceratósica crônica ou 'em mocassim' (B), e a inflamatória ou vesico-bolhosa, que pode formar placas anulares (C). Lesões nodulares no pé devem levantar suspeitas de outras doenças, como micetoma ou cromomicose.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q22",
+            "text": "Em relação à pitiríase versicolor é correto afirmar, EXCETO:",
+            "options": [
+                "Frequentemente apresenta o sinal de Zileri (descamação ao estiramento).",
+                "As lesões cutâneas são vesiculosas.",
+                "O calor e a umidade podem ser fatores desencadeantes.",
+                "Pode ser desencadeada pelo uso de imunossupressores."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta (a exceção) é a B. As lesões da pitiríase versicolor são máculas (manchas) hipo ou hipercrômicas, com descamação fina (furfurácea), mas nunca vesiculosas. As outras afirmativas estão corretas: o sinal de Zileri (A) é característico; calor e umidade (C) favorecem a proliferação do fungo; e a imunossupressão (D) é um fator de risco.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q23",
+            "text": "A tinea nigra se manifesta clinicamente por:",
+            "options": [
+                "Lesões bolhosas na região plantar.",
+                "Manchas hipercrômicas (acastanhadas ou pretas) irregulares em região palmar.",
+                "Lesões nodulares em região plantar.",
+                "Lesões vesiculosas em região palmar."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Tinea Nigra é uma micose superficial rara causada pelo fungo Hortaea werneckii, que classicamente se apresenta como uma mácula (mancha) acastanhada ou preta, não descamativa e assintomática, localizada mais comumente na palma da mão, mimetizando um nevo ou melanoma. As outras opções descrevem lesões elementares que não correspondem a esta doença.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q24",
+            "text": "Professora de 40 anos, com contato regular com cão, apresenta há uma semana placa anular pruriginosa com borda eritematovesiculosa em região abdominal. Usou Quadriderm com melhora parcial. Qual a impressão diagnóstica?",
+            "options": [
+                "Eczema de contato imunoalérgico",
+                "Eczema de contato por irritante primário",
+                "Tinea corporis",
+                "Candidíase"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A lesão em placa anular, com borda ativa (mais eritematosa e vesiculosa) e tendência à cura central, é a apresentação clássica da Tinea corporis (dermatofitose). A história de contato com animal (fonte zoofílica) reforça a suspeita. A melhora parcial com Quadriderm (que contém corticoide) pode mascarar o quadro ('tinea incognita'). Eczemas (A, B) não costumam ter essa morfologia anular. Candidíase (D) prefere áreas de dobras.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q26",
+            "text": "JK, 65 anos, com história de queimadura no membro superior esquerdo na infância, queixando-se de uma ferida que surgiu há um ano sobre a cicatriz. Ao exame, lesão úlcero-vegetante e infiltrada. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Carcinoma espinocelular (Úlcera de Marjolin)",
+                "Carcinoma basocelular",
+                "Doença de Bowen",
+                "Melanoma"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O desenvolvimento de um carcinoma espinocelular (CEC) sobre uma cicatriz de queimadura antiga ou uma úlcera crônica é conhecido como Úlcera de Marjolin. A apresentação como uma lesão úlcero-vegetante e infiltrada é típica. O carcinoma basocelular (B) não costuma surgir em cicatrizes. Doença de Bowen (C) é um CEC in situ. Melanoma (E) é uma neoplasia melanocítica.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q27",
+            "text": "MIJ, 35 anos, apresenta lesão úlcero-vegetante infiltrativa em sulco balanoprepucial e linfoadenomegalia pétrea inguinal direita, com 8 meses de evolução e diminuição do jato urinário. Qual a principal hipótese diagnóstica e seu agente etiológico?",
+            "options": [
+                "Carcinoma verrucoso - HPV 16, 18",
+                "Condiloma acuminado - HPV 6, 11",
+                "Carcinoma espinocelular - HPV 6, 11",
+                "Carcinoma espinocelular - HPV 16, 18"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A lesão descrita (úlcero-vegetante, infiltrativa, de longa evolução) com metástase para linfonodo regional (pétreo) é característica de um Carcinoma Espinocelular (CEC) invasivo. Os subtipos de HPV de alto risco oncogênico, principalmente o 16 e o 18, são os principais agentes etiológicos do CEC genital. O condiloma (B) e o carcinoma verrucoso (A, D) são causados por subtipos de baixo risco (6 e 11) e não costumam ter um comportamento tão agressivo e metastático.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q30",
+            "text": "Paciente de 48 anos, usuário de droga e morador de rua, apresenta vegetação friável no pênis acometendo toda a glande, com evolução de 2 anos, que começou com lesões verrucosas. Desenvolveu linfonodomegalia inguinal unilateral aderida. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Carcinoma Espinocelular",
+                "Condiloma Acuminado Gigante (Buschke-Löwenstein)",
+                "Cancro Mole",
+                "Donovanose"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A longa evolução, o aspecto vegetante e friável, e principalmente a presença de linfonodomegalia aderida (sinal de metástase) apontam fortemente para uma neoplasia maligna invasiva, sendo o Carcinoma Espinocelular a principal hipótese. O Condiloma Gigante (B) pode ser localmente destrutivo, mas raramente metastatiza. Cancro mole (C) e Donovanose (D) são úlceras infecciosas de evolução mais aguda.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q31",
+            "text": "Mulher de 60 anos, caucasiana, moradora de zona rural, apresentando placa descamativa no lábio inferior, com evolução de 1 ano. Qual a sua hipótese diagnóstica?",
+            "options": [
+                "Queilite Actínica",
+                "Herpes Simples Labial",
+                "Líquen Plano",
+                "Candidíase Oral"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Uma lesão crônica, descamativa, em lábio inferior de uma pessoa com fototipo baixo e história de alta exposição solar crônica é a apresentação clássica da Queilite Actínica, uma lesão pré-maligna (carcinoma espinocelular in situ) induzida pelo sol. As outras opções teriam evolução e características clínicas diferentes.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q32",
+            "text": "Mulher jovem com biópsia excisional confirmando um melanoma in situ. Qual deve ser a conduta?",
+            "options": [
+                "Apenas observação, pois a lesão foi totalmente removida.",
+                "Ampliação cirúrgica com 0,5 a 1,0 cm de margem.",
+                "Ampliação cirúrgica com 2,0 cm de margem.",
+                "Pesquisa de linfonodo sentinela."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Para o melanoma in situ (confinado à epiderme, Breslow = 0), a recomendação dos consensos é realizar a ampliação das margens cirúrgicas para 0,5 a 1,0 cm, garantindo a remoção completa da lesão e prevenindo a recidiva local. Não há necessidade de margens maiores (C) nem de pesquisa de linfonodo sentinela (D), pois o risco de metástase é praticamente nulo.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q33",
+            "text": "Jovem de 22 anos apresenta manchas e placas avermelhadas em tronco, palmas e plantas. Nega lesões genitais, mas refere uma lesão ulcerada indolor na língua há 3 semanas, que regrediu espontaneamente. Quais exames você solicitaria para confirmação diagnóstica?",
+            "options": [
+                "Hemograma e PCR.",
+                "Sorologia para VDRL e FTA-abs.",
+                "Biópsia de pele.",
+                "Sorologia para HIV e Hepatites."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro é altamente sugestivo de sífilis secundária (roséola sifilítica), caracterizada por lesões cutâneas polimorfas, incluindo o acometimento palmo-plantar. A úlcera oral indolor que regrediu espontaneamente foi o cancro duro (sífilis primária). O diagnóstico é confirmado com testes sorológicos: um não treponêmico (VDRL) para triagem e seguimento, e um treponêmico (FTA-abs) para confirmação.",
+            "tag": "DST"
+        },
+        {
+            "id": "PR2-Derma-Q41",
+            "text": "Paciente masculino, 30 anos, queixa de surgimento de lesões cutâneas após quadro de herpes simples. Observando a figura C (lesões eritematosas em alvo no pé), podemos dizer:",
+            "options": [
+                "Trata-se de eritema pigmentar fixo, que evolui com hipercromia.",
+                "Trata-se de Eritema Multiforme, frequentemente desencadeado por infecções.",
+                "O quadro é compatível com psoríase invertida.",
+                "Trata-se de síndrome de hipersensibilidade a fármacos com acometimento restrito à pele."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. As lesões 'em alvo' (centro mais escuro, halo pálido e borda eritematosa) são a marca registrada do Eritema Multiforme. Esta é uma reação de hipersensibilidade que é mais comumente desencadeada por infecções, sendo o Herpes Simples a causa mais frequente. Eritema pigmentar fixo (A) deixa mancha escura residual. Psoríase (C) são placas. Síndrome de hipersensibilidade a fármacos (D) cursa com sintomas sistêmicos.",
+            "tag": "farmacodermias"
+        },
+        {
+            "id": "PR2-Derma-Q42",
+            "text": "Homem de 35 anos queixa de lesões pruriginosas no pé. Ao exame: 3 pequenas pápulas esféricas, branco-amareladas, com um ponto negro central na região plantar esquerda. Assinale a opção correta de acordo com o caso:",
+            "options": [
+                "Larva migrans e tratar com mebendazol.",
+                "Leishmaniose tegumentar e solicitar exame histopatológico.",
+                "Tungíase e tratar removendo o parasita.",
+                "Miíase e tratar com oclusão e expressão."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A descrição da lesão (pápula com ponto negro central) na região plantar é clássica da tungíase, a infestação pela pulga Tunga penetrans (bicho-de-pé). O ponto negro corresponde à porção posterior do abdome da pulga. O tratamento consiste na enucleação (remoção) cuidadosa do parasita. Larva migrans (A) causa trilhas serpiginosas. Leishmaniose (B) e miíase (D) têm apresentações diferentes.",
+            "tag": "dermatozoonoses"
+        },
+        {
+            "id": "PR2-Derma-Q43",
+            "text": "Sobre as dermatozoonoses, considere as afirmações abaixo:\nI. Larva migrans cutânea tem como lesão característica uma trilha serpiginosa e pruriginosa.\nII. A escabiose é causada pelo Sarcoptes scabiei e o tratamento pode ser feito com ivermectina oral.\nIII. Pediculose da cabeça é assintomática e o tratamento de escolha é o corte de cabelo.\nIV. Na escabiose em crianças, o couro cabeludo e a região palmo-plantar podem ser acometidos.",
+            "options": [
+                "I e III apenas",
+                "II e IV apenas",
+                "I, II e IV apenas",
+                "II, III e IV apenas"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A afirmativa I está parcialmente correta na descrição da lesão, mas incorreta ao dizer que a contaminação é entre humanos (é por fezes de cães e gatos) e que o tratamento é a extração (é com anti-helmínticos). A afirmativa II está correta. A afirmativa III está incorreta; a pediculose causa prurido intenso e o tratamento é com pediculicidas tópicos, não necessariamente corte de cabelo. A afirmativa IV está correta; o acometimento da cabeça e palmo-plantar é uma característica da escabiose em lactentes.",
+            "tag": "dermatozoonoses"
+        },
+        {
+            "id": "PR2-Derma-Q44.1",
+            "text": "Criança de 10 anos com pápula de 0,6 cm esférica branco amarelada, pruriginosa com ponto preto central na região plantar direita. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Verruga plantar",
+                "Calo",
+                "Miíase furunculoide",
+                "Tungíase (Bicho de pé)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Esta questão descreve o mesmo quadro da questão 42. A lesão papular com um ponto preto central na região plantar é a apresentação clássica da tungíase.",
+            "tag": "dermatozoonoses"
+        },
+        {
+            "id": "PR2-Derma-Q44.2",
+            "text": "Criança de 10 anos com pápula de 0,6 cm esférica branco amarelada, pruriginosa com ponto preto central na região plantar direita. Cite um diagnóstico diferencial.",
+            "options": [
+                "Escabiose",
+                "Larva migrans",
+                "Miíase furunculoide",
+                "Picada de carrapato"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A miíase furunculoide, causada pela larva da mosca Dermatobia hominis, também se apresenta como um nódulo ou pápula com um ponto central (orifício por onde a larva respira). Embora a localização plantar seja menos comum, é um importante diagnóstico diferencial para a tungíase.",
+            "tag": "dermatozoonoses"
+        },
+        {
+            "id": "PR2-Derma-Q45",
+            "text": "Paciente de 62 anos com história prévia de psoríase em cotovelo, diabética, desenvolveu pneumonia bacteriana. Duas semanas após a alta, apresentou placas eritematosas e descamativas em 90% do corpo. Sobre a doença em questão (psoríase eritrodérmica), podemos afirmar:",
+            "options": [
+                "O acometimento articular descrito (artrite) é o mais frequente nessa doença.",
+                "O quadro descrito é comum após o uso de antimicrobianos.",
+                "A infecção bacteriana (pneumonia) pode ter sido o gatilho para a eritrodermia.",
+                "O uso irregular de corticoide tópico desencadeou o quadro."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A psoríase eritrodérmica pode ser desencadeada por vários fatores, incluindo infecções sistêmicas (como a pneumonia bacteriana), suspensão de corticoides sistêmicos ou uso de certas drogas. A infecção é um gatilho bem conhecido. O acometimento articular (A) não é a forma mais frequente. O uso de antimicrobianos (B) não é uma causa clássica. O corticoide tópico (D) não causaria uma generalização tão grave.",
+            "tag": "farmacodermias"
+        },
+        {
+            "id": "PR2-Derma-Q57",
+            "text": "DFR, 50 anos, diabética, queixa de prurido na região plantar direita há 4 meses. Ao exame: descamação plantar seguindo o bordo do pé direito e onicólise com hiperceratose subungueal na unha do hálux direito. Em relação a lesão plantar, assinale a opção correta:",
+            "options": [
+                "A principal hipótese é dermatite atópica.",
+                "A principal hipótese é dermatofitose (Tinea Pedis).",
+                "A principal hipótese é sífilis secundária.",
+                "A principal hipótese é candidíase cutânea."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro de descamação plantar crônica, unilateral, com acometimento ungueal associado (onicomicose) é altamente sugestivo de Tinea Pedis na sua forma hiperceratósica crônica ('em mocassim'). O agente etiológico, um dermatófito, pode ser antropofílico (transmitido entre humanos). As outras hipóteses não explicam a combinação de achados cutâneos e ungueais.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q58",
+            "text": "O Sinal de Zileri e o Sinal da unhada consistem em métodos semióticos úteis para o diagnóstico de:",
+            "options": [
+                "Piedra Branca",
+                "Kerion Celsi",
+                "Candidíase Mucocutânea Crônica",
+                "Pitiríase Versicolor"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Ambos os sinais se referem à manobra de evidenciar a descamação fina (furfurácea) característica da Pitiríase Versicolor. O Sinal de Zileri é o estiramento da pele, e o Sinal da Unhada é o leve raspado com a unha, ambos fazendo com que a descamação se torne aparente.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q59",
+            "text": "Na infância, a localização mais comum das dermatofitoses é:",
+            "options": [
+                "Pé (Tinea pedis)",
+                "Região inguinocrural (Tinea cruris)",
+                "Mão (Tinea manuum)",
+                "Couro cabeludo (Tinea capitis)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Tinea Capitis é a dermatofitose mais comum em crianças em idade escolar, sendo rara em adultos. As outras formas, como a Tinea pedis e cruris, são mais prevalentes após a puberdade.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q60",
+            "text": "Paciente sofreu uma arranhadura de gato no dorso da mão esquerda. No local, surgiu um nódulo seguido de um cordão linfangítico centrípeto. Qual seria o exame complementar mais adequado para confirmação diagnóstica?",
+            "options": [
+                "Exame micológico direto do exsudato.",
+                "Cultura em meio de Sabouraud a 25°C do exsudato.",
+                "Exame histopatológico da biópsia do nódulo.",
+                "Teste intradérmico com o antígeno purificado do fungo."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro clínico é clássico de Esporotricose linfocutânea. O padrão-ouro para o diagnóstico é o isolamento e identificação do Sporothrix spp. através da cultura do material (exsudato, aspirado, biópsia) em meio apropriado, como o Sabouraud. O exame direto (A) tem baixa sensibilidade. O histopatológico (C) pode ser sugestivo, mas não específico. O teste intradérmico (D) indica apenas contato prévio.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q62",
+            "text": "Qual é o agente etiológico da pitiríase versicolor?",
+            "options": [
+                "Malassezia spp. (anteriormente Pityrosporum)",
+                "Candida albicans",
+                "Trichophyton rubrum",
+                "Microsporum canis"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A Pitiríase Versicolor é causada por leveduras do gênero Malassezia, que são fungos lipofílicos comensais da pele humana. Candida albicans (B) causa candidíase. Trichophyton rubrum (C) e Microsporum canis (E) são dermatófitos, causadores de tineas.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q63",
+            "text": "Qual o tratamento de escolha da Tinea Capitis?",
+            "options": [
+                "Shampoo de Cetoconazol isolado",
+                "Griseofulvina oral",
+                "Nistatina tópica",
+                "Itraconazol tópico"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O tratamento da Tinea Capitis deve ser sempre sistêmico (via oral), pois os antifúngicos tópicos não penetram adequadamente na haste do pelo. A Griseofulvina é o tratamento de primeira escolha, especialmente para crianças. Terbinafina e Itraconazol são alternativas. Shampoos (A) podem ser usados como adjuvantes para diminuir a transmissibilidade, mas não curam a infecção.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q64",
+            "text": "Na infância, a localização mais comum das dermatofitoses é:",
+            "options": [
+                "Pé",
+                "Região inguinocrural",
+                "Mão",
+                "Couro cabeludo"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Esta questão é uma repetição da questão 59. A Tinea Capitis é a dermatofitose mais comum em crianças.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q65",
+            "text": "O Sinal de Zileri e o Sinal da Unhada consistem de métodos semióticos úteis para o diagnóstico de:",
+            "options": [
+                "Piedra Branca",
+                "Piedra Negra",
+                "Kerion Celsi",
+                "Pitiríase Versicolor"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Esta questão é uma repetição da questão 58. Ambos os sinais servem para evidenciar a descamação fina da Pitiríase Versicolor.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q66",
+            "text": "Quais patologias são causadas por fungos que NÃO invadem a camada córnea da pele, conferindo ao hospedeiro comprometimento principalmente estético?",
+            "options": [
+                "Tinea nigra e Pitiríase versicolor",
+                "Dermatofitose e Pitiríase versicolor",
+                "Pitiríase versicolor e Candidíase",
+                "Piedra negra e Dermatofitose"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Tinea Nigra e Pitiríase Versicolor são micoses superficiais que se limitam à parte mais externa do estrato córneo, sem invadi-lo ou elicitar uma resposta inflamatória significativa. Dermatofitoses (B, D) e Candidíase (C) são infecções que invadem o estrato córneo e podem causar inflamação.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q67",
+            "text": "Paciente masculino 30 anos de idade apresentando máculas hipocrômicas no dorso com descamação furfurácea e sinal de zileri positivo. Qual o seu diagnóstico?",
+            "options": [
+                "Candidíase",
+                "Dermatofitose",
+                "Pitiríase versicolor",
+                "Eritrasma"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A combinação de máculas hipocrômicas com descamação fina (furfurácea), evidenciada pelo sinal de Zileri, em área seborreica (dorso) é a apresentação clássica da Pitiríase Versicolor.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q80",
+            "text": "JW, 81 anos, negra, foi encaminhada ao serviço de dermatologia com história de mancha assintomática em região plantar com 10 anos de evolução. Ao exame: mancha hipercrômica, assimétrica, bordas irregulares e coloração heterogênica, medindo 7x5 cm de diâmetro e com área nodular na superfície. Qual a melhor hipótese diagnóstica?",
+            "options": [
+                "Carcinoma basocelular pigmentado",
+                "Melanoma extensivo superficial",
+                "Carcinoma espinocelular",
+                "Melanoma lentiginoso acral"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Uma lesão pigmentada em região acral (plantar), de longa evolução, com características de malignidade (grande, assimétrica, bordas e cores irregulares) e, principalmente, com o desenvolvimento de um componente nodular (indicando crescimento vertical e invasão), é altamente sugestiva de Melanoma Lentiginoso Acral. É o tipo mais comum de melanoma em afrodescendentes.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q81",
+            "text": "Qual é a melhor conduta para a confirmação diagnóstica do caso clínico relatado na questão anterior (suspeita de melanoma acral grande e com nódulo)?",
+            "options": [
+                "Biópsia incisional da área mais representativa (nódulo).",
+                "Ressonância magnética do pé direito.",
+                "Raio X do pé direito.",
+                "Dermatoscopia apenas."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A regra geral para uma lesão suspeita de melanoma é a biópsia excisional. No entanto, para lesões muito grandes ou em locais onde a excisão completa causaria grande morbidade (como a região plantar), a biópsia incisional da área mais espessa ou atípica (neste caso, o nódulo) é a conduta recomendada para confirmar o diagnóstico e medir a espessura de Breslow, que guiará o tratamento definitivo.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q86",
+            "text": "Paciente masculino, pardo, 22 anos, queixa de lesões no dorso. Ao exame: múltiplas máculas hipocrômicas, arredondadas, confluentes na parte superior do tronco e ombros com descamação fina na superfície, melhor observadas ao realizar o estiramento da pele. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Pitiríase versicolor",
+                "Dermatofitose do corpo",
+                "Hanseníase indeterminada",
+                "Psoríase gutata"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Esta é outra apresentação clássica de Pitiríase Versicolor. Máculas hipocrômicas em áreas seborreicas (tronco superior), com descamação fina que se torna evidente com o estiramento da pele (Sinal de Zileri), são patognomônicas. Hanseníase (C) cursaria com alteração de sensibilidade. Psoríase (D) são pápulas ou placas eritematosas. Dermatofitose (B) teria bordas mais ativas.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q89",
+            "text": "FHC, 81 anos, fototipo 2, lavrador, procurou atendimento dermatológico queixando-se de lesão assintomática na face com 5 anos de evolução. Ao exame: mancha hipercrômica, assimétrica, heterogênea com 5,0 x 2,0 cm de diâmetro localizada na região frontal. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Carcinoma basocelular pigmentado",
+                "Carcinoma espinocelular",
+                "Melanoma nodular",
+                "Melanoma do lentigo maligno"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Uma mancha pigmentada, de crescimento lento ao longo de anos, em área de alta exposição solar crônica em um paciente idoso e de pele clara é a apresentação típica do Melanoma do Lentigo Maligno. É a forma in situ, que se não tratada pode evoluir para um lentigo maligno melanoma (invasivo). As outras opções teriam evolução e morfologia diferentes.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q93.1",
+            "text": "Paciente de 73 anos, com alta exposição solar, apresenta lesão em dorso nasal há 5 anos, de crescimento progressivo, que sangra ocasionalmente. Ao exame: lesão nodular de 3cm, com porção superior perolada com telangiectasias e porção inferior hipercromica. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Carcinoma basocelular terebrante",
+                "Carcinoma basocelular nódulo-ulcerado",
+                "Carcinoma espinocelular",
+                "Carcinoma basocelular nodular pigmentado"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A descrição de uma lesão nodular com brilho perolado e telangiectasias na superfície é a marca do Carcinoma Basocelular (CBC) nodular. A presença de área hipercromica (enegrecida) define o subtipo pigmentado. As outras opções descrevem outros subtipos de CBC ou outro tipo de câncer.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q93.2",
+            "text": "Para o caso anterior (CBC nodular pigmentado de 3cm em dorso nasal), qual a principal indicação terapêutica?",
+            "options": [
+                "Eletrocoagulação",
+                "Cirurgia Micrográfica de Mohs",
+                "Exérese com margem de segurança de 4mm",
+                "Criocirurgia"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Cirurgia Micrográfica de Mohs é o tratamento de escolha para tumores em áreas de alto risco de recidiva (como a zona H da face, que inclui o nariz), tumores grandes (>2cm na face), com bordas mal definidas ou subtipos histológicos agressivos. Ela permite a checagem completa das margens no intraoperatório, garantindo a maior taxa de cura com a máxima preservação de tecido sadio. As outras opções são menos indicadas para um tumor com essas características e localização.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q96.1",
+            "text": "Paciente de 70 anos, diabético e com psoríase, apresenta lesão ulcerada no calcâneo direito de má evolução. Ao exame: úlcera de 7 cm, bordos irregulares, com pigmentação periférica variando entre castanho e negro, e áreas de regressão despigmentadas. Qual é a impressão diagnóstica?",
+            "options": [
+                "Melanoma nodular",
+                "Melanoma extensivo superficial",
+                "Melanoma do lentigo maligno",
+                "Melanoma lentiginoso acral"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Assim como na questão 80, uma lesão ulcerada em região acral (calcâneo) com pigmentação irregular, variação de cores e áreas de regressão é altamente suspeita de Melanoma Lentiginoso Acral. A história de 'úlcera diabética' pode ter confundido e atrasado o diagnóstico.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q96.2",
+            "text": "Para o caso anterior (suspeita de melanoma acral ulcerado de 7 cm), qual o procedimento para confirmação do diagnóstico?",
+            "options": [
+                "Biópsia incisional",
+                "Pesquisa de nódulo sentinela",
+                "Biópsia excisional ampla",
+                "Biópsia excisional estreita"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Repetindo a lógica da questão 81, para uma lesão muito grande (7 cm) em uma área de difícil reconstrução como o calcâneo, a biópsia incisional da área mais representativa (a parte mais espessa da úlcera ou a área mais pigmentada) é a conduta correta para confirmar o diagnóstico e planejar o tratamento definitivo, que dependerá da espessura do tumor (Índice de Breslow).",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q97",
+            "text": "Paciente de 43 anos, pedreiro, apresenta lesão úlcero-vegetante em sulco balanoprepucial e glande, com 6 meses de evolução. Presença de nódulo pétreo aderido em região inguinal direita. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Carcinoma epidermoide (espinocelular)",
+                "Carcinoma verrucoso",
+                "Cancro mole",
+                "Cancro duro (sífilis)"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Uma lesão úlcero-vegetante crônica na genitália, associada a um linfonodo pétreo e aderido (característico de metástase), é altamente sugestiva de um Carcinoma Espinocelular (também chamado de Epidermoide) invasivo. Carcinoma verrucoso (B) é menos agressivo. Cancro mole (C) e cancro duro (D) são úlceras infecciosas agudas e não têm este aspecto ou evolução.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q99",
+            "text": "MIJ, 35 anos, procurou atendimento com múltiplas lesões condilomatosas em sulco balanoprepucial há 2 meses. Qual a principal hipótese diagnóstica e seu agente etiológico?",
+            "options": [
+                "Carcinoma verrucoso - HPV 16, 18",
+                "Condiloma acuminado - HPV 6, 11",
+                "Carcinoma espinocelular - HPV 6, 11",
+                "Condiloma acuminado - HPV 16, 18"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Lesões 'condilomatosas' (verrucosas, com aspecto de 'couve-flor') na região genital são a apresentação clássica do Condiloma Acuminado. Esta condição é causada predominantemente pelos subtipos de HPV de baixo risco oncogênico, sendo os mais comuns o 6 e o 11. Os subtipos de alto risco 16 e 18 (A, E) estão mais associados a lesões precursoras de câncer e ao CEC invasivo.",
+            "tag": "DST"
+        },
+        {
+            "id": "PR2-Derma-Q140",
+            "text": "DFR., 50 anos, diabética, queixa de prurido na região plantar direita há 4 meses. Ao exame: descamação plantar seguindo o bordo do pé direito e onicólise com hiperceratose subungueal na unha do hálux direito. Em relação a lesão plantar assinale a opção correta:",
+            "options": [
+                "A principal hipótese é dermatite atópica.",
+                "A principal hipótese é dermatofitose cujos agentes podem ser antropofílicos.",
+                "A principal hipótese é sífilis secundária.",
+                "A principal hipótese é candidíase cutânea."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Esta questão é uma repetição da questão 57. O quadro de descamação plantar crônica, unilateral, com acometimento ungueal associado (onicomicose) é altamente sugestivo de Tinea Pedis na sua forma hiperceratósica crônica ('em mocassim').",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q141",
+            "text": "MTM, 9 anos, apresenta lesão em couro cabeludo há 2 meses, como mostra a foto anexa (placa de alopecia com pelos tonsurados). O irmão de 7 anos apresenta quadro semelhante. Verifique se as afirmativas a seguir são verdadeiras (V) ou falsas (F) e assinale a sequência CORRETA.\n( ) Essa dermatose geralmente causa alopecia cicatricial.\n( ) O dano causado leva ao desprendimento do cabelo pela raiz.\n( ) Tem como possível agente etiológico o Microsporum canis.\n( ) O sinal de Zileri está presente na maioria dos casos.",
+            "options": [
+                "F, V, V, V",
+                "F, F, V, F",
+                "V, F, V, F",
+                "F, F, F, V"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. 1ª é Falsa: a Tinea Capitis tipicamente causa alopecia não cicatricial. 2ª é Falsa: o cabelo não se desprende pela raiz, ele se quebra (tonsura). 3ª é Verdadeira: Microsporum canis é um agente zoofílico comum de Tinea Capitis. 4ª é Falsa: o sinal de Zileri é da Pitiríase Versicolor.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q142",
+            "text": "Qual das seguintes situações NÃO é indicação de cirurgia micrográfica de Mohs?",
+            "options": [
+                "Carcinoma Basocelular primário em região peri-ocular.",
+                "Carcinoma espinocelular recidivado em couro cabeludo.",
+                "Carcinoma espinocelular de 1,5 cm no lábio inferior.",
+                "Melanoma nodular no tronco."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Cirurgia de Mohs é uma técnica para tumores de pele não melanoma, com o objetivo de checar 100% das margens. Para o melanoma, o tratamento padrão é a excisão com margens predeterminadas baseadas na espessura do tumor (Índice de Breslow), e a avaliação das margens é feita por amostragem. As outras opções (A, B, C) são todas indicações clássicas para a Cirurgia de Mohs (tumores em áreas de risco, recidivados, em locais nobres).",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q143",
+            "text": "Mulher de 25 anos, apresentou mácula amarronzada com centro enegrecido em perna direita, medindo 1.0 x 0.6 cm. Ao exame dermatoscópico a lesão apresentava-se irregular nos 4 eixos. Qual o provável diagnóstico e melhor conduta a ser adotada?",
+            "options": [
+                "Melanoma extensivo superficial, biópsia excisional.",
+                "Melanoma lentigo maligno, biópsia incisional.",
+                "Melanoma acral, biópsia incisional.",
+                "Nevo displásico, observar por 6 meses."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O melanoma extensivo superficial é o tipo mais comum, e a descrição clínica e dermatoscópica é altamente suspeita. Diante da suspeita de melanoma, a conduta padrão é a biópsia excisional, com margens estreitas (1-2mm), para remover toda a lesão e permitir a análise histopatológica completa, incluindo a medição da espessura de Breslow. Biópsia incisional (B, C) é reservada para lesões grandes ou em locais difíceis. A observação (D) é inadequada para uma lesão tão suspeita.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q144",
+            "text": "A úlcera de Marjolin é classicamente descrita como sendo:",
+            "options": [
+                "Carcinoma basocelular ulcerado na perna.",
+                "Carcinoma espinocelular em cicatrizes e úlceras crônicas.",
+                "Leishmaniose no nariz, destruindo o septo nasal.",
+                "Melanoma nodular ulcerado na perna."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Esta questão é uma repetição da lógica da questão 26. A Úlcera de Marjolin é a malignização de uma ferida crônica (ex: úlcera de pressão, fístula de osteomielite) ou cicatriz (ex: queimadura), transformando-se em um Carcinoma Espinocelular.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q145",
+            "text": "Qual a importância dos 'pontos pretos' de uma lesão verrucosa de cromomicose?",
+            "options": [
+                "Indicam gravidade da doença por proliferação acentuada dos fungos.",
+                "Indicam resistência aos antifúngicos convencionais.",
+                "Indicam o local mais adequado para colheita de material para o exame micológico.",
+                "São típicos da Lobomicose, não da Cromomicose."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Os 'pontos pretos' nas lesões verrucosas da cromomicose correspondem a focos de eliminação transepidérmica dos corpos fúngicos (corpos muriformes ou fumagoides). Por serem locais de alta concentração do fungo, são os pontos ideais para a coleta de material (raspado) para o exame micológico direto, aumentando a chance de encontrar o agente.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q146",
+            "text": "Qual é o procedimento terapêutico eficiente para verrugas virais, mas contra-indicado para a região plantar?",
+            "options": [
+                "Criocirurgia",
+                "Eletrocoagulação",
+                "Cauterização química com ácidos",
+                "Excisão com sutura"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A excisão e sutura de verrugas plantares é contraindicada pois a cicatriz resultante em uma área de peso pode se tornar permanentemente dolorosa, sendo muitas vezes um problema maior que a própria verruga original. As outras opções (A, B, C) são métodos destrutivos comumente utilizados para tratar verrugas plantares.",
+            "tag": "viroses"
+        },
+        {
+            "id": "PR2-Derma-Q147",
+            "text": "Paciente de 60 anos, apresenta há 1 ano lesão ulcerada, com bordas enduradas, friável e borda perolada em asa nasal direita. A biópsia demonstrou ninhos de células basaloides com paliçada periférica. Qual sua principal hipótese diagnóstica e a melhor conduta?",
+            "options": [
+                "Melanoma nodular, exérese com margem cirúrgica.",
+                "Leishmaniose, iniciar terapia sistêmica.",
+                "Carcinoma espinocelular, cirurgia micrográfica de Mohs.",
+                "Carcinoma basocelular, cirurgia micrográfica de Mohs."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A descrição clínica (úlcera com borda perolada) e histopatológica (células basaloides com paliçada periférica) são patognomônicas do Carcinoma Basocelular (CBC). Por se localizar em uma área de alto risco (asa nasal), a Cirurgia Micrográfica de Mohs é a melhor opção terapêutica, pois garante a maior taxa de cura com máxima preservação de tecido.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q150",
+            "text": "Sobre as farmacodermias, assinale a afirmativa correta:",
+            "options": [
+                "São doenças que acometem exclusivamente pele e/ou mucosas.",
+                "Os tipos eruptivos mais frequentes são as reações graves como SSJ/NET e DRESS.",
+                "No eritema pigmentar fixo, a exposição repetida à droga pode resultar no aparecimento de bolhas.",
+                "A urticária é o tipo eruptivo mais frequente de farmacodermia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O Eritema Pigmentar Fixo se caracteriza por uma ou poucas máculas que surgem sempre no mesmo local após a exposição a uma droga. Em reexposições, a lesão pode se tornar mais edemaciada e até mesmo formar uma bolha no centro. Muitas farmacodermias têm acometimento sistêmico (A está errada). O tipo mais frequente é o exantema morbiliforme (B e E estão erradas).",
+            "tag": "farmacodermias"
+        },
+        {
+            "id": "PR2-Derma-Q151",
+            "text": "Escolar, 8 anos, apresenta há 30 dias 3 placas de alopecia, anulares, descamativas, com pêlos tonsurantes, pruriginosas. Mãe relata que outras 4 crianças na escola apresentam o mesmo quadro. De acordo com o caso, assinale a opção correta.",
+            "options": [
+                "Trata-se de um caso de Tinea Capitis e o tratamento deve ser sistêmico.",
+                "Trata-se de um caso de alopecia areata e o tratamento deve ser com corticoterapia tópica.",
+                "O diagnóstico padrão-ouro para Tinea Capitis é a biópsia de pele.",
+                "O diagnóstico correto é dermatite seborreica e o tratamento é com xampus antifúngicos."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O quadro clínico de placas de alopecia com pelos quebrados ('pontos pretos' ou tonsurados) e a história epidemiológica (várias crianças na escola) são clássicos de Tinea Capitis, uma dermatofitose. O tratamento deve ser sempre sistêmico (via oral), pois os tópicos não são eficazes. Alopecia areata (B) não tem descamação nem pelos tonsurados. O padrão-ouro é a cultura fúngica, não a biópsia (C). Dermatite seborreica (D) não causa alopecia desta forma.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q153",
+            "text": "CBM, 40 anos, fototipo II, com história de queimadura solar na infância, procurou atendimento por lesão na face com 2 anos de evolução e sangramento recente. Ao exame: Lesão papulosa com bordas peroladas, telangiectasias na superfície e ulceração central, com 2,0 cm de diâmetro em região malar direita. Qual é a principal hipótese clínica diagnóstica?",
+            "options": [
+                "Carcinoma basocelular terebrante",
+                "Carcinoma espinocelular",
+                "Carcinoma basocelular nódulo-ulcerado",
+                "Melanoma do lentigo maligno"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A descrição de uma pápula ou nódulo com bordas peroladas, telangiectasias e uma ulceração central (úlcera roedora) é a apresentação clássica do Carcinoma Basocelular (CBC) do tipo nódulo-ulcerado. A história de exposição solar é o principal fator de risco.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q155",
+            "text": "Sobre a hanseníase, é correto afirmar:",
+            "options": [
+                "Deve ser solicitada baciloscopia para os contatos domiciliares sem lesões.",
+                "Acometimento do nervo radial pode causar mão caída e do nervo ulnar a garra cubital.",
+                "O tempo de incubação da doença dura em média de 2 semanas a 2 meses.",
+                "Não há correlação entre as formas clínicas e a imunidade do paciente."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A hanseníase é uma neuropatia periférica e o acometimento dos troncos nervosos leva a déficits motores característicos, como a 'mão caída' (nervo radial) e a 'garra ulnar' (nervo ulnar). A baciloscopia em contatos assintomáticos (A) não é rotina. O tempo de incubação (C) é longo, de anos. A correlação entre a forma clínica e a imunidade celular do paciente (D) é o pilar da classificação da doença (Polo Tuberculoide vs. Virchowiano).",
+            "tag": "hanseníase"
+        },
+        {
+            "id": "PR2-Derma-Q156",
+            "text": "Em relação à candidíase é correto afirmar, EXCETO:",
+            "options": [
+                "Pode ser desencadeada por antibioticoterapia de largo espectro.",
+                "Responde bem ao uso de fluconazol sistêmico.",
+                "Manifesta-se principalmente nas áreas extensoras.",
+                "Pode comprometer a mucosa oral."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta (a exceção) é a C. Esta questão é uma repetição da questão 19. A candidíase afeta preferencialmente áreas de dobras (intertriginosas) e mucosas, não áreas extensoras.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q157",
+            "text": "A dermatofitose no couro cabeludo (Tinea Capitis) se manifesta clinicamente com:",
+            "options": [
+                "Placas de alopecia com pelos tonsurados na superfície.",
+                "Placa de alopecia cicatricial.",
+                "Bolhas no couro cabeludo.",
+                "Vesículas no couro cabeludo."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Esta questão é uma repetição da questão 20. A Tinea Capitis classicamente se apresenta com placas de alopecia com pelos quebrados, tonsurados.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q158",
+            "text": "A dermatofitose nos pés pode se manifestar clinicamente de todas as formas, EXCETO:",
+            "options": [
+                "Descamação e fissura interdigital.",
+                "Descamação plantar crônica.",
+                "Placas anulares no dorso dos pés.",
+                "Lesões nodulares nas regiões plantares."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta (a exceção) é a D. Esta questão é uma repetição da questão 21. A Tinea Pedis não causa lesões nodulares.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q159",
+            "text": "Em relação à pitiríase versicolor é correto afirmar, EXCETO:",
+            "options": [
+                "Frequentemente apresenta o sinal de Zileri.",
+                "As lesões cutâneas são vesiculosas.",
+                "O calor pode ser um fator desencadeante.",
+                "Pode ser desencadeada por imunossupressores."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta (a exceção) é a B. Esta questão é uma repetição da questão 22. As lesões da pitiríase versicolor são maculares, não vesiculosas.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q160",
+            "text": "A tinea nigra se manifesta clinicamente por:",
+            "options": [
+                "Lesões bolhosas na região plantar.",
+                "Manchas hipercrômicas irregulares em região palmar.",
+                "Lesões nodulares em região plantar.",
+                "Lesões vesiculosas em região palmar."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Esta questão é uma repetição da questão 23. A Tinea Nigra classicamente se apresenta como uma mácula acastanhada ou preta na palma da mão.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q161",
+            "text": "Professora de 40 anos, com contato regular com cão, apresenta há uma semana placa anular pruriginosa com borda eritematovesiculosa em região abdominal. Qual a impressão diagnóstica?",
+            "options": [
+                "Eczema de contato",
+                "Psoríase",
+                "Tinea corporis",
+                "Candidíase"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Esta questão é uma repetição da questão 24. A lesão anular com borda ativa e a história de contato com animal são altamente sugestivas de Tinea Corporis.",
+            "tag": "micoses"
+        },
+        {
+            "id": "PR2-Derma-Q180",
+            "text": "Diante de uma lesão de pele melanocítica assimétrica, de bordos irregulares, heterocrômica e com 1cm de diâmetro em região dorsal; assinale a alternativa que indica a conduta mais adequada:",
+            "options": [
+                "Observar a evolução por 6 meses.",
+                "Realizar biópsia incisional.",
+                "Realizar biópsia excisional até o tecido celular subcutâneo com margens exíguas.",
+                "Realizar biópsia excisional com margens amplas de 2 cm."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Diante de uma lesão com alta suspeita clínica para melanoma (ABCDE positivo), a conduta padrão é a biópsia excisional. A biópsia deve ser profunda o suficiente para incluir todo o tumor (até o subcutâneo) e com margens laterais pequenas (1-3 mm), apenas o suficiente para remover a lesão visível. O objetivo é obter o diagnóstico e, principalmente, a espessura de Breslow, que guiará a ampliação de margens e o estadiamento posteriores. Margens amplas (D) só são feitas após a confirmação. Observar (A) ou fazer biópsia incisional (B) em uma lesão pequena e ressecável seria inadequado.",
+            "tag": "câncer de pele"
+        },
+        {
+            "id": "PR2-Derma-Q181",
+            "text": "Mulher de 25 anos, apresentou mácula amarronzada com centro enegrecido em perna direita, medindo 1,0 x 0,6 cm. Dermatoscopia irregular. Qual provável diagnóstico e a melhor conduta?",
+            "options": [
+                "Melanoma extensivo superficial, biópsia excisional.",
+                "Melanoma lentigo maligno, biópsia incisional.",
+                "Melanoma acral, biópsia incisional.",
+                "Nevo displásico, observar por 6 meses."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Esta questão é uma repetição da questão 143. A suspeita clínica e dermatoscópica de melanoma indica a realização de uma biópsia excisional para confirmação diagnóstica e estadiamento.",
+            "tag": "câncer de pele"
+        }
+    ]
+    
+},
 
-      
+{
+    id: "preset-m7-pr2-hemato",
+    name: "Estácio - M7 - PR2 - Hematologia",
+    questions: [
+        {
+            "id": "PR2-Hemato-Q1",
+            "text": "Paciente portador de talassemia major, politransfundido, apresenta nos últimos meses dificuldade de obter sangue compatível. Fenotipagem eritrocitária mostra novo anticorpo anti-Duffy. Teste de Coombs direto é negativo. Assinale a alternativa verdadeira:",
+            "options": [
+                "O paciente apresenta reação hemolítica transfusional tardia com anticorpos pré-formados.",
+                "O paciente apresenta autoimunização com produção de anticorpos contra seus próprios eritrócitos.",
+                "O paciente apresenta aloimunização com produção de anticorpos contra antígenos de outros indivíduos.",
+                "O paciente apresenta doença do enxerto contra o hospedeiro."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A aloimunização é a produção de anticorpos contra antígenos não próprios (aloantígenos), como os presentes nas hemácias de um doador. Pacientes politransfundidos, como os com talassemia major, têm alto risco de desenvolver aloanticorpos, o que explica a dificuldade de compatibilidade. O Coombs direto negativo descarta autoimunização (B). A reação hemolítica (A) é uma consequência, mas o processo primário é a aloimunização. A doença do enxerto contra hospedeiro (D) é mediada por linfócitos T, um mecanismo diferente.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q6",
+            "text": "Sobre os linfomas Hodgkin e não Hodgkin, assinale a resposta correta.",
+            "options": [
+                "Febre, sudorese e emagrecimento (Sintomas B) estão sempre presentes no início da doença.",
+                "Os linfomas de Hodgkin geralmente se apresentam de forma explosiva em estadiamento IV.",
+                "Linfomas altamente agressivos podem evoluir ao óbito em poucas semanas se não tratados.",
+                "Os linfomas indolentes têm maior chance de cura em estágios avançados que os agressivos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Linfomas de alto grau, como o Linfoma de Burkitt, são extremamente agressivos e de rápida proliferação, podendo ser fatais em semanas se não houver tratamento. Os sintomas B (A) são mais comuns no Linfoma de Hodgkin, mas não são universais no início. O Linfoma de Hodgkin (B) classicamente tem uma disseminação mais ordenada e contígua. Linfomas indolentes (D), apesar do curso arrastado, são mais difíceis de curar em estágios avançados do que os agressivos, que respondem melhor à quimioterapia.",
+            "tag": "linfomas"
+        },
+        {
+            "id": "PR2-Hemato-Q7",
+            "text": "Jovem de 15 anos, afrodescendente, com febre e dor torácica. RX de tórax com infiltrado pulmonar. Hemograma: Hb 7,2, LDH 650, BI 2,8, reticulócitos 7%, Coombs direto negativo. Eletroforese de hemoglobina revela 95% de HbS. Hematoscopia com hemácias afoiçadas. Qual o diagnóstico?",
+            "options": [
+                "Beta talassemia major",
+                "Anemia falciforme e crise hemolítica",
+                "Anemia microangiopática",
+                "Deficiência de G6PD e crise hemolítica"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O paciente apresenta anemia (Hb 7,2), sinais de hemólise (LDH e BI aumentados, reticulocitose), e a eletroforese de hemoglobina com 95% de HbS confirma o diagnóstico de Anemia Falciforme (doença SS). A presença de hemácias afoiçadas é patognomônica. O quadro pulmonar agudo é compatível com Síndrome Torácica Aguda, uma complicação grave da doença. Beta talassemia (A) não teria HbS. Anemia microangiopática (C) teria mais esquizócitos. Deficiência de G6PD (D) é uma possibilidade, mas a eletroforese define o diagnóstico.",
+            "tag": "anemia hiperproliferativa"
+        },
+        {
+            "id": "PR2-Hemato-Q28",
+            "text": "Jovem, 15 anos, com febre, diarreia e dor abdominal. Exames: Cr 5,8, Hb 7,2, LDH 650, BI 2,8, reticulócitos 7%, Coombs direto negativo, Eletroforese de Hb com 25% de HbS. Hematoscopia com esquizócitos. Qual o diagnóstico mais provável?",
+            "options": [
+                "Beta talassemia major",
+                "Anemia falciforme e crise hemolítica",
+                "Anemia microangiopática",
+                "Anemia imuno-hemolítica por anticorpos frios"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A presença de esquizócitos (fragmentos de hemácias) na hematoscopia é o marcador da anemia hemolítica microangiopática. O quadro de insuficiência renal aguda (Cr 5,8), anemia e trombocitopenia (não informada, mas esperada) fecha a tríade da Síndrome Hemolítico-Urêmica (SHU), principal causa de anemia microangiopática nesta faixa etária, geralmente pós-infecciosa. Os 25% de HbS indicam traço falciforme, que não explica o quadro agudo.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q34",
+            "text": "Homem de 76 anos, paraplégico, com sepse urinária, fraturas patológicas em T11 e lesões osteolíticas. A biópsia afastou carcinomas e linfomas. Considerando a hipótese de Mieloma Múltiplo, qual conjunto de achados seria o mais esperado?",
+            "options": [
+                "Cálcio elevado, creatinina elevada, anemia, pico monoclonal em beta, plasmócitos < 10% na medula",
+                "Cálcio normal, pancitopenia, pico de hemoglobina C, plasmócitos < 10% na medula",
+                "Proteína monoclonal no soro, creatinina normal, hemograma normal, plasmócitos 11% na medula",
+                "Cálcio elevado, creatinina elevada, anemia, pico monoclonal IgG, plasmócitos > 10% na medula"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O Mieloma Múltiplo (MM) é definido pela presença de >10% de plasmócitos clonais na medula óssea ou plasmocitoma, associado a pelo menos um evento definidor (CRAB: Hipercalcemia, Insuficiência Renal, Anemia, Lesões Ósseas). A opção D é a única que contempla um cenário compatível com MM ativo e sintomático, incluindo o pico monoclonal (proteína M).",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q46",
+            "text": "Homem de 27 anos com equimoses e petéquias espontâneas há 4 dias, após quadro respiratório. Hemograma: Leucócitos e hemácias normais, Plaquetas: 13.000/mm³, com presença de macroplaquetas. Qual o diagnóstico mais provável?",
+            "options": [
+                "Anemia de doença crônica",
+                "Púrpura Trombocitopênica Imunológica (PTI)",
+                "Anemia por deficiência de Vitamina B12",
+                "Leucemia Aguda"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro de plaquetopenia isolada e acentuada (<20.000) com sangramento cutâneo (petéquias, equimoses), em um paciente jovem, com história de infecção viral recente e sem outras alterações no hemograma, é a apresentação clássica da Púrpura Trombocitopênica Imunológica (PTI) aguda.",
+            "tag": "hemostasia"
+        },
+        {
+            "id": "PR2-Hemato-Q47",
+            "text": "Paciente em uso de cumarínicos (antagonistas da Vitamina K) chega à emergência com hemorragia digestiva alta e INR de 9,5. Assinale a principal alternativa para reversão imediata do efeito anticoagulante:",
+            "options": [
+                "Repor plasma fresco congelado ou complexo protrombínico",
+                "Administrar Vitamina K venosa em alta quantidade",
+                "Administrar Sulfato de protamina",
+                "Administrar Ácido tranexâmico venoso"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Em uma situação de sangramento grave por superdosagem de cumarínico, a reversão deve ser imediata. O plasma fresco congelado ou o concentrado de complexo protrombínico fornecem os fatores de coagulação dependentes de Vitamina K já prontos para agir. A Vitamina K (B) tem ação lenta (horas). Sulfato de protamina (C) reverte a heparina. Ácido tranexâmico (D) é um antifibrinolítico.",
+            "tag": "hemostasia"
+        },
+        {
+            "id": "PR2-Hemato-Q50",
+            "text": "A fibrinólise pode ser reduzida com o uso de drogas que inibem a conversão de plasminogênio em plasmina. Qual alternativa contempla tal opção?",
+            "options": [
+                "Aspirina",
+                "Ácido tranexâmico",
+                "Tromboxane A2",
+                "DDAVP"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O Ácido Tranexâmico é um agente antifibrinolítico. Ele atua bloqueando os sítios de ligação da lisina no plasminogênio, impedindo sua conversão em plasmina e, consequentemente, inibindo a degradação da fibrina.",
+            "tag": "hemostasia"
+        },
+        {
+            "id": "PR2-Hemato-Q54",
+            "text": "Assinale a opção correta sobre marcadores de hemólise:",
+            "options": [
+                "A hiperbilirrubinemia direta é um achado da doença de Gilbert",
+                "A autoesplenectomia é um achado da doença falciforme (HbSS)",
+                "O marcador mais sensível de hemólise é a haptoglobina",
+                "PTI é um exemplo de anemia microangiopática"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A haptoglobina é uma proteína que se liga à hemoglobina livre no plasma. Durante a hemólise, a haptoglobina é consumida rapidamente, tornando sua queda o marcador laboratorial mais sensível para o processo hemolítico. A autoesplenectomia (B) é característica da doença falciforme homozigota (SS), não da SC. PTI (D) é uma plaquetopenia imune, não uma anemia microangiopática.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q61",
+            "text": "Homem de 42 anos com crise aguda de gota e esplenomegalia. Hemograma: 54.000 leucócitos, Ht 39%, plaquetas 450.000. Suspeita de Leucemia Mieloide Crônica (LMC). Assinale a alternativa que contém os achados esperados na hematoscopia nesta enfermidade:",
+            "options": [
+                "Aumento exagerado de linfócitos maduros",
+                "Leucocitose com hiato leucêmico (blastos e segmentados, sem intermediários)",
+                "Presença de toda a linhagem mieloide em escalonamento maturativo",
+                "Leucocitose com desvio à esquerda apenas até metamielócitos"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A LMC é caracterizada por uma proliferação de toda a série granulocítica. A hematoscopia tipicamente mostra leucocitose acentuada com a presença de todas as fases de maturação (mieloblastos, promielócitos, mielócitos, metamielócitos, bastões e segmentados), além de basofilia e eosinofilia. A gota ocorre pelo aumento do ácido úrico devido à alta proliferação celular.",
+            "tag": "leucemias crônicas"
+        },
+        {
+            "id": "PR2-Hemato-Q68",
+            "text": "Homem de 29 anos refere abaulamento no pescoço há 2 meses, sem sintomas B. Ao exame, linfonodos cervicais e supraclaviculares direitos de 3-4 cm. A principal hipótese é Linfoma de Hodgkin. Se um PET-CT mostrar massa mediastinal de 14 cm, qual seria o estadiamento de Ann Arbor?",
+            "options": [
+                "Estadiamento IIAX",
+                "Estadiamento IIBX",
+                "Estadiamento IAX",
+                "Estadiamento IIIX"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O acometimento de duas regiões linfonodais (cervical e supraclavicular) do mesmo lado do diafragma classifica o linfoma como Estadiamento II. A ausência de sintomas B é indicada pela letra 'A'. A presença de uma massa 'bulky' (grande, >10cm) no mediastino é indicada pela letra 'X'. Portanto, o estadiamento correto é IIAX.",
+            "tag": "linfomas"
+        },
+        {
+            "id": "PR2-Hemato-Q69",
+            "text": "Mulher de 61 anos com dorsalgia intensa, anemia com roleaux eritrocitário e pico monoclonal de 6g. Iniciou bifosfonato e desenvolveu tumoração infecciosa na mandíbula. Qual a doença de base e o diagnóstico provável da complicação?",
+            "options": [
+                "Imunodeficiência adquirida / linfonodo infectado",
+                "Anemia por deficiência de ácido fólico / neutropenia",
+                "Síndrome de Kawasaki / linfonodo infectado",
+                "Mieloma múltiplo / osteonecrose de mandíbula"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O quadro de dor óssea, anemia com roleaux e pico monoclonal elevado define o diagnóstico de Mieloma Múltiplo. A osteonecrose de mandíbula é uma complicação bem conhecida do uso de bifosfonatos (como o Risedronato), medicamentos utilizados para tratar as lesões ósseas do mieloma.",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q70",
+            "text": "Mulher de 64 anos com artrite reumatoide, apresentou insuficiência renal aguda. Agora com astenia, palidez, dor lombar e lesões líticas em T12, S1 e S2. Hemograma com anemia normocítica. Qual exame e alteração esperada?",
+            "options": [
+                "Eletroforese de hemoglobina: aumento de hemoglobina A2",
+                "Eletroforese de proteína: aumento de albumina",
+                "Imunofixação de proteínas urinárias: predomínio de IgG e cadeia leve Kappa",
+                "Hematoscopia de sangue periférico: presença de blastos monocitoides"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro de dor óssea com lesões líticas, anemia e insuficiência renal é altamente sugestivo de Mieloma Múltiplo. A doença é caracterizada pela produção de uma imunoglobulina monoclonal (Proteína M). A imunofixação é um exame mais sensível que a eletroforese para detectar e tipificar essa proteína no soro e/ou na urina (proteinúria de Bence-Jones). IgG Kappa é um tipo comum de proteína M.",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q71",
+            "text": "Quais dos achados abaixo melhor definem um quadro de Mieloma Múltiplo sistêmico ativo?",
+            "options": [
+                "Pico monoclonal >3g, plasmócitos na medula >10%, mas sem critérios CRAB",
+                "Pico monoclonal <3g, plasmócitos na medula <10%, sem critérios CRAB",
+                "Presença de evento definidor de mieloma (critério CRAB), como fratura patológica",
+                "Pico monoclonal >3g, plasmócitos na medula >10%, com osteófitos em coluna"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O diagnóstico de Mieloma Múltiplo ativo/sintomático requer a presença de um evento definidor de mieloma, classicamente os critérios CRAB (Hipercalcemia, Insuficiência Renal, Anemia ou Lesões Ósseas - 'Bone lesions'). A presença de uma fratura vertebral patológica (lesão óssea) fecha o critério, independentemente dos outros valores.",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q72",
+            "text": "Qual das opções abaixo NÃO é utilizada como critério para decidir o tratamento do paciente com mieloma múltiplo?",
+            "options": [
+                "Idade",
+                "Osteopenia",
+                "Presença de DPOC",
+                "Performance status (ECOG)"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A osteopenia difusa por si só não é um critério para iniciar o tratamento do Mieloma Múltiplo. Os critérios são baseados em lesões ósseas líticas ou fraturas patológicas. A idade (A), comorbidades como DPOC (C) e o status funcional do paciente (D) são cruciais para definir a elegibilidade para tratamentos mais intensivos como o transplante autólogo de medula óssea.",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q73",
+            "text": "No tratamento de mieloma múltiplo, a osteonecrose de mandíbula pode ser uma complicação importante. Qual a medicação relacionada a essa complicação?",
+            "options": [
+                "Cefepime",
+                "Eritropoetina",
+                "Denosumabe",
+                "Ácido Zoledrônico"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Tanto os bifosfonatos (como o Ácido Zoledrônico) quanto o Denosumabe (C) são classes de medicamentos usados para tratar a doença óssea no mieloma múltiplo e estão associados ao risco de osteonecrose de mandíbula, especialmente após procedimentos dentários invasivos.",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q75",
+            "text": "Paciente portador de talassemia major, múltiplas transfusões, com dificuldade de compatibilidade sanguínea. Fenotipagem mostra novo anticorpo anti-Duffy e Coombs direto negativo. Assinale a alternativa verdadeira:",
+            "options": [
+                "Reação hemolítica transfusional tardia",
+                "Autoimunização",
+                "Aloimunização",
+                "Doença do enxerto contra o hospedeiro"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A aloimunização é a produção de anticorpos contra antígenos não próprios, como os das hemácias de um doador. É uma complicação comum em pacientes politransfundidos. O Coombs direto negativo descarta autoimunização (B).",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q76",
+            "text": "Assinale a opção correta sobre marcadores de hemólise:",
+            "options": [
+                "Hiperbilirrubinemia direta é um achado da doença de Gilbert.",
+                "Autoesplenectomia é um achado da doença falciforme (HbSS).",
+                "O marcador mais sensível de hemólise é a bilirrubina indireta.",
+                "PTI é um exemplo de anemia microangiopática."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A autoesplenectomia (infartos esplênicos de repetição que levam à atrofia do baço) é uma característica da anemia falciforme homozigota (HbSS). O marcador mais sensível de hemólise (C) é a haptoglobina. PTI (D) não é anemia microangiopática.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q77",
+            "text": "Criança falcêmica, 5 anos, procura emergência com dor abdominal, taquicardia, hipotensão, Hb 4 g/dL e volumosa esplenomegalia. O quadro descrito é compatível com que tipo de crise?",
+            "options": [
+                "Crise de sequestro esplênico",
+                "Crise hemolítica",
+                "Crise aplásica",
+                "Crise vaso-oclusiva"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A crise de sequestro esplênico é uma emergência caracterizada pelo aprisionamento súbito de uma grande quantidade de sangue no baço, levando a uma queda abrupta da hemoglobina, esplenomegalia dolorosa e choque hipovolêmico. É mais comum em crianças pequenas com anemia falciforme.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q78",
+            "text": "Mulher de 70 anos, assintomática, com pico monoclonal de 2,1 g/dL na eletroforese. Exames de imagem normais e medula óssea com 10% de plasmócitos. Qual o diagnóstico mais provável?",
+            "options": [
+                "Mieloma Múltiplo Assintomático (Smoldering)",
+                "Gamopatia Monoclonal de Significado Indeterminado (GMSI)",
+                "Mieloma múltiplo sintomático",
+                "Macroglobulinemia de Waldenstrom"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O Mieloma Múltiplo Assintomático (Smoldering) é definido pela presença de proteína M sérica ≥ 3 g/dL OU plasmócitos clonais na medula óssea entre 10% e 60%, na ausência de eventos definidores de mieloma (CRAB) ou amiloidose.",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q79",
+            "text": "Em relação às anemias hemolíticas, podemos afirmar:",
+            "options": [
+                "A deficiência de G6PD é uma doença autossômica recessiva.",
+                "A anemia falciforme no adulto se caracteriza por esplenomegalia.",
+                "A hemólise na esferocitose hereditária é predominantemente extravascular.",
+                "A anemia imuno-hemolítica por anticorpos quentes é mediada por IgM."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Na esferocitose hereditária, um defeito na membrana das hemácias as torna menos flexíveis. Essas hemácias anormais são reconhecidas e destruídas pelos macrófagos do baço, caracterizando uma hemólise extravascular.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q82",
+            "text": "Mulher de 74 anos com Leucemia Linfoide Crônica (LLC) inicia quadro febril agudo com anemia intensa (Hct 16%). Laboratório com LDH elevado, haptoglobina diminuída e Coombs direto positivo. Assinale a assertiva correta:",
+            "options": [
+                "Anemia hemolítica autoimune",
+                "Transformação para linfoma agressivo (Síndrome de Richter)",
+                "Estadiamento 3 de Rai",
+                "Anemia ferropriva por sangramento crônico"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A Anemia Hemolítica Autoimune (AHAI) é a complicação autoimune mais comum da LLC. O diagnóstico é confirmado pela presença de anemia, sinais de hemólise (LDH alto, haptoglobina baixa) e um teste de Coombs direto positivo.",
+            "tag": "leucemias crônicas"
+        },
+        {
+            "id": "PR2-Hemato-Q83",
+            "text": "Na avaliação da hemostasia, quais exames avaliam, respectivamente, a via extrínseca, a via intrínseca, os freios fisiológicos e a fibrinólise?",
+            "options": [
+                "TAP, PTT, Proteína C/S e Antitrombina III, Ativador do plasminogênio",
+                "PTT, TAP, Antitrombina III e Proteína C/S, Inibidor do plasminogênio",
+                "Tempo de Sangramento, PTT, TAP, Proteína C reativa, Fator XII",
+                "TAP, PTT, Fibrinogênio, Dímero-D"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O Tempo de Protrombina (TAP) avalia a via extrínseca. O Tempo de Tromboplastina Parcial Ativada (PTT) avalia a via intrínseca. Proteína C, S e Antitrombina III são os principais anticoagulantes naturais (freios). O sistema fibrinolítico é iniciado pelo ativador do plasminogênio.",
+            "tag": "hemostasia"
+        },
+        {
+            "id": "PR2-Hemato-Q84",
+            "text": "Jovem de 15 anos com febre, tosse e dor torácica. Apresenta turricefalia e hepatoesplenomegalia. Hemograma: Hb 7,2, LDH 650, BI 2,8, reticulócitos 7%, Coombs direto negativo. Hematoscopia com extrema microcitose, hipocromia e células em alvo. Qual o diagnóstico?",
+            "options": [
+                "Anemia falciforme e crise hemolítica",
+                "Beta talassemia major",
+                "Anemia microangiopática",
+                "Deficiência de G6PD e crise hemolítica"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O quadro de anemia hemolítica crônica grave desde a infância, com hepatoesplenomegalia, alterações ósseas (turricefalia por expansão da medula) e uma hematoscopia com microcitose e hipocromia acentuadas e células em alvo, é o quadro clássico da Beta Talassemia Major.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q90",
+            "text": "Jovem, 15 anos, com febre e dor torácica. RX de tórax com infiltrado pulmonar. Exames: Hb 7,2, LDH 650, reticulócitos 7%, Coombs direto negativo, Eletroforese com 25% de HbS. Hematoscopia com esquizócitos. Qual o diagnóstico?",
+            "options": [
+                "Beta talassemia major",
+                "Anemia falciforme (traço) com crise hemolítica",
+                "Anemia microangiopática",
+                "Deficiência de G6PD e crise hemolítica"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A presença de esquizócitos é o marcador de anemia microangiopática. Embora o paciente tenha traço falciforme (25% HbS), este achado não causa a hemólise ou o quadro agudo descrito. A combinação de anemia, hemólise e possível disfunção de múltiplos órgãos (pulmonar) em um contexto infeccioso aponta para uma microangiopatia trombótica, como SHU ou PTT.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q91",
+            "text": "Jovem de 22 anos com febre de origem obscura. TC de tórax revela gânglios no mediastino. Biópsia revela Linfoma de Hodgkin. Após recaída precoce ao tratamento com ABVD, a imunofenotipagem revela CD20 positivo. O que isso significa?",
+            "options": [
+                "Deveriam ter completado os 6 ciclos para remissão.",
+                "O diagnóstico provável é Linfoma de Hodgkin rico em linfócitos, e não o clássico.",
+                "Trata-se de um Linfoma de Hodgkin agressivo, indicando transplante imediato.",
+                "A célula de Reed-Sternberg confirma o diagnóstico apesar da imunohistoquímica."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. As células de Reed-Sternberg do Linfoma de Hodgkin Clássico são tipicamente CD30+ e CD15+, mas CD20 negativas. A positividade para CD20 sugere o subtipo 'Linfoma de Hodgkin com predomínio linfocitário nodular', que tem um comportamento e tratamento distintos, ou, mais raramente, uma variante do tipo clássico rica em linfócitos.",
+            "tag": "linfomas"
+        },
+        {
+            "id": "PR2-Hemato-Q94",
+            "text": "Na insuficiência hepática, o acompanhamento da coagulação é feito rotineiramente pelo TAP/INR e não pelo PTT, devido à queda mais rápida de qual fator?",
+            "options": ["Fator V", "Fator VII", "Fator IX", "Fator II (Protrombina)"],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O Fator VII tem a menor meia-vida entre todos os fatores de coagulação (cerca de 4-6 horas). Como ele participa exclusivamente da via extrínseca (avaliada pelo TAP/INR), este exame se altera mais precocemente na insuficiência hepática.",
+            "tag": "hemostasia"
+        },
+        {
+            "id": "PR2-Hemato-Q95",
+            "text": "RTPA e estreptoquinase são drogas usadas para induzir a fibrinólise. São similares a qual agente biológico?",
+            "options": [
+                "Plasmina",
+                "Tromboxane A2",
+                "Fator tecidual ativador de plasminogênio (t-PA)",
+                "Ácido para-aminocaproico"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O RTPA (ativador de plasminogênio tecidual recombinante) e a estreptoquinase são agentes trombolíticos que atuam convertendo o plasminogênio inativo em plasmina ativa, mimetizando a ação do t-PA endógeno para dissolver os coágulos de fibrina.",
+            "tag": "hemostasia"
+        },
+        {
+            "id": "PR2-Hemato-Q98",
+            "text": "Homem de 21 anos, com febre e disúria, tratado com ciprofloxacino. Exames: Hb 6, LDH 780, BI 3, reticulócitos 10%, Coombs direto positivo. Eletroforese com 25% de HbS. Qual o diagnóstico?",
+            "options": [
+                "Beta talassemia major",
+                "Anemia falciforme (traço) com crise hemolítica",
+                "Anemia microangiopática",
+                "Anemia imuno-hemolítica por anticorpos quentes"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O paciente apresenta uma anemia hemolítica aguda (Hb baixa, LDH alto, BI alta, reticulocitose). O Coombs direto positivo indica que a causa da hemólise é autoimune. A ciprofloxacina pode ser um gatilho para a AHAI. O traço falciforme (25% HbS) é um achado incidental.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q100",
+            "text": "Jovem, 15 anos, com febre, diarreia e dor abdominal. Exames: Cr 5,8, Hb 7,2, LDH 650, reticulócitos 7%, Coombs direto negativo, Eletroforese com 25% de HbS. Hematoscopia com esquizócitos. Qual o diagnóstico?",
+            "options": [
+                "Beta talassemia major",
+                "Anemia falciforme (traço) com crise hemolítica",
+                "Anemia microangiopática (provável SHU)",
+                "Deficiência de G6PD e crise hemolítica"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A tríade de anemia hemolítica microangiopática (com esquizócitos), plaquetopenia (não descrita, mas esperada) e insuficiência renal aguda (Cr 5,8), geralmente após um quadro infeccioso gastrointestinal, define a Síndrome Hemolítico-Urêmica (SHU).",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q101",
+            "text": "Mulher, 70 anos, com linfonodomegalia e esplenomegalia. Hemograma: Leucócitos 230.000 (linfocitose), Hb 9,6, Plaquetas 84.000. Após tratamento, houve rápida lise tumoral. Quais alterações bioquímicas são esperadas?",
+            "options": [
+                "Hiperuricemia, hipercalemia e hipofosfatemia",
+                "Hiperuricemia, hipercalcemia e hipofosfatemia",
+                "Hiperuricemia, hipercalemia, hiperfosfatemia e hipocalcemia",
+                "Hiponatremia, hiperuricemia e aumento da creatinina"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Síndrome de Lise Tumoral é caracterizada pela liberação maciça do conteúdo intracelular das células neoplásicas. Isso leva a hiperuricemia (pela quebra de ácidos nucleicos), hipercalemia e hiperfosfatemia (pela liberação de potássio e fosfato intracelulares). O excesso de fosfato se liga ao cálcio, causando hipocalcemia.",
+            "tag": "leucemias crônicas"
+        },
+        {
+            "id": "PR2-Hemato-Q102",
+            "text": "Ao observar um caso de linfoma de Hodgkin, do tipo esclerose nodular, no microscópio observa-se:",
+            "options": [
+                "Apenas células de Reed-Sternberg clássicas em grande número.",
+                "Predomínio das células de Reed-Sternberg da variante lacunar, e também células clássicas.",
+                "Infiltrado inflamatório com predomínio de eosinófilos.",
+                "Depósito de colágeno, liberado a partir das células estreladas."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O subtipo Esclerose Nodular do Linfoma de Hodgkin é caracterizado histologicamente pela presença de bandas de colágeno que delimitam nódulos e pela presença da variante lacunar da célula de Reed-Sternberg, além de algumas células clássicas.",
+            "tag": "linfomas"
+        },
+        {
+            "id": "PR2-Hemato-Q103",
+            "text": "Existe a possibilidade de cura de linfomas não Hodgkin sem uso de quimioterapia em raras situações. Assinale a correta:",
+            "options": [
+                "Linfoma Difuso de Grandes Células B",
+                "Linfoma Folicular",
+                "Linfoma do Manto",
+                "Linfoma de Zona Marginal tipo MALT gástrico associado a H. pylori"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O Linfoma de Zona Marginal tipo MALT (tecido linfoide associado à mucosa) gástrico está fortemente associado à infecção pela bactéria Helicobacter pylori. Em casos localizados, a erradicação da bactéria com antibióticos pode levar à regressão e cura do linfoma.",
+            "tag": "linfomas"
+        },
+        {
+            "id": "PR2-Hemato-Q104",
+            "text": "A leucemia mieloide crônica (LMC) avançou intensamente do ponto de vista terapêutico. Estes progressos vieram de:",
+            "options": [
+                "Novos agentes quimioterápicos sobre a célula tronco CD34",
+                "Imunoterapia específica sobre células alvo",
+                "Terapia-alvo com inibidores da tirosina quinase (BCR-ABL)",
+                "Uso de antivirais específicos geradores da mutação Cromossomo Filadélfia"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A revolução no tratamento da LMC veio com o desenvolvimento da terapia-alvo molecular, especificamente os inibidores da tirosina quinase (como o imatinibe), que bloqueiam a atividade da proteína de fusão anômala BCR-ABL, produto do Cromossomo Filadélfia, que é a causa da doença.",
+            "tag": "leucemias crônicas"
+        },
+        {
+            "id": "PR2-Hemato-Q105",
+            "text": "Paciente de 66 anos com 34.000 leucócitos (84% linfócitos), sem gânglios ou esplenomegalia. Imunofenotipagem: CD5+ e CD23+. Trata-se de Leucemia Linfoide Crônica (LLC). Podemos afirmar:",
+            "options": [
+                "Neoplasia incurável, com evolução para linfoma agressivo em 90% dos casos.",
+                "Evolução geralmente indolente sem necessidade de tratamento inicial na maioria dos casos.",
+                "Se apresenta geralmente com gânglios e esplenomegalia.",
+                "Uma leucometria em torno de 30.000 já necessita intervenção terapêutica."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Leucemia Linfoide Crônica (LLC) é uma doença de curso indolente. A maioria dos pacientes é diagnosticada em estágios iniciais (Rai 0, como este paciente) e assintomáticos, não necessitando de tratamento imediato, apenas de acompanhamento ('watch and wait').",
+            "tag": "leucemias crônicas"
+        },
+        {
+            "id": "PR2-Hemato-Q106",
+            "text": "Leucemia linfoide crônica (LLC) hoje apresenta várias opções terapêuticas. Assinale a opção terapêutica inadequada:",
+            "options": [
+                "Rituximabe isolado",
+                "Rituximabe mais Venetoclax",
+                "Ibrutinibe",
+                "Imatinibe"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O Imatinibe é um inibidor de tirosina quinase usado no tratamento da Leucemia Mieloide Crônica (LMC) e não tem eficácia na Leucemia Linfoide Crônica (LLC). As outras opções são terapias modernas e eficazes para a LLC.",
+            "tag": "leucemias crônicas"
+        },
+        {
+            "id": "PR2-Hemato-Q107",
+            "text": "Mulher de 55 anos com dor lombar. Exames: Hb 12, VCM 98, plaquetas 160.000, creatinina e cálcio normais, 11% de plasmócitos na medula, 3g de pico monoclonal. RM de coluna normal. Qual o diagnóstico mais provável?",
+            "options": [
+                "Gamopatia monoclonal de significado indeterminado (GMSI)",
+                "Mieloma múltiplo assintomático (Smoldering)",
+                "Mieloma múltiplo sintomático",
+                "Leucemia de células plasmáticas"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O paciente preenche os critérios para Mieloma Múltiplo Assintomático (Smoldering): proteína monoclonal sérica ≥ 3g/dL E/OU plasmócitos clonais na medula entre 10% e 60%, na ausência de eventos definidores de mieloma (critérios CRAB) ou amiloidose.",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q108",
+            "text": "Homem de 76 anos com ITU, paraplegia, fraturas patológicas em T11 e lesões líticas. Hemograma: Hb 7,6, VCM 108, plaquetas 101.000, presença de Roleaux. A alternativa correta é:",
+            "options": [
+                "Anemia de doença crônica",
+                "Anemia ferropriva",
+                "Anemia hemolítica por deficiência de G6PD",
+                "Mieloma Múltiplo"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A combinação de idade avançada, dor óssea, fraturas patológicas, lesões líticas, anemia e a presença de 'roleaux' (empilhamento de hemácias) no sangue periférico é o quadro clássico de Mieloma Múltiplo.",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q109",
+            "text": "O diagnóstico diferencial de mieloma múltiplo envolve as seguintes doenças por apresentarem pico monoclonal na eletroforese de proteínas, com exceção de:",
+            "options": [
+                "Macroglobulinemia de Waldenström",
+                "Plasmocitoma isolado",
+                "POEMS",
+                "Leucemia de células T do adulto"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Leucemia/Linfoma de Células T do Adulto, associada ao vírus HTLV-1, é uma neoplasia de linfócitos T e não cursa com a produção de pico monoclonal de imunoglobulinas, que é característico das neoplasias de plasmócitos (células B diferenciadas).",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q110",
+            "text": "A coloração vermelho Congo é característica para o diagnóstico de qual doença?",
+            "options": [
+                "Amiloidose",
+                "Mieloma múltiplo",
+                "Deficiência de ferro",
+                "Mielofibrose"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A coloração com Vermelho Congo, que mostra birrefringência verde-maçã sob luz polarizada, é o método histopatológico clássico e patognomônico para identificar os depósitos de proteína amiloide nos tecidos.",
+            "tag": "doenças correlatas"
+        },
+        {
+            "id": "PR2-Hemato-Q111.1",
+            "text": "Adolescente de 16 anos com icterícia, esplenomegalia e cálculos biliares. Hemograma: Hb 10,6, CHCM 35, RDW 19,3, reticulócitos 5%, Coombs direto negativo. Qual o diagnóstico mais provável?",
+            "options": [
+                "Anemia Falciforme",
+                "Deficiência de G6PD",
+                "Talassemia Intermediária",
+                "Esferocitose Hereditária"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O quadro de anemia hemolítica crônica (reticulocitose, icterícia, esplenomegalia) com Coombs negativo, associado a um CHCM normal/alto e RDW elevado, além da complicação com cálculos biliares de bilirrubinato, é a apresentação clássica da Esferocitose Hereditária.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q111.2",
+            "text": "Na paciente com suspeita de Esferocitose Hereditária da questão anterior, que exame seria necessário para a elucidação diagnóstica?",
+            "options": [
+                "Eletroforese de hemoglobinas",
+                "Dosagem de G6PD",
+                "Teste de fragilidade osmótica",
+                "Biópsia de medula óssea"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O teste clássico para confirmar o diagnóstico de Esferocitose Hereditária é o teste de fragilidade osmótica. Os esferócitos, por terem menor área de superfície, são mais suscetíveis à lise em soluções hipotônicas.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q111.3",
+            "text": "Na paciente com Esferocitose Hereditária, qual a provável composição dos cálculos biliares encontrados?",
+            "options": [
+                "Colesterol",
+                "Mistos",
+                "Bilirrubinato de cálcio",
+                "Oxalato de cálcio"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A hemólise crônica leva a um aumento constante da bilirrubina indireta. O excesso de bilirrubina na bile precipita, formando cálculos pigmentares, compostos principalmente de bilirrubinato de cálcio.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q111.4",
+            "text": "Qual seria o tratamento curativo para a Esferocitose Hereditária grave?",
+            "options": [
+                "Transfusões de sangue regulares",
+                "Suplementação com ácido fólico",
+                "Esplenectomia",
+                "Transplante de medula óssea"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Como a destruição dos esferócitos ocorre predominantemente no baço, a esplenectomia (remoção cirúrgica do baço) é o tratamento curativo para a hemólise na esferocitose, indicada nos casos moderados a graves.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q167",
+            "text": "Sobre o mieloma múltiplo (MM), seus sintomas e diagnósticos diferenciais, assinale V ou F: (1) Na GMSI, o pico monoclonal é acima de 3g. (2) A hipercalcemia é a principal causa de injúria renal aguda em pacientes com MM. (3) O MM é considerado ativo com pico monoclonal ≥ 3g e ≥ 10% de plasmócitos na medula.",
+            "options": ["VFV", "FVF", "FFV", "FFF"],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. (F) Na GMSI, o pico é < 3g. (V) A hipercalcemia, juntamente com a nefropatia por cilindros de cadeia leve, é uma causa importante de insuficiência renal no MM. (F) Para ser considerado ativo, além desses achados, o paciente precisa ter um evento definidor de mieloma (CRAB).",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q168",
+            "text": "Mulher de 50 anos com cansaço. Hemograma: Hb 7g/dL, VCM 106fL. A suspeita é de anemia hiperproliferativa (hemolítica). Qual achado laboratorial confirma isso?",
+            "options": [
+                "Reticulócitos aumentados, aumento de LDH e de haptoglobina",
+                "Aumento de haptoglobina, aumento de bilirrubina indireta e reticulocitose",
+                "Policromatofilia, queda de haptoglobina e aumento de LDH",
+                "LDH aumentado, bilirrubina direta aumentada e queda de haptoglobina"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A anemia hemolítica é caracterizada pela destruição de hemácias, o que leva ao aumento de LDH (liberado das hemácias) e ao consumo de haptoglobina (que se liga à hemoglobina livre). A medula óssea responde aumentando a produção de reticulócitos, que aparecem como policromatofilia no esfregaço.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q169",
+            "text": "Criança de 4 anos com anemia falciforme (HbSS) apresenta palidez importante, fadiga e queda de 4g/dL da hemoglobina basal. Reticulócitos estão baixos. Qual o diagnóstico mais provável?",
+            "options": [
+                "Crise de sequestro esplênico",
+                "Crise hemolítica",
+                "Crise aplásica",
+                "Síndrome torácica aguda"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A crise aplásica na doença falciforme é caracterizada por uma parada súbita na produção de glóbulos vermelhos pela medula óssea, resultando em uma queda rápida da hemoglobina e reticulocitopenia. A causa mais comum é a infecção pelo Parvovírus B19.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q170",
+            "text": "Paciente de 68 anos com dor lombar, fadiga, anemia (Hb 8,0), insuficiência renal (Cr 2,5) e hipercalcemia (Ca 12,5). Biópsia renal evidenciou cilindros eosinofílicos. O achado mais provável no sangue periférico é:",
+            "options": [
+                "Agregados lineares de células vermelhas (Roleaux)",
+                "Reticulócitos aumentados",
+                "Policromatofilia com microesferócitos",
+                "Atipia linfocitária"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O quadro clínico é clássico de Mieloma Múltiplo. A alta concentração de imunoglobulinas monoclonais no plasma diminui a repulsão entre as hemácias, fazendo com que elas se empilhem, formando o fenômeno de Roleaux, um achado característico no esfregaço de sangue periférico.",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q171",
+            "text": "Adolescente com icterícia após infecção viral. Laboratório com hiperbilirrubinemia indireta, anemia, reticulocitose e esferócitos no sangue periférico. Qual o diagnóstico mais provável e o melhor exame para confirmar?",
+            "options": [
+                "Deficiência de G6PD e Hemograma completo",
+                "Anemia megaloblástica e Dosagem de vitamina B12",
+                "Mieloma múltiplo e aspirado de medula óssea",
+                "Esferocitose hereditária e Teste de Fragilidade Osmótica"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O quadro de hemólise crônica com esferócitos, muitas vezes descompensado por uma infecção viral, é típico da Esferocitose Hereditária. O Teste de Fragilidade Osmótica é o exame clássico para confirmar o diagnóstico.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q172",
+            "text": "Assinale a opção correta sobre hemólise:",
+            "options": [
+                "Policromatofilia não é comum na grande parte das anemias hemolíticas",
+                "A deficiência de G6PD pode gerar icterícia secundária ao aumento de bilirrubina direta",
+                "O marcador mais sensível de hemólise é a haptoglobina",
+                "São indicativos de hemólise: aumento de LDH, aumento de bilirrubina indireta e aumento de haptoglobina"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A haptoglobina liga-se à hemoglobina livre liberada durante a hemólise e é removida da circulação. Portanto, a sua queda (níveis baixos ou indetectáveis) é o marcador mais sensível de hemólise, especialmente a intravascular. A opção D está errada porque a haptoglobina diminui, não aumenta.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q174",
+            "text": "Mulher jovem com trombocitopenia e insuficiência renal aguda. As hipóteses são Síndrome Hemolítico-Urêmica (SHU) e Púrpura Trombocitopênica Trombótica (PTT). O exame que auxilia na diferenciação e diagnóstico de PTT é:",
+            "options": [
+                "Níveis de atividade da ADAMTS13",
+                "Dosagem de TAP/PTT",
+                "Esfregaço do sangue periférico com esquizócitos",
+                "Dosagem de fibrinogênio"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A Púrpura Trombocitopênica Trombótica (PTT) é causada por uma deficiência grave da enzima ADAMTS13. A dosagem da atividade desta enzima é o exame padrão-ouro para confirmar o diagnóstico de PTT e diferenciá-la de outras microangiopatias trombóticas, como a SHU.",
+            "tag": "hemostasia"
+        },
+        {
+            "id": "PR2-Hemato-Q175",
+            "text": "Homem de 50 anos com dor lombar, anemia (Hb 9,2), insuficiência renal (Cr 2,5) e fraturas em L2 e L3. O diagnóstico mais provável e os exames prudentes para investigação são, respectivamente:",
+            "options": [
+                "Mieloma múltiplo; proteinúria de Bence-Jones e cintilografia óssea",
+                "Anemia de doença crônica; perfil de ferro",
+                "Anemia ferropriva; perfil de ferro e endoscopia",
+                "Mieloma múltiplo; eletroforese de proteínas séricas e urinárias e avaliação da medula óssea"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O quadro de dor óssea com fraturas patológicas, anemia e insuficiência renal em um homem de 50 anos é altamente sugestivo de Mieloma Múltiplo. A investigação diagnóstica fundamental inclui a eletroforese de proteínas (para detectar o pico monoclonal) e o mielograma/biópsia de medula óssea (para quantificar os plasmócitos).",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q176",
+            "text": "Qual das seguintes correlações entre informações clínicas/laboratoriais e diagnóstico está correta?",
+            "options": [
+                "Mieloma múltiplo ativo: pico monoclonal 2,5g, 5% plasmócitos, cálcio normal",
+                "Mieloma múltiplo assintomático: pico monoclonal 3,5g, ausência de lesões líticas, cálcio elevado",
+                "GMSI: pico monoclonal 3g, 11% plasmócitos na medula, osteopenia",
+                "Gamopatia monoclonal de significado indeterminado (GMSI): pico monoclonal 2,5g, 7% plasmócitos, sem lesões ósseas ou CRAB"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Gamopatia Monoclonal de Significado Indeterminado (GMSI) é definida pela presença de uma proteína monoclonal sérica < 3 g/dL, plasmócitos clonais na medula óssea < 10%, e ausência de qualquer sinal de mieloma ativo (sem critérios CRAB). A opção D se encaixa perfeitamente nesta definição.",
+            "tag": "mieloma múltiplo"
+        },
+        {
+            "id": "PR2-Hemato-Q178",
+            "text": "Homem de 21 anos, negro, tratado com nitrofurantoína para disúria, evolui com astenia, dor abdominal e urina escura. Exame: icterícia, Hb 5,6 g/dL, 'bite cells' na hematoscopia. A hipótese diagnóstica mais provável é:",
+            "options": [
+                "Anemia falciforme",
+                "Doença de Wilson",
+                "Deficiência de Glicose-6-Fosfato Desidrogenase (G6PD)",
+                "Púrpura trombocitopênica trombótica"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro de hemólise aguda intravascular (urina escura - hemoglobinúria) em um homem negro, desencadeada pelo uso de uma droga oxidante (nitrofurantoína), e a presença de 'bite cells' (hemácias com uma 'mordida') no esfregaço são características clássicas da crise hemolítica por deficiência de G6PD.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q183",
+            "text": "Mulher de 30 anos com febre, dores ósseas, pancitopenia e sangramento gengival. Diagnóstico de Leucemia Mieloide Aguda. A evolução com Coagulação Intravascular Disseminada (CIVD) é mais provável em qual subtipo?",
+            "options": [
+                "Mieloblástica (M1/M2)",
+                "Monocítica (M5)",
+                "Eritroleucemia (M6)",
+                "Promielocítica (M3)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Leucemia Promielocítica Aguda (LMA M3) é notoriamente associada a um alto risco de Coagulação Intravascular Disseminada (CIVD) no momento do diagnóstico, devido à liberação de grânulos pró-coagulantes pelos promielócitos malignos.",
+            "tag": "leucemias agudas"
+        },
+        {
+            "id": "PR2-Hemato-Q184.1",
+            "text": "Paciente de 62 anos com vitiligo apresenta Hb 7,8, VCM 120, RDW 24, Leucócitos 4.200, Plaquetas 245.000, Reticulócitos 0,9%. Qual o diagnóstico provável?",
+            "options": [
+                "Anemia aplásica",
+                "Anemia ferropriva",
+                "Anemia perniciosa (deficiência de B12)",
+                "Talassemia major"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro de anemia macrocítica (VCM 120) e hipoproliferativa (reticulócitos baixos), associado a uma doença autoimune (vitiligo), é altamente sugestivo de Anemia Perniciosa, a principal causa de deficiência de Vitamina B12 em adultos.",
+            "tag": "anemias hipoproliferativas"
+        },
+        {
+            "id": "PR2-Hemato-Q184.2",
+            "text": "No caso do paciente da questão anterior, qual a causa mais provável da anemia?",
+            "options": [
+                "Deficiência de ferro",
+                "Deficiência de folato",
+                "Deficiência de vitamina B12 por mecanismo autoimune",
+                "Hemólise crônica"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Anemia Perniciosa é uma doença autoimune na qual o corpo produz anticorpos contra as células parietais do estômago e/ou contra o fator intrínseco, levando à gastrite atrófica e à má absorção de vitamina B12.",
+            "tag": "anemias hipoproliferativas"
+        },
+        {
+            "id": "PR2-Hemato-Q184.3",
+            "text": "Qual o mecanismo fisiopatológico da anemia no paciente da questão 184?",
+            "options": [
+                "Destruição de hemácias no baço por defeito de membrana",
+                "Defeito na síntese de DNA levando à maturação ineficaz e destruição intramedular dos precursores",
+                "Inibição da produção de eritropoetina pelos rins",
+                "Produção de anticorpos que destroem as hemácias circulantes"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A deficiência de vitamina B12 (ou folato) prejudica a síntese de DNA. Isso causa uma assincronia na maturação entre o núcleo (imaturo) e o citoplasma (maduro) dos precursores eritroides (megaloblastos), levando à sua destruição dentro da própria medula óssea (eritropoese ineficaz).",
+            "tag": "anemias hipoproliferativas"
+        },
+        {
+            "id": "PR2-Hemato-Q184.4",
+            "text": "Quais exames devem ser solicitados para confirmar o diagnóstico do paciente da questão 184?",
+            "options": [
+                "Dosagem de ferro e ferritina",
+                "Eletroforese de hemoglobinas",
+                "Teste de Coombs direto e indireto",
+                "Dosagem de vitamina B12, ácido metilmalônico e anticorpos anti-fator intrínseco"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Para confirmar a deficiência de B12, solicita-se sua dosagem sérica. O ácido metilmalônico é um metabólito que se acumula na deficiência de B12 e é mais sensível. Os anticorpos anti-fator intrínseco são específicos para a Anemia Perniciosa.",
+            "tag": "anemias hipoproliferativas"
+        },
+        {
+            "id": "PR2-Hemato-Q184.5",
+            "text": "Qual o tratamento a ser instituído e como deve ser feito para o paciente da questão 184?",
+            "options": [
+                "Reposição de ferro oral por 6 meses",
+                "Reposição de ácido fólico oral contínuo",
+                "Reposição de vitamina B12 intramuscular por toda a vida",
+                "Transfusões de sangue mensais"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Como a causa da deficiência de B12 na anemia perniciosa é a má absorção, a reposição deve ser parenteral (intramuscular). O tratamento consiste em uma fase de ataque (semanal) seguida de uma fase de manutenção (mensal) por toda a vida.",
+            "tag": "anemias hipoproliferativas"
+        },
+        {
+            "id": "PR2-Hemato-Q185",
+            "text": "Sobre os linfomas, marque a alternativa FALSA.",
+            "options": [
+                "A célula de Reed-Sternberg é característica do linfoma de Hodgkin.",
+                "Febre, sudorese noturna e emagrecimento são considerados sintomas B.",
+                "A biópsia excisional de linfonodo é o padrão-ouro para o diagnóstico.",
+                "O hemograma de um paciente portador de linfoma está frequentemente alterado, com presença de células blásticas."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa falsa é a D. O linfoma é uma doença primariamente dos gânglios linfáticos. Embora possa infiltrar a medula óssea, o hemograma é frequentemente normal no momento do diagnóstico. A presença de blastos no sangue periférico é característica das leucemias, não dos linfomas.",
+            "tag": "linfomas"
+        },
+        {
+            "id": "PR2-Hemato-Q187",
+            "text": "Homem de 42 anos com crise aguda de gota e esplenomegalia. Hemograma: 54.000 leucócitos, Ht 39%, plaquetas 450.000. Suspeita de Leucemia Mieloide Crônica. Qual achado é esperado no hemograma?",
+            "options": [
+                "Aumento de linfócitos maduros.",
+                "Leucocitose com hiato leucêmico.",
+                "Presença de toda a família mieloide em escalonamento maturativo.",
+                "Eosinofilia e basofilia sem escalonamento."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A LMC é caracterizada pela proliferação de toda a série granulocítica. A hematoscopia tipicamente mostra leucocitose com a presença de todas as fases de maturação (mieloblastos a segmentados), além de basofilia e eosinofilia.",
+            "tag": "leucemias crônicas"
+        },
+        {
+            "id": "PR2-Hemato-Q188",
+            "text": "A Leucemia Mieloide Crônica (LMC) avançou intensamente do ponto de vista terapêutico. Estes progressos vieram de:",
+            "options": [
+                "Novos agentes quimioterápicos.",
+                "Imunoterapia específica.",
+                "Terapia-alvo com inibidores da tirosina quinase.",
+                "Uso de antivirais específicos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento da LMC foi revolucionado pelos inibidores da tirosina quinase (como o imatinibe), que bloqueiam especificamente a proteína BCR-ABL, produto do Cromossomo Filadélfia e causa da doença.",
+            "tag": "leucemias crônicas"
+        },
+        {
+            "id": "PR2-Hemato-Q189",
+            "text": "Paciente de 66 anos com 34.000 leucócitos (84% linfócitos). Imunofenotipagem: CD5+ e CD23+. Diagnóstico de Leucemia Linfoide Crônica (LLC). Podemos afirmar:",
+            "options": [
+                "Evolui para linfoma agressivo em 90% dos casos.",
+                "Geralmente tem evolução indolente e não requer tratamento inicial.",
+                "Apresenta-se geralmente com grandes gânglios e esplenomegalia.",
+                "Leucometria de 30.000 já necessita intervenção terapêutica."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A LLC é uma doença de curso indolente. A maioria dos pacientes é diagnosticada em estágios iniciais e assintomáticos, não necessitando de tratamento imediato, apenas de acompanhamento ('watch and wait').",
+            "tag": "leucemias crônicas"
+        },
+        {
+            "id": "PR2-Hemato-Q190",
+            "text": "Jovem de 22 anos com febre de origem indeterminada. TC de tórax mostra gânglios no mediastino. Biópsia: Linfoma de Hodgkin. Recaída precoce ao ABVD. Imunofenotipagem revela CD20 positivo. O que isso significa?",
+            "options": [
+                "Deveriam ter completado os 6 ciclos.",
+                "Provavelmente é Linfoma de Hodgkin com predomínio linfocitário, não o clássico.",
+                "É um Linfoma de Hodgkin agressivo, indicando transplante.",
+                "A célula de Reed-Sternberg confirma o diagnóstico, ignorando a imunohistoquímica."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. As células de Reed-Sternberg do Linfoma de Hodgkin Clássico são tipicamente CD20 negativas. A positividade para CD20 sugere o subtipo 'Linfoma de Hodgkin com predomínio linfocitário nodular', que tem um comportamento e tratamento distintos.",
+            "tag": "linfomas"
+        },
+        {
+            "id": "PR2-Hemato-Q191",
+            "text": "Jovem de 15 anos, afrodescendente, com febre e dor torácica. RX com infiltrado pulmonar. Hemograma: Hb 7,2, LDH 650, BI 2,8, reticulócitos 7%, Coombs direto negativo. Eletroforese com 95% de HbS. Hematoscopia com hemácias afoiçadas. Qual o diagnóstico?",
+            "options": [
+                "Beta talassemia major",
+                "Anemia falciforme e crise hemolítica/torácica",
+                "Anemia microangiopática",
+                "Deficiência de G6PD e crise hemolítica"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A eletroforese com 95% de HbS confirma o diagnóstico de Anemia Falciforme homozigota (SS). O quadro pulmonar agudo é compatível com Síndrome Torácica Aguda, e os exames laboratoriais confirmam a hemólise crônica.",
+            "tag": "anemias hemolíticas"
+        },
+        {
+            "id": "PR2-Hemato-Q192",
+            "text": "Qual correlação clínica/laboratorial para gamopatias monoclonais está correta?",
+            "options": [
+                "Mieloma Múltiplo Ativo: pico monoclonal 2,5g, 5% plasmócitos, cálcio normal.",
+                "Mieloma Múltiplo Assintomático: pico monoclonal 3,5g, sem lesões líticas, cálcio elevado.",
+                "GMSI: pico monoclonal 3g, 11% plasmócitos, osteopenia.",
+                "GMSI: pico monoclonal 2,5g, 7% plasmócitos, sem lesões ósseas ou critérios CRAB."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Gamopatia Monoclonal de Significado Indeterminado (GMSI) é definida por: proteína M < 3 g/dL, plasmócitos na medula < 10%, e ausência de critérios CRAB. A opção D é a única que se encaixa perfeitamente nesta definição.",
+            "tag": "mieloma múltiplo"
+        }
+    ]
+  },{
+    id: "preset-m7-pr2-SCAD",
+    name: "Estácio - M7 - PR2 - Pediatria",
+    questions: [
+        {
+            "id": "PR2-SCA-Q1",
+            "text": "Ao prepararmos a assistência ao parto de qualquer bebê, a primeira medida a ser adotada pelo líder da equipe que receberá o recém-nascido é:",
+            "options": [
+                "Coleta da anamnese gestacional e avaliação de dados e exames do pré-natal.",
+                "Testar o funcionamento do balão autoinflável e laringoscópio.",
+                "Diluir medicações em todas as salas de parto.",
+                "Manter a sala a 25ºC e ligar a unidade de calor radiante."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A primeira e mais crucial etapa da preparação para a reanimação neonatal é a anamnese materna e gestacional. Conhecer os fatores de risco (prematuridade, diabetes gestacional, etc.) permite antecipar os problemas e preparar os materiais e a equipe de forma adequada.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q2",
+            "text": "Após o nascimento, o pediatra avalia um recém-nascido a termo, vigoroso e com choro forte. Neste caso, quando a ligadura do cordão umbilical deverá ser realizada?",
+            "options": [
+                "Imediatamente, levando o bebê para a unidade de calor para ser aspirado.",
+                "Oportunamente, após 1 a 3 minutos, levando o bebê à mesa para ser aspirado.",
+                "Imediatamente, mantendo o bebê no colo materno.",
+                "Oportunamente (após 1-3 min), deixando o bebê no colo materno para priorizar o vínculo."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Para um recém-nascido a termo e vigoroso, que não necessita de reanimação, a recomendação atual é o clampeamento oportuno do cordão (entre 1 e 3 minutos), pois isso melhora os estoques de ferro do bebê. O clampeamento deve ser feito com o bebê no colo da mãe, priorizando o contato pele a pele e o vínculo.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q3",
+            "text": "Em qual situação o clampeamento imediato do cordão umbilical está indicado?",
+            "options": [
+                "Em todos os partos prematuros.",
+                "Quando a mãe tem diabetes gestacional.",
+                "Quando o recém-nascido necessita de manobras de reanimação.",
+                "Em todos os partos cesáreos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Se o recém-nascido não está bem ao nascer (não respira, hipotônico, etc.) e precisa de ventilação ou outras manobras de reanimação, o cordão umbilical deve ser clampeado imediatamente para que o bebê seja levado à mesa de reanimação e o suporte ventilatório seja iniciado o mais rápido possível.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q4",
+            "text": "Quais são as 3 perguntas que devem ser feitas antes de todos os nascimentos para avaliar a necessidade de reanimação?",
+            "options": [
+                "A gestação é a termo? O líquido amniótico é claro? O bebê tem bom tônus?",
+                "Qual a idade gestacional? O líquido amniótico está claro e sem mecônio? O bebê está respirando ou chorando?",
+                "Qual a idade gestacional? Quantos bebês? Há algum fator de risco adicional?",
+                "O pré-natal foi feito corretamente? A mãe tem alguma doença? O parto é normal ou cesárea?"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. As três perguntas de ouro da anamnese direcionada pré-parto são: 1) Qual a idade gestacional esperada? (para saber se é prematuro); 2) Quantos bebês? (para preparar material para múltiplos); 3) Há algum fator de risco adicional? (como diabetes, pré-eclâmpsia, etc.). A questão do mecônio é avaliada após o rompimento da bolsa.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q5",
+            "text": "Qual a sequência correta dos passos iniciais da reanimação neonatal ('minuto de ouro')?",
+            "options": [
+                "Aquecer, posicionar, aspirar se necessário, secar e estimular.",
+                "Estimular, aspirar, secar, aquecer e posicionar.",
+                "Posicionar, aquecer, estimular, secar e aspirar.",
+                "Secar, aquecer, aspirar, posicionar e estimular."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Os passos iniciais, que devem ser realizados rapidamente, seguem a sequência: prover calor (fonte de calor radiante), posicionar a cabeça em leve extensão, aspirar as vias aéreas (boca e depois narinas) APENAS se houver obstrução por secreções, secar o corpo e remover os campos úmidos, e estimular (fricção suave no dorso).",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q6",
+            "text": "Após os passos iniciais, o recém-nascido a termo permanece em apneia. Qual a próxima conduta?",
+            "options": [
+                "Iniciar massagem cardíaca.",
+                "Administrar adrenalina.",
+                "Iniciar ventilação com pressão positiva (VPP) com balão e máscara.",
+                "Estimular novamente por mais 30 segundos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Se, após os passos iniciais, o bebê não respira ou tem respiração irregular (gasping) e/ou FC < 100 bpm, a medida mais importante e eficaz é iniciar a ventilação com pressão positiva (VPP) para expandir os pulmões.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q7",
+            "text": "Durante a VPP, o tórax do recém-nascido não se eleva. Qual o mnemónico utilizado para corrigir a técnica?",
+            "options": [
+                "SAMPA",
+                "MR. SOPA",
+                "ABCDE",
+                "AVDI"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O mnemónico MR. SOPA guia os passos para corrigir a ventilação ineficaz: M - Máscara (reajustar), R - Reposicionar a cabeça; S - Sucção (aspirar vias aéreas), O - Open mouth (abrir a boca); P - Pressão (aumentar a pressão); A - Alternativa (via aérea avançada, como intubação).",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q8",
+            "text": "Após 30 segundos de VPP eficaz, a frequência cardíaca do recém-nascido é de 50 bpm. Qual a próxima conduta?",
+            "options": [
+                "Continuar a VPP por mais 30 segundos.",
+                "Administrar adrenalina.",
+                "Iniciar massagem cardíaca coordenada com a ventilação.",
+                "Considerar intubação orotraqueal."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Se a frequência cardíaca permanece abaixo de 60 bpm apesar de 30 segundos de VPP eficaz (com tórax expandindo), está indicada a imediata associação da massagem cardíaca, mantendo a ventilação coordenada.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q9",
+            "text": "Qual a relação entre compressões torácicas e ventilações durante a reanimação neonatal?",
+            "options": [
+                "15 compressões para 2 ventilações.",
+                "30 compressões para 2 ventilações.",
+                "3 compressões para 1 ventilação.",
+                "5 compressões para 1 ventilação."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A relação recomendada é de 3 compressões para 1 ventilação, buscando realizar um ciclo de 90 compressões e 30 ventilações por minuto (120 eventos/minuto).",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q10",
+            "text": "A frequência cardíaca do recém-nascido persiste abaixo de 60 bpm após 60 segundos de massagem cardíaca e VPP eficazes. Qual a próxima conduta?",
+            "options": [
+                "Aumentar a frequência das compressões.",
+                "Administrar adrenalina.",
+                "Considerar expansão volêmica.",
+                "Parar a reanimação."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Se a FC não sobe para 60 bpm ou mais após um ciclo de VPP + massagem cardíaca, está indicada a administração de adrenalina, preferencialmente por via intravenosa (cateter umbilical).",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q11.1",
+            "text": "Recém-nascido de 32 semanas, bolsa rota há 20 horas e mãe com febre. O bebê nasce flácido, pálido e apneico. Qual a principal hipótese para a depressão neonatal?",
+            "options": [
+                "Prematuridade",
+                "Malformação cardíaca",
+                "Infecção neonatal precoce (sepse)",
+                "Asfixia perinatal"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A combinação de prematuridade, bolsa rota prolongada (>18h) e febre materna são os principais fatores de risco para a sepse neonatal precoce, que pode se manifestar ao nascimento com um quadro de depressão respiratória e hipotonia, semelhante à asfixia.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q11.2",
+            "text": "No caso do recém-nascido prematuro da questão anterior, qual cuidado adicional é fundamental nos passos iniciais da reanimação?",
+            "options": [
+                "Utilizar VPP com ar comprimido.",
+                "Envolver o bebê em saco plástico transparente e colocar touca.",
+                "Aspirar vigorosamente o estômago.",
+                "Administrar surfactante imediatamente."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Recém-nascidos prematuros, especialmente os com menos de 34 semanas, perdem calor muito rapidamente. Para prevenir a hipotermia, eles devem ser colocados, ainda molhados, dentro de um saco plástico transparente, com a cabeça coberta por uma touca, antes de serem levados à fonte de calor.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q12",
+            "text": "Qual das seguintes afirmações sobre a icterícia neonatal é VERDADEIRA?",
+            "options": [
+                "A icterícia que surge nas primeiras 24 horas de vida é sempre fisiológica.",
+                "A icterícia fisiológica costuma atingir níveis que necessitam de fototerapia.",
+                "A principal causa de icterícia patológica nas primeiras 24h é a incompatibilidade ABO/Rh.",
+                "A icterícia do leite materno surge na primeira semana e causa perda de peso."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A icterícia que se manifesta precocemente (nas primeiras 24-36 horas) é sempre considerada patológica e deve ser investigada. A principal causa é a hemólise por incompatibilidade sanguínea materno-fetal (ABO ou Rh).",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q13",
+            "text": "Qual o principal mecanismo de ação da fototerapia no tratamento da icterícia neonatal?",
+            "options": [
+                "Destruir as hemácias para diminuir a produção de bilirrubina.",
+                "Estimular o fígado a conjugar a bilirrubina.",
+                "Transformar a bilirrubina indireta (lipossolúvel) em isómeros hidrossolúveis que podem ser excretados sem conjugação.",
+                "Aumentar a motilidade intestinal para eliminar a bilirrubina."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A luz da fototerapia (principalmente na faixa azul) é absorvida pela bilirrubina na pele, causando sua fotoisomerização. Isso transforma a molécula de bilirrubina indireta em isómeros (como a lumirrubina) que são solúveis em água e podem ser eliminados pela bile e urina sem necessidade de conjugação hepática.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q14",
+            "text": "Qual a principal complicação da hiperbilirrubinemia indireta grave no recém-nascido?",
+            "options": [
+                "Insuficiência hepática",
+                "Anemia hemolítica",
+                "Encefalopatia bilirrubínica (Kernicterus)",
+                "Insuficiência renal"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Níveis muito elevados de bilirrubina indireta não ligada à albumina podem atravessar a barreira hematoencefálica e impregnar os núcleos da base do cérebro, causando uma lesão neurológica grave e permanente conhecida como Kernicterus.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q15",
+            "text": "Na avaliação do desenvolvimento de uma criança, o que se espera que ela faça aos 6 meses de idade no desenvolvimento motor grosso?",
+            "options": [
+                "Andar sem apoio.",
+                "Sentar sem apoio.",
+                "Rolar e ter bom controlo da cabeça.",
+                "Engatinhar."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Aos 6 meses, o lactente já deve ter firmeza cervical completa, rolar nos dois sentidos (de prono para supino e vice-versa) e começar a se preparar para sentar, podendo sentar com apoio. Sentar sem apoio (B) é esperado por volta dos 7-8 meses.",
+            "tag": "Desenvolvimento"
+        },
+        {
+            "id": "PR2-SCA-Q16",
+            "text": "Quando se espera o surgimento do sorriso social em um lactente?",
+            "options": [
+                "Ao nascer.",
+                "Com 1 mês de vida.",
+                "Com 2 a 3 meses de vida.",
+                "Com 6 meses de vida."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O sorriso social, que é uma resposta intencional à face humana, é um marco importante do desenvolvimento social e afetivo que surge entre o segundo e o terceiro mês de vida.",
+            "tag": "Desenvolvimento"
+        },
+        {
+            "id": "PR2-SCA-Q17",
+            "text": "O que é o movimento de pinça e quando ele se desenvolve?",
+            "options": [
+                "É a capacidade de agarrar objetos com a mão inteira, que surge aos 4 meses.",
+                "É a capacidade de transferir objetos de uma mão para a outra, que surge aos 6 meses.",
+                "É a capacidade de pegar pequenos objetos usando o polegar e o indicador, que se desenvolve por volta dos 9 a 10 meses.",
+                "É a capacidade de rabiscar, que surge aos 18 meses."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O movimento de pinça fina (ou superior) é um marco do desenvolvimento motor fino que indica uma maior destreza e coordenação. Surge por volta dos 9-10 meses e permite à criança manipular pequenos objetos com precisão.",
+            "tag": "Desenvolvimento"
+        },
+        {
+            "id": "PR2-SCA-Q18",
+            "text": "Qual das seguintes vacinas é administrada ao nascer?",
+            "options": [
+                "Pentavalente",
+                "Tríplice viral",
+                "BCG e Hepatite B",
+                "Poliomielite oral (VOP)"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. De acordo com o Programa Nacional de Imunizações (PNI) do Brasil, as duas vacinas que devem ser administradas na maternidade, logo após o nascimento, são a BCG (dose única) e a primeira dose da vacina contra Hepatite B.",
+            "tag": "Imunizações"
+        },
+        {
+            "id": "PR2-SCA-Q19.1",
+            "text": "Lactente de 2 meses apresenta tosse seca paroxística, que evolui com cianose e um guincho inspiratório. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Bronquiolite Viral Aguda",
+                "Coqueluche (tosse convulsa)",
+                "Asma do lactente",
+                "Refluxo gastroesofágico"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A coqueluche, causada pela bactéria Bordetella pertussis, é caracterizada por uma fase catarral seguida de uma fase paroxística com crises de tosse intensa e incontrolável, que terminam com um guincho inspiratório característico. Em lactentes jovens, a apneia e a cianose são comuns.",
+            "tag": "Doenças Infecciosas"
+        },
+        {
+            "id": "PR2-SCA-Q19.2",
+            "text": "Qual o tratamento de escolha para a coqueluche?",
+            "options": [
+                "Apenas sintomáticos.",
+                "Corticoides inalatórios.",
+                "Antibióticos macrolídeos (ex: Azitromicina).",
+                "Antivirais."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento da coqueluche é feito com macrolídeos (azitromicina ou claritromicina) para erradicar a bactéria da nasofaringe, diminuindo a transmissibilidade e, se iniciado na fase catarral, podendo encurtar a duração dos sintomas.",
+            "tag": "Doenças Infecciosas"
+        },
+        {
+            "id": "PR2-SCA-Q20.1",
+            "text": "Lactente de 6 meses com febre, coriza, tosse e sibilância. Qual o diagnóstico mais provável nesta faixa etária?",
+            "options": [
+                "Pneumonia bacteriana",
+                "Asma",
+                "Bronquiolite Viral Aguda (BVA)",
+                "Laringite"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A BVA é a principal causa de sibilância no primeiro episódio em lactentes com menos de 2 anos. É uma infecção viral (principalmente pelo Vírus Sincicial Respiratório - VSR) que causa inflamação e obstrução dos bronquíolos.",
+            "tag": "Pneumologia"
+        },
+        {
+            "id": "PR2-SCA-Q20.2",
+            "text": "Qual o principal agente etiológico da Bronquiolite Viral Aguda?",
+            "options": [
+                "Rinovírus",
+                "Influenza",
+                "Adenovírus",
+                "Vírus Sincicial Respiratório (VSR)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O Vírus Sincicial Respiratório é responsável pela maioria dos casos de BVA, especialmente os mais graves que requerem hospitalização.",
+            "tag": "Pneumologia"
+        },
+        {
+            "id": "PR2-SCA-Q21",
+            "text": "Qual a principal causa de gastroenterite aguda (diarreia e vómitos) em crianças com menos de 5 anos?",
+            "options": [
+                "Salmonella",
+                "Rotavírus",
+                "Escherichia coli",
+                "Giardia lamblia"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O Rotavírus é a principal causa de diarreia grave e desidratação em lactentes e crianças pequenas em todo o mundo. A vacinação reduziu drasticamente a sua incidência.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q22",
+            "text": "Na avaliação de uma criança com diarreia aguda, qual o principal objetivo do exame físico?",
+            "options": [
+                "Determinar o agente etiológico.",
+                "Avaliar o estado de hidratação.",
+                "Verificar se há necessidade de antibiótico.",
+                "Identificar a fonte da infecção."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A complicação mais comum e grave da gastroenterite é a desidratação. Portanto, o principal objetivo da avaliação clínica é classificar o estado de hidratação da criança (sem desidratação, desidratação leve/moderada, ou desidratação grave) para definir a conduta terapêutica.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q23",
+            "text": "Qual o plano terapêutico para uma criança com diarreia e desidratação leve a moderada, que consegue beber?",
+            "options": [
+                "Plano A: Hidratação oral em casa com aumento da oferta de líquidos.",
+                "Plano B: Terapia de reidratação oral (TRO) supervisionada na unidade de saúde.",
+                "Plano C: Reidratação intravenosa rápida no hospital.",
+                "Antieméticos e antidiarreicos."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O Plano B do Ministério da Saúde é indicado para crianças com algum grau de desidratação. Consiste na administração supervisionada de soro de reidratação oral (50 a 100 mL/kg) em um período de 4 a 6 horas na unidade de saúde.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q24",
+            "text": "Criança de 1 ano com febre alta há 5 dias, conjuntivite não purulenta, exantema polimorfo, alterações de boca (língua em framboesa, fissura labial) e edema de mãos e pés. Qual o diagnóstico?",
+            "options": [
+                "Escarlatina",
+                "Sarampo",
+                "Doença de Kawasaki",
+                "Síndrome de Stevens-Johnson"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro descrito preenche os critérios clássicos para a Doença de Kawasaki, uma vasculite sistémica aguda da infância. O diagnóstico é clínico, baseado na presença de febre por pelo menos 5 dias mais 4 dos 5 critérios principais (conjuntivite, alterações orais, exantema, alterações de extremidades e linfonodomegalia cervical).",
+            "tag": "Doenças Exantemáticas"
+        },
+        {
+            "id": "PR2-SCA-Q25",
+            "text": "Qual a principal complicação da Doença de Kawasaki e por que o tratamento é urgente?",
+            "options": [
+                "Insuficiência renal.",
+                "Meningite asséptica.",
+                "Aneurismas de artérias coronárias.",
+                "Artrite crônica."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A complicação mais temida da Doença de Kawasaki é a formação de aneurismas nas artérias coronárias, que pode levar a infarto do miocárdio e morte súbita. O tratamento com imunoglobulina intravenosa e aspirina, iniciado nos primeiros 10 dias de febre, reduz drasticamente o risco dessa complicação.",
+            "tag": "Cardiologia"
+        },
+        {
+            "id": "PR2-SCA-Q26",
+            "text": "Qual das seguintes cardiopatias congênitas é cianótica?",
+            "options": [
+                "Comunicação Interventricular (CIV)",
+                "Comunicação Interatrial (CIA)",
+                "Persistência do Canal Arterial (PCA)",
+                "Tetralogia de Fallot"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Tetralogia de Fallot é a cardiopatia congênita cianótica mais comum após o período neonatal. A sua fisiopatologia envolve uma obstrução na via de saída do ventrículo direito, que desvia o sangue não oxigenado para a circulação sistémica através de uma grande CIV, causando cianose.",
+            "tag": "Cardiologia"
+        },
+        {
+            "id": "PR2-SCA-Q27",
+            "text": "Na Tetralogia de Fallot, o que é a 'crise de hipóxia' ou 'crise cianótica'?",
+            "options": [
+                "É um episódio de insuficiência cardíaca congestiva.",
+                "É um espasmo da via de saída do ventrículo direito que piora a cianose, podendo levar a convulsões e óbito.",
+                "É um episódio de febre reumática.",
+                "É uma arritmia cardíaca."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A crise de hipóxia é uma emergência que ocorre em crianças com Tetralogia de Fallot. Um espasmo súbito do infundíbulo do ventrículo direito aumenta a obstrução ao fluxo pulmonar, desviando ainda mais sangue não oxigenado para a aorta, resultando em cianose intensa, taquipneia e irritabilidade.",
+            "tag": "Cardiologia"
+        },
+        {
+            "id": "PR2-SCA-Q28",
+            "text": "Qual a posição que a mãe instintivamente coloca a criança durante uma crise de hipóxia na Tetralogia de Fallot?",
+            "options": [
+                "Deitada de costas.",
+                "Posição genupeitoral (joelhos dobrados contra o peito).",
+                "Sentada com as pernas esticadas.",
+                "Deitada de lado."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A posição genupeitoral ou de cócoras (squatting) aumenta a resistência vascular sistémica, o que diminui o shunt direita-esquerda e aumenta o fluxo sanguíneo para os pulmões, melhorando a oxigenação e aliviando a crise.",
+            "tag": "Cardiologia"
+        },
+        {
+            "id": "PR2-SCA-Q29",
+            "text": "Qual é a principal causa da Anemia Ferropriva na infância?",
+            "options": [
+                "Perda sanguínea crônica.",
+                "Dieta inadequada, com baixo consumo de ferro e/ou consumo excessivo de leite de vaca.",
+                "Doenças inflamatórias crônicas.",
+                "Hemólise."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A anemia carencial mais comum na infância é a ferropriva. Ela ocorre principalmente devido a uma ingestão insuficiente de ferro (especialmente após os 6 meses, quando as reservas de ferro do nascimento se esgotam) e ao consumo excessivo de leite de vaca, que é pobre em ferro e pode causar micro-sangramentos intestinais.",
+            "tag": "Hematologia"
+        },
+        {
+            "id": "PR2-SCA-Q30",
+            "text": "Lactente de 18 meses com palidez, irritabilidade e baixo ganho de peso. A mãe refere que ele toma 1 litro de leite de vaca por dia e recusa outros alimentos. Qual o achado esperado no hemograma?",
+            "options": [
+                "Anemia macrocítica (VCM > 100).",
+                "Anemia normocítica e normocrômica.",
+                "Anemia microcítica (VCM < 80) e hipocrômica (HCM baixo).",
+                "Pancitopenia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A anemia ferropriva é classicamente uma anemia microcítica e hipocrômica. A deficiência de ferro prejudica a síntese da hemoglobina, resultando em hemácias menores e com menos cor.",
+            "tag": "Hematologia"
+        },
+        {
+            "id": "PR2-SCA-Q31",
+            "text": "Qual o tratamento para a anemia ferropriva?",
+            "options": [
+                "Apenas orientação dietética.",
+                "Transfusão de sangue.",
+                "Suplementação com sulfato ferroso oral.",
+                "Reposição de ácido fólico."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento consiste na reposição dos estoques de ferro com sais de ferro por via oral (ex: sulfato ferroso), mantido por vários meses, além da orientação dietética para aumentar a ingestão de alimentos ricos em ferro.",
+            "tag": "Hematologia"
+        },
+        {
+            "id": "PR2-SCA-Q32",
+            "text": "Qual o primeiro parâmetro laboratorial que se altera após o início do tratamento com ferro na anemia ferropriva?",
+            "options": [
+                "Aumento da hemoglobina.",
+                "Normalização do VCM.",
+                "Aumento da ferritina.",
+                "Pico de reticulócitos (crise reticulocitária)."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Com a oferta de ferro, a medula óssea aumenta drasticamente a produção de novas hemácias. Isso é evidenciado por um pico no número de reticulócitos (hemácias jovens) no sangue periférico, que ocorre entre o 7º e o 10º dia de tratamento.",
+            "tag": "Hematologia"
+        },
+        {
+            "id": "PR2-SCA-Q33",
+            "text": "O que é a Doença Celíaca?",
+            "options": [
+                "É uma alergia ao leite de vaca.",
+                "É uma intolerância à lactose.",
+                "É uma doença autoimune desencadeada pela ingestão de glúten em indivíduos geneticamente predispostos, causando atrofia das vilosidades do intestino delgado.",
+                "É uma doença inflamatória intestinal."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Doença Celíaca é uma enteropatia autoimune crônica. A ingestão de glúten (presente no trigo, cevada e centeio) leva a uma resposta imune que danifica a mucosa do intestino delgado, resultando em má absorção de nutrientes.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q34",
+            "text": "Qual o padrão-ouro para o diagnóstico da Doença Celíaca?",
+            "options": [
+                "Apenas a dosagem de anticorpos (anti-transglutaminase IgA).",
+                "Teste genético (HLA-DQ2/DQ8).",
+                "Endoscopia digestiva alta com biópsia do duodeno.",
+                "Teste de provocação com glúten."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Embora os marcadores sorológicos sejam importantes para a triagem, o diagnóstico definitivo da Doença Celíaca é confirmado pelo exame histopatológico de uma biópsia do duodeno, que mostra os achados característicos de atrofia vilositária, hiperplasia de criptas e aumento de linfócitos intraepiteliais.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q35.1",
+            "text": "Criança de 7 anos com edema periorbitário, hipertensão arterial e urina 'cor de coca-cola' (hematúria), duas semanas após uma infecção de pele (impetigo). Qual o diagnóstico?",
+            "options": [
+                "Síndrome Nefrótica",
+                "Infecção do Trato Urinário",
+                "Glomerulonefrite Difusa Aguda Pós-Estreptocócica (GNDA)",
+                "Refluxo vesicoureteral"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro descrito (síndrome nefrítica aguda) com edema, hipertensão e hematúria macroscópica, com história prévia de uma infecção de pele ou garganta por Streptococcus pyogenes, é a apresentação clássica da GNDA.",
+            "tag": "Nefrologia"
+        },
+        {
+            "id": "PR2-SCA-Q35.2",
+            "text": "Qual o achado laboratorial característico na GNDA Pós-Estreptocócica?",
+            "options": [
+                "Proteinúria maciça (> 50 mg/kg/dia).",
+                "Hipoalbuminemia.",
+                "Consumo do complemento sérico (C3 baixo).",
+                "Elevação dos anticorpos anti-DNA."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A GNDA é uma doença mediada por imunocomplexos. A ativação da via clássica do sistema complemento por esses complexos leva ao consumo dos seus componentes, resultando em níveis séricos baixos de C3, que é um marcador importante da doença na fase aguda.",
+            "tag": "Nefrologia"
+        },
+        {
+            "id": "PR2-SCA-Q36",
+            "text": "O que caracteriza a Síndrome Nefrótica?",
+            "options": [
+                "Hipertensão, hematúria e oligúria.",
+                "Proteinúria maciça, hipoalbuminemia, edema generalizado e hiperlipidemia.",
+                "Febre, dor lombar e disúria.",
+                "Leucocitúria, cilindros leucocitários e bacteriúria."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Síndrome Nefrótica é definida pela tétrade: proteinúria em faixa nefrótica (> 40-50 mg/kg/dia), hipoalbuminemia (< 2,5 g/dL), edema (anasarca) e hiperlipidemia/lipidúria. É a principal causa de edema generalizado na infância.",
+            "tag": "Nefrologia"
+        },
+        {
+            "id": "PR2-SCA-Q37",
+            "text": "Qual a causa mais comum de Síndrome Nefrótica em crianças?",
+            "options": [
+                "Glomeruloesclerose Segmentar e Focal (GESF)",
+                "Nefropatia por IgA",
+                "Doença de Lesões Mínimas",
+                "Glomerulonefrite Membranoproliferativa"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Doença de Lesões Mínimas responde por cerca de 80-90% dos casos de síndrome nefrótica em crianças. Caracteriza-se por ser cortico-sensível na maioria dos casos e por não apresentar alterações significativas na microscopia óptica.",
+            "tag": "Nefrologia"
+        },
+        {
+            "id": "PR2-SCA-Q38",
+            "text": "Qual o tratamento de primeira linha para a Síndrome Nefrótica por Lesões Mínimas?",
+            "options": [
+                "Apenas restrição de sal.",
+                "Diuréticos.",
+                "Corticoterapia (prednisona) em altas doses.",
+                "Imunossupressores como a ciclosporina."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A corticoterapia é o pilar do tratamento inicial. A maioria das crianças com Doença de Lesões Mínimas responde bem ao corticoide, com remissão completa da proteinúria.",
+            "tag": "Nefrologia"
+        },
+        {
+            "id": "PR2-SCA-Q39",
+            "text": "Criança de 4 anos com dor abdominal, púrpura palpável em membros inferiores e nádegas, artralgia e hematúria. Qual o diagnóstico?",
+            "options": [
+                "Púrpura Trombocitopênica Imunológica (PTI)",
+                "Doença de Kawasaki",
+                "Púrpura de Henoch-Schönlein (Vasculite por IgA)",
+                "Lúpus Eritematoso Sistémico"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Púrpura de Henoch-Schönlein é a vasculite mais comum da infância. O diagnóstico é clínico, baseado na presença da púrpura palpável (principalmente em membros inferiores) associada a pelo menos um dos seguintes: dor abdominal, artrite/artralgia ou envolvimento renal (hematúria/proteinúria).",
+            "tag": "Reumatologia"
+        },
+        {
+            "id": "PR2-SCA-Q40",
+            "text": "Qual a principal complicação a longo prazo da Púrpura de Henoch-Schönlein?",
+            "options": [
+                "Artrite deformante",
+                "Doença cardíaca",
+                "Invaginação intestinal",
+                "Doença renal crônica (nefrite)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A nefrite por deposição de IgA nos glomérulos é a principal causa de morbidade a longo prazo na PHS, podendo evoluir para insuficiência renal crônica. Por isso, a análise de urina é mandatória no acompanhamento destes pacientes.",
+            "tag": "Reumatologia"
+        },
+        {
+            "id": "PR2-SCA-Q41",
+            "text": "O que é a Doença da Membrana Hialina?",
+            "options": [
+                "É uma infecção pulmonar do recém-nascido.",
+                "É uma malformação congénita do pulmão.",
+                "É a Síndrome do Desconforto Respiratório do recém-nascido, causada pela deficiência de surfactante pulmonar em prematuros.",
+                "É a aspiração de mecônio."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Doença da Membrana Hialina é a principal causa de desconforto respiratório em recém-nascidos prematuros. A deficiência de surfactante leva ao colapso alveolar, diminuição da complacência pulmonar e insuficiência respiratória.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q42",
+            "text": "Qual a principal medida pré-natal para prevenir a Doença da Membrana Hialina em um parto prematuro iminente?",
+            "options": [
+                "Administração de antibióticos à mãe.",
+                "Administração de corticoides antenatais (ex: betametasona) à mãe.",
+                "Realizar o parto por cesariana.",
+                "Uso de tocolíticos para inibir o trabalho de parto."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A administração de um ciclo de corticoides à gestante com risco de parto prematuro (entre 24 e 34 semanas) é a intervenção mais eficaz para acelerar a maturação pulmonar fetal e a produção de surfactante, reduzindo significativamente a incidência e a gravidade da Doença da Membrana Hialina.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q43.1",
+            "text": "Recém-nascido com 41 semanas, líquido amniótico meconial espesso, nasce hipotônico e sem movimentos respiratórios. Qual a conduta imediata na sala de parto?",
+            "options": [
+                "Estimular vigorosamente.",
+                "Levar ao berço aquecido e realizar laringoscopia direta para aspiração traqueal sob visualização.",
+                "Iniciar VPP com balão e máscara.",
+                "Realizar os passos iniciais e aguardar."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. De acordo com as diretrizes de reanimação, um recém-nascido com líquido meconial que nasce não vigoroso (hipotônico e/ou sem respiração) deve ser submetido à laringoscopia direta para aspiração do mecônio da traqueia antes de se iniciar a ventilação, para prevenir a Síndrome de Aspiração Meconial grave.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q43.2",
+            "text": "Qual a complicação pulmonar mais temida na Síndrome de Aspiração Meconial?",
+            "options": [
+                "Atelectasia",
+                "Pneumotórax",
+                "Hipertensão Pulmonar Persistente do Recém-nascido (HPPRN)",
+                "Pneumonia bacteriana secundária"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O mecônio aspirado causa obstrução das vias aéreas e uma pneumonite química intensa, que leva à vasoconstrição da artéria pulmonar e à manutenção de um padrão de circulação fetal (shunt direita-esquerda), resultando em hipoxemia grave e refratária.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q44",
+            "text": "A suplementação de qual vitamina é recomendada para todos os recém-nascidos na primeira hora de vida para prevenir a Doença Hemorrágica do RN?",
+            "options": [
+                "Vitamina D",
+                "Vitamina A",
+                "Vitamina K",
+                "Vitamina C"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Todos os recém-nascidos devem receber uma dose de Vitamina K intramuscular ao nascer para prevenir a Doença Hemorrágica do Recém-nascido, pois eles nascem com baixas reservas e a vitamina K é essencial para a produção dos fatores de coagulação II, VII, IX e X.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q45.1",
+            "text": "Criança de 9 meses com febre, irritabilidade e recusa alimentar. O exame de urina mostra nitrito positivo e leucocitúria. Qual o diagnóstico?",
+            "options": [
+                "Gastroenterite",
+                "Infecção do Trato Urinário (ITU)",
+                "Otite Média Aguda",
+                "Meningite"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Em lactentes, os sintomas de ITU são frequentemente inespecíficos, como febre sem foco aparente e irritabilidade. Um exame de urina com sinais de infecção (nitrito, leucocitúria) confirma o diagnóstico.",
+            "tag": "Nefrologia"
+        },
+        {
+            "id": "PR2-SCA-Q45.2",
+            "text": "Em uma criança de 9 meses com ITU febril, qual exame de imagem deve ser realizado para investigar anomalias do trato urinário?",
+            "options": [
+                "Apenas Raio-X simples de abdómen.",
+                "Ultrassonografia de rins e vias urinárias.",
+                "Uretrocistografia miccional.",
+                "Tomografia Computadorizada."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A ultrassonografia é o exame inicial recomendado em toda criança com a primeira ITU febril para avaliar a anatomia renal e do trato urinário, procurando por malformações, hidronefrose ou abscessos.",
+            "tag": "Nefrologia"
+        },
+        {
+            "id": "PR2-SCA-Q46",
+            "text": "O que é o Refluxo Vesicoureteral (RVU)?",
+            "options": [
+                "É o retorno da urina da uretra para a bexiga.",
+                "É a dilatação da pelve renal.",
+                "É o fluxo retrógrado da urina da bexiga para o ureter e/ou para o rim.",
+                "É a obstrução da junção ureteropélvica."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O RVU é uma anomalia na junção ureterovesical que permite que a urina volte da bexiga para os ureteres durante a micção. É um fator de risco importante para pielonefrite e cicatrizes renais.",
+            "tag": "Nefrologia"
+        },
+        {
+            "id": "PR2-SCA-Q47",
+            "text": "Qual o exame padrão-ouro para o diagnóstico e graduação do Refluxo Vesicoureteral?",
+            "options": [
+                "Ultrassonografia",
+                "Cintilografia renal com DMSA",
+                "Uretrocistografia Miccional (UCM)",
+                "Ressonância Magnética"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A UCM é o exame de escolha para diagnosticar o RVU. Consiste em encher a bexiga com contraste através de uma sonda e realizar radiografias durante o enchimento e a micção para visualizar se o contraste reflui para os ureteres.",
+            "tag": "Nefrologia"
+        },
+        {
+            "id": "PR2-SCA-Q48.1",
+            "text": "Criança de 2 anos com febre e exantema maculopapular que iniciou na face e progrediu de forma descendente, confluente. Apresenta tosse, coriza, conjuntivite e manchas de Koplik na mucosa oral. Qual o diagnóstico?",
+            "options": [
+                "Rubéola",
+                "Escarlatina",
+                "Sarampo",
+                "Eritema Infeccioso"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro descrito é a apresentação clássica do Sarampo. A pródromo com febre alta, tosse, coriza e conjuntivite (o 'triplo catarro'), seguido pelo aparecimento das manchas de Koplik (patognomônicas) e, por fim, pelo exantema craniocaudal e confluente, fecha o diagnóstico clínico.",
+            "tag": "Doenças Exantemáticas"
+        },
+        {
+            "id": "PR2-SCA-Q48.2",
+            "text": "Qual a principal medida para prevenir o sarampo?",
+            "options": [
+                "Higiene das mãos.",
+                "Isolamento respiratório dos casos.",
+                "Vacinação com a vacina tríplice viral (sarampo, caxumba e rubéola).",
+                "Uso de antibióticos profiláticos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O sarampo é uma doença altamente contagiosa, mas prevenível pela imunização. A vacina tríplice viral (SCR) é segura e eficaz, sendo a principal estratégia de saúde pública para o controle da doença.",
+            "tag": "Imunizações"
+        },
+        {
+            "id": "PR2-SCA-Q49",
+            "text": "O que é a mancha de Koplik?",
+            "options": [
+                "É o exantema do sarampo.",
+                "São petéquias no palato.",
+                "São pequenas manchas branco-azuladas na mucosa jugal, opostas aos molares, que são patognomônicas do sarampo.",
+                "É a 'língua em framboesa' da escarlatina."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. As manchas de Koplik são um enantema (erupção em mucosa) patognomônico do sarampo. Aparecem no período prodrômico, antes do exantema cutâneo, e ajudam a firmar o diagnóstico precocemente.",
+            "tag": "Doenças Exantemáticas"
+        },
+        {
+            "id": "PR2-SCA-Q50",
+            "text": "Criança com febre alta por 3 dias que cessa abruptamente, seguida pelo aparecimento de um exantema maculopapular róseo no tronco, que se espalha para o pescoço e membros. A criança está em bom estado geral. Qual o diagnóstico?",
+            "options": [
+                "Sarampo",
+                "Rubéola",
+                "Eritema Infeccioso",
+                "Exantema Súbito (Roséola Infantum)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A história de febre alta que desaparece em crise, seguida pelo surgimento de um exantema com a criança em ótimo estado geral, é a marca registada do Exantema Súbito, causado principalmente pelo Herpesvírus humano tipo 6.",
+            "tag": "Doenças Exantemáticas"
+        },
+        {
+            "id": "PR2-SCA-Q51",
+            "text": "Criança com exantema facial eritematoso intenso ('face esbofeteada'), seguido por um exantema rendilhado no tronco e membros. Qual o diagnóstico?",
+            "options": [
+                "Sarampo",
+                "Rubéola",
+                "Eritema Infeccioso (Parvovírus B19)",
+                "Escarlatina"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O Eritema Infeccioso, ou 'quinta doença', causado pelo Parvovírus B19, tem uma apresentação bifásica característica: primeiro, o eritema malar intenso (face esbofeteada) e, dias depois, o exantema reticulado ou rendilhado no corpo.",
+            "tag": "Doenças Exantemáticas"
+        },
+        {
+            "id": "PR2-SCA-Q52",
+            "text": "A infecção pelo Parvovírus B19 em um paciente com anemia hemolítica crônica (ex: anemia falciforme) pode causar qual complicação hematológica?",
+            "options": [
+                "Crise hemolítica",
+                "Crise aplásica",
+                "Leucocitose",
+                "Trombocitose"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O Parvovírus B19 tem tropismo pelos precursores eritroides na medula óssea. Em pacientes que já têm uma sobrevida das hemácias diminuída, a parada temporária na produção de glóbulos vermelhos causada pelo vírus leva a uma queda abrupta e grave da hemoglobina, caracterizando a crise aplásica.",
+            "tag": "Doenças Exantemáticas"
+        },
+        {
+            "id": "PR2-SCA-Q53",
+            "text": "Criança com faringite, febre, e um exantema micropapular áspero ('em lixa'), que predomina nas áreas de dobras (sinal de Pastia) e palidez perioral (sinal de Filatov). Qual o diagnóstico?",
+            "options": [
+                "Sarampo",
+                "Doença de Kawasaki",
+                "Escarlatina",
+                "Rubéola"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Escarlatina é causada por uma cepa do Streptococcus pyogenes produtora de toxina eritrogénica. O exantema difuso, puntiforme e áspero ao toque, mais intenso nas dobras (sinal de Pastia) e a palidez ao redor da boca são os achados cutâneos característicos, associados à faringite e à 'língua em framboesa'.",
+            "tag": "Doenças Exantemáticas"
+        },
+        {
+            "id": "PR2-SCA-Q54",
+            "text": "O que é a Doença Mão-Pé-Boca?",
+            "options": [
+                "É uma infecção bacteriana de pele.",
+                "É uma doença viral (geralmente Coxsackie A16) caracterizada por febre e uma erupção vesicular na boca, mãos e pés.",
+                "É uma forma de alergia alimentar.",
+                "É uma doença reumática."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Doença Mão-Pé-Boca é uma infecção viral muito comum em crianças pequenas. Causa febre, lesões ulceradas dolorosas na boca (herpangina) e um exantema papulovesicular característico nas palmas das mãos e plantas dos pés.",
+            "tag": "Doenças Exantemáticas"
+        },
+        {
+            "id": "PR2-SCA-Q55.1",
+            "text": "Qual o tratamento farmacológico para a Crise Aguda de Asma moderada na emergência?",
+            "options": [
+                "Apenas oxigénio.",
+                "Salbutamol (beta-2 agonista de curta ação) inalatório em doses repetidas e corticoide sistémico.",
+                "Apenas corticoide sistémico.",
+                "Adrenalina subcutânea."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O manejo da crise de asma moderada se baseia em duas frentes: alívio rápido do broncoespasmo com um beta-2 agonista de curta ação (SABA), como o salbutamol, e controle da inflamação da via aérea com um corticoide sistémico (oral ou venoso).",
+            "tag": "Pneumologia"
+        },
+        {
+            "id": "PR2-SCA-Q55.2",
+            "text": "Qual medicamento é a base para o tratamento de controle (manutenção) da asma persistente?",
+            "options": [
+                "Salbutamol quando necessário.",
+                "Montelucaste.",
+                "Corticoide inalatório.",
+                "Teofilina."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O corticoide inalatório (CI) é a medicação anti-inflamatória mais eficaz e a pedra angular do tratamento de controle da asma persistente em todas as idades, visando prevenir as crises e controlar os sintomas crônicos.",
+            "tag": "Pneumologia"
+        },
+        {
+            "id": "PR2-SCA-Q56.1",
+            "text": "Criança de 4 anos com história de dermatite atópica e episódios recorrentes de tosse e sibilância, principalmente à noite ou após exercícios. Qual o diagnóstico mais provável?",
+            "options": [
+                "Bronquiolite de repetição",
+                "Fibrose Cística",
+                "Asma",
+                "Refluxo gastroesofágico"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A história de episódios recorrentes de sibilância, tosse (especialmente noturna) e dispneia, em uma criança com histórico pessoal ou familiar de atopia (como a dermatite atópica), é altamente sugestiva do diagnóstico de asma.",
+            "tag": "Pneumologia"
+        },
+        {
+            "id": "PR2-SCA-Q56.2",
+            "text": "Qual exame funcional pode auxiliar no diagnóstico e acompanhamento da asma em crianças maiores de 6 anos?",
+            "options": [
+                "Raio-X de tórax",
+                "Teste de provocação com exercício",
+                "Espirometria (prova de função pulmonar) com prova broncodilatadora",
+                "Tomografia de tórax"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A espirometria é o exame que mede os volumes e fluxos de ar. Na asma, tipicamente mostra um distúrbio obstrutivo (relação VEF1/CVF reduzida) que melhora significativamente após a inalação de um broncodilatador, confirmando a reversibilidade da obstrução.",
+            "tag": "Pneumologia"
+        },
+        {
+            "id": "PR2-SCA-Q57",
+            "text": "Qual a principal causa de morte em crianças com fibrose cística?",
+            "options": [
+                "Insuficiência pancreática",
+                "Doença hepática",
+                "Doença pulmonar crônica (bronquiectasias e insuficiência respiratória)",
+                "Desnutrição"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A fibrose cística é uma doença genética que afeta as glândulas exócrinas. O acometimento pulmonar é o mais grave e a principal causa de morbimortalidade, com produção de muco espesso, infecções de repetição, bronquiectasias e eventual falência respiratória.",
+            "tag": "Pneumologia"
+        },
+        {
+            "id": "PR2-SCA-Q58",
+            "text": "Qual o exame padrão-ouro para o diagnóstico da Fibrose Cística?",
+            "options": [
+                "Triagem neonatal (teste do pezinho)",
+                "Raio-X de tórax",
+                "Teste do suor (dosagem de cloretos no suor)",
+                "Teste genético"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O defeito no gene CFTR na fibrose cística resulta em um transporte de cloreto defeituoso. O teste do suor, que mede a concentração de cloretos no suor (que estará elevada), é o padrão-ouro para confirmar o diagnóstico.",
+            "tag": "Pneumologia"
+        },
+        {
+            "id": "PR2-SCA-Q59",
+            "text": "O que é a Dermatite Atópica?",
+            "options": [
+                "É uma infecção de pele bacteriana.",
+                "É uma doença inflamatória crônica e pruriginosa da pele, associada a uma disfunção da barreira cutânea e a um histórico pessoal ou familiar de atopia.",
+                "É uma reação alérgica a alimentos.",
+                "É uma infestação pelo ácaro Sarcoptes scabiei."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Dermatite Atópica é uma dermatose eczematosa, crônica e recidivante, caracterizada por pele seca (xerose), prurido intenso e lesões eczematosas com distribuição típica que varia com a idade (face e extensores em lactentes, dobras em crianças maiores).",
+            "tag": "Dermatologia"
+        },
+        {
+            "id": "PR2-SCA-Q60",
+            "text": "Qual a base do tratamento da Dermatite Atópica?",
+            "options": [
+                "Antibióticos sistémicos.",
+                "Apenas anti-histamínicos orais.",
+                "Hidratação intensiva da pele com emolientes e uso de corticoides tópicos nas crises.",
+                "Restrição alimentar rigorosa."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento da dermatite atópica baseia-se em restaurar a barreira cutânea com o uso contínuo de hidratantes (emolientes) e controlar a inflamação durante as crises com corticoides tópicos ou outros anti-inflamatórios.",
+            "tag": "Dermatologia"
+        },
+        {
+            "id": "PR2-SCA-Q61",
+            "text": "Qual a principal causa de convulsão febril na infância?",
+            "options": [
+                "Meningite",
+                "Epilepsia",
+                "Febre alta em uma criança geneticamente predisposta, sem infecção do SNC.",
+                "Hipoglicemia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A convulsão febril é um evento benigno que ocorre em crianças neurologicamente normais entre 6 meses e 5 anos, associado à febre, na ausência de infecção intracraniana. Há uma forte predisposição genética.",
+            "tag": "Neurologia"
+        },
+        {
+            "id": "PR2-SCA-Q62",
+            "text": "Qual a conduta para uma primeira crise convulsiva febril simples?",
+            "options": [
+                "Iniciar anticonvulsivante de uso contínuo.",
+                "Realizar punção lombar e tomografia de crânio em todos os casos.",
+                "Observação, controle da febre e orientação aos pais.",
+                "Internação para investigação completa."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Na crise febril simples (generalizada, <15min, única em 24h), a conduta é expectante. O mais importante é controlar a febre para prevenir novas crises e orientar os pais sobre a benignidade do quadro e como agir em caso de recorrência. Não há indicação de medicação contínua ou investigação extensiva.",
+            "tag": "Neurologia"
+        },
+        {
+            "id": "PR2-SCA-Q63",
+            "text": "O que é a Estenose Hipertrófica do Piloro?",
+            "options": [
+                "É uma má rotação intestinal.",
+                "É uma obstrução da saída do estômago causada pela hipertrofia da musculatura do piloro, que se manifesta com vómitos não biliosos em jato em lactentes.",
+                "É uma inflamação do estômago.",
+                "É o refluxo do conteúdo gástrico para o esófago."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Estenose Hipertrófica do Piloro é uma causa importante de vómitos no lactente. Caracteriza-se por vómitos em jato, não biliosos, que pioram progressivamente, em um lactente faminto. Ao exame, pode-se palpar a 'oliva pilórica' no abdómen.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q64",
+            "text": "Qual o tratamento para a Estenose Hipertrófica do Piloro?",
+            "options": [
+                "Apenas dieta espessada.",
+                "Medicamentos procinéticos.",
+                "Tratamento cirúrgico (piloromiotomia).",
+                "Endoscopia com dilatação."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento da estenose hipertrófica do piloro é cirúrgico e curativo. A piloromiotomia de Fredet-Ramstedt consiste na incisão da musculatura pilórica hipertrofiada, aliviando a obstrução.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q65",
+            "text": "O que é a Invaginação Intestinal?",
+            "options": [
+                "É a torção do intestino sobre o seu próprio eixo (volvo).",
+                "É a ausência de gânglios nervosos no intestino (Doença de Hirschsprung).",
+                "É a telescopagem de um segmento do intestino para dentro de outro segmento adjacente.",
+                "É a inflamação do apêndice."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A invaginação ou intussuscepção intestinal é a principal causa de obstrução intestinal em crianças entre 3 meses e 6 anos. A forma mais comum é a ileocólica.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q66",
+            "text": "Qual a tríade clássica da Invaginação Intestinal?",
+            "options": [
+                "Febre, vómitos e diarreia.",
+                "Dor abdominal em cólica, massa abdominal palpável (em forma de salsicha) e fezes em 'geleia de framboesa'.",
+                "Icterícia, acolia fecal e hepatomegalia.",
+                "Distensão abdominal, obstipação e vómitos biliosos."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A tríade clássica de sintomas da invaginação intestinal é composta por dor abdominal intermitente (cólica), uma massa palpável no abdómen e a evacuação de fezes com muco e sangue ('geleia de framboesa'), que é um sinal tardio de isquemia intestinal.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q67",
+            "text": "Qual o tratamento não cirúrgico para a Invaginação Intestinal?",
+            "options": [
+                "Apenas observação.",
+                "Uso de laxantes.",
+                "Redução hidrostática (com soro ou ar) ou pneumática guiada por ultrassonografia ou radioscopia.",
+                "Antibioticoterapia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Em pacientes estáveis e sem sinais de peritonite, a primeira linha de tratamento é a tentativa de redução não cirúrgica através de um enema (de ar ou de contraste baritado/solúvel), que cria uma pressão que 'desfaz' a invaginação.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q68.1",
+            "text": "Qual a principal causa de meningite bacteriana em crianças após o período neonatal?",
+            "options": [
+                "Streptococcus agalactiae (Grupo B)",
+                "Listeria monocytogenes",
+                "Streptococcus pneumoniae e Neisseria meningitidis",
+                "Haemophilus influenzae tipo b"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Após a introdução da vacina contra o Haemophilus (Hib), os principais agentes causadores de meningite bacteriana em crianças maiores de 2 meses são o Pneumococo e o Meningococo.",
+            "tag": "Infectologia"
+        },
+        {
+            "id": "PR2-SCA-Q68.2",
+            "text": "Qual exame é o padrão-ouro para o diagnóstico da meningite bacteriana?",
+            "options": [
+                "Hemograma",
+                "Tomografia de crânio",
+                "Análise do líquido cefalorraquidiano (LCR) obtido por punção lombar.",
+                "Hemocultura."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A análise do LCR é fundamental para o diagnóstico. Na meningite bacteriana, o LCR tipicamente mostra pleocitose (aumento de células) com predomínio de neutrófilos, hipoglicorraquia (glicose baixa) e hiperproteinorraquia (proteínas elevadas), além da possibilidade de identificar a bactéria na bacterioscopia (Gram) ou cultura.",
+            "tag": "Infectologia"
+        },
+        {
+            "id": "PR2-SCA-Q69",
+            "text": "O que são os sinais de Kernig e Brudzinski?",
+            "options": [
+                "São sinais de insuficiência cardíaca.",
+                "São sinais de irritação meníngea.",
+                "São sinais de apendicite.",
+                "São sinais de desidratação."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Os sinais de Kernig (dificuldade e dor para estender o joelho com o quadril fletido) e Brudzinski (flexão involuntária dos joelhos e quadris ao fletir o pescoço) são manobras semiológicas que indicam a presença de irritação das meninges, como ocorre na meningite.",
+            "tag": "Infectologia"
+        },
+        {
+            "id": "PR2-SCA-Q70",
+            "text": "Qual o tratamento empírico de escolha para a meningite bacteriana em uma criança de 5 anos?",
+            "options": [
+                "Penicilina cristalina",
+                "Ceftriaxona associada à Vancomicina",
+                "Ampicilina e Gentamicina",
+                "Aciclovir"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A antibioticoterapia deve ser iniciada imediatamente após a suspeita clínica. O esquema empírico deve cobrir os agentes mais prováveis (Pneumococo e Meningococo). A Ceftriaxona é a droga de escolha. A Vancomicina é associada para cobrir a possibilidade de pneumococo resistente à penicilina.",
+            "tag": "Infectologia"
+        },
+        {
+            "id": "PR2-SCA-Q71",
+            "text": "Qual a principal medida para prevenir a meningite por Haemophilus influenzae tipo b, Pneumococo e Meningococo?",
+            "options": [
+                "Higiene das mãos",
+                "Quimioprofilaxia para contatos",
+                "Vacinação",
+                "Isolamento dos doentes"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A imunização através das vacinas conjugadas contra Hib, pneumococo e meningococos, disponíveis no calendário vacinal infantil, é a estratégia mais eficaz para a prevenção primária da meningite bacteriana causada por estes agentes.",
+            "tag": "Imunizações"
+        },
+        {
+            "id": "PR2-SCA-Q72.1",
+            "text": "Lactente de 1 mês, sexo masculino, com criptorquidia (testículo não descido) à direita. Qual a conduta?",
+            "options": [
+                "Cirurgia imediata (orquidopexia).",
+                "Tratamento hormonal com HCG.",
+                "Observação, pois a descida pode ocorrer espontaneamente nos primeiros meses.",
+                "Remoção do testículo (orquiectomia)."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Muitos testículos não descidos ao nascimento, especialmente em prematuros, completam a sua descida para a bolsa escrotal nos primeiros 3 a 6 meses de vida. Portanto, a conduta inicial é a observação.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q72.2",
+            "text": "Se o testículo do paciente da questão anterior não descer até os 6 meses, quando a cirurgia (orquidopexia) deve ser indicada?",
+            "options": [
+                "Apenas na puberdade.",
+                "Idealmente entre 6 e 12 meses de idade.",
+                "Apenas se houver dor.",
+                "Pode-se esperar até os 5 anos."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A cirurgia para corrigir a criptorquidia (orquidopexia) é indicada se o testículo não descer espontaneamente. O ideal é realizá-la entre 6 e 12 meses de idade para otimizar o potencial de fertilidade e diminuir o risco de malignização.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q73",
+            "text": "A criptorquidia é um fator de risco para qual condição na vida adulta?",
+            "options": [
+                "Hérnia inguinal",
+                "Hidrocele",
+                "Câncer de testículo e infertilidade",
+                "Varicocele"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Mesmo após a correção cirúrgica, os testículos que foram criptorquídicos têm um risco aumentado de desenvolver tumores de células germinativas e de apresentar subfertilidade na vida adulta.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q74.1",
+            "text": "Lactente de 4 meses com abaulamento na região inguinal direita, redutível e que aumenta com o choro. Qual o diagnóstico?",
+            "options": [
+                "Hérnia inguinal indireta",
+                "Hidrocele comunicante",
+                "Linfonodo inguinal",
+                "Testículo ectópico"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A hérnia inguinal indireta é a mais comum em crianças e resulta da persistência do conduto peritoneovaginal, permitindo a passagem de conteúdo abdominal (geralmente intestino) para o canal inguinal. O abaulamento intermitente que piora com o aumento da pressão abdominal é característico.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q74.2",
+            "text": "Qual a principal complicação da hérnia inguinal e por que o tratamento é cirúrgico?",
+            "options": [
+                "Torção testicular.",
+                "Infertilidade.",
+                "Encarceramento e estrangulamento do conteúdo herniado.",
+                "Apenas desconforto estético."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A complicação mais temida é o encarceramento (quando o conteúdo herniado não pode ser reduzido de volta para o abdómen), que pode evoluir para estrangulamento (comprometimento do suprimento sanguíneo do intestino), uma emergência cirúrgica. Por este risco, o tratamento da hérnia inguinal é sempre a correção cirúrgica eletiva.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q75",
+            "text": "Qual a diferença entre hidrocele comunicante e não comunicante?",
+            "options": [
+                "Não há diferença, são a mesma condição.",
+                "A comunicante se resolve espontaneamente, a não comunicante não.",
+                "Na comunicante, há persistência do conduto peritoneovaginal permitindo a passagem de fluido peritoneal; na não comunicante, o fluido é produzido localmente.",
+                "A comunicante afeta apenas um testículo, a não comunicante afeta ambos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A hidrocele comunicante resulta da passagem de fluido peritoneal para a túnica vaginal através de um conduto peritoneovaginal patente, e seu volume tipicamente flutua ao longo do dia. Na não comunicante, o conduto está fechado e o fluido é produzido pela própria túnica.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q76",
+            "text": "Qual a conduta para uma hidrocele comunicante em um lactente de 8 meses?",
+            "options": [
+                "Cirurgia imediata.",
+                "Observação, pois a maioria se resolve espontaneamente até 1-2 anos de idade.",
+                "Punção para esvaziar o líquido.",
+                "Uso de suspensório escrotal."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A maioria das hidroceles comunicantes em lactentes se resolve com o fechamento espontâneo do conduto peritoneovaginal. A conduta é a observação, e a cirurgia só é indicada se a hidrocele persistir após 1 ou 2 anos de idade ou se for muito volumosa e tensa.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q77",
+            "text": "Adolescente de 14 anos acorda com dor súbita e intensa no testículo esquerdo, associada a náuseas. Ao exame, o testículo está elevado, horizontalizado e muito doloroso. Qual a principal hipótese?",
+            "options": [
+                "Orquite",
+                "Hérnia inguinal encarcerada",
+                "Torção do apêndice testicular",
+                "Torção testicular"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A torção do cordão espermático (torção testicular) é uma emergência urológica. O quadro de dor escrotal aguda, súbita e intensa em um adolescente, com os achados de testículo elevado ('sinal de Prehn' negativo) e horizontalizado, é altamente sugestivo do diagnóstico.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q78",
+            "text": "Qual a conduta imediata na suspeita de torção testicular?",
+            "options": [
+                "Realizar ultrassom com Doppler para confirmar e depois operar.",
+                "Tentar a distorção manual e observar.",
+                "Apenas analgesia e anti-inflamatórios.",
+                "Exploração cirúrgica imediata."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Na torção testicular, 'tempo é testículo'. A conduta na alta suspeita clínica é a exploração cirúrgica imediata, sem a necessidade de exames de imagem que possam atrasar o tratamento. O objetivo é distorcer o testículo e fixá-lo (orquidopexia) o mais rápido possível para garantir sua viabilidade.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q79",
+            "text": "O que é o sinal de Prehn?",
+            "options": [
+                "É a ausência do reflexo cremastérico.",
+                "É a melhora da dor escrotal com a elevação do testículo, sugestiva de epididimite.",
+                "É a piora da dor escrotal com a elevação do testículo, sugestiva de torção.",
+                "É um ponto azulado visível na pele do escroto (blue dot sign)."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O sinal de Prehn é um achado semiológico: a elevação manual do testículo tende a aliviar a dor na epididimite (Prehn positivo), enquanto na torção testicular, a dor geralmente piora ou não se altera (Prehn negativo). A ausência do reflexo cremastérico (A) é um sinal mais sensível para torção.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q80.1",
+            "text": "O que é a Doença de Hirschsprung?",
+            "options": [
+                "É uma má rotação intestinal.",
+                "É a ausência congénita de células ganglionares nos plexos nervosos do intestino distal, causando uma obstrução funcional.",
+                "É uma estenose do piloro.",
+                "É uma inflamação do intestino."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Também conhecida como megacólon aganglionar congénito, a Doença de Hirschsprung é caracterizada pela ausência de neurónios inibitórios no plexo mioentérico, o que impede o relaxamento do segmento afetado e causa uma obstrução funcional.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q80.2",
+            "text": "Qual o principal sintoma da Doença de Hirschsprung no período neonatal?",
+            "options": [
+                "Diarreia",
+                "Vómitos biliosos",
+                "Atraso na eliminação de mecónio (> 48 horas) e distensão abdominal.",
+                "Icterícia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A falha em eliminar o mecónio nas primeiras 24-48 horas de vida é o sinal de alerta mais importante para a Doença de Hirschsprung, refletindo a obstrução intestinal distal.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q81",
+            "text": "Qual o exame padrão-ouro para o diagnóstico da Doença de Hirschsprung?",
+            "options": [
+                "Enema opaco",
+                "Manometria anorretal",
+                "Biópsia retal mostrando a ausência de células ganglionares",
+                "Radiografia simples de abdómen"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O diagnóstico definitivo da Doença de Hirschsprung é histopatológico, através de uma biópsia retal (por sucção ou cirúrgica) que demonstra a ausência de células ganglionares nos plexos submucoso e mioentérico.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q82",
+            "text": "O que é a Fimose?",
+            "options": [
+                "É a inflamação da glande.",
+                "É a incapacidade de expor a glande devido a um anel prepucial estreito.",
+                "É quando o prepúcio, uma vez retraído, não consegue retornar à sua posição original, causando um garroteamento da glande.",
+                "É a abertura da uretra na face ventral do pénis."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A fimose é a condição em que o prepúcio não pode ser totalmente retraído para trás da glande. É fisiológica na maioria dos lactentes e tende a se resolver espontaneamente. A opção C descreve a parafimose.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q83",
+            "text": "O que é a Parafimose?",
+            "options": [
+                "É a incapacidade de retrair o prepúcio.",
+                "É uma emergência urológica em que o prepúcio fica preso atrás da glande, causando edema e risco de necrose.",
+                "É a inflamação do prepúcio.",
+                "É uma curvatura peniana congénita."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A parafimose é uma condição aguda e dolorosa que requer redução manual ou cirúrgica imediata para evitar a isquemia e necrose da glande.",
+            "tag": "Cirurgia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q84.1",
+            "text": "O que é a Displasia do Desenvolvimento do Quadril (DDQ)?",
+            "options": [
+                "É uma infeção do quadril do recém-nascido.",
+                "É um espectro de anormalidades no desenvolvimento do quadril, que vão da instabilidade e subluxação até a luxação completa da cabeça do fémur.",
+                "É uma necrose avascular da cabeça do fémur.",
+                "É uma inflamação transitória do quadril."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A DDQ abrange todas as formas de desenvolvimento anormal da articulação do quadril, resultando em um relacionamento inadequado entre a cabeça femoral e o acetábulo.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q84.2",
+            "text": "Qual o exame de imagem de escolha para o diagnóstico da DDQ em um lactente de 2 meses?",
+            "options": [
+                "Radiografia da bacia",
+                "Tomografia Computadorizada",
+                "Ultrassonografia de quadris",
+                "Ressonância Magnética"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Em crianças com menos de 4-6 meses, a cabeça do fémur ainda é predominantemente cartilaginosa e não é bem visível na radiografia. A ultrassonografia é o método de imagem de escolha nesta faixa etária, pois permite avaliar tanto as estruturas ósseas quanto as cartilaginosas e a estabilidade da articulação.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q85",
+            "text": "Qual o tratamento para a DDQ diagnosticada em um lactente de 3 meses?",
+            "options": [
+                "Apenas observação.",
+                "Cirurgia de redução aberta.",
+                "Uso do suspensório de Pavlik.",
+                "Imobilização com gesso."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O suspensório de Pavlik é o tratamento de escolha para a DDQ em lactentes até 6 meses. É uma órtese dinâmica que mantém os quadris em flexão e abdução, posição que favorece a redução concêntrica da cabeça femoral e o desenvolvimento normal do acetábulo.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q86.1",
+            "text": "Qual a principal causa de diarreia crônica em crianças com fibrose cística?",
+            "options": [
+                "Intolerância à lactose.",
+                "Doença celíaca associada.",
+                "Insuficiência pancreática exócrina, levando à má absorção de gorduras (esteatorreia).",
+                "Infecções intestinais de repetição."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A fibrose cística causa a obstrução dos ductos pancreáticos com muco espesso, levando à insuficiência pancreática exócrina em 85-90% dos pacientes. A falta de enzimas pancreáticas para digerir as gorduras resulta em esteatorreia (fezes gordurosas, volumosas e malcheirosas) e má absorção.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q86.2",
+            "text": "Qual o tratamento para a insuficiência pancreática na fibrose cística?",
+            "options": [
+                "Dieta isenta de gorduras.",
+                "Transplante de pâncreas.",
+                "Reposição de enzimas pancreáticas por via oral a cada refeição.",
+                "Uso de probióticos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento consiste na reposição oral de enzimas pancreáticas (lipase, protease, amilase) em cápsulas, que devem ser administradas junto com as refeições e lanches para permitir a digestão e absorção adequadas dos nutrientes.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q87",
+            "text": "O que é o aleitamento materno exclusivo?",
+            "options": [
+                "Quando o bebê recebe apenas leite materno e água.",
+                "Quando o bebê recebe leite materno e fórmula infantil.",
+                "Quando o bebê recebe apenas leite materno, direto da mama ou ordenhado, sem outros líquidos ou sólidos, com exceção de medicamentos.",
+                "Quando o bebê mama no peito, mas também usa chupeta."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A definição da OMS para aleitamento materno exclusivo é a oferta apenas de leite materno, sem a inclusão de água, chás ou qualquer outro alimento, sendo recomendado até o sexto mês de vida.",
+            "tag": "Nutrição"
+        },
+        {
+            "id": "PR2-SCA-Q88.1",
+            "text": "Lactente de 4 meses em aleitamento materno exclusivo apresenta fezes com raias de sangue. A criança está em bom estado geral e ganhando peso. Qual a principal hipótese?",
+            "options": [
+                "Gastroenterite bacteriana",
+                "Fissura anal",
+                "Invaginação intestinal",
+                "Proctocolite alérgica induzida por proteína alimentar (ex: leite de vaca)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A proctocolite alérgica é uma inflamação do reto e cólon causada pela passagem de proteínas alimentares da dieta da mãe (principalmente do leite de vaca) para o leite materno. Manifesta-se com sangue nas fezes em um lactente que, fora isso, parece saudável.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q88.2",
+            "text": "Qual a conduta para a proctocolite alérgica em um bebê em aleitamento materno exclusivo?",
+            "options": [
+                "Suspender o aleitamento materno e iniciar fórmula de soja.",
+                "Iniciar antibióticos para o bebê.",
+                "Manter o aleitamento materno e orientar a mãe a fazer uma dieta de exclusão de proteínas do leite de vaca.",
+                "Realizar colonoscopia de urgência."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A conduta é manter o aleitamento materno, que é o melhor alimento para o bebê, e orientar a mãe a excluir completamente o leite de vaca e seus derivados da sua própria dieta. A melhora dos sintomas do bebê confirma o diagnóstico.",
+            "tag": "Gastroenterologia"
+        },
+        {
+            "id": "PR2-SCA-Q89",
+            "text": "A partir de que idade a introdução da alimentação complementar é recomendada?",
+            "options": [
+                "Aos 4 meses.",
+                "Aos 6 meses.",
+                "Quando os primeiros dentes nascem.",
+                "Aos 12 meses."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Sociedade Brasileira de Pediatria e a OMS recomendam o aleitamento materno exclusivo até os 6 meses e a introdução da alimentação complementar a partir desta idade, mantendo o leite materno até os 2 anos ou mais.",
+            "tag": "Nutrição"
+        },
+        {
+            "id": "PR2-SCA-Q90",
+            "text": "Na introdução alimentar, qual grupo de alimentos deve ser o primeiro a ser oferecido?",
+            "options": [
+                "Frutas",
+                "Cereais",
+                "Legumes e carnes",
+                "Não há uma ordem rígida; deve-se oferecer alimentos de todos os grupos, amassados, desde o início."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. As recomendações atuais enfatizam que não há necessidade de seguir uma ordem rígida. A partir dos 6 meses, a criança deve receber uma alimentação variada, incluindo alimentos de todos os grupos (cereais, leguminosas, carnes, tubérculos, legumes, frutas), com a consistência adequada (papa/puré).",
+            "tag": "Nutrição"
+        },
+        {
+            "id": "PR2-SCA-Q91",
+            "text": "O que é o sinal da 'tartaruga' durante o parto?",
+            "options": [
+                "É quando o bebê nasce muito lentamente.",
+                "É um sinal de sofrimento fetal agudo.",
+                "É quando a cabeça do bebê sai, mas retrai de volta contra o períneo, indicando uma distócia de ombro.",
+                "É a apresentação pélvica do feto."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O sinal da tartaruga é um sinal clássico da distócia de ombro, uma emergência obstétrica em que, após a saída da cabeça, o ombro anterior do feto fica impactado atrás da sínfise púbica materna, impedindo a progressão do parto.",
+            "tag": "Obstetrícia"
+        },
+        {
+            "id": "PR2-SCA-Q92",
+            "text": "A distócia de ombro é um fator de risco para qual lesão neurológica no recém-nascido?",
+            "options": [
+                "Paralisia cerebral",
+                "Lesão do nervo facial",
+                "Paralisia do plexo braquial (Paralisia de Erb-Duchenne)",
+                "Lesão medular"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. As manobras realizadas para desimpactar o ombro durante a distócia podem causar o estiramento do plexo braquial, resultando em uma paralisia flácida do membro superior afetado.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q93",
+            "text": "O que é o Apgar e o que ele avalia?",
+            "options": [
+                "É um teste de maturidade neurológica.",
+                "É um índice que avalia a vitalidade do recém-nascido no primeiro e quinto minutos de vida, baseado em cinco parâmetros.",
+                "É uma escala para avaliar a dor no recém-nascido.",
+                "É um teste para diagnosticar asfixia."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O índice de Apgar é uma nota de 0 a 10 atribuída ao RN no 1º e 5º minutos, avaliando Frequência cardíaca, Esforço respiratório, Tônus muscular, Irritabilidade reflexa e Cor. Ele reflete a transição do ambiente intra para o extrauterino, mas não é usado para indicar o início da reanimação.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q94",
+            "text": "O que é a mancha mongólica?",
+            "options": [
+                "É um hematoma causado pelo parto.",
+                "É uma lesão pré-cancerosa.",
+                "É uma mácula azul-acinzentada, benigna, geralmente na região lombossacra, comum em recém-nascidos de pele mais escura.",
+                "É um sinal de doença genética."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A mancha mongólica (melanocitose dérmica congénita) é uma lesão pigmentar benigna, presente ao nascimento, que tende a desaparecer espontaneamente nos primeiros anos de vida.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q95",
+            "text": "O que é o eritema tóxico do recém-nascido?",
+            "options": [
+                "É uma reação alérgica grave.",
+                "É uma infecção de pele bacteriana.",
+                "É uma erupção cutânea benigna e autolimitada, muito comum em recém-nascidos, caracterizada por pápulas e pústulas sobre uma base eritematosa.",
+                "É uma queimadura química."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O eritema tóxico é a erupção pustular mais comum no período neonatal. Apesar do nome, não é tóxico nem infeccioso, e desaparece sem tratamento em poucos dias.",
+            "tag": "Neonatologia"
+        },
+        {
+            "id": "PR2-SCA-Q96",
+            "text": "Qual a principal causa de morte em crianças de 1 a 4 anos no Brasil?",
+            "options": [
+                "Doenças infecciosas",
+                "Câncer",
+                "Causas externas (acidentes e violências)",
+                "Malformações congénitas"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A partir do primeiro ano de vida, as causas externas, como afogamentos, acidentes de trânsito, quedas e queimaduras, tornam-se a principal causa de mortalidade na infância e adolescência, superando as causas naturais.",
+            "tag": "Prevenção de Acidentes"
+        },
+        {
+            "id": "PR2-SCA-Q97.1",
+            "text": "Criança de 2 anos é trazida à emergência após episódio de engasgo súbito enquanto comia amendoim, seguido de tosse, dispneia e sibilância unilateral. Qual a principal hipótese?",
+            "options": [
+                "Crise de asma",
+                "Pneumonia",
+                "Aspiração de corpo estranho",
+                "Laringite"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A história de um episódio súbito de engasgo e asfixia em uma criança pequena, seguido de sintomas respiratórios como tosse e sibilância, é altamente sugestiva de aspiração de corpo estranho para a via aérea.",
+            "tag": "Pneumologia"
+        },
+        {
+            "id": "PR2-SCA-Q97.2",
+            "text": "Qual o exame padrão-ouro para o diagnóstico e tratamento da aspiração de corpo estranho?",
+            "options": [
+                "Raio-X de tórax",
+                "Tomografia de tórax",
+                "Laringoscopia",
+                "Broncoscopia rígida"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A broncoscopia rígida, realizada sob anestesia geral no centro cirúrgico, é o procedimento de escolha tanto para confirmar a presença do corpo estranho na via aérea quanto para a sua remoção segura.",
+            "tag": "Pneumologia"
+        },
+        {
+            "id": "PR2-SCA-Q98",
+            "text": "O que é a manobra de Heimlich?",
+            "options": [
+                "É uma manobra para reanimação cardiopulmonar.",
+                "É uma manobra para desobstrução de via aérea por corpo estranho em crianças maiores de 1 ano e adultos.",
+                "É uma manobra para reduzir uma luxação de ombro.",
+                "É uma manobra para avaliar a estabilidade do joelho."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A manobra de Heimlich consiste em compressões abdominais subdiafragmáticas para criar uma tosse artificial e expelir o corpo estranho que está a obstruir a via aérea.",
+            "tag": "Primeiros Socorros"
+        },
+        {
+            "id": "PR2-SCA-Q99",
+            "text": "Qual a conduta para a desobstrução de via aérea em um lactente (< 1 ano) consciente?",
+            "options": [
+                "Manobra de Heimlich.",
+                "Varredura digital às cegas.",
+                "5 tapas nas costas seguidos de 5 compressões torácicas.",
+                "Apenas estimular a tosse."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Em lactentes conscientes com obstrução grave, a manobra recomendada é a alternância de 5 tapas na região interescapular (com o bebê em decúbito ventral, apoiado no antebraço) seguidos de 5 compressões torácicas (semelhantes à da massagem cardíaca).",
+            "tag": "Primeiros Socorros"
+        },
+        {
+            "id": "PR2-SCA-Q100.1",
+            "text": "Qual das seguintes afirmações sobre a vacina BCG é FALSA?",
+            "options": [
+                "É uma vacina de bactéria atenuada.",
+                "Protege principalmente contra as formas graves de tuberculose (miliar e meníngea).",
+                "É contraindicada em recém-nascidos com peso inferior a 2 kg.",
+                "A ausência de cicatriz vacinal após a aplicação indica falha vacinal e a necessidade de revacinação."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa falsa (e, portanto, a correta) é a D. De acordo com as normas atuais do Ministério da Saúde, a ausência de cicatriz após a vacinação com BCG não é mais considerada indicação de revacinação, pois não significa necessariamente ausência de proteção.",
+            "tag": "Imunizações"
+        },
+        {
+            "id": "PR2-SCA-Q100.2",
+            "text": "Qual a via de administração da vacina BCG?",
+            "options": [
+                "Intramuscular",
+                "Subcutânea",
+                "Intradérmica",
+                "Oral"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A vacina BCG deve ser administrada por via intradérmica, na inserção inferior do músculo deltoide direito, para garantir a formação da pápula e a resposta imunológica adequada.",
+            "tag": "Imunizações"
+        },
+        {
+            "id": "PR2-SCA-Q101",
+            "text": "A vacina contra o Rotavírus pode estar associada a um risco aumentado, embora muito pequeno, de qual evento adverso?",
+            "options": [
+                "Convulsão febril",
+                "Reação alérgica grave (anafilaxia)",
+                "Invaginação intestinal",
+                "Encefalite"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Estudos de vigilância pós-comercialização demonstraram uma pequena associação temporal entre a vacinação contra o rotavírus e um risco ligeiramente aumentado de invaginação intestinal, especialmente após a primeira dose. Apesar disso, o benefício da vacina em prevenir a doença grave supera em muito este risco.",
+            "tag": "Imunizações"
+        },
+        {
+            "id": "PR2-SCA-Q102",
+            "text": "A vacina DTPa (tríplice bacteriana acelular) é preferível à DTPw (células inteiras) em quais situações?",
+            "options": [
+                "Em todas as crianças, por ser mais barata.",
+                "Em crianças que apresentaram eventos adversos graves à dose anterior de DTPw, como convulsão ou episódio hipotônico-hiporresponsivo.",
+                "Apenas para o reforço dos 4 anos.",
+                "A DTPw não é mais utilizada."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A vacina DTPa tem uma menor reatogenicidade (causa menos febre, dor local e choro) que a DTPw. Ela está disponível nos Centros de Referência para Imunobiológicos Especiais (CRIE) para crianças que tiveram reações graves à vacina de células inteiras.",
+            "tag": "Imunizações"
+        },
+        {
+            "id": "PR2-SCA-Q103",
+            "text": "O que é a doença do soro?",
+            "options": [
+                "Uma reação alérgica imediata tipo I.",
+                "Uma reação de hipersensibilidade tipo III, mediada por imunocomplexos, que ocorre dias após a exposição a uma proteína estranha.",
+                "Uma reação autoimune.",
+                "Uma reação cutânea a um medicamento."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A doença do soro é uma reação sistémica causada pela deposição de imunocomplexos (antígeno-anticorpo) nos vasos sanguíneos, articulações e rins. Clinicamente, manifesta-se com febre, urticária, artralgia e linfadenopatia, cerca de 1 a 3 semanas após a exposição ao agente causal (ex: soro heterólogo, alguns medicamentos).",
+            "tag": "Imunologia"
+        },
+        {
+            "id": "PR2-SCA-Q104",
+            "text": "Qual o principal diagnóstico diferencial da artrite séptica do quadril em crianças?",
+            "options": [
+                "Doença de Legg-Calvé-Perthes",
+                "Sinovite transitória do quadril",
+                "Epifisiólise",
+                "Artrite Idiopática Juvenil"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Sinovite Transitória do Quadril é a principal condição a ser diferenciada da artrite séptica, pois ambas cursam com dor, claudicação e limitação de movimento. A artrite séptica, no entanto, geralmente apresenta um quadro sistémico mais exuberante (febre mais alta, PCR e VHS mais elevados) e requer tratamento de urgência.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q105",
+            "text": "Os critérios de Kocher são utilizados para:",
+            "options": [
+                "Diagnosticar a Doença de Kawasaki.",
+                "Avaliar o risco de displasia do quadril.",
+                "Diferenciar a artrite séptica da sinovite transitória do quadril.",
+                "Classificar a gravidade da asma."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Os critérios de Kocher são um algoritmo preditivo baseado em quatro variáveis clínicas e laboratoriais (febre > 38,5°C, incapacidade de suportar peso, VHS > 40 mm/h e leucocitose > 12.000) para estimar a probabilidade de uma criança com quadril irritável ter artrite séptica.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q106",
+            "text": "O que é a Doença de Osgood-Schlatter?",
+            "options": [
+                "É uma fratura da tíbia.",
+                "É uma apofisite da tuberosidade anterior da tíbia, causada por tração repetitiva do tendão patelar durante a fase de crescimento.",
+                "É uma necrose avascular do joelho.",
+                "É uma lesão do menisco."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Doença de Osgood-Schlatter é uma causa comum de dor no joelho em adolescentes ativos. É uma osteocondrose de tração, onde o esforço repetitivo causa inflamação e microfraturas na inserção do tendão patelar na tuberosidade tibial, que ainda está em crescimento.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q107",
+            "text": "Qual a principal causa de puberdade precoce central?",
+            "options": [
+                "Tumores do SNC",
+                "Idiopática",
+                "Hiperplasia adrenal congénita",
+                "Tumores produtores de gonadotrofinas"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Puberdade Precoce Central (dependente de GnRH) é causada pela ativação prematura do eixo hipotálamo-hipófise-gonadal. Na grande maioria das meninas (cerca de 90% dos casos), nenhuma causa subjacente é encontrada, sendo classificada como idiopática.",
+            "tag": "Endocrinologia"
+        },
+        {
+            "id": "PR2-SCA-Q108",
+            "text": "O que é o teste de estímulo com GnRH (ou análogo) e para que serve?",
+            "options": [
+                "Serve para diagnosticar o hipotireoidismo.",
+                "Serve para diferenciar a puberdade precoce central da periférica.",
+                "Serve para avaliar a reserva de hormona de crescimento.",
+                "Serve para diagnosticar o diabetes."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. No teste, a administração de um análogo do GnRH estimula a hipófise. Na puberdade precoce central, onde o eixo está maduro, haverá uma resposta com pico de LH em níveis puberais. Na puberdade precoce periférica (independente de GnRH), o eixo está suprimido e não haverá resposta do LH.",
+            "tag": "Endocrinologia"
+        },
+        {
+            "id": "PR2-SCA-Q109",
+            "text": "Qual o tratamento para a puberdade precoce central?",
+            "options": [
+                "Apenas observação.",
+                "Cirurgia para remover a hipófise.",
+                "Uso de análogos do GnRH de ação prolongada para bloquear o eixo hipotálamo-hipófise-gonadal.",
+                "Uso de estrogénio ou testosterona."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento visa bloquear a progressão da puberdade e preservar o potencial de estatura final. Os análogos de GnRH de depósito (ex: leuprorrelina) causam uma dessensibilização da hipófise, suprimindo a produção de LH e FSH e, consequentemente, a produção de esteroides sexuais.",
+            "tag": "Endocrinologia"
+        },
+        {
+            "id": "PR2-SCA-Q110",
+            "text": "Qual a principal causa de baixa estatura de origem endócrina na infância?",
+            "options": [
+                "Deficiência de hormona de crescimento (GH)",
+                "Hipotireoidismo",
+                "Síndrome de Cushing",
+                "Puberdade precoce"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O hipotireoidismo congénito ou adquirido é uma causa importante de desaceleração do crescimento e baixa estatura em crianças. É fundamental descartá-lo em qualquer criança com baixa velocidade de crescimento, pois o tratamento com reposição hormonal reverte o quadro.",
+            "tag": "Endocrinologia"
+        },
+        {
+            "id": "PR2-SCA-Q111",
+            "text": "O que é a idade óssea e para que serve?",
+            "options": [
+                "É a idade cronológica da criança.",
+                "É uma estimativa da maturidade esquelética, avaliada por uma radiografia da mão e punho, que ajuda a prever o potencial de crescimento restante.",
+                "É usada para diagnosticar fraturas.",
+                "Mede a densidade mineral óssea."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A idade óssea é uma medida do desenvolvimento biológico. Compará-la com a idade cronológica e a estatura da criança é fundamental na avaliação dos distúrbios de crescimento, pois uma idade óssea atrasada indica maior potencial de crescimento, enquanto uma idade óssea avançada indica o contrário.",
+            "tag": "Endocrinologia"
+        },
+        {
+            "id": "PR2-SCA-Q112.1",
+            "text": "Qual a principal causa de morte por doença na adolescência?",
+            "options": [
+                "Causas externas (acidentes, violência, suicídio)",
+                "Câncer",
+                "Doenças infecciosas",
+                "Doenças cardíacas"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. As causas externas são a principal causa de mortalidade em adolescentes e adultos jovens. A combinação de comportamentos de risco, impulsividade e desenvolvimento do cérebro contribui para esta estatística.",
+            "tag": "Adolescência"
+        },
+        {
+            "id": "PR2-SCA-Q112.2",
+            "text": "O que é a escala de Tanner?",
+            "options": [
+                "Avalia o desenvolvimento neurológico.",
+                "Avalia o risco de suicídio.",
+                "É uma escala que classifica os estágios de maturação sexual (desenvolvimento de mamas, genitais e pelos pubianos) durante a puberdade.",
+                "Mede o índice de massa corporal."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A escala de Tanner é uma ferramenta universalmente utilizada para estadiar o desenvolvimento puberal em 5 estágios, permitindo uma avaliação objetiva da progressão da puberdade.",
+            "tag": "Adolescência"
+        },
+        {
+            "id": "PR2-SCA-Q113.1",
+            "text": "Qual o primeiro sinal de puberdade em meninas?",
+            "options": [
+                "Menarca (primeira menstruação)",
+                "Surgimento de pelos pubianos (pubarca)",
+                "Surgimento do broto mamário (telarca)",
+                "Estirão de crescimento"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O aparecimento do broto mamário (telarca) é o primeiro sinal físico do início da puberdade na maioria das meninas.",
+            "tag": "Adolescência"
+        },
+        {
+            "id": "PR2-SCA-Q113.2",
+            "text": "Qual o primeiro sinal de puberdade em meninos?",
+            "options": [
+                "Surgimento de pelos pubianos",
+                "Aumento do volume testicular (≥ 4 mL)",
+                "Mudança da voz",
+                "Aumento do pênis"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O aumento do volume testicular, avaliado com o orquidómetro de Prader, é o primeiro sinal do início da puberdade em meninos.",
+            "tag": "Adolescência"
+        },
+        {
+            "id": "PR2-SCA-Q114",
+            "text": "O que é a ginecomastia puberal?",
+            "options": [
+                "É um sinal de doença hepática.",
+                "É o desenvolvimento de tecido mamário em meninos durante a puberdade, geralmente benigno e transitório.",
+                "É um tumor da glândula adrenal.",
+                "É o acúmulo de gordura na região peitoral (lipomastia)."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A ginecomastia puberal é muito comum, causada por um desequilíbrio temporário entre os níveis de estrogénio e androgénio. Geralmente regride espontaneamente em 1 a 2 anos.",
+            "tag": "Adolescência"
+        },
+        {
+            "id": "PR2-SCA-Q115",
+            "text": "A escoliose idiopática do adolescente é mais comum em qual sexo e qual o tipo de curva mais frequente?",
+            "options": [
+                "Meninos; curva lombar esquerda.",
+                "Meninas; curva torácica direita.",
+                "Meninos; curva toracolombar.",
+                "Meninas; curva cervical."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A escoliose idiopática do adolescente é significativamente mais comum em meninas, especialmente as curvas que progridem e necessitam de tratamento. O padrão de curva mais comum é a torácica com convexidade para a direita.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q116",
+            "text": "O que é o teste de Adams?",
+            "options": [
+                "É um teste para avaliar a flexibilidade da coluna.",
+                "É uma manobra de triagem para a escoliose, onde se observa a presença de uma gibosidade (assimetria do dorso) com o paciente fletido para a frente.",
+                "É um teste para medir o comprimento dos membros inferiores.",
+                "É um teste para avaliar a força muscular do tronco."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O teste de flexão do tronco para a frente (manobra de Adams) é o principal método de rastreio para a escoliose. A rotação dos corpos vertebrais, que acompanha a curvatura lateral, torna a caixa torácica assimétrica, criando uma proeminência (giba ou gibosidade) de um lado das costas.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q117.1",
+            "text": "Criança de 10 anos com dor óssea, febre e perda de peso. Raio-X mostra lesão lítica, permeativa, com reação periosteal em 'casca de cebola' na diáfise do fémur. Qual o diagnóstico mais provável?",
+            "options": [
+                "Osteossarcoma",
+                "Sarcoma de Ewing",
+                "Cisto ósseo aneurismático",
+                "Osteomielite crônica"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O Sarcoma de Ewing é um tumor ósseo maligno altamente agressivo que afeta crianças e adolescentes. A apresentação com dor, febre e sinais sistémicos, associada a uma lesão lítica na diáfise de ossos longos com a clássica reação periosteal lamelar ('casca de cebola'), é a imagem típica da doença.",
+            "tag": "Oncologia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q117.2",
+            "text": "Qual o tratamento para o Sarcoma de Ewing?",
+            "options": [
+                "Apenas cirurgia.",
+                "Apenas radioterapia.",
+                "Quimioterapia neoadjuvante, seguida de cirurgia e/ou radioterapia, e depois quimioterapia adjuvante.",
+                "Observação."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento do Sarcoma de Ewing é multimodal. Envolve quimioterapia sistémica para tratar a doença sistémica (micro-metástases) e reduzir o tumor primário, seguida de controlo local com cirurgia de ressecção e/ou radioterapia.",
+            "tag": "Oncologia Pediátrica"
+        },
+        {
+            "id": "PR2-SCA-Q118",
+            "text": "Qual o tumor ósseo maligno primário mais comum em crianças e adolescentes?",
+            "options": [
+                "Sarcoma de Ewing",
+                "Condrossarcoma",
+                "Osteossarcoma",
+                "Mieloma Múltiplo"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O Osteossarcoma é o câncer ósseo primário mais frequente na faixa etária pediátrica, ocorrendo tipicamente na metáfise de ossos longos (especialmente ao redor do joelho) durante o estirão de crescimento da adolescência.",
+            "tag": "Oncologia Pediátrica"
+        }
+    ]
+},
+  {
+    id: "preset-m7-pr2-otorrino",
+    name: "Estácio - M7 - PR2 - Otorrinolaringologia",
+    questions: [
+        {
+            "id": "PR2-Otorrino-Q1",
+            "text": "Abaulamento súbito, isolado de uma das glândulas salivares, principalmente da submandibular; desencadeado durante a alimentação, geralmente indolor, sem sinais flogísticos. À oroscopia, detectou-se pequena tumefação e a região de ducto de glândula submandibular. Essa descrição sugere:",
+            "options": [
+                "Cistos de glândulas salivares",
+                "Síndrome de Sjogren",
+                "Mucocele de glândula salivar menor",
+                "Sialolitíase"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O quadro de abaulamento de glândula salivar que ocorre durante a alimentação (estímulo salivar) é o sintoma clássico da sialolitíase, que é a obstrução do ducto salivar por um cálculo. A dor, quando presente, é do tipo cólica. Cistos (A) e mucocele (C) não têm essa relação direta com a alimentação. Síndrome de Sjogren (B) causa xerostomia (boca seca), e não obstrução.",
+            "tag": "Glândulas Salivares"
+        },
+        {
+            "id": "PR2-Otorrino-Q2",
+            "text": "Feminino, 50 anos, apresentando vertigem há 1 dia, acompanhada de náuseas, além da sensação de plenitude auricular e zumbidos. Relata que já teve outras episódios semelhantes anteriormente. Ao exame observa-se otoscopia normal. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "VPPB",
+                "Neurite vestibular",
+                "Migrânea vestibular",
+                "Doença de Ménière"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A tríade de vertigem episódica, zumbido e sensação de plenitude aural (ouvido cheio) é a apresentação clássica da Doença de Ménière. A VPPB (A) é uma vertigem posicional, sem os outros sintomas. A Neurite vestibular (B) é uma crise vertiginosa única e intensa, sem sintomas auditivos. A migrânea vestibular (C) está associada à cefaleia.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q3",
+            "text": "No caso de suspeita de Doença de Ménière da questão anterior, qual a melhor maneira de confirmar a hipótese diagnóstica?",
+            "options": [
+                "Realizar manobra de Dix-Hallpike",
+                "Realizar eletrococleografia",
+                "Realizar Tomografia Computadorizada de mastoides",
+                "Realizar Ressonância Magnética de encéfalo"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O diagnóstico da Doença de Ménière é clínico, mas a eletrococleografia é o exame que pode confirmá-lo ao detectar a hidropsia endolinfática (aumento da pressão dos fluidos da orelha interna), mostrando um aumento da relação entre o potencial de somação e o potencial de ação (PS/PA). A manobra de Dix-Hallpike (A) é para VPPB.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q4",
+            "text": "Paciente de 8 anos, trazido pela mãe com história de respiração bucal, roncos noturnos e agitação durante o sono. A principal hipótese diagnóstica é:",
+            "options": [
+                "Rinite alérgica",
+                "Hipertrofia adenoamigdaliana",
+                "Desvio de septo nasal",
+                "Laringomalácia"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Em crianças, a principal causa de obstrução nasal crônica, respiração bucal e distúrbios respiratórios do sono (roncos, apneia) é a hipertrofia das tonsilas faríngeas (adenoide) e palatinas (amígdalas).",
+            "tag": "Obstrução Nasal"
+        },
+        {
+            "id": "PR2-Otorrino-Q5",
+            "text": "Em um paciente com paralisia facial periférica, qual das seguintes afirmações está correta?",
+            "options": [
+                "A fronte é poupada, com movimentação normal da sobrancelha.",
+                "O paciente consegue fechar o olho do lado afetado.",
+                "Ocorre desvio da comissura labial para o lado são (não paralisado).",
+                "O sulco nasolabial fica mais acentuado do lado paralisado."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Na paralisia facial periférica, toda a hemiface do lado afetado fica paralisada. A musculatura do lado são, sem a oposição da musculatura do lado doente, 'puxa' a boca, causando o desvio da comissura labial para o lado contralateral à lesão.",
+            "tag": "Nervo Facial"
+        },
+        {
+            "id": "PR2-Otorrino-Q6",
+            "text": "Qual o principal agente etiológico da Otite Média Aguda (OMA)?",
+            "options": [
+                "Pseudomonas aeruginosa",
+                "Staphylococcus aureus",
+                "Streptococcus pneumoniae",
+                "Moraxella catarrhalis"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O Streptococcus pneumoniae (Pneumococo) é o principal agente bacteriano causador da Otite Média Aguda em todas as faixas etárias, seguido pelo Haemophilus influenzae não tipável.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q7",
+            "text": "Criança de 3 anos com febre alta, odinofagia intensa, sialorreia e estridor inspiratório, que adota a 'posição de tripé'. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Laringite viral (crupe)",
+                "Epiglotite aguda",
+                "Abscesso periamigdaliano",
+                "Laringomalácia"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A epiglotite aguda é uma emergência infecciosa (geralmente por Haemophilus influenzae tipo b) que causa inflamação e edema da epiglote, levando a um quadro de obstrução respiratória alta grave. A aparência toxemiada, febre alta, sialorreia (não consegue engolir) e a posição de tripé para facilitar a respiração são características clássicas.",
+            "tag": "Laringologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q8",
+            "text": "Qual das seguintes é a complicação mais temida da otite média aguda?",
+            "options": [
+                "Perfuração timpânica",
+                "Mastoidite aguda",
+                "Perda auditiva condutiva temporária",
+                "Labirintite"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A mastoidite aguda é a complicação mais comum e temida da OMA. Ocorre quando a infecção se dissemina da orelha média para as células aéreas da mastoide, podendo levar a complicações intracranianas graves, como abscesso cerebral e meningite.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q9",
+            "text": "Qual a tríade de sintomas da Doença de Ménière?",
+            "options": [
+                "Vertigem, cefaleia e fotofobia.",
+                "Zumbido, otalgia e febre.",
+                "Vertigem, zumbido e perda auditiva flutuante.",
+                "Otorreia, hipoacusia e paralisia facial."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A tríade clássica que define a Doença de Ménière é composta por episódios de vertigem rotatória, zumbido e perda auditiva neurossensorial flutuante, frequentemente acompanhada de sensação de plenitude aural.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q10",
+            "text": "A manobra de Dix-Hallpike é utilizada para diagnosticar qual condição?",
+            "options": [
+                "Doença de Ménière",
+                "Neurite Vestibular",
+                "Vertigem Posicional Paroxística Benigna (VPPB)",
+                "Migrânea Vestibular"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A manobra de Dix-Hallpike é o teste provocativo padrão-ouro para o diagnóstico da VPPB, principalmente do canal semicircular posterior. A manobra visa deslocar os otólitos dentro do canal e reproduzir a vertigem e o nistagmo característicos.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q11",
+            "text": "O que são as linhas de Beau, observadas nas unhas?",
+            "options": [
+                "São manchas brancas que indicam deficiência de cálcio.",
+                "São sulcos transversais que indicam uma interrupção temporária no crescimento da unha devido a uma doença sistêmica grave.",
+                "São estrias longitudinais comuns com o envelhecimento.",
+                "São pequenas depressões puntiformes associadas à psoríase."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. As linhas de Beau são depressões transversais que surgem na base da unha e avançam com o seu crescimento. Elas representam uma parada temporária na atividade da matriz ungueal, que pode ser causada por doenças sistêmicas agudas, febre alta, quimioterapia ou trauma.",
+            "tag": "Semiologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q12",
+            "text": "Qual o tratamento de primeira escolha para a Vertigem Posicional Paroxística Benigna (VPPB)?",
+            "options": [
+                "Medicamentos anti-vertiginosos (ex: betaistina).",
+                "Manobra de reposicionamento canalicular (ex: Manobra de Epley).",
+                "Cirurgia para remover os otólitos.",
+                "Repouso absoluto e restrição de movimentos da cabeça."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O tratamento da VPPB é mecânico e não medicamentoso. Consiste em realizar manobras de reposicionamento, como a de Epley, que utilizam a gravidade para mover os otólitos deslocados do canal semicircular de volta para o utrículo, resolvendo os sintomas.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q13",
+            "text": "Qual o principal objetivo da adenoamigdalectomia em crianças?",
+            "options": [
+                "Melhorar a audição.",
+                "Prevenir infecções de garganta.",
+                "Tratar a obstrução da via aérea superior e a apneia do sono.",
+                "Corrigir a respiração bucal por estética."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A principal indicação para a cirurgia de adenoamigdalectomia em crianças é o tratamento dos distúrbios respiratórios do sono (roncos, pausas respiratórias, sono agitado) causados pela obstrução mecânica da via aérea pela hipertrofia dos tecidos.",
+            "tag": "Cirurgia"
+        },
+        {
+            "id": "PR2-Otorrino-Q14.1",
+            "text": "Qual o tratamento para um abscesso periamigdaliano?",
+            "options": [
+                "Apenas antibioticoterapia oral.",
+                "Gargarejos com anti-inflamatórios.",
+                "Drenagem cirúrgica (punção ou incisão) associada à antibioticoterapia.",
+                "Amigdalectomia de urgência."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento do abscesso periamigdaliano é mandatoriamente a drenagem do pus acumulado, seja por punção com agulha ou por incisão, associada a antibióticos para tratar a infecção. A amigdalectomia pode ser considerada, mas não é a primeira abordagem de urgência.",
+            "tag": "Faringe"
+        },
+        {
+            "id": "PR2-Otorrino-Q14.2",
+            "text": "Qual o principal sinal clínico do abscesso periamigdaliano?",
+            "options": [
+                "Tosse seca persistente.",
+                "Abaulamento do pilar amigdaliano anterior com desvio da úvula para o lado contralateral.",
+                "Presença de placas brancas em ambas as amígdalas.",
+                "Dor que piora ao deitar."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O acúmulo de pus no espaço periamigdaliano causa um abaulamento visível do palato mole e do pilar anterior, empurrando a amígdala e a úvula para o lado oposto. O trismo (dificuldade de abrir a boca) e a voz 'abatatada' também são característicos.",
+            "tag": "Faringe"
+        },
+        {
+            "id": "PR2-Otorrino-Q15",
+            "text": "Qual a definição de Rinossinusite Crônica?",
+            "options": [
+                "Qualquer quadro de sinusite que dura mais de 4 semanas.",
+                "Presença de 4 ou mais episódios de sinusite aguda por ano.",
+                "Inflamação dos seios paranasais que persiste por 12 semanas ou mais.",
+                "Sinusite que não melhora com o primeiro ciclo de antibiótico."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Rinossinusite Crônica é definida pela presença de sinais e sintomas de inflamação sinusal (obstrução nasal, rinorreia, dor facial, hiposmia) por um período contínuo de 12 semanas ou mais.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q16.1",
+            "text": "Paciente de 10 anos com otalgia e febre há 3 dias. Otoscopia: membrana timpânica abaulada, hiperemiada e opaca. Qual o tratamento de escolha?",
+            "options": [
+                "Apenas observação por 48-72h.",
+                "Analgésicos e anti-inflamatórios.",
+                "Amoxicilina.",
+                "Ciprofloxacino tópico."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A amoxicilina em dose alta é o antibiótico de primeira escolha para o tratamento da Otite Média Aguda (OMA) bacteriana não complicada em crianças, devido à sua eficácia contra o pneumococo.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q16.2",
+            "text": "No caso de falha terapêutica da amoxicilina na OMA, qual a próxima escolha de antibiótico?",
+            "options": [
+                "Aumentar a dose de amoxicilina.",
+                "Trocar para cefalexina.",
+                "Adicionar um macrolídeo como a azitromicina.",
+                "Trocar para amoxicilina com clavulanato."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A falha da amoxicilina geralmente ocorre por bactérias produtoras de beta-lactamase, como o H. influenzae e a M. catarrhalis. A adição do clavulanato (um inibidor de beta-lactamase) à amoxicilina amplia o espectro e supera essa resistência.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q17",
+            "text": "Qual a principal causa de epistaxe (sangramento nasal) em crianças e adultos jovens?",
+            "options": [
+                "Hipertensão arterial.",
+                "Tumor nasossinusal.",
+                "Trauma digital (manipulação nasal) e ressecamento da mucosa na área de Kiesselbach.",
+                "Uso de anticoagulantes."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A grande maioria das epistaxes anteriores origina-se no plexo de Kiesselbach, uma área ricamente vascularizada no septo nasal anterior. O trauma digital e o ressecamento da mucosa são os principais fatores que causam a ruptura desses vasos.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q18",
+            "text": "Qual o procedimento de primeira linha para controlar uma epistaxe anterior ativa que não cede à compressão digital?",
+            "options": [
+                "Tampão nasal posterior.",
+                "Embolização arterial.",
+                "Cauterização química (com nitrato de prata) ou elétrica do ponto sangrante.",
+                "Cirurgia para ligadura arterial."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Se o ponto de sangramento no plexo de Kiesselbach for visível, a cauterização (química ou elétrica) é um método rápido, eficaz e de primeira linha para estancar o sangramento.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q19",
+            "text": "Em um paciente com história de longa data de obstrução nasal unilateral, rinorreia purulenta fétida e unilateral, qual diagnóstico deve ser considerado?",
+            "options": [
+                "Rinite alérgica.",
+                "Corpo estranho nasal retido.",
+                "Pólipo nasal.",
+                "Sinusite fúngica alérgica."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A presença de sintomas unilaterais, especialmente rinorreia purulenta e fétida, em uma criança ou mesmo em um adulto, é altamente sugestiva de um corpo estranho retido na cavidade nasal, que leva a uma reação inflamatória e infecciosa local.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q20",
+            "text": "O que caracteriza a Otite Média Crônica Colesteatomatosa?",
+            "options": [
+                "É uma inflamação aguda da orelha média com efusão.",
+                "É a presença de uma perfuração timpânica central seca.",
+                "É a presença de pele (epitélio escamoso queratinizado) na orelha média, que tem comportamento destrutivo.",
+                "É a fibrose da membrana timpânica (timpanoesclerose)."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O colesteatoma é um cisto de pele que cresce na orelha média. Apesar de benigno histologicamente, tem um comportamento agressivo, causando erosão óssea e destruição das estruturas adjacentes, podendo levar a complicações graves. A otorreia fétida é um sintoma comum.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q21.1",
+            "text": "Qual o tratamento para a Otite Média Crônica Colesteatomatosa?",
+            "options": [
+                "Antibióticos orais por longo período.",
+                "Gotas otológicas de antibiótico.",
+                "Aparelho auditivo.",
+                "Cirúrgico (timpanomastoidectomia) para remover todo o colesteatoma."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O tratamento do colesteatoma é sempre cirúrgico. O objetivo é a erradicação completa do tecido doente para prevenir a recorrência e as complicações, e, secundariamente, tentar reconstruir o mecanismo de audição.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q21.2",
+            "text": "Na Otite Média Crônica Colesteatomatosa, qual o tipo mais comum de perda auditiva encontrada?",
+            "options": [
+                "Neurossensorial",
+                "Condutiva ou Mista",
+                "Central",
+                "Funcional"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O colesteatoma destrói a cadeia ossicular (martelo, bigorna e estribo), que é responsável pela transmissão mecânica do som. Isso causa uma perda auditiva do tipo condutiva. Se houver lesão da cóclea por toxinas, a perda pode se tornar mista.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q22",
+            "text": "Qual é a definição de surdez súbita?",
+            "options": [
+                "Qualquer perda auditiva que se instala em menos de 24 horas.",
+                "Perda auditiva neurossensorial de pelo menos 30 dB em pelo menos 3 frequências consecutivas, que ocorre em até 72 horas.",
+                "Perda auditiva condutiva após um trauma acústico.",
+                "Zumbido intenso de início abrupto."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A surdez súbita é definida por esses critérios audiométricos específicos (perda neurossensorial de 30 dB ou mais, em 3 ou mais frequências contíguas, com instalação em até 3 dias). É considerada uma emergência médica.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q23",
+            "text": "Qual o tratamento inicial para a surdez súbita idiopática?",
+            "options": [
+                "Observação e repouso.",
+                "Aparelho auditivo de adaptação imediata.",
+                "Corticoides sistêmicos em altas doses.",
+                "Antibióticos e antivirais."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Embora a causa seja muitas vezes desconhecida, a terapia com corticoides sistêmicos (oral ou intravenoso) em altas doses é o tratamento de primeira linha para a surdez súbita idiopática, devendo ser iniciado o mais precocemente possível para aumentar as chances de recuperação auditiva.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q24.1",
+            "text": "Paciente de 60 anos, tabagista e etilista, com rouquidão há mais de 3 meses e um linfonodo cervical endurecido. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Laringite crônica por refluxo.",
+                "Nódulo vocal.",
+                "Pólipo de prega vocal.",
+                "Câncer de laringe."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Rouquidão persistente (disfonia) por mais de 2-3 semanas em um paciente com fatores de risco como tabagismo e etilismo é um sinal de alerta para câncer de laringe e exige investigação com laringoscopia. O linfonodo cervical suspeito reforça essa hipótese.",
+            "tag": "Laringologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q24.2",
+            "text": "Qual exame é mandatório para a investigação da rouquidão persistente no caso da questão anterior?",
+            "options": [
+                "Tomografia de pescoço.",
+                "Ultrassonografia de tireoide.",
+                "Laringoscopia (direta ou indireta).",
+                "Raio-X de tórax."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A visualização direta das pregas vocais através da laringoscopia (seja com espelho, endoscópio flexível ou rígido) é o exame fundamental e obrigatório para avaliar a anatomia e a mobilidade da laringe e identificar a causa da disfonia.",
+            "tag": "Laringologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q25",
+            "text": "Qual o tipo histológico mais comum do câncer de laringe?",
+            "options": [
+                "Adenocarcinoma",
+                "Linfoma",
+                "Carcinoma de células escamosas (CEC)",
+                "Sarcoma"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Mais de 90% dos tumores malignos da laringe são carcinomas de células escamosas (ou espinocelular), diretamente relacionados à exposição da mucosa ao tabaco e ao álcool.",
+            "tag": "Laringologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q26",
+            "text": "O que é o teste de Weber na avaliação audiológica?",
+            "options": [
+                "Compara a audição do paciente com a do examinador.",
+                "Compara a via aérea com a via óssea no mesmo ouvido.",
+                "Verifica para qual lado o som de um diapasão na linha média lateraliza.",
+                "Mede a pressão da orelha média."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. No teste de Weber, o diapasão vibrando é colocado na linha média da cabeça do paciente. Em uma perda condutiva, o som lateraliza para o ouvido doente. Em uma perda neurossensorial, lateraliza para o ouvido são.",
+            "tag": "Audiologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q27",
+            "text": "O que é o teste de Rinne?",
+            "options": [
+                "Verifica a lateralização do som na linha média.",
+                "Compara a condução do som pela via aérea com a condução pela via óssea.",
+                "Avalia a presença de nistagmo posicional.",
+                "Mede a complacência da membrana timpânica."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O teste de Rinne compara o tempo que o paciente ouve o som do diapasão por via aérea (perto do meato acústico) e por via óssea (no mastoide). Um Rinne negativo (via óssea melhor que aérea) é indicativo de perda auditiva condutiva.",
+            "tag": "Audiologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q28",
+            "text": "A tríade de Samter (ou Doença Respiratória Exacerbada por AAS) é composta por:",
+            "options": [
+                "Asma, rinite e conjuntivite alérgica.",
+                "Asma, polipose nasossinusal e sensibilidade a anti-inflamatórios não esteroides (AINEs).",
+                "Sinusite crônica, bronquite e otite.",
+                "Dermatite atópica, asma e obstrução nasal."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Doença Respiratória Exacerbada por AINEs, ou Tríade de Samter, é uma condição inflamatória crônica caracterizada pela combinação de asma, polipose nasossinusal e reações de hipersensibilidade (broncoespasmo, congestão nasal) após o uso de aspirina ou outros AINEs.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q29",
+            "text": "O que é o papiloma invertido nasal?",
+            "options": [
+                "Uma lesão benigna comum em crianças.",
+                "Um tumor benigno com alto potencial de malignização para carcinoma de células escamosas.",
+                "Uma infecção viral causada pelo HPV.",
+                "Um tipo de pólipo inflamatório."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O papiloma invertido é um tumor benigno, mas localmente agressivo e com alta taxa de recorrência. Sua principal característica é o potencial de transformação maligna para carcinoma de células escamosas em cerca de 5-15% dos casos.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q30.1",
+            "text": "Qual o tratamento para a rinite alérgica persistente moderada a grave?",
+            "options": [
+                "Apenas anti-histamínicos orais.",
+                "Descongestionantes nasais de uso contínuo.",
+                "Corticoides tópicos nasais.",
+                "Antibióticos sistêmicos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Os corticoides tópicos nasais são os medicamentos mais eficazes (primeira linha) para o controle dos sintomas da rinite alérgica persistente, pois atuam em todos os componentes da inflamação alérgica (obstrução, coriza, espirros e prurido).",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q30.2",
+            "text": "Quais são os principais achados na rinoscopia de um paciente com rinite alérgica?",
+            "options": [
+                "Mucosa nasal seca e crostosa.",
+                "Perfuração do septo nasal.",
+                "Pólipos nasais e secreção purulenta.",
+                "Mucosa pálida/violácea, edemaciada e cornetos inferiores hipertrofiados."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Os achados clássicos da rinite alérgica na rinoscopia anterior são a palidez ou coloração violácea da mucosa nasal (devido à congestão venosa), edema (inchaço) e hipertrofia dos cornetos inferiores, com presença de secreção hialina (clara).",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q31",
+            "text": "Qual a principal causa da Amigdalite Caseosa (ou tonsilite crônica caseosa)?",
+            "options": [
+                "Infecção viral aguda.",
+                "Acúmulo de restos celulares e bactérias nas criptas amigdalianas.",
+                "Refluxo laringofaríngeo.",
+                "Reação alérgica."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Os cáseos amigdalianos são pequenas massas amareladas e malcheirosas que se formam pelo acúmulo e compactação de restos de células descamadas, muco, restos alimentares e bactérias dentro das criptas (pequenas cavidades) das amígdalas.",
+            "tag": "Faringe"
+        },
+        {
+            "id": "PR2-Otorrino-Q32",
+            "text": "O que é o zumbido pulsátil?",
+            "options": [
+                "É um zumbido que piora com o silêncio.",
+                "É um som contínuo em tom agudo.",
+                "É um som rítmico, síncrono com os batimentos cardíacos.",
+                "É um zumbido que só ocorre durante episódios de vertigem."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O zumbido pulsátil é aquele que o paciente percebe como um som rítmico, que 'pulsa' na mesma frequência dos batimentos cardíacos. Geralmente tem origem vascular e exige investigação para descartar condições como tumores glômicos ou fístulas arteriovenosas.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q33.1",
+            "text": "Qual o achado otoscópico da Otite Média Secretora (ou com efusão)?",
+            "options": [
+                "Membrana timpânica abaulada e hiperemiada.",
+                "Perfuração timpânica com otorreia purulenta.",
+                "Nível hidroaéreo ou bolhas de ar visíveis através de uma membrana timpânica opaca e retraída.",
+                "Membrana timpânica normal."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Otite Média Secretora é caracterizada pela presença de líquido seroso ou mucoide na orelha média, sem sinais de infecção aguda. Na otoscopia, isso se traduz em uma membrana timpânica opaca, muitas vezes retraída, através da qual se pode ver um nível líquido ou bolhas.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q33.2",
+            "text": "Qual o tratamento de primeira linha para a Otite Média Secretora persistente em crianças, após falha do tratamento clínico?",
+            "options": [
+                "Adenoidectomia.",
+                "Antibioticoterapia prolongada.",
+                "Miringotomia com colocação de tubo de ventilação.",
+                "Uso de corticoides nasais."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Quando a efusão na orelha média persiste por mais de 3 meses e causa perda auditiva, a conduta é a miringotomia (uma pequena incisão na membrana timpânica) com a inserção de um tubo de ventilação (carretel) para equalizar a pressão e permitir a drenagem do líquido.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q34",
+            "text": "O que é o reflexo vestíbulo-ocular (RVO)?",
+            "options": [
+                "É a contração da pupila em resposta à luz.",
+                "É o movimento dos olhos em direção a um som.",
+                "É um reflexo que estabiliza o olhar durante os movimentos da cabeça, movendo os olhos na direção oposta.",
+                "É o piscar dos olhos em resposta a um estímulo tátil na córnea."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O RVO é um reflexo fundamental para manter a visão nítida durante o movimento. Quando a cabeça se move em uma direção, os canais semicirculares detectam essa aceleração e enviam um sinal para que os olhos se movam na direção oposta, na mesma velocidade, mantendo a imagem estável na retina.",
+            "tag": "Otoneurologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q35.1",
+            "text": "Em um paciente com paralisia facial periférica, o que o teste de Schirmer avalia?",
+            "options": [
+                "A função do músculo estapédio.",
+                "A gustação nos dois terços anteriores da língua.",
+                "A secreção salivar.",
+                "A secreção lacrimal."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O teste de Schirmer mede a produção de lágrima. O nervo facial carrega as fibras parassimpáticas para a glândula lacrimal. Uma diminuição acentuada da lacrimação no lado paralisado indica uma lesão mais proximal do nervo, acima do gânglio geniculado.",
+            "tag": "Nervo Facial"
+        },
+        {
+            "id": "PR2-Otorrino-Q35.2",
+            "text": "A ausência do reflexo estapediano em um paciente com paralisia facial indica uma lesão do nervo facial em que ponto?",
+            "options": [
+                "Distal à emergência do nervo para o músculo estapédio.",
+                "Proximal à emergência do nervo para o músculo estapédio.",
+                "No forame estilomastoideo.",
+                "No meato acústico interno."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O nervo estapediano é um ramo do nervo facial que inerva o músculo estapédio. Se o reflexo estiver ausente, significa que a lesão do nervo facial ocorreu antes (proximal) da saída deste ramo.",
+            "tag": "Nervo Facial"
+        },
+        {
+            "id": "PR2-Otorrino-Q36",
+            "text": "O que é disfonia espasmódica?",
+            "options": [
+                "É a rouquidão causada por nódulos vocais.",
+                "É uma distonia focal da laringe que causa uma voz tensa, estrangulada ou soprosa.",
+                "É a perda da voz por causas psicológicas (afonia de conversão).",
+                "É a paralisia de uma prega vocal."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A disfonia espasmódica é um distúrbio neurológico do movimento que afeta os músculos da laringe. Causa contrações involuntárias durante a fala, resultando em uma qualidade vocal de esforço, tensa e com quebras.",
+            "tag": "Laringologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q37.1",
+            "text": "Criança de 2 anos com estridor inspiratório bifásico, que piora com o choro e melhora em prono. Qual a principal hipótese?",
+            "options": [
+                "Laringite aguda",
+                "Corpo estranho",
+                "Laringomalácia",
+                "Estenose subglótica"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A laringomalácia é a causa mais comum de estridor na infância. É causada pela imaturidade das cartilagens da laringe, que colapsam durante a inspiração. O estridor tipicamente piora com o esforço e melhora com o decúbito ventral.",
+            "tag": "Laringologia Pediátrica"
+        },
+        {
+            "id": "PR2-Otorrino-Q37.2",
+            "text": "Qual o exame padrão-ouro para o diagnóstico de laringomalácia?",
+            "options": [
+                "Raio-X cervical",
+                "Tomografia de pescoço",
+                "Nasofibrolaringoscopia flexível com o paciente acordado",
+                "Laringoscopia direta sob anestesia geral"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O diagnóstico da laringomalácia é feito pela visualização direta do colapso das estruturas supraglóticas durante a inspiração. Isso é melhor observado com uma nasofibrolaringoscopia flexível, realizada com a criança acordada e respirando espontaneamente.",
+            "tag": "Laringologia Pediátrica"
+        },
+        {
+            "id": "PR2-Otorrino-Q38.1",
+            "text": "O que é o Mucocele de seio paranasal?",
+            "options": [
+                "É um tumor maligno dos seios da face.",
+                "É uma coleção de pus dentro de um seio paranasal.",
+                "É um cisto de retenção de muco que expande e remodela as paredes ósseas de um seio paranasal cronicamente obstruído.",
+                "É uma infecção fúngica."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A mucocele se forma quando o óstio de drenagem de um seio paranasal é obstruído cronicamente. A secreção mucosa normal fica aprisionada, acumulando-se e expandindo lentamente o seio, o que pode causar erosão óssea e compressão de estruturas adjacentes.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q38.2",
+            "text": "Qual o seio paranasal mais acometido pela mucocele?",
+            "options": [
+                "Maxilar",
+                "Etmoidal",
+                "Esfenoidal",
+                "Frontal"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O seio frontal é o local mais comum para o desenvolvimento de mucoceles, seguido pelo seio etmoidal.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q39",
+            "text": "O que é a Síndrome de Eagle?",
+            "options": [
+                "É a dor facial causada pela neuralgia do trigêmeo.",
+                "É a dor de garganta, pescoço ou facial causada por um processo estiloide alongado ou pela calcificação do ligamento estilo-hioideo.",
+                "É a inflamação da articulação temporomandibular.",
+                "É um tipo de cefaleia tensional."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Síndrome de Eagle é uma condição rara em que o alongamento do processo estiloide ou a calcificação do ligamento estilo-hioideo pode comprimir ou irritar estruturas neurovasculares adjacentes no pescoço, causando dor, disfagia e sensação de corpo estranho na garganta.",
+            "tag": "Faringe"
+        },
+        {
+            "id": "PR2-Otorrino-Q40",
+            "text": "Qual a principal função da tuba auditiva (trompa de Eustáquio)?",
+            "options": [
+                "Produzir cerúmen.",
+                "Amplificar o som.",
+                "Equalizar a pressão da orelha média com a pressão do ambiente e permitir a drenagem de secreções.",
+                "Converter a energia sonora em impulso elétrico."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A tuba auditiva conecta a orelha média à nasofaringe e tem três funções principais: ventilação e equalização da pressão, proteção contra secreções da nasofaringe e drenagem (clearance) de secreções da orelha média.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q41",
+            "text": "A disfunção da tuba auditiva é o principal fator na fisiopatologia de qual doença?",
+            "options": [
+                "Surdez súbita",
+                "Otite Média (Aguda e Secretora)",
+                "Presbiacusia",
+                "Zumbido"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A disfunção tubária leva a uma pressão negativa na orelha média, o que pode causar a retração da membrana timpânica e o acúmulo de líquido (efusão), criando o ambiente propício para a Otite Média Secretora e a Otite Média Aguda.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q42.1",
+            "text": "O que é o Angiofibroma Nasofaríngeo Juvenil (ANJ)?",
+            "options": [
+                "É um tumor maligno comum em meninas.",
+                "É um tumor vascular benigno, mas localmente agressivo, que ocorre quase exclusivamente em meninos adolescentes.",
+                "É um tipo de pólipo nasal inflamatório.",
+                "É uma malformação arteriovenosa."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O ANJ é um tumor benigno altamente vascularizado que se origina na nasofaringe de adolescentes do sexo masculino. Apesar de benigno, tem um comportamento agressivo, podendo invadir estruturas adjacentes como a base do crânio.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q42.2",
+            "text": "Qual o sintoma de apresentação mais comum do Angiofibroma Nasofaríngeo Juvenil?",
+            "options": [
+                "Dor de cabeça",
+                "Perda de olfato",
+                "Epistaxe recorrente e unilateral e obstrução nasal",
+                "Alterações visuais"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Devido à sua natureza altamente vascular e à sua localização na nasofaringe, os sintomas cardinais do ANJ são a obstrução nasal progressiva e a epistaxe (sangramento nasal) recorrente, profusa e unilateral em um adolescente do sexo masculino.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q43",
+            "text": "O que é a Rinite Medicamentosa?",
+            "options": [
+                "É uma alergia a um medicamento oral.",
+                "É a congestão nasal de rebote causada pelo uso excessivo e prolongado de descongestionantes nasais tópicos (vasoconstritores).",
+                "É a inflamação nasal causada pelo uso de corticoides.",
+                "É a coriza causada por medicamentos anti-hipertensivos."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O uso contínuo de descongestionantes tópicos (como oximetazolina, nafazolina) por mais de 3-5 dias leva a um fenômeno de taquifilaxia, onde o efeito do remédio diminui e a congestão nasal piora quando o efeito passa, criando um ciclo vicioso de uso.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q44",
+            "text": "Qual a causa mais comum de perda auditiva em adultos e idosos?",
+            "options": [
+                "Otite média crônica",
+                "Otosclerose",
+                "Presbiacusia",
+                "Trauma acústico"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A presbiacusia é a perda auditiva neurossensorial, bilateral e simétrica, que ocorre de forma progressiva com o envelhecimento. Afeta principalmente as frequências altas (agudas) e é a causa mais prevalente de deficiência auditiva em idosos.",
+            "tag": "Audiologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q45.1",
+            "text": "O que é a Otosclerose?",
+            "options": [
+                "É o envelhecimento natural do sistema auditivo.",
+                "É uma doença da orelha externa que causa estenose do canal.",
+                "É uma doença óssea da cápsula ótica que causa a fixação do estribo na janela oval, levando à perda auditiva condutiva.",
+                "É um tumor do nervo auditivo."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Otosclerose é uma osteodistrofia focal da cápsula ótica, de caráter hereditário, que resulta na fixação do estribo. Isso impede a transmissão adequada das vibrações sonoras para a orelha interna, causando uma perda auditiva condutiva progressiva.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q45.2",
+            "text": "Qual o tratamento cirúrgico para a Otosclerose?",
+            "options": [
+                "Timpanoplastia",
+                "Miringotomia com tubo de ventilação",
+                "Estapedectomia ou Estapedotomia",
+                "Mastoidectomia"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento cirúrgico da otosclerose consiste na remoção do estribo fixo (estapedectomia) ou na criação de um pequeno orifício na sua platina (estapedotomia) e na interposição de uma prótese para restabelecer a condução do som.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q46",
+            "text": "Criança de 5 anos com febre, odinofagia, e linfonodomegalia cervical. Oroscopia mostra amígdalas hiperemiadas com exsudato purulento. O teste rápido para Estreptococo é positivo. Qual o tratamento de escolha?",
+            "options": [
+                "Apenas anti-inflamatórios.",
+                "Amoxicilina.",
+                "Azitromicina.",
+                "Observação."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A faringoamigdalite bacteriana causada pelo Streptococcus pyogenes (Estreptococo do Grupo A) deve ser tratada com antibióticos para prevenir complicações como a febre reumática. A penicilina (ou amoxicilina) é a droga de primeira escolha.",
+            "tag": "Faringe"
+        },
+        {
+            "id": "PR2-Otorrino-Q47",
+            "text": "O que são os critérios de Centor?",
+            "options": [
+                "São critérios para indicar a cirurgia de amígdalas.",
+                "São critérios clínicos para predizer a probabilidade de faringite estreptocócica e guiar o tratamento.",
+                "São critérios para classificar a gravidade da apneia do sono.",
+                "São critérios para diagnosticar a Doença de Ménière."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Os critérios de Centor (ou McIsaac, na versão modificada) são um escore clínico que ajuda a estimar a probabilidade de uma faringite ser causada pelo Estreptococo do Grupo A. Os critérios incluem: febre, ausência de tosse, exsudato amigdaliano e linfonodos cervicais anteriores dolorosos.",
+            "tag": "Faringe"
+        },
+        {
+            "id": "PR2-Otorrino-Q48.1",
+            "text": "O que é a Paralisia de Bell?",
+            "options": [
+                "É a paralisia facial causada por um tumor cerebral.",
+                "É a paralisia facial periférica idiopática.",
+                "É a paralisia facial que ocorre após um AVC.",
+                "É a paralisia facial associada a vesículas no ouvido."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Paralisia de Bell é o diagnóstico dado à paralisia facial periférica aguda quando todas as outras causas (infecciosas, traumáticas, tumorais) foram excluídas. Acredita-se que seja causada pela reativação do vírus herpes simples tipo 1.",
+            "tag": "Nervo Facial"
+        },
+        {
+            "id": "PR2-Otorrino-Q48.2",
+            "text": "Qual o tratamento para a Paralisia de Bell?",
+            "options": [
+                "Apenas fisioterapia.",
+                "Antibióticos.",
+                "Antivirais isoladamente.",
+                "Corticoides (prednisona) iniciados precocemente, podendo-se associar antivirais."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O tratamento padrão para a Paralisia de Bell, que visa acelerar a recuperação e diminuir a chance de sequelas, é o uso de corticoides sistêmicos (ex: prednisona) iniciados nos primeiros 3 dias. A associação com um antiviral (ex: aciclovir) é controversa, mas frequentemente utilizada.",
+            "tag": "Nervo Facial"
+        },
+        {
+            "id": "PR2-Otorrino-Q49",
+            "text": "O que é o Refluxo Laringofaríngeo (RLF)?",
+            "options": [
+                "É a azia que sobe até a garganta.",
+                "É o retorno do conteúdo gástrico até a laringe e faringe, causando sintomas como pigarro, tosse crônica, rouquidão e globus faríngeo.",
+                "É uma infecção da laringe.",
+                "É uma alergia alimentar."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O RLF é uma variante da doença do refluxo gastroesofágico em que o material refluído atinge o trato aerodigestivo superior. A mucosa da laringe é muito sensível ao ácido e à pepsina, resultando em sintomas atípicos, predominantemente laríngeos e faríngeos, muitas vezes sem a queixa clássica de azia.",
+            "tag": "Laringologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q50",
+            "text": "Qual das seguintes opções NÃO é uma função do nariz?",
+            "options": [
+                "Fonação",
+                "Respiração",
+                "Filtração, aquecimento e umidificação do ar",
+                "Olfato"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A fonação (produção da voz) ocorre na laringe, com a vibração das pregas vocais. O nariz atua como uma caixa de ressonância, modificando o som (rinolalia), mas não o produz.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q51",
+            "text": "O que é o anel linfático de Waldeyer?",
+            "options": [
+                "É um conjunto de linfonodos no pescoço.",
+                "É o tecido linfoide localizado na entrada do trato aerodigestivo, composto pelas tonsilas palatinas, faríngea (adenoide) e linguais.",
+                "É o sistema de drenagem linfática da laringe.",
+                "É uma cadeia de linfonodos no mediastino."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O anel de Waldeyer é um anel de tecido linfoide que circunda a nasofaringe e a orofaringe, formando a primeira linha de defesa imunológica contra patógenos inalados e ingeridos.",
+            "tag": "Anatomia"
+        },
+        {
+            "id": "PR2-Otorrino-Q52",
+            "text": "Qual é a causa mais comum de perda auditiva condutiva em adultos?",
+            "options": [
+                "Otosclerose",
+                "Perfuração timpânica",
+                "Otite Média Secretora",
+                "Rolha de cerúmen"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A impactação de cerúmen no conduto auditivo externo é uma causa extremamente comum e facilmente reversível de perda auditiva condutiva em adultos.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q53",
+            "text": "O que é a Síndrome da Apneia Obstrutiva do Sono (SAOS)?",
+            "options": [
+                "É a dificuldade de iniciar o sono.",
+                "São episódios de ronco alto durante a noite.",
+                "São episódios recorrentes de obstrução da via aérea superior durante o sono, levando a pausas respiratórias e dessaturação de oxigénio.",
+                "É o movimento excessivo das pernas durante o sono."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A SAOS é um distúrbio respiratório do sono caracterizado pelo colapso repetitivo da faringe, que interrompe a ventilação e fragmenta o sono, resultando em sonolência diurna e aumento do risco cardiovascular.",
+            "tag": "Distúrbios do Sono"
+        },
+        {
+            "id": "PR2-Otorrino-Q54",
+            "text": "Qual o exame padrão-ouro para o diagnóstico da Apneia do Sono?",
+            "options": [
+                "Tomografia de seios paranasais",
+                "Laringoscopia",
+                "Polissonografia",
+                "Eletroencefalograma"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A polissonografia é o exame padrão-ouro que monitora diversas variáveis fisiológicas durante o sono (atividade cerebral, fluxo aéreo, esforço respiratório, oximetria, etc.), permitindo diagnosticar e quantificar a gravidade da SAOS.",
+            "tag": "Distúrbios do Sono"
+        },
+        {
+            "id": "PR2-Otorrino-Q55.1",
+            "text": "Criança de 6 anos com corpo estranho no ouvido. Qual a conduta correta?",
+            "options": [
+                "Tentar remover com pinça em casa.",
+                "Lavar o ouvido com água em alta pressão.",
+                "Remoção sob visualização direta por um médico, preferencialmente com microscópio e instrumentos adequados.",
+                "Aguardar a expulsão espontânea."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A remoção de corpo estranho do ouvido deve ser feita por um profissional, com boa iluminação e instrumentação adequada, para evitar lesões na pele do conduto, na membrana timpânica ou na cadeia ossicular. Tentativas leigas de remoção são perigosas.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q55.2",
+            "text": "Se o corpo estranho no ouvido for uma pilha, qual o risco associado?",
+            "options": [
+                "Nenhum risco adicional.",
+                "Apenas a obstrução do canal auditivo.",
+                "Risco de necrose por liquefação e queimadura química devido ao vazamento do conteúdo alcalino.",
+                "Risco de infecção por fungos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A pilha em contato com a umidade do conduto auditivo pode vazar seu conteúdo alcalino, causando uma queimadura química grave e necrose dos tecidos. É uma emergência e requer remoção imediata.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q56.1",
+            "text": "O que é a Otite Externa Maligna?",
+            "options": [
+                "É um tumor maligno do conduto auditivo externo.",
+                "É uma forma grave e necrosante de otite externa, geralmente causada por Pseudomonas aeruginosa, que afeta principalmente idosos diabéticos ou imunocomprometidos.",
+                "É uma infecção fúngica do ouvido.",
+                "É a complicação de uma otite média crônica."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Otite Externa Necrosante (ou maligna) é uma osteomielite da base do crânio que se inicia como uma otite externa. É uma infecção invasiva e potencialmente fatal que requer diagnóstico precoce e tratamento agressivo com antibióticos intravenosos.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q56.2",
+            "text": "Qual o principal sinal clínico que levanta a suspeita de Otite Externa Maligna em um paciente de risco?",
+            "options": [
+                "Prurido no ouvido.",
+                "Presença de cerúmen.",
+                "Otalgia intensa e desproporcional aos achados da otoscopia, com presença de tecido de granulação no assoalho do conduto.",
+                "Perda auditiva súbita."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A dor (otalgia) severa e a presença de tecido de granulação na junção osteocartilaginosa do conduto auditivo externo são os sinais de alerta para a Otite Externa Maligna. A paralisia facial pode ser uma complicação.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q57",
+            "text": "O que é o Schwanoma Vestibular (Neurinoma do Acústico)?",
+            "options": [
+                "É um tumor maligno do nervo auditivo.",
+                "É um tumor benigno que se origina das células de Schwann do nervo vestibular (ramo do VIII par craniano).",
+                "É uma inflamação do nervo vestibular.",
+                "É uma coleção de líquido na orelha interna."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O Schwanoma Vestibular é um tumor benigno de crescimento lento que se desenvolve no nervo vestibular, dentro do meato acústico interno. Causa sintomas por compressão do próprio nervo vestibular e do nervo coclear adjacente.",
+            "tag": "Otoneurologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q58",
+            "text": "Qual o sintoma de apresentação mais comum do Schwanoma Vestibular?",
+            "options": [
+                "Vertigem rotatória intensa.",
+                "Perda auditiva neurossensorial unilateral e progressiva, muitas vezes acompanhada de zumbido.",
+                "Paralisia facial súbita.",
+                "Cefaleia."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O sintoma mais comum e inicial do Schwanoma Vestibular é a perda auditiva neurossensorial assimétrica e progressiva, associada a zumbido. A vertigem é menos comum e geralmente se manifesta como desequilíbrio, não como crises rotatórias.",
+            "tag": "Otoneurologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q59",
+            "text": "Qual o exame padrão-ouro para o diagnóstico do Schwanoma Vestibular?",
+            "options": [
+                "Audiometria",
+                "Tomografia de mastoides",
+                "Ressonância Magnética de encéfalo com contraste (gadolínio)",
+                "Potencial Evocado Auditivo de Tronco Encefálico (PEATE/BERA)"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Ressonância Magnética com gadolínio é o exame de imagem de escolha para o diagnóstico do Schwanoma Vestibular, pois mostra o tumor realçando intensamente com o contraste no meato acústico interno ou no ângulo ponto-cerebelar.",
+            "tag": "Otoneurologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q60",
+            "text": "O que é a Laringite por Refluxo?",
+            "options": [
+                "É uma infecção viral da laringe.",
+                "É a inflamação da mucosa da laringe causada pela exposição ao conteúdo gástrico refluído.",
+                "É uma lesão pré-cancerosa.",
+                "É a paralisia das pregas vocais."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Na Laringite por Refluxo (parte do Refluxo Laringofaríngeo), o ácido e a pepsina do estômago refluem até a laringe, causando inflamação crônica, edema e hiperemia da região posterior da laringe, resultando em sintomas como pigarro, rouquidão e tosse.",
+            "tag": "Laringologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q61",
+            "text": "Qual das seguintes lesões de prega vocal NÃO é tipicamente associada ao fonotrauma (abuso vocal)?",
+            "options": [
+                "Nódulos vocais ('calos')",
+                "Pólipos vocais",
+                "Edema de Reinke",
+                "Leucoplasia"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Leucoplasia é uma placa branca na prega vocal que representa uma lesão do epitélio, sendo considerada uma lesão pré-maligna, fortemente associada ao tabagismo. Nódulos, pólipos e Edema de Reinke são lesões benignas relacionadas ao trauma mecânico da fonação.",
+            "tag": "Laringologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q62",
+            "text": "O que são os nódulos vocais?",
+            "options": [
+                "São tumores malignos das pregas vocais.",
+                "São lesões inflamatórias agudas.",
+                "São espessamentos bilaterais e simétricos na junção do terço anterior com o terço médio das pregas vocais, causados por fonotrauma crônico.",
+                "São cistos cheios de muco."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Os nódulos vocais, popularmente conhecidos como 'calos', são lesões benignas que se formam na área de maior impacto vibratório das pregas vocais devido ao abuso ou mau uso crônico da voz.",
+            "tag": "Laringologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q63",
+            "text": "Qual o tratamento de primeira linha para os nódulos vocais?",
+            "options": [
+                "Cirurgia para remoção dos nódulos.",
+                "Repouso vocal absoluto.",
+                "Terapia fonoaudiológica (fonoterapia).",
+                "Injeção de toxina botulínica."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento dos nódulos vocais é primariamente comportamental. A fonoterapia visa reeducar o paciente sobre o uso correto da voz, eliminar os comportamentos de abuso vocal e melhorar a técnica fonatória, o que leva à regressão dos nódulos na maioria dos casos.",
+            "tag": "Laringologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q64.1",
+            "text": "Qual o nome da condição em que há uma perfuração na membrana timpânica?",
+            "options": [
+                "Otite externa",
+                "Timpanosclerose",
+                "Otite média crônica simples",
+                "Colesteatoma"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Otite Média Crônica Simples (ou não colesteatomatosa) é caracterizada pela presença de uma perfuração permanente na membrana timpânica e episódios recorrentes de otorreia não fétida, geralmente durante infecções de vias aéreas superiores.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q64.2",
+            "text": "Qual a principal causa de perfuração da membrana timpânica?",
+            "options": [
+                "Infecções de repetição (Otite Média Aguda) e trauma.",
+                "Exposição a ruído alto.",
+                "Alergias.",
+                "Refluxo."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. As perfurações timpânicas ocorrem mais comumente como uma sequela de otites médias agudas de repetição (onde a pressão do pus perfura o tímpano) ou por trauma direto (ex: cotonete, tapa no ouvido) ou barotrauma.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q65",
+            "text": "O que é o teste da oximetria noturna?",
+            "options": [
+                "Mede os níveis de glicose durante o sono.",
+                "É um exame de triagem para a apneia do sono que mede a saturação de oxigénio e a frequência cardíaca durante a noite.",
+                "Avalia os estágios do sono.",
+                "Detecta movimentos das pernas."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A oximetria noturna é um exame simplificado que pode ser usado como triagem para a SAOS. Pacientes com apneia obstrutiva apresentam quedas recorrentes na saturação de oxigénio durante os eventos respiratórios, que são registadas pelo aparelho.",
+            "tag": "Distúrbios do Sono"
+        },
+        {
+            "id": "PR2-Otorrino-Q66",
+            "text": "Qual o tratamento padrão-ouro para a Apneia Obstrutiva do Sono moderada a grave?",
+            "options": [
+                "Cirurgia de uvulopalatofaringoplastia.",
+                "Aparelho intraoral.",
+                "CPAP (Pressão Positiva Contínua nas Vias Aéreas).",
+                "Perda de peso e fonoterapia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O CPAP é um aparelho que gera um fluxo de ar contínuo através de uma máscara, criando uma pressão positiva que impede o colapso da faringe durante o sono. É o tratamento mais eficaz para a SAOS moderada a grave.",
+            "tag": "Distúrbios do Sono"
+        },
+        {
+            "id": "PR2-Otorrino-Q67",
+            "text": "O que é a Síndrome de Sjogren?",
+            "options": [
+                "É uma doença que causa vertigem e zumbido.",
+                "É uma doença autoimune sistémica que afeta principalmente as glândulas exócrinas, causando secura (xerostomia e xeroftalmia).",
+                "É um tipo de linfoma de glândula salivar.",
+                "É uma infecção viral das parótidas."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Síndrome de Sjogren é uma exocrinopatia autoimune em que linfócitos atacam as glândulas salivares e lacrimais, levando aos sintomas clássicos de boca seca (xerostomia) e olho seco (xeroftalmia ou ceratoconjuntivite sicca).",
+            "tag": "Glândulas Salivares"
+        },
+        {
+            "id": "PR2-Otorrino-Q68.1",
+            "text": "Qual o tumor benigno mais comum das glândulas salivares?",
+            "options": [
+                "Tumor de Warthin",
+                "Carcinoma mucoepidermoide",
+                "Adenoma pleomórfico",
+                "Carcinoma adenoide cístico"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O Adenoma Pleomórfico (ou tumor misto benigno) é, de longe, o tumor benigno mais comum das glândulas salivares, acometendo principalmente a glândula parótida.",
+            "tag": "Glândulas Salivares"
+        },
+        {
+            "id": "PR2-Otorrino-Q68.2",
+            "text": "Qual o tumor maligno mais comum das glândulas salivares?",
+            "options": [
+                "Adenoma pleomórfico",
+                "Carcinoma mucoepidermoide",
+                "Tumor de Warthin",
+                "Carcinoma adenoide cístico"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O Carcinoma Mucoepidermoide é o tumor maligno mais frequente das glândulas salivares, tanto em adultos quanto em crianças, também sendo mais comum na parótida.",
+            "tag": "Glândulas Salivares"
+        },
+        {
+            "id": "PR2-Otorrino-Q69",
+            "text": "Na parotidectomia, qual estrutura nervosa deve ser cuidadosamente identificada e preservada?",
+            "options": [
+                "Nervo vago (X par)",
+                "Nervo hipoglosso (XII par)",
+                "Nervo facial (VII par)",
+                "Plexo cervical"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O nervo facial e seus ramos atravessam o parênquima da glândula parótida. A sua identificação e dissecção meticulosa são o passo mais crítico da parotidectomia para evitar uma paralisia facial iatrogénica.",
+            "tag": "Cirurgia"
+        },
+        {
+            "id": "PR2-Otorrino-Q70",
+            "text": "O que é a Síndrome de Frey?",
+            "options": [
+                "É a paralisia facial após uma parotidectomia.",
+                "É a gustação fantasma após uma cirurgia de amígdalas.",
+                "É a sudorese e rubor na região da parótida durante a alimentação, que pode ocorrer como sequela de uma parotidectomia.",
+                "É a boca seca após radioterapia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Síndrome de Frey, ou sudorese gustatória, ocorre por uma regeneração anómala das fibras nervosas parassimpáticas (que deveriam inervar a glândula parótida) para as glândulas sudoríparas da pele. Assim, o estímulo da alimentação que deveria causar salivação acaba por causar suor na face.",
+            "tag": "Cirurgia"
+        },
+        {
+            "id": "PR2-Otorrino-Q71",
+            "text": "Qual o local mais comum de impactação de corpos estranhos no esófago em adultos?",
+            "options": [
+                "No nível do cricofaríngeo (esfíncter esofágico superior).",
+                "No nível do arco aórtico.",
+                "No nível do brônquio principal esquerdo.",
+                "Na junção gastroesofágica."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O músculo cricofaríngeo é o ponto mais estreito do esófago e o local mais comum de impactação de corpos estranhos, como espinhas de peixe ou pedaços de carne.",
+            "tag": "Corpo Estranho"
+        },
+        {
+            "id": "PR2-Otorrino-Q72.1",
+            "text": "Qual a causa mais comum de estridor na infância?",
+            "options": [
+                "Laringomalácia",
+                "Epiglotite",
+                "Corpo estranho",
+                "Laringite viral (crupe)"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A laringomalácia é a anomalia congénita mais comum da laringe e a principal causa de estridor em lactentes, caracterizada pelo colapso inspiratório das estruturas supraglóticas.",
+            "tag": "Laringologia Pediátrica"
+        },
+        {
+            "id": "PR2-Otorrino-Q72.2",
+            "text": "Qual a causa mais comum de rouquidão na infância?",
+            "options": [
+                "Papilomatose laríngea",
+                "Nódulos vocais",
+                "Cistos de prega vocal",
+                "Refluxo laringofaríngeo"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Assim como nos adultos, os nódulos vocais ('calos') são a causa mais comum de disfonia (rouquidão) crónica em crianças, devido ao comportamento de abuso vocal (gritar, etc.).",
+            "tag": "Laringologia Pediátrica"
+        },
+        {
+            "id": "PR2-Otorrino-Q73.1",
+            "text": "Criança de 2 anos com tosse 'de cão' ou 'metálica', estridor inspiratório e febre baixa, com início gradual. Qual o diagnóstico?",
+            "options": [
+                "Epiglotite",
+                "Laringite viral (crupe)",
+                "Bronquiolite",
+                "Asma"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O crupe viral, ou laringotraqueíte, é uma infecção viral (geralmente parainfluenza) que causa inflamação na região subglótica. A tosse ladrante (de cão), o estridor inspiratório e a rouquidão são a tríade clássica.",
+            "tag": "Laringologia Pediátrica"
+        },
+        {
+            "id": "PR2-Otorrino-Q73.2",
+            "text": "Qual o tratamento para a laringite viral (crupe) moderada a grave?",
+            "options": [
+                "Apenas vaporização.",
+                "Antibióticos.",
+                "Corticoides (oral ou inalatório) e nebulização com adrenalina.",
+                "Broncodilatadores."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento do crupe visa reduzir o edema da via aérea. Os corticoides têm efeito anti-inflamatório e são a base do tratamento. A nebulização com adrenalina racémica é usada nos casos de estridor em repouso (moderado/grave) pelo seu efeito vasoconstritor rápido, que alivia a obstrução.",
+            "tag": "Laringologia Pediátrica"
+        },
+        {
+            "id": "PR2-Otorrino-Q74",
+            "text": "Qual o nome da condição em que há uma perfuração no septo nasal?",
+            "options": [
+                "Sinéquia nasal",
+                "Atresia coanal",
+                "Perfuração septal",
+                "Desvio de septo"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A perfuração septal é uma comunicação entre as duas fossas nasais através do septo. As causas incluem trauma, cirurgia prévia, uso de cocaína, doenças granulomatosas e uso excessivo de vasoconstritores tópicos.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q75",
+            "text": "O que é o teste de impulso da cabeça (Head Impulse Test)?",
+            "options": [
+                "É um teste para avaliar a função do nervo óptico.",
+                "É um teste clínico à beira do leito para avaliar o reflexo vestíbulo-ocular (RVO).",
+                "É uma manobra para tratar a VPPB.",
+                "É um teste para detetar nistagmo espontâneo."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O Head Impulse Test avalia a função do RVO. O examinador realiza movimentos rápidos e imprevisíveis da cabeça do paciente enquanto este fixa o olhar no nariz do examinador. Em uma lesão vestibular periférica (ex: neurite), o olho do lado lesado perde a fixação e realiza uma sacada corretiva para refixar o alvo.",
+            "tag": "Otoneurologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q76",
+            "text": "Qual a tríade de HINTS (Head Impulse, Nystagmus, Test of Skew), e para que serve?",
+            "options": [
+                "Serve para diagnosticar a Doença de Ménière.",
+                "Serve para diferenciar uma vertigem de origem central (ex: AVC de fossa posterior) de uma periférica (ex: neurite vestibular).",
+                "Serve para avaliar o risco de queda em idosos.",
+                "Serve para diagnosticar a VPPB."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O exame HINTS é uma bateria de três testes oculomotores que, quando realizados em um paciente com síndrome vestibular aguda, tem alta sensibilidade e especificidade para diferenciar um AVC de fossa posterior (causa central) de uma neurite vestibular (causa periférica). Um HINTS tranquilizador (sugestivo de causa periférica) é: impulso da cabeça anormal, nistagmo unidirecional e ausência de desvio skew.",
+            "tag": "Otoneurologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q77",
+            "text": "O que é a Rinite Gustatória?",
+            "options": [
+                "É uma alergia a certos alimentos.",
+                "É a coriza aquosa que ocorre após a ingestão de alimentos, especialmente os quentes ou picantes.",
+                "É a perda de olfato para alimentos.",
+                "É a congestão nasal causada pelo cheiro de comida."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Rinite Gustatória é uma forma de rinite não alérgica caracterizada por rinorreia aquosa proeminente que é desencadeada pela alimentação, mediada por um reflexo neurogénico.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q78",
+            "text": "Qual o tratamento para a epistaxe posterior?",
+            "options": [
+                "Apenas compressão digital.",
+                "Cauterização química.",
+                "Tampão nasal anterior.",
+                "Tampão nasal posterior (ex: sonda de Foley ou tampão específico) e/ou tratamento cirúrgico/embolização."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A epistaxe posterior é mais grave e não pode ser controlada com medidas anteriores. Requer a colocação de um tampão posterior para bloquear a coana, geralmente associado a um tampão anterior. Casos refratários podem necessitar de ligadura arterial endoscópica ou embolização.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q79",
+            "text": "O que é o exame de Emissões Otoacústicas (teste da orelhinha)?",
+            "options": [
+                "É a triagem auditiva neonatal que avalia a função das células ciliadas externas da cóclea.",
+                "Mede a audição em crianças mais velhas.",
+                "Avalia a integridade da membrana timpânica.",
+                "Diagnostica a otite média."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O teste de Emissões Otoacústicas é o principal método de triagem auditiva neonatal. Ele detecta a resposta sonora de baixa intensidade produzida pelas células ciliadas externas da cóclea em resposta a um estímulo sonoro, indicando que a orelha interna está a funcionar.",
+            "tag": "Audiologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q80.1",
+            "text": "Paciente de 75 anos com perda auditiva progressiva, principalmente para sons agudos, e dificuldade de entender a fala em ambientes ruidosos. Qual o diagnóstico?",
+            "options": [
+                "Otosclerose",
+                "Surdez súbita",
+                "Presbiacusia",
+                "Doença de Ménière"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro descrito é a apresentação típica da presbiacusia, a perda auditiva relacionada ao envelhecimento, que é neurossensorial, bilateral, simétrica e afeta predominantemente as altas frequências, prejudicando a discriminação da fala.",
+            "tag": "Audiologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q80.2",
+            "text": "Qual a principal conduta para a presbiacusia?",
+            "options": [
+                "Cirurgia para reconstruir a cóclea.",
+                "Medicamentos para regenerar as células ciliadas.",
+                "Reabilitação auditiva com o uso de aparelhos de amplificação sonora individual (AASI).",
+                "Terapia fonoaudiológica para treinar a leitura labial."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Não há tratamento para reverter a presbiacusia. A reabilitação é feita através da adaptação de aparelhos auditivos, que amplificam o som para compensar a perda auditiva e melhorar a comunicação e a qualidade de vida do paciente.",
+            "tag": "Audiologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q81.1",
+            "text": "Criança de 10 anos com otalgia intensa, febre e edema retroauricular com descolamento do pavilhão auricular. Qual a principal hipótese?",
+            "options": [
+                "Otite externa difusa",
+                "Otite média aguda",
+                "Mastoidite aguda coalescente",
+                "Furunculose do conduto"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Mastoidite Aguda é uma complicação da OMA. O edema e a hiperemia retroauricular, com apagamento do sulco e deslocamento do pavilhão auricular para a frente e para baixo, são sinais clássicos de que a infecção se estendeu para a mastoide e formou um abscesso subperiosteal.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q81.2",
+            "text": "Qual o tratamento para a mastoidite aguda coalescente?",
+            "options": [
+                "Apenas antibiótico oral.",
+                "Drenagem do abscesso e antibioticoterapia venosa, frequentemente associada a mastoidectomia.",
+                "Colírios antibióticos.",
+                "Observação."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A mastoidite coalescente é uma emergência cirúrgica. O tratamento envolve a drenagem do abscesso (seja por miringotomia com ou sem colocação de dreno, ou por via retroauricular) e antibioticoterapia intravenosa de amplo espectro. A mastoidectomia (remoção cirúrgica das células infectadas) é frequentemente necessária.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q82",
+            "text": "Qual o agente etiológico da Mononucleose Infecciosa, que pode cursar com faringoamigdalite membranosa e linfonodomegalia generalizada?",
+            "options": [
+                "Streptococcus pyogenes",
+                "Adenovírus",
+                "Vírus Epstein-Barr (EBV)",
+                "Corynebacterium diphtheriae"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Mononucleose Infecciosa, ou 'doença do beijo', é causada pelo Vírus Epstein-Barr. A apresentação clássica em adolescentes e adultos jovens inclui febre, faringite (muitas vezes com exsudato e petéquias no palato) e linfonodomegalia, especialmente cervical posterior.",
+            "tag": "Faringe"
+        },
+        {
+            "id": "PR2-Otorrino-Q83",
+            "text": "O que é o pericôndrio e por que um hematoma no pavilhão auricular deve ser drenado?",
+            "options": [
+                "É a pele da orelha; deve ser drenado por estética.",
+                "É o osso da orelha; deve ser drenado para evitar fratura.",
+                "É o tecido que nutre a cartilagem auricular; deve ser drenado para evitar a necrose da cartilagem e a deformidade conhecida como 'orelha em couve-flor'.",
+                "É o tímpano; deve ser drenado para não perfurar."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O pericôndrio é uma camada de tecido conjuntivo que reveste a cartilagem e é responsável pela sua nutrição. Um hematoma subpericondral (oto-hematoma) separa o pericôndrio da cartilagem, interrompendo o suprimento sanguíneo. Se não for drenado, a cartilagem necrosa e resulta na deformidade fibrótica permanente conhecida como 'orelha em couve-flor'.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q84.1",
+            "text": "Qual das seguintes condições nasais NÃO é uma causa comum de obstrução nasal?",
+            "options": [
+                "Desvio de septo",
+                "Hipertrofia de cornetos",
+                "Perfuração septal",
+                "Polipose nasossinusal"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Uma perfuração septal, embora possa causar sintomas como crostas, sangramento e um assobio ao respirar, geralmente não causa obstrução nasal, a menos que seja muito grande e associada a um colapso da estrutura nasal.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q84.2",
+            "text": "Qual o tratamento cirúrgico para a hipertrofia de cornetos inferiores refratária ao tratamento clínico?",
+            "options": [
+                "Septoplastia",
+                "Turbinectomia ou Turbinoplastia",
+                "Cirurgia endoscópica funcional dos seios paranasais (FESS)",
+                "Rinoplastia"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A turbinectomia (remoção parcial) ou a turbinoplastia (remodelação) são os procedimentos cirúrgicos realizados para reduzir o volume dos cornetos inferiores e aliviar a obstrução nasal quando o tratamento clínico falha.",
+            "tag": "Rinologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q85",
+            "text": "Qual dos seios paranasais é o último a se desenvolver completamente?",
+            "options": [
+                "Etmoidal",
+                "Maxilar",
+                "Esfenoidal",
+                "Frontal"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O seio frontal é o último a se pneumatizar, começando a se desenvolver por volta dos 4-6 anos de idade e atingindo o tamanho adulto apenas na adolescência.",
+            "tag": "Anatomia"
+        },
+        {
+            "id": "PR2-Otorrino-Q86",
+            "text": "Onde se localiza o complexo ostiomeatal?",
+            "options": [
+                "No meato inferior, onde drena o ducto nasolacrimal.",
+                "No meato médio, sendo a via de drenagem comum dos seios maxilar, frontal e etmoidal anterior.",
+                "No meato superior, onde drenam as células etmoidais posteriores.",
+                "No recesso esfenoetmoidal, onde drena o seio esfenoidal."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O complexo ostiomeatal é uma área anatómica crítica no meato médio, funcionando como uma 'encruzilhada' para a drenagem dos seios anteriores. A sua obstrução é um fator-chave na fisiopatologia da rinossinusite.",
+            "tag": "Anatomia"
+        },
+        {
+            "id": "PR2-Otorrino-Q87",
+            "text": "Paciente de 70 anos refere tontura do tipo flutuação, sem vertigem rotatória, que piora no escuro ou em terreno irregular. A audiometria é normal. Qual a causa mais provável?",
+            "options": [
+                "Doença de Ménière",
+                "Presbivertigem/Presbiastasia (desequilíbrio do idoso)",
+                "VPPB",
+                "Neurite vestibular"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O desequilíbrio do idoso é multifatorial, resultante do declínio fisiológico dos sistemas vestibular, visual e proprioceptivo. Caracteriza-se por uma sensação de instabilidade ou 'tontura' inespecífica, que piora em situações de conflito sensorial (escuro, piso irregular).",
+            "tag": "Otoneurologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q88.1",
+            "text": "Paciente com dor intensa e queimação no ouvido direito, seguida de vesículas dolorosas na orelha, paralisia facial direita, zumbido e hipoacusia. Qual o diagnóstico e o tipo de paralisia?",
+            "options": [
+                "Paralisia de Bell / Paralisia Central",
+                "Otite Externa Necrosante / Paralisia Periférica",
+                "Síndrome de Ramsay Hunt / Paralisia Facial Periférica",
+                "Colesteatoma / Paralisia Central"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Síndrome de Ramsay Hunt é causada pela reativação do vírus Varicela-Zoster no gânglio geniculado. A tríade clássica é: otalgia, vesículas no pavilhão auricular (herpes zoster oticus) e paralisia facial periférica ipsilateral.",
+            "tag": "Nervo Facial"
+        },
+        {
+            "id": "PR2-Otorrino-Q88.2",
+            "text": "Qual o tratamento a ser indicado para a Síndrome de Ramsay Hunt?",
+            "options": [
+                "Apenas corticoides e fisioterapia.",
+                "Aciclovir ou Valaciclovir, Corticoide, Analgésico e Fisioterapia.",
+                "Apenas antibióticos.",
+                "Observação, pois a recuperação é sempre espontânea."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O tratamento da Síndrome de Ramsay Hunt deve ser iniciado precocemente e combina um agente antiviral (para combater o vírus) e um corticoide (para reduzir a inflamação do nervo), além de analgesia e cuidados oculares, para melhorar o prognóstico de recuperação da função facial.",
+            "tag": "Nervo Facial"
+        },
+        {
+            "id": "PR2-Otorrino-Q89.1",
+            "text": "Paciente com hipoacusia e otorreia purulenta fétida e constante. A otoscopia revela uma retração com perfuração na pars flácida da membrana timpânica, com debris esbranquiçados. Qual o diagnóstico?",
+            "options": [
+                "Otite Média Aguda",
+                "Otite Média Secretora",
+                "Otite Média Crônica Simples",
+                "Otite Média Crônica Colesteatomatosa"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A otorreia purulenta, fétida e persistente, associada a uma perfuração marginal (na pars flácida) e à visualização de 'caspas' ou debris brancos, é a apresentação clássica da Otite Média Crônica Colesteatomatosa.",
+            "tag": "Otologia"
+        },
+        {
+            "id": "PR2-Otorrino-Q89.2",
+            "text": "Qual a principal complicação intracraniana do colesteatoma?",
+            "options": [
+                "Hidrocefalia",
+                "Abscesso cerebral (principalmente lobo temporal) e Meningite",
+                "Hemorragia subaracnoide",
+                "Trombose do seio sagital superior"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Devido à sua capacidade de erodir o osso (tegmen timpani), o colesteatoma pode se estender para a fossa média do crânio, levando a complicações graves como meningite, abscesso temporal e trombose do seio sigmoide.",
+            "tag": "Otologia"
+        }
+    ]
+},
+  {
+    id: "preset-m7-pr2-ortopedia",
+    name: "Estácio - M7 - PR2 - Ortopedia",
+    questions: [
+        {
+            "id": "PR2-Orto-Q1.1",
+            "text": "Qual a principal diferença etiológica entre Sinovite Transitória de Quadril e Doença de Legg-Calvé-Perthes?",
+            "options": [
+                "Ambas são de origem infecciosa.",
+                "Sinovite é inflamatória e autolimitada, enquanto Legg-Calvé-Perthes é uma necrose avascular.",
+                "Sinovite afeta principalmente meninas e Legg-Calvé-Perthes afeta meninos.",
+                "Legg-Calvé-Perthes sempre requer tratamento cirúrgico, enquanto a sinovite é sempre conservador."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A Sinovite Transitória é uma inflamação benigna e autolimitada da sinóvia do quadril, frequentemente pós-infecciosa. Já a Doença de Legg-Calvé-Perthes é uma necrose avascular da cabeça do fémur, um processo mais complexo de morte óssea por falta de suprimento sanguíneo.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q1.2",
+            "text": "Radiograficamente, como se diferenciam a Sinovite Transitória de Quadril e a Doença de Legg-Calvé-Perthes?",
+            "options": [
+                "Na Sinovite, a radiografia mostra o sinal do crescente, indicando necrose.",
+                "Na Legg-Calvé-Perthes, a radiografia é sempre normal.",
+                "Na Sinovite, a radiografia é geralmente normal, enquanto na Legg-Calvé-Perthes pode aparecer o sinal do crescente.",
+                "Ambas apresentam espessamento da membrana sinovial na radiografia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Na Sinovite Transitória, a radiografia é tipicamente normal ou pode mostrar um leve alargamento do espaço articular. Na Doença de Legg-Calvé-Perthes, um dos sinais radiográficos característicos, embora não inicial, é o 'sinal do crescente' subcondral, que indica uma fratura na área de necrose.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q2",
+            "text": "Quais são as articulações mais comumente acometidas pela artrite séptica?",
+            "options": [
+                "Punho, cotovelo e ombro.",
+                "Coluna vertebral e articulações sacroilíacas.",
+                "Joelho, quadril e tornozelo.",
+                "Pequenas articulações das mãos e dos pés."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A artrite séptica acomete preferencialmente grandes articulações de carga dos membros inferiores, sendo o joelho a mais comum, seguida pelo quadril e tornozelo.",
+            "tag": "Infecção Ortopédica"
+        },
+        {
+            "id": "PR2-Orto-Q3",
+            "text": "Sobre as pseudoartroses, assinale a alternativa INCORRETA:",
+            "options": [
+                "Na Hipertrófica, há calo ósseo exuberante devido à instabilidade.",
+                "Na Atrófica, há ausência ou deficiência de células osteogénicas e vascularização.",
+                "A Pseudoartrose Atrófica está associada a fraturas expostas e diabetes.",
+                "A Pseudoartrose Hipertrófica ocorre por falta de suprimento sanguíneo adequado."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa incorreta é a D. A pseudoartrose hipertrófica ('pata de elefante') é caracterizada por uma boa biologia (vascularização e células presentes), mas falha mecânica (instabilidade), levando a um calo exuberante e não consolidado. A falha no suprimento sanguíneo é a causa da pseudoartrose atrófica.",
+            "tag": "Fraturas"
+        },
+        {
+            "id": "PR2-Orto-Q4",
+            "text": "Paciente com fratura de antebraço, imobilizado com gesso há 24 horas, chega com dor intensa, edema acentuado e cianose no membro. Qual o diagnóstico mais provável?",
+            "options": [
+                "Osteomielite aguda.",
+                "Trombose venosa profunda.",
+                "Artrite séptica de punho.",
+                "Síndrome compartimental."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Dor desproporcional à lesão, edema tenso, palidez ou cianose e dor à extensão passiva dos dedos são os sinais clássicos da síndrome compartimental, uma emergência ortopédica. A contratura de Volkmann é uma sequela tardia da isquemia.",
+            "tag": "Trauma"
+        },
+        {
+            "id": "PR2-Orto-Q5",
+            "text": "Qual das seguintes condições é uma indicação clássica para o uso da Tomografia Computadorizada (TC) na ortopedia?",
+            "options": [
+                "Avaliação inicial de uma entorse de tornozelo.",
+                "Diagnóstico de lesões ligamentares do joelho.",
+                "Planeamento cirúrgico de tumores ósseos e fraturas complexas.",
+                "Rastreio de osteoporose em idosos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Tomografia Computadorizada é excelente para avaliar a arquitetura óssea em detalhe, sendo fundamental no planeamento cirúrgico de tumores ósseos e na avaliação de fraturas articulares complexas, como a fratura-luxação de Lisfranc.",
+            "tag": "Imagiologia"
+        },
+        {
+            "id": "PR2-Orto-Q6",
+            "text": "Qual a diferença fundamental entre luxação, subluxação e entorse?",
+            "options": [
+                "Entorse é lesão óssea; luxação e subluxação são ligamentares.",
+                "Luxação é a perda parcial do contacto articular; subluxação é a perda total.",
+                "Entorse é uma lesão ligamentar sem perda de contacto; subluxação é a perda parcial e luxação é a perda total.",
+                "Subluxação sempre reduz espontaneamente; luxação nunca."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Entorse é uma lesão ligamentar sem perda da congruência articular. Subluxação é a perda parcial do contacto entre as superfícies articulares. Luxação é a perda total e permanente desse contacto.",
+            "tag": "Trauma"
+        },
+        {
+            "id": "PR2-Orto-Q7",
+            "text": "Quais são os principais agentes etiológicos da osteomielite em neonatos?",
+            "options": [
+                "Pseudomonas aeruginosa e Klebsiella pneumoniae",
+                "Streptococcus pyogenes e Haemophilus influenzae",
+                "Staphylococcus aureus, Streptococcus do grupo B e E. coli",
+                "Clostridium perfringens e Bacteroides fragilis"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Em neonatos, os agentes mais comuns de osteomielite hematogénica são Staphylococcus aureus, Streptococcus agalactiae (Grupo B) e bacilos gram-negativos como a Escherichia coli.",
+            "tag": "Infecção Ortopédica"
+        },
+        {
+            "id": "PR2-Orto-Q8",
+            "text": "Qual a finalidade das manobras de Ortolani e Barlow no exame do quadril neonatal?",
+            "options": [
+                "Ambas tentam luxar um quadril estável.",
+                "Ortolani provoca a luxação, Barlow reduz o quadril.",
+                "Ortolani é uma manobra de redução de um quadril luxado, Barlow é uma manobra provocativa para testar a instabilidade.",
+                "Ambas avaliam a amplitude de movimento do quadril."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A manobra de Ortolani é um teste de redução; um 'clique' positivo significa que a cabeça do fémur, que estava luxada, foi reduzida para dentro do acetábulo. A manobra de Barlow é um teste provocativo; um 'clique' positivo significa que a cabeça do fémur, que estava reduzida, foi luxada.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q9",
+            "text": "A manobra de Patte, que testa a rotação externa contra resistência, é utilizada para avaliar qual músculo do manguito rotador?",
+            "options": [
+                "Supraespinhoso",
+                "Subescapular",
+                "Infraespinhoso",
+                "Redondo menor"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A manobra de Patte é um teste específico para avaliar a integridade e a força do músculo infraespinhoso, que é um dos principais rotadores externos do ombro.",
+            "tag": "Ombro"
+        },
+        {
+            "id": "PR2-Orto-Q10",
+            "text": "O que é a capsulite adesiva, também conhecida como 'ombro congelado', e qual o seu tratamento principal?",
+            "options": [
+                "É uma infeção da cápsula articular, tratada com antibióticos.",
+                "É uma lesão do manguito rotador, tratada com cirurgia.",
+                "É um processo inflamatório e fibrótico da cápsula articular, tratado primariamente com fisioterapia para ganho de movimento.",
+                "É uma artrose da articulação glenoumeral, tratada com artroplastia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A capsulite adesiva é uma condição inflamatória que leva ao espessamento e contratura da cápsula articular, resultando em dor e perda progressiva da mobilidade do ombro. A base do tratamento é a reabilitação com fisioterapia para restaurar a amplitude de movimento.",
+            "tag": "Ombro"
+        },
+        {
+            "id": "PR2-Orto-Q11",
+            "text": "Qual é a manobra de redução para a pronação dolorosa em uma criança?",
+            "options": [
+                "Pronação e extensão do cotovelo.",
+                "Adução e rotação interna do ombro.",
+                "Supinação do antebraço e flexão do cotovelo.",
+                "Flexão do punho e extensão dos dedos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A manobra de redução clássica para a pronação dolorosa consiste em aplicar pressão sobre a cabeça do rádio enquanto se realiza uma supinação firme do antebraço, seguida de flexão do cotovelo.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q12",
+            "text": "Quais são as deformidades componentes do pé torto congénito?",
+            "options": [
+                "Plano, valgo e abdução do antepé.",
+                "Cavo, valgo e adução do antepé.",
+                "Equino, varo do retropé, adução e supinação do antepé.",
+                "Calcâneo, plano e abdução do antepé."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O pé torto congénito é uma deformidade complexa cujos componentes são: equino (flexão plantar do tornozelo), varo do retropé (calcanhar virado para dentro), adução do antepé (antepé virado para dentro) e supinação.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q13",
+            "text": "O que inicia a cascata de degeneração do disco intervertebral na coluna lombar?",
+            "options": [
+                "Aumento da produção de colagénio tipo I.",
+                "Hipertrofia do ligamento amarelo.",
+                "Desidratação do núcleo pulposo devido à diminuição de proteoglicanos.",
+                "Formação de osteófitos nas placas terminais."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O processo degenerativo do disco intervertebral começa com a perda de proteoglicanos no núcleo pulposo, o que diminui a sua capacidade de reter água, levando à desidratação, perda de altura e sobrecarga das outras estruturas da coluna.",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q14",
+            "text": "Quais são os dois biótipos classicamente associados à epifisiólise (escorregamento da cabeça femoral)?",
+            "options": [
+                "Atleta de alta performance e sedentário.",
+                "Magro e alto (gigantismo) e obeso com hipogonadismo (adiposo genital).",
+                "Baixo e magro e alto e obeso.",
+                "Apenas pacientes com doenças endócrinas."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A epifisiólise está associada a dois biótipos principais: o paciente obeso com maturação sexual atrasada (biótipo de Fröhlich) e o paciente alto e magro que passou por um estirão de crescimento rápido.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q15",
+            "text": "O que caracteriza a tríade do Mal de Pott (tuberculose vertebral avançada)?",
+            "options": [
+                "Dor, febre e perda de peso.",
+                "Escoliose, abscesso paravertebral e paraparesia.",
+                "Cifose, abscesso paravertebral e défice neurológico.",
+                "Lordose, dor noturna e infeção do disco."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O Mal de Pott, uma forma grave de tuberculose vertebral, é caracterizado pela tríade de deformidade em cifose (colapso dos corpos vertebrais), formação de abscesso frio paravertebral e compressão medular com défice neurológico.",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q16",
+            "text": "Sobre fraturas expostas, quais afirmações são verdadeiras? I. Mecanismos de dentro para fora geralmente têm baixa contaminação. II. O ambiente da fratura não interfere na profilaxia antibiótica. III. A exteriorização do hematoma fraturário já classifica a fratura como exposta. IV. Fixadores externos ajudam no tratamento das partes moles.",
+            "options": [
+                "I, III e IV são verdadeiras.",
+                "Apenas II e III são falsas.",
+                "Apenas II, III e IV são falsas.",
+                "Apenas I e II são verdadeiras."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A afirmativa II é falsa, pois o ambiente (ex: rural, aquático) determina o risco de contaminação por germes específicos e guia a antibioticoprofilaxia. As demais são verdadeiras: fraturas de dentro para fora têm menor energia e contaminação (I), a comunicação do foco fraturário com o meio externo, mesmo que apenas pelo hematoma, define a exposição (III), e a fixação externa estabiliza a fratura permitindo o cuidado com as feridas (IV).",
+            "tag": "Fraturas"
+        },
+        {
+            "id": "PR2-Orto-Q17",
+            "text": "Numa punção articular por suspeita de artrite séptica, qual resultado laboratorial é esperado?",
+            "options": [
+                "Proteína diminuída com grumos.",
+                "Líquido claro com proteína elevada.",
+                "Leucocitose com diminuição da glicose.",
+                "Líquido turvo com teste de mucina firme."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O líquido sinovial na artrite séptica é purulento, com uma contagem muito elevada de leucócitos (geralmente > 50.000), predominantemente polimorfonucleares. As bactérias consomem a glicose, resultando em níveis mais baixos que os do soro.",
+            "tag": "Infecção Ortopédica"
+        },
+        {
+            "id": "PR2-Orto-Q18",
+            "text": "Lactente de 6 meses com febre alta, dor e impotência funcional no ombro, sem trauma. VHS e PCR elevados. Qual a hipótese e quais fatores de risco para artrite séptica no caso?",
+            "options": [
+                "Sarcoma de Ewing / Febre e ausência de trauma.",
+                "Sarcoma de Ewing / Elevação do VHS e impotência funcional.",
+                "Osteomielite aguda / Idade < 18 meses e localização no ombro.",
+                "Osteomielite aguda / Elevação da PCR e febre alta."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro é de osteomielite hematogénica aguda. Em crianças com menos de 18 meses, vasos sanguíneos atravessam a placa de crescimento, permitindo que a infeção da metáfise se espalhe para a articulação. Além disso, a metáfise proximal do úmero (ombro) é intra-articular, o que também facilita a artrite séptica secundária.",
+            "tag": "Infecção Ortopédica"
+        },
+        {
+            "id": "PR2-Orto-Q19",
+            "text": "A imagem de uma lesão lítica, central e bem delimitada na metáfise proximal do fémur de um menino de 7 anos, assintomático, é mais compatível com:",
+            "options": [
+                "Cisto ósseo simples",
+                "Mieloma múltiplo",
+                "Osteoblastoma",
+                "Tumor de Células Gigantes"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A imagem radiográfica de uma lesão lítica, central, com bordas escleróticas e afilamento da cortical, localizada na metáfise de um osso longo em uma criança ou adolescente, é a apresentação clássica de um Cisto Ósseo Simples, uma lesão benigna.",
+            "tag": "Tumores Ósseos"
+        },
+        {
+            "id": "PR2-Orto-Q20",
+            "text": "Sobre a abordagem das fraturas expostas, é CORRETO afirmar:",
+            "options": [
+                "A classificação de Gustilo-Anderson é imutável após a avaliação inicial.",
+                "O potencial de contaminação está relacionado à extensão da lesão das partes moles.",
+                "O ambiente onde ocorrem as lesões não é relevante para a contaminação.",
+                "Para ser considerada exposta, o osso fraturado deve estar visível na ferida."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A extensão da lesão de partes moles é o principal fator que determina o grau de contaminação e o risco de infeção numa fratura exposta, sendo um pilar da classificação de Gustilo-Anderson.",
+            "tag": "Fraturas"
+        },
+        {
+            "id": "PR2-Orto-Q21",
+            "text": "Na suspeita de Artrite Séptica, além da punção articular, quais exames são fundamentais na investigação inicial?",
+            "options": [
+                "Ressonância Magnética e Cintilografia Óssea.",
+                "Cultura de LCR e Hemograma Completo.",
+                "Hemocultura e Hemograma Completo.",
+                "Apenas marcadores inflamatórios (VHS e PCR)."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A artrite séptica pode ser secundária a uma bacteriemia. Portanto, a colheita de hemoculturas é essencial para tentar identificar o agente etiológico. O hemograma avalia a resposta sistémica à infeção (leucocitose).",
+            "tag": "Infecção Ortopédica"
+        },
+        {
+            "id": "PR2-Orto-Q22",
+            "text": "Em relação às lesões medulares, qual afirmação está INCORRETA?",
+            "options": [
+                "O uso de corticoide em altas doses é controverso, mas se usado, deve ser nas primeiras 8 horas em lesões com défice.",
+                "Não ocorre lesão da medula espinhal em fraturas abaixo de L1/L2, apenas da cauda equina.",
+                "A lesão medular secundária é causada pela resposta inflamatória ao trauma inicial.",
+                "Em crianças, a lesão medular pode ocorrer sem fratura visível (SCIWORA)."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa incorreta (portanto, a resposta) é a A. O uso de corticoide em altas doses NÃO está indicado em lesões sem défice neurológico nem em traumas ocorridos há mais de 8 horas. Sua indicação, embora controversa, é restrita a casos com défice, dentro da janela de 8 horas.",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q23",
+            "text": "Paciente com fratura de fémur tratada cirurgicamente com placa e parafusos (osteossíntese rígida). Após 8 semanas, a radiografia não mostra calo ósseo visível, mas o paciente está assintomático. Qual a explicação?",
+            "options": [
+                "O calo ósseo só se torna visível após o remodelamento.",
+                "A ausência de calo indica infeção ativa.",
+                "O paciente está a evoluir para uma pseudoartrose.",
+                "Ocorreu um processo de consolidação óssea direta (primária)."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A osteossíntese rígida com compressão interfragmentária permite a consolidação óssea direta ou primária, que ocorre por remodelamento haversiano através do foco de fratura, sem a formação de um calo ósseo externo visível radiograficamente.",
+            "tag": "Fisiologia Óssea"
+        },
+        {
+            "id": "PR2-Orto-Q24",
+            "text": "Como se confirma o fim do choque medular num paciente com trauma raquimedular?",
+            "options": [
+                "Pelo retorno do reflexo bulbocavernoso.",
+                "Pela estabilização da pressão arterial.",
+                "Pelo retorno da sensibilidade nos membros inferiores.",
+                "Pela ausência de bradicardia."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O choque medular é a perda temporária de toda a atividade reflexa abaixo do nível da lesão. O retorno do reflexo bulbocavernoso (contração do esfíncter anal à tração da sonda vesical ou compressão da glande/clitóris) é o primeiro a reaparecer e marca o fim desta fase.",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q25",
+            "text": "Sobre o choque medular, é CORRETO afirmar:",
+            "options": [
+                "Decorre de lesão das cadeias simpáticas.",
+                "Cursa com extremidades quentes e hiperemiadas.",
+                "O retorno precoce do reflexo bulbocavernoso indica bom prognóstico.",
+                "É uma disfunção fisiológica temporária da medula e pode ocorrer mesmo em secções completas."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O choque medular é uma 'despolarização' funcional e temporária da medula espinhal que ocorre após um trauma, independentemente da gravidade da lesão anatómica. Por isso, pode ocorrer tanto em lesões completas quanto incompletas. As opções A e B descrevem o choque neurogénico.",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q26",
+            "text": "A artrite séptica pode ser uma complicação da osteomielite em crianças quando a metáfise óssea é intra-articular. Quais das seguintes articulações se enquadram nesta situação?",
+            "options": [
+                "Joelho, Punho e Mão.",
+                "Ombro, Quadril e Tornozelo.",
+                "Coluna, Sacroilíaca e Púbis.",
+                "Apenas o quadril em menores de 1 ano."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A metáfise (região mais comum de osteomielite hematogénica) é intra-articular no ombro (úmero proximal), quadril (fémur proximal), cotovelo (rádio proximal) e tornozelo (tíbia distal). Portanto, uma osteomielite nestes locais pode facilmente disseminar-se para a articulação.",
+            "tag": "Infecção Ortopédica"
+        },
+        {
+            "id": "PR2-Orto-Q27",
+            "text": "Criança de 5 anos com febre, dor pontiforme na coxa direita próxima ao joelho, que piora com o movimento. Qual o diagnóstico mais provável?",
+            "options": [
+                "Artrite Séptica do joelho",
+                "Osteomielite Hematogénica Aguda do fémur distal",
+                "Sarcoma de Ewing",
+                "Doença de Legg-Calvé-Perthes"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A dor óssea localizada e intensa (puntiforme), associada a febre e sinais sistémicos numa criança, aponta para osteomielite hematogénica aguda. A metáfise distal do fémur (próxima ao joelho) é uma das localizações mais comuns.",
+            "tag": "Infecção Ortopédica"
+        },
+        {
+            "id": "PR2-Orto-Q28.1",
+            "text": "Paciente de 63 anos com dor lombar que irradia pela face posterior da coxa e parestesia no maléolo lateral esquerdo. Qual teste clínico é utilizado para avaliar a compressão da raiz de S1?",
+            "options": [
+                "Teste de Lasègue (elevação da perna estendida).",
+                "Teste de Patrick (ou FABERE).",
+                "Teste de Thomas.",
+                "Manobra de Spurling."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O Teste de Lasègue, que consiste na elevação passiva do membro inferior com o joelho estendido, provoca o estiramento do nervo ciático (raízes L4, L5, S1). A reprodução da dor irradiada entre 30 e 70 graus de flexão do quadril é um sinal positivo para compressão radicular.",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q28.2",
+            "text": "No paciente com radiculopatia de S1, qual grupo muscular pode apresentar fraqueza?",
+            "options": [
+                "Flexores do joelho.",
+                "Dorsiflexores do pé (extensor longo do hálux).",
+                "Flexores plantares e eversores do pé.",
+                "Quadríceps femoral."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A raiz de S1 é responsável pela inervação dos músculos da panturrilha (gastrocnémio, sóleo), que realizam a flexão plantar, e dos músculos fibulares, responsáveis pela eversão do pé.",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q28.3",
+            "text": "Qual exame de imagem inicial é solicitado na investigação de uma lombociatalgia e quais achados são esperados em um quadro degenerativo?",
+            "options": [
+                "Ressonância Magnética, esperando encontrar hérnia de disco e edema medular.",
+                "Tomografia Computadorizada, esperando encontrar fraturas e tumores.",
+                "Radiografia da coluna lombossacral, esperando encontrar osteófitos, redução do espaço discal e espondilolistese.",
+                "Cintilografia óssea, esperando encontrar áreas de hipercaptação."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A radiografia simples é o exame inicial na avaliação da dor lombar. Em processos degenerativos (espondilose), os achados esperados incluem a formação de osteófitos (bicos de papagaio), a diminuição da altura dos discos intervertebrais e eventuais desalinhamentos (espondilolistese).",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q29.1",
+            "text": "Paciente jovem com metatarsalgia e dor tipo 'choque' à palpação do 3º espaço intermetatarsal, que irradia para os dedos. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Fratura por stress do metatarso.",
+                "Artrite gotosa.",
+                "Neuroma de Morton.",
+                "Fascite plantar."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A dor em queimação ou 'choque' no espaço intermetatarsal (mais comum entre o 3º e 4º dedos), que piora com o uso de sapatos apertados e melhora ao retirá-los, é a apresentação clássica do Neuroma de Morton, uma fibrose perineural do nervo digital plantar.",
+            "tag": "Pé e Tornozelo"
+        },
+        {
+            "id": "PR2-Orto-Q29.2",
+            "text": "Qual o exame padrão-ouro para confirmar o diagnóstico de Neuroma de Morton?",
+            "options": [
+                "Radiografia com carga.",
+                "Ultrassonografia.",
+                "Ressonância Magnética.",
+                "Eletroneuromiografia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Embora a ultrassonografia possa visualizar o neuroma, a Ressonância Magnética é considerada o padrão-ouro por fornecer uma melhor definição da lesão e excluir outros diagnósticos diferenciais.",
+            "tag": "Pé e Tornozelo"
+        },
+        {
+            "id": "PR2-Orto-Q30.1",
+            "text": "Paciente de 48 anos, tricoteira, com dor e parestesia nos três dedos laterais da mão direita. Quais testes semiológicos são usados para confirmar a Síndrome do Túnel do Carpo?",
+            "options": [
+                "Teste de Cozen e Teste de Mills.",
+                "Teste de Lasègue e Teste de Patrick.",
+                "Teste de Phalen e Teste de Tinel.",
+                "Teste de Jobe e Teste de Gerber."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O Teste de Phalen (flexão máxima do punho por 1 minuto) e o Teste de Tinel (percussão sobre o túnel do carpo) são as manobras clássicas para provocar os sintomas da Síndrome do Túnel do Carpo, ao aumentar a pressão sobre o nervo mediano.",
+            "tag": "Mão e Punho"
+        },
+        {
+            "id": "PR2-Orto-Q31.2",
+            "text": "Num paciente com sintomas na mão e diagnóstico de cervicobraquialgia, como uma infiltração local pode ajudar a diferenciar a origem dos sintomas?",
+            "options": [
+                "Se a dor cervical melhorar, a origem é proximal.",
+                "A infiltração não tem valor diagnóstico.",
+                "Se os sintomas na mão melhorarem após a infiltração no túnel do carpo, a origem é distal (Síndrome do Túnel do Carpo).",
+                "A melhora dos sintomas com a infiltração confirma que ambas as patologias estão presentes."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A infiltração de corticoide no túnel do carpo tem um papel tanto terapêutico quanto diagnóstico. Se a melhora dos sintomas na mão for significativa, isso confirma que a compressão distal do nervo mediano é a principal causa da sintomatologia, diferenciando-a de uma radiculopatia cervical.",
+            "tag": "Mão e Punho"
+        },
+        {
+            "id": "PR2-Orto-Q32",
+            "text": "As manobras de Jobe e Gerber positivas indicam lesão em quais músculos do manguito rotador, respetivamente?",
+            "options": [
+                "Supraespinhoso e Infraespinhoso.",
+                "Subescapular e Redondo Menor.",
+                "Supraespinhoso e Subescapular.",
+                "Infraespinhoso e Redondo Menor."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O teste de Jobe (ou 'empty can test') avalia primariamente o músculo supraespinhoso. O teste de Gerber (ou 'lift-off test') avalia o músculo subescapular.",
+            "tag": "Ombro"
+        },
+        {
+            "id": "PR2-Orto-Q33.1",
+            "text": "Paciente com dor cervical irradiada para a face lateral do antebraço e 1º e 2º dedos. A ressonância mostra hérnia discal em C6-C7. Qual raiz nervosa está mais provavelmente comprimida?",
+            "options": [
+                "C5",
+                "C6",
+                "C7",
+                "C8"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Uma hérnia discal em C6-C7 comprime a raiz nervosa que sai por este forame, que é a raiz de C7. O dermátomo de C7 corresponde classicamente ao dedo médio, mas pode haver sobreposição.",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q33.2",
+            "text": "Por que o tratamento conservador foi a opção inicial para o paciente da questão anterior, que tinha força muscular preservada?",
+            "options": [
+                "Porque a cirurgia tem alto risco de complicações.",
+                "Porque a fisioterapia sempre resolve a hérnia discal.",
+                "Porque a ausência de défice motor progressivo ou mielopatia é uma indicação para iniciar o tratamento conservador.",
+                "Porque o paciente recusou a cirurgia."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A maioria dos casos de radiculopatia cervical por hérnia de disco melhora com o tratamento conservador. A cirurgia é reservada para casos de dor refratária, défice neurológico progressivo ou sinais de compressão medular (mielopatia).",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q34.1",
+            "text": "Criança de 4 anos com claudicação e limitação da rotação interna do quadril esquerdo, uma semana após dor de garganta. Qual a principal hipótese?",
+            "options": [
+                "Doença de Legg-Calvé-Perthes",
+                "Artrite Séptica",
+                "Sinovite Transitória do Quadril",
+                "Displasia do Desenvolvimento do Quadril"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A história de um quadro articular agudo (claudicação, limitação de movimento) em uma criança pequena, precedido por uma infeção de vias aéreas superiores, é a apresentação clássica da Sinovite Transitória do Quadril.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q34.2",
+            "text": "Qual a orientação correta a ser dada aos pais de uma criança com Sinovite Transitória do Quadril?",
+            "options": [
+                "É uma emergência e necessita de cirurgia para drenagem.",
+                "É uma necrose do osso e necessita de imobilização com gesso.",
+                "É uma inflamação benigna e autolimitada, que melhora com repouso e sintomáticos.",
+                "É necessário iniciar antibióticos imediatamente para evitar sequelas."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. É fundamental tranquilizar os pais, explicando que a Sinovite Transitória é uma condição benigna, inflamatória e que se resolve espontaneamente em poucos dias com repouso e anti-inflamatórios, sem deixar sequelas.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q35.1",
+            "text": "Recém-nascido com cabeça inclinada para a direita e queixo rodado para a esquerda, com um 'caroço' no pescoço. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Fratura de clavícula",
+                "Torcicolo muscular congénito",
+                "Anomalia de Klippel-Feil",
+                "Linfadenite cervical"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A postura característica de inclinação da cabeça para o lado da lesão e rotação do queixo para o lado contralateral, associada a uma massa palpável no músculo esternocleidomastoideo, define o Torcicolo Muscular Congénito.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q35.2",
+            "text": "Quais são as principais implicações do torcicolo muscular congénito não tratado?",
+            "options": [
+                "Apenas uma limitação estética do movimento do pescoço.",
+                "Pode levar a assimetria facial (plagiocefalia), desnivelamento dos olhos e escoliose.",
+                "Raramente causa problemas a longo prazo.",
+                "Está associado a um alto risco de atraso no desenvolvimento da fala."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A contratura persistente do esternocleidomastoideo pode levar a deformidades craniofaciais secundárias, como o achatamento da face e do crânio (plagiocefalia), e a deformidades posturais compensatórias, como a escoliose.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q35.3",
+            "text": "Qual articulação deve ser cuidadosamente avaliada em um recém-nascido com torcicolo muscular congénito devido à sua associação frequente?",
+            "options": [
+                "Ombro",
+                "Cotovelo",
+                "Joelho",
+                "Quadril"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Existe uma associação bem estabelecida entre o torcicolo muscular congénito e a Displasia do Desenvolvimento do Quadril (DDQ). Portanto, toda criança com torcicolo deve ter os seus quadris examinados cuidadosamente.",
+            "tag": "Ortopedia Pediátrica"
+        },
+        {
+            "id": "PR2-Orto-Q36.1",
+            "text": "Qual o exame de imagem e as incidências padrão para avaliar uma luxação de ombro?",
+            "options": [
+                "Ultrassonografia em repouso e com movimento.",
+                "Tomografia Computadorizada com reconstrução 3D.",
+                "Radiografia em AP verdadeiro do ombro e Perfil escapular (ou axilar).",
+                "Ressonância Magnética com contraste."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A avaliação radiográfica inicial de um ombro traumatizado deve incluir, no mínimo, duas incidências ortogonais, sendo o AP verdadeiro e o Perfil as mais utilizadas para diagnosticar e classificar uma luxação.",
+            "tag": "Ombro"
+        },
+        {
+            "id": "PR2-Orto-Q36.2",
+            "text": "As imagens da questão mostram qual tipo de lesão?",
+            "options": [
+                "Fratura do colo do úmero.",
+                "Luxação acromioclavicular.",
+                "Fratura da escápula.",
+                "Luxação anterior do ombro (glenoumeral)."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. As radiografias mostram a perda de congruência entre a cabeça do úmero e a cavidade glenoide, com a cabeça umeral deslocada anteriormente e inferiormente em relação à glenoide, o que é característico da luxação anterior do ombro.",
+            "tag": "Ombro"
+        },
+        {
+            "id": "PR2-Orto-Q36.3",
+            "text": "Qual o tratamento do quadro agudo de uma luxação de ombro e a técnica de preferência?",
+            "options": [
+                "Cirurgia de urgência para reparo ligamentar.",
+                "Redução fechada sob sedação, seguida de imobilização com tipóia.",
+                "Apenas imobilização com tipóia, esperando a redução espontânea.",
+                "Fisioterapia imediata para fortalecimento muscular."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O tratamento de uma luxação aguda do ombro consiste na sua redução o mais rápido possível, geralmente sob analgesia e relaxamento muscular (sedação). Após a redução, o membro é imobilizado para controlo da dor e cicatrização inicial. A manobra de tração e contra-tração é uma das técnicas possíveis.",
+            "tag": "Ombro"
+        },
+        {
+            "id": "PR2-Orto-Q37.1",
+            "text": "Paciente jovem, vítima de acidente de automóvel, com trauma cervical e paraplegia flácida e arreflexa. Qual o diagnóstico da lesão traumática?",
+            "options": [
+                "Fratura de clavícula",
+                "Lesão medular cervical",
+                "Traumatismo cranioencefálico",
+                "Lesão do plexo braquial"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O desenvolvimento de défice neurológico motor (paraplegia) após um trauma cervical é a definição de uma lesão medular traumática. A flacidez e arreflexia indicam que o paciente está na fase de choque medular.",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q37.2",
+            "text": "Quais as imagens da série trauma da coluna cervical devem ser realizadas para elucidação do quadro?",
+            "options": [
+                "Apenas AP e Perfil.",
+                "Apenas Ressonância Magnética.",
+                "Radiografia em AP, Perfil e Transoral.",
+                "Apenas Tomografia Computadorizada."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A série radiográfica padrão para avaliação inicial da coluna cervical em um paciente traumatizado inclui três incidências: AP, Perfil (que deve mostrar até a transição C7-T1) e Transoral (para visualizar o processo odontoide de C2).",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q37.3",
+            "text": "Como é o exame neurológico da raiz de C6 (motricidade, reflexo e sensibilidade)?",
+            "options": [
+                "Flexão do cotovelo, reflexo bicipital, sensibilidade da face lateral do braço.",
+                "Extensão do punho, reflexo estilorradial, sensibilidade do polegar e indicador.",
+                "Extensão do cotovelo, reflexo tricipital, sensibilidade do dedo médio.",
+                "Flexão dos dedos, sem reflexo, sensibilidade do dedo mínimo."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A raiz de C6 inerva os extensores do punho, é responsável pelo reflexo braquiorradial (estilorradial) e pela sensibilidade da face lateral do antebraço e dos dois primeiros dedos.",
+            "tag": "Coluna"
+        },
+        {
+            "id": "PR2-Orto-Q37.4",
+            "text": "Qual reflexo profundo deve ser testado para determinar se um paciente com lesão medular aguda saiu da fase de choque medular?",
+            "options": [
+                "Reflexo patelar.",
+                "Reflexo bicipital.",
+                "Reflexo cutâneo-abdominal.",
+                "Reflexo bulbocavernoso."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O retorno do reflexo bulbocavernoso é o sinal que indica o fim da fase de choque medular. A sua presença permite uma avaliação mais acurada da lesão neurológica e do prognóstico.",
+            "tag": "Coluna"
+        }
+    ]
+},
+  {
+    id: "preset-m7-pr2-oftalmologia",
+    name: "Estácio - M7 - PR2 - Oftalmologia",
+    questions: [
+        {
+            "id": "PR2-Oftalmo-Q1.1",
+            "text": "Paciente de 22 anos, míope, usuário de lentes de contato, refere olho vermelho após viagem. Ao exame: AV C/C OD: 20/40, OE: 20/100. OE com hiperemia difusa, lesão corneana central e hipópio leve. Qual a melhor hipótese diagnóstica para a baixa visual do OE?",
+            "options": [
+                "Ceratite por Acanthamoeba",
+                "Uveíte anterior",
+                "Ceratite bacteriana grave por Pseudomonas aeruginosa",
+                "Conjuntivite viral"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A história de uso de lentes de contato associada a um quadro agudo de dor, olho vermelho, lesão corneana (infiltrado/úlcera) e reação inflamatória intensa (hipópio) é altamente sugestiva de ceratite bacteriana, sendo a Pseudomonas aeruginosa o agente mais temido e comum neste cenário. As outras opções não explicam a totalidade dos achados, especialmente a lesão corneana grave.",
+            "tag": "Córnea"
+        },
+        {
+            "id": "PR2-Oftalmo-Q1.2",
+            "text": "Diante da hipótese de ceratite bacteriana grave no paciente da questão anterior, qual a conduta inicial mais adequada para o OE?",
+            "options": [
+                "Iniciar corticoide tópico para reduzir a inflamação.",
+                "Ocluir o olho e reavaliar em 24 horas.",
+                "Aguardar resultado de cultura para iniciar tratamento.",
+                "Suspender lentes, colher raspado corneano e iniciar colírios antibióticos fortificados de amplo espectro."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A ceratite bacteriana é uma emergência oftalmológica. A conduta correta é suspender o uso das lentes de contato, colher material da úlcera para cultura e antibiograma (raspado corneano) e iniciar imediatamente antibioticoterapia tópica fortificada e de amplo espectro, com alta frequência, para cobrir os agentes mais prováveis, como a Pseudomonas.",
+            "tag": "Córnea"
+        },
+        {
+            "id": "PR2-Oftalmo-Q2.1",
+            "text": "Paciente de 50 anos com queixa de hiperemia conjuntival em ambos os olhos. Ao exame: hiperemia bulbar (OD > OE), ausência de secreção purulenta e presença de reação folicular em fórnice inferior. Qual o diagnóstico mais provável?",
+            "options": [
+                "Conjuntivite viral",
+                "Conjuntivite bacteriana",
+                "Conjuntivite alérgica",
+                "Blefarite"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A presença de reação folicular na conjuntiva tarsal é o sinal mais característico da conjuntivite viral, causada principalmente pelo adenovírus. A ausência de secreção purulenta significativa afasta a conjuntivite bacteriana (B). A reação na conjuntivite alérgica (C) é tipicamente papilar, não folicular.",
+            "tag": "Conjuntiva"
+        },
+        {
+            "id": "PR2-Oftalmo-Q2.2",
+            "text": "No paciente com suspeita de conjuntivite viral da questão anterior, qual das seguintes condutas é CORRETA?",
+            "options": [
+                "É esperado encontrar linfonodomegalia pré-auricular ou submandibular.",
+                "Há indicação de antibiótico oral se não houver resposta ao tratamento tópico.",
+                "Está indicado o uso de colírio de antibiótico associado a corticoide.",
+                "Está indicado o uso de colírios de dupla-ação como a olopatadina."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A linfonodomegalia pré-auricular dolorosa é um achado semiológico clássico e muito comum na conjuntivite viral por adenovírus, ajudando a diferenciá-la de outras causas de olho vermelho. As outras opções se aplicam a outras patologias (bacteriana ou alérgica).",
+            "tag": "Conjuntiva"
+        },
+        {
+            "id": "PR2-Oftalmo-Q3",
+            "text": "Um indivíduo que queima os olhos com a radiação de uma solda elétrica, por não usar EPI, procura atendimento de urgência imediatamente após o ocorrido.",
+            "options": [
+                "Verdadeiro, a dor é imediata e intensa.",
+                "Falso, os sintomas como dor intensa e fotofobia demoram de 4 a 6 horas para aparecer.",
+                "Verdadeiro, ocorre um dano térmico direto que causa dor instantânea.",
+                "Falso, a lesão é indolor e só se percebe pela baixa de visão."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A lesão causada pela radiação UV da solda elétrica é uma ceratite actínica. O dano às células epiteliais da córnea tem um período de latência. Os sintomas de dor intensa, fotofobia e lacrimejamento tipicamente surgem horas após a exposição, muitas vezes acordando o paciente durante a noite.",
+            "tag": "Trauma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q4.1",
+            "text": "Paciente de 76 anos com queixa de ardência ocular e lacrimejamento. AV s/c: 20/200 em ambos os olhos, que não melhora com correção. Fundoscopia dificultada por opacidade de meios. Qual a principal hipótese para a baixa acuidade visual?",
+            "options": [
+                "Glaucoma",
+                "Degeneração Macular Relacionada à Idade (DMRI)",
+                "Catarata",
+                "Olho seco"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A baixa acuidade visual progressiva em um paciente idoso, que não melhora com a refração (óculos) e está associada a uma 'opacidade de meios' que dificulta a fundoscopia, é o quadro clássico de catarata (opacificação do cristalino).",
+            "tag": "Cristalino"
+        },
+        {
+            "id": "PR2-Oftalmo-Q4.2",
+            "text": "Para a paciente com diagnóstico de catarata da questão anterior, qual o tratamento proposto?",
+            "options": [
+                "Uso de colírios para dissolver a catarata.",
+                "Facectomia com implante de lente intraocular.",
+                "Capsulotomia com YAG laser.",
+                "Acompanhamento clínico até a visão piorar para conta dedos."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O único tratamento definitivo e eficaz para a catarata é a remoção cirúrgica do cristalino opacificado (facectomia) e o implante de uma lente intraocular artificial para restaurar o foco e a visão.",
+            "tag": "Cristalino"
+        },
+        {
+            "id": "PR2-Oftalmo-Q4.3",
+            "text": "Qual a principal hipótese diagnóstica para a queixa de ardência e lacrimejamento reflexo na paciente de 76 anos da questão anterior?",
+            "options": [
+                "Alergia ocular",
+                "Obstrução de via lacrimal",
+                "Síndrome do olho seco",
+                "Blefarite"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Síndrome do Olho Seco é extremamente comum em idosos e se manifesta com sintomas de irritação, ardência, sensação de areia e, paradoxalmente, lacrimejamento reflexo, que é uma resposta do olho à irritação da superfície.",
+            "tag": "Doenças Externas"
+        },
+        {
+            "id": "PR2-Oftalmo-Q4.4",
+            "text": "Qual dos seguintes testes NÃO é utilizado para o diagnóstico de olho seco?",
+            "options": [
+                "Teste de Schirmer",
+                "Tempo de ruptura do filme lacrimal (TRFL)",
+                "Coloração com Lissamina Verde",
+                "Teste de sobrecarga hídrica"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O teste de sobrecarga hídrica é um teste provocativo utilizado na investigação do glaucoma, não do olho seco. Os testes de Schirmer (A), TRFL (B) e a coloração com corantes vitais (C) são métodos clássicos para avaliar a quantidade e a qualidade da lágrima.",
+            "tag": "Doenças Externas"
+        },
+        {
+            "id": "PR2-Oftalmo-Q4.5",
+            "text": "Se a fundoscopia da paciente de 76 anos revelasse depósitos amarelados na mácula, qual seria o diagnóstico provável?",
+            "options": [
+                "Retinopatia Diabética",
+                "Buraco Macular",
+                "Drusas (DMRI seca)",
+                "Edema Macular Cistoide"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Drusas são depósitos de material extracelular (lipofuscina) que se acumulam sob a retina na região macular. São o achado característico da forma seca da Degeneração Macular Relacionada à Idade (DMRI).",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q4.6",
+            "text": "Na suspeita de DMRI, qual dos seguintes exames é MENOS útil para o diagnóstico e acompanhamento?",
+            "options": [
+                "Angiografia fluoresceínica",
+                "Tomografia de Coerência Óptica (OCT)",
+                "Grade de Amsler",
+                "Paquimetria corneana"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A paquimetria mede a espessura da córnea e é importante na avaliação do glaucoma. Para a DMRI, os exames fundamentais são a angiografia (A) para detectar neovasos, o OCT (B) para avaliar as camadas da retina e a grade de Amsler (C) para detectar metamorfopsia.",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q4.7",
+            "text": "A queixa de ardência e lacrimejamento tem correlação com o diagnóstico de DMRI?",
+            "options": [
+                "Sim, pois a DMRI causa inflamação que afeta a superfície ocular.",
+                "Não, pois a DMRI é uma doença da retina e não causa sintomas de superfície.",
+                "Sim, pois a baixa visão da DMRI leva ao esforço visual e ressecamento.",
+                "Não, pois o lacrimejamento é um sintoma exclusivo de obstrução de via lacrimal."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A DMRI é uma doença restrita à mácula, na parte posterior do olho (retina). Os sintomas de ardência e lacrimejamento são de superfície ocular e não têm relação direta com a fisiopatologia da DMRI. No caso, são mais provavelmente causados pelo olho seco.",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q4.8",
+            "text": "Como pode ser feito o tratamento da síndrome do olho seco?",
+            "options": [
+                "Apenas com colírios antibióticos.",
+                "Apenas com cirurgia para desobstruir as glândulas.",
+                "Com colírios anti-inflamatórios e corticoides.",
+                "Com lubrificantes oculares, medidas de higiene palpebral e suplementação nutricional."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O tratamento do olho seco é multifatorial e envolve o uso de lágrimas artificiais (lubrificantes), medidas de higiene para melhorar a função das glândulas de Meibomius (compressas mornas) e, em alguns casos, suplementação com ômega 3.",
+            "tag": "Doenças Externas"
+        },
+        {
+            "id": "PR2-Oftalmo-Q5",
+            "text": "Sobre a degeneração macular relacionada à idade (DMRI) é possível afirmar que:",
+            "options": [
+                "Drusas esparsas localizadas fora da mácula podem ser observadas em pacientes idosos sem DMRI.",
+                "O tratamento da forma seca e exsudativa é feito com agentes anti-VEGF.",
+                "O tratamento com vitaminas reverte completamente as drusas.",
+                "No estágio cicatricial da forma exsudativa, espera-se melhora significativa da visão com anti-VEGF."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Pequenas drusas duras e esparsas fora da área macular central podem ser um achado do envelhecimento normal e não necessariamente indicam o diagnóstico de DMRI. As outras opções estão incorretas: anti-VEGF é para a forma exsudativa (B), vitaminas não revertem drusas (C) e o tratamento é menos eficaz na fase cicatricial (D).",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q6.1",
+            "text": "Paciente de 76 anos, assintomática, em consulta de rotina. AV c/c 20/25 em AO. PIO: 21/23 mmHg. Fundoscopia com bom reflexo e sem alterações na fóvea. Qual a principal suspeita diagnóstica?",
+            "options": [
+                "Catarata",
+                "DMRI",
+                "Glaucoma",
+                "Hipertensão Ocular"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A combinação de idade avançada, pressão intraocular (PIO) no limite superior da normalidade ou discretamente elevada e a ausência de sintomas são altamente sugestivos de Glaucoma Primário de Ângulo Aberto, uma doença silenciosa nas fases iniciais.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q6.2",
+            "text": "Na paciente com suspeita de glaucoma, qual exame é fundamental para avaliar o dano funcional?",
+            "options": [
+                "Retinografia",
+                "Tomografia de Coerência Óptica (OCT)",
+                "Exame do campo visual (Campimetria)",
+                "Gonioscopia"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O glaucoma causa perda progressiva de fibras nervosas do nervo óptico, o que se traduz em perda de campo visual periférico. A campimetria é o exame padrão-ouro para detectar e quantificar este dano funcional.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q6.3",
+            "text": "Na paciente com suspeita de glaucoma, qual alteração o médico deve procurar no exame de fundo de olho?",
+            "options": [
+                "Drusas no nervo óptico",
+                "Edema de papila",
+                "Aumento da escavação do nervo óptico",
+                "Hemorragias em chama de vela"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O dano glaucomatoso se manifesta estruturalmente como a perda de axônios do nervo óptico. No fundo de olho, isso é observado como um aumento da escavação (a parte central, mais pálida) em relação ao disco óptico total.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q6.4",
+            "text": "Como pode ser feito o tratamento inicial do glaucoma primário de ângulo aberto?",
+            "options": [
+                "Apenas com cirurgia (trabeculectomia).",
+                "Com colírios hipotensores (ex: análogos da prostaglandina).",
+                "Apenas com laser (trabeculoplastia).",
+                "Com uso de óculos com prismas."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O tratamento de primeira linha para o glaucoma primário de ângulo aberto visa reduzir a pressão intraocular e é feito, na maioria dos casos, com o uso de colírios hipotensores. Os análogos de prostaglandina são frequentemente a primeira escolha.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q7.1",
+            "text": "Homem de 26 anos com diplopia, queda do estado geral e edema periorbitário à esquerda. AV OE: 20/40. Apresenta restrição da abdução do olho esquerdo. Qual a principal suspeita diagnóstica?",
+            "options": [
+                "Celulite pré-septal",
+                "Celulite orbitária (pós-septal)",
+                "Conjuntivite alérgica grave",
+                "Dacriocistite aguda"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O edema periorbitário associado a sinais de acometimento da órbita (proptose, baixa visual, dor à movimentação ocular e oftalmoplegia/diplopia) caracteriza a celulite orbitária (pós-septal), uma emergência infecciosa. A celulite pré-septal (A) não afeta a motilidade ou a visão.",
+            "tag": "Órbita"
+        },
+        {
+            "id": "PR2-Oftalmo-Q7.2",
+            "text": "No caso de suspeita de celulite orbitária, qual o exame de imagem mais importante a ser solicitado?",
+            "options": [
+                "Ultrassonografia ocular",
+                "Ressonância Magnética de crânio",
+                "Tomografia Computadorizada de órbitas e seios paranasais",
+                "Radiografia simples de face"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Tomografia Computadorizada é o exame de eleição na suspeita de celulite orbitária, pois permite avaliar a extensão do processo inflamatório/infeccioso, a presença de abscessos e o acometimento dos seios paranasais, que são a principal fonte da infecção.",
+            "tag": "Órbita"
+        },
+        {
+            "id": "PR2-Oftalmo-Q7.3",
+            "text": "Na celulite orbitária, qual das seguintes NÃO é uma complicação temida?",
+            "options": [
+                "Abscesso orbitário",
+                "Meningite",
+                "Trombose do seio cavernoso",
+                "Glaucoma agudo"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. As complicações da celulite orbitária são graves e resultam da disseminação da infecção para estruturas adjacentes, como a formação de abscessos (A) ou a propagação para o sistema nervoso central, causando meningite (B) ou trombose do seio cavernoso (C). O glaucoma agudo não é uma complicação direta.",
+            "tag": "Órbita"
+        },
+        {
+            "id": "PR2-Oftalmo-Q7.4",
+            "text": "Qual o tratamento para a celulite orbitária (pós-septal)?",
+            "options": [
+                "Cefalexina 500mg via oral por 14 dias.",
+                "Compressas mornas e acompanhamento ambulatorial.",
+                "Internação hospitalar e antibioticoterapia venosa de amplo espectro.",
+                "Drenagem cirúrgica em todos os casos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A celulite orbitária é uma emergência que exige internação hospitalar para administração de antibióticos intravenosos de amplo espectro para cobrir os patógenos mais comuns. A drenagem cirúrgica (D) é reservada para casos com formação de abscesso.",
+            "tag": "Órbita"
+        },
+        {
+            "id": "PR2-Oftalmo-Q8.1",
+            "text": "Paciente de 40 anos com DM tipo II e baixa visual. Fundoscopia revela microaneurismas, exsudação e edema retiniano macular. Qual o tratamento deve ser instituído para o edema macular?",
+            "options": [
+                "Apenas controle rigoroso da glicemia.",
+                "Fotocoagulação a laser em toda a retina.",
+                "Injeção intravítrea de anti-VEGF ou corticoide.",
+                "Vitrectomia via pars plana."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento padrão-ouro para o edema macular diabético clinicamente significativo é a injeção intravítrea de agentes anti-VEGF (fator de crescimento endotelial vascular) ou, em casos selecionados, de corticoides.",
+            "tag": "Retinopatia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q8.2",
+            "text": "Qual a primeira alteração fundoscópica que surge na retinopatia diabética?",
+            "options": [
+                "Microaneurismas",
+                "Hemorragias em chama de vela",
+                "Exsudatos algodonosos",
+                "Neovasos"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Os microaneurismas, pequenas dilatações saculares na parede dos capilares retinianos, são o primeiro sinal clinicamente detectável da retinopatia diabética no exame de fundo de olho.",
+            "tag": "Retinopatia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q9",
+            "text": "Paciente com visão tubular (campo restrito a 20-30 graus centrais), mas com acuidade visual de 20/20, é diagnosticado com glaucoma avançado. O tratamento pode reverter a perda de campo visual?",
+            "options": [
+                "Sim, o uso de colírios recupera as fibras nervosas perdidas.",
+                "Não, pois o dano ao nervo óptico causado pelo glaucoma é irreversível.",
+                "Sim, a cirurgia de trabeculectomia pode restaurar o campo visual.",
+                "Não, mas a perda de visão pode ser revertida com óculos especiais."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O dano causado pelo glaucoma às fibras do nervo óptico é permanente e irreversível. O objetivo do tratamento é controlar a pressão intraocular para frear ou impedir a progressão da perda de campo visual, mas não é possível recuperar o que já foi perdido.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q10.1",
+            "text": "Paciente de 15 anos com olho vermelho há 48 horas, com hiperemia em fundo de saco e secreção purulenta frequente. Visão, fundo de olho e PIO normais. Qual o diagnóstico?",
+            "options": [
+                "Conjuntivite viral",
+                "Conjuntivite bacteriana",
+                "Conjuntivite alérgica",
+                "Ceratite"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A presença de secreção purulenta abundante é o sinal cardinal da conjuntivite bacteriana aguda. Na conjuntivite viral (A), a secreção é mais aquosa ou mucoide, e na alérgica (C), é mais hialina e filamentosa.",
+            "tag": "Conjuntiva"
+        },
+        {
+            "id": "PR2-Oftalmo-Q10.2",
+            "text": "Qual o tratamento medicamentoso de primeira linha para uma conjuntivite bacteriana não complicada?",
+            "options": [
+                "Colírio lubrificante",
+                "Colírio de corticoide",
+                "Colírio antibiótico de amplo espectro",
+                "Pomada antiviral"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento da conjuntivite bacteriana é feito com colírios antibióticos de amplo espectro (como quinolonas ou aminoglicosídeos) para erradicar a infecção. O exemplo dado, Ciloxan (ciprofloxacino), é uma opção válida.",
+            "tag": "Conjuntiva"
+        },
+        {
+            "id": "PR2-Oftalmo-Q11.1",
+            "text": "Paciente de 45 anos, sexo feminino, refere aparecimento de 'carne no olho' há 2 anos. Ao exame, presença de tecido fibrovascular sobre a córnea, partindo da conjuntiva nasal e avançando 3mm em direção à pupila. Qual o diagnóstico?",
+            "options": [
+                "Pinguécula",
+                "Pterígio",
+                "Tumor de conjuntiva",
+                "Hemorragia subconjuntival"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O pterígio é uma degeneração da conjuntiva que se caracteriza pelo crescimento de um tecido fibrovascular sobre a córnea, geralmente a partir do lado nasal, como descrito no caso.",
+            "tag": "Conjuntiva"
+        },
+        {
+            "id": "PR2-Oftalmo-Q11.2",
+            "text": "Qual o principal fator de risco para o desenvolvimento do pterígio?",
+            "options": [
+                "Uso de lentes de contato",
+                "Diabetes Mellitus",
+                "Exposição crônica à radiação ultravioleta (sol)",
+                "Tabagismo"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O principal fator de risco associado ao desenvolvimento do pterígio é a exposição crônica e desprotegida à radiação UV solar, o que explica sua maior prevalência em populações de regiões tropicais e em trabalhadores ao ar livre.",
+            "tag": "Conjuntiva"
+        },
+        {
+            "id": "PR2-Oftalmo-Q12",
+            "text": "Paciente de 8 anos com prurido ocular intenso, hiperemia, fotofobia e presença de papilas gigantes em conjuntiva tarsal superior. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Conjuntivite bacteriana",
+                "Conjuntivite viral",
+                "Ceratoconjuntivite vernal (alérgica)",
+                "Síndrome do olho seco"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro de prurido ocular intenso, associado a fotofobia e à presença de papilas gigantes (aspecto de 'paralelepípedo') na conjuntiva tarsal superior em uma criança, é a apresentação clássica da ceratoconjuntivite vernal, uma forma grave de alergia ocular.",
+            "tag": "Conjuntiva"
+        },
+        {
+            "id": "PR2-Oftalmo-Q13",
+            "text": "Qual o tratamento farmacológico mais adequado para o quadro de ceratoconjuntivite vernal?",
+            "options": [
+                "Colírios antibióticos",
+                "Colírios de dupla ação (anti-histamínico e estabilizador de mastócitos) e, em casos graves, corticoides tópicos",
+                "Apenas lubrificantes",
+                "Antivirais via oral"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O tratamento da alergia ocular como a ceratoconjuntivite vernal se baseia no controle da reação alérgica com colírios de dupla ação (ex: olopatadina). Em casos graves, para controlar a inflamação intensa e as papilas, são necessários ciclos curtos de corticoides tópicos.",
+            "tag": "Conjuntiva"
+        },
+        {
+            "id": "PR2-Oftalmo-Q14",
+            "text": "Paciente de 40 anos refere dor, hiperemia e secreção purulenta no canto medial do olho direito há 2 dias. Ao exame, observa-se abaulamento e eritema sobre o saco lacrimal. Qual o diagnóstico?",
+            "options": [
+                "Hordéolo (terçol)",
+                "Calázio",
+                "Dacriocistite aguda",
+                "Celulite pré-septal"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A dacriocistite aguda é a infecção do saco lacrimal, que se manifesta como um processo inflamatório agudo (dor, edema, eritema) localizado na topografia do saco lacrimal (canto medial, abaixo do tendão cantal medial).",
+            "tag": "Vias Lacrimais"
+        },
+        {
+            "id": "PR2-Oftalmo-Q15.1",
+            "text": "Qual a conduta inicial para uma queimadura ocular química por álcali (soda cáustica)?",
+            "options": [
+                "Ocluir o olho e encaminhar ao oftalmologista.",
+                "Aplicar uma pomada antibiótica imediatamente.",
+                "Irrigar o olho abundantemente com soro fisiológico ou água por pelo menos 20-30 minutos.",
+                "Tentar neutralizar a base com uma solução ácida."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A medida mais importante e urgente em qualquer queimadura química ocular é a irrigação copiosa e imediata para remover o agente agressor e diluir sua concentração, minimizando o dano. A tentativa de neutralização (D) é contraindicada, pois a reação exotérmica pode piorar a lesão.",
+            "tag": "Trauma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q15.2",
+            "text": "Por que as queimaduras por álcalis são consideradas mais graves que as por ácidos?",
+            "options": [
+                "Porque os álcalis causam mais dor imediata.",
+                "Porque os ácidos são mais comuns no ambiente doméstico.",
+                "Porque os álcalis causam necrose por saponificação de gorduras e penetram mais profundamente nos tecidos oculares.",
+                "Porque os ácidos causam necrose por coagulação que limita a sua penetração."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. As bases (álcalis) causam necrose liquefativa por saponificação dos lipídios das membranas celulares, o que permite que penetrem rapidamente e profundamente nas estruturas oculares, causando danos mais extensos e graves. Os ácidos (D) causam necrose de coagulação, que cria uma barreira e limita a penetração.",
+            "tag": "Trauma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q16",
+            "text": "Paciente com corpo estranho metálico na córnea há 2 dias. Após a remoção do corpo estranho, qual achado pode permanecer e necessitar de abordagem?",
+            "options": [
+                "Hipópio",
+                "Hifema",
+                "Anel de ferrugem (óxido de ferro)",
+                "Edema de papila"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Corpos estranhos metálicos (ferrosos) que permanecem na córnea por algum tempo oxidam, deixando um anel de ferrugem impregnado no estroma corneano. Este anel deve ser removido, geralmente com uma broca apropriada, para evitar inflamação crônica e facilitar a cicatrização.",
+            "tag": "Trauma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q17",
+            "text": "Em um paciente com trauma contuso (soco) no olho, qual das seguintes estruturas NÃO faz parte da úvea e, portanto, não é primariamente afetada em uma uveíte traumática?",
+            "options": [
+                "Íris",
+                "Corpo ciliar",
+                "Coroide",
+                "Retina"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A úvea é a camada vascular média do olho, composta pela íris, corpo ciliar e coroide. A retina é a camada neurossensorial interna. Uma uveíte traumática é a inflamação da úvea, não da retina.",
+            "tag": "Uveítes"
+        },
+        {
+            "id": "PR2-Oftalmo-Q18",
+            "text": "Qual o tratamento padrão para uma uveíte anterior traumática não complicada?",
+            "options": [
+                "Apenas colírio antibiótico",
+                "Apenas analgésico via oral",
+                "Colírio de corticoide para controlar a inflamação e cicloplégico para evitar sinéquias e aliviar a dor",
+                "Cirurgia para drenar o humor aquoso inflamatório"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento da uveíte anterior visa controlar a inflamação (com corticoides tópicos) e prevenir complicações como as sinéquias posteriores (aderências entre a íris e o cristalino), além de aliviar a dor do espasmo ciliar (com cicloplégicos, ex: atropina, ciclopentolato).",
+            "tag": "Uveítes"
+        },
+        {
+            "id": "PR2-Oftalmo-Q19.1",
+            "text": "Mulher de 55 anos, diabética, com baixa visual súbita e indolor no olho direito. Fundoscopia revela hemorragias nos 4 quadrantes, veias tortuosas e dilatadas, e edema de papila. Qual o diagnóstico?",
+            "options": [
+                "Oclusão da artéria central da retina",
+                "Oclusão da veia central da retina",
+                "Descolamento de retina",
+                "Neurite óptica"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O fundo de olho descrito, com hemorragias difusas nos quatro quadrantes, tortuosidade e dilatação venosa, e edema de papila, é o aspecto clássico de 'sangue e trovão' (blood and thunder) da oclusão da veia central da retina (OVCR).",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q19.2",
+            "text": "Qual a principal causa de baixa visual permanente na oclusão da veia central da retina?",
+            "options": [
+                "Catarata secundária",
+                "Edema macular",
+                "Glaucoma neovascular",
+                "Hemorragia vítrea"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O edema macular, seja isquêmico ou inflamatório, é a complicação mais comum e a principal causa de perda visual central e permanente após uma oclusão de veia retiniana. O tratamento com anti-VEGF visa tratar justamente o edema.",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q20",
+            "text": "Homem de 65 anos, hipertenso, com perda súbita, profunda e indolor da visão em um olho. Fundoscopia mostra palidez retiniana difusa e uma 'mancha vermelho-cereja' na mácula. Qual o diagnóstico?",
+            "options": [
+                "Oclusão da veia central da retina",
+                "Neurite óptica",
+                "Hemorragia vítrea maciça",
+                "Oclusão da artéria central da retina"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A perda visual súbita, profunda e indolor, associada ao fundo de olho com palidez retiniana (por isquemia) e o sinal da mancha vermelho-cereja (a mácula continua visível pois é irrigada pela coroide), é o quadro patognomônico da oclusão da artéria central da retina (OACR).",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q21",
+            "text": "Paciente de 60 anos, alto míope, refere surgimento de 'moscas volantes' e flashes de luz (fotopsias) no olho direito há 1 dia, seguido de uma 'sombra' ou 'cortina' no campo visual periférico. Qual a principal hipótese diagnóstica?",
+            "options": [
+                "Uveíte posterior",
+                "Hemorragia vítrea",
+                "Descolamento de retina regmatogênico",
+                "Enxaqueca com aura"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A tríade de sintomas: moscas volantes (floaters), fotopsias (flashes) e perda de campo visual periférico (sombra/cortina) em um paciente com fator de risco (alta miopia) é a apresentação clássica do descolamento de retina regmatogênico, que é uma emergência cirúrgica.",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q22.1",
+            "text": "Recém-nascido pré-termo, submetido a oxigenoterapia em UTI neonatal, realiza mapeamento de retina na 4ª semana de vida. Qual patologia está sendo rastreada?",
+            "options": [
+                "Glaucoma congênito",
+                "Catarata congênita",
+                "Retinoblastoma",
+                "Retinopatia da prematuridade (ROP)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Retinopatia da Prematuridade é uma doença vasoproliferativa da retina que afeta recém-nascidos prematuros e de baixo peso, especialmente aqueles expostos a altas concentrações de oxigênio. O rastreamento (mapeamento de retina) é fundamental para detectar e tratar a doença precocemente, evitando a cegueira.",
+            "tag": "Retina Pediátrica"
+        },
+        {
+            "id": "PR2-Oftalmo-Q22.2",
+            "text": "Qual o tratamento para os casos graves de Retinopatia da Prematuridade (doença limiar ou plus)?",
+            "options": [
+                "Apenas observação",
+                "Fotocoagulação a laser da retina avascular periférica ou anti-VEGF",
+                "Uso de colírios de corticoide",
+                "Vitrectomia"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O tratamento padrão para a ROP grave visa destruir a retina periférica avascular, que é a fonte dos fatores angiogênicos (como o VEGF) que causam a neovascularização patológica. Isso é feito principalmente com fotocoagulação a laser ou, mais recentemente, com injeção de anti-VEGF.",
+            "tag": "Retina Pediátrica"
+        },
+        {
+            "id": "PR2-Oftalmo-Q23.1",
+            "text": "Criança de 2 anos é trazida à consulta pois os pais notaram um reflexo branco na pupila ('olho de gato') em fotografias com flash. Qual a principal hipótese diagnóstica a ser descartada?",
+            "options": [
+                "Catarata congênita",
+                "Retinoblastoma",
+                "Glaucoma congênito",
+                "Doença de Coats"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A leucocoria (reflexo pupilar branco) em uma criança é o sinal de apresentação mais comum do Retinoblastoma, o tumor intraocular maligno mais frequente na infância. É uma emergência oncológica e deve ser investigada imediatamente.",
+            "tag": "Oncologia Ocular"
+        },
+        {
+            "id": "PR2-Oftalmo-Q23.2",
+            "text": "Além da leucocoria, qual outro sinal comum de apresentação do Retinoblastoma?",
+            "options": [
+                "Ptose palpebral",
+                "Estrabismo",
+                "Nistagmo",
+                "Olho seco"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O estrabismo (desvio ocular) é o segundo sinal de apresentação mais comum do Retinoblastoma. O tumor, ao acometer a mácula, causa baixa visão central, o que impede a correta fixação e alinhamento dos olhos.",
+            "tag": "Oncologia Ocular"
+        },
+        {
+            "id": "PR2-Oftalmo-Q24",
+            "text": "Qual é o tumor maligno primário mais comum da pálpebra?",
+            "options": [
+                "Melanoma",
+                "Carcinoma espinocelular",
+                "Carcinoma basocelular",
+                "Carcinoma sebáceo"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O Carcinoma Basocelular (CBC) é o tipo mais comum de câncer de pele e também o tumor maligno mais frequente da região palpebral, respondendo por cerca de 90% dos casos.",
+            "tag": "Pálpebras"
+        },
+        {
+            "id": "PR2-Oftalmo-Q25",
+            "text": "Em qual camada da retina estão localizados os fotorreceptores (cones e bastonetes)?",
+            "options": [
+                "Camada de fibras nervosas",
+                "Camada de células ganglionares",
+                "Camada nuclear externa",
+                "Epitélio pigmentado da retina"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A camada nuclear externa da retina contém os corpos celulares dos fotorreceptores (cones e bastonetes), que são as células responsáveis por converter o estímulo luminoso em sinal elétrico.",
+            "tag": "Anatomia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q26",
+            "text": "Qual o músculo responsável pelo fechamento das pálpebras?",
+            "options": [
+                "Músculo levantador da pálpebra superior",
+                "Músculo orbicular do olho",
+                "Músculo de Müller",
+                "Músculo reto superior"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O músculo orbicular do olho é um músculo circular ao redor da órbita que é responsável pela oclusão palpebral (piscar e fechar os olhos com força). É inervado pelo nervo facial (VII par).",
+            "tag": "Anatomia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q27.1",
+            "text": "Um paciente sofre um trauma na parede medial da órbita. Qual osso é mais frequentemente fraturado nesta localização?",
+            "options": [
+                "Frontal",
+                "Zigomático",
+                "Maxilar",
+                "Etmoide (lâmina papirácea)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A lâmina papirácea do osso etmoide forma a maior parte da parede medial da órbita e é extremamente fina e delicada, sendo o local mais comum de fratura 'blow-out' nesta parede.",
+            "tag": "Trauma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q27.2",
+            "text": "Um paciente sofre um trauma no assoalho da órbita. Qual músculo extraocular é mais comumente encarcerado na fratura?",
+            "options": [
+                "Reto medial",
+                "Reto superior",
+                "Reto inferior",
+                "Oblíquo superior"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O assoalho da órbita é fino e frequentemente fratura em traumas contusos (fratura 'blow-out'). O músculo reto inferior e a gordura orbitária adjacente podem hernia para o seio maxilar, ficando encarcerados e causando restrição na elevação do olho.",
+            "tag": "Trauma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q28",
+            "text": "Qual nervo craniano é responsável pela abdução do olho (movimento para fora)?",
+            "options": [
+                "Nervo Oculomotor (III par)",
+                "Nervo Troclear (IV par)",
+                "Nervo Abducente (VI par)",
+                "Nervo Óptico (II par)"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O nervo Abducente (VI par craniano) inerva exclusivamente o músculo reto lateral, que tem como única função a abdução do globo ocular.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q29.1",
+            "text": "Paciente com ptose palpebral, pupila dilatada e olho desviado 'para baixo e para fora'. Qual nervo craniano está acometido?",
+            "options": [
+                "Nervo Oculomotor (III par)",
+                "Nervo Troclear (IV par)",
+                "Nervo Abducente (VI par)",
+                "Nervo Facial (VII par)"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. A paralisia completa do nervo Oculomotor (III par) causa ptose (por paralisia do levantador da pálpebra), midríase (por paralisia do esfíncter da pupila) e o olho fica desviado em abdução (pela ação sem oposição do reto lateral - VI par) e levemente deprimido.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q29.2",
+            "text": "No caso de uma paralisia de III par com envolvimento da pupila (midríase), qual a causa mais provável a ser investigada?",
+            "options": [
+                "Diabetes Mellitus",
+                "Hipertensão Arterial",
+                "Aneurisma da artéria comunicante posterior",
+                "Sinusite"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. As fibras parassimpáticas responsáveis pela constrição pupilar correm na periferia do III nervo. Uma lesão compressiva, como um aneurisma da artéria comunicante posterior, tipicamente afeta essas fibras precocemente, causando uma paralisia dolorosa com midríase. Causas isquêmicas (A, B) geralmente poupam a pupila.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q30",
+            "text": "O que é ambliopia?",
+            "options": [
+                "É o desalinhamento dos eixos visuais.",
+                "É a opacificação do cristalino.",
+                "É a baixa acuidade visual em um ou ambos os olhos devido a um desenvolvimento visual anormal na infância, sem uma causa orgânica.",
+                "É a inflamação do nervo óptico."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Ambliopia, ou 'olho preguiçoso', é uma condição em que a visão em um olho não se desenvolve adequadamente durante a infância porque o cérebro 'ignora' ou suprime a imagem daquele olho. As causas mais comuns são estrabismo e anisometropia (graus muito diferentes entre os olhos).",
+            "tag": "Estrabismo e Ambliopia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q31",
+            "text": "Qual o período crítico para o desenvolvimento da ambliopia e quando o tratamento é mais eficaz?",
+            "options": [
+                "Na adolescência",
+                "Na vida adulta",
+                "Até os 7-8 anos de idade",
+                "Apenas no primeiro ano de vida"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O sistema visual tem grande plasticidade nos primeiros anos de vida. O período crítico para o desenvolvimento da ambliopia e para a eficácia do tratamento (geralmente oclusão do olho bom) vai até cerca de 7 a 8 anos de idade. Após essa fase, a recuperação visual é muito mais difícil.",
+            "tag": "Estrabismo e Ambliopia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q32",
+            "text": "Paciente de 35 anos queixa-se de visão dupla horizontal que piora ao olhar para a direita. Ao exame, apresenta limitação da abdução do olho direito. Qual o diagnóstico mais provável?",
+            "options": [
+                "Paralisia do III nervo direito",
+                "Paralisia do IV nervo direito",
+                "Paralisia do VI nervo direito",
+                "Oftalmopatia de Graves"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A diplopia horizontal que piora ao tentar olhar para o lado da lesão, associada a uma limitação da abdução (movimento para fora) daquele olho, é o sinal clássico da paralisia do VI nervo craniano (nervo abducente), que inerva o músculo reto lateral.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q33",
+            "text": "O que é o teste de Hirschberg?",
+            "options": [
+                "É um teste para medir a pressão intraocular.",
+                "É um teste para avaliar o fundo de olho.",
+                "É um teste para avaliar o alinhamento ocular através do reflexo luminoso corneano.",
+                "É um teste para medir a produção de lágrima."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O teste de Hirschberg, ou teste do reflexo luminoso, é um método objetivo e rápido para avaliar o alinhamento ocular. O examinador observa a posição do reflexo de uma fonte de luz nas córneas do paciente. Se os reflexos estiverem centrados e simétricos, os olhos estão alinhados.",
+            "tag": "Estrabismo e Ambliopia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q34",
+            "text": "Paciente apresenta desvio do olho para dentro (em direção ao nariz). Como se chama esse tipo de estrabismo?",
+            "options": [
+                "Exotropia",
+                "Hipertropia",
+                "Esotropia (ou endotropia)",
+                "Hipotropia"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Esotropia é o termo médico para o desvio convergente, ou seja, quando um ou ambos os olhos estão desviados para dentro (medialmente).",
+            "tag": "Estrabismo e Ambliopia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q35",
+            "text": "O que é o hifema?",
+            "options": [
+                "É a presença de pus na câmara anterior.",
+                "É a presença de sangue na câmara anterior.",
+                "É a presença de sangue no vítreo.",
+                "É a inflamação da íris."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Hifema é o acúmulo de sangue na câmara anterior do olho (o espaço entre a córnea e a íris), geralmente resultante de um trauma contuso que lesa os vasos da íris ou do corpo ciliar.",
+            "tag": "Trauma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q36.1",
+            "text": "Recém-nascido apresenta lacrimejamento constante, secreção e 'olho molhado' desde as primeiras semanas de vida. Qual o diagnóstico mais provável?",
+            "options": [
+                "Glaucoma congênito",
+                "Conjuntivite neonatal",
+                "Obstrução congênita do ducto nasolacrimal",
+                "Catarata congênita"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A obstrução congênita do ducto nasolacrimal é a causa mais comum de lacrimejamento persistente no lactente. Ocorre por uma imperfuração da válvula de Hasner na extremidade distal do ducto.",
+            "tag": "Vias Lacrimais"
+        },
+        {
+            "id": "PR2-Oftalmo-Q36.2",
+            "text": "Qual a conduta inicial para a obstrução congênita do ducto nasolacrimal?",
+            "options": [
+                "Cirurgia imediata (sondagem)",
+                "Uso de colírios antibióticos contínuos",
+                "Observação e massagem de Crigler",
+                "Oclusão do ponto lacrimal"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A maioria dos casos de obstrução congênita do ducto nasolacrimal se resolve espontaneamente no primeiro ano de vida. A conduta inicial é conservadora, orientando os pais a realizarem a massagem de Crigler (pressão hidrostática sobre o saco lacrimal) para tentar romper a membrana.",
+            "tag": "Vias Lacrimais"
+        },
+        {
+            "id": "PR2-Oftalmo-Q37",
+            "text": "Qual das seguintes condições NÃO é uma causa de leucocoria?",
+            "options": [
+                "Retinoblastoma",
+                "Catarata congênita",
+                "Doença de Coats",
+                "Glaucoma agudo"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. Leucocoria significa 'pupila branca'. As principais causas são o Retinoblastoma (A), a Catarata congênita (B) e a Doença de Coats (C). O glaucoma agudo causa olho vermelho, dor, edema de córnea e aumento da PIO, mas não leucocoria.",
+            "tag": "Oncologia Ocular"
+        },
+        {
+            "id": "PR2-Oftalmo-Q38",
+            "text": "Paciente de 60 anos, com diabetes há 20 anos, apresenta baixa visual progressiva. Na fundoscopia, observam-se neovasos no disco óptico e em outras áreas da retina. Qual o estágio da retinopatia diabética?",
+            "options": [
+                "Retinopatia Diabética Não Proliferativa Leve",
+                "Retinopatia Diabética Não Proliferativa Moderada",
+                "Retinopatia Diabética Não Proliferativa Grave",
+                "Retinopatia Diabética Proliferativa"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A presença de neovasos (vasos sanguíneos anormais e frágeis) na retina ou no disco óptico é o marco que define a forma mais avançada da doença, a Retinopatia Diabética Proliferativa (RDP), que tem alto risco de complicações graves como hemorragia vítrea e descolamento de retina tracional.",
+            "tag": "Retinopatia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q39",
+            "text": "Qual o tratamento padrão para a Retinopatia Diabética Proliferativa?",
+            "options": [
+                "Apenas controle glicêmico rigoroso.",
+                "Injeções intravítreas de anti-VEGF.",
+                "Panfotocoagulação a laser da retina.",
+                "Vitrectomia via pars plana."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento padrão-ouro para a RDP é a panfotocoagulação retiniana a laser. O objetivo é destruir a retina periférica isquêmica para diminuir a produção de fatores angiogênicos (VEGF) e induzir a regressão dos neovasos, prevenindo a cegueira.",
+            "tag": "Retinopatia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q40",
+            "text": "O que é o sinal de Seidel?",
+            "options": [
+                "É a presença de células inflamatórias no vítreo.",
+                "É a observação de vazamento de humor aquoso de uma perfuração corneana, visualizado com fluoresceína.",
+                "É a impossibilidade de eversão da pálpebra superior.",
+                "É um reflexo pupilar branco."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O sinal de Seidel é um teste semiológico fundamental na avaliação do trauma ocular. Consiste na instilação de uma gota de fluoresceína no olho para evidenciar o extravasamento ativo de humor aquoso através de uma perfuração na córnea ou esclera, que aparece como um 'riacho' de cor verde-clara sob a luz azul de cobalto.",
+            "tag": "Trauma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q41.1",
+            "text": "Paciente apresenta lesão nodular, endurecida e indolor na pálpebra, sem sinais inflamatórios agudos. A lesão surgiu após um episódio de terçol há alguns meses. Qual o diagnóstico?",
+            "options": [
+                "Hordéolo",
+                "Calázio",
+                "Xantelasma",
+                "Carcinoma basocelular"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O calázio é um granuloma lipofágico inflamatório crônico causado pela obstrução de uma glândula de Meibomius. Clinicamente, apresenta-se como um nódulo palpebral firme, indolor e não infeccioso, que pode ser uma sequela de um hordéolo interno.",
+            "tag": "Pálpebras"
+        },
+        {
+            "id": "PR2-Oftalmo-Q41.2",
+            "text": "Qual o tratamento inicial para um calázio pequeno e recente?",
+            "options": [
+                "Antibiótico sistêmico",
+                "Excisão cirúrgica imediata",
+                "Injeção de corticoide",
+                "Compressas mornas e massagem palpebral"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O tratamento conservador com compressas mornas e massagem é a primeira linha para calázios pequenos, visando liquefazer o conteúdo sebáceo retido e facilitar a drenagem da glândula obstruída.",
+            "tag": "Pálpebras"
+        },
+        {
+            "id": "PR2-Oftalmo-Q42",
+            "text": "Paciente refere dor ocular intensa de início súbito, visão embaçada, halos coloridos ao redor das luzes e náuseas. Ao exame, olho vermelho, córnea turva e pupila em média midríase fixa. A tonometria de aplanação revela PIO de 55 mmHg. Qual o diagnóstico?",
+            "options": [
+                "Uveíte anterior aguda",
+                "Conjuntivite aguda",
+                "Crise aguda de glaucoma de ângulo fechado",
+                "Ceratite aguda"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O quadro descrito com dor ocular muito intensa, baixa visual súbita, edema de córnea, pupila fixa e pressão intraocular (PIO) muito elevada é a apresentação clássica da crise aguda de glaucoma primário de ângulo fechado, uma emergência oftalmológica.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q43",
+            "text": "Qual a conduta imediata para a crise aguda de glaucoma de ângulo fechado?",
+            "options": [
+                "Apenas analgésicos e aguardar.",
+                "Cirurgia de catarata de emergência.",
+                "Iniciar imediatamente terapia hipotensora máxima (tópica e sistêmica) e miótico.",
+                "Dilatar a pupila com colírio de atropina."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O objetivo inicial é baixar a pressão intraocular o mais rápido possível. Isso é feito com uma combinação de colírios hipotensores (beta-bloqueador, alfa-agonista, inibidor da anidrase carbônica), medicação sistêmica (manitol, acetazolamida) e um colírio miótico (pilocarpina) para tentar quebrar o bloqueio pupilar.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q44",
+            "text": "O que é a gonioscopia?",
+            "options": [
+                "É o exame que mede a curvatura da córnea.",
+                "É o exame que avalia o ângulo da câmara anterior, onde ocorre a drenagem do humor aquoso.",
+                "É o exame que fotografa o nervo óptico.",
+                "É o exame que mede o comprimento axial do olho."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A gonioscopia é um exame fundamental na oftalmologia, realizado com uma lente especial em contato com a córnea, que permite a visualização direta das estruturas do ângulo da câmara anterior (trabeculado, esporão escleral, etc.), sendo essencial para classificar os glaucomas em ângulo aberto ou fechado.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q45.1",
+            "text": "Qual é a definição de cegueira legal no Brasil?",
+            "options": [
+                "Acuidade visual corrigida no melhor olho igual ou pior que 20/200.",
+                "Acuidade visual corrigida no melhor olho igual ou pior que 20/400.",
+                "Campo visual menor que 20 graus no melhor olho.",
+                "Combinação da alternativa A e/ou C."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A cegueira legal é definida por critérios funcionais. No Brasil e em muitos países, considera-se cego legal o indivíduo que, mesmo com a melhor correção óptica, apresenta acuidade visual igual ou inferior a 20/200 (ou 0,1) no melhor olho, OU campo visual restrito a um ângulo de 20 graus ou menos.",
+            "tag": "Refração e Visão Subnormal"
+        },
+        {
+            "id": "PR2-Oftalmo-Q45.2",
+            "text": "Quais são as principais causas de cegueira evitável no mundo?",
+            "options": [
+                "Glaucoma e DMRI",
+                "Retinopatia diabética e trauma",
+                "Catarata e erros refrativos não corrigidos",
+                "Tracoma e oncocercose"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Segundo a Organização Mundial da Saúde, as principais causas de deficiência visual e cegueira evitável em todo o mundo são a catarata (que é cirurgicamente curável) e os erros de refração (miopia, hipermetropia, astigmatismo) que não são corrigidos com óculos ou outras formas de tratamento.",
+            "tag": "Saúde Pública"
+        },
+        {
+            "id": "PR2-Oftalmo-Q46.1",
+            "text": "Qual o nome do erro refrativo em que o olho é 'longo demais' e a imagem se forma na frente da retina, causando dificuldade para enxergar de longe?",
+            "options": [
+                "Hipermetropia",
+                "Miopia",
+                "Astigmatismo",
+                "Presbiopia"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Na miopia axial, o globo ocular é mais longo que o normal. Isso faz com que os raios de luz paralelos que vêm de objetos distantes foquem em um ponto antes da retina, resultando em uma imagem desfocada para longe.",
+            "tag": "Refração"
+        },
+        {
+            "id": "PR2-Oftalmo-Q46.2",
+            "text": "Qual o nome do erro refrativo em que o olho é 'curto demais' e a imagem se forma atrás da retina, causando maior dificuldade para perto?",
+            "options": [
+                "Hipermetropia",
+                "Miopia",
+                "Astigmatismo",
+                "Presbiopia"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Na hipermetropia axial, o globo ocular é mais curto que o normal. Os raios de luz são focalizados em um ponto virtual atrás da retina. O paciente precisa usar o poder de acomodação do cristalino para trazer a imagem para a retina, o que gera maior esforço e dificuldade para a visão de perto.",
+            "tag": "Refração"
+        },
+        {
+            "id": "PR2-Oftalmo-Q47",
+            "text": "O que é presbiopia (vista cansada)?",
+            "options": [
+                "É um tipo de astigmatismo que surge com a idade.",
+                "É a dificuldade de enxergar de longe que piora com a idade.",
+                "É a perda fisiológica da capacidade de acomodação do cristalino, que dificulta a visão de perto após os 40 anos.",
+                "É uma complicação do glaucoma."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A presbiopia é um processo natural de envelhecimento do olho no qual o cristalino perde sua elasticidade e o músculo ciliar perde sua força, resultando em uma diminuição progressiva da capacidade de focar objetos próximos. Geralmente se inicia por volta dos 40 anos de idade.",
+            "tag": "Refração"
+        },
+        {
+            "id": "PR2-Oftalmo-Q48",
+            "text": "O que é o teste do olhinho (teste do reflexo vermelho)?",
+            "options": [
+                "É um teste para medir a pressão ocular em bebês.",
+                "É um teste de triagem neonatal que avalia o reflexo vermelho do fundo de olho para detectar precocemente patologias como catarata congênita e retinoblastoma.",
+                "É um teste para verificar se o bebê tem daltonismo.",
+                "É um teste para avaliar a motilidade ocular do recém-nascido."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O teste do reflexo vermelho é um exame simples e fundamental que deve ser realizado em todos os recém-nascidos. Um oftalmoscópio direto é usado para verificar a presença e a qualidade do reflexo vermelho que vem da retina. A ausência ou alteração desse reflexo (leucocoria) pode indicar doenças graves que causam cegueira.",
+            "tag": "Oftalmopediatria"
+        },
+        {
+            "id": "PR2-Oftalmo-Q49.1",
+            "text": "Paciente de 70 anos refere metamorfopsia (visão ondulada) e um escotoma central no olho direito. Qual exame simples de autoavaliação pode ser usado para detectar esses sintomas?",
+            "options": [
+                "Teste de Ishihara",
+                "Tabela de Snellen",
+                "Grade de Amsler",
+                "Teste de Schirmer"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A Grade de Amsler é uma tela quadriculada com um ponto central. É um teste subjetivo simples que o paciente pode usar em casa para monitorar a visão central. Alterações como linhas tortas (metamorfopsia) ou manchas (escotomas) são sugestivas de doenças maculares, como a DMRI.",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q49.2",
+            "text": "Qual o tratamento padrão para a forma úmida (exsudativa) da DMRI?",
+            "options": [
+                "Apenas suplementação com vitaminas.",
+                "Fotocoagulação a laser.",
+                "Injeções intravítreas de agentes anti-VEGF.",
+                "Terapia fotodinâmica (PDT)."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A forma úmida da DMRI é caracterizada pelo crescimento de neovasos sob a retina, que extravasam fluido e sangue. O tratamento que revolucionou o prognóstico da doença consiste em injeções intravítreas de medicamentos que bloqueiam o fator de crescimento endotelial vascular (anti-VEGF), como ranibizumabe e aflibercepte.",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q50",
+            "text": "O que é um calázio?",
+            "options": [
+                "Infecção aguda de uma glândula na margem palpebral (terçol).",
+                "Inflamação crônica granulomatosa de uma glândula de Meibomius obstruída.",
+                "Depósito de gordura amarelado na pele da pálpebra.",
+                "Infecção do saco lacrimal."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O calázio é um lipogranuloma estéril e crônico que se forma devido à obstrução do ducto de uma glândula de Meibomius e o consequente extravasamento de seu conteúdo lipídico para os tecidos adjacentes, gerando uma reação inflamatória.",
+            "tag": "Pálpebras"
+        },
+        {
+            "id": "PR2-Oftalmo-Q51",
+            "text": "O que é ectrópio?",
+            "options": [
+                "É a eversão da margem palpebral, expondo a conjuntiva.",
+                "É a inversão da margem palpebral, fazendo os cílios tocarem o olho.",
+                "É a queda da pálpebra superior.",
+                "É a inflamação da margem palpebral."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. Ectrópio é o mau posicionamento da pálpebra, que se vira para fora. Isso deixa a superfície ocular exposta, podendo causar olho seco, lacrimejamento (epífora) e ceratite de exposição. A causa mais comum é a involucional (senil).",
+            "tag": "Pálpebras"
+        },
+        {
+            "id": "PR2-Oftalmo-Q52",
+            "text": "O que é entrópio?",
+            "options": [
+                "É a eversão da margem palpebral.",
+                "É a inversão da margem palpebral, fazendo os cílios tocarem o olho.",
+                "É a queda da pálpebra superior.",
+                "É a inflamação da margem palpebral."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Entrópio é o mau posicionamento da pálpebra, que se vira para dentro. Isso causa triquíase (toque dos cílios na córnea e conjuntiva), levando a sintomas de corpo estranho, irritação, lacrimejamento e risco de úlcera de córnea.",
+            "tag": "Pálpebras"
+        },
+        {
+            "id": "PR2-Oftalmo-Q53",
+            "text": "O que é uma úlcera de córnea?",
+            "options": [
+                "É uma opacidade do cristalino.",
+                "É uma inflamação da conjuntiva.",
+                "É uma escavação do tecido corneano associada a um processo inflamatório, geralmente infeccioso.",
+                "É um aumento da pressão intraocular."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Uma úlcera de córnea (ou ceratite ulcerativa) é uma ferida aberta na córnea, com perda de substância do epitélio e estroma, acompanhada de um infiltrado inflamatório. A maioria das úlceras é causada por infecções (bactérias, fungos, vírus, protozoários).",
+            "tag": "Córnea"
+        },
+        {
+            "id": "PR2-Oftalmo-Q54",
+            "text": "Qual das seguintes condições NÃO costuma cursar com dor ocular?",
+            "options": [
+                "Glaucoma agudo de ângulo fechado",
+                "Ceratite",
+                "Uveíte anterior",
+                "Glaucoma primário de ângulo aberto (fase inicial)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O Glaucoma Primário de Ângulo Aberto é conhecido como o 'ladrão silencioso da visão' porque, em suas fases iniciais e moderadas, ele é completamente assintomático, não causando dor ou outros sintomas perceptíveis pelo paciente.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q55",
+            "text": "O que é o teste de sensibilidade corneana?",
+            "options": [
+                "Mede a espessura da córnea.",
+                "Avalia a integridade do filme lacrimal.",
+                "Testa a inervação sensorial da córnea, geralmente com um fio de algodão.",
+                "Mede a curvatura da córnea."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O teste de sensibilidade corneana avalia a função do ramo oftálmico do nervo trigêmeo (V1). A diminuição da sensibilidade (hipoestesia) é um sinal importante em algumas doenças, como a ceratite herpética.",
+            "tag": "Semiologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q56.1",
+            "text": "Paciente com história de herpes labial recorrente apresenta olho vermelho, dor, fotofobia e visão embaçada. Na lâmpada de fenda, a coloração com fluoresceína revela uma lesão dendrítica na córnea. Qual o diagnóstico?",
+            "options": [
+                "Ceratite bacteriana",
+                "Ceratite fúngica",
+                "Ceratite herpética epitelial",
+                "Uveíte anterior"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A úlcera dendrítica, uma lesão linear com ramificações e bulbos terminais que cora com fluoresceína, é o achado patognomônico da ceratite epitelial causada pela replicação ativa do vírus Herpes Simples.",
+            "tag": "Córnea"
+        },
+        {
+            "id": "PR2-Oftalmo-Q56.2",
+            "text": "Qual o tratamento para a ceratite herpética epitelial?",
+            "options": [
+                "Colírio de corticoide",
+                "Colírio antibiótico",
+                "Pomada ou colírio antiviral (ex: aciclovir, ganciclovir)",
+                "Apenas lubrificantes"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento da infecção epitelial ativa pelo herpes simples é feito com agentes antivirais tópicos. O uso de corticoides (A) é contraindicado nesta fase, pois pode piorar a replicação viral e levar a uma úlcera geográfica.",
+            "tag": "Córnea"
+        },
+        {
+            "id": "PR2-Oftalmo-Q57.1",
+            "text": "Qual das seguintes doenças sistêmicas NÃO está classicamente associada a manifestações em forma de uveíte?",
+            "options": [
+                "Espondilite anquilosante",
+                "Sarcoidose",
+                "Artrite idiopática juvenil",
+                "Diabetes Mellitus"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A Diabetes Mellitus causa a retinopatia diabética, mas não é uma causa clássica de uveíte. As outras três doenças (A, B, C) são causas bem estabelecidas de uveíte anterior e/ou posterior.",
+            "tag": "Uveítes"
+        },
+        {
+            "id": "PR2-Oftalmo-Q57.2",
+            "text": "Na avaliação de um paciente com uveíte anterior, qual sinal biomicroscópico indica atividade inflamatória na câmara anterior?",
+            "options": [
+                "Opacidade do cristalino",
+                "Células e flare no humor aquoso",
+                "Drusas na mácula",
+                "Escavação aumentada do nervo óptico"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A presença de células inflamatórias flutuando no humor aquoso e o 'flare' (aspecto turvo do humor aquoso devido ao extravasamento de proteínas, visível como um 'facho de luz' na lâmpada de fenda) são os sinais cardinais de atividade inflamatória na câmara anterior.",
+            "tag": "Uveítes"
+        },
+        {
+            "id": "PR2-Oftalmo-Q58",
+            "text": "O que são os precipitados ceráticos (PKs)?",
+            "options": [
+                "São depósitos de pigmento na superfície anterior do cristalino.",
+                "São depósitos de células inflamatórias na superfície posterior da córnea (endotélio).",
+                "São nódulos inflamatórios na superfície da íris.",
+                "São opacidades no humor vítreo."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Os precipitados ceráticos são um sinal clássico de uveíte anterior. São aglomerados de células inflamatórias que, pela circulação do humor aquoso e pela gravidade, se depositam no endotélio corneano. A sua aparência (finos, em 'poeira', ou 'gordurosos') pode ajudar a sugerir a etiologia.",
+            "tag": "Uveítes"
+        },
+        {
+            "id": "PR2-Oftalmo-Q59",
+            "text": "Qual o nome do desvio ocular latente, que só se manifesta quando a fusão binocular é quebrada (ex: teste de cobertura)?",
+            "options": [
+                "Tropia",
+                "Foria",
+                "Nistagmo",
+                "Ambliopia"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. Foria (ou heteroforia) é um desvio latente dos olhos que é mantido alinhado pelo reflexo de fusão. O desvio só aparece quando um olho é ocluído. Tropia (A) é o desvio manifesto, presente com ambos os olhos abertos.",
+            "tag": "Estrabismo e Ambliopia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q60",
+            "text": "Paciente refere baixa visual para perto, que melhora ao 'espremer' os olhos ou afastar o texto. Qual o provável erro refrativo?",
+            "options": [
+                "Miopia",
+                "Astigmatismo",
+                "Presbiopia ou Hipermetropia",
+                "Nenhum, é apenas cansaço."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A dificuldade para perto que melhora ao afastar os objetos é o sintoma clássico da presbiopia (vista cansada). A hipermetropia também pode causar sintomas semelhantes, pois exige esforço de acomodação. 'Espremer' os olhos cria um efeito estenopeico que pode melhorar a nitidez em vários erros refrativos.",
+            "tag": "Refração"
+        },
+        {
+            "id": "PR2-Oftalmo-Q61",
+            "text": "O que é o teste de sensibilidade ao contraste?",
+            "options": [
+                "Mede a capacidade de distinguir cores.",
+                "Mede a acuidade visual com letras de alto contraste.",
+                "Mede a capacidade de distinguir um objeto do seu fundo, especialmente em baixos níveis de contraste.",
+                "Mede a pressão intraocular."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A sensibilidade ao contraste é uma medida da qualidade da visão que vai além da acuidade visual da tabela de Snellen. Ela avalia a capacidade do sistema visual de discernir entre diferentes níveis de luminosidade. Muitas doenças, como catarata e glaucoma, podem reduzir a sensibilidade ao contraste antes de afetar a acuidade visual.",
+            "tag": "Semiologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q62",
+            "text": "O que é o exame de Tomografia de Coerência Óptica (OCT)?",
+            "options": [
+                "É uma fotografia colorida do fundo de olho.",
+                "É um exame de ultrassom que mede o comprimento do olho.",
+                "É um exame que utiliza luz para criar imagens de alta resolução, em cortes transversais, das estruturas oculares, especialmente da retina e do nervo óptico.",
+                "É um exame que injeta contraste para visualizar os vasos sanguíneos."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O OCT é análogo a uma 'biópsia óptica', fornecendo imagens em corte (tomográficas) das camadas da retina e do nervo óptico com resolução quase histológica. É um exame fundamental no diagnóstico e acompanhamento de doenças como DMRI, edema macular diabético e glaucoma.",
+            "tag": "Exames Complementares"
+        },
+        {
+            "id": "PR2-Oftalmo-Q63",
+            "text": "Qual das seguintes afirmações sobre o glaucoma congênito é FALSA?",
+            "options": [
+                "Os sinais clássicos incluem epífora, fotofobia e blefaroespasmo.",
+                "O aumento da PIO pode causar aumento do diâmetro corneano (buftalmo).",
+                "O tratamento é primariamente clínico com colírios.",
+                "Pode levar a estrias de Haab na córnea."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C, pois ela é falsa. O tratamento do glaucoma congênito é primariamente cirúrgico (goniotomia ou trabeculotomia) para corrigir a anomalia anatômica na malha de drenagem. O tratamento clínico com colírios é usado como adjuvante ou ponte para a cirurgia. As outras afirmações são verdadeiras.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q64.1",
+            "text": "O que causa o hordéolo (terçol)?",
+            "options": [
+                "Uma infecção viral da conjuntiva.",
+                "Uma inflamação crônica de uma glândula de Meibomius.",
+                "Uma infecção bacteriana aguda (geralmente estafilocócica) de uma glândula da pálpebra.",
+                "Uma reação alérgica."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O hordéolo é um abscesso agudo causado pela infecção de uma glândula palpebral. Se for de uma glândula de Zeiss ou Moll (na margem ciliar), é um hordéolo externo. Se for de uma glândula de Meibomius, é um hordéolo interno.",
+            "tag": "Pálpebras"
+        },
+        {
+            "id": "PR2-Oftalmo-Q64.2",
+            "text": "Qual o tratamento para o hordéolo?",
+            "options": [
+                "Apenas colírio de corticoide.",
+                "Cirurgia para remoção da glândula.",
+                "Compressas mornas, higiene palpebral e, se necessário, pomada antibiótica.",
+                "Colírio antiviral."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O tratamento do hordéolo visa acelerar a drenagem do abscesso. Isso é feito com compressas mornas e higiene da margem palpebral. Pomadas com antibiótico e corticoide podem ser usadas para controlar a infecção e a inflamação.",
+            "tag": "Pálpebras"
+        },
+        {
+            "id": "PR2-Oftalmo-Q65",
+            "text": "A pupila de Argyll Robertson, caracterizada por pupilas mióticas, irregulares, que não reagem à luz mas reagem à acomodação, é um sinal clássico de qual doença?",
+            "options": [
+                "Diabetes Mellitus",
+                "Esclerose Múltipla",
+                "Sífilis terciária (neurossífilis)",
+                "Hipertensão Arterial"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A dissociação luz-perto, onde a via da acomodação está intacta mas a via do reflexo fotomotor não, com pupilas pequenas e irregulares, é um sinal neuroftalmológico clássico da neurossífilis.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q66.1",
+            "text": "Paciente de 70 anos com hipertensão e diabetes refere perda de campo visual superior em um olho. Fundoscopia revela hemorragia e edema no polo inferior da retina. Qual o diagnóstico?",
+            "options": [
+                "Oclusão de Ramo Arterial da Retina",
+                "Oclusão de Ramo Venoso da Retina",
+                "Oclusão da Veia Central da Retina",
+                "Descolamento de Retina"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O acometimento de um setor específico da retina (neste caso, o polo inferior, causando defeito de campo superior) com hemorragias e edema é característico da oclusão de um ramo da veia retiniana, frequentemente associada a cruzamentos arteriovenosos patológicos em pacientes hipertensos.",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q66.2",
+            "text": "Qual o principal fator de risco para a oclusão de ramo venoso da retina?",
+            "options": [
+                "Miopia",
+                "Trauma ocular",
+                "Hipertensão arterial sistêmica",
+                "Tabagismo"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A hipertensão arterial crônica leva ao enrijecimento das arteríolas retinianas. Nos cruzamentos arteriovenosos, a arteríola enrijecida comprime a vênula, causando turbulência no fluxo sanguíneo e predispondo à trombose e oclusão venosa.",
+            "tag": "Retina"
+        },
+        {
+            "id": "PR2-Oftalmo-Q67",
+            "text": "O que é o fenômeno de Tyndall na oftalmologia?",
+            "options": [
+                "É a observação do reflexo vermelho na pupila.",
+                "É a visualização de células e flare na câmara anterior com a lâmpada de fenda.",
+                "É a sensação de flashes de luz na periferia visual.",
+                "É a visão de halos coloridos ao redor das luzes."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O fenômeno de Tyndall, na física, é a dispersão da luz por partículas em uma suspensão. Na oftalmologia, o termo é usado para descrever a visualização do feixe de luz da lâmpada de fenda atravessando um humor aquoso túrbido pela presença de células e proteínas (flare), um sinal de uveíte anterior.",
+            "tag": "Uveítes"
+        },
+        {
+            "id": "PR2-Oftalmo-Q68",
+            "text": "O que são as sinéquias posteriores?",
+            "options": [
+                "São aderências entre a córnea e a íris.",
+                "São aderências entre a íris e o cristalino.",
+                "São vasos anormais na íris.",
+                "São depósitos de pigmento no trabeculado."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. As sinéquias posteriores são aderências inflamatórias entre a borda pupilar da íris e a cápsula anterior do cristalino. São uma complicação comum da uveíte anterior e, se forem extensas (360 graus), podem causar bloqueio pupilar e glaucoma agudo secundário.",
+            "tag": "Uveítes"
+        },
+        {
+            "id": "PR2-Oftalmo-Q69",
+            "text": "Qual o músculo extraocular inervado pelo nervo troclear (IV par)?",
+            "options": [
+                "Reto superior",
+                "Reto inferior",
+                "Oblíquo inferior",
+                "Oblíquo superior"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. O nervo troclear é o único que inerva o músculo oblíquo superior, cuja principal ação é a inciclotorção e a depressão do olho em adução.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q70",
+            "text": "Paciente com paralisia do IV nervo queixa-se de diplopia vertical que piora ao olhar para baixo e para o lado oposto da lesão. Qual manobra semiológica é característica desta condição?",
+            "options": [
+                "Manobra de Valsalva",
+                "Teste de Hirschberg",
+                "Manobra de Bielschowsky (inclinação da cabeça)",
+                "Teste de sobrecarga hídrica"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A manobra de Bielschowsky é usada para diagnosticar a paralisia do músculo oblíquo superior. Na paralisia do IV nervo, a hipertropia (olho mais alto) piora quando a cabeça é inclinada para o lado da lesão, devido à ação compensatória dos músculos.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q71",
+            "text": "O que é o defeito pupilar aferente relativo (pupila de Marcus Gunn)?",
+            "options": [
+                "É a ausência de reação pupilar à luz em ambos os olhos.",
+                "É uma pupila miótica que não dilata no escuro.",
+                "É uma condição em que, ao alternar o estímulo luminoso entre os olhos, a pupila do olho afetado se dilata paradoxalmente em vez de contrair.",
+                "É uma pupila dilatada que não reage à luz nem à acomodação."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O defeito pupilar aferente relativo (DPAR) é um sinal de disfunção da via aferente (nervo óptico). No teste do 'swinging flashlight', o olho doente percebe menos luz, então quando o estímulo vai do olho bom para o doente, ambas as pupilas se dilatam, pois o estímulo constritor é menor. É um sinal objetivo importante de neuropatia óptica.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q72.1",
+            "text": "Paciente de 28 anos, sexo feminino, com dor à movimentação ocular e baixa visual em um olho, com escotoma central. Fundoscopia normal. Qual a principal hipótese?",
+            "options": [
+                "Glaucoma agudo",
+                "Neurite óptica retrobulbar",
+                "Oclusão de artéria central da retina",
+                "Descolamento de retina"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A tríade de baixa visual subaguda, dor à movimentação ocular e discromatopsia (alteração na visão de cores) em um paciente jovem é a apresentação clássica da neurite óptica. Quando o fundo de olho é normal, ela é chamada de retrobulbar, pois a inflamação ocorre na porção posterior do nervo óptico.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q72.2",
+            "text": "A neurite óptica está fortemente associada a qual doença desmielinizante do sistema nervoso central?",
+            "options": [
+                "Doença de Alzheimer",
+                "Doença de Parkinson",
+                "Esclerose Lateral Amiotrófica (ELA)",
+                "Esclerose Múltipla (EM)"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A neurite óptica é a manifestação inicial da Esclerose Múltipla em cerca de 20% dos pacientes e ocorre em aproximadamente 50% dos pacientes em algum momento da doença. Portanto, todo paciente com um primeiro episódio de neurite óptica deve ser investigado para EM.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q73",
+            "text": "O que é o tracoma?",
+            "options": [
+                "É uma conjuntivite viral causada pelo adenovírus.",
+                "É uma ceratoconjuntivite crônica causada pela bactéria Chlamydia trachomatis, que pode levar à cegueira por cicatrizes.",
+                "É uma infecção fúngica da córnea.",
+                "É uma inflamação da glândula lacrimal."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O tracoma é uma doença infecciosa crônica, uma das principais causas de cegueira infecciosa evitável no mundo. A infecção repetida pela Chlamydia trachomatis leva a um processo cicatricial na conjuntiva tarsal, causando entrópio, triquíase e, finalmente, opacidade corneana e cegueira.",
+            "tag": "Conjuntiva"
+        },
+        {
+            "id": "PR2-Oftalmo-Q74.1",
+            "text": "O que é o ceratocone?",
+            "options": [
+                "É uma inflamação da córnea.",
+                "É um afinamento e protrusão progressiva da córnea, que assume um formato cônico.",
+                "É um depósito de cálcio na córnea.",
+                "É um tumor benigno da córnea."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O ceratocone é uma doença ectásica da córnea, de caráter progressivo e não inflamatório, que causa um afinamento e abaulamento da córnea, levando a astigmatismo irregular e baixa acuidade visual.",
+            "tag": "Córnea"
+        },
+        {
+            "id": "PR2-Oftalmo-Q74.2",
+            "text": "Qual o principal fator de risco modificável associado à progressão do ceratocone?",
+            "options": [
+                "Uso de óculos",
+                "Exposição solar",
+                "Coçar os olhos",
+                "Dieta"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O ato de coçar os olhos de forma crônica e vigorosa é um fator de risco fortemente associado ao desenvolvimento e à progressão do ceratocone. Orientar o paciente a não coçar os olhos e tratar a alergia ocular associada é fundamental no manejo da doença.",
+            "tag": "Córnea"
+        },
+        {
+            "id": "PR2-Oftalmo-Q75",
+            "text": "Qual exame é considerado o padrão-ouro para o diagnóstico precoce do ceratocone?",
+            "options": [
+                "Paquimetria",
+                "Retinoscopia",
+                "Topografia corneana (ou Tomografia de Córnea)",
+                "Teste de acuidade visual"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A topografia e a tomografia de córnea são exames que mapeiam a curvatura e a espessura da córnea em milhares de pontos, permitindo detectar as alterações sutis e os padrões de curvatura assimétrica característicos do ceratocone, mesmo em fases subclínicas.",
+            "tag": "Córnea"
+        },
+        {
+            "id": "PR2-Oftalmo-Q76",
+            "text": "O que é o tratamento de crosslinking do colágeno corneano?",
+            "options": [
+                "É uma cirurgia para transplante de córnea.",
+                "É um procedimento que usa radiação ultravioleta A (UVA) e riboflavina (vitamina B2) para enrijecer a córnea e frear a progressão do ceratocone.",
+                "É o uso de lentes de contato rígidas para aplanar a córnea.",
+                "É a implantação de um anel no interior da córnea."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O crosslinking é o único tratamento que atua na fisiopatologia do ceratocone. O procedimento cria novas ligações covalentes entre as fibras de colágeno do estroma, aumentando a rigidez biomecânica da córnea e, na maioria dos casos, estabilizando a doença e evitando a sua progressão.",
+            "tag": "Córnea"
+        },
+        {
+            "id": "PR2-Oftalmo-Q77",
+            "text": "O que é a hemianopsia homônima?",
+            "options": [
+                "É a perda da metade superior do campo visual de ambos os olhos.",
+                "É a perda da metade temporal do campo visual de ambos os olhos (hemianopsia bitemporal).",
+                "É a perda da mesma metade (direita ou esquerda) do campo visual de ambos os olhos.",
+                "É a perda da visão em apenas um olho."
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A hemianopsia homônima é a perda de campo visual que afeta o lado direito ou o lado esquerdo de ambos os olhos. É causada por uma lesão na via óptica retroquiasmática (após o quiasma óptico), como um AVC no trato óptico ou no córtex visual.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q78",
+            "text": "Uma lesão que comprime o centro do quiasma óptico, como um tumor de hipófise, tipicamente causa qual defeito de campo visual?",
+            "options": [
+                "Hemianopsia homônima direita",
+                "Hemianopsia bitemporal",
+                "Hemianopsia binasal",
+                "Quadrantanopsia superior"
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. No quiasma óptico, as fibras nervosas das hemirretinas nasais (que enxergam o campo visual temporal) cruzam para o lado oposto. Uma lesão central no quiasma, como um adenoma de hipófise, comprime justamente essas fibras cruzadas, causando a perda dos campos visuais temporais de ambos os olhos, ou seja, uma hemianopsia bitemporal.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q79",
+            "text": "O que é edema de papila?",
+            "options": [
+                "É um afinamento da camada de fibras nervosas da retina.",
+                "É o inchaço do disco óptico devido ao aumento da pressão intracraniana.",
+                "É a inflamação do nervo óptico.",
+                "É a presença de neovasos no disco óptico."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O termo papiledema refere-se especificamente ao edema do disco óptico (a 'cabeça' do nervo óptico) que ocorre de forma bilateral e é causado pela transmissão da hipertensão intracraniana para o espaço subaracnóideo ao redor do nervo, causando estase do fluxo axoplasmático. É uma emergência neurológica.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q80",
+            "text": "Qual das seguintes condições NÃO é uma causa de olho vermelho doloroso com baixa visual?",
+            "options": [
+                "Glaucoma agudo",
+                "Uveíte anterior",
+                "Ceratite",
+                "Hemorragia subconjuntival"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A hemorragia subconjuntival, apesar de ter um aspecto alarmante (sangue sob a conjuntiva), é uma condição benigna que não causa dor nem afeta a visão. As outras três opções são causas importantes de olho vermelho doloroso que requerem avaliação oftalmológica urgente.",
+            "tag": "Diagnóstico Diferencial"
+        },
+        {
+            "id": "PR2-Oftalmo-Q81.1",
+            "text": "Paciente queixa-se de visão dupla. Ao exame, o olho esquerdo não consegue se mover para baixo quando está posicionado em direção ao nariz (adução). Qual músculo está paralisado?",
+            "options": [
+                "Reto inferior esquerdo",
+                "Reto superior esquerdo",
+                "Oblíquo superior esquerdo",
+                "Oblíquo inferior esquerdo"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A principal ação do músculo oblíquo superior é a depressão do olho quando ele está em adução. Portanto, a dificuldade em olhar para 'baixo e para dentro' é o sinal clássico da paralisia do oblíquo superior, causada por uma lesão do nervo troclear (IV par).",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q81.2",
+            "text": "A principal causa de paralisia do IV nervo craniano (troclear) em adultos é:",
+            "options": [
+                "Tumor cerebral",
+                "Aneurisma",
+                "Traumatismo craniano",
+                "Diabetes Mellitus (isquêmica)"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. O nervo troclear tem o trajeto intracraniano mais longo e é muito fino, o que o torna particularmente vulnerável a lesões por cisalhamento em traumatismos cranianos, mesmo os considerados leves.",
+            "tag": "Neuroftalmologia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q82",
+            "text": "O que é o teste de cobertura e descoberta (cover-uncover test)?",
+            "options": [
+                "É usado para medir a pressão intraocular.",
+                "É usado para diferenciar uma foria (desvio latente) de uma tropia (desvio manifesto).",
+                "É usado para avaliar a visão de cores.",
+                "É usado para detectar olho seco."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O teste de cobertura e descoberta é a manobra semiológica fundamental para o diagnóstico de estrabismo. Ao ocluir um olho, observa-se o movimento do olho não ocluído para detectar uma tropia. Ao desocluir, observa-se o movimento do olho que estava coberto para detectar uma foria.",
+            "tag": "Estrabismo e Ambliopia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q83",
+            "text": "Qual das seguintes afirmações sobre a conjuntivite alérgica é VERDADEIRA?",
+            "options": [
+                "A principal característica é a secreção purulenta.",
+                "O principal sintoma é o prurido (coceira).",
+                "É comumente acompanhada de linfonodo pré-auricular.",
+                "O tratamento de primeira linha é com antibióticos."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. O prurido é o sintoma sentinela da conjuntivite alérgica. A sua presença é altamente sugestiva do diagnóstico, enquanto sua ausência praticamente o exclui. As outras características pertencem a outros tipos de conjuntivite (bacteriana ou viral).",
+            "tag": "Conjuntiva"
+        },
+        {
+            "id": "PR2-Oftalmo-Q84",
+            "text": "Qual o nome da condição em que há inflamação de ambas as pálpebras, geralmente com formação de crostas nos cílios, vermelhidão e irritação?",
+            "options": [
+                "Conjuntivite",
+                "Ceratite",
+                "Blefarite",
+                "Uveíte"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. Blefarite é o termo geral para a inflamação das margens palpebrais. Pode ser anterior (afetando a base dos cílios, geralmente estafilocócica ou seborreica) ou posterior (afetando as glândulas de Meibomius).",
+            "tag": "Pálpebras"
+        },
+        {
+            "id": "PR2-Oftalmo-Q85",
+            "text": "O que é a oftalmia simpática?",
+            "options": [
+                "É uma conjuntivite transmitida por contato direto.",
+                "É uma uveíte granulomatosa bilateral grave que ocorre após um trauma ocular penetrante em um dos olhos.",
+                "É o desalinhamento ocular que ocorre por fadiga visual.",
+                "É a inflamação da órbita secundária a uma sinusite."
+            ],
+            "answerIndex": 1,
+            "explanation": "A alternativa correta é a B. A oftalmia simpática é uma complicação rara, mas devastadora, de um trauma ocular perfurante. É uma reação autoimune na qual o sistema imune do corpo ataca o olho não traumatizado (o olho 'simpatizante'), causando uma pan-uveíte bilateral que pode levar à cegueira.",
+            "tag": "Uveítes"
+        },
+        {
+            "id": "PR2-Oftalmo-Q86",
+            "text": "Qual é a estrutura transparente e avascular que recobre a parte anterior do olho, funcionando como a principal lente refrativa?",
+            "options": [
+                "Íris",
+                "Cristalino",
+                "Córnea",
+                "Esclera"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A córnea é a estrutura transparente localizada na frente da íris, responsável por cerca de dois terços do poder refrativo total do olho. Sua transparência e curvatura regular são essenciais para uma boa visão.",
+            "tag": "Anatomia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q87",
+            "text": "Qual o nome da membrana que reveste a superfície interna das pálpebras e a superfície anterior da esclera?",
+            "options": [
+                "Coroide",
+                "Retina",
+                "Cápsula de Tenon",
+                "Conjuntiva"
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A conjuntiva é uma mucosa fina e transparente que recobre a esclera (conjuntiva bulbar) e a face interna das pálpebras (conjuntiva tarsal), formando um saco protetor.",
+            "tag": "Anatomia"
+        },
+        {
+            "id": "PR2-Oftalmo-Q88",
+            "text": "Qual das seguintes condições NÃO representa um risco aumentado para o desenvolvimento de glaucoma?",
+            "options": [
+                "Pressão intraocular elevada",
+                "História familiar positiva",
+                "Miopia",
+                "Idade avançada"
+            ],
+            "answerIndex": 2,
+            "explanation": "A alternativa correta é a C. A alta miopia é um fator de risco para o Glaucoma Primário de Ângulo Aberto. Os outros fatores listados (PIO elevada, história familiar e idade) são os principais fatores de risco para a doença.",
+            "tag": "Glaucoma"
+        },
+        {
+            "id": "PR2-Oftalmo-Q89",
+            "text": "No exame de triagem de uma criança de 3 anos, qual das seguintes condições pode ser detectada pela primeira vez?",
+            "options": [
+                "Ambliopia e Estrabismo",
+                "Apenas Retinoblastoma",
+                "Apenas Hipertensão ocular",
+                "Apenas Uveíte cicatrizada"
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa correta é a A. O período entre 1 e 3 anos é crucial para o desenvolvimento visual. O estrabismo pode se manifestar nesta fase, e se não for corrigido, pode levar à ambliopia. Por isso, a triagem nesta idade é fundamental para detectar e tratar ambas as condições precocemente.",
+            "tag": "Oftalmopediatria"
+        },
+        {
+            "id": "PR2-Oftalmo-Q90",
+            "text": "Assinale a alternativa incorreta sobre a orbitopatia de Graves:",
+            "options": [
+                "Os sinais oftalmológicos da Doença de Graves ocorrem somente após a elevação do hormônio tireoidiano.",
+                "Entre 25% a 50% dos pacientes com Doença de Graves podem evoluir com algum grau de orbitopatia.",
+                "Tabagismo e sexo feminino são fatores de risco para o desenvolvimento do quadro oftalmológico.",
+                "O sinal mais comum é a retração da pálpebra superior (sinal de Dalrymple)."
+            ],
+            "answerIndex": 0,
+            "explanation": "A alternativa incorreta (e portanto, a resposta correta) é a A. A orbitopatia de Graves é um processo autoimune que pode ocorrer antes, durante ou depois do hipertireoidismo, e até mesmo em pacientes com função tireoidiana normal (oftalmopatia eutireoidea). As outras afirmações são verdadeiras.",
+            "tag": "Órbita"
+        },
+        {
+            "id": "PR2-Oftalmo-Q91",
+            "text": "Sobre a ceratite actínica (queimadura por solda), é correto afirmar:",
+            "options": [
+                "Os sintomas são imediatos após a exposição.",
+                "O tratamento envolve oclusão bilateral e analgésicos.",
+                "Causa dano permanente à retina.",
+                "Ocorre uma lesão epitelial superficial que geralmente cicatriza sem sequelas em 24-48h."
+            ],
+            "answerIndex": 3,
+            "explanation": "A alternativa correta é a D. A ceratite actínica é uma lesão dolorosa, mas superficial, do epitélio da córnea. Com o tratamento adequado (oclusão, lubrificação, analgésicos), o epitélio se regenera completamente em 1 a 2 dias, sem deixar cicatriz ou perda visual permanente.",
+            "tag": "Trauma"
+       
+        }
+    ]
+    
+}
     ]

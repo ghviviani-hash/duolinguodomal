@@ -60,16 +60,22 @@ export function useQuizEngine() {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
-    // Carrega os decks a partir do ficheiro de dados, já na ordem correta
-    const decksWithStableIds = DEFAULT_DECKS.map(deck => ({
-      ...deck,
-      questions: deck.questions.map((q: Question) => ({ ...q, id: hashString(q.text) }))
-    }));
+    // CORREÇÃO: Carrega e processa os decks de forma segura
+    const decksWithStableIds = DEFAULT_DECKS.map(deck => {
+      // Garante que 'questions' é sempre um array antes de mapear
+      const safeQuestions = Array.isArray(deck.questions) ? deck.questions : [];
+      return {
+        ...deck,
+        questions: safeQuestions.map((q: Question) => ({
+          ...q,
+          // Garante que 'q.text' é uma string antes de gerar o hash
+          id: hashString(String(q.text || '')) 
+        }))
+      };
+    });
 
-    // CORREÇÃO: Usa a lista completa de decks para o estado
     setAvailableDecks(decksWithStableIds);
 
-    // Guarda os decks no localStorage para uso offline e carregamento rápido.
     const manifestForStorage = decksWithStableIds.map(deck => ({ id: deck.id, name: deck.name }));
     localStorage.setItem("quizg-v1-deck-manifest", JSON.stringify(manifestForStorage));
     
@@ -77,6 +83,8 @@ export function useQuizEngine() {
         localStorage.setItem(LS_DECK_KEY(deck.id), JSON.stringify({ questions: deck.questions }));
     });
   }, []);
+  
+  // O resto do ficheiro permanece igual...
 
   useEffect(() => {
     const rawAchievements = localStorage.getItem(LS_ACHIEVEMENTS_KEY);

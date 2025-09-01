@@ -15,8 +15,7 @@ interface QuizPanelProps {
     isCorrect: boolean | null;
     showExpl: boolean;
     lastGain: number | null;
-    isLocked: boolean;
-    onNextQuestion: () => void; // MUDANÇA: Adicionando a nova prop
+    onNextQuestion: () => void;
 }
 
 export function QuizPanel({
@@ -26,7 +25,7 @@ export function QuizPanel({
     onReset,
     onShowStats,
     onReviewQuestion,
-    onNextQuestion, // MUDANÇA: Recebendo a nova prop
+    onNextQuestion,
     ...questionViewProps
 }: QuizPanelProps) {
     return (
@@ -41,7 +40,7 @@ export function QuizPanel({
             ) : displayedQuestion ? (
                 <QuestionView
                     question={displayedQuestion}
-                    onNextQuestion={onNextQuestion} // MUDANÇA: Passando a prop para QuestionView
+                    onNextQuestion={onNextQuestion}
                     {...questionViewProps}
                 />
             ) : null}

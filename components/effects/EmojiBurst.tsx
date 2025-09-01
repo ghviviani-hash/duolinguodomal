@@ -1,6 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 
-export function EmojiBurst({ trigger }: { trigger: number }) {
+interface EmojiBurstProps {
+  trigger: number;
+  combo: number;
+}
+
+export function EmojiBurst({ trigger, combo }: EmojiBurstProps) {
   const EMOJIS = ["✅", "🎯", "🌟", "👏", "🔥", "🎉", "🤓", "💡", "🧠", "✨"];
   return (
     <div className="pointer-events-none fixed inset-0 overflow-hidden z-50">

@@ -38,7 +38,6 @@ export interface Deck {
 export interface Stats {
   xp: number;
   level: number;
-  hearts: number;
   streakDays: number;
   todayXp: number;
   goal: number;

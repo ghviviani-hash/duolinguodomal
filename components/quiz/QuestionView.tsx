@@ -10,8 +10,7 @@ interface QuestionViewProps {
   isCorrect: boolean | null;
   showExpl: boolean;
   lastGain: number | null;
-  isLocked: boolean;
-  onNextQuestion: () => void; // MUDANÇA: Adicionando a nova prop
+  onNextQuestion: () => void;
 }
 
 export function QuestionView({
@@ -21,8 +20,7 @@ export function QuestionView({
   isCorrect,
   showExpl,
   lastGain,
-  isLocked,
-  onNextQuestion, // MUDANÇA: Recebendo a nova prop
+  onNextQuestion,
 }: QuestionViewProps) {
   return (
     <motion.div
@@ -44,7 +42,7 @@ export function QuestionView({
             <motion.button
               key={i}
               onClick={() => onSelect(i)}
-              disabled={selected != null || isLocked}
+              disabled={selected != null}
               whileTap={{ scale: 0.98 }}
               className={`text-left rounded-2xl p-4 border transition-all bg-white/70 dark:bg-slate-900/60
                 ${correct ? "border-emerald-500/70 ring-2 ring-emerald-500/30" :
@@ -72,7 +70,6 @@ export function QuestionView({
         </motion.div>
       )}
 
-      {/* MUDANÇA: Adicionando o botão de continuar */}
       {selected != null && !isCorrect && (
         <motion.div
             initial={{ opacity: 0, y: 10 }}

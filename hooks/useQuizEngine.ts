@@ -9,7 +9,6 @@ import {
     LS_ACHIEVEMENTS_KEY,
     DECK_COMPLETION_BONUS,
     DAILY_GOAL_BONUS,
-    INITIAL_HEARTS,
     SRS_INTERVALS
 } from '@/lib/constants';
 import { todayKey, daysBetween, shuffle, hashString } from '@/lib/utils';
@@ -31,7 +30,6 @@ export function useQuizEngine() {
   const [shuffleOnLoad, setShuffleOnLoad] = useState(true);
   const [errors, setErrors] = useState<string[]>([]);
   const [dark, setDark] = useState(true);
-  const [lockUntil, setLockUntil] = useState<number | null>(null);
   const [now, setNow] = useState(Date.now());
   const [sessionWrongAnswers, setSessionWrongAnswers] = useState<Question[]>([]);
   const [reviewingQuestion, setReviewingQuestion] = useState<Question | null>(null);
@@ -41,7 +39,6 @@ export function useQuizEngine() {
   const [displayedQuestion, setDisplayedQuestion] = useState<ShuffledQuestion | null>(null);
   const [xp, setXp] = useState(0);
   const [level, setLevel] = useState(1);
-  const [hearts, setHearts] = useState(INITIAL_HEARTS);
   const [streakDays, setStreakDays] = useState(0);
   const [todayXp, setTodayXp] = useState(0);
   const [goal, setGoal] = useState(100);
@@ -116,10 +113,8 @@ export function useQuizEngine() {
         setStreakDays(last ? (daysBetween(last, today) === 1 ? (s.streakDays || 0) + 1 : (daysBetween(last, today) === 0 ? s.streakDays || 0 : 1)) : 1);
         setXp(s.xp || 0);
         setLevel(s.level || 1);
-        setHearts(s.hearts ?? INITIAL_HEARTS);
         setGoal(s.goal ?? 100);
         setTodayXp(s.lastXPDate === today ? s.todayXp || 0 : 0);
-        setLockUntil(s.lockUntil || null);
         setDailyBonusAwarded(s.dailyBonusAwardedFor === today);
         setDecksCompleted(s.decksCompleted || 0);
       } catch {}
@@ -131,22 +126,9 @@ export function useQuizEngine() {
   useEffect(() => {
     const today = todayKey();
     localStorage.setItem(LS_STATS_KEY, JSON.stringify({
-      lastActiveDate: today, streakDays, xp, level, hearts, goal, todayXp, lastXPDate: today, lockUntil, dailyBonusAwardedFor: dailyBonusAwarded ? today : null, decksCompleted
+      lastActiveDate: today, streakDays, xp, level, goal, todayXp, lastXPDate: today, dailyBonusAwardedFor: dailyBonusAwarded ? today : null, decksCompleted
     }));
-  }, [streakDays, xp, level, hearts, goal, todayXp, lockUntil, dailyBonusAwarded, decksCompleted]);
-
-  useEffect(() => {
-    if (lockUntil) {
-      const id = setInterval(() => {
-        setNow(Date.now());
-        if (Date.now() >= lockUntil) {
-          setLockUntil(null);
-          setHearts(INITIAL_HEARTS);
-        }
-      }, 1000);
-      return () => clearInterval(id);
-    }
-  }, [lockUntil]);
+  }, [streakDays, xp, level, goal, todayXp, dailyBonusAwarded, decksCompleted]);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
@@ -320,17 +302,14 @@ export function useQuizEngine() {
       playCorrect();
       setTimeout(() => advanceQueue(true), 650);
     } else {
-      const newHearts = hearts - 1;
-      setHearts(newHearts);
       setCombo(0);
       setShowExpl(true);
       playWrong();
       if (!wasAlreadyWrong) {
         setSessionWrongAnswers(prev => [...prev, originalQuestion]);
       }
-      if (newHearts <= 0) setLockUntil(Date.now() + 5 * 60 * 1000);
     }
-  }, [displayedQuestion, selected, current, questions, updateSrsData, questionStart, combo, hearts, playCorrect, playWrong, sessionWrongAnswers, advanceQueue]);
+  }, [displayedQuestion, selected, current, questions, updateSrsData, questionStart, combo, playCorrect, playWrong, sessionWrongAnswers, advanceQueue]);
 
   const handleNextQuestion = () => {
     advanceQueue(false);
@@ -388,14 +367,6 @@ export function useQuizEngine() {
     setSessionWrongAnswers([]);
   };
 
-  const buyLivesWithXp = (cost: number, amount: number) => {
-    if (xp >= cost) {
-      setXp(x => x - cost);
-      setHearts(h => h + amount);
-      setLockUntil(null);
-    }
-  };
-
   const clearSession = () => {
     setQuestions([]);
     setQueue([]);
@@ -407,15 +378,14 @@ export function useQuizEngine() {
   return {
     state: {
       availableDecks, deckId, questions, queue, current, selected, isCorrect, showExpl,
-      shuffleOnLoad, errors, dark, xp, level, hearts, streakDays, todayXp, goal, combo,
-      confettiKey, lastGain, emojiKey, lockUntil, now, sessionWrongAnswers, reviewingQuestion,
+      shuffleOnLoad, errors, dark, xp, level, streakDays, todayXp, goal, combo,
+      confettiKey, lastGain, emojiKey, sessionWrongAnswers, reviewingQuestion,
       isSessionComplete, srsData, quizMode, dailyBonusAwarded, showStatsModal,
-      unlockedAchievements, displayedQuestion, comboMilestone
+      unlockedAchievements, displayedQuestion, comboMilestone, decksCompleted
     },
     actions: {
       setDeckId, setShuffleOnLoad, setDark, setGoal, setReviewingQuestion,
       setShowStatsModal, onSelect, resetSession, handleUpload, startSrsSession,
-      buyLivesWithXp,
       clearSession,
       handleNextQuestion
     },

@@ -1,6 +1,5 @@
 "use client";
 
-
 import React from "react";
 import { useQuizEngine } from '@/hooks/useQuizEngine';
 import { Header } from '@/components/layout/Header';
@@ -18,65 +17,81 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function QuizGamificadoApp() {
   const { state, actions, refs } = useQuizEngine();
+  const {
+    availableDecks,
+    deckId,
+    questions,
+    queue,
+    current,
+    selected,
+    isCorrect,
+    showExpl,
+    shuffleOnLoad,
+    errors,
+    dark,
+    xp,
+    level,
+    streakDays,
+    todayXp,
+    goal,
+    combo,
+    confettiKey,
+    lastGain,
+    emojiKey,
+    sessionWrongAnswers,
+    reviewingQuestion,
+    isSessionComplete,
+    srsData,
+    quizMode,
+    dailyBonusAwarded,
+    showStatsModal,
+    unlockedAchievements,
+    displayedQuestion,
+    comboMilestone,
+    decksCompleted,
+  } = state;
 
-  const isQuizActive = !!state.deckId || state.quizMode === 'srs';
+  const isQuizActive = !!deckId || quizMode === 'srs';
 
-  const progressPct = state.questions.length > 0
-    ? Math.round(((state.questions.length - state.queue.length) / state.questions.length) * 100)
+  const progressPct = questions.length > 0
+    ? Math.round(((questions.length - queue.length) / questions.length) * 100)
     : 0;
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 text-slate-800 dark:text-slate-100">
-      <ReviewModal question={state.reviewingQuestion} onClose={() => actions.setReviewingQuestion(null)} />
-      {state.showStatsModal && <StatsModal srsData={state.srsData} onClose={() => actions.setShowStatsModal(false)} />}
-      <Confetti trigger={state.confettiKey} />
-      <EmojiBurst trigger={state.emojiKey} />
-      <ComboEffect milestone={state.comboMilestone} />
-
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
-        <Header
-          stats={{
-            streakDays: state.streakDays,
-            level: state.level,
-            xp: state.xp,
-            hearts: state.hearts,
-          }}
-          dark={state.dark}
-          setDark={actions.setDark}
-        />
-
+        <Header stats={{xp, level, streakDays}} dark={dark} setDark={actions.setDark} />
         <div className="flex flex-col lg:flex-row gap-6 mt-6">
           <div className={`lg:w-1/3 space-y-6 ${isQuizActive ? 'order-2' : 'order-1'} lg:order-1`}>
             <Sidebar
               isQuizActive={isQuizActive}
               fileInputRef={refs.fileInputRef}
               handleUpload={actions.handleUpload}
-              shuffleOnLoad={state.shuffleOnLoad}
+              shuffleOnLoad={shuffleOnLoad}
               setShuffleOnLoad={actions.setShuffleOnLoad}
-              errors={state.errors}
-              srsData={state.srsData}
+              errors={errors}
+              srsData={srsData}
               startSrsSession={actions.startSrsSession}
-              availableDecks={state.availableDecks}
-              deckId={state.deckId}
+              availableDecks={availableDecks}
+              deckId={deckId}
               setDeckId={actions.setDeckId}
-              stats={{
-                todayXp: state.todayXp,
-                goal: state.goal,
-                combo: state.combo,
-                hearts: state.hearts,
-                lockUntil: state.lockUntil,
-                now: state.now,
-                xp: state.xp,
-              }}
-              actions={{
-                  setGoal: actions.setGoal,
-                  buyLivesWithXp: actions.buyLivesWithXp,
-                  resetSession: actions.resetSession,
-                  clearSession: actions.clearSession
-              }}
-              progressPct={progressPct}
-              unlockedAchievements={state.unlockedAchievements}
-              questionsCount={state.questions.length}
+              xp={xp}
+              level={level}
+              streakDays={streakDays}
+              todayXp={todayXp}
+              goal={goal}
+              dailyBonusAwarded={dailyBonusAwarded}
+              decksCompleted={decksCompleted}
+              combo={combo}
+              isSessionComplete={isSessionComplete}
+              clearSession={actions.clearSession}
+              resetSession={actions.resetSession}
+              unlockedAchievements={unlockedAchievements}
+              setShowStatsModal={actions.setShowStatsModal}
+              quizMode={quizMode}
+              questionsCount={questions.length}
+              queue={queue}
+              current={current}
             />
           </div>
 
@@ -91,13 +106,13 @@ export default function QuizGamificadoApp() {
                 <CardHeader>
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
-                      <CardTitle className="text-xl md:text-2xl">{state.isSessionComplete ? "Parabéns!" : state.displayedQuestion ? (state.displayedQuestion.tag || "Questão") : "A carregar..."}</CardTitle>
-                      <CardDescription>{state.isSessionComplete ? "Você finalizou o deck." : "Selecione a alternativa correta."}</CardDescription>
+                      <CardTitle className="text-xl md:text-2xl">{isSessionComplete ? "Parabéns!" : displayedQuestion ? (displayedQuestion.tag || "Questão") : "A carregar..."}</CardTitle>
+                      <CardDescription>{isSessionComplete ? "Você finalizou o deck." : "Selecione a alternativa correta."}</CardDescription>
                     </div>
 
                     <div className="flex items-center gap-3 flex-shrink-0">
                       <AnimatePresence>
-                        {state.combo > 1 && (
+                        {combo > 1 && (
                           <motion.div
                             initial={{ opacity: 0, scale: 0.5 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -105,11 +120,11 @@ export default function QuizGamificadoApp() {
                             className="flex items-center gap-1 font-bold text-lg md:text-xl text-orange-500"
                           >
                             <Flame className="h-6 w-6" />
-                            <span>x{state.combo}</span>
+                            <span>x{combo}</span>
                           </motion.div>
                         )}
                       </AnimatePresence>
-                      <Badge variant="secondary">{state.questions.length > 0 ? `${state.questions.length - state.queue.length}/${state.questions.length}` : "0/0"}</Badge>
+                      <Badge variant="secondary">{questions.length > 0 ? `${questions.length - queue.length}/${questions.length}` : "0/0"}</Badge>
                     </div>
                   </div>
                 </CardHeader>
@@ -118,19 +133,18 @@ export default function QuizGamificadoApp() {
               <CardContent className="min-h-[400px] flex flex-col">
                 {isQuizActive ? (
                   <QuizPanel
-                    isSessionComplete={state.isSessionComplete}
-                    displayedQuestion={state.displayedQuestion}
+                    isSessionComplete={isSessionComplete}
+                    displayedQuestion={displayedQuestion}
                     onSelect={actions.onSelect}
-                    selected={state.selected}
-                    isCorrect={state.isCorrect}
-                    showExpl={state.showExpl}
-                    lastGain={state.lastGain}
-                    isLocked={state.lockUntil != null && state.lockUntil > state.now}
-                    wrongAnswers={state.sessionWrongAnswers}
+                    selected={selected}
+                    isCorrect={isCorrect}
+                    showExpl={showExpl}
+                    lastGain={lastGain}
+                    wrongAnswers={sessionWrongAnswers}
                     onReset={actions.resetSession}
                     onShowStats={() => actions.setShowStatsModal(true)}
                     onReviewQuestion={actions.setReviewingQuestion}
-                    onNextQuestion={actions.handleNextQuestion} // MUDANÇA: Passando a nova função
+                    onNextQuestion={actions.handleNextQuestion}
                   />
                 ) : (
                    <div className="flex-1 flex flex-col items-center justify-center text-center text-slate-500">
@@ -144,6 +158,11 @@ export default function QuizGamificadoApp() {
           </div>
         </div>
       </div>
+      <ReviewModal question={reviewingQuestion} onClose={() => actions.setReviewingQuestion(null)} />
+      {showStatsModal && <StatsModal show={showStatsModal} onClose={() => actions.setShowStatsModal(false)} stats={{xp, level, streakDays, goal, decksCompleted, todayXp}} unlockedAchievements={unlockedAchievements} />}
+      <Confetti trigger={confettiKey} />
+      <EmojiBurst trigger={emojiKey} combo={combo} />
+      <ComboEffect trigger={comboMilestone} />
     </div>
   );
 }

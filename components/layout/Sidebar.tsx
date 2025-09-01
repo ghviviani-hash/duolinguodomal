@@ -9,7 +9,6 @@ import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Upload, Download, BookOpen, BrainCircuit, Trophy, Award, RefreshCw, Info } from "lucide-react";
 import { SrsData, Deck } from "@/types";
-import { formatTimeLeft } from "@/lib/utils";
 import { achievements } from "@/lib/achievements";
 import { TEMPLATE_TXT } from "@/lib/constants";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -17,7 +16,6 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { isPast } from 'date-fns';
 
 interface SidebarProps {
-  isQuizActive: boolean;
   fileInputRef: React.RefObject<HTMLInputElement | null>;
   handleUpload: (file: File) => void;
   shuffleOnLoad: boolean;
@@ -28,11 +26,24 @@ interface SidebarProps {
   availableDecks: Deck[];
   deckId: string | null;
   setDeckId: (id: string | null) => void;
-  stats: any;
-  actions: any;
-  progressPct: number;
+  xp: number;
+  level: number;
+  streakDays: number;
+  todayXp: number;
+  goal: number;
+  dailyBonusAwarded: boolean;
+  decksCompleted: number;
+  combo: number;
+  isSessionComplete: boolean;
+  clearSession: () => void;
+  resetSession: () => void;
   unlockedAchievements: string[];
+  setShowStatsModal: (value: boolean) => void;
+  quizMode: "deck" | "srs";
   questionsCount: number;
+  isQuizActive: boolean;
+  queue: number[]; // ADIÇÃO: Adicionando a fila para o cálculo de progresso
+  current: number | null; // ADIÇÃO: Adicionando a questão atual para o cálculo de progresso
 }
 
 interface DeckNode {
@@ -41,7 +52,6 @@ interface DeckNode {
 }
 
 export function Sidebar({
-  isQuizActive,
   fileInputRef,
   handleUpload,
   shuffleOnLoad,
@@ -52,11 +62,24 @@ export function Sidebar({
   availableDecks,
   deckId,
   setDeckId,
-  stats,
-  actions,
-  progressPct,
+  xp,
+  level,
+  streakDays,
+  todayXp,
+  goal,
+  dailyBonusAwarded,
+  decksCompleted,
+  combo,
+  isSessionComplete,
+  clearSession,
+  resetSession,
   unlockedAchievements,
+  setShowStatsModal,
+  quizMode,
   questionsCount,
+  isQuizActive,
+  queue, // ADIÇÃO
+  current, // ADIÇÃO
 }: SidebarProps) {
 
   const isMobile = useMediaQuery("(max-width: 1023px)");
@@ -115,9 +138,11 @@ export function Sidebar({
     URL.revokeObjectURL(url);
   };
 
-  const goalPct = Math.min(100, Math.round((stats.todayXp / stats.goal) * 100));
+  const goalPct = Math.min(100, Math.round((todayXp / goal) * 100));
   const srsCount = Object.values(srsData).filter((item: any) => isPast(new Date(item.nextReview))).length;
-
+  // MUDANÇA: Usando queue.length e current para calcular o progresso
+  const progressPct = questionsCount > 0 ? Math.round((questionsCount - (queue.length + (current === null ? 0 : 1))) / questionsCount * 100) : 0;
+  
   const renderDeckTree = (node: DeckNode, nodeKey: string) => {
     const sortedChildrenKeys = Object.keys(node.children).sort();
     const sortedDecks = [...node.decks].sort((a, b) => a.name.localeCompare(b.name));
@@ -157,7 +182,6 @@ export function Sidebar({
               <CardDescription>Escolha um deck para começar:</CardDescription>
             </CardHeader>
             <CardContent>
-              {/* CORREÇÃO: Removida a classe "-mt-4" que causava o problema de padding */}
               <Accordion type="multiple" className="w-full" defaultValue={defaultOpenFolder}>
                 {orderedGroups.map(key => renderDeckTree(root.children[key], key))}
               </Accordion>
@@ -178,18 +202,10 @@ export function Sidebar({
               <Badge variant="secondary">{progressPct}%</Badge>
             </div>
             <Progress value={progressPct} />
-            {stats.lockUntil && stats.lockUntil > stats.now ? (
-                <div className="rounded-md p-3 bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 text-sm">
-                    <div className="font-semibold text-rose-600 dark:text-rose-200">Você ficou sem vidas</div>
-                    <div className="mt-1">Tempo restante: <span className="font-mono">{formatTimeLeft(stats.lockUntil - stats.now)}</span></div>
-                    <div className="mt-3"><Button size="sm" className="w-full" variant="secondary" onClick={() => actions.buyLivesWithXp(100, 10)}> +10 vidas (-100 XP)</Button></div>
-                </div>
-            ) : (
-                <div className="flex gap-2 flex-wrap">
-                    <Button variant="outline" size="sm" onClick={actions.resetSession} disabled={questionsCount === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
-                    <Button variant="ghost" size="sm" onClick={() => { setDeckId(null); actions.clearSession(); }}>Trocar Deck</Button>
-                </div>
-            )}
+            <div className="flex gap-2 flex-wrap">
+              <Button variant="outline" size="sm" onClick={resetSession} disabled={questionsCount === 0}><RefreshCw className="mr-2 h-4 w-4" />Recomeçar</Button>
+              <Button variant="ghost" size="sm" onClick={() => { setDeckId(null); clearSession(); }}>Trocar Deck</Button>
+            </div>
           </CardContent>
         </Card>
       </div>
@@ -198,9 +214,9 @@ export function Sidebar({
         <Card>
           <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
           <CardContent className="space-y-4">
-            <div className="flex items-center justify-between text-sm"><span>{stats.todayXp} / {stats.goal} XP hoje</span><Badge variant={goalPct === 100 ? "default" : "secondary"}>{goalPct}%</Badge></div>
+            <div className="flex items-center justify-between text-sm"><span>{todayXp} / {goal} XP hoje</span><Badge variant={goalPct === 100 ? "default" : "secondary"}>{goalPct}%</Badge></div>
             <Progress value={goalPct} />
-            <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{stats.combo}</span></div><Button size="sm" variant="outline" onClick={() => actions.setGoal((g: number) => g + 50)}>+50 meta</Button></div>
+            <div className="flex items-center justify-between gap-2"><div className="text-sm text-slate-600 dark:text-slate-300">Combo: <span className="font-semibold">{combo}</span></div><Button size="sm" variant="outline" onClick={() => setShowStatsModal(true)}>Ajustar meta</Button></div>
           </CardContent>
         </Card>
       </div>

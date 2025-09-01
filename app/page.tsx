@@ -1,5 +1,6 @@
 "use client";
 
+import { Analytics } from "@vercel/analytics/next"
 import React from "react";
 import { useQuizEngine } from '@/hooks/useQuizEngine';
 import { Header } from '@/components/layout/Header';

@@ -5440,6 +5440,424 @@ export const DEFAULT_DECKS: Deck[] = [
     id: "preset-otorrinolaringologia-1",
     name: "  Estácio - M7 - PR1 - Otorrinolaringologia",
     questions: [
+       {
+        id: "otorrino-q1-t1",
+        text: "Qual dos seguintes agentes etiológicos NÃO é uma causa comum de Angina Eritematosa Viral?",
+        options: [
+          "Rinovírus",
+          "Adenovírus",
+          "Streptococcus pyogenes",
+          "Influenza"
+        ],
+        answerIndex: 2,
+        explanation: "Streptococcus pyogenes é uma bactéria, sendo o principal agente da Angina Eritematosa Bacteriana, e não Viral[cite: 6, 15]. [cite_start]Os outros são vírus comumente associados à angina viral[cite: 6].",
+        tag: "Orofaringe"
+      },
+      {
+        id: "otorrino-q2-t1",
+        text: "Qual é o tratamento principal para uma Angina Eritematosa Viral não complicada em uma criança de 2 anos?",
+        options: [
+          "Amoxicilina por 10 dias",
+          "Sintomáticos (Analgésicos, AINES) e hidratação",
+          "Penicilina G Benzatina dose única",
+          "Aciclovir por 7 dias"
+        ],
+        answerIndex: 1,
+        explanation: "O tratamento da angina viral é de suporte, focando no alívio dos sintomas com analgésicos, anti-inflamatórios e hidratação. [cite_start]Antibióticos não são indicados[cite: 10, 11].",
+        tag: "Orofaringe"
+      },
+      // Tema 2: Angina Eritematosa Bacteriana
+      {
+        id: "otorrino-q1-t2",
+        text: "Qual é o agente etiológico clássico da Angina Eritematosa Bacteriana?",
+        options: [
+          "Staphylococcus aureus",
+          "Haemophilus influenzae",
+          "Streptococcus Beta-Hemolítico do Grupo A",
+          "Moraxella catarrhalis"
+        ],
+        answerIndex: 2,
+        explanation: "O principal agente causador da angina bacteriana é o Streptococo Beta-Hemolítico do Grupo A (Streptococcus pyogenes)[cite: 15].",
+        tag: "Orofaringe"
+      },
+      {
+        id: "otorrino-q2-t2",
+        text: "Para um paciente de 10 anos com Angina Eritematosa Bacteriana, qual é o tratamento de primeira escolha para prevenir complicações como a febre reumática?",
+        options: [
+          "Apenas anti-inflamatórios",
+          "Azitromicina por 3 dias",
+          "Amoxicilina por 10 dias ou Penicilina G Benzatina",
+          "Ceftriaxone intravenoso"
+        ],
+        answerIndex: 2,
+        explanation: "O tratamento de eleição é a erradicação do estreptococo com Amoxicilina por 10 dias ou Penicilina G Benzatina em dose única. [cite_start]Para alérgicos, a Claritromicina é uma opção[cite: 20, 21].",
+        tag: "Orofaringe"
+      },
+      // Tema 3: Escarlatina e Abscesso Periamigdaliano
+      {
+        id: "otorrino-q1-t3",
+        text: "A Escarlatina é uma complicação não supurativa da faringoamigdalite estreptocócica. Qual o agente etiológico direto da erupção cutânea?",
+        options: [
+          "A própria bactéria Streptococcus",
+          "Exotoxinas produzidas pelo Streptococcus ß-hemolítico",
+          "Uma reação alérgica à penicilina",
+          "O vírus Epstein-Barr"
+        ],
+        answerIndex: 1,
+        explanation: "A Escarlatina é causada pela ação de exotoxinas pirogênicas produzidas por cepas de Streptococcus ß-hemolítico[cite: 25].",
+        tag: "Orofaringe"
+      },
+      {
+        id: "otorrino-q2-t3",
+        text: "Paciente com dor de garganta intensa, febre, trismo (dificuldade de abrir a boca) e desvio da úvula. Qual é o diagnóstico mais provável e o tratamento imediato?",
+        options: [
+          "Mononucleose / Repouso",
+          "Difteria / Soro antidiftérico",
+          "Abscesso periamigdaliano / Punção ou drenagem cirúrgica",
+          "Escarlatina / Penicilina oral"
+        ],
+        answerIndex: 2,
+        explanation: "O trismo e o desvio da úvula são sinais clássicos do Abscesso Periamigdaliano, uma complicação supurativa. [cite_start]O tratamento requer a drenagem do pus, além de antibioticoterapia[cite: 31, 32, 33, 34].",
+        tag: "Orofaringe"
+      },
+      // Tema 4: Mononucleose Infecciosa e Difteria
+      {
+        id: "otorrino-q1-t4",
+        text: "Qual é a faixa etária mais comumente afetada pela Mononucleose Infecciosa, também conhecida como 'doença do beijo'?",
+        options: [
+          "Crianças de 1 a 7 anos",
+          "Bebês de 6 meses a 2 anos",
+          "Idosos acima de 60 anos",
+          "Adolescentes e adultos jovens"
+        ],
+        answerIndex: 3,
+        explanation: "A Mononucleose Infecciosa, causada pelo EBV, é mais prevalente em adolescentes e adultos jovens[cite: 38].",
+        tag: "Orofaringe"
+      },
+      {
+        id: "otorrino-q2-t4",
+        text: "Criança de 5 anos, não vacinada, com dor de garganta intensa, febre alta e placas branco-acinzentadas aderidas à mucosa que sangram ao serem removidas. Qual o tratamento específico e essencial?",
+        options: [
+          "Apenas Penicilina",
+          "Aguardar cultura e iniciar Aciclovir",
+          "Internação, soro antidiftérico e penicilina",
+          "Amigdalectomia de urgência"
+        ],
+        answerIndex: 2,
+        explanation: "O quadro é clássico de Difteria. [cite_start]É uma emergência médica que exige internação para administração de soro antidiftérico para neutralizar a toxina, além de penicilina[cite: 51, 53].",
+        tag: "Orofaringe"
+      },
+      // Tema 5: Angina de Plaut-Vincent e Herpangina
+      {
+        id: "otorrino-q1-t5",
+        text: "Qual é o agente etiológico da Angina de Plaut-Vincent (ou úlcero-necrótica)?",
+        options: [
+          "Vírus Coxsackie",
+          "Streptococcus pyogenes",
+          "Simbiose fusoespiralar (bacilo fusiforme + espirilo)",
+          "Corynebacterium diphtheriae"
+        ],
+        answerIndex: 2,
+        explanation: "A Angina de Plaut-Vincent é causada por uma associação simbiótica de bactérias, especificamente um bacilo fusiforme e um espirilo[cite: 56].",
+        tag: "Orofaringe"
+      },
+      {
+        id: "otorrino-q2-t5",
+        text: "Qual o tratamento para a Herpangina, uma enterovirose típica de crianças no verão?",
+        options: [
+          "Antibióticos como Amoxicilina",
+          "Antivirais como Aciclovir",
+          "Tratamento sintomático com antitérmicos e AINES",
+          "Corticoides sistêmicos por 10 dias"
+        ],
+        answerIndex: 2,
+        explanation: "Por ser uma infecção viral autolimitada (enterovirose), o tratamento da Herpangina é de suporte, visando o alívio dos sintomas como febre e dor com antitérmicos e anti-inflamatórios[cite: 71].",
+        tag: "Orofaringe"
+      },
+      // Tema 6: Tonsilite Crônica Caseosa e Indicações de Amigdalectomia
+      {
+        id: "otorrino-q1-t6",
+        text: "Qual a principal queixa clínica associada à Tonsilite Crônica Caseosa?",
+        options: [
+          "Febre alta e dor de garganta intensa",
+          "Halitose (mau hálito) e sensação de irritação na garganta",
+          "Dificuldade respiratória",
+          "Tosse e coriza"
+        ],
+        answerIndex: 1,
+        explanation: "A Tonsilite Crônica Caseosa é um quadro não infeccioso caracterizado pela deposição de caseum (restos de alimentos e células) nas criptas, levando a sintomas crônicos como halitose, irritação local e eliminação de material fétido, mas sem dor aguda[cite: 76].",
+        tag: "Orofaringe"
+      },
+      {
+        id: "otorrino-q2-t6",
+        text: "De acordo com os critérios apresentados, qual das seguintes é uma indicação para amigdalectomia?",
+        options: [
+          "Um episódio de amigdalite bacteriana por ano",
+          "Roncos ocasionais",
+          "7 ou mais infecções em 1 ano, ou 5 infecções/ano por 2 anos consecutivos",
+          "Presença de caseum sem outros sintomas"
+        ],
+        answerIndex: 2,
+        explanation: "As tonsilites de repetição, definidas como 7 episódios em um ano ou 5 por ano em dois anos seguidos, são uma indicação clássica para a remoção cirúrgica das amígdalas (amigdalectomia)[cite: 83].",
+        tag: "Orofaringe"
+      },
+      // Tema 7: Rinites (Classificação e Rinite Alérgica)
+      {
+        id: "otorrino-q1-t7",
+        text: "Qual é o achado característico no exame físico da mucosa nasal em um paciente com Rinite Alérgica?",
+        options: [
+          "Mucosa seca e com crostas",
+          "Mucosa hiperemiada (vermelha)",
+          "Mucosa pálida e edemaciada",
+          "Presença de pólipos em ambas as narinas"
+        ],
+        answerIndex: 2,
+        explanation: "Na rinite alérgica, a rinoscopia tipicamente revela uma mucosa nasal pálida ou violácea, edemaciada (inchada), e com a presença de secreção nasal clara (hialina)[cite: 111].",
+        tag: "Rinites"
+      },
+      {
+        id: "otorrino-q2-t7",
+        text: "Qual a primeira linha de tratamento farmacológico para os sintomas da Rinite Alérgica?",
+        options: [
+          "Descongestionantes nasais de uso contínuo",
+          "Antibióticos orais",
+          "Anti-histamínicos (preferencialmente de segunda geração) e corticoides tópicos nasais",
+          "Imunoterapia"
+        ],
+        answerIndex: 2,
+        explanation: "O tratamento baseia-se no controle dos sintomas com anti-histamínicos para aliviar prurido e espirros, e corticoides tópicos nasais, que são muito eficazes para a obstrução nasal e inflamação crônica[cite: 113].",
+        tag: "Rinites"
+      },
+      // Tema 8: Rinossinusite Aguda
+      {
+        id: "otorrino-q1-t8",
+        text: "Quando um quadro de rinossinusite aguda, que geralmente é viral, deve ser considerado de etiologia bacteriana?",
+        options: [
+          "Quando os sintomas duram mais de 2 dias",
+          "Quando há presença de febre",
+          "Quando os sintomas persistem por mais de 10 dias ou pioram após 5-7 dias",
+          "Quando a secreção nasal é amarelada"
+        ],
+        answerIndex: 2,
+        explanation: "A suspeita de etiologia bacteriana surge quando o quadro de IVAS se arrasta por mais de 10 dias sem melhora, ou quando há uma piora dos sintomas (piora 'dupla') após um período de melhora inicial, por volta do 5º ao 7º dia[cite: 118].",
+        tag: "Rinossinusite"
+      },
+      {
+        id: "otorrino-q2-t8",
+        text: "Qual é a recomendação sobre o uso de exames de imagem no diagnóstico da Rinossinusite Aguda não complicada?",
+        options: [
+          "Tomografia computadorizada é obrigatória para o diagnóstico",
+          "Radiografia de seios da face é o padrão-ouro",
+          "Não é necessário solicitar exame de imagem",
+          "Ressonância magnética deve ser solicitada"
+        ],
+        answerIndex: 2,
+        explanation: "O diagnóstico da rinossinusite aguda não complicada é eminentemente clínico, baseado nos sinais e sintomas. [cite_start]Exames de imagem não são necessários para o diagnóstico inicial[cite: 126].",
+        tag: "Rinossinusite"
+      },
+      // Tema 9: Rinossinusite Crônica
+      {
+        id: "otorrino-q1-t9",
+        text: "Qual é o principal agente etiológico associado à Rinossinusite Crônica que a diferencia da aguda?",
+        options: [
+          "Streptococcus pneumoniae",
+          "Haemophilus influenzae",
+          "Moraxella catarrhalis",
+          "Staphylococcus aureus"
+        ],
+        answerIndex: 3,
+        explanation: "Enquanto os três primeiros são comuns em ambas as formas, o Staphylococcus aureus é um agente etiológico mais frequentemente associado aos quadros crônicos de rinossinusite[cite: 130].",
+        tag: "Rinossinusite"
+      },
+      {
+        id: "otorrino-q2-t9",
+        text: "Qual é o tratamento para um quadro de rinossinusite crônica com suspeita de infecção fúngica?",
+        options: [
+          "Apenas corticoides orais",
+          "Apenas lavagem nasal",
+          "Antibióticos de amplo espectro por 14 dias",
+          "Tratamento cirúrgico e antifúngicos como cetoconazol ou anfotericina B"
+        ],
+        answerIndex: 3,
+        explanation: "A infecção fúngica nos seios paranasais geralmente requer abordagem cirúrgica para remoção do material fúngico, associada à terapia antifúngica sistêmica[cite: 135].",
+        tag: "Rinossinusite"
+      },
+      // Tema 10: Laringomalácea
+      {
+        id: "otorrino-q1-t10",
+        text: "Qual é a principal característica clínica da Laringomalácea?",
+        options: [
+          "Tosse crônica",
+          "Estridor durante a inspiração",
+          "Rouquidão persistente",
+          "Febre e dor de garganta"
+        ],
+        answerIndex: 1,
+        explanation: "A laringomalácea, causada pelo colapso dos tecidos supraglóticos, manifesta-se clinicamente como um estridor inspiratório, que tipicamente piora com o choro ou agitação[cite: 143].",
+        tag: "Anomalias Congênitas"
+      },
+      {
+        id: "otorrino-q2-t10",
+        text: "Qual a faixa etária de início dos sintomas da Laringomalácea?",
+        options: [
+          "Ao nascimento",
+          "A partir da segunda semana de vida",
+          "Após os 6 meses de idade",
+          "Na adolescência"
+        ],
+        answerIndex: 1,
+        explanation: "Os sintomas da laringomalácea, como o estridor, tipicamente se iniciam a partir da segunda semana de vida[cite: 143].",
+        tag: "Anomalias Congênitas"
+      },
+      // Tema 11: Paralisia de Pregas Vocais e Membrana Laríngea
+      {
+        id: "otorrino-q1-t11",
+        text: "Qual o tratamento para a Membrana Laríngea congênita que causa dispneia e estridor bifásico?",
+        options: [
+          "Fonoterapia",
+          "Tratamento expectante",
+          "Tratamento cirúrgico",
+          "Uso de corticoides"
+        ],
+        answerIndex: 2,
+        explanation: "A Membrana Laríngea é uma anomalia estrutural que impede a abertura completa das pregas vocais. [cite_start]O tratamento é cirúrgico para a remoção da membrana e restabelecimento da via aérea[cite: 155].",
+        tag: "Anomalias Congênitas"
+      },
+      {
+        id: "otorrino-q2-t11",
+        text: "Em um caso de paralisia de pregas vocais congênita bilateral, qual pode ser o tratamento de emergência necessário?",
+        options: [
+          "Antibioticoterapia",
+          "Cirurgia para remoção das pregas vocais",
+          "Traqueostomia",
+          "Apenas observação"
+        ],
+        answerIndex: 2,
+        explanation: "A paralisia bilateral de pregas vocais pode causar obstrução grave da via aérea, com cianose e apneia. [cite_start]Nesses casos, a traqueostomia pode ser necessária para garantir uma via aérea segura[cite: 149, 151].",
+        tag: "Anomalias Congênitas"
+      },
+      // Tema 12: Nódulos e Pólipos Vocais
+      {
+        id: "otorrino-q1-t12",
+        text: "Qual é a principal causa dos Nódulos Vocais (calos)?",
+        options: [
+          "Infecção viral",
+          "Refluxo gastroesofágico",
+          "Tabagismo",
+          "Abuso vocal (uso excessivo ou incorreto da voz)"
+        ],
+        answerIndex: 3,
+        explanation: "Os nódulos vocais são espessamentos epiteliais causados pelo trauma crônico do atrito entre as pregas vocais, associados a um histórico de abuso ou mau uso da voz[cite: 165].",
+        tag: "Patologias da Laringe"
+      },
+      {
+        id: "otorrino-q2-t12",
+        text: "Qual é a principal diferença no tratamento de Nódulos Vocais e Pólipos Vocais?",
+        options: [
+          "Nódulos são tratados com antibióticos e pólipos com antivirais.",
+          "Nódulos são tratados primariamente com fonoterapia, enquanto pólipos geralmente requerem tratamento cirúrgico.",
+          "Ambos são sempre tratados cirurgicamente.",
+          "Ambos são tratados apenas com repouso vocal."
+        ],
+        answerIndex: 1,
+        explanation: "O tratamento de primeira linha para nódulos é a reabilitação com fonoterapia[cite: 166]. [cite_start]Já os pólipos, por serem lesões estruturais distintas, na maioria das vezes necessitam de remoção cirúrgica para a melhora da voz[cite: 177].",
+        tag: "Patologias da Laringe"
+      },
+      // Tema 13: Edema de Reinke e Laringite Catarral Aguda
+      {
+        id: "otorrino-q1-t13",
+        text: "O Edema de Reinke está fortemente associado a qual fator de risco?",
+        options: [
+          "Alergias respiratórias",
+          "Tabagismo de longa data e abuso vocal",
+          "Infecção pelo HPV",
+          "Uso de anti-inflamatórios"
+        ],
+        answerIndex: 1,
+        explanation: "O Edema de Reinke, que causa um aspecto de 'bolsas' gelatinosas nas pregas vocais, está intimamente ligado ao tabagismo crônico e ao abuso vocal[cite: 181].",
+        tag: "Patologias da Laringe"
+      },
+      {
+        id: "otorrino-q2-t13",
+        text: "Qual o tratamento farmacológico para a Laringite Catarral Aguda?",
+        options: [
+          "Apenas analgésicos",
+          "Antifúngicos",
+          "Antibióticos como Amoxicilina + Clavulanato ou Quinolonas",
+          "Antivirais como Aciclovir"
+        ],
+        answerIndex: 2,
+        explanation: "A laringite catarral aguda é uma infecção bacteriana, e seu tratamento envolve a eliminação dos fatores causais e o uso de antibióticos como Amoxicilina + Clavulanato, Quinolonas ou Macrolídeos, além de corticoides para a inflamação[cite: 190].",
+        tag: "Patologias da Laringe"
+      },
+      // Tema 14: Laringotraqueobronquite (Crupe Viral) e Epiglotite
+      {
+        id: "otorrino-q1-t14",
+        text: "Qual é o sinal radiológico clássico da Laringotraqueobronquite (Crupe Viral) em um Rx cervical?",
+        options: [
+          "Sinal do polegar",
+          "Sinal da ponta do lápis ou torre da igreja",
+          "Membrana laríngea visível",
+          "Nível líquido na laringe"
+        ],
+        answerIndex: 1,
+        explanation: "O edema na região subglótica causado pelo Crupe Viral leva a um estreitamento da via aérea que, na radiografia cervical em incidência anteroposterior, cria a imagem conhecida como 'sinal da ponta do lápis' ou 'torre da igreja'[cite: 197].",
+        tag: "Patologias da Laringe"
+      },
+      {
+        id: "otorrino-q2-t14",
+        text: "A 'postura do tripé' (pescoço em hiperextensão, boca semiaberta) é um sinal clínico clássico de qual emergência pediátrica?",
+        options: [
+          "Laringomalácea",
+          "Crupe Viral",
+          "Epiglotite",
+          "Coqueluche"
+        ],
+        answerIndex: 2,
+        explanation: "Na Epiglotite, a criança adota a 'postura do tripé' para tentar manter a via aérea aberta, pois o edema da epiglote causa uma obstrução grave. [cite_start]É um sinal de alerta de grande importância[cite: 205].",
+        tag: "Patologias da Laringe"
+      },
+      // Tema 15: Laringite Estridulosa e Coqueluche
+      {
+        id: "otorrino-q1-t15",
+        text: "Qual a característica principal que diferencia a Laringite Estridulosa do Crupe Viral?",
+        options: [
+          "A Laringite Estridulosa sempre cursa com febre alta.",
+          "O Crupe Viral ocorre apenas durante o dia.",
+          "A Laringite Estridulosa se manifesta como crises de sufocamento súbitas, geralmente noturnas, sem febre, que cessam espontaneamente.",
+          "A Laringite Estridulosa é causada por uma bactéria."
+        ],
+        answerIndex: 2,
+        explanation: "A Laringite Estridulosa é marcada pelo início súbito, geralmente à noite, com crises de sufocamento e estridor, sem febre, e com melhora rápida, diferentemente do Crupe Viral que tem pródromos virais e um curso mais arrastado[cite: 215, 218].",
+        tag: "Patologias da Laringe"
+      },
+      {
+        id: "otorrino-q2-t15",
+        text: "Qual é o tratamento antibiótico de escolha para a Coqueluche, especialmente quando iniciado na primeira fase da doença?",
+        options: [
+          "Penicilina",
+          "Ceftriaxone",
+          "Amoxicilina",
+          "Azitromicina ou outros macrolídeos"
+        ],
+        answerIndex: 3,
+        explanation: "O tratamento da coqueluche é feito com macrolídeos, como a Azitromicina. [cite_start]Quando iniciado na fase catarral (primeiras 2 semanas), pode abreviar a duração e a gravidade dos sintomas[cite: 233].",
+        tag: "Patologias da Laringe"
+      },
+      // Tema 16: DRGE e Neoplasias Laríngeas
+      {
+        id: "otorrino-q1-t16",
+        text: "Qual o tratamento de primeira linha para a laringite por Doença do Refluxo Gastroesofágico (DRGE)?",
+        options: [
+          "Apenas fonoterapia",
+          "Mudanças na dieta, medidas comportamentais (elevar cabeceira) e uso de Inibidores da Bomba de Prótons (IBP)",
+          "Cirurgia de laringe",
+          "Antibióticos e corticoides"
+        ],
+        answerIndex: 1,
+        explanation: "O tratamento do refluxo laringofaríngeo envolve o controle da produção de ácido gástrico com IBP por um período prolongado (2 meses), associado a medidas dietéticas e de estilo de vida[cite: 240].",
+        tag: "Patologias da Laringe"
+      },
       {
         id: "otorrino-q1",
         text: "Qual das seguintes características NÃO faz parte da fácies adenoideana (respirador oral crónico)?",

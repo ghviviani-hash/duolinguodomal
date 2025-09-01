@@ -1,11 +1,5 @@
 import { Deck } from '@/types';
 
-// ------------------------------------------------------------------
-// PARA ORDENAR AS PASTAS, BASTA REORDENAR OS DECKS ABAIXO.
-// A ordem das pastas será a mesma ordem em que aparecem aqui.
-// Use o formato "Nome da Pasta - Nome do Baralho" no campo 'name'.
-// ------------------------------------------------------------------
-
 export const DEFAULT_DECKS: Deck[] = [
 
 {
@@ -5450,7 +5444,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Influenza"
         ],
         answerIndex: 2,
-        explanation: "Streptococcus pyogenes é uma bactéria, sendo o principal agente da Angina Eritematosa Bacteriana, e não Viral[cite: 6, 15]. [cite_start]Os outros são vírus comumente associados à angina viral[cite: 6].",
+        explanation: "Streptococcus pyogenes é uma bactéria, sendo o principal agente da Angina Eritematosa Bacteriana, e não Viral. Os outros são vírus comumente associados à angina viral.",
         tag: "Orofaringe"
       },
       {
@@ -5463,7 +5457,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Aciclovir por 7 dias"
         ],
         answerIndex: 1,
-        explanation: "O tratamento da angina viral é de suporte, focando no alívio dos sintomas com analgésicos, anti-inflamatórios e hidratação. [cite_start]Antibióticos não são indicados[cite: 10, 11].",
+        explanation: "O tratamento da angina viral é de suporte, focando no alívio dos sintomas com analgésicos, anti-inflamatórios e hidratação. Antibióticos não são indicados.",
         tag: "Orofaringe"
       },
       // Tema 2: Angina Eritematosa Bacteriana
@@ -5477,7 +5471,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Moraxella catarrhalis"
         ],
         answerIndex: 2,
-        explanation: "O principal agente causador da angina bacteriana é o Streptococo Beta-Hemolítico do Grupo A (Streptococcus pyogenes)[cite: 15].",
+        explanation: "O principal agente causador da angina bacteriana é o Streptococo Beta-Hemolítico do Grupo A (Streptococcus pyogenes).",
         tag: "Orofaringe"
       },
       {
@@ -5490,7 +5484,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Ceftriaxone intravenoso"
         ],
         answerIndex: 2,
-        explanation: "O tratamento de eleição é a erradicação do estreptococo com Amoxicilina por 10 dias ou Penicilina G Benzatina em dose única. [cite_start]Para alérgicos, a Claritromicina é uma opção[cite: 20, 21].",
+        explanation: "O tratamento de eleição é a erradicação do estreptococo com Amoxicilina por 10 dias ou Penicilina G Benzatina em dose única. Para alérgicos, a Claritromicina é uma opção.",
         tag: "Orofaringe"
       },
       // Tema 3: Escarlatina e Abscesso Periamigdaliano
@@ -5504,7 +5498,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "O vírus Epstein-Barr"
         ],
         answerIndex: 1,
-        explanation: "A Escarlatina é causada pela ação de exotoxinas pirogênicas produzidas por cepas de Streptococcus ß-hemolítico[cite: 25].",
+        explanation: "A Escarlatina é causada pela ação de exotoxinas pirogênicas produzidas por cepas de Streptococcus ß-hemolítico.",
         tag: "Orofaringe"
       },
       {
@@ -5517,7 +5511,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Escarlatina / Penicilina oral"
         ],
         answerIndex: 2,
-        explanation: "O trismo e o desvio da úvula são sinais clássicos do Abscesso Periamigdaliano, uma complicação supurativa. [cite_start]O tratamento requer a drenagem do pus, além de antibioticoterapia[cite: 31, 32, 33, 34].",
+        explanation: "O trismo e o desvio da úvula são sinais clássicos do Abscesso Periamigdaliano, uma complicação supurativa. O tratamento requer a drenagem do pus, além de antibioticoterapia.",
         tag: "Orofaringe"
       },
       // Tema 4: Mononucleose Infecciosa e Difteria
@@ -5531,7 +5525,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Adolescentes e adultos jovens"
         ],
         answerIndex: 3,
-        explanation: "A Mononucleose Infecciosa, causada pelo EBV, é mais prevalente em adolescentes e adultos jovens[cite: 38].",
+        explanation: "A Mononucleose Infecciosa, causada pelo EBV, é mais prevalente em adolescentes e adultos jovens.",
         tag: "Orofaringe"
       },
       {
@@ -5544,7 +5538,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Amigdalectomia de urgência"
         ],
         answerIndex: 2,
-        explanation: "O quadro é clássico de Difteria. [cite_start]É uma emergência médica que exige internação para administração de soro antidiftérico para neutralizar a toxina, além de penicilina[cite: 51, 53].",
+        explanation: "O quadro é clássico de Difteria. É uma emergência médica que exige internação para administração de soro antidiftérico para neutralizar a toxina, além de penicilina.",
         tag: "Orofaringe"
       },
       // Tema 5: Angina de Plaut-Vincent e Herpangina
@@ -5558,7 +5552,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Corynebacterium diphtheriae"
         ],
         answerIndex: 2,
-        explanation: "A Angina de Plaut-Vincent é causada por uma associação simbiótica de bactérias, especificamente um bacilo fusiforme e um espirilo[cite: 56].",
+        explanation: "A Angina de Plaut-Vincent é causada por uma associação simbiótica de bactérias, especificamente um bacilo fusiforme e um espirilo.",
         tag: "Orofaringe"
       },
       {
@@ -5571,7 +5565,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Corticoides sistêmicos por 10 dias"
         ],
         answerIndex: 2,
-        explanation: "Por ser uma infecção viral autolimitada (enterovirose), o tratamento da Herpangina é de suporte, visando o alívio dos sintomas como febre e dor com antitérmicos e anti-inflamatórios[cite: 71].",
+        explanation: "Por ser uma infecção viral autolimitada (enterovirose), o tratamento da Herpangina é de suporte, visando o alívio dos sintomas como febre e dor com antitérmicos e anti-inflamatórios.",
         tag: "Orofaringe"
       },
       // Tema 6: Tonsilite Crônica Caseosa e Indicações de Amigdalectomia
@@ -5585,7 +5579,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Tosse e coriza"
         ],
         answerIndex: 1,
-        explanation: "A Tonsilite Crônica Caseosa é um quadro não infeccioso caracterizado pela deposição de caseum (restos de alimentos e células) nas criptas, levando a sintomas crônicos como halitose, irritação local e eliminação de material fétido, mas sem dor aguda[cite: 76].",
+        explanation: "A Tonsilite Crônica Caseosa é um quadro não infeccioso caracterizado pela deposição de caseum (restos de alimentos e células) nas criptas, levando a sintomas crônicos como halitose, irritação local e eliminação de material fétido, mas sem dor aguda.",
         tag: "Orofaringe"
       },
       {
@@ -5598,7 +5592,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Presença de caseum sem outros sintomas"
         ],
         answerIndex: 2,
-        explanation: "As tonsilites de repetição, definidas como 7 episódios em um ano ou 5 por ano em dois anos seguidos, são uma indicação clássica para a remoção cirúrgica das amígdalas (amigdalectomia)[cite: 83].",
+        explanation: "As tonsilites de repetição, definidas como 7 episódios em um ano ou 5 por ano em dois anos seguidos, são uma indicação clássica para a remoção cirúrgica das amígdalas (amigdalectomia).",
         tag: "Orofaringe"
       },
       // Tema 7: Rinites (Classificação e Rinite Alérgica)
@@ -5612,7 +5606,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Presença de pólipos em ambas as narinas"
         ],
         answerIndex: 2,
-        explanation: "Na rinite alérgica, a rinoscopia tipicamente revela uma mucosa nasal pálida ou violácea, edemaciada (inchada), e com a presença de secreção nasal clara (hialina)[cite: 111].",
+        explanation: "Na rinite alérgica, a rinoscopia tipicamente revela uma mucosa nasal pálida ou violácea, edemaciada (inchada), e com a presença de secreção nasal clara (hialina).",
         tag: "Rinites"
       },
       {
@@ -5625,7 +5619,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Imunoterapia"
         ],
         answerIndex: 2,
-        explanation: "O tratamento baseia-se no controle dos sintomas com anti-histamínicos para aliviar prurido e espirros, e corticoides tópicos nasais, que são muito eficazes para a obstrução nasal e inflamação crônica[cite: 113].",
+        explanation: "O tratamento baseia-se no controle dos sintomas com anti-histamínicos para aliviar prurido e espirros, e corticoides tópicos nasais, que são muito eficazes para a obstrução nasal e inflamação crônica.",
         tag: "Rinites"
       },
       // Tema 8: Rinossinusite Aguda
@@ -5639,7 +5633,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Quando a secreção nasal é amarelada"
         ],
         answerIndex: 2,
-        explanation: "A suspeita de etiologia bacteriana surge quando o quadro de IVAS se arrasta por mais de 10 dias sem melhora, ou quando há uma piora dos sintomas (piora 'dupla') após um período de melhora inicial, por volta do 5º ao 7º dia[cite: 118].",
+        explanation: "A suspeita de etiologia bacteriana surge quando o quadro de IVAS se arrasta por mais de 10 dias sem melhora, ou quando há uma piora dos sintomas (piora 'dupla') após um período de melhora inicial, por volta do 5º ao 7º dia.",
         tag: "Rinossinusite"
       },
       {
@@ -5652,7 +5646,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Ressonância magnética deve ser solicitada"
         ],
         answerIndex: 2,
-        explanation: "O diagnóstico da rinossinusite aguda não complicada é eminentemente clínico, baseado nos sinais e sintomas. [cite_start]Exames de imagem não são necessários para o diagnóstico inicial[cite: 126].",
+        explanation: "O diagnóstico da rinossinusite aguda não complicada é eminentemente clínico, baseado nos sinais e sintomas. Exames de imagem não são necessários para o diagnóstico inicial.",
         tag: "Rinossinusite"
       },
       // Tema 9: Rinossinusite Crônica
@@ -5666,7 +5660,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Staphylococcus aureus"
         ],
         answerIndex: 3,
-        explanation: "Enquanto os três primeiros são comuns em ambas as formas, o Staphylococcus aureus é um agente etiológico mais frequentemente associado aos quadros crônicos de rinossinusite[cite: 130].",
+        explanation: "Enquanto os três primeiros são comuns em ambas as formas, o Staphylococcus aureus é um agente etiológico mais frequentemente associado aos quadros crônicos de rinossinusite.",
         tag: "Rinossinusite"
       },
       {
@@ -5679,7 +5673,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Tratamento cirúrgico e antifúngicos como cetoconazol ou anfotericina B"
         ],
         answerIndex: 3,
-        explanation: "A infecção fúngica nos seios paranasais geralmente requer abordagem cirúrgica para remoção do material fúngico, associada à terapia antifúngica sistêmica[cite: 135].",
+        explanation: "A infecção fúngica nos seios paranasais geralmente requer abordagem cirúrgica para remoção do material fúngico, associada à terapia antifúngica sistêmica.",
         tag: "Rinossinusite"
       },
       // Tema 10: Laringomalácea
@@ -5693,7 +5687,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Febre e dor de garganta"
         ],
         answerIndex: 1,
-        explanation: "A laringomalácea, causada pelo colapso dos tecidos supraglóticos, manifesta-se clinicamente como um estridor inspiratório, que tipicamente piora com o choro ou agitação[cite: 143].",
+        explanation: "A laringomalácea, causada pelo colapso dos tecidos supraglóticos, manifesta-se clinicamente como um estridor inspiratório, que tipicamente piora com o choro ou agitação.",
         tag: "Anomalias Congênitas"
       },
       {
@@ -5706,7 +5700,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Na adolescência"
         ],
         answerIndex: 1,
-        explanation: "Os sintomas da laringomalácea, como o estridor, tipicamente se iniciam a partir da segunda semana de vida[cite: 143].",
+        explanation: "Os sintomas da laringomalácea, como o estridor, tipicamente se iniciam a partir da segunda semana de vida.",
         tag: "Anomalias Congênitas"
       },
       // Tema 11: Paralisia de Pregas Vocais e Membrana Laríngea
@@ -5720,7 +5714,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Uso de corticoides"
         ],
         answerIndex: 2,
-        explanation: "A Membrana Laríngea é uma anomalia estrutural que impede a abertura completa das pregas vocais. [cite_start]O tratamento é cirúrgico para a remoção da membrana e restabelecimento da via aérea[cite: 155].",
+        explanation: "A Membrana Laríngea é uma anomalia estrutural que impede a abertura completa das pregas vocais. O tratamento é cirúrgico para a remoção da membrana e restabelecimento da via aérea.",
         tag: "Anomalias Congênitas"
       },
       {
@@ -5733,7 +5727,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Apenas observação"
         ],
         answerIndex: 2,
-        explanation: "A paralisia bilateral de pregas vocais pode causar obstrução grave da via aérea, com cianose e apneia. [cite_start]Nesses casos, a traqueostomia pode ser necessária para garantir uma via aérea segura[cite: 149, 151].",
+        explanation: "A paralisia bilateral de pregas vocais pode causar obstrução grave da via aérea, com cianose e apneia. Nesses casos, a traqueostomia pode ser necessária para garantir uma via aérea segura.",
         tag: "Anomalias Congênitas"
       },
       // Tema 12: Nódulos e Pólipos Vocais
@@ -5747,7 +5741,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Abuso vocal (uso excessivo ou incorreto da voz)"
         ],
         answerIndex: 3,
-        explanation: "Os nódulos vocais são espessamentos epiteliais causados pelo trauma crônico do atrito entre as pregas vocais, associados a um histórico de abuso ou mau uso da voz[cite: 165].",
+        explanation: "Os nódulos vocais são espessamentos epiteliais causados pelo trauma crônico do atrito entre as pregas vocais, associados a um histórico de abuso ou mau uso da voz.",
         tag: "Patologias da Laringe"
       },
       {
@@ -5760,7 +5754,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Ambos são tratados apenas com repouso vocal."
         ],
         answerIndex: 1,
-        explanation: "O tratamento de primeira linha para nódulos é a reabilitação com fonoterapia[cite: 166]. [cite_start]Já os pólipos, por serem lesões estruturais distintas, na maioria das vezes necessitam de remoção cirúrgica para a melhora da voz[cite: 177].",
+        explanation: "O tratamento de primeira linha para nódulos é a reabilitação com fonoterapia. Já os pólipos, por serem lesões estruturais distintas, na maioria das vezes necessitam de remoção cirúrgica para a melhora da voz.",
         tag: "Patologias da Laringe"
       },
       // Tema 13: Edema de Reinke e Laringite Catarral Aguda
@@ -5774,7 +5768,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Uso de anti-inflamatórios"
         ],
         answerIndex: 1,
-        explanation: "O Edema de Reinke, que causa um aspecto de 'bolsas' gelatinosas nas pregas vocais, está intimamente ligado ao tabagismo crônico e ao abuso vocal[cite: 181].",
+        explanation: "O Edema de Reinke, que causa um aspecto de 'bolsas' gelatinosas nas pregas vocais, está intimamente ligado ao tabagismo crônico e ao abuso vocal.",
         tag: "Patologias da Laringe"
       },
       {
@@ -5787,7 +5781,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Antivirais como Aciclovir"
         ],
         answerIndex: 2,
-        explanation: "A laringite catarral aguda é uma infecção bacteriana, e seu tratamento envolve a eliminação dos fatores causais e o uso de antibióticos como Amoxicilina + Clavulanato, Quinolonas ou Macrolídeos, além de corticoides para a inflamação[cite: 190].",
+        explanation: "A laringite catarral aguda é uma infecção bacteriana, e seu tratamento envolve a eliminação dos fatores causais e o uso de antibióticos como Amoxicilina + Clavulanato, Quinolonas ou Macrolídeos, além de corticoides para a inflamação.",
         tag: "Patologias da Laringe"
       },
       // Tema 14: Laringotraqueobronquite (Crupe Viral) e Epiglotite
@@ -5801,7 +5795,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Nível líquido na laringe"
         ],
         answerIndex: 1,
-        explanation: "O edema na região subglótica causado pelo Crupe Viral leva a um estreitamento da via aérea que, na radiografia cervical em incidência anteroposterior, cria a imagem conhecida como 'sinal da ponta do lápis' ou 'torre da igreja'[cite: 197].",
+        explanation: "O edema na região subglótica causado pelo Crupe Viral leva a um estreitamento da via aérea que, na radiografia cervical em incidência anteroposterior, cria a imagem conhecida como 'sinal da ponta do lápis' ou 'torre da igreja'.",
         tag: "Patologias da Laringe"
       },
       {
@@ -5814,7 +5808,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Coqueluche"
         ],
         answerIndex: 2,
-        explanation: "Na Epiglotite, a criança adota a 'postura do tripé' para tentar manter a via aérea aberta, pois o edema da epiglote causa uma obstrução grave. [cite_start]É um sinal de alerta de grande importância[cite: 205].",
+        explanation: "Na Epiglotite, a criança adota a 'postura do tripé' para tentar manter a via aérea aberta, pois o edema da epiglote causa uma obstrução grave. É um sinal de alerta de grande importância.",
         tag: "Patologias da Laringe"
       },
       // Tema 15: Laringite Estridulosa e Coqueluche
@@ -5828,7 +5822,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "A Laringite Estridulosa é causada por uma bactéria."
         ],
         answerIndex: 2,
-        explanation: "A Laringite Estridulosa é marcada pelo início súbito, geralmente à noite, com crises de sufocamento e estridor, sem febre, e com melhora rápida, diferentemente do Crupe Viral que tem pródromos virais e um curso mais arrastado[cite: 215, 218].",
+        explanation: "A Laringite Estridulosa é marcada pelo início súbito, geralmente à noite, com crises de sufocamento e estridor, sem febre, e com melhora rápida, diferentemente do Crupe Viral que tem pródromos virais e um curso mais arrastado.",
         tag: "Patologias da Laringe"
       },
       {
@@ -5841,7 +5835,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Azitromicina ou outros macrolídeos"
         ],
         answerIndex: 3,
-        explanation: "O tratamento da coqueluche é feito com macrolídeos, como a Azitromicina. [cite_start]Quando iniciado na fase catarral (primeiras 2 semanas), pode abreviar a duração e a gravidade dos sintomas[cite: 233].",
+        explanation: "O tratamento da coqueluche é feito com macrolídeos, como a Azitromicina. Quando iniciado na fase catarral (primeiras 2 semanas), pode abreviar a duração e a gravidade dos sintomas.",
         tag: "Patologias da Laringe"
       },
       // Tema 16: DRGE e Neoplasias Laríngeas
@@ -5855,7 +5849,7 @@ export const DEFAULT_DECKS: Deck[] = [
           "Antibióticos e corticoides"
         ],
         answerIndex: 1,
-        explanation: "O tratamento do refluxo laringofaríngeo envolve o controle da produção de ácido gástrico com IBP por um período prolongado (2 meses), associado a medidas dietéticas e de estilo de vida[cite: 240].",
+        explanation: "O tratamento do refluxo laringofaríngeo envolve o controle da produção de ácido gástrico com IBP por um período prolongado (2 meses), associado a medidas dietéticas e de estilo de vida.",
         tag: "Patologias da Laringe"
       },
       {
@@ -17196,7 +17190,7 @@ export const DEFAULT_DECKS: Deck[] = [
         "Eixo 5: Atenção integral à criança em situação de violências, prevenção de acidentes e promoção da cultura de paz"
       ],
       "answerIndex": 0,
-      "explanation": "O Eixo 1 [cite: 557] abrange a atenção ao recém-nascido, que inclui ações de triagem neonatal (como o Teste do Pezinho) essenciais para a identificação e tratamento precoce de doenças congênitas.",
+      "explanation": "O Eixo 1 abrange a atenção ao recém-nascido, que inclui ações de triagem neonatal (como o Teste do Pezinho) essenciais para a identificação e tratamento precoce de doenças congênitas.",
       "tag": "Saúde da Criança"
     },
     {

@@ -20,8 +20,8 @@ export default function QuizGamificadoApp() {
 
   const isQuizActive = !!state.deckId || state.quizMode === 'srs';
 
-  const progressPct = state.questions.length > 0 
-    ? Math.round(((state.questions.length - state.queue.length) / state.questions.length) * 100) 
+  const progressPct = state.questions.length > 0
+    ? Math.round(((state.questions.length - state.queue.length) / state.questions.length) * 100)
     : 0;
 
   return (
@@ -31,7 +31,7 @@ export default function QuizGamificadoApp() {
       <Confetti trigger={state.confettiKey} />
       <EmojiBurst trigger={state.emojiKey} />
       <ComboEffect milestone={state.comboMilestone} />
-      
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
         <Header
           stats={{
@@ -85,7 +85,7 @@ export default function QuizGamificadoApp() {
                 <div className="absolute -right-24 -top-24 h-56 w-56 rounded-full bg-fuchsia-400 blur-3xl mix-blend-multiply dark:bg-fuchsia-700" />
                 <div className="absolute -left-24 -bottom-24 h-56 w-56 rounded-full bg-sky-300 blur-3xl mix-blend-multiply dark:bg-sky-700" />
               </div>
-              
+
               {isQuizActive && (
                 <CardHeader>
                   <div className="flex items-start justify-between gap-4">
@@ -93,8 +93,7 @@ export default function QuizGamificadoApp() {
                       <CardTitle className="text-xl md:text-2xl">{state.isSessionComplete ? "Parabéns!" : state.displayedQuestion ? (state.displayedQuestion.tag || "Questão") : "A carregar..."}</CardTitle>
                       <CardDescription>{state.isSessionComplete ? "Você finalizou o deck." : "Selecione a alternativa correta."}</CardDescription>
                     </div>
-                    
-                    {/* MUDANÇA: Novo contentor para o combo e o contador de questões */}
+
                     <div className="flex items-center gap-3 flex-shrink-0">
                       <AnimatePresence>
                         {state.combo > 1 && (
@@ -114,7 +113,7 @@ export default function QuizGamificadoApp() {
                   </div>
                 </CardHeader>
               )}
-              
+
               <CardContent className="min-h-[400px] flex flex-col">
                 {isQuizActive ? (
                   <QuizPanel
@@ -130,6 +129,7 @@ export default function QuizGamificadoApp() {
                     onReset={actions.resetSession}
                     onShowStats={() => actions.setShowStatsModal(true)}
                     onReviewQuestion={actions.setReviewingQuestion}
+                    onNextQuestion={actions.handleNextQuestion} // MUDANÇA: Passando a nova função
                   />
                 ) : (
                    <div className="flex-1 flex flex-col items-center justify-center text-center text-slate-500">

@@ -60,16 +60,13 @@ export function useQuizEngine() {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
-    // CORREÇÃO: Carrega e processa os decks de forma segura
     const decksWithStableIds = DEFAULT_DECKS.map(deck => {
-      // Garante que 'questions' é sempre um array antes de mapear
       const safeQuestions = Array.isArray(deck.questions) ? deck.questions : [];
       return {
         ...deck,
         questions: safeQuestions.map((q: Question) => ({
           ...q,
-          // Garante que 'q.text' é uma string antes de gerar o hash
-          id: hashString(String(q.text || '')) 
+          id: hashString(String(q.text || ''))
         }))
       };
     });
@@ -78,13 +75,11 @@ export function useQuizEngine() {
 
     const manifestForStorage = decksWithStableIds.map(deck => ({ id: deck.id, name: deck.name }));
     localStorage.setItem("quizg-v1-deck-manifest", JSON.stringify(manifestForStorage));
-    
+
     decksWithStableIds.forEach(deck => {
         localStorage.setItem(LS_DECK_KEY(deck.id), JSON.stringify({ questions: deck.questions }));
     });
   }, []);
-  
-  // O resto do ficheiro permanece igual...
 
   useEffect(() => {
     const rawAchievements = localStorage.getItem(LS_ACHIEVEMENTS_KEY);
@@ -94,7 +89,7 @@ export function useQuizEngine() {
   useEffect(() => {
     localStorage.setItem(LS_ACHIEVEMENTS_KEY, JSON.stringify(unlockedAchievements));
   }, [unlockedAchievements]);
-  
+
   useEffect(() => {
     const rawSrs = localStorage.getItem(LS_SRS_KEY);
     if (rawSrs) try { setSrsData(JSON.parse(rawSrs)); } catch {}
@@ -103,7 +98,7 @@ export function useQuizEngine() {
   useEffect(() => {
     localStorage.setItem(LS_SRS_KEY, JSON.stringify(srsData));
   }, [srsData]);
-  
+
   useEffect(() => {
     if (comboMilestone > 0) {
       const timer = setTimeout(() => setComboMilestone(0), 100);
@@ -280,7 +275,7 @@ export function useQuizEngine() {
             newCorrectStreak = 0;
             nextReview = now;
         }
-        const newEntry = { 
+        const newEntry = {
             ...currentEntry, question, correctStreak: newCorrectStreak, nextReview,
             correctCount: currentEntry.correctCount + (correct ? 1 : 0),
             wrongCount: currentEntry.wrongCount + (correct ? 0 : 1),
@@ -334,9 +329,12 @@ export function useQuizEngine() {
         setSessionWrongAnswers(prev => [...prev, originalQuestion]);
       }
       if (newHearts <= 0) setLockUntil(Date.now() + 5 * 60 * 1000);
-      setTimeout(() => advanceQueue(false), 900);
     }
-  }, [displayedQuestion, selected, current, questions, updateSrsData, questionStart, combo, hearts, playCorrect, playWrong, sessionWrongAnswers, advanceQueue, setComboMilestone]);
+  }, [displayedQuestion, selected, current, questions, updateSrsData, questionStart, combo, hearts, playCorrect, playWrong, sessionWrongAnswers, advanceQueue]);
+
+  const handleNextQuestion = () => {
+    advanceQueue(false);
+  };
 
   const resetSession = () => {
     if (questions.length === 0) return;
@@ -398,7 +396,6 @@ export function useQuizEngine() {
     }
   };
 
-
   const clearSession = () => {
     setQuestions([]);
     setQueue([]);
@@ -416,10 +413,11 @@ export function useQuizEngine() {
       unlockedAchievements, displayedQuestion, comboMilestone
     },
     actions: {
-      setDeckId, setShuffleOnLoad, setDark, setGoal, setReviewingQuestion, 
+      setDeckId, setShuffleOnLoad, setDark, setGoal, setReviewingQuestion,
       setShowStatsModal, onSelect, resetSession, handleUpload, startSrsSession,
       buyLivesWithXp,
-      clearSession
+      clearSession,
+      handleNextQuestion
     },
     refs: { fileInputRef }
   };

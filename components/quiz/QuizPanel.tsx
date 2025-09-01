@@ -3,7 +3,6 @@ import { Question, ShuffledQuestion } from "@/types";
 import { CompletionView } from "./CompletionView";
 import { QuestionView } from "./QuestionView";
 
-// MUDANÇA: 'combo' foi removido das props
 interface QuizPanelProps {
     isSessionComplete: boolean;
     displayedQuestion: ShuffledQuestion | null;
@@ -17,6 +16,7 @@ interface QuizPanelProps {
     showExpl: boolean;
     lastGain: number | null;
     isLocked: boolean;
+    onNextQuestion: () => void; // MUDANÇA: Adicionando a nova prop
 }
 
 export function QuizPanel({
@@ -26,6 +26,7 @@ export function QuizPanel({
     onReset,
     onShowStats,
     onReviewQuestion,
+    onNextQuestion, // MUDANÇA: Recebendo a nova prop
     ...questionViewProps
 }: QuizPanelProps) {
     return (
@@ -40,6 +41,7 @@ export function QuizPanel({
             ) : displayedQuestion ? (
                 <QuestionView
                     question={displayedQuestion}
+                    onNextQuestion={onNextQuestion} // MUDANÇA: Passando a prop para QuestionView
                     {...questionViewProps}
                 />
             ) : null}

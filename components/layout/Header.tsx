@@ -21,11 +21,11 @@ export function Header({ stats, dark, setDark }: HeaderProps) {
       
       <div className="space-y-1">
         <h1 className="text-2xl md:text-3xl font-bold tracking-tight flex items-center gap-2">
-          <Sparkles className="h-6 w-6" /> Duomed
+          <Sparkles className="h-6 w-6" /> DUOMED
         </h1>
         {/* MUDANÇA: Este parágrafo agora fica escondido em ecrãs pequenos (hidden) e aparece em ecrãs médios e maiores (md:block) */}
         <p className="hidden md:block text-sm md:text-base text-slate-600 dark:text-slate-300">
-          Importe um .txt com suas questões. Se errar, a questão volta para o fim.
+          Se errar, a questão volta para o fim. Teste o modo Revisão espaçada depois de terminar um deck.
         </p>
       </div>
 

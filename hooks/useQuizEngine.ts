@@ -55,6 +55,7 @@ export function useQuizEngine() {
   const [srsData, setSrsData] = useState<SrsData>({});
   const { playCorrect, playWrong, playFanfare } = useAudio();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const [showIntroModal, setShowIntroModal] = useState(false);
 
   useEffect(() => {
     const decksWithStableIds = DEFAULT_DECKS.map(deck => {
@@ -220,6 +221,16 @@ export function useQuizEngine() {
     setQuestionStart(performance.now());
   }, [current, questions, shuffleOnLoad]);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const hasSeenIntro = localStorage.getItem('hasSeenIntro');
+      if (!hasSeenIntro) {
+        setShowIntroModal(true);
+        localStorage.setItem('hasSeenIntro', 'true');
+      }
+    }
+  }, []);
+
   const advanceQueue = useCallback((wasCorrect: boolean) => {
     if (current === null) return;
     const newQueue = [...queue];
@@ -381,13 +392,14 @@ export function useQuizEngine() {
       shuffleOnLoad, errors, dark, xp, level, streakDays, todayXp, goal, combo,
       confettiKey, lastGain, emojiKey, sessionWrongAnswers, reviewingQuestion,
       isSessionComplete, srsData, quizMode, dailyBonusAwarded, showStatsModal,
-      unlockedAchievements, displayedQuestion, comboMilestone, decksCompleted
+      unlockedAchievements, displayedQuestion, comboMilestone, decksCompleted, showIntroModal
     },
     actions: {
       setDeckId, setShuffleOnLoad, setDark, setGoal, setReviewingQuestion,
       setShowStatsModal, onSelect, resetSession, handleUpload, startSrsSession,
       clearSession,
-      handleNextQuestion
+      handleNextQuestion,
+      setShowIntroModal
     },
     refs: { fileInputRef }
   };

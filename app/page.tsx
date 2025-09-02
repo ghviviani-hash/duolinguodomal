@@ -1,3 +1,5 @@
+// app/page.tsx
+
 "use client";
 
 import React from "react";
@@ -14,6 +16,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Flame } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { IntroModal } from "@/components/IntroModal";
 
 export default function QuizGamificadoApp() {
   const { state, actions, refs } = useQuizEngine();
@@ -49,6 +52,7 @@ export default function QuizGamificadoApp() {
     displayedQuestion,
     comboMilestone,
     decksCompleted,
+    showIntroModal
   } = state;
 
   const isQuizActive = !!deckId || quizMode === 'srs';
@@ -163,6 +167,7 @@ export default function QuizGamificadoApp() {
       <Confetti trigger={confettiKey} />
       <EmojiBurst trigger={emojiKey} combo={combo} />
       <ComboEffect trigger={comboMilestone} />
+      <IntroModal show={showIntroModal} onClose={() => actions.setShowIntroModal(false)} />
     </div>
   );
 }

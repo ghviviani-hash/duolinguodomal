@@ -9,6 +9,7 @@ import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Upload, Download, BookOpen, BrainCircuit, Trophy, Award, RefreshCw, Info } from "lucide-react";
 import { SrsData, Deck } from "@/types";
+import { formatTimeLeft } from "@/lib/utils";
 import { achievements } from "@/lib/achievements";
 import { TEMPLATE_TXT } from "@/lib/constants";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -16,6 +17,7 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { isPast } from 'date-fns';
 
 interface SidebarProps {
+  isQuizActive: boolean;
   fileInputRef: React.RefObject<HTMLInputElement | null>;
   handleUpload: (file: File) => void;
   shuffleOnLoad: boolean;
@@ -41,9 +43,8 @@ interface SidebarProps {
   setShowStatsModal: (value: boolean) => void;
   quizMode: "deck" | "srs";
   questionsCount: number;
-  isQuizActive: boolean;
-  queue: number[]; // ADIÇÃO: Adicionando a fila para o cálculo de progresso
-  current: number | null; // ADIÇÃO: Adicionando a questão atual para o cálculo de progresso
+  queue: number[];
+  current: number | null;
 }
 
 interface DeckNode {
@@ -52,6 +53,7 @@ interface DeckNode {
 }
 
 export function Sidebar({
+  isQuizActive,
   fileInputRef,
   handleUpload,
   shuffleOnLoad,
@@ -77,9 +79,8 @@ export function Sidebar({
   setShowStatsModal,
   quizMode,
   questionsCount,
-  isQuizActive,
-  queue, // ADIÇÃO
-  current, // ADIÇÃO
+  queue,
+  current,
 }: SidebarProps) {
 
   const isMobile = useMediaQuery("(max-width: 1023px)");
@@ -140,7 +141,6 @@ export function Sidebar({
 
   const goalPct = Math.min(100, Math.round((todayXp / goal) * 100));
   const srsCount = Object.values(srsData).filter((item: any) => isPast(new Date(item.nextReview))).length;
-  // MUDANÇA: Usando queue.length e current para calcular o progresso
   const progressPct = questionsCount > 0 ? Math.round((questionsCount - (queue.length + (current === null ? 0 : 1))) / questionsCount * 100) : 0;
   
   const renderDeckTree = (node: DeckNode, nodeKey: string) => {

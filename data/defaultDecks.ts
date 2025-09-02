@@ -5460,6 +5460,526 @@ export const DEFAULT_DECKS: Deck[] = [
         explanation: "O tratamento da angina viral é de suporte, focando no alívio dos sintomas com analgésicos, anti-inflamatórios e hidratação. Antibióticos não são indicados.",
         tag: "Orofaringe"
       },
+        {
+            id: "ortori1",
+            text: "Qual a alteração anatômica encontrada na videolaringoscopia no caso de uma laringomalácia?",
+            options: [
+                "Edema e hiperemia das pregas vocais.",
+                "Epiglote em forma de Ômega e alongada.",
+                "Nódulos bilaterais nas pregas vocais.",
+                "Lesão polipoide unilateral."
+            ],
+            answerIndex: 1,
+            explanation: "As alterações anatômicas encontradas na videolaringoscopia são epiglote em forma de Ômega e alongada, além de pregas aeroepiglóticas curtas.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori2",
+            text: "Qual o tratamento indicado para laringomalácia?",
+            options: [
+                "Corticosteroides inalatórios.",
+                "Cirúrgico em caso de severidade e conservador na maioria dos casos.",
+                "Repouso vocal e fonoterapia.",
+                "Antibioticoterapia oral."
+            ],
+            answerIndex: 1,
+            explanation: "O tratamento para a laringomalácia é cirúrgico em casos de severidade e conservador na maioria dos casos.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori3",
+            text: "Qual o diagnóstico provável para um paciente que há 14 dias apresenta pressão facial intensa, congestão nasal, anosmia e febre de 38,5°C há 5 dias?",
+            options: [
+                "Rinossinusite crônica.",
+                "Rinossinusite aguda bacteriana.",
+                "Rinite alérgica.",
+                "Mononucleose infecciosa."
+            ],
+            answerIndex: 1,
+            explanation: "A febre persistente e o quadro de mais de 10 dias sugerem uma etiologia bacteriana.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori4",
+            text: "Qual o tratamento para a Rinossinusite aguda bacteriana?",
+            options: [
+                "Descongestionante nasal com anti-histamínico.",
+                "Amoxicilina, analgésico, corticóide nasal e lavagem nasal.",
+                "Repouso e ingestão de líquidos.",
+                "Cirurgia endoscópica nasal."
+            ],
+            answerIndex: 1,
+            explanation: "O tratamento para a Rinossinusite aguda bacteriana é Amoxicilina, analgésico, corticóide nasal e lavagem nasal.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori5",
+            text: "Qual o diagnóstico para um homem com febre alta, voz abafada (voz de batata quente), odinofagia intensa e unilateral com dor que irradia para o ouvido, trismo e úvula desviada?",
+            options: [
+                "Amigdalite aguda.",
+                "Epiglotite.",
+                "Abscesso periamigdaliano.",
+                "Faringite viral."
+            ],
+            answerIndex: 2,
+            explanation: "A voz de batata quente, trismo e desvio da úvula são sinais clássicos de abscesso periamigdaliano.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori6",
+            text: "Qual o tratamento para abscesso periamigdaliano?",
+            options: [
+                "Antibiótico oral e repouso.",
+                "Drenagem e antibioticoterapia (clindamicina/ceftriaxona ou amoxicilina + clavulanato VO 10 dias).",
+                "Corticosteroides e analgésicos.",
+                "Cirurgia para remoção da amígdala."
+            ],
+            answerIndex: 1,
+            explanation: "O tratamento do abscesso periamigdaliano é feito com drenagem e antibioticoterapia.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori7",
+            text: "Um pintor com obstrução nasal crônica, rinorreia hialina frequente, prurido em ouvidos e nariz, e espirros paroxísticos que pioram no trabalho, tem qual diagnóstico?",
+            options: [
+                "Rinossinusite.",
+                "Rinite alérgica.",
+                "Polipose nasal.",
+                "Desvio de septo."
+            ],
+            answerIndex: 1,
+            explanation: "A rinite alérgica é a causa mais provável, pois os sintomas são crônicos e pioram com a exposição a alérgenos (no caso, a tinta ou outros materiais de trabalho).",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori8",
+            text: "Cite 3 achados característicos da rinite alérgica.",
+            options: [
+                "Saudação do alérgico, face adenoidiana e Linhas de Dennie-Morgan.",
+                "Placas brancas na orofaringe e febre.",
+                "Úvula desviada e trismo.",
+                "Estridor e tosse metálica."
+            ],
+            answerIndex: 0,
+            explanation: "A saudação do alérgico (coçar o nariz), a face adenoidiana e as Linhas de Dennie-Morgan (linhas abaixo dos olhos) são achados característicos de rinite alérgica.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori9",
+            text: "Um paciente tem tosse persistente com 5 tossidas em uma única inspiração, acompanhada de perda de fôlego e 'piado'. Ele não tem vacinação em dia. Qual o diagnóstico provável?",
+            options: [
+                "Laringite.",
+                "Coqueluche.",
+                "Bronquiolite.",
+                "Asma."
+            ],
+            answerIndex: 1,
+            explanation: "A tosse em salvas (tossidas em uma única inspiração) seguida de 'piado' é um sintoma característico da coqueluche.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori10",
+            text: "Quais as fases da coqueluche em ordem?",
+            options: [
+                "Paroxístico, catarral, coalescente.",
+                "Catarral, paroxístico, coalescente.",
+                "Coalescente, catarral, paroxístico.",
+                "Catarral, coalescente, paroxístico."
+            ],
+            answerIndex: 1,
+            explanation: "As fases da coqueluche são: fase catarral, com sintomas de resfriado; fase paroxística, com a tosse característica; e fase de convalescença ou coalescente, com a melhora gradual.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori11",
+            text: "Qual o tratamento para coqueluche?",
+            options: [
+                "Azitromicina.",
+                "Amoxicilina.",
+                "Nistatina tópica.",
+                "Anti-inflamatórios."
+            ],
+            answerIndex: 0,
+            explanation: "O tratamento para coqueluche é com Azitromicina.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori12",
+            text: "Quais são duas possíveis complicações da coqueluche?",
+            options: [
+                "Rinorreia e anosmia.",
+                "Convulsão e pneumonia.",
+                "Afta e gengivite.",
+                "Pólipos nasais e edema de Reinke."
+            ],
+            answerIndex: 1,
+            explanation: "Duas complicações possíveis da coqueluche são OMA (Otite Média Aguda), pneumotórax, convulsão, pneumonia e ruptura do diafragma.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori13",
+            text: "Um paciente com dor de garganta e angina eritematosa com pequenas vesículas no palato mole, úvula e pilares amigdalianos que deixam ulcerações esbranquiçadas, tem qual diagnóstico?",
+            options: [
+                "Herpangina.",
+                "Mononucleose infecciosa.",
+                "Amigdalite aguda.",
+                "Faringite estreptocócica."
+            ],
+            answerIndex: 0,
+            explanation: "A descrição de lesões vesiculares e ulceradas na orofaringe, poupando a região jugal, é típica de herpangina.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori14",
+            text: "Qual o agente etiológico da herpangina?",
+            options: [
+                "Vírus Cocksakie.",
+                "Streptococcus pyogenes.",
+                "Haemophilus influenzae.",
+                "Candida albicans."
+            ],
+            answerIndex: 0,
+            explanation: "A herpangina é causada pelo Vírus Coxsackie.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori15",
+            text: "Qual o tratamento mais adequado para herpangina?",
+            options: [
+                "Antibióticos.",
+                "Cirurgia.",
+                "Repouso.",
+                "Anti-inflamatório e anti-térmico."
+            ],
+            answerIndex: 3,
+            explanation: "O tratamento para herpangina é sintomático com anti-inflamatório e anti-térmico.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori16",
+            text: "Uma professora, não fumante, tem alteração na voz e na videolaringoscopia é observada a presença de uma 'bolinha' só de um lado na prega vocal. Qual a descrição mais provável dessa lesão?",
+            options: [
+                "Nódulo vocal.",
+                "Lesão polipoide unilateral de aspecto gelatinoso.",
+                "Edema de Reinke.",
+                "Cisto."
+            ],
+            answerIndex: 1,
+            explanation: "A presença de uma bolinha unilateral sugere uma lesão polipoide.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori17",
+            text: "Qual o tratamento para a lesão polipoide unilateral encontrada na professora?",
+            options: [
+                "Fonoterapia isolada.",
+                "Cirurgia + fonoterapia.",
+                "Repouso vocal absoluto.",
+                "Corticosteroides."
+            ],
+            answerIndex: 1,
+            explanation: "O tratamento para uma lesão polipoide unilateral é cirurgia seguida de fonoterapia.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori18",
+            text: "Um homem de 25 anos relata obstrução nasal há 4 dias, com dor facial, mas sem outros sintomas graves. Qual o provável diagnóstico?",
+            options: [
+                "Rinossinusite bacteriana aguda.",
+                "Rinossinusite viral aguda.",
+                "Rinite alérgica.",
+                "Sinusite crônica."
+            ],
+            answerIndex: 1,
+            explanation: "Sintomas leves e com menos de 7 dias de duração são mais comuns em rinossinusite viral.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori19",
+            text: "Qual o tratamento para rinossinusite viral aguda?",
+            options: [
+                "Descongestionante nasal com anti-histamínico, irrigação com soro fisiológico e Zinco.",
+                "Amoxicilina e corticóide oral.",
+                "Cirurgia.",
+                "Repouso vocal."
+            ],
+            answerIndex: 0,
+            explanation: "O tratamento para rinossinusite viral aguda é sintomático com descongestionante, anti-histamínico, irrigação com soro fisiológico e Zinco.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori20",
+            text: "Um adolescente tem dor de garganta há 5 dias, febre alta persistente, cefaleia e fadiga. No exame, há linfonodos cervicais posteriores e hepatoesplenomegalia. Qual o diagnóstico mais provável?",
+            options: [
+                "Faringite estreptocócica.",
+                "Epiglotite.",
+                "Mononucleose infecciosa.",
+                "Abscesso periamigdaliano."
+            ],
+            answerIndex: 2,
+            explanation: "A tríade de febre, linfonodos e hepatoesplenomegalia é clássica da mononucleose infecciosa.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori21",
+            text: "Qual a etiologia mais provável da mononucleose infecciosa?",
+            options: [
+                "Vírus Cocksakie.",
+                "Streptococcus pyogenes.",
+                "EBV (Vírus Epstein-Barr).",
+                "Haemophilus influenzae."
+            ],
+            answerIndex: 2,
+            explanation: "A mononucleose infecciosa é causada pelo Vírus Epstein-Barr (EBV).",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori22",
+            text: "Como é feito o diagnóstico de mononucleose infecciosa?",
+            options: [
+                "Exclusivamente pelo quadro clínico.",
+                "Apenas com hemograma.",
+                "Quadro clínico + exames laboratoriais como sorologia contra EBV, Monospot e hemograma com linfocitose atípica.",
+                "Cultura da orofaringe."
+            ],
+            answerIndex: 2,
+            explanation: "O diagnóstico é feito com quadro clínico, exames específicos (sorologia para EBV) e inespecíficos (Monospot e hemograma com linfocitose atípica).",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori23",
+            text: "Uma criança de 2 anos tem uma radiografia cervical mostrando o 'sinal do dedo polegar'. Qual o diagnóstico provável?",
+            options: [
+                "Laringite.",
+                "Coqueluche.",
+                "Epiglotite.",
+                "Abscesso retrofaríngeo."
+            ],
+            answerIndex: 2,
+            explanation: "O 'sinal do dedo polegar' na radiografia é patognomônico de epiglotite, devido ao inchaço da epiglote.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori24",
+            text: "Qual a provável etiologia da epiglotite em crianças de 2 anos?",
+            options: [
+                "Vírus Coxsackie.",
+                "Streptococcus pyogenes.",
+                "Haemophilus influenzae.",
+                "Moraxella catarrhalis."
+            ],
+            answerIndex: 2,
+            explanation: "A etiologia mais comum da epiglotite em crianças é o Haemophilus influenzae.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori25",
+            text: "Qual o tratamento mais indicado para epiglotite?",
+            options: [
+                "Antibióticos orais e observação.",
+                "Internação com corticóide IV + antibiótico IV + O2 e, se grave, intubação.",
+                "Umidificação do ar e nebulização.",
+                "Repouso e lavagem nasal."
+            ],
+            answerIndex: 1,
+            explanation: "O tratamento é uma emergência e envolve internação, corticóides e antibióticos IV, e intubação se a via aérea estiver muito comprometida.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori26",
+            text: "Um homem de 20 anos tem halitose extremamente fétida, lembrando algo morto, sem febre e com má higiene oral. Qual o diagnóstico?",
+            options: [
+                "Periodontite.",
+                "Angina de Plaut-Vincent.",
+                "Abscesso periamigdaliano.",
+                "Mononucleose infecciosa."
+            ],
+            answerIndex: 1,
+            explanation: "A combinação de halitose fétida com sinais de infecção em pacientes com má higiene oral é característica da Angina de Plaut-Vincent.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori27",
+            text: "Quais os agentes etiológicos da Angina de Plaut-Vincent?",
+            options: [
+                "E. coli e Staphylococcus.",
+                "S. aureus e S. pyogenes.",
+                "Espiroquetas e bacilo fusiforme.",
+                "Candida albicans."
+            ],
+            answerIndex: 2,
+            explanation: "A Angina de Plaut-Vincent é causada por uma infecção mista de espiroquetas e bacilo fusiforme.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori28",
+            text: "Qual o tratamento indicado para Angina de Plaut-Vincent?",
+            options: [
+                "Nistatina tópica.",
+                "Cirurgia e drenagem.",
+                "Penicilina ou cefalosporina + metronidazol.",
+                "Corticoides e analgésicos."
+            ],
+            answerIndex: 2,
+            explanation: "O tratamento para a Angina de Plaut-Vincent é feito com Penicilina ou Cefalosporina, associada a Metronidazol.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori29",
+            text: "Uma criança tem tosse metálica em 'latido de cachorro', estridor inspiratório e dispneia, após coriza e febre baixa. Qual o diagnóstico mais provável?",
+            options: [
+                "Coqueluche.",
+                "Epiglotite.",
+                "Laringobronquite.",
+                "Bronquiolite."
+            ],
+            answerIndex: 2,
+            explanation: "A tosse 'em latido de cachorro' e o estridor são sintomas característicos de laringobronquite (crup).",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori30",
+            text: "Qual o tratamento para laringobronquite?",
+            options: [
+                "Descongestionante oral e repouso.",
+                "Antibioticoterapia.",
+                "Umidificação de ar com nebulização + oxigenoterapia + corticóide + adrenalina + monitorização.",
+                "Remoção cirúrgica de tecido."
+            ],
+            answerIndex: 2,
+            explanation: "O tratamento para laringobronquite é umidificação de ar, nebulização, oxigênio, corticóides e adrenalina, com monitorização constante.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori31",
+            text: "Um paciente tem tosse persistente há 14 dias, rinorreia mucopurulenta e sensação de peso facial, sem melhora completa com antibiótico. Qual o diagnóstico provável?",
+            options: [
+                "Rinossinusite crônica.",
+                "Rinite alérgica.",
+                "Rinossinusite viral aguda.",
+                "Faringite."
+            ],
+            answerIndex: 0,
+            explanation: "A ausência de melhora completa com antibiótico e a persistência dos sintomas indicam um quadro crônico, em vez de agudo.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori32",
+            text: "Qual o melhor método para diagnosticar rinossinusite crônica?",
+            options: [
+                "Radiografia simples da face.",
+                "Tomografia computadorizada (TC) de face.",
+                "Exame clínico.",
+                "Ressonância magnética."
+            ],
+            answerIndex: 1,
+            explanation: "A Tomografia Computadorizada (TC) de face é o padrão-ouro para o diagnóstico de rinossinusite crônica, pois oferece uma visão detalhada das cavidades nasais e seios da face.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori33",
+            text: "Um fumante de longa data se queixa de disfonia. Qual a principal hipótese diagnóstica?",
+            options: [
+                "Nódulo vocal.",
+                "Pólipo vocal.",
+                "Cisto na prega vocal.",
+                "Edema de Reinke."
+            ],
+            answerIndex: 3,
+            explanation: "O edema de Reinke é a principal hipótese diagnóstica para fumantes de longa data com disfonia.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori34",
+            text: "Qual o achado característico do Edema de Reinke?",
+            options: [
+                "Lesão polipoide unilateral.",
+                "Nódulos bilaterais.",
+                "Bolsas em aspecto gelatinoso e flácido, bilateral e simétrico, que se movimentam durante a inspiração.",
+                "Placas brancas."
+            ],
+            answerIndex: 2,
+            explanation: "O achado característico do Edema de Reinke são bolsas em aspecto gelatinoso e flácido, bilateral e simétrico, que se movimentam durante a inspiração.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori35",
+            text: "Qual o tratamento para o Edema de Reinke?",
+            options: [
+                "Cirurgia e corticoides.",
+                "Fonoterapia e parada do tabagismo.",
+                "Antibióticos.",
+                "Tratamento cirúrgico."
+            ],
+            answerIndex: 1,
+            explanation: "O tratamento para o Edema de Reinke é fonoterapia e parada de fumar.",
+            tag: "Otorrinolaringologia"
+        },
+        {
+            id: "ortori36",
+            text: "Uma mulher asmática, em uso crônico de corticóide inalatório, apresenta placas orais brancas. Qual a principal hipótese diagnóstica?",
+            options: [
+                "Leucoplasia.",
+                "Herpangina.",
+                "Candidíase.",
+                "Mononucleose."
+            ],
+            answerIndex: 2,
+            explanation: "O uso crônico de corticoides inalatórios pode levar ao crescimento excessivo de fungos na boca, causando candidíase.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori37",
+            text: "Qual o agente etiológico da candidíase oral?",
+            options: [
+                "Candida albicans.",
+                "Streptococcus pyogenes.",
+                "Vírus Epstein-Barr.",
+                "Neisseria gonorrhoeae."
+            ],
+            answerIndex: 0,
+            explanation: "O agente etiológico da candidíase oral é a Candida albicans.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori38",
+            text: "Quais os achados na orofaringe em um caso de candidíase?",
+            options: [
+                "Vesículas e ulcerações.",
+                "Placas brancas destacáveis, sangrantes à raspagem.",
+                "Linfonodos e hepatoesplenomegalia.",
+                "Angina eritematosa."
+            ],
+            answerIndex: 1,
+            explanation: "Os achados na orofaringe em casos de candidíase são placas brancas destacáveis e sangrantes à raspagem.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori39",
+            text: "Como é feito o diagnóstico de candidíase oral?",
+            options: [
+                "TC de face.",
+                "Exclusivamente por biópsia.",
+                "Quadro clínico e laboratorial pela presença de hifas.",
+                "Radiografia cervical."
+            ],
+            answerIndex: 2,
+            explanation: "O diagnóstico é feito clinicamente e laboratorialmente, buscando a presença de hifas.",
+            tag: "Doenças Infecciosas"
+        },
+        {
+            id: "ortori40",
+            text: "Qual o tratamento indicado para candidíase oral?",
+            options: [
+                "Nistatina tópica.",
+                "Antibióticos orais.",
+                "Antivirais.",
+                "Cirurgia."
+            ],
+            answerIndex: 0,
+            explanation: "O tratamento para candidíase oral é feito com Nistatina tópica.",
+            tag: "Doenças Infecciosas"
+        },
       // Tema 2: Angina Eritematosa Bacteriana
       {
         id: "otorrino-q1-t2",

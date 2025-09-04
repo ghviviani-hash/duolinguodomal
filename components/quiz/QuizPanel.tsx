@@ -15,6 +15,7 @@ interface QuizPanelProps {
     showExpl: boolean;
     lastGain: number | null;
     onNextQuestion: () => void;
+    onShowStats: () => void; // Linha adicionada para corrigir o erro
 }
 
 export function QuizPanel({

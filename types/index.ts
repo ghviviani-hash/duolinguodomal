@@ -28,7 +28,6 @@ export interface SrsData {
   };
 }
 
-// Definição correta do tipo Deck
 export interface Deck {
   id: string;
   name: string;
@@ -50,4 +49,10 @@ export interface Achievement {
     description: string;
     icon: React.ElementType<{ className?: string }>;
     isUnlocked: (stats: { decksCompleted: number; streakDays: number; level: number; xp: number; }) => boolean;
+}
+
+// Adicione esta interface para corrigir o erro
+export interface WrongAnswerLog {
+  tag: string;
+  timestamp: number;
 }

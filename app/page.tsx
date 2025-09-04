@@ -17,6 +17,7 @@ import { Badge } from "@/components/ui/badge";
 import { BookOpen, Flame } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IntroModal } from "@/components/IntroModal";
+import { MobileStats } from "@/components/layout/MobileStats"; // Importa o novo componente
 
 export default function QuizGamificadoApp() {
   const { state, actions, refs } = useQuizEngine();
@@ -77,6 +78,16 @@ export default function QuizGamificadoApp() {
         />
         <div className="flex flex-col lg:flex-row gap-6 mt-6">
           <div className={`lg:w-1/3 space-y-6 ${isQuizActive ? 'order-2' : 'order-1'} lg:order-1`}>
+            
+            {/* NOVO: Renderiza o cartão de estatísticas móvel apenas se o quiz NÃO estiver ativo */}
+            {!isQuizActive && (
+              <MobileStats 
+                level={level}
+                totalQuestionsAnswered={totalQuestionsAnswered}
+                streakDays={streakDays}
+              />
+            )}
+
             <Sidebar
               isQuizActive={isQuizActive}
               fileInputRef={refs.fileInputRef}

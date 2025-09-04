@@ -8,7 +8,6 @@ interface QuizPanelProps {
     displayedQuestion: ShuffledQuestion | null;
     wrongAnswers: Question[];
     onReset: () => void;
-    onShowStats: () => void;
     onReviewQuestion: (question: Question) => void;
     onSelect: (index: number) => void;
     selected: number | null;
@@ -23,7 +22,6 @@ export function QuizPanel({
     displayedQuestion,
     wrongAnswers,
     onReset,
-    onShowStats,
     onReviewQuestion,
     onNextQuestion,
     ...questionViewProps
@@ -33,7 +31,6 @@ export function QuizPanel({
             {isSessionComplete ? (
                 <CompletionView
                     onReset={onReset}
-                    onShowStats={onShowStats}
                     wrongAnswers={wrongAnswers}
                     onReviewQuestion={onReviewQuestion}
                 />

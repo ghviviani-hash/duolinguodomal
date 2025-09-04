@@ -12,3 +12,4 @@ export const LS_STATS_KEY = "quizg-v1-stats";
 export const LS_DECK_KEY = (deckId: string) => `quizg-v1-deck-${deckId}`;
 export const LS_SRS_KEY = "quizg-v1-srs-data";
 export const LS_ACHIEVEMENTS_KEY = "quizg-v1-achievements";
+export const LS_WRONG_ANSWER_LOG_KEY = 'quizg-v1-wrong-answer-log';

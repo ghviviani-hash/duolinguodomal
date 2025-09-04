@@ -1,12 +1,13 @@
 // hooks/useQuizEngine.ts
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-import { Question, SrsData, ShuffledQuestion, Deck } from '@/types';
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import { Question, SrsData, ShuffledQuestion, Deck, WrongAnswerLog } from '@/types';
 import {
     LS_STATS_KEY,
     LS_DECK_KEY,
     LS_SRS_KEY,
     LS_ACHIEVEMENTS_KEY,
+    LS_WRONG_ANSWER_LOG_KEY, // Chave para o histórico de erros
     DECK_COMPLETION_BONUS,
     DAILY_GOAL_BONUS,
     SRS_INTERVALS
@@ -56,6 +57,7 @@ export function useQuizEngine() {
   const { playCorrect, playWrong, playFanfare } = useAudio();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [showIntroModal, setShowIntroModal] = useState(false);
+  const [wrongAnswerLog, setWrongAnswerLog] = useState<WrongAnswerLog[]>([]);
 
   useEffect(() => {
     const decksWithStableIds = DEFAULT_DECKS.map(deck => {
@@ -96,6 +98,19 @@ export function useQuizEngine() {
   useEffect(() => {
     localStorage.setItem(LS_SRS_KEY, JSON.stringify(srsData));
   }, [srsData]);
+
+  useEffect(() => {
+    const rawLog = localStorage.getItem(LS_WRONG_ANSWER_LOG_KEY);
+    if (rawLog) {
+      try {
+        setWrongAnswerLog(JSON.parse(rawLog));
+      } catch {}
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(LS_WRONG_ANSWER_LOG_KEY, JSON.stringify(wrongAnswerLog));
+  }, [wrongAnswerLog]);
 
   useEffect(() => {
     if (comboMilestone > 0) {
@@ -319,6 +334,13 @@ export function useQuizEngine() {
       if (!wasAlreadyWrong) {
         setSessionWrongAnswers(prev => [...prev, originalQuestion]);
       }
+      if (originalQuestion.tag) {
+        const newLogEntry: WrongAnswerLog = {
+          tag: originalQuestion.tag,
+          timestamp: Date.now(),
+        };
+        setWrongAnswerLog(prevLog => [...prevLog, newLogEntry]);
+      }
     }
   }, [displayedQuestion, selected, current, questions, updateSrsData, questionStart, combo, playCorrect, playWrong, sessionWrongAnswers, advanceQueue]);
 
@@ -386,13 +408,29 @@ export function useQuizEngine() {
     setIsSessionComplete(false);
   };
 
+  const getWrongTagsSince = useCallback((sinceTimestamp: number) => {
+    return wrongAnswerLog
+      .filter(entry => entry.timestamp >= sinceTimestamp)
+      .map(entry => entry.tag);
+  }, [wrongAnswerLog]);
+
+  const wrongTagsLast24Hours = useMemo(() => {
+    const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000;
+    return getWrongTagsSince(oneDayAgo);
+  }, [getWrongTagsSince]);
+
+  const allWrongTags = useMemo(() => {
+    return wrongAnswerLog.map(entry => entry.tag);
+  }, [wrongAnswerLog]);
+
   return {
     state: {
       availableDecks, deckId, questions, queue, current, selected, isCorrect, showExpl,
       shuffleOnLoad, errors, dark, xp, level, streakDays, todayXp, goal, combo,
       confettiKey, lastGain, emojiKey, sessionWrongAnswers, reviewingQuestion,
       isSessionComplete, srsData, quizMode, dailyBonusAwarded, showStatsModal,
-      unlockedAchievements, displayedQuestion, comboMilestone, decksCompleted, showIntroModal
+      unlockedAchievements, displayedQuestion, comboMilestone, decksCompleted, showIntroModal,
+      wrongTagsLast24Hours, allWrongTags,
     },
     actions: {
       setDeckId, setShuffleOnLoad, setDark, setGoal, setReviewingQuestion,

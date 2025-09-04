@@ -1,53 +1,80 @@
-import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { Switch } from "@/components/ui/switch";
-import { Flame, Star, Sparkles } from "lucide-react";
-import React from "react";
+// components/layout/Header.tsx
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress"; // Importa a barra de progresso
+import { Award, BarChart, Sun, Moon, Flame, Clock, EyeOff, HelpCircle } from "lucide-react"; // Adicionado HelpCircle
+import { formatTimeLeft } from "@/lib/utils";
 
 interface HeaderProps {
   stats: {
-    streakDays: number;
-    level: number;
     xp: number;
+    level: number;
+    streakDays: number;
+    totalQuestionsAnswered: number; // Nova prop
   };
   dark: boolean;
-  setDark: (isDark: boolean) => void;
+  setDark: (dark: boolean) => void;
+  sessionTime: number;
+  isQuizActive: boolean;
+  progress: number; // Nova prop
 }
 
-export function Header({ stats, dark, setDark }: HeaderProps) {
+export function Header({ stats, dark, setDark, sessionTime, isQuizActive, progress }: HeaderProps) {
+  const [isTimerVisible, setIsTimerVisible] = useState(true);
+
+  const handleTimerClick = () => {
+    setIsTimerVisible(!isTimerVisible);
+  };
+  
+  const displayedTime = isTimerVisible ? formatTimeLeft(sessionTime) : "00:00";
+
   return (
-    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-      
-      <div className="space-y-1">
-        <h1 className="text-2xl md:text-3xl font-bold tracking-tight flex items-center gap-2">
-          <Sparkles className="h-6 w-6" /> DUOMED
-        </h1>
-        <p className="hidden md:block text-sm md:text-base text-slate-600 dark:text-slate-300">
-          Se errar, a questão volta para o fim. Teste o modo Revisão espaçada depois de terminar um deck.
-        </p>
-      </div>
-
-      <div className="flex items-center justify-start md:justify-end gap-x-3 md:gap-x-4 gap-y-2 w-full md:w-auto flex-nowrap md:flex-wrap">
+    <header className="flex flex-col gap-4">
+      <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Flame className="h-5 w-5 text-orange-500" />
-          <span className="font-semibold text-sm">{stats.streakDays}</span>
-          <span className="hidden md:inline">dias</span>
+          <Award className="h-10 w-10 text-sky-500" />
+          <h1 className="text-3xl font-bold tracking-tight">DuoMED</h1>
         </div>
-        
-        <div className="flex-shrink-0 md:flex-shrink-1">
-            <div className="flex items-center gap-2">
-                <Star className="h-5 w-5 hidden md:block" />
-                <span className="font-semibold text-sm">Lv {stats.level}</span>
-                <Badge variant="secondary">{stats.xp} XP</Badge>
+
+        <div className="flex items-center gap-4 md:gap-6">
+          {isQuizActive && (
+            <div 
+              className="hidden sm:flex items-center gap-2 font-mono text-lg bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-lg cursor-pointer transition-opacity hover:opacity-80"
+              onClick={handleTimerClick}
+              title={isTimerVisible ? "Clique para ocultar o tempo" : "Clique para mostrar o tempo"}
+            >
+              {isTimerVisible ? <Clock className="h-5 w-5 text-slate-500" /> : <EyeOff className="h-5 w-5 text-slate-500" />}
+              <span>{displayedTime}</span>
             </div>
-            <Progress value={(stats.xp % 250) / 2.5} className="h-1 w-full mt-1 hidden md:block"/>
-        </div>
+          )}
 
-        <div className="flex items-center gap-2">
-          <Switch checked={dark} onCheckedChange={setDark} />
-          <span className="hidden sm:inline text-sm">Tema</span>
+          <div className="hidden sm:flex items-center gap-2 font-semibold" title="Sequência de dias">
+            <Flame className="h-5 w-5 text-orange-500" />
+            <span>{stats.streakDays}</span>
+          </div>
+          
+          {/* NOVO: Contador de perguntas respondidas */}
+          <div className="hidden sm:flex items-center gap-2 font-semibold" title="Total de perguntas respondidas">
+            <HelpCircle className="h-5 w-5 text-violet-500" />
+            <span>{stats.totalQuestionsAnswered}</span>
+          </div>
+
+          <div className="hidden sm:flex items-center gap-2 font-semibold" title={`Nível ${stats.level}`}>
+            <BarChart className="h-5 w-5 text-green-500" />
+            <span>{stats.level}</span>
+          </div>
+
+          <Button variant="ghost" size="icon" onClick={() => setDark(!dark)}>
+            {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </Button>
         </div>
       </div>
-    </div>
+      
+      {/* NOVO: Barra de progresso visível apenas durante o quiz */}
+      {isQuizActive && (
+        <Progress value={progress} className="w-full h-2" />
+      )}
+    </header>
   );
 }

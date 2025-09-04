@@ -7,7 +7,7 @@ import {
     LS_DECK_KEY,
     LS_SRS_KEY,
     LS_ACHIEVEMENTS_KEY,
-    LS_WRONG_ANSWER_LOG_KEY, // Chave para o histórico de erros
+    LS_WRONG_ANSWER_LOG_KEY,
     DECK_COMPLETION_BONUS,
     DAILY_GOAL_BONUS,
     SRS_INTERVALS
@@ -51,6 +51,7 @@ export function useQuizEngine() {
   const [bonusAwarded, setBonusAwarded] = useState(false);
   const [dailyBonusAwarded, setDailyBonusAwarded] = useState(false);
   const [decksCompleted, setDecksCompleted] = useState(0);
+  const [totalQuestionsAnswered, setTotalQuestionsAnswered] = useState(0);
   const [unlockedAchievements, setUnlockedAchievements] = useState<string[]>([]);
   const [comboMilestone, setComboMilestone] = useState(0);
   const [srsData, setSrsData] = useState<SrsData>({});
@@ -58,6 +59,25 @@ export function useQuizEngine() {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [showIntroModal, setShowIntroModal] = useState(false);
   const [wrongAnswerLog, setWrongAnswerLog] = useState<WrongAnswerLog[]>([]);
+  const [sessionStartTime, setSessionStartTime] = useState<number | null>(null);
+  const [sessionElapsedTime, setSessionElapsedTime] = useState<number | null>(null);
+  const [sessionLiveTime, setSessionLiveTime] = useState(0);
+
+  useEffect(() => {
+    let timerInterval: NodeJS.Timeout | null = null;
+
+    if (sessionStartTime && !isSessionComplete) {
+      timerInterval = setInterval(() => {
+        setSessionLiveTime(Date.now() - sessionStartTime);
+      }, 1000);
+    }
+
+    return () => {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+      }
+    };
+  }, [sessionStartTime, isSessionComplete]);
 
   useEffect(() => {
     const decksWithStableIds = DEFAULT_DECKS.map(deck => {
@@ -133,6 +153,7 @@ export function useQuizEngine() {
         setTodayXp(s.lastXPDate === today ? s.todayXp || 0 : 0);
         setDailyBonusAwarded(s.dailyBonusAwardedFor === today);
         setDecksCompleted(s.decksCompleted || 0);
+        setTotalQuestionsAnswered(s.totalQuestionsAnswered || 0);
       } catch {}
     } else {
       setStreakDays(1);
@@ -142,9 +163,9 @@ export function useQuizEngine() {
   useEffect(() => {
     const today = todayKey();
     localStorage.setItem(LS_STATS_KEY, JSON.stringify({
-      lastActiveDate: today, streakDays, xp, level, goal, todayXp, lastXPDate: today, dailyBonusAwardedFor: dailyBonusAwarded ? today : null, decksCompleted
+      lastActiveDate: today, streakDays, xp, level, goal, todayXp, lastXPDate: today, dailyBonusAwardedFor: dailyBonusAwarded ? today : null, decksCompleted, totalQuestionsAnswered
     }));
-  }, [streakDays, xp, level, goal, todayXp, dailyBonusAwarded, decksCompleted]);
+  }, [streakDays, xp, level, goal, todayXp, dailyBonusAwarded, decksCompleted, totalQuestionsAnswered]);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
@@ -182,6 +203,9 @@ export function useQuizEngine() {
   useEffect(() => {
     if (queue.length === 0 && questions.length > 0 && !isSessionComplete) {
       setIsSessionComplete(true);
+      if (sessionStartTime !== null) {
+        setSessionElapsedTime(sessionLiveTime);
+      }
       if (!bonusAwarded) {
         setXp(x => x + DECK_COMPLETION_BONUS);
         setDecksCompleted(d => d + 1);
@@ -190,7 +214,7 @@ export function useQuizEngine() {
         playFanfare();
       }
     }
-  }, [queue.length, questions.length, bonusAwarded, isSessionComplete, playFanfare]);
+  }, [queue.length, questions.length, bonusAwarded, isSessionComplete, playFanfare, sessionStartTime, sessionLiveTime]);
 
   useEffect(() => {
     if (!deckId) {
@@ -212,6 +236,9 @@ export function useQuizEngine() {
           setSessionWrongAnswers([]);
           setBonusAwarded(false);
           setIsSessionComplete(false);
+          setSessionStartTime(Date.now());
+          setSessionElapsedTime(null);
+          setSessionLiveTime(0);
         }
       } catch {}
     }
@@ -314,6 +341,7 @@ export function useQuizEngine() {
     setSelected(idx);
     setIsCorrect(correct);
     if (correct) {
+      setTotalQuestionsAnswered(t => t + 1);
       const newCombo = combo + 1;
       const gain = computeGain(elapsed, newCombo);
       setLastGain(gain);
@@ -361,6 +389,9 @@ export function useQuizEngine() {
     setCombo(0);
     setSessionWrongAnswers([]);
     setBonusAwarded(false);
+    setSessionStartTime(Date.now());
+    setSessionElapsedTime(null);
+    setSessionLiveTime(0);
   };
 
   const handleUpload = async (file: File) => {
@@ -398,6 +429,9 @@ export function useQuizEngine() {
     setCurrent(newQueue[0] ?? null);
     setIsSessionComplete(false);
     setSessionWrongAnswers([]);
+    setSessionStartTime(Date.now());
+    setSessionElapsedTime(null);
+    setSessionLiveTime(0);
   };
 
   const clearSession = () => {
@@ -406,6 +440,8 @@ export function useQuizEngine() {
     setCurrent(null);
     setDeckId(null);
     setIsSessionComplete(false);
+    setSessionStartTime(null);
+    setSessionLiveTime(0);
   };
 
   const getWrongTagsSince = useCallback((sinceTimestamp: number) => {
@@ -430,7 +466,7 @@ export function useQuizEngine() {
       confettiKey, lastGain, emojiKey, sessionWrongAnswers, reviewingQuestion,
       isSessionComplete, srsData, quizMode, dailyBonusAwarded, showStatsModal,
       unlockedAchievements, displayedQuestion, comboMilestone, decksCompleted, showIntroModal,
-      wrongTagsLast24Hours, allWrongTags,
+      wrongTagsLast24Hours, allWrongTags, sessionElapsedTime, sessionLiveTime, totalQuestionsAnswered,
     },
     actions: {
       setDeckId, setShuffleOnLoad, setDark, setGoal, setReviewingQuestion,

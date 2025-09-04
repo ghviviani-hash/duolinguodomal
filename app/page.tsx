@@ -52,19 +52,29 @@ export default function QuizGamificadoApp() {
     displayedQuestion,
     comboMilestone,
     decksCompleted,
-    showIntroModal
+    showIntroModal,
+    sessionElapsedTime,
+    sessionLiveTime,
+    totalQuestionsAnswered,
   } = state;
 
   const isQuizActive = !!deckId || quizMode === 'srs';
 
   const progressPct = questions.length > 0
-    ? Math.round(((questions.length - queue.length) / questions.length) * 100)
+    ? Math.round(((questions.length - (queue.length + (current === null ? 0 : 1))) / questions.length) * 100)
     : 0;
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 text-slate-800 dark:text-slate-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
-        <Header stats={{xp, level, streakDays}} dark={dark} setDark={actions.setDark} />
+        <Header 
+          stats={{xp, level, streakDays, totalQuestionsAnswered}} 
+          dark={dark} 
+          setDark={actions.setDark} 
+          sessionTime={sessionLiveTime} 
+          isQuizActive={isQuizActive}
+          progress={progressPct}
+        />
         <div className="flex flex-col lg:flex-row gap-6 mt-6">
           <div className={`lg:w-1/3 space-y-6 ${isQuizActive ? 'order-2' : 'order-1'} lg:order-1`}>
             <Sidebar
@@ -149,6 +159,7 @@ export default function QuizGamificadoApp() {
                     onShowStats={() => actions.setShowStatsModal(true)}
                     onReviewQuestion={actions.setReviewingQuestion}
                     onNextQuestion={actions.handleNextQuestion}
+                    sessionElapsedTime={sessionElapsedTime}
                   />
                 ) : (
                    <div className="flex-1 flex flex-col items-center justify-center text-center text-slate-500">

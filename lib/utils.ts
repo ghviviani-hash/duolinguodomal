@@ -1,3 +1,5 @@
+// lib/utils.ts
+
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -64,7 +66,10 @@ export function shuffle<T>(arr: T[]): T[] {
  * @returns A string formatada.
  */
 export const formatTimeLeft = (ms: number): string => {
-    const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+    // CORREÇÃO: Garante que 'ms' é um número válido antes de formatar.
+    const validMs = typeof ms === 'number' && !isNaN(ms) ? ms : 0;
+
+    const totalSeconds = Math.max(0, Math.floor(validMs / 1000));
     const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, "0");
     const seconds = String(totalSeconds % 60).padStart(2, "0");
     return `${minutes}:${seconds}`;

@@ -1,20 +1,23 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Award, RefreshCcw, Eye, AlertTriangle } from "lucide-react"; // Corrigido: Trocado BookWarning por AlertTriangle
+import { Award, RefreshCcw, Eye, AlertTriangle, Clock } from "lucide-react";
 import { Question } from "@/types";
 import React, { useMemo } from "react";
 import { Badge } from "@/components/ui/badge";
+import { formatTimeLeft } from "@/lib/utils";
 
 interface CompletionViewProps {
   onReset: () => void;
   wrongAnswers: Question[];
   onReviewQuestion: (question: Question) => void;
+  sessionElapsedTime: number | null;
 }
 
 export function CompletionView({
   onReset,
   wrongAnswers,
   onReviewQuestion,
+  sessionElapsedTime,
 }: CompletionViewProps) {
   // Função para analisar os temas mais errados
   const topicsToReview = useMemo(() => {
@@ -47,6 +50,15 @@ export function CompletionView({
       <p className="text-slate-600 dark:text-slate-300 mb-6">
         Parabéns! Você concluiu todas as questões deste deck.
       </p>
+
+      {/* Seção para exibir o tempo de conclusão */}
+      {sessionElapsedTime !== null && (
+        <div className="flex items-center justify-center gap-2 mb-6 text-lg text-slate-500 dark:text-slate-400">
+          <Clock className="h-5 w-5" />
+          <span>Tempo total: <strong>{formatTimeLeft(sessionElapsedTime)}</strong></span>
+        </div>
+      )}
+
       <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center">
         <Button onClick={onReset} className="w-full sm:w-auto">
           <RefreshCcw className="h-4 w-4 mr-2" /> Tentar Novamente
@@ -57,7 +69,6 @@ export function CompletionView({
       {topicsToReview.length > 0 && (
         <div className="mt-8 text-left p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
           <h3 className="text-lg font-semibold mb-3 flex items-center">
-            {/* Corrigido: Usando o ícone AlertTriangle */}
             <AlertTriangle className="h-5 w-5 mr-2 text-yellow-500" />
             Principais temas a revisar:
           </h3>

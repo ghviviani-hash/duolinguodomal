@@ -15,7 +15,8 @@ interface QuizPanelProps {
     showExpl: boolean;
     lastGain: number | null;
     onNextQuestion: () => void;
-    onShowStats: () => void; // Linha adicionada para corrigir o erro
+    onShowStats: () => void;
+    sessionElapsedTime: number | null; // <-- PROPRIEDADE ADICIONADA AQUI
 }
 
 export function QuizPanel({
@@ -25,6 +26,7 @@ export function QuizPanel({
     onReset,
     onReviewQuestion,
     onNextQuestion,
+    sessionElapsedTime, // <-- PROP RECEBIDA AQUI
     ...questionViewProps
 }: QuizPanelProps) {
     return (
@@ -34,6 +36,7 @@ export function QuizPanel({
                     onReset={onReset}
                     wrongAnswers={wrongAnswers}
                     onReviewQuestion={onReviewQuestion}
+                    sessionElapsedTime={sessionElapsedTime} // <-- E REPASSADA AQUI
                 />
             ) : displayedQuestion ? (
                 <QuestionView

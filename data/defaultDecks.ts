@@ -3990,7 +3990,7 @@ export const DEFAULT_DECKS: Deck[] = [
     ]
   },
   {
-    id: "preset-dermatologia-1",
+    id: "preset-Dermatologia-1",
     name: "  Estácio - M7 - PR1 - Dermatologia",
     questions: [
       // Micoses Superficiais e Profundas

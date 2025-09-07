@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress"; // Importa a barra de progresso
-import { Award, BarChart, Sun, Moon, Flame, Clock, EyeOff, HelpCircle } from "lucide-react"; // Adicionado HelpCircle
+import { Progress } from "@/components/ui/progress";
+import { Award, BarChart, Sun, Moon, Flame, Clock, EyeOff, HelpCircle } from "lucide-react";
 import { formatTimeLeft } from "@/lib/utils";
 
 interface HeaderProps {
@@ -11,16 +11,17 @@ interface HeaderProps {
     xp: number;
     level: number;
     streakDays: number;
-    totalQuestionsAnswered: number; // Nova prop
+    totalQuestionsAnswered: number; // CORREÇÃO: Propriedade adicionada aqui
   };
   dark: boolean;
   setDark: (dark: boolean) => void;
+  onLogoClick: () => void;
+  isQuizActive: boolean; // Presumindo que estas props serão necessárias
+  progress: number;
   sessionTime: number;
-  isQuizActive: boolean;
-  progress: number; // Nova prop
 }
 
-export function Header({ stats, dark, setDark, sessionTime, isQuizActive, progress }: HeaderProps) {
+export function Header({ stats, dark, setDark, onLogoClick, isQuizActive, progress, sessionTime }: HeaderProps) {
   const [isTimerVisible, setIsTimerVisible] = useState(true);
 
   const handleTimerClick = () => {
@@ -32,7 +33,11 @@ export function Header({ stats, dark, setDark, sessionTime, isQuizActive, progre
   return (
     <header className="flex flex-col gap-4">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <div 
+          className="flex items-center gap-2 cursor-pointer transition-opacity hover:opacity-80"
+          onClick={onLogoClick}
+          title="Voltar à seleção de provas"
+        >
           <Award className="h-10 w-10 text-sky-500" />
           <h1 className="text-3xl font-bold tracking-tight">DuoMED</h1>
         </div>
@@ -54,7 +59,6 @@ export function Header({ stats, dark, setDark, sessionTime, isQuizActive, progre
             <span>{stats.streakDays}</span>
           </div>
           
-          {/* NOVO: Contador de perguntas respondidas */}
           <div className="hidden sm:flex items-center gap-2 font-semibold" title="Total de perguntas respondidas">
             <HelpCircle className="h-5 w-5 text-violet-500" />
             <span>{stats.totalQuestionsAnswered}</span>
@@ -71,7 +75,6 @@ export function Header({ stats, dark, setDark, sessionTime, isQuizActive, progre
         </div>
       </div>
       
-      {/* NOVO: Barra de progresso visível apenas durante o quiz */}
       {isQuizActive && (
         <Progress value={progress} className="w-full h-2" />
       )}

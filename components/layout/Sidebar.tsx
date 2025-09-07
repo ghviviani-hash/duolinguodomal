@@ -7,9 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { Upload, Download, BookOpen, BrainCircuit, Trophy, Award, RefreshCw, Info, History } from "lucide-react"; 
+import { Upload, Download, BookOpen, BrainCircuit, Trophy, Award, RefreshCw, Info, History } from "lucide-react";
 import { SrsData, Deck } from "@/types";
-import { formatTimeLeft } from "@/lib/utils";
 import { achievements } from "@/lib/achievements";
 import { TEMPLATE_TXT } from "@/lib/constants";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -177,13 +176,11 @@ export function Sidebar({
     <>
       <div className="flex flex-col space-y-6">
 
-        {/* --- ORDEM 1 (Quiz Inativo): Decks Salvos --- */}
         <div className={`order-2 lg:order-1 ${isQuizActive ? 'hidden lg:flex' : 'flex'}`}>
           {availableDecks.length > 0 && (
             <Card className="w-full">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5" />Decks Salvos</CardTitle>
-                <CardDescription>Escolha um deck para começar:</CardDescription>
+                <CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5" />Escolha uma prova para começar</CardTitle>
               </CardHeader>
               <CardContent>
                 <Accordion type="multiple" className="w-full" defaultValue={defaultOpenFolder}>
@@ -194,12 +191,15 @@ export function Sidebar({
           )}
         </div>
 
-        {/* --- ORDEM 1 (Quiz Ativo): Deck Ativo --- */}
         <div className={`order-1 lg:order-2 ${!isQuizActive ? 'hidden lg:flex' : 'flex'}`}>
           <Card className="w-full">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2"><BookOpen className="h-5 w-5"/>Deck Ativo</CardTitle>
-              <CardDescription>{availableDecks.find(d => d.id === deckId)?.name || 'Nenhum'}</CardDescription>
+              {/* ALTERAÇÃO AQUI */}
+              <CardTitle className="flex items-center gap-2">
+                <BookOpen className="h-5 w-5"/>
+                {availableDecks.find(d => d.id === deckId)?.name || 'Deck Ativo'}
+              </CardTitle>
+              {/* A linha CardDescription foi removida daqui */}
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between text-sm">
@@ -215,7 +215,6 @@ export function Sidebar({
           </Card>
         </div>
 
-        {/* --- ORDEM 2: Revisão Espaçada (era order-6) --- */}
         <div className="order-3">
             <Card>
                 <CardHeader><CardTitle className="flex items-center gap-2"><BrainCircuit className="h-5 w-5" />Revisão Espaçada</CardTitle></CardHeader>
@@ -227,7 +226,6 @@ export function Sidebar({
             </Card>
         </div>
 
-        {/* --- ORDEM 3: Análise de Desempenho (era order-5) --- */}
         <div className="order-4">
             <Card>
                 <CardHeader><CardTitle className="flex items-center gap-2"><History className="h-5 w-5" />Análise de Desempenho</CardTitle></CardHeader>
@@ -239,7 +237,6 @@ export function Sidebar({
             </Card>
         </div>
 
-        {/* --- ORDEM 4: Meta diária (era order-3) --- */}
         <div className="order-5">
           <Card>
             <CardHeader><CardTitle className="flex items-center gap-2"><Trophy className="h-5 w-5" />Meta diária</CardTitle></CardHeader>
@@ -251,7 +248,6 @@ export function Sidebar({
           </Card>
         </div>
 
-        {/* --- ORDEM 5: Conquistas (era order-4) --- */}
         <div className="order-6">
           <Card>
             <CardHeader><CardTitle className="flex items-center gap-2"><Award className="h-5 w-5"/>Conquistas</CardTitle></CardHeader>
@@ -272,7 +268,6 @@ export function Sidebar({
           </Card>
         </div>
         
-        {/* --- ORDEM 6: Carregar perguntas (era order-7) --- */}
         <div className="order-7">
           <Card>
             <CardHeader><CardTitle className="flex items-center gap-2"><Upload className="h-5 w-5" />Carregar perguntas</CardTitle></CardHeader>

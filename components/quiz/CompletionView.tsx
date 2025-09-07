@@ -1,3 +1,5 @@
+// components/quiz/CompletionView.tsx
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Award, RefreshCcw, Eye, AlertTriangle, Clock } from "lucide-react";
@@ -19,7 +21,6 @@ export function CompletionView({
   onReviewQuestion,
   sessionElapsedTime,
 }: CompletionViewProps) {
-  // Função para analisar os temas mais errados
   const topicsToReview = useMemo(() => {
     if (wrongAnswers.length === 0) {
       return [];
@@ -34,7 +35,7 @@ export function CompletionView({
 
     return Object.entries(tagCounts)
       .sort(([, a], [, b]) => b - a)
-      .slice(0, 3); // Pega os 3 temas mais errados
+      .slice(0, 3);
   }, [wrongAnswers]);
 
   return (
@@ -51,7 +52,6 @@ export function CompletionView({
         Parabéns! Você concluiu todas as questões deste deck.
       </p>
 
-      {/* Seção para exibir o tempo de conclusão */}
       {sessionElapsedTime !== null && (
         <div className="flex items-center justify-center gap-2 mb-6 text-lg text-slate-500 dark:text-slate-400">
           <Clock className="h-5 w-5" />
@@ -65,7 +65,6 @@ export function CompletionView({
         </Button>
       </div>
 
-      {/* Seção de Análise de Erros */}
       {topicsToReview.length > 0 && (
         <div className="mt-8 text-left p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
           <h3 className="text-lg font-semibold mb-3 flex items-center">
@@ -88,9 +87,10 @@ export function CompletionView({
             Questões erradas:
           </h3>
           <div className="space-y-2 max-h-48 overflow-y-auto pr-2">
-            {wrongAnswers.map((q) => (
+            {/* CORREÇÃO AQUI: A 'key' agora usa o id E o index para garantir que é única */}
+            {wrongAnswers.map((q, index) => (
               <div
-                key={q.id}
+                key={`${q.id}-${index}`}
                 className="flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-800 rounded-lg"
               >
                 <p className="truncate text-sm mr-4">{q.text}</p>

@@ -8,7 +8,7 @@ import { Header } from '@/components/layout/Header';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { QuizPanel } from '@/components/quiz/QuizPanel';
 import { ReviewModal } from '@/components/quiz/ReviewModal';
-import { StatsModal } from '@/components/quiz/StatsModal';
+import { GoalModal } from "@/components/quiz/StatsModal";
 import { Confetti } from '@/components/effects/Confetti';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -123,7 +123,7 @@ export default function QuizGamificadoApp() {
       {/* ALTERAÇÃO AQUI: Adicionando a prop onSetGoal 
       */}
       {showStatsModal && 
-  <StatsModal 
+  <GoalModal 
     show={showStatsModal} 
     onClose={() => actions.setShowStatsModal(false)} 
     currentGoal={stats.goal}

@@ -1,21 +1,37 @@
-import React from "react";
+// ghviviani-hash/duomed/duomed-b286be4d9af8eadd3077475e75fa7d58cccc5aa4/components/quiz/StatsModal.tsx
+
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { X, BarChart3, Flame, Star, Trophy, Award, BookOpen } from "lucide-react";
-import { Stats, Achievement } from "@/types";
-import { achievements } from "@/lib/achievements";
-import { Progress } from "@/components/ui/progress";
-import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { X, Trophy } from "lucide-react";
 
-interface StatsModalProps {
+interface GoalModalProps {
   show: boolean;
   onClose: () => void;
-  stats: Stats;
-  unlockedAchievements: string[];
+  currentGoal: number;
+  onSetGoal: (newGoal: number) => void;
 }
 
-export const StatsModal = ({ show, onClose, stats, unlockedAchievements }: StatsModalProps) => {
-    const allAchievements: Achievement[] = achievements;
+export const StatsModal = ({ show, onClose, currentGoal, onSetGoal }: GoalModalProps) => {
+    // ALTERAÇÃO AQUI: Garante que newGoal sempre tenha um valor numérico.
+    // Usamos o operador '??' (nullish coalescing) para usar 100 como padrão
+    // caso 'currentGoal' seja undefined ou null.
+    const [newGoal, setNewGoal] = useState(currentGoal ?? 100);
+
+    useEffect(() => {
+        if (show) {
+            // ALTERAÇÃO AQUI: A mesma lógica é aplicada no efeito.
+            setNewGoal(currentGoal ?? 100);
+        }
+    }, [show, currentGoal]);
+
+    const handleGoalSave = () => {
+        if (newGoal > 0) {
+            onSetGoal(newGoal);
+            onClose(); 
+        }
+    };
 
     return (
         <AnimatePresence>
@@ -32,50 +48,35 @@ export const StatsModal = ({ show, onClose, stats, unlockedAchievements }: Stats
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.9, opacity: 0 }}
                         onClick={(e) => e.stopPropagation()}
-                        className="relative w-full max-w-xl rounded-2xl p-6 bg-white dark:bg-slate-900 shadow-xl"
+                        className="relative w-full max-w-sm rounded-2xl p-6 bg-white dark:bg-slate-900 shadow-xl"
                     >
                         <Button variant="ghost" size="icon" className="absolute top-4 right-4" onClick={onClose}><X className="h-4 w-4" /></Button>
-                        <h3 className="text-lg font-bold mb-4 flex items-center gap-2"><BarChart3 className="h-5 w-5"/>Suas Estatísticas</h3>
+                        <h3 className="text-lg font-bold mb-4 flex items-center gap-2"><Trophy className="h-5 w-5"/>Ajustar Meta Diária</h3>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="space-y-3">
-                                <div className="flex items-center gap-2 text-base">
-                                    <Flame className="h-5 w-5 text-orange-500" />
-                                    <span className="font-semibold">{stats.streakDays}</span> dias de ofensiva
-                                </div>
-                                <div className="flex items-center gap-2 text-base">
-                                    <Star className="h-5 w-5 text-yellow-400" />
-                                    <span className="font-semibold">Lv {stats.level}</span> ({stats.xp} XP)
-                                </div>
-                                <div className="flex items-center gap-2 text-base">
-                                    <BookOpen className="h-5 w-5 text-blue-500" />
-                                    <span className="font-semibold">{stats.decksCompleted}</span> decks concluídos
-                                </div>
-                                <div>
-                                    <div className="flex items-center justify-between text-sm mt-4 mb-1">
-                                        <span>Meta Diária: {stats.todayXp} / {stats.goal} XP</span>
-                                        <Badge>{Math.min(100, Math.round((stats.todayXp / stats.goal) * 100))}%</Badge>
-                                    </div>
-                                    <Progress value={Math.min(100, (stats.todayXp / stats.goal) * 100)} />
-                                </div>
-                            </div>
-                            <div className="space-y-3">
-                                <h4 className="font-semibold flex items-center gap-2"><Award className="h-5 w-5"/>Conquistas</h4>
-                                <div className="grid grid-cols-3 gap-4">
-                                    {allAchievements.map(ach => {
-                                        const IconComponent = ach.icon;
-                                        const isUnlocked = unlockedAchievements.includes(ach.id);
-                                        return (
-                                            <div key={ach.id} className="flex flex-col items-center text-center group" title={`${ach.title}: ${ach.description}`}>
-                                                <div className={`p-3 rounded-full transition-colors ${isUnlocked ? 'bg-amber-100 dark:bg-amber-900' : 'bg-slate-100 dark:bg-slate-800'}`}>
-                                                    <IconComponent className={`h-6 w-6 transition-colors ${isUnlocked ? 'text-amber-500' : 'text-slate-400'}`} />
-                                                </div>
-                                                <span className="text-xs mt-1 text-slate-600 dark:text-slate-300">{ach.title}</span>
-                                            </div>
-                                        );
-                                    })}
+                        <div className="space-y-4">
+                            <div>
+                                <label htmlFor="goal-input" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                                    Defina sua meta de XP diário
+                                </label>
+                                <p className="text-xs text-slate-500 mb-2">
+                                    Metas ajudam a manter o foco e a motivação.
+                                </p>
+                                <div className="flex items-center gap-2 mt-1">
+                                    <Input
+                                        id="goal-input"
+                                        type="number"
+                                        value={newGoal} // Agora 'newGoal' nunca será undefined
+                                        onChange={(e) => setNewGoal(Number(e.target.value))}
+                                        className="max-w-[150px]"
+                                        min="10"
+                                        step="10"
+                                        placeholder="Ex: 100"
+                                    />
                                 </div>
                             </div>
+                            <Button onClick={handleGoalSave} className="w-full">
+                                Salvar Nova Meta
+                            </Button>
                         </div>
                     </motion.div>
                 </motion.div>

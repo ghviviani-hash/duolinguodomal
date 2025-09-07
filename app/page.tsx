@@ -31,15 +31,14 @@ export default function QuizGamificadoApp() {
     <div className="min-h-screen w-full bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 text-slate-800 dark:text-slate-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
         <Header 
-  stats={{ xp: stats.xp, level: stats.level, streakDays: stats.streakDays, totalQuestionsAnswered: stats.totalQuestionsAnswered }} 
-  dark={dark} 
-  setDark={actions.setDark} 
-  onLogoClick={actions.clearSession}
-  // Props que faltavam:
-  isQuizActive={isQuizActive}
-  progress={progressPct}
-  sessionTime={session.sessionLiveTime} // Supondo que sessionLiveTime esteja disponível no estado da sessão
-/>
+          stats={{ xp: stats.xp, level: stats.level, streakDays: stats.streakDays, totalQuestionsAnswered: stats.totalQuestionsAnswered }} 
+          dark={dark} 
+          setDark={actions.setDark} 
+          onLogoClick={actions.clearSession}
+          isQuizActive={isQuizActive}
+          progress={progressPct}
+          sessionTime={session.sessionLiveTime}
+        />
         <div className="flex flex-col lg:flex-row gap-6 mt-6">
           <div className={`lg:w-1/3 space-y-6 ${isQuizActive ? 'order-2' : 'order-1'} lg:order-1`}>
             <Sidebar
@@ -59,7 +58,7 @@ export default function QuizGamificadoApp() {
               streakDays={stats.streakDays}
               todayXp={stats.todayXp}
               goal={stats.goal}
-              dailyBonusAwarded={false} // A ser adicionado ao useUserStats
+              dailyBonusAwarded={false} 
               decksCompleted={stats.decksCompleted}
               combo={session.combo}
               isSessionComplete={session.isSessionComplete}
@@ -121,7 +120,16 @@ export default function QuizGamificadoApp() {
         </div>
       </div>
       <ReviewModal question={reviewingQuestion} onClose={() => actions.setReviewingQuestion(null)} />
-      {showStatsModal && <StatsModal show={showStatsModal} onClose={() => actions.setShowStatsModal(false)} stats={{xp: stats.xp, level: stats.level, streakDays: stats.streakDays, goal: stats.goal, decksCompleted: stats.decksCompleted, todayXp: stats.todayXp}} unlockedAchievements={stats.unlockedAchievements} />}
+      {/* ALTERAÇÃO AQUI: Adicionando a prop onSetGoal 
+      */}
+      {showStatsModal && 
+  <StatsModal 
+    show={showStatsModal} 
+    onClose={() => actions.setShowStatsModal(false)} 
+    currentGoal={stats.goal}
+    onSetGoal={actions.setGoal} 
+  />
+}
       <Confetti trigger={confettiKey} />
       <IntroModal show={showIntroModal} onClose={() => actions.setShowIntroModal(false)} />
     </div>

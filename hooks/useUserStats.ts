@@ -5,6 +5,8 @@ import { Question, SrsData, WrongAnswerLog, Deck } from '@/types';
 import { LS_STATS_KEY, LS_SRS_KEY, LS_WRONG_ANSWER_LOG_KEY, LS_ACHIEVEMENTS_KEY, SRS_INTERVALS } from '@/lib/constants';
 import { todayKey } from '@/lib/utils';
 
+const XP_PER_LEVEL = 100;
+
 export function useUserStats() {
   const [xp, setXp] = useState(0);
   const [level, setLevel] = useState(1);
@@ -32,6 +34,18 @@ export function useUserStats() {
   useEffect(() => { localStorage.setItem(LS_SRS_KEY, JSON.stringify(srsData)); }, [srsData]);
   useEffect(() => { localStorage.setItem(LS_WRONG_ANSWER_LOG_KEY, JSON.stringify(wrongAnswerLog)); }, [wrongAnswerLog]);
   useEffect(() => { localStorage.setItem(LS_ACHIEVEMENTS_KEY, JSON.stringify(unlockedAchievements)); }, [unlockedAchievements]);
+
+  const levelUp = useCallback(() => {
+    const xpNeededForNextLevel = level * XP_PER_LEVEL;
+    if (xp >= xpNeededForNextLevel) {
+      setLevel(prevLevel => prevLevel + 1);
+      setXp(prevXp => prevXp - xpNeededForNextLevel);
+    }
+  }, [xp, level]);
+
+  useEffect(() => {
+    levelUp();
+  }, [xp, levelUp]);
 
   const addXp = useCallback((amount: number) => { setXp(prev => prev + amount); setTodayXp(prev => prev + amount); }, []);
   const incrementAnsweredCount = useCallback(() => { setTotalQuestionsAnswered(prev => prev + 1); }, []);

@@ -34,7 +34,10 @@ export default function QuizGamificadoApp() {
           stats={{ xp: stats.xp, level: stats.level, streakDays: stats.streakDays, totalQuestionsAnswered: stats.totalQuestionsAnswered }} 
           dark={dark} 
           setDark={actions.setDark} 
-          onLogoClick={actions.clearSession}
+          onLogoClick={() => {
+            actions.clearSession();
+            actions.setDeckId(null);
+          }}
           isQuizActive={isQuizActive}
           progress={progressPct}
           sessionTime={session.sessionLiveTime}

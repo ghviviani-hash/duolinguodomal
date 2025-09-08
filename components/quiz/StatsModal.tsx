@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { X, Trophy, Star } from "lucide-react";
+import { X, Trophy, Star, Plus, Minus } from "lucide-react";
 
 interface GoalModalProps {
   show: boolean;
@@ -29,6 +28,13 @@ export const GoalModal = ({ show, onClose, currentGoal, onSetGoal }: GoalModalPr
         }
     };
 
+    const changeGoal = (amount: number) => {
+        setNewGoal(prevGoal => {
+            const updatedGoal = prevGoal + amount;
+            return updatedGoal > 0 ? updatedGoal : 10;
+        });
+    };
+
     const goalSuggestions = [50, 100, 150];
 
     return (
@@ -39,7 +45,6 @@ export const GoalModal = ({ show, onClose, currentGoal, onSetGoal }: GoalModalPr
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onClick={onClose}
-                    // Mantemos o padding aqui como uma boa prática.
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
                 >
                     <motion.div
@@ -48,8 +53,6 @@ export const GoalModal = ({ show, onClose, currentGoal, onSetGoal }: GoalModalPr
                         exit={{ scale: 0.9, opacity: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                         onClick={(e) => e.stopPropagation()}
-                        // CORREÇÃO AQUI: Adicionamos "m-4" para garantir uma margem explícita
-                        // em todos os lados do modal, resolvendo o problema de espaçamento.
                         className="relative w-full max-w-md rounded-2xl p-8 bg-white dark:bg-slate-900 shadow-2xl border border-slate-200 dark:border-slate-800 m-4"
                     >
                         <Button variant="ghost" size="icon" className="absolute top-4 right-4 text-slate-500 hover:text-slate-900 dark:hover:text-white" onClick={onClose}>
@@ -86,17 +89,21 @@ export const GoalModal = ({ show, onClose, currentGoal, onSetGoal }: GoalModalPr
                                <hr className="flex-grow border-slate-200 dark:border-slate-700"/>
                             </div>
                             
-                            <div className="flex items-center justify-center">
-                                <Input
-                                    id="goal-input"
-                                    type="number"
-                                    value={newGoal}
-                                    onChange={(e) => setNewGoal(Number(e.target.value))}
-                                    className="max-w-[200px] text-center text-lg font-semibold h-12 rounded-lg"
-                                    min="10"
-                                    step="10"
-                                    placeholder="Ex: 100"
-                                />
+                            {/* Ajustes aqui: removi rounded-full e adicionei classes de espaçamento */}
+                            <div className="flex items-center justify-center gap-2 md:gap-4"> {/* Ajustei o gap para telas menores/maiores */}
+                                <Button onClick={() => changeGoal(-200)} variant="outline" size="sm" className="w-16 h-10 text-base"> {/* size="sm" e w-16 h-10 para quadrado */}
+                                    -200
+                                </Button>
+                                <Button onClick={() => changeGoal(-50)} variant="outline" size="icon">
+                                    <Minus className="h-4 w-4" />
+                                </Button>
+                                <span className="font-bold text-lg text-center mx-2" style={{ minWidth: '60px' }}>{newGoal}</span> {/* Adicionei mx-2 para um pouco mais de espaço */}
+                                <Button onClick={() => changeGoal(50)} variant="outline" size="icon">
+                                    <Plus className="h-4 w-4" />
+                                </Button>
+                                <Button onClick={() => changeGoal(200)} variant="outline" size="sm" className="w-16 h-10 text-base"> {/* size="sm" e w-16 h-10 para quadrado */}
+                                    +200
+                                </Button>
                             </div>
 
                             <Button onClick={handleGoalSave} className="w-full h-12 text-base font-bold rounded-lg flex items-center gap-2">

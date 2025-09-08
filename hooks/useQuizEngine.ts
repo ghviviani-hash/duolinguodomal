@@ -1,6 +1,6 @@
 // hooks/useQuizEngine.ts
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { Question, Deck } from '@/types';
 import { useUserStats } from './useUserStats';
 import { useDeckManager } from './useDeckManager';
@@ -16,6 +16,7 @@ export function useQuizEngine() {
   const { playFanfare } = useAudio();
   const [deckId, setDeckId] = useState<string | null>(null);
   const [reviewingQuestion, setReviewingQuestion] = useState<Question | null>(null);
+  const isStartingSrsSession = useRef(false);
 
   const handleQuestionAnswered = useCallback(({ question, correct, gain }: { question: Question, correct: boolean, gain: number }) => {
     statsActions.updateSrsData(question, correct, deckId, decks);
@@ -26,8 +27,10 @@ export function useQuizEngine() {
       statsActions.logWrongAnswer(question);
     }
   }, [statsActions, deckId, decks]);
-  
-  const handleSessionComplete = useCallback(() => {
+
+  // A função onSessionComplete do useQuizSession espera um argumento { elapsedTime: number }.
+  // Nós o recebemos aqui, mas não precisamos usá-lo neste momento.
+  const handleSessionComplete = useCallback(({ elapsedTime }: { elapsedTime: number }) => {
     statsActions.addXp(DECK_COMPLETION_BONUS);
     statsActions.completeDeck();
     setConfettiKey(k => k + 1);
@@ -44,11 +47,11 @@ export function useQuizEngine() {
   const [showStatsModal, setShowStatsModal] = useState(false);
   const [showIntroModal, setShowIntroModal] = useState(false);
 
-
   useEffect(() => { const savedTheme = localStorage.getItem('theme'); const isDark = savedTheme ? JSON.parse(savedTheme) : true; setDark(isDark); }, []);
   useEffect(() => { document.documentElement.classList.toggle("dark", dark); localStorage.setItem('theme', JSON.stringify(dark)); }, [dark]);
 
   const { startSession, clearSession } = sessionActions;
+  
   useEffect(() => {
     if (deckId) {
       const selectedDeck = decks.find((d: Deck) => d.id === deckId);
@@ -56,7 +59,11 @@ export function useQuizEngine() {
         startSession(selectedDeck.questions, shuffleOnLoad);
       }
     } else {
-      clearSession();
+      if (isStartingSrsSession.current) {
+        isStartingSrsSession.current = false; 
+      } else {
+        clearSession();
+      }
     }
   }, [deckId, decks, shuffleOnLoad, startSession, clearSession]);
 
@@ -68,6 +75,8 @@ export function useQuizEngine() {
   const startSrsSession = useCallback(() => {
     const dueQuestions = Object.values(stats.srsData).filter((item: any) => isPast(new Date(item.nextReview))).map((item: any) => item.question);
     if (dueQuestions.length === 0) { alert("Nenhuma questão para revisar hoje!"); return; }
+    
+    isStartingSrsSession.current = true;
     setDeckId(null);
     startSession(dueQuestions, true);
   }, [stats.srsData, startSession]);

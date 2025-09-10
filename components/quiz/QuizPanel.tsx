@@ -16,7 +16,7 @@ interface QuizPanelProps {
     lastGain: number | null;
     onNextQuestion: () => void;
     onShowStats: () => void;
-    sessionElapsedTime: number | null; // <-- PROPRIEDADE ADICIONADA AQUI
+    sessionElapsedTime: number | null;
 }
 
 export function QuizPanel({
@@ -26,8 +26,13 @@ export function QuizPanel({
     onReset,
     onReviewQuestion,
     onNextQuestion,
-    sessionElapsedTime, // <-- PROP RECEBIDA AQUI
-    ...questionViewProps
+    sessionElapsedTime,
+    onSelect,
+    selected,
+    isCorrect,
+    showExpl,
+    lastGain,
+    onShowStats
 }: QuizPanelProps) {
     return (
         <AnimatePresence mode="wait">
@@ -36,13 +41,17 @@ export function QuizPanel({
                     onReset={onReset}
                     wrongAnswers={wrongAnswers}
                     onReviewQuestion={onReviewQuestion}
-                    sessionElapsedTime={sessionElapsedTime} // <-- E REPASSADA AQUI
+                    sessionElapsedTime={sessionElapsedTime}
                 />
             ) : displayedQuestion ? (
                 <QuestionView
                     question={displayedQuestion}
+                    onSelect={onSelect}
+                    selected={selected}
+                    isCorrect={isCorrect}
+                    showExpl={showExpl}
+                    lastGain={lastGain}
                     onNextQuestion={onNextQuestion}
-                    {...questionViewProps}
                 />
             ) : null}
         </AnimatePresence>

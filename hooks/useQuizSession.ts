@@ -41,11 +41,28 @@ export function useQuizSession({ onQuestionAnswered, onSessionComplete }: QuizSe
   const onSelect = useCallback((idx: number) => {
     if (!displayedQuestion || selected != null || current === null) return;
     const correct = idx === displayedQuestion.shuffledAnswerIndex; const originalQuestion = questions[current];
-    setSelected(idx); setIsCorrect(correct); const gain = correct ? 10 : 0; setLastGain(gain);
-    onQuestionAnswered({ question: originalQuestion, correct, gain });
-    if (correct) { setCombo(prev => prev + 1); playCorrect(); setTimeout(() => advanceQueue(true), 650); } 
-    else { setCombo(0); setShowExpl(true); playWrong(); setSessionWrongAnswers(prev => [...prev, originalQuestion]); }
-  }, [displayedQuestion, selected, current, questions, playCorrect, playWrong, advanceQueue, onQuestionAnswered]);
+    setSelected(idx); setIsCorrect(correct); 
+    
+    // Altera o cálculo do XP para incluir o combo
+    let finalGain = 0;
+    if (correct) {
+      const randomXp = Math.floor(Math.random() * 31) + 10;
+      const multiplier = combo > 0 ? 1.0 + (combo * 0.1) : 1.0;
+      finalGain = Math.floor(randomXp * multiplier);
+      setCombo(prev => prev + 1);
+      playCorrect();
+      setTimeout(() => advanceQueue(true), 650);
+    } else {
+      setCombo(0);
+      setShowExpl(true);
+      playWrong();
+      setSessionWrongAnswers(prev => [...prev, originalQuestion]);
+    }
+    
+    setLastGain(finalGain);
+    onQuestionAnswered({ question: originalQuestion, correct, gain: finalGain });
+  }, [displayedQuestion, selected, current, questions, playCorrect, playWrong, advanceQueue, onQuestionAnswered, combo]);
+  
   const startSession = useCallback((questionsToPlay: Question[], shuffleQuestions: boolean) => { setQuestions(questionsToPlay); const order = questionsToPlay.map((_, i) => i); const newQueue = shuffleQuestions ? shuffle(order) : order; setQueue(newQueue); setCurrent(newQueue[0] ?? null); setIsSessionComplete(false); setSessionWrongAnswers([]); setCombo(0); setSessionStartTime(Date.now()); setSessionLiveTime(0); }, []);
   const clearSession = useCallback(() => { setQuestions([]); setQueue([]); setCurrent(null); setIsSessionComplete(false); setSessionStartTime(null); setSessionLiveTime(0); }, []);
   const handleNextQuestion = useCallback(() => advanceQueue(false), [advanceQueue]);

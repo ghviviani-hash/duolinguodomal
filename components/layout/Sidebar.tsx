@@ -142,7 +142,8 @@ export function Sidebar({
 
   const goalPct = Math.min(100, Math.round((todayXp / goal) * 100));
   const srsCount = Object.values(srsData).filter((item: any) => isPast(new Date(item.nextReview))).length;
-  const progressPct = questionsCount > 0 ? Math.round((questionsCount - (queue.length + (current === null ? 0 : 1))) / questionsCount * 100) : 0;
+  // CORREÇÃO: Removendo o valor extra que causava a porcentagem negativa
+  const progressPct = questionsCount > 0 ? Math.round((questionsCount - queue.length) / questionsCount * 100) : 0;
   
   const renderDeckTree = (node: DeckNode, nodeKey: string) => {
     const sortedChildrenKeys = Object.keys(node.children).sort();

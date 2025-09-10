@@ -23,8 +23,9 @@ export default function QuizGamificadoApp() {
 
   const isQuizActive = !!deckId || (session.questions && session.questions.length > 0);
 
+  // CORREÇÃO: Adicionando o '?' para completar a expressão ternária
   const progressPct = (session.questions && session.questions.length > 0)
-    ? Math.round(((session.questions.length - (session.queue.length + (session.current === null ? 0 : 1))) / session.questions.length) * 100)
+    ? Math.round(((session.questions.length - session.queue.length) / session.questions.length) * 100)
     : 0;
 
   return (

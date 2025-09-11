@@ -54,17 +54,18 @@ export function Header({ stats, dark, setDark, onLogoClick, isQuizActive, progre
             </div>
           )}
 
-          <div className="hidden sm:flex items-center gap-2 font-semibold" title="Sequência de dias">
+          {/* ALTERAÇÃO: A Sequência de dias agora está visível em todas as telas. */}
+          <div className="flex items-center gap-2 font-semibold" title="Sequência de dias">
             <Flame className="h-5 w-5 text-orange-500" />
             <span>{stats.streakDays}</span>
           </div>
           
-          <div className="hidden sm:flex items-center gap-2 font-semibold" title="Total de perguntas respondidas">
+          {/* ALTERAÇÃO: O Total de perguntas respondidas agora está visível em todas as telas. */}
+          <div className="flex items-center gap-2 font-semibold" title="Total de perguntas respondidas">
             <HelpCircle className="h-5 w-5 text-violet-500" />
             <span>{stats.totalQuestionsAnswered}</span>
           </div>
 
-          {/* ALTERAÇÃO: O Nível agora está visível em todos os tamanhos de tela. */}
           <div className="flex items-center gap-2 font-semibold" title={`Nível ${stats.level}`}>
             <BarChart className="h-5 w-5 text-green-500" />
             <span>{stats.level}</span>

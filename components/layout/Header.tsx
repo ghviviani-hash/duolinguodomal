@@ -64,7 +64,8 @@ export function Header({ stats, dark, setDark, onLogoClick, isQuizActive, progre
             <span>{stats.totalQuestionsAnswered}</span>
           </div>
 
-          <div className="hidden sm:flex items-center gap-2 font-semibold" title={`Nível ${stats.level}`}>
+          {/* ALTERAÇÃO: O Nível agora está visível em todos os tamanhos de tela. */}
+          <div className="flex items-center gap-2 font-semibold" title={`Nível ${stats.level}`}>
             <BarChart className="h-5 w-5 text-green-500" />
             <span>{stats.level}</span>
           </div>

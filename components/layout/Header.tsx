@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { Award, BarChart, Sun, Moon, Flame, Clock, EyeOff, HelpCircle } from "lucide-react";
+// ALTERAÇÃO: Ícone Star adicionado
+import { Award, BarChart, Sun, Moon, Flame, Clock, EyeOff, HelpCircle, Star } from "lucide-react";
 import { formatTimeLeft } from "@/lib/utils";
 
 interface HeaderProps {
@@ -11,12 +12,12 @@ interface HeaderProps {
     xp: number;
     level: number;
     streakDays: number;
-    totalQuestionsAnswered: number; // CORREÇÃO: Propriedade adicionada aqui
+    totalQuestionsAnswered: number;
   };
   dark: boolean;
   setDark: (dark: boolean) => void;
   onLogoClick: () => void;
-  isQuizActive: boolean; // Presumindo que estas props serão necessárias
+  isQuizActive: boolean;
   progress: number;
   sessionTime: number;
 }
@@ -54,20 +55,19 @@ export function Header({ stats, dark, setDark, onLogoClick, isQuizActive, progre
             </div>
           )}
 
-          {/* ALTERAÇÃO: A Sequência de dias agora está visível em todas as telas. */}
           <div className="flex items-center gap-2 font-semibold" title="Sequência de dias">
             <Flame className="h-5 w-5 text-orange-500" />
             <span>{stats.streakDays}</span>
           </div>
           
-          {/* ALTERAÇÃO: O Total de perguntas respondidas agora está visível em todas as telas. */}
           <div className="flex items-center gap-2 font-semibold" title="Total de perguntas respondidas">
             <HelpCircle className="h-5 w-5 text-violet-500" />
             <span>{stats.totalQuestionsAnswered}</span>
           </div>
 
           <div className="flex items-center gap-2 font-semibold" title={`Nível ${stats.level}`}>
-            <BarChart className="h-5 w-5 text-green-500" />
+            {/* ALTERAÇÃO: Ícone BarChart substituído por Star */}
+            <Star className="h-5 w-5 text-yellow-400" />
             <span>{stats.level}</span>
           </div>
 

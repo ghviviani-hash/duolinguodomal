@@ -17,7 +17,7 @@ export function Confetti({ trigger }: { trigger: number }) {
             transition={{ duration: 1.6 + Math.random() * 0.6 }}
             className="absolute left-1/2 top-4 text-2xl"
           >
-            {Math.random() > 0.5 ? "🎉" : "✨"}
+            {"🔥"}
           </motion.div>
         ))}
       </AnimatePresence>

@@ -41,6 +41,17 @@ export function useQuizEngine() {
     onQuestionAnswered: handleQuestionAnswered,
     onSessionComplete: handleSessionComplete,
   });
+  
+  // NOVO CÓDIGO AQUI
+  // Dispara o confetti quando o combo atingir 5 ou 10
+  useEffect(() => {
+      // Você pode ajustar o valor aqui para o que quiser
+      if (session.combo > 0 && session.combo % 5 === 0) {
+          setConfettiKey(prev => prev + 1);
+      }
+  }, [session.combo]);
+  // FIM DO NOVO CÓDIGO
+  
 
   const [shuffleOnLoad, setShuffleOnLoad] = useState(true);
   const [dark, setDark] = useState(true);

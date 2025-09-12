@@ -4622,7 +4622,7 @@ export const DEFAULT_DECKS: Deck[] = [
         id: "neuro-q34",
         text: "Assinale a resposta correta sobre a doença de Alzheimer:",
         options: [
-          "Ocorrem depósitos de beta amiloides e hipofosforilação da proteína tau",
+          "Ocorrem depósitos de beta amiloides e hiperfosforilação da proteína tau",
           "Ocorrem depósitos de alfa sinucleína e beta amiloide",
           "Ocorrem depósitos de beta amilóide e inibição da proteína tau",
           "Podem ocorrer depósitos de lipídeos intracelulares, de beta-amiloide e hipofosforilação da proteína tau"
@@ -4857,8 +4857,8 @@ export const DEFAULT_DECKS: Deck[] = [
           "Distrofia oculofaríngea",
           "Distrofia muscular de Becker"
         ],
-        answerIndex: 3,
-        explanation: "A pseudo-hipertrofia de panturrilhas, o sinal de Gowers e a elevação acentuada de CK são comuns tanto em Duchenne quanto em Becker. No entanto, a deambulação preservada (o paciente consegue andar) aponta para a forma de Becker, que é mais branda e de progressão mais lenta que a de Duchenne.",
+        answerIndex: 1,
+        explanation: "Distrofia Muscular de Duchenne (DMD) é o diagnóstico mais provável para o caso clínico apresentado, e a razão principal está na gravidade dos achados clínicos e laboratoriais. Enquanto a Distrofia de Becker (DMB) compartilha alguns sinais, como a pseudo-hipertrofia de panturrilhas e o sinal de Gowers, o quadro de um paciente que já apresenta cifoescoliose e uma CK 20 vezes acima do valor de referência é mais característico da DMD.",
         tag: "Doenças Neuromusculares"
       },
       {
